@@ -59,13 +59,11 @@ export default function Navigation() {
               onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="flex items-center gap-2 group"
             >
-              <div className="relative">
-                <div className="w-3 h-3 rounded-full bg-primary group-hover:animate-pulse-glow transition-all" />
-                <div className="absolute inset-0 w-3 h-3 rounded-full bg-primary/30 animate-ping" />
-              </div>
-              <span className="font-heading font-bold text-xl text-foreground">
-                Boost<span className="text-primary">Now</span>
-              </span>
+              <img 
+                src="/images/logo-boostnow.png" 
+                alt="BoostNow" 
+                className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              />
             </a>
 
             {/* Desktop Navigation */}
