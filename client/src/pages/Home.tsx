@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import IntroOverlay from "@/components/IntroOverlay";
 import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
+import HeroSectionNew from "@/components/HeroSectionNew";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import ResultsSection from "@/components/ResultsSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
+import TeamSection from "@/components/TeamSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -69,11 +71,13 @@ export default function Home() {
         <div className="min-h-screen bg-background">
           <Navigation />
           <main>
-            <HeroSection />
+            <HeroSectionNew />
             <AboutSection />
             <ServicesSection />
             <ProcessSection />
             <ResultsSection />
+            <TeamSection />
+            <CaseStudiesSection />
             <TargetAudienceSection />
             <ContactSection />
           </main>
