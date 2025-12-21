@@ -10,6 +10,8 @@ import ResultsSection from "@/components/ResultsSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import ProblemSection from "@/components/ProblemSection";
+import SolutionSection from "@/components/SolutionSection";
 
 /* Home Page - BoostNow
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -70,6 +72,8 @@ export default function Home() {
           <Navigation />
           <main>
             <HeroSection />
+            <ProblemSection />
+            <SolutionSection />
             <AboutSection />
             <ServicesSection />
             <ProcessSection />
