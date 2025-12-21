@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
 import { Mail, Linkedin, Instagram } from "lucide-react";
 
 /* Footer Component
-   Design: "Precision Strike" - Military-Grade Minimalism
+   Design: "Human-Centric Minimalism" - Light Gray Background
    - Minimal footer with essential links
    - Social proof and contact
+   - Warm, professional aesthetic
 */
 
 const socialLinks = [
@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-border bg-card/30">
+    <footer className="relative border-t border-accent/20 bg-white/40">
       <div className="container py-12 lg:py-16">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Brand column */}
@@ -41,90 +41,76 @@ export default function Footer() {
             <a 
               href="#" 
               onClick={(e) => { e.preventDefault(); scrollToSection("#"); }}
-              className="inline-flex items-center gap-2 mb-4"
+              className="inline-flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity"
             >
-              <div className="w-3 h-3 rounded-full bg-primary" />
+              <div className="w-3 h-3 rounded-full bg-accent" />
               <span className="font-heading font-bold text-xl text-foreground">
-                Boost<span className="text-primary">Now</span>
+                Boost<span className="text-accent">Now</span>
               </span>
             </a>
-            <p className="text-sm text-muted-foreground mb-6 max-w-xs">
-              Agencja Aktywacji Klientów. Przyspieszamy wzrost Twojej marki poprzez 
-              psychologię decyzji i mierzalne strategie.
+            <p className="text-sm text-foreground/70 leading-relaxed mb-6">
+              Agencja Aktywacji Klientów. Transformujemy marki poprzez Decision Science i psychologię konwersji.
             </p>
-            
-            {/* Social links */}
-            <div className="flex items-center gap-3">
-              {socialLinks.map((social) => (
+            <div className="flex gap-4">
+              {socialLinks.map((link) => (
                 <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    // Placeholder - would link to actual social profiles
-                  }}
+                  key={link.label}
+                  href={link.href}
+                  aria-label={link.label}
+                  className="p-2 rounded-lg bg-white/60 border border-accent/20 text-foreground hover:bg-accent hover:text-white transition-all"
                 >
-                  <social.icon className="w-5 h-5" />
+                  <link.icon size={18} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Links column */}
+          {/* Navigation column */}
           <div className="lg:col-span-4">
-            <h4 className="font-heading font-semibold text-foreground mb-4">
-              Nawigacja
-            </h4>
-            <ul className="space-y-3">
+            <h4 className="font-heading font-bold text-foreground mb-4">Nawigacja</h4>
+            <nav className="space-y-2">
               {footerLinks.map((link) => (
-                <li key={link.href}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </button>
-                </li>
+                <button
+                  key={link.label}
+                  onClick={() => scrollToSection(link.href)}
+                  className="block text-sm text-foreground/70 hover:text-accent transition-colors"
+                >
+                  {link.label}
+                </button>
               ))}
-            </ul>
+            </nav>
           </div>
 
           {/* Contact column */}
           <div className="lg:col-span-4">
-            <h4 className="font-heading font-semibold text-foreground mb-4">
-              Kontakt
-            </h4>
-            <div className="space-y-4">
-              <a 
+            <h4 className="font-heading font-bold text-foreground mb-4">Kontakt</h4>
+            <div className="space-y-3">
+              <a
                 href="mailto:kontakt@boostnow.pl"
-                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-sm text-foreground/70 hover:text-accent transition-colors"
               >
-                <Mail className="w-4 h-4" />
+                <Mail size={16} />
                 kontakt@boostnow.pl
               </a>
-              
-              <div className="pt-4">
-                <button
-                  onClick={() => scrollToSection("#contact")}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 glow-lime"
-                >
-                  Zboostuj wyniki
-                </button>
-              </div>
+              <p className="text-xs text-foreground/60">
+                ⏱️ Odpowiadamy w ciągu 24 godzin
+              </p>
+              <p className="text-xs text-foreground/60">
+                🇵🇱 Warszawa, Polska
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} BoostNow. Wszystkie prawa zastrzeżone.
-          </p>
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span>System aktywny</span>
+        {/* Divider */}
+        <div className="border-t border-accent/20 my-8" />
+
+        {/* Bottom section */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-foreground/60">
+          <p>© 2025 BoostNow. Wszystkie prawa zastrzeżone.</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-accent transition-colors">Polityka prywatności</a>
+            <a href="#" className="hover:text-accent transition-colors">Warunki użytkowania</a>
           </div>
         </div>
       </div>
