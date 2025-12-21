@@ -14,22 +14,22 @@ const values = [
   {
     icon: Brain,
     title: "Decision Science",
-    description: "Wykorzystujemy psychologię behawioralną i neuromarketing do tworzenia komunikacji, która omija racjonalne filtry.",
+    description: "Neuromarketing, który paraliżuje konkurencję.",
   },
   {
     icon: Rocket,
-    title: "Natychmiastowa Akcja",
-    description: "Nie czekamy na wyniki. Nasze strategie są zaprojektowane do generowania konwersji od pierwszego dnia.",
+    title: "Amunicja Wizualna",
+    description: "Treści wideo projektowane do przejęcia kontroli nad okiem w 0.4 sekundy.",
   },
   {
     icon: Shield,
-    title: "Transparentność B2B",
-    description: "Działamy jako Twój partner strategiczny. Pokazujemy procesy, dane i metodologię bez ukrywania szczegółów.",
+    title: "Kolonizacja Rynku",
+    description: "Budujemy społeczności, które nie kupują produktów. One wyznają Twoją markę.",
   },
   {
     icon: Users,
-    title: "Budowanie Społeczności",
-    description: "Silne marki nie mają klientów - mają społeczność. Tworzymy ekstremalną lojalność i zaangażowanie.",
+    title: "Kontrola Narracji",
+    description: "Twoja marka staje się głosem, któremu słuchają. Eliminujemy szum.",
   },
 ];
 
@@ -55,8 +55,7 @@ export default function AboutSection() {
                 O BoostNow
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Jesteśmy{" "}
-                <span className="text-gradient-lime">Architektami Decyzji</span>
+                Jesteśmy <span className="text-gradient-lime">Architektami Decyzji</span>. Reszta to tylko dekoracja.
               </h2>
             </motion.div>
 
@@ -67,13 +66,10 @@ export default function AboutSection() {
               className="space-y-4 text-muted-foreground text-lg leading-relaxed"
             >
               <p>
-                Nasza nazwa to nasza obietnica: <strong className="text-foreground">Przyspiesz wzrost. Wybierz BoostNow.</strong>
+                W erze cyfrowego szumu marketing oparty na nadziei to sabotaż budżetu. <strong className="text-foreground">My nie zgadujemy. My egzekwujemy.</strong>
               </p>
               <p>
-                Wierzymy, że w erze cyfrowej marketing musi działać natychmiast. Klienci często kierują się emocjami i skrótami myślowymi, a nie racjonalnymi argumentami.
-              </p>
-              <p>
-                My wykorzystujemy tę wiedzę. Trafiamy do najgłębszych mechanizmów decyzyjnych Twojego odbiorcy, <strong className="text-primary">sprawiając, że wybiera Ciebie</strong>.
+                Wykorzystujemy mechanizmy <strong className="text-primary">Decision Science</strong>, aby ominąć racjonalne filtry Twoich odbiorców i trafić prosto w ich instynkty, sprawiając, że wybiera Ciebie.
               </p>
             </motion.div>
 

@@ -63,10 +63,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6"
             >
-              Przyspiesz{" "}
-              <span className="text-gradient-lime">wzrost</span>
-              <br />
-              swojej marki
+              Zboostuj z nami{" "}
+              <span className="text-gradient-lime">swoją markę!</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -76,9 +74,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg sm:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed"
             >
-              Strategicznie omijamy szum informacyjny i trafiamy prosto do{" "}
-              <strong className="text-foreground">psychologii decyzji</strong> Twoich klientów. 
-              Zmień potencjał w <strong className="text-primary">natychmiastowe konwersje</strong>.
+              <strong className="text-foreground">Przestań finansować swoją niewidzialność.</strong> Wdróż system przymusu uwagi!
             </motion.p>
 
             {/* CTA Buttons */}

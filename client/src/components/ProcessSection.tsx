@@ -15,28 +15,28 @@ const steps = [
     number: "01",
     icon: Search,
     title: "Audyt Psychologiczny",
-    description: "Analizujemy Twoją grupę docelową, ich lęki, motywacje i ścieżki decyzyjne. Identyfikujemy dźwignie behawioralne.",
+    description: "Mapujemy lęki i motywacje Twojej grupy. Znajdujemy dźwignie, o których nie wiedzą.",
     duration: "Tydzień 1-2",
   },
   {
     number: "02",
     icon: Lightbulb,
     title: "Architektura Strategii",
-    description: "Projektujemy system komunikacji oparty na Decision Science. Każdy element jest zaprojektowany do wywołania konkretnej reakcji.",
+    description: "Budujemy system komunikacji. Każde słowo to zaplanowany wyzwalacz reakcji.",
     duration: "Tydzień 2-3",
   },
   {
     number: "03",
     icon: Rocket,
-    title: "Wdrożenie & Akceleracja",
-    description: "Uruchamiamy kampanie i materiały. Monitorujemy w czasie rzeczywistym, optymalizując pod kątem konwersji.",
+    title: "Wdrożenie i Akceleracja",
+    description: "Uruchamiamy materiały, które kończą erę bierności. Monitorujemy konwersję w czasie rzeczywistym.",
     duration: "Tydzień 3-4",
   },
   {
     number: "04",
     icon: BarChart3,
     title: "Skalowanie AI",
-    description: "Wykorzystujemy dane do ciągłej optymalizacji. AI pomaga nam skalować to, co działa, eliminując to, co nie przynosi wyników.",
+    description: "Wykorzystujemy dane do ciągłej optymizacji. AI eliminuje to, co nie generuje zysku.",
     duration: "Ongoing",
   },
 ];
@@ -70,11 +70,10 @@ export default function ProcessSection() {
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Transparentność{" "}
-            <span className="text-gradient-lime">buduje zaufanie</span>
+            <span className="text-gradient-lime">buduje dystans do konkurencji</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Oto dokładnie jak pracujemy. Żadnych ukrytych kroków, żadnych niespodzianek. 
-            Tylko systematyczne podejście do Twojego wzrostu.
+            Oto protokół Twojego wzrostu. Żadnych domysłów. Tylko systematyczna eliminacja błędów poznawczych Twoich klientów.
           </p>
         </motion.div>
 
