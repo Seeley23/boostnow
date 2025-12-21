@@ -3,15 +3,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* BoostNow Design System: "Precision Strike" - Military-Grade Minimalism
+/* BoostNow Design System: "Human-Centric Minimalism"
    - Carbon Black base with surgical lime-green accents
-   - Command center aesthetic with data visualization elements
-   - Typography: Poppins (headings) + Inter (body)
+   - Human-focused aesthetic with editorial typography
+   - Typography: Playfair Display (headings) + Lato (body)
 */
 
 @theme inline {
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
   
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -151,11 +151,12 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
   }
   
   button:not(:disabled),
