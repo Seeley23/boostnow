@@ -71,7 +71,7 @@ export default function ResultsSection() {
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Mierzalne{" "}
-            <span className="text-gradient-lime">dowody</span>
+            <span className="text-gradient-coral">dowody</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Nie obiecujemy wzrostu bez poparcia danymi. Oto przykłady transformacji, 
@@ -183,7 +183,7 @@ export default function ResultsSection() {
         >
           <button
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold rounded-lg transition-all duration-300 hover:scale-105 glow-coral hover:glow-coral-strong"
           >
             <span>Chcę takie wyniki</span>
             <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
