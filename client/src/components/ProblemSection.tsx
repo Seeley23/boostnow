@@ -22,8 +22,8 @@ const itemVariants = {
 
 export default function ProblemSection() {
   return (
-    <section className="py-24 px-4 bg-black text-white">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative py-24 overflow-hidden bg-black">
+      <div className="container">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -33,7 +33,7 @@ export default function ProblemSection() {
           {/* Main Heading */}
           <motion.h2 
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-6 leading-tight max-w-3xl"
+            className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white"
           >
             Twój marketing jest zbyt skomplikowany, by sprzedawać.
           </motion.h2>
@@ -41,7 +41,7 @@ export default function ProblemSection() {
           {/* Description */}
           <motion.p 
             variants={itemVariants}
-            className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
+            className="text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
           >
             Większość firm płaci za treści, których nikt nie doczytuje do końca. Każde zbędne zdanie i każda sekunda nudy w wideo to moment, w którym klient rezygnuje.
           </motion.p>
@@ -49,11 +49,11 @@ export default function ProblemSection() {
           {/* Three Errors */}
           <motion.div 
             variants={itemVariants}
-            className="mb-8"
+            className="mb-12"
           >
-            <h3 className="text-lg font-semibold text-lime-400 mb-8">Twoje straty wynikają z trzech błędów:</h3>
+            <h3 className="text-xl font-semibold text-lime-400 mb-8">Twoje straty wynikają z trzech błędów:</h3>
             
-            <div className="space-y-6">
+            <div className="grid md:grid-cols-3 gap-8">
               {[
                 { title: "Przeładowanie", desc: "Zbyt dużo informacji sprawia, że odbiorca przestaje uważać." },
                 { title: "Brak priorytetów", desc: "Klient nie wie, na co ma patrzeć, więc patrzy na konkurencję." },
@@ -62,11 +62,11 @@ export default function ProblemSection() {
                 <motion.div
                   key={idx}
                   variants={itemVariants}
-                  whileHover={{ x: 8, transition: { duration: 0.2 } }}
-                  className="border-l-4 border-lime-400 pl-6 cursor-pointer transition-all"
+                  whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                  className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 cursor-pointer transition-all hover:border-lime-400/50"
                 >
-                  <h4 className="text-base font-semibold mb-2">{error.title}</h4>
-                  <p className="text-sm text-gray-400">{error.desc}</p>
+                  <h4 className="text-base font-semibold mb-3 text-white">{error.title}</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">{error.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -75,9 +75,9 @@ export default function ProblemSection() {
           {/* Final Statement */}
           <motion.p 
             variants={itemVariants}
-            className="text-lg font-semibold text-lime-400 mt-12"
+            className="text-xl font-bold text-lime-400 mt-12"
           >
-            Efekt? Finansujesz ignorancję rynku.
+            Efekt? <span className="text-white">Finansujesz ignorancję rynku.</span>
           </motion.p>
         </motion.div>
       </div>

@@ -49,8 +49,8 @@ export default function SolutionSection() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-black text-white">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative py-24 overflow-hidden bg-black">
+      <div className="container">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -60,9 +60,9 @@ export default function SolutionSection() {
           {/* Main Heading */}
           <motion.h2 
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-6 leading-tight max-w-3xl"
+            className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white"
           >
-            Twoja oferta jest ignorowana, bo zmuszasz ludzi do wysiłku.
+            Twoja oferta jest ignorowana, bo zmuszasz ludzi do wysilku.
           </motion.h2>
 
           {/* Description */}
@@ -76,31 +76,27 @@ export default function SolutionSection() {
           {/* Three Solutions */}
           <motion.div 
             variants={containerVariants}
-            className="space-y-8"
+            className="grid md:grid-cols-3 gap-8"
           >
             {solutions.map((solution, idx) => (
               <motion.div
                 key={idx}
                 variants={cardVariants}
-                whileHover={{ x: 12, transition: { duration: 0.3 } }}
-                className="group cursor-pointer"
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 group cursor-pointer transition-all hover:border-lime-400/50"
               >
-                <div className="flex gap-4 items-start">
-                  <motion.div 
-                    className="text-3xl flex-shrink-0 group-hover:scale-110 transition-transform"
-                    whileHover={{ rotate: 10 }}
-                  >
-                    {solution.emoji}
-                  </motion.div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-lime-400 mb-2 group-hover:text-lime-300 transition-colors">
-                      {solution.title}
-                    </h3>
-                    <p className="text-sm md:text-base text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
-                      {solution.desc}
-                    </p>
-                  </div>
-                </div>
+                <motion.div 
+                  className="text-4xl mb-4 flex-shrink-0 group-hover:scale-110 transition-transform"
+                  whileHover={{ rotate: 10 }}
+                >
+                  {solution.emoji}
+                </motion.div>
+                <h3 className="text-lg font-semibold text-lime-400 mb-3 group-hover:text-lime-300 transition-colors">
+                  {solution.title}
+                </h3>
+                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
+                  {solution.desc}
+                </p>
               </motion.div>
             ))}
           </motion.div>
