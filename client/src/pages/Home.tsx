@@ -1,25 +1,83 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+import IntroOverlay from "@/components/IntroOverlay";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
+import ProcessSection from "@/components/ProcessSection";
+import ResultsSection from "@/components/ResultsSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
+/* Home Page - BoostNow
+   Design: "Precision Strike" - Military-Grade Minimalism
+   
+   Structure:
+   1. Intro Overlay (first visit only)
+   2. Navigation
+   3. Hero Section
+   4. About Section
+   5. Services Section
+   6. Process Section
+   7. Results Section (Case Studies)
+   8. Contact Section
+   9. Footer
+*/
+
+const INTRO_SHOWN_KEY = "boostnow_intro_shown";
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const [showIntro, setShowIntro] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Check if intro was already shown
+    const introShown = localStorage.getItem(INTRO_SHOWN_KEY);
+    
+    if (!introShown) {
+      setShowIntro(true);
+    }
+    
+    setIsLoading(false);
+  }, []);
+
+  const handleIntroComplete = () => {
+    localStorage.setItem(INTRO_SHOWN_KEY, "true");
+    setShowIntro(false);
+  };
+
+  // Show nothing while checking localStorage
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
-    </div>
+    <>
+      {/* Intro Overlay - only on first visit */}
+      <AnimatePresence>
+        {showIntro && <IntroOverlay onComplete={handleIntroComplete} />}
+      </AnimatePresence>
+
+      {/* Main content */}
+      {!showIntro && (
+        <div className="min-h-screen bg-background">
+          <Navigation />
+          <main>
+            <HeroSection />
+            <AboutSection />
+            <ServicesSection />
+            <ProcessSection />
+            <ResultsSection />
+            <ContactSection />
+          </main>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
