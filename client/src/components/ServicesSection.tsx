@@ -1,41 +1,39 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 /* ServicesSection Component
-   Design: "Human-Centric Minimalism" - Light Gray Background
-   - White cards with lime green accents
-   - Human-focused service descriptions
-   - Warm, professional aesthetic
+   Design: "Precision Strike" - Military-Grade Minimalism
+   - Result-oriented service cards
+   - Visual imagery for each service
+   - Hover effects with glow
 */
 
 const services = [
   {
     id: "conversion",
-    emoji: "🎯",
     title: "Inżynieria Konwersji",
     subtitle: "Landing Pages & Copy",
     description: "Tworzymy strony i treści, które nie proszą - egzekwują pożądanie. Każde słowo jest zaprojektowane do wywołania natychmiastowej akcji.",
+    image: "/images/services-conversion.png",
     stats: "+40% konwersji",
-    color: "from-accent/20 to-accent/10",
   },
   {
     id: "ai",
-    emoji: "🎬",
-    title: "Visual Excellence",
+    title: "Visual Excellence AI",
     subtitle: "Video & Photo produktowe",
     description: "Wizualizacje produktowe napędzane przez AI. Tworzymy wideo, które sprzedaje Twój produkt w 15 sekund.",
+    image: "/images/services-ai.png",
     stats: "3x szybciej",
-    color: "from-accent/15 to-accent/5",
   },
   {
     id: "community",
-    emoji: "👥",
     title: "Community Growth",
     subtitle: "Strategie Lojalności",
     description: "Silne marki nie mają klientów - mają społeczność. Budujemy ekstremalną lojalność i transparentność relacji.",
+    image: "/images/services-community.png",
     stats: "7+ lat doświadczenia",
-    color: "from-accent/10 to-accent/0",
   },
 ];
 
@@ -51,13 +49,10 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-24 lg:py-32 relative bg-background overflow-hidden">
-      {/* Organic background shapes */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/3 right-0 w-96 h-96 rounded-full bg-accent/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-accent/10 blur-3xl" />
-      </div>
-
+    <section id="services" className="py-24 lg:py-32 relative">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
+      
       <div className="container relative z-10" ref={ref}>
         {/* Section header */}
         <motion.div
@@ -66,14 +61,14 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block text-sm font-medium text-accent tracking-wider uppercase mb-4">
-            💡 Nasze Usługi
+          <span className="inline-block text-sm font-medium text-primary tracking-wider uppercase mb-4">
+            Nasze Usługi
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Zorientowane na{" "}
-            <span className="text-accent">wynik</span>
+            <span className="text-gradient-lime">wynik</span>
           </h2>
-          <p className="text-lg text-foreground/70">
+          <p className="text-lg text-muted-foreground">
             Nie oferujemy porad. Dostarczamy Architekturę Konwersji opartą na 
             psychologii decyzji i mierzalnych danych.
           </p>
@@ -84,45 +79,54 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
               className="group relative"
             >
-              {/* Card background gradient */}
-              <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-              
-              {/* Card content */}
-              <div className="relative bg-white/70 backdrop-blur rounded-xl p-8 border border-accent/20 hover:border-accent/40 transition-all h-full flex flex-col hover:shadow-lg hover:scale-105">
-                {/* Emoji icon */}
-                <div className="text-5xl mb-4">{service.emoji}</div>
-
-                {/* Title */}
-                <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
-                  {service.title}
-                </h3>
-                
-                {/* Subtitle */}
-                <p className="text-sm text-accent font-semibold mb-4">
-                  {service.subtitle}
-                </p>
-
-                {/* Description */}
-                <p className="text-foreground/70 text-sm leading-relaxed mb-6 flex-grow">
-                  {service.description}
-                </p>
-
-                {/* Stats and CTA */}
-                <div className="flex items-center justify-between pt-4 border-t border-accent/10">
-                  <span className="text-sm font-bold text-accent">
+              <div className="relative h-full rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500">
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                  
+                  {/* Stats badge */}
+                  <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-primary/90 text-primary-foreground text-xs font-semibold">
                     {service.stats}
-                  </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="mb-4">
+                    <h3 className="font-heading font-bold text-xl text-foreground mb-1 group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-primary/80">{service.subtitle}</p>
+                  </div>
+                  
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+
                   <button
                     onClick={scrollToContact}
-                    className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group-hover:bg-accent group-hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/btn"
                   >
-                    <ArrowUpRight size={18} />
+                    <span>Dowiedz się więcej</span>
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                   </button>
+                </div>
+
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 rounded-2xl" style={{
+                    boxShadow: "inset 0 0 60px oklch(0.89 0.23 128 / 0.1)"
+                  }} />
                 </div>
               </div>
             </motion.div>
@@ -133,15 +137,18 @@ export default function ServicesSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-16"
         >
+          <p className="text-muted-foreground mb-6">
+            Potrzebujesz kompleksowego rozwiązania? Stworzymy strategię dopasowaną do Twoich celów.
+          </p>
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-foreground font-bold rounded-lg hover:bg-accent/90 transition-all transform hover:scale-105 active:scale-95"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong"
           >
-            Dowiedz się więcej o naszych usługach
-            <ArrowUpRight size={20} />
+            <span>Zamów bezpłatną konsultację</span>
+            <ArrowUpRight className="w-5 h-5" />
           </button>
         </motion.div>
       </div>
