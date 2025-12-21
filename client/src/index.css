@@ -67,11 +67,11 @@
   --primary-foreground: oklch(0.12 0.01 260); /* Carbon Black */
   
   /* Background hierarchy */
-  --background: oklch(0.10 0.01 260); /* Deep Carbon */
+  --background: #0b1020; /* Boost Dark Navy */
   --foreground: oklch(0.95 0.01 260); /* Almost White */
   
   /* Card surfaces */
-  --card: oklch(0.14 0.015 260); /* Elevated surface */
+  --card: #141829; /* Elevated surface - slightly lighter navy */
   --card-foreground: oklch(0.92 0.01 260);
   
   /* Popover */
@@ -121,22 +121,22 @@
   /* Same as root since we're dark-first */
   --primary: oklch(0.89 0.23 128);
   --primary-foreground: oklch(0.12 0.01 260);
-  --background: oklch(0.10 0.01 260);
+  --background: #0b1020;
   --foreground: oklch(0.95 0.01 260);
-  --card: oklch(0.14 0.015 260);
+  --card: #141829;
   --card-foreground: oklch(0.92 0.01 260);
-  --popover: oklch(0.16 0.015 260);
+  --popover: #1a1f2e;
   --popover-foreground: oklch(0.92 0.01 260);
-  --secondary: oklch(0.20 0.015 260);
+  --secondary: #1f2436;
   --secondary-foreground: oklch(0.85 0.01 260);
-  --muted: oklch(0.22 0.01 260);
+  --muted: #2a2f3e;
   --muted-foreground: oklch(0.60 0.01 260);
   --accent: oklch(0.82 0.18 168);
   --accent-foreground: oklch(0.12 0.01 260);
   --destructive: oklch(0.65 0.25 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0.01 260);
-  --input: oklch(0.20 0.01 260);
+  --border: #2a2f3e;
+  --input: #1f2436;
   --ring: oklch(0.89 0.23 128);
 }
 
