@@ -1,39 +1,85 @@
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
 export default function ProblemSection() {
   return (
-    <section className="py-20 px-4 bg-black text-white">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
-          Twój marketing jest zbyt skomplikowany, by sprzedawać.
-        </h2>
-        
-        <p className="text-lg text-gray-300 mb-12 leading-relaxed">
-          Większość firm płaci za treści, których nikt nie doczytuje do końca. Każde zbędne zdanie i każda sekunda nudy w wideo to moment, w którym klient rezygnuje.
-        </p>
+    <section className="py-24 px-4 bg-black text-white">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+        >
+          {/* Main Heading */}
+          <motion.h2 
+            variants={itemVariants}
+            className="text-3xl md:text-4xl font-bold mb-6 leading-tight max-w-3xl"
+          >
+            Twój marketing jest zbyt skomplikowany, by sprzedawać.
+          </motion.h2>
 
-        <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-lime-400 mb-8">Twoje straty wynikają z trzech błędów:</h3>
-          
-          <div className="space-y-6">
-            <div className="border-l-4 border-lime-400 pl-6">
-              <h4 className="text-xl font-bold mb-2">Przeładowanie</h4>
-              <p className="text-gray-300">Zbyt dużo informacji sprawia, że odbiorca przestaje uważać.</p>
+          {/* Description */}
+          <motion.p 
+            variants={itemVariants}
+            className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
+          >
+            Większość firm płaci za treści, których nikt nie doczytuje do końca. Każde zbędne zdanie i każda sekunda nudy w wideo to moment, w którym klient rezygnuje.
+          </motion.p>
+
+          {/* Three Errors */}
+          <motion.div 
+            variants={itemVariants}
+            className="mb-8"
+          >
+            <h3 className="text-lg font-semibold text-lime-400 mb-8">Twoje straty wynikają z trzech błędów:</h3>
+            
+            <div className="space-y-6">
+              {[
+                { title: "Przeładowanie", desc: "Zbyt dużo informacji sprawia, że odbiorca przestaje uważać." },
+                { title: "Brak priorytetów", desc: "Klient nie wie, na co ma patrzeć, więc patrzy na konkurencję." },
+                { title: "Wysiłek", desc: "Zrozumienie Twojej oferty zajmuje zbyt dużo czasu." },
+              ].map((error, idx) => (
+                <motion.div
+                  key={idx}
+                  variants={itemVariants}
+                  whileHover={{ x: 8, transition: { duration: 0.2 } }}
+                  className="border-l-4 border-lime-400 pl-6 cursor-pointer transition-all"
+                >
+                  <h4 className="text-base font-semibold mb-2">{error.title}</h4>
+                  <p className="text-sm text-gray-400">{error.desc}</p>
+                </motion.div>
+              ))}
             </div>
+          </motion.div>
 
-            <div className="border-l-4 border-lime-400 pl-6">
-              <h4 className="text-xl font-bold mb-2">Brak priorytetów</h4>
-              <p className="text-gray-300">Klient nie wie, na co ma patrzeć, więc patrzy na konkurencję.</p>
-            </div>
-
-            <div className="border-l-4 border-lime-400 pl-6">
-              <h4 className="text-xl font-bold mb-2">Wysiłek</h4>
-              <p className="text-gray-300">Zrozumienie Twojej oferty zajmuje zbyt dużo czasu.</p>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-2xl font-bold text-lime-400 mt-12">
-          Efekt? Finansujesz ignorancję rynku.
-        </p>
+          {/* Final Statement */}
+          <motion.p 
+            variants={itemVariants}
+            className="text-lg font-semibold text-lime-400 mt-12"
+          >
+            Efekt? Finansujesz ignorancję rynku.
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );
