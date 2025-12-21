@@ -3,14 +3,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* BoostNow Rebranding: Professional & Warm Design
-   Color Palette: Złamana Biel (#F8F7F4), Głęboki Granat (#192A51), Energetyczny Koral (#FF5B3E), Ciepły Szary (#EAEAEA)
-   Typography: Playfair Display (headings) + Lato (body)
+/* BoostNow Design System: "Precision Strike" - Military-Grade Minimalism
+   - Carbon Black base with surgical lime-green accents
+   - Command center aesthetic with data visualization elements
+   - Typography: Poppins (headings) + Inter (body)
 */
 
 @theme inline {
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Lato', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
   
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -48,87 +49,95 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* BoostNow Brand Colors */
+  --color-boost-lime: oklch(0.89 0.23 128);
+  --color-boost-mint: oklch(0.82 0.18 168);
+  --color-boost-dark: oklch(0.15 0.02 260);
+  --color-boost-carbon: oklch(0.12 0.01 260);
+  --color-boost-charcoal: oklch(0.18 0.02 260);
+  --color-boost-gray: oklch(0.45 0.01 260);
 }
 
 :root {
   --radius: 0.5rem;
   
-  /* BoostNow New Color Palette */
-  --primary: #FF5B3E; /* Energetyczny Koral - CTA, buttons, accents */
-  --primary-foreground: #F8F7F4; /* Złamana Biel */
+  /* BoostNow Dark Theme - Primary */
+  --primary: oklch(0.89 0.23 128); /* Lime Green */
+  --primary-foreground: oklch(0.12 0.01 260); /* Carbon Black */
   
   /* Background hierarchy */
-  --background: #F8F7F4; /* Złamana Biel - main background */
-  --foreground: #192A51; /* Głęboki Granat - main text */
+  --background: oklch(0.10 0.01 260); /* Deep Carbon */
+  --foreground: oklch(0.95 0.01 260); /* Almost White */
   
   /* Card surfaces */
-  --card: #FFFFFF; /* Pure white for cards */
-  --card-foreground: #192A51; /* Głęboki Granat */
+  --card: oklch(0.14 0.015 260); /* Elevated surface */
+  --card-foreground: oklch(0.92 0.01 260);
   
   /* Popover */
-  --popover: #FFFFFF;
-  --popover-foreground: #192A51;
+  --popover: oklch(0.16 0.015 260);
+  --popover-foreground: oklch(0.92 0.01 260);
   
-  /* Secondary - Light gray */
-  --secondary: #EAEAEA; /* Ciepły Szary */
-  --secondary-foreground: #192A51;
+  /* Secondary - Charcoal */
+  --secondary: oklch(0.20 0.015 260);
+  --secondary-foreground: oklch(0.85 0.01 260);
   
   /* Muted */
-  --muted: #EAEAEA;
-  --muted-foreground: #666666;
+  --muted: oklch(0.22 0.01 260);
+  --muted-foreground: oklch(0.60 0.01 260);
   
-  /* Accent - Coral */
-  --accent: #FF5B3E;
-  --accent-foreground: #FFFFFF;
+  /* Accent - Mint */
+  --accent: oklch(0.82 0.18 168);
+  --accent-foreground: oklch(0.12 0.01 260);
   
   /* Destructive */
-  --destructive: #E74C3C;
-  --destructive-foreground: #FFFFFF;
+  --destructive: oklch(0.65 0.25 25);
+  --destructive-foreground: oklch(0.98 0 0);
   
   /* Borders and inputs */
-  --border: #EAEAEA;
-  --input: #FFFFFF;
-  --ring: #FF5B3E;
+  --border: oklch(0.25 0.01 260);
+  --input: oklch(0.20 0.01 260);
+  --ring: oklch(0.89 0.23 128);
   
   /* Charts */
-  --chart-1: #FF5B3E;
-  --chart-2: #192A51;
-  --chart-3: #FF8B6F;
-  --chart-4: #4A6FA5;
-  --chart-5: #FFB5A0;
+  --chart-1: oklch(0.89 0.23 128);
+  --chart-2: oklch(0.82 0.18 168);
+  --chart-3: oklch(0.75 0.15 200);
+  --chart-4: oklch(0.65 0.12 230);
+  --chart-5: oklch(0.55 0.10 260);
   
   /* Sidebar */
-  --sidebar: #192A51;
-  --sidebar-foreground: #F8F7F4;
-  --sidebar-primary: #FF5B3E;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #EAEAEA;
-  --sidebar-accent-foreground: #192A51;
-  --sidebar-border: #EAEAEA;
-  --sidebar-ring: #FF5B3E;
+  --sidebar: oklch(0.12 0.01 260);
+  --sidebar-foreground: oklch(0.90 0.01 260);
+  --sidebar-primary: oklch(0.89 0.23 128);
+  --sidebar-primary-foreground: oklch(0.12 0.01 260);
+  --sidebar-accent: oklch(0.20 0.015 260);
+  --sidebar-accent-foreground: oklch(0.90 0.01 260);
+  --sidebar-border: oklch(0.25 0.01 260);
+  --sidebar-ring: oklch(0.89 0.23 128);
 }
 
 .dark {
-  /* Light mode is primary, so dark mode uses adjusted values */
-  --primary: #FF5B3E;
-  --primary-foreground: #F8F7F4;
-  --background: #F8F7F4;
-  --foreground: #192A51;
-  --card: #FFFFFF;
-  --card-foreground: #192A51;
-  --popover: #FFFFFF;
-  --popover-foreground: #192A51;
-  --secondary: #EAEAEA;
-  --secondary-foreground: #192A51;
-  --muted: #EAEAEA;
-  --muted-foreground: #666666;
-  --accent: #FF5B3E;
-  --accent-foreground: #FFFFFF;
-  --destructive: #E74C3C;
-  --destructive-foreground: #FFFFFF;
-  --border: #EAEAEA;
-  --input: #FFFFFF;
-  --ring: #FF5B3E;
+  /* Same as root since we're dark-first */
+  --primary: oklch(0.89 0.23 128);
+  --primary-foreground: oklch(0.12 0.01 260);
+  --background: oklch(0.10 0.01 260);
+  --foreground: oklch(0.95 0.01 260);
+  --card: oklch(0.14 0.015 260);
+  --card-foreground: oklch(0.92 0.01 260);
+  --popover: oklch(0.16 0.015 260);
+  --popover-foreground: oklch(0.92 0.01 260);
+  --secondary: oklch(0.20 0.015 260);
+  --secondary-foreground: oklch(0.85 0.01 260);
+  --muted: oklch(0.22 0.01 260);
+  --muted-foreground: oklch(0.60 0.01 260);
+  --accent: oklch(0.82 0.18 168);
+  --accent-foreground: oklch(0.12 0.01 260);
+  --destructive: oklch(0.65 0.25 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.25 0.01 260);
+  --input: oklch(0.20 0.01 260);
+  --ring: oklch(0.89 0.23 128);
 }
 
 @layer base {
@@ -142,12 +151,11 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
   }
   
   button:not(:disabled),
@@ -194,33 +202,33 @@
   
   /* BoostNow Custom Components */
   
-  .text-gradient-coral {
-    background: linear-gradient(135deg, #FF5B3E 0%, #FF8B6F 100%);
+  .text-gradient-lime {
+    background: linear-gradient(135deg, oklch(0.89 0.23 128) 0%, oklch(0.82 0.18 168) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .bg-gradient-light {
-    background: linear-gradient(180deg, #F8F7F4 0%, #FFFFFF 100%);
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, oklch(0.10 0.01 260) 0%, oklch(0.08 0.01 260) 100%);
   }
   
-  .glow-coral {
-    box-shadow: 0 0 20px #FF5B3E / 0.2, 0 0 40px #FF5B3E / 0.1;
+  .glow-lime {
+    box-shadow: 0 0 20px oklch(0.89 0.23 128 / 0.3), 0 0 40px oklch(0.89 0.23 128 / 0.1);
   }
   
-  .glow-coral-strong {
-    box-shadow: 0 0 30px #FF5B3E / 0.4, 0 0 60px #FF5B3E / 0.2;
+  .glow-lime-strong {
+    box-shadow: 0 0 30px oklch(0.89 0.23 128 / 0.5), 0 0 60px oklch(0.89 0.23 128 / 0.2);
   }
   
-  .border-coral {
-    border: 1px solid #FF5B3E / 0.3;
+  .border-glow {
+    border: 1px solid oklch(0.89 0.23 128 / 0.3);
   }
   
   .glass-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: oklch(0.14 0.015 260 / 0.8);
     backdrop-filter: blur(12px);
-    border: 1px solid #EAEAEA;
+    border: 1px solid oklch(0.30 0.01 260 / 0.5);
   }
   
   /* Scan line animation */
@@ -235,8 +243,8 @@
   
   /* Pulse glow animation */
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px #FF5B3E / 0.2; }
-    50% { box-shadow: 0 0 40px #FF5B3E / 0.4; }
+    0%, 100% { box-shadow: 0 0 20px oklch(0.89 0.23 128 / 0.3); }
+    50% { box-shadow: 0 0 40px oklch(0.89 0.23 128 / 0.6); }
   }
   
   .animate-pulse-glow {
@@ -278,11 +286,11 @@
 
 @layer utilities {
   .font-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
   }
   
   .font-body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   
   .text-balance {

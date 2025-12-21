@@ -52,7 +52,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-6"
             >
-              <Zap className="w-4 h-4 text-primary" />
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-sm font-medium text-primary">Agencja Aktywacji Klientów</span>
             </motion.div>
 
@@ -64,7 +64,7 @@ export default function HeroSection() {
               className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6"
             >
               Zboostuj z nami{" "}
-              <span className="text-gradient-coral">swoją markę!</span>
+              <span className="text-gradient-lime">swoją markę!</span>
             </motion.h1>
 
             {/* Subheadline */}

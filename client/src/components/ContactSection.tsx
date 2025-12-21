@@ -66,7 +66,7 @@ export default function ContactSection() {
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               Chcesz{" "}
-              <span className="text-gradient-coral">BOOST</span>{" "}
+              <span className="text-gradient-lime">BOOST</span>{" "}
               dla swoich wyników?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -188,7 +188,7 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] glow-coral hover:glow-coral-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="w-full group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] glow-lime hover:glow-lime-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
                     {isSubmitting ? (
                       <>

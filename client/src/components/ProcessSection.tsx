@@ -70,7 +70,7 @@ export default function ProcessSection() {
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Transparentność{" "}
-            <span className="text-gradient-coral">buduje dystans do konkurencji</span>
+            <span className="text-gradient-lime">buduje dystans do konkurencji</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Oto protokół Twojego wzrostu. Żadnych domysłów. Tylko systematyczna eliminacja błędów poznawczych Twoich klientów.

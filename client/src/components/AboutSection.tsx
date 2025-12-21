@@ -55,7 +55,7 @@ export default function AboutSection() {
                 O BoostNow
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Jesteśmy <span className="text-gradient-coral">Architektami Decyzji</span>. Reszta to tylko dekoracja.
+                Jesteśmy <span className="text-gradient-lime">Architektami Decyzji</span>. Reszta to tylko dekoracja.
               </h2>
             </motion.div>
 

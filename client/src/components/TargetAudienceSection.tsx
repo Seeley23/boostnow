@@ -82,7 +82,7 @@ export default function TargetAudienceSection() {
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Niezależnie od branży,{" "}
-            <span className="text-gradient-coral">mamy rozwiązanie</span>
+            <span className="text-gradient-lime">mamy rozwiązanie</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Nasze strategie działają dla każdej branży. Poniżej znajdziesz rozwiązania dostosowane do Twojego biznesu.
