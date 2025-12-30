@@ -1,10 +1,3 @@
----
-title: "10 Błędów CRO, Które Kosztują Cię Miliony: Sekrety Architektów Decyzji"
-meta_description: "Architekci Decyzji - 380% wzrost konwersji w 21 dni. Odkryj 10 krytycznych błędów CRO, które niszczą Twój ROI. Zmień strategię i odzyskaj 68% porzuconych koszyków."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, System Przymusu Uwagi"
-target_industry: "E-commerce"
-word_count: 1785
----
 
 # Czy Twoja strategia CRO to pułapka kosztująca miliony? Poznaj 10 krytycznych błędów, które omijają **Architekci Decyzji**
 

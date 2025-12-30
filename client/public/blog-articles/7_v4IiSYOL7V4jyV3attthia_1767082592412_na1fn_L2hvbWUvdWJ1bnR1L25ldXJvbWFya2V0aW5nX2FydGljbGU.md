@@ -1,10 +1,3 @@
----
-title: "5 Technik Neuromarketingu, Które Zwiększają Konwersje: Zostań Architektem Decyzji Swoich Klientów"
-meta_description: "Architekci Decyzji wykorzystują 5 technik neuromarketingu, by osiągnąć 380% wzrost konwersji w 21 dni. Odkryj Psychologię Konwersji na Żywo i System Przymusu Uwagi."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, System Przymusu Uwagi"
-target_industry: "E-commerce"
-word_count: 1850
----
 
 # 5 Technik Neuromarketingu, Które Zwiększają Konwersje: Zostań Architektem Decyzji Swoich Klientów
 

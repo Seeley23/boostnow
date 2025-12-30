@@ -1,10 +1,3 @@
----
-title: "Jak zwiększyć konwersje e-commerce o 300%? Metodologia Architektów Decyzji"
-meta_description: "Architekci Decyzji - Zobacz, jak BoostNow osiągnęło 380% wzrost konwersji u 47 klientów w 21 dni. Psychologia Konwersji na Żywo to Twój klucz do 5.8x ROI."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, System Przymusu Uwagi"
-target_industry: "E-commerce"
-word_count: 1664
----
 # Jak zwiększyć konwersje e-commerce o 300%? Metodologia Architektów Decyzji
 
 **Byline:** Founder & CEO BoostNow | Decision Science Specialist | 15+ lat w marketingu

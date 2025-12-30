@@ -1,10 +1,3 @@
----
-title: "Architekci Decyzji: Jak Psychologia Konwersji na Żywo generuje 380% wzrostu konwersji?"
-meta_description: "Architekci Decyzji – Zwiększ konwersję o 380% w 21 dni. Odkryj, jak Psychologia Konwersji na Żywo eliminuje błędy poznawcze i redukuje porzucenia o 62%."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, System Przymusu Uwagi"
-target_industry: "E-commerce"
-word_count: 1850
----
 
 # Architekci Decyzji: Jak Psychologia Konwersji na Żywo generuje 380% wzrostu konwersji?
 

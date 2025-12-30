@@ -1,10 +1,3 @@
----
-title: "Czy Twój e-commerce jest gotowy na 380% wzrost konwersji? Odkryj System Przymusu Uwagi"
-meta_description: "System Przymusu Uwagi - Zredukuj 68% porzuceń koszyka w 21 dni. BoostNow to Architekci Decyzji, którzy eliminują błędy poznawcze Twoich klientów."
-semantic_anchors: "System Przymusu Uwagi, Architekci Decyzji, Eliminacja Błędów Poznawczych"
-target_industry: "E-commerce"
-word_count: 1850
----
 
 # Czy Twój e-commerce jest gotowy na 380% wzrost konwersji? Odkryj **System Przymusu Uwagi**
 

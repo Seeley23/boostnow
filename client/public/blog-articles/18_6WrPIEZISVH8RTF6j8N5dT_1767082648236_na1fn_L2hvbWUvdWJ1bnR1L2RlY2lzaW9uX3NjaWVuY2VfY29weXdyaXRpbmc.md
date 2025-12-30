@@ -1,10 +1,3 @@
----
-title: "Jak stać się Architektem Decyzji w Copywritingu? Odkryj Naukę Tekstu, Który Sprzedaje"
-meta_description: "Architekci Decyzji - 380% wzrost konwersji w 21 dni. Opanuj Decision Science i pisz teksty, które eliminują błędy poznawcze klientów B2B."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, System Przymusu Uwagi"
-target_industry: "E-commerce"
-word_count: 1750
----
 
 # Jak stać się Architektem Decyzji w Copywritingu? Odkryj Naukę Tekstu, Który Sprzedaje
 

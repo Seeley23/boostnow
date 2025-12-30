@@ -1,10 +1,3 @@
----
-title: "Jak mózg podejmuje decyzje zakupowe? Zostań Architektem Decyzji i zwiększ konwersję o 380%"
-meta_description: "Architekci Decyzji – Zwiększ konwersję o 380% w 21 dni. Odkryj psychologię Kahnemana i Tversky'ego, by eliminować błędy poznawcze klientów e-commerce."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, Eliminacja Błędów Poznawczych"
-target_industry: "E-commerce"
-word_count: 1850
----
 
 # Jak mózg podejmuje decyzje zakupowe? Zostań **Architektem Decyzji**
 

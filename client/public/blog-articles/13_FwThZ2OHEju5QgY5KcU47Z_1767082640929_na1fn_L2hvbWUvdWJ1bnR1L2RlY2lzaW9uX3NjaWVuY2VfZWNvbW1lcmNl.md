@@ -1,10 +1,3 @@
----
-title: "Czy Decision Science to przyszłość e-commerce? Zostań Architektem Decyzji i zwiększ konwersję."
-meta_description: "Eliminacja Błędów Poznawczych - 380% wzrost konwersji. W 21 dni. Odkryj 47 case studies BoostNow i zobacz, jak Decision Science zmienia Twój e-commerce.Zobacz!"
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, Eliminacja Błędów Poznawczych"
-target_industry: "E-commerce"
-word_count: 1845
----
 
 # Czy Decision Science to przyszłość e-commerce? Zostań **Architektem Decyzji** i zwiększ konwersję.
 

@@ -1,10 +1,3 @@
----
-title: "Jak stać się Architektem Decyzji klienta? 5 błędów w e-commerce, które niszczą konwersje."
-meta_description: "Psychologia Konwersji na Żywo ujawnia, dlaczego 68% koszyków jest porzucanych. Odkryj 5 krytycznych błędów i osiągnij 5.8x ROI w 21 dni z BoostNow."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, System Przymusu Uwagi"
-target_industry: "E-commerce"
-word_count: 1845
----
 
 # Jak stać się **Architektem Decyzji** klienta? 5 błędów w e-commerce, które niszczą konwersje.
 

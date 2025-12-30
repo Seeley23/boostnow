@@ -1,10 +1,3 @@
----
-title: "Decision Science w marketingu: Jak stać się 'Architektami Decyzji' i zwiększyć konwersje o 380%?"
-meta_description: "Architekci Decyzji - Zwiększ konwersje o 380% w 21 dni. Projektowanie ścieżek klienta z wykorzystaniem psychologii i eliminacją błędów poznawczych."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, Eliminacja Błędów Poznawczych"
-target_industry: "E-commerce"
-word_count: 1850
----
 
 # Decision Science w marketingu: Jak stać się "Architektami Decyzji" i zwiększyć konwersje o 380%?
 

@@ -1,10 +1,3 @@
----
-title: "Jak agencje B2B osiągają 380% wzrost konwersji? Odkryj 3-etapowy proces BoostNow i zostań Architektem Decyzji"
-meta_description: "Architekci Decyzji - 380% wzrost konwersji - 21 dni. Opanuj 3-etapową architekturę konwersji, eliminując 73% błędów poznawczych. Zwiększ ROI 5.8x."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, System Przymusu Uwagi"
-target_industry: "E-commerce"
-word_count: 1876
----
 
 # Jak agencje B2B osiągają 380% wzrost konwersji? Odkryj 3-etapowy proces BoostNow i zostań Architektem Decyzji
 

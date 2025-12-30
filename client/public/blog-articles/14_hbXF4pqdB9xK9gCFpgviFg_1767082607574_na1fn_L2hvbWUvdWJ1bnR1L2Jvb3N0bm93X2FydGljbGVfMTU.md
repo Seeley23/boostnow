@@ -1,10 +1,3 @@
----
-title: "Jak stać się Architektem Decyzji w usługach konsultingowych? Case Study: +250% leadów w 21 dni"
-meta_description: "Architekci Decyzji - Zwiększ leady o +250% w 21 dni. Odkryj, jak Eliminacja Błędów Poznawczych i Psychologia Konwersji na Żywo generują 5.8x ROI dla usług B2B."
-semantic_anchors: "Architekci Decyzji, Psychologia Konwersji na Żywo, Eliminacja Błędów Poznawczych"
-target_industry: "Usługi & Consulting"
-word_count: 1785
----
 
 # Jak stać się **Architektem Decyzji** w usługach konsultingowych? Case Study: +250% leadów w 21 dni
 
