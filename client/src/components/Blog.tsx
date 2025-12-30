@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'wouter';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 
 interface Article {
@@ -161,9 +162,9 @@ const Blog: React.FC = () => {
                     {article.meta_description}
                   </p>
                   <div className="flex gap-3">
-                    <button className="px-4 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-[#b8e63d] transition-colors text-sm">
+                    <Link href={`/blog/${article.id}`} className="px-4 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-[#b8e63d] transition-colors text-sm">
                       Czytaj artykuł
-                    </button>
+                    </Link>
                     <button className="px-4 py-2 bg-[#2a2f3e] text-white rounded-lg font-semibold hover:bg-[#3a3f4e] transition-colors text-sm">
                       Zapisz
                     </button>
