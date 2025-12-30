@@ -49,6 +49,10 @@ const BlogArticle: React.FC = () => {
             const response = await fetch(`/blog-articles/${fileInfo.filename}`);
             let content = await response.text();
             
+            // Usuń YAML frontmatter jeśli istnieje
+            const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
+            content = content.replace(frontmatterRegex, '');
+            
             // Jeśli ładowanie nie powiodło się, użyj fallback
             if (!content) {
               content = `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`;
