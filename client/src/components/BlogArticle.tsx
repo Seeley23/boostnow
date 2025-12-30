@@ -3,6 +3,7 @@ import { useParams, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import articlesMetadata from '../data/blog/articles-metadata.json';
+import articleFilesMap from '../data/blog/article-files.json';
 
 interface Article {
   id: number;
@@ -34,32 +35,60 @@ const BlogArticle: React.FC = () => {
   const articles: Article[] = articlesMetadata as Article[];
 
   useEffect(() => {
-    // Pobierz artykuł na podstawie ID
-    const articleIndex = parseInt(id || '1') - 1;
-    
-    if (articleIndex >= 0 && articleIndex < articles.length) {
-      setArticle({
-        title: articles[articleIndex].title,
-        meta_description: articles[articleIndex].meta_description,
-        semantic_anchors: articles[articleIndex].semantic_anchors,
-        target_industry: articles[articleIndex].target_industry,
-        word_count: articles[articleIndex].word_count,
-        content: `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}\n\n## Pełna zawartość artykułu\n\nTutaj pojawi się pełna zawartość artykułu załadowana z pliku markdown.`
-      });
-
-      // Pobierz powiązane artykuły (z tej samej branży, max 3)
-      const related = articles
-        .filter(a => 
-          a.target_industry === articles[articleIndex].target_industry && 
-          a.id !== articles[articleIndex].id
-        )
-        .slice(0, 3);
+    const loadArticle = async () => {
+      const articleIndex = parseInt(id || '1') - 1;
       
-      setRelatedArticles(related);
+      if (articleIndex >= 0 && articleIndex < articles.length) {
+        const articleId = articleIndex + 1;
+        const fileMap = articleFilesMap as Record<string, any>;
+        const fileInfo = fileMap[articleId.toString()];
+        
+        if (fileInfo) {
+          try {
+            // Załaduj zawartość markdown
+            const response = await fetch(`/blog-articles/${fileInfo.filename}`);
+            let content = await response.text();
+            
+            // Jeśli ładowanie nie powiodło się, użyj fallback
+            if (!content) {
+              content = `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`;
+            }
+            
+            setArticle({
+              title: articles[articleIndex].title,
+              meta_description: articles[articleIndex].meta_description,
+              semantic_anchors: articles[articleIndex].semantic_anchors,
+              target_industry: articles[articleIndex].target_industry,
+              word_count: articles[articleIndex].word_count,
+              content: content
+            });
+          } catch (error) {
+            console.error('Błąd ładowania artykułu:', error);
+            setArticle({
+              title: articles[articleIndex].title,
+              meta_description: articles[articleIndex].meta_description,
+              semantic_anchors: articles[articleIndex].semantic_anchors,
+              target_industry: articles[articleIndex].target_industry,
+              word_count: articles[articleIndex].word_count,
+              content: `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`
+            });
+          }
+        }
+
+        // Pobierz powiązane artykuły (z tej samej branży, max 3)
+        const related = articles
+          .filter(a => 
+            a.target_industry === articles[articleIndex].target_industry && 
+            a.id !== articles[articleIndex].id
+          )
+          .slice(0, 3);
+        
+        setRelatedArticles(related);
+      }
       setLoading(false);
-    } else {
-      setLoading(false);
-    }
+    };
+    
+    loadArticle();
   }, [id, articles]);
 
   if (loading) {
