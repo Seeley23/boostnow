@@ -9,6 +9,7 @@ import ProcessSection from "@/components/ProcessSection";
 import ResultsSection from "@/components/ResultsSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
 import ContactSection from "@/components/ContactSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
@@ -81,9 +82,10 @@ export default function Home() {
             <ResultsSection />
             <TargetAudienceSection />
             <LossCalculator />
+            <FAQSection />
             <ContactSection />
+            <Footer />
           </main>
-          <Footer />
         </div>
       )}
     </>
