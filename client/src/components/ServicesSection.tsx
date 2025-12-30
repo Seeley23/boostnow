@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
@@ -14,8 +13,8 @@ const services = [
   {
     id: "conversion",
     title: "Inżynieria Konwersji",
-    subtitle: "Landing Pages & Copy",
-    description: "Tworzymy strony i treści, które nie proszą - egzekwują pożądanie. Każde słowo jest zaprojektowane do wywołania natychmiastowej akcji.",
+    subtitle: "Landing Pages & Copywriting",
+    description: "Tworzymy strony i treści, które nie proszą - egzekwują pożądanie. Każde słowo jest zaprojektowane do wywołania natychmiastowej akcji. Architektura decyzji oparta na psychologii.",
     image: "/images/services-conversion.png",
     stats: "+40% konwersji",
   },
@@ -34,6 +33,38 @@ const services = [
     description: "Silne marki nie mają klientów - mają społeczność. Budujemy ekstremalną lojalność i transparentność relacji.",
     image: "/images/services-community.png",
     stats: "7+ lat doświadczenia",
+  },
+  {
+    id: "ecommerce",
+    title: "E-commerce Optimization",
+    subtitle: "Opisy produktowe & Naracja",
+    description: "Tworzymy opisy produktów, które sprzedają. Budujemy narrację marki, która resonuje z Twoimi klientami i eliminuje błędy poznawcze.",
+    image: "/images/services-ecommerce.png",
+    stats: "+62% konwersji",
+  },
+  {
+    id: "geo",
+    title: "GEO Positioning",
+    subtitle: "AI Search Optimization",
+    description: "Pozycjonowanie w ChatGPT, Perplexity i Gemini. Zwiększamy Share of Model Voice (SoMV) dla Twojej marki w AI search engines.",
+    image: "/images/services-geo.png",
+    stats: "SoMV +380%",
+  },
+  {
+    id: "seo",
+    title: "SEO Positioning",
+    subtitle: "Organic Search Strategy",
+    description: "Strategie SEO oparte na Decision Science. Budujemy autorytetu marki i dominujemy wyniki wyszukiwania dla kluczowych fraz.",
+    image: "/images/services-seo.png",
+    stats: "+150% organic traffic",
+  },
+  {
+    id: "web3",
+    title: "Web3 Services",
+    subtitle: "Blockchain & NFT Strategy",
+    description: "Strategie Web3 dla marki. Budujemy community na blockchain, tworzymy NFT campaigns i strategie tokenomiki.",
+    image: "/images/services-web3.png",
+    stats: "Future-ready",
   },
 ];
 
@@ -74,83 +105,61 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        {/* Services grid */}
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+        {/* Services grid - 7 usług w responsive grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
-              className="group relative"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary transition-all duration-300"
             >
-              <div className="relative h-full rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500">
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+              {/* Image */}
+              {service.image && (
+                <div className="relative h-48 overflow-hidden bg-muted">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                  
-                  {/* Stats badge */}
-                  <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-primary/90 text-primary-foreground text-xs font-semibold">
-                    {service.stats}
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
                 </div>
+              )}
 
-                {/* Content */}
-                <div className="p-6">
-                  <div className="mb-4">
-                    <h3 className="font-heading font-bold text-xl text-foreground mb-1 group-hover:text-primary transition-colors">
+              {/* Content */}
+              <div className="p-6 relative">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-foreground mb-1">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-primary/80">{service.subtitle}</p>
+                    <p className="text-sm text-primary font-medium">
+                      {service.subtitle}
+                    </p>
                   </div>
-                  
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-
-                  <button
-                    onClick={scrollToContact}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/btn"
-                  >
-                    <span>Dowiedz się więcej</span>
-                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                  </button>
+                  <ArrowUpRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
 
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 rounded-2xl" style={{
-                    boxShadow: "inset 0 0 60px oklch(0.89 0.23 128 / 0.1)"
-                  }} />
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                  {service.description}
+                </p>
+
+                <div className="flex items-center justify-between pt-4 border-t border-border">
+                  <span className="text-xs font-semibold text-primary">
+                    {service.stats}
+                  </span>
+                  <button
+                    onClick={scrollToContact}
+                    className="text-xs font-medium text-primary hover:text-foreground transition-colors"
+                  >
+                    Dowiedz się więcej →
+                  </button>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <p className="text-muted-foreground mb-6">
-            Potrzebujesz kompleksowego rozwiązania? Stworzymy strategię dopasowaną do Twoich celów.
-          </p>
-          <button
-            onClick={scrollToContact}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong"
-          >
-            <span>Zamów bezpłatną konsultację</span>
-            <ArrowUpRight className="w-5 h-5" />
-          </button>
-        </motion.div>
       </div>
     </section>
   );

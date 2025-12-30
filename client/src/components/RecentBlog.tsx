@@ -62,13 +62,9 @@ const RecentBlog: React.FC = () => {
                 </span>
               </div>
 
-              <Link href={`/blog/${article.id}`}>
-                <a className="block group">
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#c7ff4e] transition line-clamp-2">
-                    {article.title}
-                  </h3>
-                </a>
-              </Link>
+              <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">
+                {article.title}
+              </h3>
 
               <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                 {article.meta_description}
