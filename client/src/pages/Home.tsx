@@ -12,6 +12,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
+import GEODashboard from "@/components/GEODashboard";
+import GEOAudit from "@/components/GEOAudit";
+import GEORoadmap from "@/components/GEORoadmap";
 
 /* Home Page - BoostNow
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -79,6 +82,9 @@ export default function Home() {
             <ProcessSection />
             <ResultsSection />
             <TargetAudienceSection />
+            <GEODashboard />
+            <GEOAudit />
+            <GEORoadmap />
             <ContactSection />
           </main>
           <Footer />
