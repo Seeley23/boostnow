@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import LossCalculator from "@/components/LossCalculator";
-import Blog from "@/components/Blog";
+import RecentBlog from "@/components/RecentBlog";
 
 /* Home Page - BoostNow
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -83,7 +83,7 @@ export default function Home() {
             <ResultsSection />
             <TargetAudienceSection />
             <LossCalculator />
-            <Blog />
+            <RecentBlog />
             <FAQSection />
             <ContactSection />
             <Footer />
