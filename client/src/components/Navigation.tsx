@@ -59,12 +59,12 @@ export default function Navigation() {
             <a 
               href="/" 
               onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
-              className="flex items-center gap-2 group"
+              className="flex items-center gap-2 group bg-transparent"
             >
               <img 
-                src="/images/logo.svg" 
+                src="/images/logo.png" 
                 alt="BoostNow Logo" 
-                className="h-12 w-auto hover:opacity-80 transition-opacity" 
+                className="h-12 w-auto hover:opacity-80 transition-opacity bg-transparent" 
               />
             </a>
 

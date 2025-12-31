@@ -41,12 +41,12 @@ export default function Footer() {
             <a 
               href="#" 
               onClick={(e) => { e.preventDefault(); scrollToSection("#"); }}
-              className="inline-flex items-center gap-2 mb-4"
+              className="inline-flex items-center gap-2 mb-4 bg-transparent"
             >
               <img 
-                src="/images/logo.svg" 
+                src="/images/logo.png" 
                 alt="BoostNow Logo" 
-                className="h-12 w-auto" 
+                className="h-12 w-auto bg-transparent" 
               />
             </a>
             <p className="text-sm text-muted-foreground mb-6 max-w-xs">
