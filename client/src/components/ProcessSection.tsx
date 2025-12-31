@@ -14,23 +14,30 @@ const steps = [
   {
     number: "01",
     icon: Search,
-    title: "Diagnoza",
-    description: "Audyt psychologiczny - mapujemy motywacje i lęki Twojej grupy.",
+    title: "Audyt Psychologiczny",
+    description: "Mapujemy lęki i motywacje Twojej grupy. Znajdujemy dźwignie, o których nie wiedzą.",
     duration: "Tydzień 1-2",
   },
   {
     number: "02",
     icon: Lightbulb,
-    title: "Strategia",
-    description: "Budujemy system komunikacji oparty na psychologii decyzji.",
+    title: "Architektura Strategii",
+    description: "Budujemy system komunikacji. Każde słowo to zaplanowany wyzwalacz reakcji.",
     duration: "Tydzień 2-3",
   },
   {
     number: "03",
     icon: Rocket,
-    title: "Wdrożenie & Optymizacja",
-    description: "Uruchamiamy materiały i monitorujemy konwersję w czasie rzeczywistym.",
+    title: "Wdrożenie i Akceleracja",
+    description: "Uruchamiamy materiały, które kończą erę bierności. Monitorujemy konwersję w czasie rzeczywistym.",
     duration: "Tydzień 3-4",
+  },
+  {
+    number: "04",
+    icon: BarChart3,
+    title: "Skalowanie AI",
+    description: "Wykorzystujemy dane do ciągłej optymizacji. AI eliminuje to, co nie generuje zysku.",
+    duration: "Ongoing",
   },
 ];
 
@@ -75,7 +82,7 @@ export default function ProcessSection() {
           {/* Connecting line - desktop */}
           <div className="hidden lg:block absolute top-24 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}

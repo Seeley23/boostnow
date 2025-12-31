@@ -15,24 +15,36 @@ const caseStudies = [
     id: 1,
     industry: "E-commerce",
     icon: ShoppingCart,
-    problem: "Niski współczynnik konwersji. Klienci porzucali koszyki.",
-    strategy: "Psychologia pilności + redesign ścieżki zakupowej z social proof.",
+    problem: "Niski współczynnik konwersji mimo wysokiego ruchu na stronie. Klienci porzucali koszyki.",
+    strategy: "Wdrożenie psychologii pilności i awersji do straty. Redesign ścieżki zakupowej z elementami social proof.",
     results: [
-      { label: "Konwersja", value: "+156%" },
-      { label: "Porzucenia", value: "-42%" },
-      { label: "ROI", value: "340%" },
+      { label: "Wzrost konwersji", value: "+156%" },
+      { label: "Redukcja porzuceń", value: "-42%" },
+      { label: "ROI kampanii", value: "340%" },
     ],
   },
   {
     id: 2,
     industry: "SaaS B2B",
     icon: Users,
-    problem: "Długi cykl sprzedaży, niska jakość leadów.",
-    strategy: "Decision Science + targetowanie psychograficzne + lead magnet.",
+    problem: "Długi cykl sprzedaży i niska jakość leadów. Trudność w dotarciu do decydentów.",
+    strategy: "Architektura treści oparta na Decision Science. Targetowanie psychograficzne + lead magnet z kalkulatorem ROI.",
     results: [
       { label: "Jakość leadów", value: "+89%" },
-      { label: "Cykl sprzedaży", value: "-35%" },
+      { label: "Skrócenie cyklu", value: "-35%" },
       { label: "Demo requests", value: "+210%" },
+    ],
+  },
+  {
+    id: 3,
+    industry: "Usługi Premium",
+    icon: TrendingUp,
+    problem: "Brak rozpoznawalności marki i trudność w komunikowaniu wartości premium.",
+    strategy: "Budowanie autorytetu przez content marketing + strategia społeczności. Pozycjonowanie jako ekspert branżowy.",
+    results: [
+      { label: "Świadomość marki", value: "+280%" },
+      { label: "Wartość klienta", value: "+65%" },
+      { label: "Polecenia", value: "+120%" },
     ],
   },
 ];
@@ -78,7 +90,7 @@ export default function ResultsSection() {
               className="group"
             >
               <div className="rounded-2xl bg-card border border-border hover:border-primary/30 overflow-hidden transition-all duration-300">
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid lg:grid-cols-12 gap-0">
                   {/* Left side - Problem & Strategy */}
                   <div className="lg:col-span-7 p-6 lg:p-8">
                     {/* Industry badge */}

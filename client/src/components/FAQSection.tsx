@@ -13,13 +13,55 @@ const faqItems: FAQItem[] = [
     id: "process-1",
     category: "process",
     question: "Jak wygląda proces współpracy z BoostNow?",
-    answer: "Zaczynamy od Audytu Psychologicznego (Tydzień 1-2), budujemy Architekturę Strategii (Tydzień 2-3), wdrażamy materiały (Tydzień 3-4), i skalujemy wyniki za pomocą AI.",
+    answer: "Zaczynamy od Audytu Psychologicznego, gdzie mapujemy lęki i motywacje Twojej grupy. Następnie budujemy Architekturę Strategii - system komunikacji oparty na psychologii języka. Potem wdrażamy materiały i monitorujemy konwersję w czasie rzeczywistym. Na koniec skalujemy wyniki za pomocą AI.",
   },
   {
     id: "process-2",
     category: "process",
     question: "Ile czasu zajmuje wdrożenie strategii?",
-    answer: "Pełny cykl wdrożenia zajmuje 4 tygodnie. Pierwsze wyniki widoczne po 2-3 tygodniach. Pełne rezultaty (200-300% wzrostu) osiągamy po 3-6 miesiącach.",
+    answer: "Pełny cykl wdrożenia zajmuje 4 tygodnie: Tydzień 1-2 to Audyt Psychologiczny, Tydzień 2-3 to Architektura Strategii, Tydzień 3-4 to Wdrożenie i Akceleracja. Po tym okresie rozpoczyna się faza Skalowania AI, która trwa nieprzerwanie.",
+  },
+  {
+    id: "process-3",
+    category: "process",
+    question: "Jakie metryki będę monitorować?",
+    answer: "Monitorujemy: Konwersję (ile osób podejmuje decyzję), Rezygnację klientów (ile osób porzuca proces), ROI kampanii (zwrot z inwestycji), Czas do konwersji (jak szybko klient decyduje), Wartość lifetime klienta (długoterminowy zysk).",
+  },
+  {
+    id: "pricing-1",
+    category: "pricing",
+    question: "Jak kształtują się ceny usług BoostNow?",
+    answer: "Ceny zależą od zakresu usług: Decision Science (od 5 000 zł), Amunicja Wizualna (od 8 000 zł), Kolonizacja Rynku (od 12 000 zł), Pełny pakiet (od 25 000 zł). Każda usługa jest dostosowana do wielkości Twojej firmy i budżetu.",
+  },
+  {
+    id: "pricing-2",
+    category: "pricing",
+    question: "Czy oferujecie pakiety dla startupów?",
+    answer: "Tak! Mamy specjalny pakiet dla startupów - 'Szybki Start' za 3 500 zł. Zawiera Audyt Psychologiczny i Architekturę Strategii dla 1 produktu. Po 3 miesiącach możesz skalować do pełnego pakietu.",
+  },
+  {
+    id: "pricing-3",
+    category: "pricing",
+    question: "Czy cena zawiera wsparcie po wdrożeniu?",
+    answer: "Tak! Każdy pakiet zawiera 30 dni wsparcia post-wdrożeniowego. Monitorujemy wyniki, optymalizujemy materiały i wspieramy zespół w razie pytań. Po 30 dniach możesz przedłużyć wsparcie lub przejść na model skalowania AI.",
+  },
+  {
+    id: "timeline-1",
+    category: "timeline",
+    question: "Kiedy mogę spodziewać się pierwszych wyników?",
+    answer: "Pierwsze wyniki widać po 2-3 tygodniach od wdrożenia. Wzrost konwersji wynosi średnio 40-80% w pierwszym miesiącu. Pełne rezultaty (200-300% wzrostu) osiągamy po 3-6 miesiącach.",
+  },
+  {
+    id: "timeline-2",
+    category: "timeline",
+    question: "Jak długo trwa umowa z BoostNow?",
+    answer: "Minimalna umowa to 3 miesiące. Po tym okresie możesz kontynuować, zmienić zakres usług lub rozwiązać umowę. Nie ma ukrytych kosztów ani kar za rozwiązanie umowy.",
+  },
+  {
+    id: "timeline-3",
+    category: "timeline",
+    question: "Czy mogę rozszerzyć usługi w trakcie współpracy?",
+    answer: "Oczywiście! Możesz dodać nowe usługi w dowolnym momencie. Na przykład, jeśli zacząłeś od Decision Science, możesz dodać Amunicję Wizualną lub Kolonizację Rynku. Dostosujemy plan i harmonogram do Twoich potrzeb.",
   },
 ];
 
@@ -43,8 +85,8 @@ export default function FAQSection() {
           </p>
         </div>
 
-         {/* Tabs - HIDDEN */}
-        {/* <div className="flex gap-4 mb-12 border-b border-gray-800">
+        {/* Category Tabs */}
+        <div className="flex gap-4 mb-12 justify-center flex-wrap">
           {["process", "pricing", "timeline"].map((cat) => (
             <button
               key={cat}
