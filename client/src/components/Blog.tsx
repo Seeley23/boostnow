@@ -30,11 +30,19 @@ const Blog: React.FC = () => {
   const industries = ['all', ...Array.from(industriesSet)];
 
   const industryLabels: Record<string, string> = {
-    all: 'Wszystkie artykuły',
-    'E-commerce': '🛒 E-commerce',
-    'Marki Premium': '✨ Marki Premium',
-    'Usługi & Consulting': '💼 Usługi & Consulting'
+    all: `Wszystkie artykuły (${articles.length})`,
+    'E-commerce': `🛒 E-commerce (${articles.filter(a => a.target_industry === 'E-commerce').length})`,
+    'Marki Premium': `✨ Marki Premium (${articles.filter(a => a.target_industry === 'Marki Premium').length})`,
+    'Usługi & Consulting': `💼 Usługi & Consulting (${articles.filter(a => a.target_industry === 'Usługi & Consulting').length})`
   };
+
+  // Dynamicznie generuj etykiety dla branż, które nie są w liście
+  industries.forEach(industry => {
+    if (industry !== 'all' && !industryLabels[industry]) {
+      const count = articles.filter(a => a.target_industry === industry).length;
+      industryLabels[industry] = `${industry} (${count})`;
+    }
+  });
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0b1020]">
@@ -55,7 +63,7 @@ const Blog: React.FC = () => {
           </h2>
           <p className="text-[#9aa0b3] text-lg max-w-2xl mx-auto">
             Odkryj, jak Decision Science i Psychologia Konwersji na Żywo transformują marketing Twoim branżę. 
-            20 artykułów o neuromarketing, optymalizacji konwersji i eliminacji błędów poznawczych.
+            {articles.length} artykułów o neuromarketing, optymalizacji konwersji i eliminacji błędów poznawczych.
           </p>
         </motion.div>
 
