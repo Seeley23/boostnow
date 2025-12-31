@@ -56,18 +56,18 @@ export default function Navigation() {
         }`}
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 lg:h-24 gap-4 lg:gap-8">
+          <div className="flex items-center justify-between gap-4 lg:gap-8 py-3 lg:py-4">
             {/* Logo */}
             <a 
               href="/" 
               onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
-              className="flex-shrink-0 flex items-center gap-0 group bg-transparent p-0"
+              className="flex-shrink-0 flex items-center justify-center gap-0 group bg-transparent p-0 py-0"
             >
               <img 
                 src="/images/logo.png" 
                 alt="BoostNow Logo" 
-                style={{ display: "block", margin: "0", marginTop: "-60px", marginBottom: "-60px" }}
-                className="w-72 hover:opacity-80 transition-opacity bg-transparent object-contain" 
+                style={{ display: "block", margin: "0", height: "72px" }}
+                className="w-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 
               />
             </a>
 
@@ -130,7 +130,7 @@ export default function Navigation() {
       </motion.header>
 
       {/* Spacer to prevent content overlap with fixed header */}
-      <div className="h-20 lg:h-24" />
+      <div style={{ height: "auto" }} />
     </>
   );
 }
