@@ -7,7 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 // import ProcessSection from "@/components/ProcessSection"; // WYCIĄTE
 import ResultsSection from "@/components/ResultsSection";
-import TargetAudienceSection from "@/components/TargetAudienceSection";
+// import TargetAudienceSection from "@/components/TargetAudienceSection"; // WYCIĄTE
 import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
@@ -88,7 +88,7 @@ export default function Home() {
             <ComparisonSection />
             <RecentArticlesSection />
             <ResultsSection />
-            <TargetAudienceSection />
+
             <FAQSection />
             <ContactSection />
             <Footer />
