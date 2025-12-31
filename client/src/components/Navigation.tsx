@@ -10,11 +10,9 @@ import { Menu, X } from "lucide-react";
 */
 
 const navItems = [
-  { label: "O nas", href: "#about" },
-  { label: "Usługi", href: "#services" },
-  { label: "Proces", href: "#process" },
-  { label: "Rezultaty", href: "#results" },
-  { label: "Dla kogo?", href: "#for-whom" },
+  { label: "O nas", href: "/about" },
+  { label: "Oblicz straty", href: "/calculator" },
+  { label: "Blog", href: "/blog" },
   { label: "Kontakt", href: "#contact" },
 ];
 
@@ -32,9 +30,13 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith('/')) {
+      window.location.href = href;
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
     setIsMobileMenuOpen(false);
   };

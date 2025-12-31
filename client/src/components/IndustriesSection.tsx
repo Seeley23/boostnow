@@ -11,13 +11,13 @@ export default function IndustriesSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Rozwiązania dla Twojej Branży
+            Personalizowanie w zależności od branży
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Psychologia decyzji + mierzalne wyniki
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
-            Niezależnie od branży - e-commerce, B2B, usługi czy hospitality - mamy sprawdzony system, który zwiększa konwersje i buduje autorytet.
+            Każda branża ma unikalne wyzwania. Dlatego personalizujemy naszą strategię do Twoich konkretnych potrzeb, celów i rynku.
           </p>
         </div>
 

@@ -63,6 +63,24 @@ const faqItems: FAQItem[] = [
     question: "Czy mogę rozszerzyć usługi w trakcie współpracy?",
     answer: "Oczywiście! Możesz dodać nowe usługi w dowolnym momencie. Na przykład, jeśli zacząłeś od Decision Science, możesz dodać Amunicję Wizualną lub Kolonizację Rynku. Dostosujemy plan i harmonogram do Twoich potrzeb.",
   },
+  {
+    id: "process-4",
+    category: "process",
+    question: "Czy mogę być zaangażowany w proces tworzenia strategii?",
+    answer: "Tak! Współpraca z Tobą jest kluczowa. Przeprowadzamy sesje strategiczne, gdzie omawiamy Twoje cele, wyzwania i wizję. Twoja wiedza o rynku i klientach jest nieoceniona dla stworzenia najlepszej strategii.",
+  },
+  {
+    id: "pricing-4",
+    category: "pricing",
+    question: "Czy mogę negocjować ceny dla długoterminowych umów?",
+    answer: "Tak! Dla umów 6+ miesięcy oferujemy rabat 15-20%. Dla umów 12+ miesięcy rabat wynosi 25-30%. Skontaktuj się z nami, aby omówić szczegóły i znaleźć najlepsze warunki dla Twojego budżetu.",
+  },
+  {
+    id: "timeline-4",
+    category: "timeline",
+    question: "Jaki jest proces onboardingu?",
+    answer: "Onboarding trwa 3-5 dni. Najpierw zbieramy informacje o Twojej firmie, produktach i klientach. Następnie tworzymy plan działania i harmonogram. Na koniec przeprowadzamy szkolenie zespołu i uruchamiamy proces. Jesteśmy dostępni 24/7 w razie pytań.",
+  },
 ];
 
 export default function FAQSection() {

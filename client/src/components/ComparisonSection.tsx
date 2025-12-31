@@ -23,11 +23,7 @@ export default function ComparisonSection() {
       boostnow: true,
       competitors: false
     },
-    {
-      feature: "Gwarancja wyników",
-      boostnow: true,
-      competitors: false
-    },
+
     {
       feature: "Transparentny proces (3 fazy)",
       boostnow: true,
@@ -43,26 +39,10 @@ export default function ComparisonSection() {
       boostnow: true,
       competitors: false
     },
-    {
-      feature: "Raport z wynikami co tydzień",
-      boostnow: true,
-      competitors: false
-    },
-    {
-      feature: "Zespół dedykowany",
-      boostnow: true,
-      competitors: true
-    },
-    {
-      feature: "Tradycyjny marketing",
-      boostnow: false,
-      competitors: true
-    },
-    {
-      feature: "Brak transparencji procesu",
-      boostnow: false,
-      competitors: true
-    }
+
+
+
+
   ];
 
   return (
@@ -152,7 +132,7 @@ export default function ComparisonSection() {
               📊 Transparencja
             </h3>
             <p className="text-gray-300 text-sm">
-              Raport z wynikami co tydzień. Żadnych czarnych skrzynek.
+              Transparentny proces z 3 fazami. Wiesz dokładnie co się dzieje.
             </p>
           </div>
 
@@ -161,7 +141,7 @@ export default function ComparisonSection() {
               🎯 Rezultaty
             </h3>
             <p className="text-gray-300 text-sm">
-              Średnio +156% konwersji w 90 dni. Gwarancja wyników.
+              Średnio +156% konwersji w 90 dni. Mierzalne wyniki.
             </p>
           </div>
         </motion.div>
