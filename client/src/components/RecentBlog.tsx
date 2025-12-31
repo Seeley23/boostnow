@@ -38,60 +38,59 @@ const RecentBlog: React.FC = () => {
             Architekci Decyzji dzielą się wiedzą o Decision Science i Neuromarketing
           </p>
           <Link href="/blog">
-            <a className="inline-block px-6 py-3 bg-[#c7ff4e] text-[#0b1020] font-semibold rounded-lg hover:bg-opacity-90 transition">
+            <button className="inline-block px-6 py-3 bg-[#c7ff4e] text-[#0b1020] font-semibold rounded-lg hover:bg-opacity-90 transition">
               Przejdź do bloga →
-            </a>
+            </button>
           </Link>
         </motion.div>
 
         {/* Artykuły */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {recentArticles.map((article, index) => (
-            <motion.div
-              key={article.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-[#1a2332] rounded-lg p-6 border border-gray-700 hover:border-[#c7ff4e] transition group"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <span className="text-[#c7ff4e] font-bold text-sm">#{article.id}</span>
-                <span className="text-gray-500 text-xs bg-gray-800 px-2 py-1 rounded">
-                  {article.target_industry}
-                </span>
-              </div>
-
-              <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">
-                {article.title}
-              </h3>
-
-              <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                {article.meta_description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {article.semantic_anchors.split(', ').slice(0, 2).map((anchor) => (
-                  <span
-                    key={anchor}
-                    className="text-xs bg-[#c7ff4e] bg-opacity-20 text-[#c7ff4e] px-2 py-1 rounded"
-                  >
-                    {anchor}
+            <Link key={article.id} href={`/blog/${article.id}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-[#1a2332] rounded-lg p-6 border border-gray-700 hover:border-[#c7ff4e] transition group cursor-pointer"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <span className="text-[#c7ff4e] font-bold text-sm">#{article.id}</span>
+                  <span className="text-gray-500 text-xs bg-gray-800 px-2 py-1 rounded">
+                    {article.target_industry}
                   </span>
-                ))}
-              </div>
+                </div>
 
-              <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-700">
-                <span>{article.word_count} słów</span>
-                <span>~{Math.ceil(article.word_count / 200)} min</span>
-              </div>
+                <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">
+                  {article.title}
+                </h3>
 
-              <Link href={`/blog/${article.id}`}>
-                <a className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                  {article.meta_description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {article.semantic_anchors.split(', ').slice(0, 2).map((anchor) => (
+                    <span
+                      key={anchor}
+                      className="text-xs bg-[#c7ff4e] bg-opacity-20 text-[#c7ff4e] px-2 py-1 rounded"
+                    >
+                      {anchor}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-700">
+                  <span>{article.word_count} słów</span>
+                  <span>~{Math.ceil(article.word_count / 200)} min</span>
+                </div>
+
+                <div className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">
                   Czytaj artykuł →
-                </a>
-              </Link>
-            </motion.div>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>

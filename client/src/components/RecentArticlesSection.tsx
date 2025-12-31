@@ -58,69 +58,68 @@ export default function RecentArticlesSection() {
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {recentArticles.map((article, index) => (
-            <motion.div
-              key={article.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative bg-white/5 border border-white/10 rounded-lg overflow-hidden hover:border-lime-400/50 hover:bg-white/10 transition-all duration-300"
-            >
-              {/* Article Number */}
-              <div className="absolute top-4 right-4 text-lime-400 font-bold text-2xl opacity-20">
-                #{article.id}
-              </div>
-
-              {/* Content */}
-              <div className="p-6 h-full flex flex-col">
-                {/* Category & Date */}
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-2 py-1 bg-lime-400/10 text-lime-400 text-xs font-semibold rounded">
-                    {article.category}
-                  </span>
-                  <span className="text-xs text-gray-500 flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {article.date}
-                  </span>
+            <Link key={article.id} href={`/blog/${article.id}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group relative bg-white/5 border border-white/10 rounded-lg overflow-hidden hover:border-lime-400/50 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              >
+                {/* Article Number */}
+                <div className="absolute top-4 right-4 text-lime-400 font-bold text-2xl opacity-20">
+                  #{article.id}
                 </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-bold text-white mb-3 line-clamp-3 group-hover:text-lime-400 transition-colors">
-                  {article.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-400 text-sm mb-4 line-clamp-2 flex-grow">
-                  {article.description}
-                </p>
-
-                {/* Semantic Anchors */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {article.semanticAnchors.map((anchor) => (
-                    <span
-                      key={anchor}
-                      className="text-xs px-2 py-1 bg-yellow-400/10 text-yellow-300 rounded"
-                    >
-                      {anchor}
+                {/* Content */}
+                <div className="p-6 h-full flex flex-col">
+                  {/* Category & Date */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-2 py-1 bg-lime-400/10 text-lime-400 text-xs font-semibold rounded">
+                      {article.category}
                     </span>
-                  ))}
-                </div>
+                    <span className="text-xs text-gray-500 flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
+                      {article.date}
+                    </span>
+                  </div>
 
-                {/* Read Time */}
-                <div className="flex items-center gap-2 text-xs text-gray-500 mb-4">
-                  <Clock className="w-3 h-3" />
-                  {article.readTime} czytania
-                </div>
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-white mb-3 line-clamp-3 group-hover:text-lime-400 transition-colors">
+                    {article.title}
+                  </h3>
 
-                {/* Read More Link */}
-                <Link href={`/blog/${article.id}`}>
-                  <a className="inline-flex items-center gap-2 text-lime-400 font-semibold hover:text-lime-300 transition-colors group/link">
+                  {/* Description */}
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-2 flex-grow">
+                    {article.description}
+                  </p>
+
+                  {/* Semantic Anchors */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {article.semanticAnchors.map((anchor) => (
+                      <span
+                        key={anchor}
+                        className="text-xs px-2 py-1 bg-yellow-400/10 text-yellow-300 rounded"
+                      >
+                        {anchor}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Read Time */}
+                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-4">
+                    <Clock className="w-3 h-3" />
+                    {article.readTime} czytania
+                  </div>
+
+                  {/* Read More Link */}
+                  <div className="inline-flex items-center gap-2 text-lime-400 font-semibold hover:text-lime-300 transition-colors group/link">
                     <span>Czytaj artykuł</span>
                     <ChevronRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </Link>
-              </div>
-            </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
 
@@ -133,10 +132,10 @@ export default function RecentArticlesSection() {
           className="text-center"
         >
           <Link href="/blog">
-            <a className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-bold rounded-lg hover:bg-lime-300 transition-all duration-300 group mb-6">
+            <button className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-bold rounded-lg hover:bg-lime-300 transition-all duration-300 group mb-6">
               <span>Przejdź do pełnego bloga</span>
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
           </Link>
           <p className="text-gray-400 text-sm">
             20+ artykułów o Decision Science, psychologii decyzji i neuromarketing'u

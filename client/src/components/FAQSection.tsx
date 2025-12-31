@@ -5,87 +5,90 @@ interface FAQItem {
   id: string;
   question: string;
   answer: string;
-  category: "process" | "pricing" | "timeline";
+  category: "services" | "process" | "general";
 }
 
 const faqItems: FAQItem[] = [
+  // SERVICES CATEGORY
+  {
+    id: "services-1",
+    category: "services",
+    question: "Co zawiera usługa Inżynieria Konwersji?",
+    answer: "Inżynieria Konwersji to kompleksowa analiza Twojej ścieżki klienta z perspektywy psychologii decyzji. Mapujemy lęki, motywacje i błędy poznawcze. Następnie budujemy system komunikacji (copywriting, design, CTA) oparty na Decision Science. Rezultat: zoptymalizowana ścieżka konwersji dla Twojej grupy docelowej.",
+  },
+  {
+    id: "services-2",
+    category: "services",
+    question: "Jakie usługi obejmuje Video Animation?",
+    answer: "Video Animation to dynamiczne animacje, które przyciągają wzrok i konwertują. Tworzymy: explainer videos (jak działa produkt), product demos (prezentacja funkcji), social media content (krótkie, viralne animacje), landing page videos (hero section animacje). Każda animacja jest dostosowana do Twojej branży i grupy docelowej.",
+  },
+  {
+    id: "services-3",
+    category: "services",
+    question: "Co to jest GEO Positioning?",
+    answer: "GEO Positioning to optymalizacja Twojej marki dla AI search engines (ChatGPT, Perplexity, Gemini). Tworzymy treści, które AI rozumie i rekomenduje. Budujemy Semantic Anchors (unikalne terminy marki), strukturyzujemy dane, optymalizujemy meta tags. Cel: pojawienie się Twojej marki w odpowiedziach AI na pytania potencjalnych klientów.",
+  },
+  {
+    id: "services-4",
+    category: "services",
+    question: "Czym się różni SEO Positioning od tradycyjnego SEO?",
+    answer: "SEO Positioning to strategia oparta na Decision Science, a nie tylko na keywords. Nie tylko rankujemy w Google - budujemy autorytet i zaufanie. Tworzymy treści, które odpowiadają na rzeczywiste pytania klientów, nie tylko na słowa kluczowe. Rezultat: lepsze rankingi + wyższa konwersja z organic traffic.",
+  },
+  {
+    id: "services-5",
+    category: "services",
+    question: "Czy usługi działają dla mojej branży?",
+    answer: "Nasze usługi działają dla każdej branży: E-commerce, Marki Premium, B2B, Usługi, Hospitality, Real Estate, Healthcare, EdTech. Personalizujemy strategię w zależności od Twojej branży i grupy docelowej. Na stronie głównej znajdziesz 'Personalizowanie w zależności od branży' - tam zobaczysz konkretne rozwiązania dla Twojej branży.",
+  },
+  // PROCESS CATEGORY
   {
     id: "process-1",
     category: "process",
-    question: "Jak wygląda proces współpracy z BoostNow?",
-    answer: "Zaczynamy od Audytu Psychologicznego, gdzie mapujemy lęki i motywacje Twojej grupy. Następnie budujemy Architekturę Strategii - system komunikacji oparty na psychologii języka. Potem wdrażamy materiały i monitorujemy konwersję w czasie rzeczywistym. Na koniec skalujemy wyniki za pomocą AI.",
+    question: "Jak wygląda pierwszy krok współpracy?",
+    answer: "Zaczynamy od Audytu Psychologicznego - 1-2 godzinne sesje, gdzie mapujemy Twoją grupę docelową, ich lęki, motywacje i błędy poznawcze. Zbieramy dane o Twoim biznesie, konkurencji i rynku. Na koniec dostajesz raport z rekomendacjami i planem działania.",
   },
   {
     id: "process-2",
     category: "process",
-    question: "Ile czasu zajmuje wdrożenie strategii?",
-    answer: "Pełny cykl wdrożenia zajmuje 4 tygodnie: Tydzień 1-2 to Audyt Psychologiczny, Tydzień 2-3 to Architektura Strategii, Tydzień 3-4 to Wdrożenie i Akceleracja. Po tym okresie rozpoczyna się faza Skalowania AI, która trwa nieprzerwanie.",
+    question: "Ile czasu zajmuje pełny cykl wdrożenia?",
+    answer: "Faza 1 (Audyt): 1-2 tygodnie. Faza 2 (Strategia): 1-2 tygodnie. Faza 3 (Wdrożenie): 1-2 tygodnie. Razem: 4-6 tygodni od startu do pierwszych wyników. Po tym okresie rozpoczyna się faza optymizacji, która trwa nieprzerwanie.",
   },
   {
     id: "process-3",
     category: "process",
-    question: "Jakie metryki będę monitorować?",
-    answer: "Monitorujemy: Konwersję (ile osób podejmuje decyzję), Rezygnację klientów (ile osób porzuca proces), ROI kampanii (zwrot z inwestycji), Czas do konwersji (jak szybko klient decyduje), Wartość lifetime klienta (długoterminowy zysk).",
-  },
-  {
-    id: "pricing-1",
-    category: "pricing",
-    question: "Jak kształtują się ceny usług BoostNow?",
-    answer: "Ceny zależą od zakresu usług: Decision Science (od 5 000 zł), Amunicja Wizualna (od 8 000 zł), Kolonizacja Rynku (od 12 000 zł), Pełny pakiet (od 25 000 zł). Każda usługa jest dostosowana do wielkości Twojej firmy i budżetu.",
-  },
-  {
-    id: "pricing-2",
-    category: "pricing",
-    question: "Czy oferujecie pakiety dla startupów?",
-    answer: "Tak! Mamy specjalny pakiet dla startupów - 'Szybki Start' za 3 500 zł. Zawiera Audyt Psychologiczny i Architekturę Strategii dla 1 produktu. Po 3 miesiącach możesz skalować do pełnego pakietu.",
-  },
-  {
-    id: "pricing-3",
-    category: "pricing",
-    question: "Czy cena zawiera wsparcie po wdrożeniu?",
-    answer: "Tak! Każdy pakiet zawiera 30 dni wsparcia post-wdrożeniowego. Monitorujemy wyniki, optymalizujemy materiały i wspieramy zespół w razie pytań. Po 30 dniach możesz przedłużyć wsparcie lub przejść na model skalowania AI.",
-  },
-  {
-    id: "timeline-1",
-    category: "timeline",
-    question: "Kiedy mogę spodziewać się pierwszych wyników?",
-    answer: "Pierwsze wyniki widać po 2-3 tygodniach od wdrożenia. Wzrost konwersji wynosi średnio 40-80% w pierwszym miesiącu. Pełne rezultaty (200-300% wzrostu) osiągamy po 3-6 miesiącach.",
-  },
-  {
-    id: "timeline-2",
-    category: "timeline",
-    question: "Jak długo trwa umowa z BoostNow?",
-    answer: "Minimalna umowa to 3 miesiące. Po tym okresie możesz kontynuować, zmienić zakres usług lub rozwiązać umowę. Nie ma ukrytych kosztów ani kar za rozwiązanie umowy.",
-  },
-  {
-    id: "timeline-3",
-    category: "timeline",
-    question: "Czy mogę rozszerzyć usługi w trakcie współpracy?",
-    answer: "Oczywiście! Możesz dodać nowe usługi w dowolnym momencie. Na przykład, jeśli zacząłeś od Decision Science, możesz dodać Amunicję Wizualną lub Kolonizację Rynku. Dostosujemy plan i harmonogram do Twoich potrzeb.",
+    question: "Czy mogę być zaangażowany w proces?",
+    answer: "Tak! Współpraca z Tobą jest kluczowa. Przeprowadzamy regularne sesje strategiczne, gdzie omawiamy postępy, wyzwania i następne kroki. Twoja wiedza o rynku i klientach jest nieoceniona. Jesteśmy partnerem, nie tylko dostawcą usług.",
   },
   {
     id: "process-4",
     category: "process",
-    question: "Czy mogę być zaangażowany w proces tworzenia strategii?",
-    answer: "Tak! Współpraca z Tobą jest kluczowa. Przeprowadzamy sesje strategiczne, gdzie omawiamy Twoje cele, wyzwania i wizję. Twoja wiedza o rynku i klientach jest nieoceniona dla stworzenia najlepszej strategii.",
+    question: "Czy mogę rozszerzyć usługi w trakcie współpracy?",
+    answer: "Oczywiście! Możesz dodać nowe usługi w dowolnym momencie. Jeśli zacząłeś od Inżynierii Konwersji, możesz dodać Video Animation, GEO Positioning lub inne usługi. Dostosujemy plan i harmonogram do Twoich potrzeb.",
+  },
+  // GENERAL CATEGORY
+  {
+    id: "general-1",
+    category: "general",
+    question: "Jakie metryki będę monitorować?",
+    answer: "Monitorujemy: Konwersję (ile osób podejmuje decyzję), Rezygnację (ile osób porzuca proces), Czas do konwersji (jak szybko klient decyduje), Wartość lifetime klienta (długoterminowy zysk), Engagement (zaangażowanie z treścią). Dostajesz raport co tydzień.",
   },
   {
-    id: "pricing-4",
-    category: "pricing",
-    question: "Czy mogę negocjować ceny dla długoterminowych umów?",
-    answer: "Tak! Dla umów 6+ miesięcy oferujemy rabat 15-20%. Dla umów 12+ miesięcy rabat wynosi 25-30%. Skontaktuj się z nami, aby omówić szczegóły i znaleźć najlepsze warunki dla Twojego budżetu.",
+    id: "general-2",
+    category: "general",
+    question: "Jak długo trwa minimalna umowa?",
+    answer: "Minimalna umowa to 3 miesiące. Po tym okresie możesz kontynuować, zmienić zakres usług lub rozwiązać umowę. Nie ma ukrytych kosztów ani kar za rozwiązanie. Chcemy, żebyś był zadowolony z naszej współpracy.",
   },
   {
-    id: "timeline-4",
-    category: "timeline",
+    id: "general-3",
+    category: "general",
     question: "Jaki jest proces onboardingu?",
-    answer: "Onboarding trwa 3-5 dni. Najpierw zbieramy informacje o Twojej firmie, produktach i klientach. Następnie tworzymy plan działania i harmonogram. Na koniec przeprowadzamy szkolenie zespołu i uruchamiamy proces. Jesteśmy dostępni 24/7 w razie pytań.",
+    answer: "Onboarding trwa 3-5 dni. Zbieramy informacje o Twojej firmie, produktach, klientach i konkurencji. Tworzymy plan działania i harmonogram. Przeprowadzamy szkolenie zespołu. Jesteśmy dostępni 24/7 w razie pytań.",
   },
 ];
 
 export default function FAQSection() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [activeCategory, setActiveCategory] = useState<"process" | "pricing" | "timeline">("process");
+  const [activeCategory, setActiveCategory] = useState<"services" | "process" | "general">("services");
 
   const filteredFAQs = faqItems.filter((item) => item.category === activeCategory);
 
@@ -99,17 +102,17 @@ export default function FAQSection() {
             Odpowiedzi na Twoje <span className="text-lime-400">pytania</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Wszystko co musisz wiedzieć o procesie, cenach i terminach współpracy z BoostNow.
+            Wszystko co musisz wiedzieć o usługach, procesie i współpracy z BoostNow.
           </p>
         </div>
 
         {/* Category Tabs */}
         <div className="flex gap-4 mb-12 justify-center flex-wrap">
-          {["process", "pricing", "timeline"].map((cat) => (
+          {["services", "process", "general"].map((cat) => (
             <button
               key={cat}
               onClick={() => {
-                setActiveCategory(cat as "process" | "pricing" | "timeline");
+                setActiveCategory(cat as "services" | "process" | "general");
                 setExpandedId(null);
               }}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
@@ -118,9 +121,9 @@ export default function FAQSection() {
                   : "bg-gray-900 text-gray-300 hover:bg-gray-800"
               }`}
             >
+              {cat === "services" && "Usługi"}
               {cat === "process" && "Proces"}
-              {cat === "pricing" && "Ceny"}
-              {cat === "timeline" && "Terminy"}
+              {cat === "general" && "Ogólne"}
             </button>
           ))}
         </div>

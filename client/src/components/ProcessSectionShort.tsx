@@ -95,10 +95,10 @@ export default function ProcessSectionShort() {
             Chcesz poznać pełny proces z 5 fazami i szczegółami?
           </p>
           <Link href="/process">
-            <a className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-bold rounded-lg hover:bg-lime-300 transition-all duration-300 group">
+            <button className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-bold rounded-lg hover:bg-lime-300 transition-all duration-300 group">
               <span>Dowiedz się więcej o procesie</span>
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
           </Link>
         </motion.div>
       </div>
