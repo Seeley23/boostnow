@@ -197,7 +197,7 @@ export default function VideoAnimationSection() {
             href="#contact"
             className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-bold rounded-lg hover:bg-lime-300 transition-all duration-300 group"
           >
-            <span>Pokaż mi jak animacje zwiększą Twoją sprzedaż</span>
+            <span>Pokaż jak animacje zwiększą moją sprzedaż</span>
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <p className="text-gray-400 text-sm mt-4">
