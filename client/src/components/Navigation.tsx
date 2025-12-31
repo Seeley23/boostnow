@@ -54,17 +54,17 @@ export default function Navigation() {
         }`}
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between py-6 lg:py-8">
             {/* Logo */}
             <a 
               href="/" 
               onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
-              className="flex items-center gap-2 group bg-transparent"
+              className="flex items-center gap-0 group bg-transparent p-0"
             >
               <img 
                 src="/images/logo.png" 
                 alt="BoostNow Logo" 
-                className="h-12 w-auto hover:opacity-80 transition-opacity bg-transparent" 
+                className="w-80 h-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 
               />
             </a>
 
