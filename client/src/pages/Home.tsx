@@ -17,6 +17,9 @@ import SolutionSection from "@/components/SolutionSection";
 // import RecentBlog from "@/components/RecentBlog"; // WYCIĄTE
 import IndustriesSection from "@/components/IndustriesSection";
 import VideoAnimationSection from "@/components/VideoAnimationSection";
+import RecentArticlesSection from "@/components/RecentArticlesSection";
+import ProcessSectionShort from "@/components/ProcessSectionShort";
+import ComparisonSection from "@/components/ComparisonSection";
 
 /* Home Page - BoostNow
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -81,6 +84,9 @@ export default function Home() {
             <SolutionSection />
             <IndustriesSection />
             <VideoAnimationSection />
+            <ProcessSectionShort />
+            <ComparisonSection />
+            <RecentArticlesSection />
             <ResultsSection />
             <TargetAudienceSection />
             <FAQSection />
