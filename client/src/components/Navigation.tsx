@@ -61,13 +61,11 @@ export default function Navigation() {
               onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
               className="flex items-center gap-2 group"
             >
-              <div className="relative">
-                <div className="w-3 h-3 rounded-full bg-primary group-hover:animate-pulse-glow transition-all" />
-                <div className="absolute inset-0 w-3 h-3 rounded-full bg-primary/30 animate-ping" />
-              </div>
-              <span className="font-heading font-bold text-xl text-foreground">
-                Boost<span className="text-primary">Now</span>
-              </span>
+              <img 
+                src="/images/logo.svg" 
+                alt="BoostNow Logo" 
+                className="h-12 w-auto hover:opacity-80 transition-opacity" 
+              />
             </a>
 
             {/* Desktop Navigation */}

@@ -230,23 +230,19 @@ const BlogArticle: React.FC = () => {
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#c7ff4e] to-[#00c88a] flex-shrink-0" />
                 <div>
-                  <h4 className="text-lg font-bold text-white font-playfair">Founder & CEO BoostNow</h4>
+                  <h4 className="text-lg font-bold text-white font-playfair">Mateusz Nowotka</h4>
                   <p className="text-[#9aa0b3] text-sm mb-3">
-                    Decision Science Specialist | 15+ lat w marketingu | Certyfikowany GEO Specialist
+                    Founder & CEO BoostNow | Decision Science Specialist | 4 lata doświadczenia w marketingu
                   </p>
                   <div className="flex gap-3">
-                    <a href="#" className="text-[#c7ff4e] hover:text-white transition-colors text-sm">
+                    <a href="https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/" target="_blank" rel="noopener noreferrer" className="text-[#c7ff4e] hover:text-white transition-colors text-sm">
                       LinkedIn →
-                    </a>
-                    <a href="#" className="text-[#c7ff4e] hover:text-white transition-colors text-sm">
-                      Twitter →
                     </a>
                   </div>
                 </div>
               </div>
             </motion.div>
-
-            {/* CTA */}
+{/* CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -328,20 +324,54 @@ const BlogArticle: React.FC = () => {
               </div>
 
               {/* Share buttons */}
-              <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6">
-                <h4 className="text-sm font-bold text-white mb-4">Podziel się</h4>
-                <div className="space-y-2">
-                  <button className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors">
-                    LinkedIn
-                  </button>
-                  <button className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors">
-                    Twitter
-                  </button>
-                  <button className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors">
-                    Email
-                  </button>
+              {article && (
+                <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6">
+                  <h4 className="text-sm font-bold text-white mb-4">Podziel się</h4>
+                  <div className="space-y-2">
+                    <button
+                      onClick={() => {
+                        const url = typeof window !== 'undefined' ? window.location.href : '';
+                        const encodedUrl = encodeURIComponent(url);
+                        const encodedTitle = encodeURIComponent(article.title);
+                        window.open(`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`, '_blank', 'width=600,height=400');
+                      }}
+                      className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors flex items-center justify-center gap-2"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.829 6.694h-3.306l7.73-8.835L.424 2.25h6.679l4.882 6.268L17.75 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                      </svg>
+                      X
+                    </button>
+                    <button
+                      onClick={() => {
+                        const url = typeof window !== 'undefined' ? window.location.href : '';
+                        const encodedUrl = encodeURIComponent(url);
+                        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank', 'width=600,height=400');
+                      }}
+                      className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors flex items-center justify-center gap-2"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.25-.129.599-.129.948v5.419h-3.554s.05-8.746 0-9.637h3.554v1.364c.429-.662 1.196-1.608 2.902-1.608 2.12 0 3.71 1.386 3.71 4.365v5.516zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.708 0-.951.77-1.708 1.954-1.708 1.184 0 1.915.757 1.915 1.708 0 .95-.731 1.708-1.954 1.708zm1.586 11.019H3.75V9.795h3.173v10.657zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                      </svg>
+                      LinkedIn
+                    </button>
+                    <button
+                      onClick={() => {
+                        const url = typeof window !== 'undefined' ? window.location.href : '';
+                        const encodedTitle = encodeURIComponent(article.title);
+                        const encodedDescription = encodeURIComponent(article.meta_description);
+                        window.location.href = `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${url}`;
+                      }}
+                      className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors flex items-center justify-center gap-2"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      Email
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </motion.div>
         </div>

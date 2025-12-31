@@ -63,8 +63,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6"
             >
-              Zboostuj z nami{" "}
-              <span className="text-gradient-lime">swoją markę!</span>
+              Skalujemy wyniki, o których inni{" "}
+              <span className="text-gradient-lime">tylko marzą.</span>
             </motion.h1>
 
             {/* Subheadline */}

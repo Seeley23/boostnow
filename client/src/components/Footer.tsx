@@ -43,10 +43,11 @@ export default function Footer() {
               onClick={(e) => { e.preventDefault(); scrollToSection("#"); }}
               className="inline-flex items-center gap-2 mb-4"
             >
-              <div className="w-3 h-3 rounded-full bg-primary" />
-              <span className="font-heading font-bold text-xl text-foreground">
-                Boost<span className="text-primary">Now</span>
-              </span>
+              <img 
+                src="/images/logo.svg" 
+                alt="BoostNow Logo" 
+                className="h-12 w-auto" 
+              />
             </a>
             <p className="text-sm text-muted-foreground mb-6 max-w-xs">
               Agencja Aktywacji Klientów. Przyspieszamy wzrost Twojej marki poprzez 
