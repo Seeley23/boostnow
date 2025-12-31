@@ -4,9 +4,10 @@ import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 /* ServicesSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
-   - 3 featured services always visible
-   - 7 additional services in carousel slider
-   - Arrow navigation for slider
+   - Unified grid: 10 services in one container
+   - First 3 always visible (3-column grid on desktop)
+   - Remaining 7 in horizontal scroll
+   - Arrow navigation for scroll
 */
 
 const services = [
@@ -104,18 +105,28 @@ const services = [
 
 export default function ServicesSection() {
   const ref = useRef(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [sliderIndex, setSliderIndex] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const featuredServices = services.filter(s => s.featured);
-  const sliderServices = services.filter(s => !s.featured);
-
-  const handlePrevSlide = () => {
-    setSliderIndex((prev) => (prev === 0 ? sliderServices.length - 1 : prev - 1));
+  const checkScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
   };
 
-  const handleNextSlide = () => {
-    setSliderIndex((prev) => (prev === sliderServices.length - 1 ? 0 : prev + 1));
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 400;
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+      setTimeout(checkScroll, 300);
+    }
   };
 
   const scrollToContact = () => {
@@ -151,161 +162,100 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        {/* Featured Services - 3 visible cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
-          {featuredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary transition-all duration-300"
-            >
-              {/* Image */}
-              {service.image && (
-                <div className="relative h-48 overflow-hidden bg-muted">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
-                </div>
-              )}
-
-              {/* Content */}
-              <div className="p-6 relative">
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <h3 className="font-heading text-xl font-bold text-foreground mb-1">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-primary font-medium">
-                      {service.subtitle}
-                    </p>
-                  </div>
-                  <ArrowUpRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-
-                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                  {service.description}
-                </p>
-
-                <div className="flex items-center justify-between pt-4 border-t border-border">
-                  <span className="text-xs font-semibold text-primary">
-                    {service.stats}
-                  </span>
-                  <button
-                    onClick={scrollToContact}
-                    className="text-xs font-medium text-primary hover:text-foreground transition-colors"
-                  >
-                    Dowiedz się więcej →
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Slider Services - 7 services with arrow navigation */}
+        {/* Unified Services Grid with Horizontal Scroll */}
         <div className="relative">
-          <div className="flex items-center gap-4">
-            {/* Left Arrow */}
+          {/* Left Arrow */}
+          {canScrollLeft && (
             <button
-              onClick={handlePrevSlide}
+              onClick={() => scroll("left")}
               className="absolute -left-16 lg:-left-20 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-              aria-label="Previous service"
+              aria-label="Scroll left"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
+          )}
 
-            {/* Slider Container */}
-            <div className="w-full overflow-hidden">
+          {/* Services Container */}
+          <div
+            ref={scrollContainerRef}
+            onScroll={checkScroll}
+            className="flex gap-6 lg:gap-8 overflow-x-auto scroll-smooth pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
+            {services.map((service, index) => (
               <motion.div
-                initial={false}
-                animate={{ x: -sliderIndex * 100 + "%" }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="flex gap-6 lg:gap-8"
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.3) }}
+                className={`flex-shrink-0 ${
+                  service.featured ? "w-full md:w-1/2 lg:w-1/3" : "w-full md:w-1/2 lg:w-1/3"
+                }`}
               >
-                {sliderServices.map((service) => (
-                  <motion.div
-                    key={service.id}
-                    className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3"
-                  >
-                    <div className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary transition-all duration-300 h-full">
-                      {/* Image */}
-                      {service.image && (
-                        <div className="relative h-48 overflow-hidden bg-muted">
-                          <img
-                            src={service.image}
-                            alt={service.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
-                        </div>
-                      )}
-
-                      {/* Content */}
-                      <div className="p-6 relative">
-                        <div className="flex items-start justify-between mb-3">
-                          <div>
-                            <h3 className="font-heading text-xl font-bold text-foreground mb-1">
-                              {service.title}
-                            </h3>
-                            <p className="text-sm text-primary font-medium">
-                              {service.subtitle}
-                            </p>
-                          </div>
-                          <ArrowUpRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </div>
-
-                        <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                          {service.description}
-                        </p>
-
-                        <div className="flex items-center justify-between pt-4 border-t border-border">
-                          <span className="text-xs font-semibold text-primary">
-                            {service.stats}
-                          </span>
-                          <button
-                            onClick={scrollToContact}
-                            className="text-xs font-medium text-primary hover:text-foreground transition-colors"
-                          >
-                            Dowiedz się więcej →
-                          </button>
-                        </div>
-                      </div>
+                <div className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary transition-all duration-300 h-full flex flex-col">
+                  {/* Image */}
+                  {service.image && (
+                    <div className="relative h-48 overflow-hidden bg-muted">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
                     </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
+                  )}
 
-            {/* Right Arrow */}
+                  {/* Content */}
+                  <div className="p-6 relative flex flex-col flex-grow">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="font-heading text-xl font-bold text-foreground mb-1">
+                          {service.title}
+                        </h3>
+                        <p className="text-sm text-primary font-medium">
+                          {service.subtitle}
+                        </p>
+                      </div>
+                      <ArrowUpRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                    </div>
+
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow">
+                      {service.description}
+                    </p>
+
+                    <div className="flex items-center justify-between pt-4 border-t border-border mt-auto">
+                      <span className="text-xs font-semibold text-primary">
+                        {service.stats}
+                      </span>
+                      <button
+                        onClick={scrollToContact}
+                        className="text-xs font-medium text-primary hover:text-foreground transition-colors"
+                      >
+                        Dowiedz się więcej →
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          {canScrollRight && (
             <button
-              onClick={handleNextSlide}
+              onClick={() => scroll("right")}
               className="absolute -right-16 lg:-right-20 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-              aria-label="Next service"
+              aria-label="Scroll right"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
-          </div>
+          )}
+        </div>
 
-          {/* Slider Indicators */}
-          <div className="flex justify-center gap-2 mt-8">
-            {sliderServices.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setSliderIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === sliderIndex
-                    ? "bg-primary w-8"
-                    : "bg-primary/30 w-2 hover:bg-primary/50"
-                }`}
-                aria-label={`Go to service ${index + 1}`}
-              />
-            ))}
-          </div>
+        {/* Scroll Indicator */}
+        <div className="text-center mt-8">
+          <p className="text-xs text-muted-foreground">
+            ← Przewijaj aby zobaczyć więcej usług →
+          </p>
         </div>
       </div>
     </section>

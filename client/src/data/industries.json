@@ -1,0 +1,266 @@
+[
+  {
+    "id": 1,
+    "name": "E-commerce & Retail",
+    "icon": "🛍️",
+    "description": "Sklepy online, marketplace, retail",
+    "problem": "Niska konwersja, porzucane koszyki, brak naracji marki",
+    "solutions": [
+      {
+        "title": "Inżynieria Konwersji",
+        "description": "Landing pages & copywriting, które egzekwują zakup"
+      },
+      {
+        "title": "Visual Excellence AI",
+        "description": "Wideo produktowe, które sprzedają w 15 sekund"
+      },
+      {
+        "title": "E-commerce Optimization",
+        "description": "Opisy produktowe & naracja, która resonuje"
+      }
+    ],
+    "result": "+62% konwersji, +3x szybsza sprzedaż, +340% ROI",
+    "caseStudy": {
+      "title": "Sklep meblowy online",
+      "challenge": "Niska konwersja (1.2%), porzucane koszyki (35%), brak naracji marki",
+      "strategy": "Inżynieria Konwersji + Visual AI + E-commerce Optimization",
+      "results": [
+        { "metric": "Konwersja", "value": "+156%", "detail": "1.2% → 3.1%" },
+        { "metric": "Porzucenia", "value": "-42%", "detail": "35% → 20%" },
+        { "metric": "ROI", "value": "+340%", "detail": "Zwrot z każdego złotego" }
+      ],
+      "timeline": "90 dni"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Marki Premium & Luxury",
+    "icon": "✨",
+    "description": "Marki premium, luksusowe produkty, ekskluzywne usługi",
+    "problem": "Brak rozpoznawalności, trudność w komunikowaniu wartości, niska jakość leadów",
+    "solutions": [
+      {
+        "title": "Personal Branding",
+        "description": "Budowanie autorytetu i prestiżu marki"
+      },
+      {
+        "title": "Prowadzenie Profili CEO",
+        "description": "Leadership visibility & thought leadership"
+      },
+      {
+        "title": "Ghost Writing",
+        "description": "Content creation na poziomie eksperckości"
+      }
+    ],
+    "result": "+280% świadomości marki, +120% polecenia, +65% wartość klienta",
+    "caseStudy": {
+      "title": "Butik mody premium",
+      "challenge": "Brak rozpoznawalności (nowa marka), trudność w komunikowaniu wartości premium, niska jakość leadów",
+      "strategy": "Personal Branding + Ghost Writing + Community Growth",
+      "results": [
+        { "metric": "Świadomość marki", "value": "+280%", "detail": "Nowa → rozpoznawalna" },
+        { "metric": "Polecenia", "value": "+120%", "detail": "Klienci polecają markę" },
+        { "metric": "Wartość klienta", "value": "+65%", "detail": "Wyższa LTV" }
+      ],
+      "timeline": "120 dni"
+    }
+  },
+  {
+    "id": 3,
+    "name": "B2B & SaaS",
+    "icon": "💼",
+    "description": "Software, usługi cyfrowe, B2B tech, startups",
+    "problem": "Długi cykl sprzedaży, niska jakość leadów, trudność w dotarciu do decydentów",
+    "solutions": [
+      {
+        "title": "GEO Positioning",
+        "description": "AI Search Optimization (ChatGPT, Perplexity, Gemini)"
+      },
+      {
+        "title": "SEO Positioning",
+        "description": "Organic search strategy dla decydentów"
+      },
+      {
+        "title": "Community Growth",
+        "description": "Budowanie społeczności, która ufa Twojej marce"
+      }
+    ],
+    "result": "+89% jakości leadów, -35% skrócenie cyklu sprzedaży, +210% demo requests",
+    "caseStudy": {
+      "title": "SaaS startup - narzędzie do automatyzacji",
+      "challenge": "Długi cykl sprzedaży (6 miesięcy), niska jakość leadów, trudność w dotarciu do decydentów",
+      "strategy": "GEO Positioning + SEO Positioning + Community Growth",
+      "results": [
+        { "metric": "Jakość leadów", "value": "+89%", "detail": "Lepsi kandydaci" },
+        { "metric": "Cykl sprzedaży", "value": "-35%", "detail": "6 msc → 4 msc" },
+        { "metric": "Demo requests", "value": "+210%", "detail": "Więcej zainteresowania" }
+      ],
+      "timeline": "90 dni"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Usługi & Konsulting",
+    "icon": "💡",
+    "description": "Agencje, doradcy biznesowi, konsultanci, freelancerzy",
+    "problem": "Brak rozpoznawalności, trudność w generowaniu leadów, niska reputacja online",
+    "solutions": [
+      {
+        "title": "Personal Branding",
+        "description": "Pozycjonowanie jako ekspert branżowy"
+      },
+      {
+        "title": "Ghost Writing",
+        "description": "Artykuły, posty, emaile, które budują autorytet"
+      },
+      {
+        "title": "GEO Positioning",
+        "description": "Widoczność w AI search engines dla Twojej specjalizacji"
+      }
+    ],
+    "result": "+280% świadomości, +120% polecenia, SoMV +380%",
+    "caseStudy": {
+      "title": "Agencja konsultingowa - digital transformation",
+      "challenge": "Brak rozpoznawalności, trudność w generowaniu leadów B2B, niska reputacja online",
+      "strategy": "Personal Branding + Ghost Writing + GEO Positioning",
+      "results": [
+        { "metric": "Świadomość marki", "value": "+280%", "detail": "Znana w branży" },
+        { "metric": "Polecenia", "value": "+120%", "detail": "Klienci polecają" },
+        { "metric": "SoMV", "value": "+380%", "detail": "Widoczna w AI search" }
+      ],
+      "timeline": "120 dni"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Hospitality & F&B",
+    "icon": "🍽️",
+    "description": "Restauracje, hotele, bary, kawiarnie, kluby",
+    "problem": "Niska liczba rezerwacji, brak lojalności klientów, słaba widoczność online",
+    "solutions": [
+      {
+        "title": "Community Growth",
+        "description": "Budowanie społeczności stałych klientów"
+      },
+      {
+        "title": "GEO Positioning",
+        "description": "Widoczność w Google Maps, ChatGPT, Perplexity"
+      },
+      {
+        "title": "Ghost Writing",
+        "description": "Treści na social media, które przyciągają klientów"
+      }
+    ],
+    "result": "+45% rezerwacji, +60% lojalności, +150% widoczności online",
+    "caseStudy": {
+      "title": "Sieć 3 restauracji",
+      "challenge": "Niska liczba rezerwacji (20/dzień), brak lojalności klientów, słaba widoczność online",
+      "strategy": "Community Growth + GEO Positioning + Ghost Writing",
+      "results": [
+        { "metric": "Rezerwacje", "value": "+45%", "detail": "20 → 29/dzień" },
+        { "metric": "Lojalność", "value": "+60%", "detail": "Klienci wracają" },
+        { "metric": "Widoczność", "value": "+150%", "detail": "Widoczna online" }
+      ],
+      "timeline": "90 dni"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Real Estate & Property",
+    "icon": "🏠",
+    "description": "Agencje nieruchomości, deweloperzy, property management",
+    "problem": "Niska liczba leadów, trudność w wyróżnieniu się, długi cykl sprzedaży",
+    "solutions": [
+      {
+        "title": "Personal Branding",
+        "description": "Budowanie marki agenta/dewelopera"
+      },
+      {
+        "title": "GEO Positioning",
+        "description": "Widoczność w AI search dla 'nieruchomości w [lokalizacja]'"
+      },
+      {
+        "title": "Visual Excellence AI",
+        "description": "Wideo nieruchomości, które sprzedają"
+      }
+    ],
+    "result": "+85% leadów, -40% cykl sprzedaży, +120% wartość transakcji",
+    "caseStudy": {
+      "title": "Agencja nieruchomości",
+      "challenge": "Niska liczba leadów (15/msc), trudność w wyróżnieniu się, długi cykl sprzedaży (4 msc)",
+      "strategy": "Personal Branding + GEO Positioning + Visual AI",
+      "results": [
+        { "metric": "Leady", "value": "+85%", "detail": "15 → 28/msc" },
+        { "metric": "Cykl sprzedaży", "value": "-40%", "detail": "4 msc → 2.4 msc" },
+        { "metric": "Wartość transakcji", "value": "+120%", "detail": "Wyższa LTV" }
+      ],
+      "timeline": "120 dni"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Healthcare & Wellness",
+    "icon": "💚",
+    "description": "Kliniki, gabinety, centra wellness, fitness",
+    "problem": "Niska liczba pacjentów/klientów, brak zaufania, słaba reputacja online",
+    "solutions": [
+      {
+        "title": "GEO Positioning",
+        "description": "Widoczność w Google Maps, ChatGPT, Perplexity"
+      },
+      {
+        "title": "Community Growth",
+        "description": "Budowanie społeczności pacjentów/klientów"
+      },
+      {
+        "title": "Personal Branding",
+        "description": "Budowanie zaufania do lekarza/terapeuty"
+      }
+    ],
+    "result": "+55% pacjentów, +70% zaufania, +180% widoczności",
+    "caseStudy": {
+      "title": "Klinika dentystyczna",
+      "challenge": "Niska liczba pacjentów (30/msc), brak zaufania, słaba reputacja online",
+      "strategy": "GEO Positioning + Community Growth + Personal Branding",
+      "results": [
+        { "metric": "Pacjenci", "value": "+55%", "detail": "30 → 47/msc" },
+        { "metric": "Zaufanie", "value": "+70%", "detail": "Lepsze recenzje" },
+        { "metric": "Widoczność", "value": "+180%", "detail": "Widoczna online" }
+      ],
+      "timeline": "90 dni"
+    }
+  },
+  {
+    "id": 8,
+    "name": "EdTech & Education",
+    "icon": "🎓",
+    "description": "Platformy kursów, szkoły online, instytucje edukacyjne",
+    "problem": "Niska liczba studentów, trudność w wyróżnieniu się, niska konwersja",
+    "solutions": [
+      {
+        "title": "Inżynieria Konwersji",
+        "description": "Landing pages & copywriting, które przekonują do nauki"
+      },
+      {
+        "title": "GEO Positioning",
+        "description": "Widoczność w AI search dla kursów"
+      },
+      {
+        "title": "Ghost Writing",
+        "description": "Artykuły, które budują autorytet edukacyjny"
+      }
+    ],
+    "result": "+65% studentów, +45% konwersji, +200% widoczności",
+    "caseStudy": {
+      "title": "Platforma kursów online",
+      "challenge": "Niska liczba studentów (50/msc), trudność w wyróżnieniu się, niska konwersja (0.8%)",
+      "strategy": "Inżynieria Konwersji + GEO Positioning + Ghost Writing",
+      "results": [
+        { "metric": "Studenci", "value": "+65%", "detail": "50 → 83/msc" },
+        { "metric": "Konwersja", "value": "+45%", "detail": "0.8% → 1.16%" },
+        { "metric": "Widoczność", "value": "+200%", "detail": "Widoczna w AI search" }
+      ],
+      "timeline": "120 dni"
+    }
+  }
+]
