@@ -60,10 +60,10 @@ export default function VideoAnimationSection() {
             Video Animation
           </h2>
           <p className="text-xl text-gray-300 mb-4">
-            Dynamiczne animacje, które przyciągają wzrok i konwertują
+            Statyczne zdjęcia to błąd, który kosztu Ci sprzedaży
           </p>
           <p className="text-lg text-lime-400 font-semibold">
-            W 2025 roku statyczne zdjęcia to przeszłość. Animacje to przyszłość.
+            Video animacje zatrzymują scroll, przyciągają uwagę i sprzedają
           </p>
         </motion.div>
 
@@ -76,10 +76,13 @@ export default function VideoAnimationSection() {
           className="max-w-3xl mx-auto mb-16 bg-white/5 border border-lime-400/20 rounded-lg p-8"
         >
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
-            Animacje video to najskuteczniejszy sposób na przyciągnięcie uwagi w 2025 roku. Prospect spędza średnio 2.3 sekundy na stronie. Animacja przyciąga uwagę w 0.5 sekundy.
+            Prospect przegląda Twoją stronę w 2.3 sekundy. Statyczne zdjęcia? Przeskakuje. Animacja produktowa? Zatrzymuje się, ogląda, kupuje.
           </p>
-          <p className="text-lime-400 font-semibold">
-            Nasze animacje zwiększają konwersję średnio o <span className="text-2xl">+156%</span>
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            Video animacje zwiększają widoczność produktu, zatrzymują scroll, poprawiają CTR i sprzedaż. To nie jest opcja - to konieczność.
+          </p>
+          <p className="text-lime-400 font-semibold text-xl">
+            Średni wzrost konwersji: <span className="text-3xl">+156%</span>
           </p>
         </motion.div>
 
@@ -142,16 +145,34 @@ export default function VideoAnimationSection() {
           className="max-w-3xl mx-auto mb-16 bg-gradient-to-r from-lime-400/10 to-lime-400/5 border border-lime-400/20 rounded-lg p-8"
         >
           <h3 className="text-2xl font-bold text-white mb-6">
-            Dlaczego animacje video?
+            Czemu statyczne zdjęcia to błąd?
+          </h3>
+          <ul className="space-y-4 text-gray-300">
+            <li className="flex items-start gap-3">
+              <span className="text-lime-400 font-bold text-lg mt-1">⚠️</span>
+              <span><span className="text-lime-400 font-semibold">Statyczne zdjęcia = zero zaangażowania</span> - prospect przeskakuje w 0.8 sekundy</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-lime-400 font-bold text-lg mt-1">⚠️</span>
+              <span><span className="text-lime-400 font-semibold">Brak widoczności produktu</span> - klient nie widzi jak działa, nie wie czy go chce</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-lime-400 font-bold text-lg mt-1">⚠️</span>
+              <span><span className="text-lime-400 font-semibold">Niska konwersja</span> - 68% klientów porzuca koszyk bez widoku produktu w akcji</span>
+            </li>
+          </ul>
+          
+          <h3 className="text-2xl font-bold text-white mb-6 mt-8">
+            Dlatego animacje video zmieniają grę:
           </h3>
           <ul className="space-y-4 text-gray-300">
             <li className="flex items-start gap-3">
               <span className="text-lime-400 font-bold text-lg mt-1">✓</span>
-              <span><span className="text-lime-400 font-semibold">+156% konwersji</span> - animacje przyciągają uwagę i konwertują</span>
+              <span><span className="text-lime-400 font-semibold">Zatrzymują scroll</span> - animacja przyciąga uwagę w 0.5 sekundy (vs 0.8s dla zdjęć)</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-lime-400 font-bold text-lg mt-1">✓</span>
-              <span><span className="text-lime-400 font-semibold">+380% SoMV</span> - AI crawlers (ChatGPT, Perplexity) preferują video</span>
+              <span><span className="text-lime-400 font-semibold">+156% konwersji</span> - klient widzi produkt w akcji, wie że go chce</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-lime-400 font-bold text-lg mt-1">✓</span>
@@ -159,7 +180,7 @@ export default function VideoAnimationSection() {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-lime-400 font-bold text-lg mt-1">✓</span>
-              <span><span className="text-lime-400 font-semibold">-40% bounce rate</span> - dynamiczne elementy zmniejszają porzucenia</span>
+              <span><span className="text-lime-400 font-semibold">-40% bounce rate</span> - prospect spędza 3x więcej czasu na stronie</span>
             </li>
           </ul>
         </motion.div>
@@ -176,11 +197,11 @@ export default function VideoAnimationSection() {
             href="#contact"
             className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 text-black font-bold rounded-lg hover:bg-lime-300 transition-all duration-300 group"
           >
-            <span>Omów Twoją animację video</span>
+            <span>Pokaż mi jak animacje zwiększą Twoją sprzedaż</span>
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <p className="text-gray-400 text-sm mt-4">
-            Konsultacja jest bezpłatna. Pokaż nam Twoją ideę.
+            Konsultacja bezpłatna. Pokażemy Ci konkretne wyniki dla Twojego produktu.
           </p>
         </motion.div>
       </div>
