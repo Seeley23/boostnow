@@ -48,29 +48,31 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-999 ${
+        style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 1000 }}
+        className={`${
           isScrolled
             ? "bg-background/95 backdrop-blur-xl border-b border-border/50" 
             : "bg-background/95 border-b border-border/30"
         }`}
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 lg:h-24">
+          <div className="flex items-center justify-start h-20 lg:h-24">
             {/* Logo */}
             <a 
               href="/" 
               onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
-              className="flex items-center gap-0 group bg-transparent p-0 -my-4 lg:-my-5"
+              className="flex items-center gap-0 group bg-transparent p-0"
             >
               <img 
                 src="/images/logo.png" 
                 alt="BoostNow Logo" 
-                className="w-96 h-16 hover:opacity-80 transition-opacity bg-transparent object-contain" 
+                style={{ display: "block", margin: "0", marginTop: "-60px", marginBottom: "-60px" }}
+                className="w-72 hover:opacity-80 transition-opacity bg-transparent object-contain" 
               />
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-8 ml-auto">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -85,7 +87,7 @@ export default function Navigation() {
             {/* CTA Button */}
             <button
               onClick={() => scrollToSection("#contact")}
-              className="hidden lg:inline-flex px-6 py-2 bg-accent text-accent-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
+              className="hidden lg:inline-flex px-6 py-2 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               Zboostuj wyniki
             </button>

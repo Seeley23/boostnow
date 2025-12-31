@@ -76,7 +76,7 @@ export default function Home() {
 
       {/* Main content */}
       {!showIntro && (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background pt-20 lg:pt-24">
           <Navigation />
           <main>
             <HeroSection />
