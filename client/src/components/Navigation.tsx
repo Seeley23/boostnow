@@ -56,12 +56,12 @@ export default function Navigation() {
         }`}
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-start h-20 lg:h-24">
+          <div className="flex items-center justify-between h-20 lg:h-24 gap-4 lg:gap-8">
             {/* Logo */}
             <a 
               href="/" 
               onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
-              className="flex items-center gap-0 group bg-transparent p-0"
+              className="flex-shrink-0 flex items-center gap-0 group bg-transparent p-0"
             >
               <img 
                 src="/images/logo.png" 
@@ -72,7 +72,7 @@ export default function Navigation() {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8 ml-auto">
+            <div className="hidden lg:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -87,7 +87,7 @@ export default function Navigation() {
             {/* CTA Button */}
             <button
               onClick={() => scrollToSection("#contact")}
-              className="hidden lg:inline-flex px-6 py-2 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity"
+              className="hidden lg:inline-flex flex-shrink-0 px-6 py-2 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
             >
               Zboostuj wyniki
             </button>
@@ -95,7 +95,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden text-foreground"
+              className="lg:hidden flex-shrink-0 text-foreground"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
