@@ -57,8 +57,8 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <a 
-              href="#" 
-              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              href="/" 
+              onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
               className="flex items-center gap-2 group"
             >
               <div className="relative">
