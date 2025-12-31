@@ -32,7 +32,117 @@ const BlogArticle: React.FC = () => {
   const [relatedArticles, setRelatedArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // Ustaw title dla strony
+  useEffect(() => {
+    if (article) {
+      document.title = `${article.title} | BoostNow - Agencja Aktywacji Klientów`;
+    }
+  }, [article]);
+
   const articles: Article[] = articlesMetadata as Article[];
+
+  // Ustaw meta tags dla GEO
+  useEffect(() => {
+    if (article) {
+      // og:title
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', article.title);
+      else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'og:title');
+        meta.setAttribute('content', article.title);
+        document.head.appendChild(meta);
+      }
+
+      // og:description
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', article.meta_description);
+      else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'og:description');
+        meta.setAttribute('content', article.meta_description);
+        document.head.appendChild(meta);
+      }
+
+      // og:image
+      const ogImage = document.querySelector('meta[property="og:image"]');
+      const imageUrl = `/og-images/${id}.png`;
+      if (ogImage) ogImage.setAttribute('content', imageUrl);
+      else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'og:image');
+        meta.setAttribute('content', imageUrl);
+        document.head.appendChild(meta);
+      }
+
+      // og:type
+      const ogType = document.querySelector('meta[property="og:type"]');
+      if (ogType) ogType.setAttribute('content', 'article');
+      else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'og:type');
+        meta.setAttribute('content', 'article');
+        document.head.appendChild(meta);
+      }
+
+      // article:published_time
+      const pubTime = document.querySelector('meta[property="article:published_time"]');
+      const articleData = articlesMetadata[parseInt(id || '1') - 1] as any;
+      if (articleData?.date) {
+        if (pubTime) pubTime.setAttribute('content', articleData.date);
+        else {
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'article:published_time');
+          meta.setAttribute('content', articleData.date);
+          document.head.appendChild(meta);
+        }
+      }
+
+      // article:tag (semantic anchors)
+      const tags = article.semantic_anchors.split(',').map(t => t.trim());
+      tags.forEach(tag => {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'article:tag');
+        meta.setAttribute('content', tag);
+        document.head.appendChild(meta);
+      });
+
+      // JSON-LD Schema
+      const schemaScript = document.querySelector('script[type="application/ld+json"][data-article-schema]');
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: article.title,
+        description: article.meta_description,
+        image: imageUrl,
+        datePublished: articleData?.date || new Date().toISOString(),
+        author: {
+          '@type': 'Person',
+          name: 'Mateusz Nowotka',
+          url: 'https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/'
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'BoostNow',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://boostnow.pl/logo.svg'
+          }
+        },
+        keywords: [article.semantic_anchors, article.target_industry].join(', ')
+      };
+      
+      if (schemaScript) {
+        schemaScript.textContent = JSON.stringify(schema);
+      } else {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.setAttribute('data-article-schema', 'true');
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
+      }
+    }
+  }, [article, id]);
 
   useEffect(() => {
     const loadArticle = async () => {
