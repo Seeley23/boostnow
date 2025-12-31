@@ -3,9 +3,9 @@ import { AnimatePresence } from "framer-motion";
 import IntroOverlay from "@/components/IntroOverlay";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
+// import AboutSection from "@/components/AboutSection"; // WYCIĄTE
 import ServicesSection from "@/components/ServicesSection";
-import ProcessSection from "@/components/ProcessSection";
+// import ProcessSection from "@/components/ProcessSection"; // WYCIĄTE
 import ResultsSection from "@/components/ResultsSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
 import ContactSection from "@/components/ContactSection";
@@ -13,8 +13,8 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
-import LossCalculator from "@/components/LossCalculator";
-import RecentBlog from "@/components/RecentBlog";
+// import LossCalculator from "@/components/LossCalculator"; // WYCIĄTE
+// import RecentBlog from "@/components/RecentBlog"; // WYCIĄTE
 import IndustriesSection from "@/components/IndustriesSection";
 
 /* Home Page - BoostNow
@@ -78,13 +78,9 @@ export default function Home() {
             <HeroSection />
             <ProblemSection />
             <SolutionSection />
-            <AboutSection />
             <IndustriesSection />
-            <ProcessSection />
             <ResultsSection />
             <TargetAudienceSection />
-            <LossCalculator />
-            <RecentBlog />
             <FAQSection />
             <ContactSection />
             <Footer />
