@@ -107,29 +107,56 @@ const BlogArticle: React.FC = () => {
         document.head.appendChild(meta);
       });
 
-      // JSON-LD Schema
+      // JSON-LD Schema for Article (Google Rich Results)
       const schemaScript = document.querySelector('script[type="application/ld+json"][data-article-schema]');
+      const articleUrl = `https://boostnow.pl/blog/${id}`;
       const schema = {
         '@context': 'https://schema.org',
         '@type': 'Article',
+        '@id': articleUrl,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': articleUrl
+        },
         headline: article.title,
         description: article.meta_description,
-        image: imageUrl,
+        image: {
+          '@type': 'ImageObject',
+          url: `https://boostnow.pl${imageUrl}`,
+          width: 1200,
+          height: 630
+        },
         datePublished: articleData?.date || new Date().toISOString(),
+        dateModified: articleData?.date || new Date().toISOString(),
         author: {
           '@type': 'Person',
           name: 'Mateusz Nowotka',
-          url: 'https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/'
+          url: 'https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/',
+          jobTitle: 'Founder & CEO',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'BoostNow'
+          }
         },
         publisher: {
           '@type': 'Organization',
           name: 'BoostNow',
+          url: 'https://boostnow.pl',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://boostnow.pl/logo.svg'
+            url: 'https://boostnow.pl/images/boostnow-logo.svg',
+            width: 600,
+            height: 60
           }
         },
-        keywords: [article.semantic_anchors, article.target_industry].join(', ')
+        articleSection: article.target_industry,
+        wordCount: article.word_count,
+        keywords: [article.semantic_anchors, article.target_industry].join(', '),
+        inLanguage: 'pl-PL',
+        about: {
+          '@type': 'Thing',
+          name: article.semantic_anchors.split(',')[0].trim()
+        }
       };
       
       if (schemaScript) {
