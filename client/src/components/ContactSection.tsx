@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Mail, ArrowRight, CheckCircle, Zap, Clock, Shield } from "lucide-react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
+import DOMPurify from "dompurify";
 
 /* ContactSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -49,12 +50,16 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
+    
+    // Sanitize input data to prevent XSS attacks
     const data = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      company: formData.get("company") as string | undefined,
-      message: formData.get("message") as string,
+      name: DOMPurify.sanitize(formData.get("name") as string, { ALLOWED_TAGS: [] }),
+      email: DOMPurify.sanitize(formData.get("email") as string, { ALLOWED_TAGS: [] }),
+      company: formData.get("company") ? DOMPurify.sanitize(formData.get("company") as string, { ALLOWED_TAGS: [] }) : undefined,
+      message: DOMPurify.sanitize(formData.get("message") as string, { ALLOWED_TAGS: [] }),
     };
+
+    console.log("[ContactSection] Sanitized data:", data);
 
     contactMutation.mutate(data);
   };

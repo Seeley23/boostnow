@@ -3,6 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
+import DOMPurify from "isomorphic-dompurify";
 import { insertContactSubmission } from "./db";
 import { sendContactFormNotification } from "./email";
 
@@ -31,11 +32,21 @@ export const appRouter = router({
         })
       )
       .mutation(async ({ input }) => {
+        // Sanitize input data to prevent XSS attacks
+        const sanitizedInput = {
+          name: DOMPurify.sanitize(input.name, { ALLOWED_TAGS: [] }),
+          email: DOMPurify.sanitize(input.email, { ALLOWED_TAGS: [] }),
+          company: input.company ? DOMPurify.sanitize(input.company, { ALLOWED_TAGS: [] }) : undefined,
+          message: DOMPurify.sanitize(input.message, { ALLOWED_TAGS: [] }),
+        };
+
+        console.log("[Contact] Sanitized input:", sanitizedInput);
+
         // Save to database
-        await insertContactSubmission(input);
+        await insertContactSubmission(sanitizedInput);
         
         // Send email notification
-        const emailSent = await sendContactFormNotification(input);
+        const emailSent = await sendContactFormNotification(sanitizedInput);
         
         if (!emailSent) {
           console.warn("[Contact] Email notification failed, but submission saved");
