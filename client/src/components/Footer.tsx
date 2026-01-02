@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Instagram } from "lucide-react";
+import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
 import { Link } from "wouter";
 
 /* Footer Component
@@ -9,8 +9,9 @@ import { Link } from "wouter";
 */
 
 const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/boostnowmarketing", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61585415810749", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/boostnow_marketing/", label: "Instagram" },
 ];
 
 const footerLinks = [
@@ -63,10 +64,8 @@ export default function Footer() {
                   href={social.href}
                   aria-label={social.label}
                   className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    // Placeholder - would link to actual social profiles
-                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>

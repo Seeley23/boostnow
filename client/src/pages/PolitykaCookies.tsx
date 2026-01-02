@@ -127,8 +127,11 @@ export default function PolitykaCookies() {
             <p>
               W przypadku pytań dotyczących Polityki Cookies prosimy o kontakt:
             </p>
-            <p>
-              <strong>Email:</strong> kontakt@boostnow.pl
+            <p className="mt-4">
+              <strong>BoostNow Mateusz Nowotka</strong><br />
+              NIP: 7393776527<br />
+              REGON: 527251665<br />
+              Email: kontakt@boostnow.pl
             </p>
           </section>
 

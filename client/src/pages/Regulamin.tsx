@@ -9,7 +9,13 @@ export default function Regulamin() {
             <h2 className="text-2xl font-semibold mb-4">1. Postanowienia ogólne</h2>
             <p>
               Niniejszy Regulamin określa zasady korzystania ze strony internetowej boostnow.pl (dalej: "Strona"), 
-              prowadzonej przez BoostNow - Agencję Aktywacji Klientów.
+              prowadzonej przez:
+            </p>
+            <p className="mt-4">
+              <strong>BoostNow Mateusz Nowotka</strong><br />
+              NIP: 7393776527<br />
+              REGON: 527251665<br />
+              Email: kontakt@boostnow.pl
             </p>
             <p>
               Korzystanie ze Strony oznacza akceptację niniejszego Regulaminu oraz Polityki Prywatności.
@@ -20,7 +26,7 @@ export default function Regulamin() {
             <h2 className="text-2xl font-semibold mb-4">2. Definicje</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Strona</strong> - serwis internetowy dostępny pod adresem boostnow.pl</li>
-              <li><strong>Usługodawca</strong> - BoostNow - Agencja Aktywacji Klientów</li>
+              <li><strong>Usługodawca</strong> - BoostNow Mateusz Nowotka, NIP: 7393776527, REGON: 527251665</li>
               <li><strong>Użytkownik</strong> - osoba korzystająca ze Strony</li>
               <li><strong>Usługi</strong> - usługi oferowane przez Usługodawcę, w tym Inżynieria Konwersji, Video Animation, GEO Positioning, SEO Positioning</li>
             </ul>
@@ -112,8 +118,11 @@ export default function Regulamin() {
             <p>
               W przypadku pytań dotyczących Regulaminu prosimy o kontakt:
             </p>
-            <p>
-              <strong>Email:</strong> kontakt@boostnow.pl
+            <p className="mt-4">
+              <strong>BoostNow Mateusz Nowotka</strong><br />
+              NIP: 7393776527<br />
+              REGON: 527251665<br />
+              Email: kontakt@boostnow.pl
             </p>
           </section>
 

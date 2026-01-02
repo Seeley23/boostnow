@@ -23,8 +23,10 @@ export default function PolitykaPrywatnosci() {
             <p>
               Administratorem danych osobowych jest:
             </p>
-            <p>
-              <strong>BoostNow - Agencja Aktywacji Klientów</strong><br />
+            <p className="mt-4">
+              <strong>BoostNow Mateusz Nowotka</strong><br />
+              NIP: 7393776527<br />
+              REGON: 527251665<br />
               Email: kontakt@boostnow.pl
             </p>
           </section>
@@ -153,8 +155,11 @@ export default function PolitykaPrywatnosci() {
             <p>
               W przypadku pytań dotyczących Polityki Prywatności prosimy o kontakt:
             </p>
-            <p>
-              <strong>Email:</strong> kontakt@boostnow.pl
+            <p className="mt-4">
+              <strong>BoostNow Mateusz Nowotka</strong><br />
+              NIP: 7393776527<br />
+              REGON: 527251665<br />
+              Email: kontakt@boostnow.pl
             </p>
           </section>
 
