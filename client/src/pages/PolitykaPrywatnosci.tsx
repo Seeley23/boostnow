@@ -50,7 +50,7 @@ export default function PolitykaPrywatnosci() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Obsługa zapytań:</strong> odpowiedź na zapytania wysłane przez formularz kontaktowy (art. 6 ust. 1 lit. f RODO - prawnie uzasadniony interes Administratora)</li>
-              <li><strong>Świadczenie usług:</strong> realizacja umów o świadczenie usług marketingowych (art. 6 ust. 1 lit. b RODO - wykonanie umowy)</li>
+              <li><strong>Świadczenie usług:</strong> realizacja umów o świadczenie usług marketingowych, w tym Inżynieria Konwersji, Video Animation, GEO Positioning, SEO Positioning, Social Media Management, Copywriting, Ghostwriting (art. 6 ust. 1 lit. b RODO - wykonanie umowy)</li>
               <li><strong>Marketing:</strong> wysyłka informacji o usługach i promocjach (art. 6 ust. 1 lit. a RODO - zgoda)</li>
               <li><strong>Analityka:</strong> analiza ruchu na Stronie w celu poprawy jej funkcjonalności (art. 6 ust. 1 lit. f RODO - prawnie uzasadniony interes Administratora)</li>
             </ul>

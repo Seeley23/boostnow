@@ -28,7 +28,7 @@ export default function Regulamin() {
               <li><strong>Strona</strong> - serwis internetowy dostępny pod adresem boostnow.pl</li>
               <li><strong>Usługodawca</strong> - BoostNow Mateusz Nowotka, NIP: 7393776527, REGON: 527251665</li>
               <li><strong>Użytkownik</strong> - osoba korzystająca ze Strony</li>
-              <li><strong>Usługi</strong> - usługi oferowane przez Usługodawcę, w tym Inżynieria Konwersji, Video Animation, GEO Positioning, SEO Positioning</li>
+              <li><strong>Usługi</strong> - usługi oferowane przez Usługodawcę, w tym Inżynieria Konwersji, Video Animation, GEO Positioning, SEO Positioning, Social Media Management, Copywriting, Ghostwriting</li>
             </ul>
           </section>
 
@@ -53,6 +53,9 @@ export default function Regulamin() {
               <li><strong>Video Animation</strong> - tworzenie animacji wideo dla celów marketingowych</li>
               <li><strong>GEO Positioning</strong> - pozycjonowanie w wyszukiwarkach AI (ChatGPT, Perplexity, Gemini)</li>
               <li><strong>SEO Positioning</strong> - pozycjonowanie w wyszukiwarkach internetowych</li>
+              <li><strong>Social Media Management</strong> - zarządzanie profilami w mediach społecznościowych, tworzenie strategii content marketingowej</li>
+              <li><strong>Copywriting</strong> - tworzenie tekstów reklamowych, opisów produktów, treści na strony internetowe</li>
+              <li><strong>Ghostwriting</strong> - pisanie artykułów, postów, treści w imieniu klienta</li>
             </ul>
             <p>
               Szczegółowe warunki świadczenia Usług określane są w indywidualnych umowach zawieranych z Klientami.
