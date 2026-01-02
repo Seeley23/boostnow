@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import CookieBanner from "./components/CookieBanner";
+import ScrollDepthTracker from "./components/ScrollDepthTracker";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import CalculatorPage from "./pages/CalculatorPage";
@@ -41,6 +42,7 @@ function App() {
           <Toaster />
           <Router />
           <CookieBanner />
+          <ScrollDepthTracker />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

@@ -5,6 +5,7 @@ import { Mail, ArrowRight, CheckCircle, Zap, Clock, Shield } from "lucide-react"
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 import DOMPurify from "dompurify";
+import { trackFormSubmit } from "@/lib/analytics";
 
 /* ContactSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -38,6 +39,11 @@ export default function ContactSection() {
     onSuccess: () => {
       setIsSubmitted(true);
       toast.success("Wiadomość wysłana! Skontaktujemy się wkrótce.");
+      
+      // Track form submission in GTM
+      trackFormSubmit('contact_form', {
+        form_location: 'contact_section',
+      });
     },
     onError: (error) => {
       toast.error(`Błąd: ${error.message}`);

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, TrendingUp, Target } from "lucide-react";
+import { trackCTAClick } from "@/lib/analytics";
 
 /* HeroSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -10,7 +11,16 @@ import { ArrowRight, Zap, TrendingUp, Target } from "lucide-react";
 
 export default function HeroSection() {
   const scrollToContact = () => {
+    trackCTAClick('hero_primary_cta', 'Zboostuj wyniki TERAZ', '#contact');
     const element = document.querySelector("#contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToServices = () => {
+    trackCTAClick('hero_secondary_cta', 'Zobacz jak działamy', '#services');
+    const element = document.querySelector("#services");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -93,7 +103,7 @@ export default function HeroSection() {
               </button>
               
               <button
-                onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={scrollToServices}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 border border-border text-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/5"
               >
                 Zobacz jak działamy
