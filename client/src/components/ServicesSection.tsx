@@ -198,6 +198,9 @@ export default function ServicesSection() {
                       <img
                         src={service.image}
                         alt={service.title}
+                        loading="lazy"
+                        width="400"
+                        height="192"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />

@@ -13,6 +13,14 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://boostnow.pl" />
     
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#c7ff4e" />
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://boostnow.pl" />
@@ -32,9 +40,41 @@
     <meta name="twitter:image" content="https://boostnow.pl/og-image.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="alternate" type="application/rss+xml" title="BoostNow - Architekci Decyzji" href="/rss.xml" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
+    <!-- JSON-LD Schema for WebSite (SearchBox) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "BoostNow",
+      "alternateName": "BoostNow - Agencja Aktywacji Klientów",
+      "url": "https://boostnow.pl",
+      "description": "Agencja aktywacji klientów specjalizująca się w Decision Science, Inżynierii Konwersji i GEO Positioning. Skalujemy wyniki, o których inni tylko marzą.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://boostnow.pl/blog?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BoostNow",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://boostnow.pl/images/boostnow-logo.svg"
+        }
+      }
+    }
+    </script>
+    
     <!-- JSON-LD Schema for Organization -->
     <script type="application/ld+json">
     {

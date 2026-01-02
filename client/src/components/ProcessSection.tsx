@@ -52,6 +52,9 @@ export default function ProcessSection() {
         <img
           src="/images/process-bg.png"
           alt="Process background"
+          loading="lazy"
+          width="1920"
+          height="1080"
           className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />

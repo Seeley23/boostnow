@@ -33,6 +33,9 @@ export default function HeroSection() {
         <img
           src="/images/hero-success.png"
           alt="Digital growth visualization"
+          loading="eager"
+          width="1920"
+          height="1080"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />

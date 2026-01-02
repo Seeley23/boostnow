@@ -58,14 +58,15 @@ export default function Navigation() {
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 py-3 lg:py-4">
             {/* Logo */}
-            <a 
-              href="/" 
-              onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
+            <a
+              href="/"
               className="flex-shrink-0 flex items-center justify-center gap-0 group bg-transparent p-0 py-0"
             >
               <img 
                 src="/images/logo.svg" 
-                alt="BoostNow Logo" 
+                alt="BoostNow Logo"
+                width="288"
+                height="72"
                 style={{ display: "block", margin: "0" }}
                 className="h-12 sm:h-14 lg:h-[72px] w-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 
               />

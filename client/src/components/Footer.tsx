@@ -40,14 +40,15 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Brand column */}
           <div className="lg:col-span-4">
-            <a 
-              href="#" 
-              onClick={(e) => { e.preventDefault(); scrollToSection("#"); }}
+            <a
+              href="/"
               className="inline-flex items-center gap-2 mb-4 bg-transparent"
             >
               <img 
                 src="/images/logo.svg" 
-                alt="BoostNow Logo" 
+                alt="BoostNow Logo"
+                width="320"
+                height="40"
                 className="w-80 h-auto bg-transparent object-contain" 
               />
             </a>
