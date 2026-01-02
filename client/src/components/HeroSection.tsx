@@ -61,7 +61,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6"
+              className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-4 sm:mb-6"
             >
               Skalujemy wyniki, o których inni{" "}
               <span className="text-gradient-lime">tylko marzą.</span>
@@ -72,7 +72,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg sm:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mb-6 sm:mb-8 leading-relaxed"
             >
               <strong className="text-foreground">Przestań finansować swoją niewidzialność.</strong> Wdróż system przymusu uwagi!
             </motion.p>
@@ -82,11 +82,11 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
             >
               <button
                 onClick={scrollToContact}
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong"
               >
                 <span>Zboostuj wyniki TERAZ</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -94,7 +94,7 @@ export default function HeroSection() {
               
               <button
                 onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border text-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/5"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 border border-border text-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/5"
               >
                 Zobacz jak działamy
               </button>
@@ -105,28 +105,28 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50"
+              className="grid grid-cols-3 gap-3 sm:gap-6 pt-6 sm:pt-8 border-t border-border/50"
             >
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="font-heading text-2xl sm:text-3xl font-bold text-foreground">+150%</span>
+                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">+150%</span>
                 </div>
-                <span className="text-sm text-muted-foreground">Średni wzrost ROAS</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Średni wzrost ROAS</span>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <Target className="w-4 h-4 text-primary" />
-                  <span className="font-heading text-2xl sm:text-3xl font-bold text-foreground">90 dni</span>
+                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">90 dni</span>
                 </div>
-                <span className="text-sm text-muted-foreground">Do pierwszych wyników</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Do pierwszych wyników</span>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <Zap className="w-4 h-4 text-primary" />
-                  <span className="font-heading text-2xl sm:text-3xl font-bold text-foreground">7+ lat</span>
+                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">7+ lat</span>
                 </div>
-                <span className="text-sm text-muted-foreground">Doświadczenia</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Doświadczenia</span>
               </div>
             </motion.div>
           </div>

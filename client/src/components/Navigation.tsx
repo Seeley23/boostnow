@@ -66,8 +66,8 @@ export default function Navigation() {
               <img 
                 src="/images/logo.svg" 
                 alt="BoostNow Logo" 
-                style={{ display: "block", margin: "0", height: "72px" }}
-                className="w-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 
+                style={{ display: "block", margin: "0" }}
+                className="h-12 sm:h-14 lg:h-[72px] w-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 
               />
             </a>
 
@@ -120,7 +120,7 @@ export default function Navigation() {
               ))}
               <button
                 onClick={() => scrollToSection("#contact")}
-                className="block w-full px-4 py-2 bg-accent text-accent-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
+                className="block w-full px-4 py-3 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity"
               >
                 Zboostuj wyniki
               </button>
@@ -130,7 +130,7 @@ export default function Navigation() {
       </motion.header>
 
       {/* Spacer to prevent content overlap with fixed header */}
-      <div style={{ height: "auto" }} />
+      <div className="h-16 sm:h-20 lg:h-24" />
     </>
   );
 }
