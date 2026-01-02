@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { eq, desc, asc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, users, contactSubmissions, InsertContactSubmission } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -105,12 +105,48 @@ export async function insertContactSubmission(submission: InsertContactSubmissio
   }
 }
 
-export async function getAllContactSubmissions() {
+export async function getAllContactSubmissions(options?: {
+  status?: "new" | "read" | "replied" | "all";
+  sortBy?: "createdAt" | "status";
+  sortOrder?: "asc" | "desc";
+}) {
   const db = await getDb();
   if (!db) {
     console.warn("[Database] Cannot get contact submissions: database not available");
     return [];
   }
 
-  return await db.select().from(contactSubmissions).orderBy(contactSubmissions.createdAt);
+  let query = db.select().from(contactSubmissions);
+
+  // Filter by status
+  if (options?.status && options.status !== "all") {
+    query = query.where(eq(contactSubmissions.status, options.status)) as any;
+  }
+
+  // Sort
+  const sortField = options?.sortBy === "status" ? contactSubmissions.status : contactSubmissions.createdAt;
+  const sortFn = options?.sortOrder === "asc" ? asc : desc;
+  
+  return await query.orderBy(sortFn(sortField));
+}
+
+export async function updateContactSubmissionStatus(
+  id: number,
+  status: "new" | "read" | "replied"
+): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot update contact submission: database not available");
+    throw new Error("Database not available");
+  }
+
+  try {
+    await db
+      .update(contactSubmissions)
+      .set({ status })
+      .where(eq(contactSubmissions.id, id));
+  } catch (error) {
+    console.error("[Database] Failed to update contact submission:", error);
+    throw error;
+  }
 }

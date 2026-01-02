@@ -22,6 +22,48 @@ export const appRouter = router({
   }),
 
   contact: router({
+    // Get all contact submissions (admin only)
+    getAll: publicProcedure
+      .input(
+        z.object({
+          status: z.enum(["new", "read", "replied", "all"]).optional(),
+          sortBy: z.enum(["createdAt", "status"]).optional().default("createdAt"),
+          sortOrder: z.enum(["asc", "desc"]).optional().default("desc"),
+        })
+      )
+      .query(async ({ ctx, input }) => {
+        // Check if user is admin
+        if (!ctx.user || ctx.user.role !== "admin") {
+          throw new Error("Unauthorized: Admin access required");
+        }
+
+        const { getAllContactSubmissions } = await import("./db");
+        return getAllContactSubmissions(input);
+      }),
+
+    // Update contact submission status (admin only)
+    updateStatus: publicProcedure
+      .input(
+        z.object({
+          id: z.number(),
+          status: z.enum(["new", "read", "replied"]),
+        })
+      )
+      .mutation(async ({ ctx, input }) => {
+        // Check if user is admin
+        if (!ctx.user || ctx.user.role !== "admin") {
+          throw new Error("Unauthorized: Admin access required");
+        }
+
+        const { updateContactSubmissionStatus } = await import("./db");
+        await updateContactSubmissionStatus(input.id, input.status);
+        
+        return {
+          success: true,
+          message: "Status updated successfully",
+        };
+      }),
+
     submit: publicProcedure
       .input(
         z.object({
