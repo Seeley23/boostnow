@@ -145,35 +145,6 @@ export default function ResultsSection() {
         </div>
 
         {/* Social proof bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 pt-16 border-t border-border"
-        >
-          <div className="text-center mb-8">
-            <p className="text-sm text-muted-foreground">
-              Zaufali nam liderzy z różnych branż
-            </p>
-          </div>
-          
-          {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
-            {["Shopify Partner", "Meta Business", "Google Ads", "HubSpot"].map((partner, index) => (
-              <motion.div
-                key={partner}
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 0.5 } : {}}
-                transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
-                whileHover={{ opacity: 1 }}
-                className="text-lg font-heading font-semibold text-muted-foreground transition-opacity cursor-default"
-              >
-                {partner}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
