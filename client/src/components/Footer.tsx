@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Instagram } from "lucide-react";
+import { Link } from "wouter";
 
 /* Footer Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -119,13 +120,30 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} BoostNow. Wszystkie prawa zastrzeżone.
-          </p>
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span>System aktywny</span>
+        <div className="mt-12 pt-8 border-t border-border">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} BoostNow. Wszystkie prawa zastrzeżone.
+            </p>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span>System aktywny</span>
+            </div>
+          </div>
+          
+          {/* Legal links */}
+          <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
+            <Link href="/regulamin" className="hover:text-primary transition-colors">
+              Regulamin
+            </Link>
+            <span>•</span>
+            <Link href="/polityka-prywatnosci" className="hover:text-primary transition-colors">
+              Polityka Prywatności
+            </Link>
+            <span>•</span>
+            <Link href="/polityka-cookies" className="hover:text-primary transition-colors">
+              Polityka Cookies
+            </Link>
           </div>
         </div>
       </div>

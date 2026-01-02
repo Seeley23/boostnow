@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useAuth } from "@/_core/hooks/useAuth";
 import { AnimatePresence } from "framer-motion";
 import IntroOverlay from "@/components/IntroOverlay";
 import Navigation from "@/components/Navigation";
@@ -39,6 +40,10 @@ import ComparisonSection from "@/components/ComparisonSection";
 const INTRO_SHOWN_KEY = "boostnow_intro_shown";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const [showIntro, setShowIntro] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 

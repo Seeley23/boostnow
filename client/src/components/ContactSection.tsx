@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Mail, ArrowRight, CheckCircle, Zap, Clock, Shield } from "lucide-react";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 /* ContactSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -32,16 +33,30 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const contactMutation = trpc.contact.submit.useMutation({
+    onSuccess: () => {
+      setIsSubmitted(true);
+      toast.success("Wiadomość wysłana! Skontaktujemy się wkrótce.");
+    },
+    onError: (error) => {
+      toast.error(`Błąd: ${error.message}`);
+      setIsSubmitting(false);
+    },
+  });
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      company: formData.get("company") as string | undefined,
+      message: formData.get("message") as string,
+    };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast.success("Wiadomość wysłana! Skontaktujemy się wkrótce.");
+    contactMutation.mutate(data);
   };
 
   return (

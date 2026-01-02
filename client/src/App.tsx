@@ -9,8 +9,11 @@ import AboutPage from "./pages/AboutPage";
 import CalculatorPage from "./pages/CalculatorPage";
 import BlogArticle from "./components/BlogArticle";
 import BlogPage from "./pages/BlogPage";
-
+import Regulamin from "./pages/Regulamin";
+import PolitykaPrywatnosci from "./pages/PolitykaPrywatnosci";
+import PolitykaCookies from "./pages/PolitykaCookies";
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
@@ -18,6 +21,9 @@ function Router() {
       <Route path={"/calculator"} component={CalculatorPage} />
       <Route path={"/blog"} component={BlogPage} />
       <Route path={"/blog/:id"} component={BlogArticle} />
+      <Route path={"/regulamin"} component={Regulamin} />
+      <Route path={"/polityka-prywatnosci"} component={PolitykaPrywatnosci} />
+      <Route path={"/polityka-cookies"} component={PolitykaCookies} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
