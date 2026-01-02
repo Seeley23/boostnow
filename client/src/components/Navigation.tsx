@@ -64,7 +64,7 @@ export default function Navigation() {
               className="flex-shrink-0 flex items-center justify-center gap-0 group bg-transparent p-0 py-0"
             >
               <img 
-                src="/images/logo.png" 
+                src="/images/logo.svg" 
                 alt="BoostNow Logo" 
                 style={{ display: "block", margin: "0", height: "72px" }}
                 className="w-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 

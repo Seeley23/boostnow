@@ -44,7 +44,7 @@ export default function Footer() {
               className="inline-flex items-center gap-2 mb-4 bg-transparent"
             >
               <img 
-                src="/images/logo.png" 
+                src="/images/logo.svg" 
                 alt="BoostNow Logo" 
                 className="w-80 h-auto bg-transparent object-contain" 
               />
