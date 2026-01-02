@@ -92,78 +92,100 @@ export default function FAQSection() {
 
   const filteredFAQs = faqItems.filter((item) => item.category === activeCategory);
 
+  // JSON-LD Schema for FAQ (all items for Google Rich Results)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
-    <section className="py-20 bg-black">
-      <div className="container max-w-4xl">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-lime-400 text-sm font-semibold mb-2">NAJCZĘSTSZE PYTANIA</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Odpowiedzi na Twoje <span className="text-lime-400">pytania</span>
-          </h2>
-          <p className="text-gray-400 text-lg">
-            Wszystko co musisz wiedzieć o usługach, procesie i współpracy z BoostNow.
-          </p>
-        </div>
+    <>
+      {/* JSON-LD Schema for FAQ - Google Rich Results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      
+      <section className="py-20 bg-black">
+        <div className="container max-w-4xl">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <p className="text-lime-400 text-sm font-semibold mb-2">NAJCZĘSTSZE PYTANIA</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Odpowiedzi na Twoje <span className="text-lime-400">pytania</span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Wszystko co musisz wiedzieć o usługach, procesie i współpracy z BoostNow.
+            </p>
+          </div>
 
-        {/* Category Tabs */}
-        <div className="flex gap-4 mb-12 justify-center flex-wrap">
-          {["services", "process", "general"].map((cat) => (
-            <button
-              key={cat}
-              onClick={() => {
-                setActiveCategory(cat as "services" | "process" | "general");
-                setExpandedId(null);
-              }}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                activeCategory === cat
-                  ? "bg-lime-400 text-black"
-                  : "bg-gray-900 text-gray-300 hover:bg-gray-800"
-              }`}
-            >
-              {cat === "services" && "Usługi"}
-              {cat === "process" && "Proces"}
-              {cat === "general" && "Ogólne"}
-            </button>
-          ))}
-        </div>
-
-        {/* FAQ Accordion */}
-        <div className="space-y-4">
-          {filteredFAQs.map((item) => (
-            <div
-              key={item.id}
-              className="border border-gray-800 rounded-lg overflow-hidden hover:border-lime-400/50 transition-colors"
-            >
+          {/* Category Tabs */}
+          <div className="flex gap-4 mb-12 justify-center flex-wrap">
+            {["services", "process", "general"].map((cat) => (
               <button
-                onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
-                className="w-full px-6 py-4 flex items-center justify-between bg-gray-900/50 hover:bg-gray-900 transition-colors"
+                key={cat}
+                onClick={() => {
+                  setActiveCategory(cat as "services" | "process" | "general");
+                  setExpandedId(null);
+                }}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                  activeCategory === cat
+                    ? "bg-lime-400 text-black"
+                    : "bg-gray-900 text-gray-300 hover:bg-gray-800"
+                }`}
               >
-                <h3 className="text-left text-white font-semibold text-lg">{item.question}</h3>
-                <ChevronDown
-                  className={`w-6 h-6 text-lime-400 flex-shrink-0 transition-transform ${
-                    expandedId === item.id ? "rotate-180" : ""
-                  }`}
-                />
+                {cat === "services" && "Usługi"}
+                {cat === "process" && "Proces"}
+                {cat === "general" && "Ogólne"}
               </button>
+            ))}
+          </div>
 
-              {expandedId === item.id && (
-                <div className="px-6 py-4 bg-black border-t border-gray-800">
-                  <p className="text-gray-300 leading-relaxed">{item.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+          {/* FAQ Accordion */}
+          <div className="space-y-4">
+            {filteredFAQs.map((item) => (
+              <div
+                key={item.id}
+                className="border border-gray-800 rounded-lg overflow-hidden hover:border-lime-400/50 transition-colors"
+              >
+                <button
+                  onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
+                  className="w-full px-6 py-4 flex items-center justify-between bg-gray-900/50 hover:bg-gray-900 transition-colors"
+                >
+                  <h3 className="text-left text-white font-semibold text-lg">{item.question}</h3>
+                  <ChevronDown
+                    className={`w-6 h-6 text-lime-400 flex-shrink-0 transition-transform ${
+                      expandedId === item.id ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-400 mb-6">Nie znalazłeś odpowiedzi na swoje pytanie?</p>
-          <button className="px-8 py-4 bg-lime-400 text-black font-bold rounded-lg hover:bg-lime-300 transition-colors">
-            Skontaktuj się z nami
-          </button>
+                {expandedId === item.id && (
+                  <div className="px-6 py-4 bg-black border-t border-gray-800">
+                    <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="mt-16 text-center">
+            <p className="text-gray-400 mb-6">Nie znalazłeś odpowiedzi na swoje pytanie?</p>
+            <button className="px-8 py-4 bg-lime-400 text-black font-bold rounded-lg hover:bg-lime-300 transition-colors">
+              Skontaktuj się z nami
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
