@@ -1,6 +1,12 @@
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+
 export default function Regulamin() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <BreadcrumbSchema items={[
+        { name: 'Strona główna', url: 'https://boostnow.pl' },
+        { name: 'Regulamin', url: 'https://boostnow.pl/regulamin' }
+      ]} />
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8">Regulamin Strony</h1>
         

@@ -168,6 +168,43 @@ const BlogArticle: React.FC = () => {
         script.textContent = JSON.stringify(schema);
         document.head.appendChild(script);
       }
+
+      // BreadcrumbList Schema for Article
+      const breadcrumbScript = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
+      const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Strona główna',
+            'item': 'https://boostnow.pl'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Blog',
+            'item': 'https://boostnow.pl/blog'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': article.title,
+            'item': articleUrl
+          }
+        ]
+      };
+
+      if (breadcrumbScript) {
+        breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+      } else {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.setAttribute('data-breadcrumb-schema', 'true');
+        script.textContent = JSON.stringify(breadcrumbSchema);
+        document.head.appendChild(script);
+      }
     }
   }, [article, id]);
 

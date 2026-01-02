@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import articlesMetadata from '../data/blog/articles-metadata.json';
@@ -21,6 +21,47 @@ const BlogPage: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
 
   const articles: Article[] = articlesMetadata;
+
+  // BreadcrumbList Schema for Blog Page
+  useEffect(() => {
+    const breadcrumbScript = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
+    const breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Strona główna',
+          'item': 'https://boostnow.pl'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Blog',
+          'item': 'https://boostnow.pl/blog'
+        }
+      ]
+    };
+
+    if (breadcrumbScript) {
+      breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+    } else {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.setAttribute('data-breadcrumb-schema', 'true');
+      script.textContent = JSON.stringify(breadcrumbSchema);
+      document.head.appendChild(script);
+    }
+
+    // Cleanup on unmount
+    return () => {
+      const scriptToRemove = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
+  }, []);
 
   // Filtruj artykuły
   const filteredArticles = selectedIndustry === 'all' 

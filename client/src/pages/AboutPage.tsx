@@ -2,10 +2,15 @@ import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
+      <BreadcrumbSchema items={[
+        { name: 'Strona główna', url: 'https://boostnow.pl' },
+        { name: 'O nas', url: 'https://boostnow.pl/about' }
+      ]} />
       <Navigation />
       <main>
         {/* About Section */}

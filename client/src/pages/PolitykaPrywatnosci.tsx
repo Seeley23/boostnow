@@ -1,6 +1,12 @@
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+
 export default function PolitykaPrywatnosci() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <BreadcrumbSchema items={[
+        { name: 'Strona główna', url: 'https://boostnow.pl' },
+        { name: 'Polityka Prywatności', url: 'https://boostnow.pl/polityka-prywatnosci' }
+      ]} />
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8">Polityka Prywatności</h1>
         
