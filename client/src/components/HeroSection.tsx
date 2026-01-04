@@ -69,7 +69,7 @@ export default function HeroSection() {
               <span className="text-sm font-medium text-primary">Agencja Aktywacji Klientów</span>
             </motion.div>
 
-            {/* Main headline */}
+            {/* Main headline - Updated */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
