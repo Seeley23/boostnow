@@ -77,9 +77,9 @@ export default function LossCalculator() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Kalkulator Strat
-          </h2>
+          </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Oszacuj, ile pieniędzy tracisz każdego miesiąca przez błędy marketingowe.
             Wprowadź dane swojej firmy poniżej.
