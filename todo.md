@@ -1,0 +1,1 @@
+- [x] Napraw title tag na stronie głównej (/) - skróć z 79 do 30-60 znaków dla lepszego SEO

@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background pt-20 lg:pt-24">
       <Helmet>
-        <title>BoostNow - Agencja Aktywacji Klientów | Decision Science & Inżynieria Konwersji</title>
+        <title>BoostNow - Agencja Aktywacji Klientów | +150% ROAS</title>
         <meta name="description" content="Agencja aktywacji klientów. Decision Science, Inżynieria Konwersji, GEO Positioning. +150% ROAS w 90 dni. Skalujemy wyniki." />
         <meta name="keywords" content="agencja marketingowa, decision science, inżynieria konwersji, GEO positioning, zwiększenie konwersji, ROAS" />
         <meta property="og:type" content="website" />
