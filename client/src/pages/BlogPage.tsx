@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import articlesMetadata from '../data/blog/articles-metadata.json';
@@ -91,6 +92,20 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0b1020]">
+      <Helmet>
+        <title>Blog BoostNow | Decision Science & Psychologia Konwersji</title>
+        <meta name="description" content="50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych i e-commerce." />
+        <meta name="keywords" content="decision science, neuromarketing, psychologia konwersji, inzynieria konwersji, GEO positioning, architekci decyzji, blog marketingowy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://boostnow.pl/blog" />
+        <meta property="og:title" content="Blog BoostNow - Decision Science & Psychologia Konwersji" />
+        <meta property="og:description" content="50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych." />
+        <meta property="og:image" content="https://boostnow.pl/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog BoostNow - Decision Science & Psychologia Konwersji" />
+        <meta name="twitter:description" content="50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji." />
+        <link rel="canonical" href="https://boostnow.pl/blog" />
+      </Helmet>
       {/* Breadcrumbs */}
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-6xl mx-auto">
@@ -116,9 +131,12 @@ const BlogPage: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Architekci Decyzji dzielą się wiedzą
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-6">
               Artykuły o Decision Science, Neuromarketing i Psychologii Konwersji dla agencji marketingowych
             </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mt-8">
+              50+ artykułów o marketingu opartym na nauce
+            </h2>
           </motion.div>
         </div>
       </section>
@@ -168,9 +186,9 @@ const BlogPage: React.FC = () => {
 
                 <Link href={`/blog/${article.id}`}>
                   <a className="block group">
-                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#c7ff4e] transition line-clamp-2">
+                    <h2 className="text-lg font-bold text-white mb-3 group-hover:text-[#c7ff4e] transition line-clamp-2">
                       {article.title}
-                    </h3>
+                    </h2>
                   </a>
                 </Link>
 
