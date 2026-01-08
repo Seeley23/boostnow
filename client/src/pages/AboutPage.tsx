@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -7,6 +8,20 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>O BoostNow | Architekci Decyzji & Decision Science</title>
+        <meta name="description" content="Agencja marketingowa oparta na Decision Science, Neuromarketing i Psychologii Konwersji. Transformujemy marki przez architekturę decyzji." />
+        <meta name="keywords" content="architekci decyzji, decision science, neuromarketing, psychologia konwersji, agencja marketingowa, BoostNow, Mateusz Nowotka" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://boostnow.pl/about" />
+        <meta property="og:title" content="O BoostNow - Architekci Decyzji" />
+        <meta property="og:description" content="Agencja marketingowa oparta na Decision Science, Neuromarketing i Psychologii Konwersji. Transformujemy marki przez architekturę decyzji." />
+        <meta property="og:image" content="https://boostnow.pl/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="O BoostNow - Architekci Decyzji" />
+        <meta name="twitter:description" content="Agencja marketingowa oparta na Decision Science, Neuromarketing i Psychologii Konwersji." />
+        <link rel="canonical" href="https://boostnow.pl/about" />
+      </Helmet>
       <BreadcrumbSchema items={[
         { name: 'Strona główna', url: 'https://boostnow.pl' },
         { name: 'O nas', url: 'https://boostnow.pl/about' }

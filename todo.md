@@ -1,2 +1,3 @@
 - [x] Napraw title tag na stronie głównej (/) - skróć z 79 do 30-60 znaków dla lepszego SEO
 - [x] Napraw SEO na stronie /blog - dodaj title (30-60 znaków), description (50-160 znaków), keywords, H2 heading
+- [x] Napraw SEO na stronie /about - dodaj title (30-60 znaków), description (50-160 znaków), keywords
