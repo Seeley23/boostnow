@@ -2,3 +2,4 @@
 - [x] Napraw SEO na stronie /blog - dodaj title (30-60 znaków), description (50-160 znaków), keywords, H2 heading
 - [x] Napraw SEO na stronie /about - dodaj title (30-60 znaków), description (50-160 znaków), keywords
 - [x] Napraw SEO na stronie /calculator - skróć title z 69 do 30-60 znaków i dodaj keywords
+- [x] Wygeneruj kompletny zestaw favicon files (SVG, PNG 32x32, 16x16, Apple 180x180) i dodaj do projektu
