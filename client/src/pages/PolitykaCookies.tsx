@@ -1,8 +1,17 @@
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { Helmet } from 'react-helmet-async';
+import BreadcrumbSchema from '../components/BreadcrumbSchema';
 
 export default function PolitykaCookies() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Polityka Cookies | BoostNow - Pliki cookies & Zgody</title>
+        <meta name="description" content="Polityka Cookies BoostNow - rodzaje plików cookies, cele ich użycia, zarządzanie zgodami i prawa użytkowników." />
+        <meta name="keywords" content="polityka cookies, pliki cookies, cookie policy, BoostNow, zgody, analityka, marketing" />
+        <meta property="og:title" content="Polityka Cookies - BoostNow" />
+        <meta property="og:description" content="Polityka Cookies BoostNow - rodzaje plików cookies, cele ich użycia, zarządzanie zgodami i prawa użytkowników." />
+        <link rel="canonical" content="https://boostnow.pl/polityka-cookies" />
+      </Helmet>
       <BreadcrumbSchema items={[
         { name: 'Strona główna', url: 'https://boostnow.pl' },
         { name: 'Polityka Cookies', url: 'https://boostnow.pl/polityka-cookies' }

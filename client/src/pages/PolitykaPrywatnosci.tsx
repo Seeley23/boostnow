@@ -1,8 +1,17 @@
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { Helmet } from 'react-helmet-async';
+import BreadcrumbSchema from '../components/BreadcrumbSchema';
 
 export default function PolitykaPrywatnosci() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Polityka Prywatności | BoostNow - RODO & Ochrona Danych</title>
+        <meta name="description" content="Polityka Prywatności BoostNow - zasady przetwarzania danych osobowych zgodnie z RODO, cookies, analityka i prawa użytkowników." />
+        <meta name="keywords" content="polityka prywatności, RODO, ochrona danych, privacy policy, BoostNow, dane osobowe, cookies" />
+        <meta property="og:title" content="Polityka Prywatności - BoostNow" />
+        <meta property="og:description" content="Polityka Prywatności BoostNow - zasady przetwarzania danych osobowych zgodnie z RODO, cookies, analityka i prawa użytkowników." />
+        <link rel="canonical" content="https://boostnow.pl/polityka-prywatnosci" />
+      </Helmet>
       <BreadcrumbSchema items={[
         { name: 'Strona główna', url: 'https://boostnow.pl' },
         { name: 'Polityka Prywatności', url: 'https://boostnow.pl/polityka-prywatnosci' }

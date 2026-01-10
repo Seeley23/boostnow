@@ -1,8 +1,17 @@
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { Helmet } from 'react-helmet-async';
+import BreadcrumbSchema from '../components/BreadcrumbSchema';
 
 export default function Regulamin() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Regulamin | BoostNow - Warunki korzystania</title>
+        <meta name="description" content="Regulamin strony BoostNow - warunki korzystania z usług, zasady ochrony danych osobowych i prawa własności intelektualnej." />
+        <meta name="keywords" content="regulamin, warunki korzystania, terms of service, BoostNow, usługi marketingowe, polityka prywatności" />
+        <meta property="og:title" content="Regulamin - BoostNow" />
+        <meta property="og:description" content="Regulamin strony BoostNow - warunki korzystania z usług, zasady ochrony danych osobowych i prawa własności intelektualnej." />
+        <link rel="canonical" content="https://boostnow.pl/regulamin" />
+      </Helmet>
       <BreadcrumbSchema items={[
         { name: 'Strona główna', url: 'https://boostnow.pl' },
         { name: 'Regulamin', url: 'https://boostnow.pl/regulamin' }
