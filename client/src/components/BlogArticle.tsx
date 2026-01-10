@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
@@ -32,12 +33,7 @@ const BlogArticle: React.FC = () => {
   const [relatedArticles, setRelatedArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Ustaw title dla strony
-  useEffect(() => {
-    if (article) {
-      document.title = `${article.title} | BoostNow - Agencja Aktywacji Klientów`;
-    }
-  }, [article]);
+  // Title jest teraz ustawiany przez Helmet w return statement
 
   const articles: Article[] = articlesMetadata as Article[];
 
@@ -295,6 +291,20 @@ const BlogArticle: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0b1020] py-20 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>{article.title.length > 45 ? article.title.substring(0, 45) + '...' : article.title} | BoostNow</title>
+        <meta name="description" content={article.meta_description} />
+        <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, decision science, neuromarketing, psychologia konwersji`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://boostnow.pl/blog/${id}`} />
+        <meta property="og:title" content={article.title} />
+        <meta property="og:description" content={article.meta_description} />
+        <meta property="og:image" content={`https://boostnow.pl/og-images/${id}.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={article.title} />
+        <meta name="twitter:description" content={article.meta_description} />
+        <link rel="canonical" content={`https://boostnow.pl/blog/${id}`} />
+      </Helmet>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Główna zawartość artykułu */}
