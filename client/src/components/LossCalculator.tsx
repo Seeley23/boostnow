@@ -257,6 +257,29 @@ export default function LossCalculator() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                // GTM Event: calculator_complete
+                if (typeof window !== 'undefined' && (window as any).dataLayer) {
+                  (window as any).dataLayer.push({
+                    event: 'calculator_complete',
+                    calculator_data: {
+                      monthly_revenue: monthlyRevenue,
+                      conversion_rate: conversionRate,
+                      avg_order_value: avgOrderValue,
+                      customer_churn_rate: customerChurnRate,
+                      team_size: teamSize,
+                      total_monthly_loss: calculations.totalMonthlyLoss,
+                      total_annual_loss: calculations.totalAnnualLoss,
+                      potential_recovery: calculations.potentialRecovery
+                    }
+                  });
+                }
+                // Scroll to contact section
+                const contactSection = document.querySelector('#contact-section');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="w-full py-4 bg-lime-500 hover:bg-lime-600 text-black font-bold rounded-lg transition-colors"
             >
               Zarezerwuj Bezpłatną Konsultację

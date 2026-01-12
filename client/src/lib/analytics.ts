@@ -33,7 +33,7 @@ export function trackEvent(event: string, params?: Record<string, any>) {
  * @param formData Form data (optional)
  */
 export function trackFormSubmit(formName: string, formData?: Record<string, any>) {
-  trackEvent('form_submit', {
+  trackEvent('lead_form_submit', {
     form_name: formName,
     form_data: formData,
   });

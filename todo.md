@@ -5,3 +5,4 @@
 - [x] Wygeneruj kompletny zestaw favicon files (SVG, PNG 32x32, 16x16, Apple 180x180) i dodaj do projektu
 - [x] Napraw SEO na stronach artykułów /blog/:id - dodaj title (30-60 znaków), description (50-160 znaków), keywords, H2 heading
 - [x] Napraw SEO na stronach regulaminów (/regulamin, /polityka-prywatnosci, /polityka-cookies) - dodaj title (30-60 znaków), description (50-160 znaków), keywords
+- [x] Dodaj eventy GTM/GA4 - calculator_complete i lead_form_submit dla trackowania konwersji

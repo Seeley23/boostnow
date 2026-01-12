@@ -36,13 +36,15 @@ export default function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const contactMutation = trpc.contact.submit.useMutation({
-    onSuccess: () => {
+    onSuccess: (data, variables) => {
       setIsSubmitted(true);
       toast.success("Wiadomość wysłana! Skontaktujemy się wkrótce.");
       
-      // Track form submission in GTM
+      // Track form submission in GTM with detailed data
       trackFormSubmit('contact_form', {
         form_location: 'contact_section',
+        has_company: !!variables.company,
+        message_length: variables.message?.length || 0,
       });
     },
     onError: (error) => {
@@ -71,7 +73,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 lg:py-32 relative overflow-hidden">
+    <section id="contact-section" className="py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
