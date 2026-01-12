@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
+import { BlogRating } from './BlogRating';
 
 interface Article {
   id: number;
@@ -490,6 +491,9 @@ const BlogArticle: React.FC = () => {
                   )}
                 </div>
               </div>
+
+              {/* Blog Rating */}
+              {id && <BlogRating articleId={parseInt(id)} />}
 
               {/* Newsletter CTA */}
               <div className="bg-gradient-to-br from-[#c7ff4e]/10 to-[#00c88a]/10 border border-[#c7ff4e]/20 rounded-lg p-6">

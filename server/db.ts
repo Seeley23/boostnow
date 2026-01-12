@@ -1,6 +1,6 @@
-import { eq, desc, asc } from "drizzle-orm";
+import { eq, desc, asc, and } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, contactSubmissions, InsertContactSubmission } from "../drizzle/schema";
+import { InsertUser, users, contactSubmissions, InsertContactSubmission, blogRatings, InsertBlogRating } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -148,5 +148,80 @@ export async function updateContactSubmissionStatus(
   } catch (error) {
     console.error("[Database] Failed to update contact submission:", error);
     throw error;
+  }
+}
+
+// Blog ratings
+export async function insertBlogRating(rating: InsertBlogRating): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot insert blog rating: database not available");
+    throw new Error("Database not available");
+  }
+
+  try {
+    await db.insert(blogRatings).values(rating);
+  } catch (error) {
+    console.error("[Database] Failed to insert blog rating:", error);
+    throw error;
+  }
+}
+
+export async function checkExistingRating(articleId: number, userIp: string): Promise<boolean> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot check existing rating: database not available");
+    return false;
+  }
+
+  try {
+    const result = await db
+      .select()
+      .from(blogRatings)
+      .where(
+        and(
+          eq(blogRatings.articleId, articleId),
+          eq(blogRatings.userIp, userIp)
+        )
+      )
+      .limit(1);
+    
+    return result.length > 0;
+  } catch (error) {
+    console.error("[Database] Failed to check existing rating:", error);
+    return false;
+  }
+}
+
+export async function getBlogRatingStats(articleId: number): Promise<{
+  averageRating: number;
+  totalRatings: number;
+}> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get blog rating stats: database not available");
+    return { averageRating: 0, totalRatings: 0 };
+  }
+
+  try {
+    const ratings = await db
+      .select()
+      .from(blogRatings)
+      .where(eq(blogRatings.articleId, articleId));
+    
+    if (ratings.length === 0) {
+      return { averageRating: 0, totalRatings: 0 };
+    }
+
+    const sum = ratings.reduce((acc, r) => acc + r.rating, 0);
+    const average = sum / ratings.length;
+
+    return {
+      averageRating: Math.round(average * 10) / 10, // Round to 1 decimal
+      totalRatings: ratings.length,
+    };
+  } catch (error) {
+    console.error("[Database] Failed to get blog rating stats:", error);
+    return { averageRating: 0, totalRatings: 0 };
   }
 }

@@ -38,3 +38,15 @@ export const contactSubmissions = mysqlTable("contact_submissions", {
 
 export type ContactSubmission = typeof contactSubmissions.$inferSelect;
 export type InsertContactSubmission = typeof contactSubmissions.$inferInsert;
+// Blog article ratings and feedback
+export const blogRatings = mysqlTable("blog_ratings", {
+  id: int("id").autoincrement().primaryKey(),
+  articleId: int("articleId").notNull(), // Article ID (1-50)
+  rating: int("rating").notNull(), // Rating 1-5 stars
+  feedback: text("feedback"), // Optional user feedback
+  userIp: varchar("userIp", { length: 45 }), // IP for deduplication (IPv6 max 45 chars)
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type BlogRating = typeof blogRatings.$inferSelect;
+export type InsertBlogRating = typeof blogRatings.$inferInsert;
