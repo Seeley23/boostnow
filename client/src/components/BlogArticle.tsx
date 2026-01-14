@@ -294,6 +294,7 @@ const BlogArticle: React.FC = () => {
     <div className="min-h-screen bg-[#0b1020] py-20 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>{article.title.length > 45 ? article.title.substring(0, 45) + '...' : article.title} | BoostNow</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content={article.meta_description} />
         <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, decision science, neuromarketing, psychologia konwersji`} />
         <meta property="og:type" content="article" />

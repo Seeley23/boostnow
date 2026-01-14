@@ -6,6 +6,7 @@ export default function PolitykaCookies() {
     <div className="min-h-screen bg-black text-white">
       <Helmet>
         <title>Polityka Cookies | BoostNow - Pliki cookies & Zgody</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content="Polityka Cookies BoostNow - rodzaje plików cookies, cele ich użycia, zarządzanie zgodami i prawa użytkowników." />
         <meta name="keywords" content="polityka cookies, pliki cookies, cookie policy, BoostNow, zgody, analityka, marketing" />
         <meta property="og:title" content="Polityka Cookies - BoostNow" />

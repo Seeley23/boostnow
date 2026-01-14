@@ -10,6 +10,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>O BoostNow | Architekci Decyzji & Decision Science</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content="Agencja marketingowa oparta na Decision Science, Neuromarketing i Psychologii Konwersji. Transformujemy marki przez architekturę decyzji." />
         <meta name="keywords" content="architekci decyzji, decision science, neuromarketing, psychologia konwersji, agencja marketingowa, BoostNow, Mateusz Nowotka" />
         <meta property="og:type" content="website" />

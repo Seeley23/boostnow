@@ -10,6 +10,7 @@ export default function CalculatorPage() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Kalkulator Strat Marketingowych | Oblicz straty - BoostNow</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content="Oblicz ile pieniędzy tracisz przez błędy marketingowe. Darmowy kalkulator strat: konwersje, churn, czas zespołu. Wyniki w 2 minuty!" />
         <meta name="keywords" content="kalkulator strat, kalkulator marketingowy, straty marketingowe, ROI, konwersje, błędy marketingowe, audyt marketingowy" />
         <meta property="og:title" content="Kalkulator Strat Marketingowych | BoostNow" />

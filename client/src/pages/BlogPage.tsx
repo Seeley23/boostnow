@@ -94,6 +94,7 @@ const BlogPage: React.FC = () => {
     <div className="min-h-screen bg-[#0b1020]">
       <Helmet>
         <title>Blog BoostNow | Decision Science & Psychologia Konwersji</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content="50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych i e-commerce." />
         <meta name="keywords" content="decision science, neuromarketing, psychologia konwersji, inzynieria konwersji, GEO positioning, architekci decyzji, blog marketingowy" />
         <meta property="og:type" content="website" />

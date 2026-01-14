@@ -6,6 +6,7 @@ export default function PolitykaPrywatnosci() {
     <div className="min-h-screen bg-black text-white">
       <Helmet>
         <title>Polityka Prywatności | BoostNow - RODO & Ochrona Danych</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content="Polityka Prywatności BoostNow - zasady przetwarzania danych osobowych zgodnie z RODO, cookies, analityka i prawa użytkowników." />
         <meta name="keywords" content="polityka prywatności, RODO, ochrona danych, privacy policy, BoostNow, dane osobowe, cookies" />
         <meta property="og:title" content="Polityka Prywatności - BoostNow" />
