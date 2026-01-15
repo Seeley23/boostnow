@@ -66,7 +66,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-6"
             >
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-medium text-primary">Agencja Aktywacji Klientów</span>
+              <span className="text-sm font-medium text-primary">Agencja Neuromarketingowa</span>
             </motion.div>
 
             {/* Main headline - Updated */}
@@ -76,8 +76,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-4 sm:mb-6"
             >
-              Skalujemy wyniki, o których inni{" "}
-              <span className="text-gradient-lime">tylko marzą.</span>
+              Agencja Neuromarketingowa:{" "}
+              <span className="text-gradient-lime">Skalujemy E-commerce przez Decision Science</span>
             </motion.h1>
 
             {/* Subheadline */}

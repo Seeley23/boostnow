@@ -13,7 +13,7 @@ import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 const services = [
   {
     id: "conversion",
-    title: "Inżynieria Konwersji",
+    title: "Optymalizacja Konwersji (CRO) i Inżynieria Decyzji",
     subtitle: "Landing Pages & Copywriting",
     description: "Tworzymy strony i treści, które nie proszą - egzekwują pożądanie. Każde słowo jest zaprojektowane do wywołania natychmiastowej akcji. Architektura decyzji oparta na psychologii.",
     image: "/images/service-conversion.png",
@@ -22,8 +22,8 @@ const services = [
   },
   {
     id: "ai",
-    title: "Visual Excellence AI",
-    subtitle: "Video & Photo produktowe",
+    title: "Video Animation i Visual AI dla Sprzedaży",
+    subtitle: "Animacje produktowe & Photo AI",
     description: "Wizualizacje produktowe napędzane przez AI. Tworzymy wideo, które sprzedaje Twój produkt w 15 sekund.",
     image: "/images/service-ai-visual.png",
     stats: "3x szybciej",
@@ -58,8 +58,8 @@ const services = [
   },
   {
     id: "seo",
-    title: "SEO Positioning",
-    subtitle: "Organic Search Strategy",
+    title: "Agencja Neuromarketingowa - SEO Positioning",
+    subtitle: "Organic Search Strategy & Decision Science",
     description: "Strategie SEO oparte na Decision Science. Budujemy autorytetu marki i dominujemy wyniki wyszukiwania dla kluczowych fraz.",
     image: "/images/service-seo.png",
     stats: "+150% organic traffic",

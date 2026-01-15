@@ -67,6 +67,30 @@ const faqItems: FAQItem[] = [
   },
   // GENERAL CATEGORY
   {
+    id: "general-cro-1",
+    category: "general",
+    question: "Jak zwiększyć konwersję w sklepie internetowym?",
+    answer: "Konwersja wzrasta, gdy rozumiesz psychologię swojego klienta. Mapujemy jego lęki, motywacje i błędy poznawcze. Następnie optymalizujemy całą ścieżkę: od landing page'a, przez product page, aż po checkout. Nasze klienty widzą wzrost konwersji o 30-150% w ciągu 90 dni.",
+  },
+  {
+    id: "general-cro-2",
+    category: "general",
+    question: "Czym jest Optymalizacja Konwersji (CRO) w wydaniu BoostNow?",
+    answer: "CRO to nie tylko A/B testy. To głęboka analiza psychologiczna Twojej ścieżki klienta. Badamy, gdzie klienci się zatrzymują, czemu porzucają koszyk, jakie emocje odczuwają. Na podstawie Decision Science budujemy system komunikacji, który konwertuje.",
+  },
+  {
+    id: "general-neuro-1",
+    category: "general",
+    question: "Jak psychologia wpływa na sprzedaż w e-commerce?",
+    answer: "Psychologia jest fundamentem sprzedaży. Klient nie decyduje racjonalnie - decyduje emocjonalnie. Błędy poznawcze (anchoring, scarcity, social proof) wpływają na każdą decyzję zakupową. Nasza metoda wykorzystuje te błędy etycznie, aby zwiększyć sprzedaż.",
+  },
+  {
+    id: "general-video-1",
+    category: "general",
+    question: "Dlaczego animacje wideo sprzedają lepiej niż zdjęcia?",
+    answer: "Wideo przyciąga uwagę 80% szybciej niż tekst. Animacje produktowe pokazują funkcjonalność w akcji, co zdjęcia nie potrafią. Nasze Video Animation to nie tylko piękne - to konwertujące. Każda klatka jest zaprojektowana, aby wyzwolić emocję i skłonić do decyzji.",
+  },
+  {
     id: "general-1",
     category: "general",
     question: "Jakie metryki będę monitorować?",

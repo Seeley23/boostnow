@@ -47,9 +47,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background pt-20 lg:pt-24">
       <Helmet>
-        <title>BoostNow - Agencja Aktywacji Klientów | +150% ROAS</title>
-        <meta name="description" content="Agencja aktywacji klientów. Decision Science, Inżynieria Konwersji, GEO Positioning. +150% ROAS w 90 dni. Skalujemy wyniki." />
-        <meta name="keywords" content="agencja marketingowa, decision science, inżynieria konwersji, GEO positioning, zwiększenie konwersji, ROAS" />
+        <title>Agencja Neuromarketingowa BoostNow | Optymalizacja Konwersji E-commerce</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="Agencja Neuromarketingowa specjalizująca się w optymalizacji konwersji (CRO) i Decision Science. Zwiększamy ROAS e-commerce o 150% w 90 dni. Architekci Twojej Konwersji." />
+        <meta name="keywords" content="agencja neuromarketingowa, agencja marketingowa e-commerce, optymalizacja konwersji CRO, decision science, psychologia konwersji, inżynieria konwersji, zwiększenie konwersji, ROAS, animacje wideo" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://boostnow.pl" />
         <meta property="og:title" content="BoostNow - Skalujemy wyniki, o których inni tylko marzą" />
