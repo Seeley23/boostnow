@@ -76,8 +76,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-4 sm:mb-6"
             >
-              Agencja Neuromarketingowa:{" "}
-              <span className="text-gradient-lime">Skalujemy E-commerce przez Decision Science</span>
+              Agencja Neuromarketingowa{" "}
+              <span className="text-gradient-lime">– Skalujemy Twoją markę!</span>
             </motion.h1>
 
             {/* Subheadline */}
