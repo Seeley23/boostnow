@@ -14,6 +14,7 @@ const navItems = [
   { label: "O nas", href: "/about" },
   { label: "Oblicz straty", href: "/calculator" },
   { label: "Blog", href: "/blog" },
+  { label: "Słownik", href: "/glossary" },
   { label: "Kontakt", href: "#contact" },
 ];
 

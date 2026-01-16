@@ -16,6 +16,7 @@ import Regulamin from "./pages/Regulamin";
 import PolitykaPrywatnosci from "./pages/PolitykaPrywatnosci";
 import PolitykaCookies from "./pages/PolitykaCookies";
 import AdminCRM from "./pages/AdminCRM";
+import Glossary from "./pages/Glossary";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -29,6 +30,7 @@ function Router() {
       <Route path={"/polityka-prywatnosci"} component={PolitykaPrywatnosci} />
       <Route path={"/polityka-cookies"} component={PolitykaCookies} />
       <Route path={"/admin/crm"} component={AdminCRM} />
+      <Route path={"/glossary"} component={Glossary} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
