@@ -2,12 +2,20 @@ import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Search, ChevronDown } from "lucide-react";
 
+interface Article {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+}
+
 interface GlossaryItem {
   id: string;
   term: string;
   definition: string;
   category: "neuromarketing" | "seo" | "conversion" | "ecommerce" | "psychology";
   relatedTerms?: string[];
+  relatedArticles?: Article[];
 }
 
 const glossaryItems: GlossaryItem[] = [
@@ -16,28 +24,96 @@ const glossaryItems: GlossaryItem[] = [
     term: "Decision Science",
     category: "neuromarketing",
     definition: "Nauka o tym, jak ludzie podejmują decyzje. Łączy psychologię, ekonomię behawioralną i neuroscience. W marketingu Decision Science pomaga zrozumieć, co motywuje klienta do zakupu i jak etycznie wpłynąć na jego decyzję.",
-    relatedTerms: ["behavioral-economics", "neuromarketing", "cognitive-biases"]
+    relatedTerms: ["behavioral-economics", "neuromarketing", "cognitive-biases"],
+    relatedArticles: [
+      {
+        id: "psychologia-sprzedazy",
+        title: "Psychologia Sprzedaży w E-commerce",
+        description: "Dlaczego klienci nie kupują i jak to naprawić",
+        url: "/blog/psychologia-sprzedazy-ecommerce"
+      },
+      {
+        id: "audyt-neuromarketingowy",
+        title: "Audyt Neuromarketingowy",
+        description: "Identyfikacja błędów poznawczych w sprzedaży",
+        url: "/blog/audyt-neuromarketingowy"
+      }
+    ]
   },
   {
     id: "neuromarketing",
     term: "Neuromarketing",
     category: "neuromarketing",
     definition: "Dziedzina marketingu, która wykorzystuje badania z neuroscience do zrozumienia, jak mózg reaguje na bodźce marketingowe (kolory, słowa, obrazy). Neuromarketing pokazuje, że większość decyzji zakupowych jest podejmowana podświadomie.",
-    relatedTerms: ["decision-science", "cognitive-biases", "emotional-triggers"]
+    relatedTerms: ["decision-science", "cognitive-biases", "emotional-triggers"],
+    relatedArticles: [
+      {
+        id: "psychologia-sprzedazy",
+        title: "Psychologia Sprzedaży w E-commerce",
+        description: "Dlaczego klienci nie kupują i jak to naprawić",
+        url: "/blog/psychologia-sprzedazy-ecommerce"
+      },
+      {
+        id: "audyt-neuromarketingowy",
+        title: "Audyt Neuromarketingowy",
+        description: "Identyfikacja błędów poznawczych w sprzedaży",
+        url: "/blog/audyt-neuromarketingowy"
+      }
+    ]
   },
   {
     id: "conversion-rate-optimization",
     term: "Optymalizacja Konwersji (CRO)",
     category: "conversion",
     definition: "Proces systematycznego poprawiania odsetka osób, które wykonują pożądaną akcję (zakup, rejestracja, pobranie). CRO obejmuje A/B testy, analizę UX, optymalizację copywritingu i testowanie hipotez.",
-    relatedTerms: ["conversion-funnel", "ab-testing", "user-experience"]
+    relatedTerms: ["conversion-funnel", "ab-testing", "user-experience"],
+    relatedArticles: [
+      {
+        id: "jak-zwiekszac-konwersje",
+        title: "Jak zwiększyć konwersję w e-commerce",
+        description: "Strategie CRO, psychologia klienta, optymalizacja UX",
+        url: "/blog/jak-zwiekszac-konwersje-ecommerce"
+      },
+      {
+        id: "cro-marki-premium",
+        title: "CRO dla Marek Premium",
+        description: "Optymalizacja konwersji dla e-commerce premium",
+        url: "/blog/cro-marki-premium"
+      },
+      {
+        id: "visual-ai-wideo",
+        title: "Visual AI w Marketingu Wideo",
+        description: "Zwiększenie sprzedaży przez animacje",
+        url: "/blog/visual-ai-marketing-wideo"
+      }
+    ]
   },
   {
     id: "cognitive-biases",
     term: "Błędy Poznawcze",
     category: "psychology",
     definition: "Systematyczne błędy w myśleniu, które wpływają na decyzje. Przykłady: anchoring (zakotwiczenie na pierwszej liczbie), scarcity (poczucie braku), social proof (wpływ grupy). Marketerzy etycznie wykorzystują błędy poznawcze do zwiększenia konwersji.",
-    relatedTerms: ["anchoring", "scarcity", "social-proof"]
+    relatedTerms: ["anchoring", "scarcity", "social-proof"],
+    relatedArticles: [
+      {
+        id: "jak-zwiekszac-konwersje",
+        title: "Jak zwiększyć konwersję w e-commerce",
+        description: "Błędy poznawcze w praktyce",
+        url: "/blog/jak-zwiekszac-konwersje-ecommerce"
+      },
+      {
+        id: "psychologia-sprzedazy",
+        title: "Psychologia Sprzedaży w E-commerce",
+        description: "Dlaczego klienci nie kupują",
+        url: "/blog/psychologia-sprzedazy-ecommerce"
+      },
+      {
+        id: "audyt-neuromarketingowy",
+        title: "Audyt Neuromarketingowy",
+        description: "Identyfikacja błędów poznawczych",
+        url: "/blog/audyt-neuromarketingowy"
+      }
+    ]
   },
   {
     id: "anchoring",
@@ -286,6 +362,32 @@ export default function Glossary() {
                     {expandedId === item.id && (
                       <div className="px-6 py-4 bg-gray-950 border-t border-gray-800">
                         <p className="text-gray-300 mb-4">{item.definition}</p>
+                        
+                        {/* Related Articles Section */}
+                        {item.relatedArticles && item.relatedArticles.length > 0 && (
+                          <div className="mb-6 pb-6 border-b border-gray-800">
+                            <p className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+                              <span>📚</span> Powiązane Artykuły
+                            </p>
+                            <div className="grid md:grid-cols-2 gap-3">
+                              {item.relatedArticles.map(article => (
+                                <a
+                                  key={article.id}
+                                  href={article.url}
+                                  className="group block"
+                                >
+                                  <div className="bg-gray-800 rounded p-3 hover:bg-gray-700 transition-colors border border-gray-700 hover:border-lime-400">
+                                    <h4 className="text-sm font-semibold text-lime-400 group-hover:text-lime-300 mb-1 line-clamp-2">
+                                      {article.title}
+                                    </h4>
+                                    <p className="text-xs text-gray-400 line-clamp-2">{article.description}</p>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        
                         {item.relatedTerms && item.relatedTerms.length > 0 && (
                           <div>
                             <p className="text-sm text-gray-400 mb-2">Powiązane terminy:</p>
