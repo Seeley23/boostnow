@@ -120,56 +120,168 @@ const glossaryItems: GlossaryItem[] = [
     term: "Anchoring (Zakotwiczenie)",
     category: "psychology",
     definition: "Błąd poznawczy, w którym pierwsza liczba, którą widzimy, wpływa na naszą percepcję ceny. Przykład: jeśli widzisz 'Była cena: 1000 zł, teraz 500 zł', zakotwiczasz się na 1000 zł i 500 zł wydaje się taniej.",
-    relatedTerms: ["cognitive-biases", "pricing-psychology"]
+    relatedTerms: ["cognitive-biases", "pricing-psychology"],
+    relatedArticles: [
+      {
+        id: "psychologia-sprzedazy",
+        title: "Psychologia Sprzedaży w E-commerce",
+        description: "Zakotwiczenie i inne błędy poznawcze w praktyce",
+        url: "/blog/psychologia-sprzedazy-ecommerce"
+      }
+    ]
   },
   {
     id: "scarcity",
     term: "Scarcity (Poczucie Braku)",
     category: "psychology",
     definition: "Błąd poznawczy, w którym ograniczona dostępność (liczba sztuk, czas) zwiększa poczucie pilności i chęć zakupu. Przykład: 'Tylko 3 sztuki w magazynie' lub 'Oferta ważna do jutra'.",
-    relatedTerms: ["cognitive-biases", "urgency", "fomo"]
+    relatedTerms: ["cognitive-biases", "urgency", "fomo"],
+    relatedArticles: [
+      {
+        id: "psychologia-sprzedazy",
+        title: "Psychologia Sprzedaży w E-commerce",
+        description: "Poczucie braku i pilność w sprzedaży",
+        url: "/blog/psychologia-sprzedazy-ecommerce"
+      }
+    ]
   },
   {
     id: "social-proof",
     term: "Social Proof (Dowód Społeczny)",
     category: "psychology",
     definition: "Tendencja do podejmowania decyzji na podstawie tego, co robią inni. Przykłady: recenzje, liczba sprzedanych produktów, liczba obserwujących. Social proof buduje zaufanie i zwiększa konwersję.",
-    relatedTerms: ["cognitive-biases", "trust", "testimonials"]
+    relatedTerms: ["cognitive-biases", "trust", "testimonials"],
+    relatedArticles: [
+      {
+        id: "jak-zwiekszac-konwersje",
+        title: "Jak zwiększyć konwersję w e-commerce",
+        description: "Dowód społeczny jako narzędzie konwersji",
+        url: "/blog/jak-zwiekszac-konwersje-ecommerce"
+      },
+      {
+        id: "visual-ai-wideo",
+        title: "Visual AI w Marketingu Wideo",
+        description: "Dowód społeczny w animacjach",
+        url: "/blog/visual-ai-marketing-wideo"
+      }
+    ]
   },
   {
     id: "conversion-funnel",
     term: "Lejek Konwersji",
     category: "conversion",
-    definition: "Ścieżka, którą przechodzi klient od pierwszego kontaktu do konwersji. Etapy: Awareness (świadomość) → Consideration (rozważenie) → Decision (decyzja) → Action (akcja). Optymalizacja każdego etapu zwiększa konwersję.",
-    relatedTerms: ["customer-journey", "conversion-rate-optimization"]
+    definition: "Ŝieżka, którą przechodzi klient od pierwszego kontaktu do konwersji. Etapy: Awareness (świadomość) → Consideration (rozważenie) → Decision (decyzja) → Action (akcja). Optymalizacja każdego etapu zwiększa konwersję.",
+    relatedTerms: ["customer-journey", "conversion-rate-optimization"],
+    relatedArticles: [
+      {
+        id: "jak-zwiekszac-konwersje",
+        title: "Jak zwiększyć konwersję w e-commerce",
+        description: "Optymalizacja lejka konwersji",
+        url: "/blog/jak-zwiekszac-konwersje-ecommerce"
+      },
+      {
+        id: "cro-marki-premium",
+        title: "CRO dla Marek Premium",
+        description: "Lejek konwersji dla premium",
+        url: "/blog/cro-marki-premium"
+      },
+      {
+        id: "audyt-neuromarketingowy",
+        title: "Audyt Neuromarketingowy",
+        description: "Analiza lejka konwersji",
+        url: "/blog/audyt-neuromarketingowy"
+      }
+    ]
   },
   {
     id: "customer-journey",
-    term: "Customer Journey (Ścieżka Klienta)",
+    term: "Customer Journey (Ścażka Klienta)",
     category: "ecommerce",
     definition: "Mapa wszystkich touchpoint'ów, w których klient wchodzi w interakcję z marką. Od pierwszego kliknięcia w reklamę, przez przeglądanie produktów, aż do zakupu i obsługi posprzedażowej.",
-    relatedTerms: ["conversion-funnel", "user-experience"]
+    relatedTerms: ["conversion-funnel", "user-experience"],
+    relatedArticles: [
+      {
+        id: "cro-marki-premium",
+        title: "CRO dla Marek Premium",
+        description: "Mapowanie customer journey",
+        url: "/blog/cro-marki-premium"
+      },
+      {
+        id: "audyt-neuromarketingowy",
+        title: "Audyt Neuromarketingowy",
+        description: "Analiza customer journey",
+        url: "/blog/audyt-neuromarketingowy"
+      }
+    ]
   },
   {
     id: "ab-testing",
     term: "A/B Testing",
     category: "conversion",
     definition: "Metoda testowania, w której porównujesz dwie wersje strony/elementu (A i B) aby zobaczyć, która konwertuje lepiej. Przykład: testowanie niebieskiego vs czerwonego przycisku.",
-    relatedTerms: ["conversion-rate-optimization", "multivariate-testing"]
+    relatedTerms: ["conversion-rate-optimization", "multivariate-testing"],
+    relatedArticles: [
+      {
+        id: "jak-zwiekszac-konwersje",
+        title: "Jak zwiększyć konwersję w e-commerce",
+        description: "A/B testing dla konwersji",
+        url: "/blog/jak-zwiekszac-konwersje-ecommerce"
+      },
+      {
+        id: "cro-marki-premium",
+        title: "CRO dla Marek Premium",
+        description: "Testowanie dla premium",
+        url: "/blog/cro-marki-premium"
+      }
+    ]
   },
   {
     id: "user-experience",
     term: "User Experience (UX)",
     category: "ecommerce",
     definition: "Doświadczenie użytkownika podczas korzystania ze strony. Obejmuje: szybkość ładowania, łatwość nawigacji, czytelność tekstu, responsywność. Dobry UX zwiększa konwersję i zmniejsza bounce rate.",
-    relatedTerms: ["user-interface", "conversion-rate-optimization"]
+    relatedTerms: ["user-interface", "conversion-rate-optimization"],
+    relatedArticles: [
+      {
+        id: "jak-zwiekszac-konwersje",
+        title: "Jak zwiększyć konwersję w e-commerce",
+        description: "UX i konwersja",
+        url: "/blog/jak-zwiekszac-konwersje-ecommerce"
+      },
+      {
+        id: "cro-marki-premium",
+        title: "CRO dla Marek Premium",
+        description: "UX dla premium",
+        url: "/blog/cro-marki-premium"
+      },
+      {
+        id: "visual-ai-wideo",
+        title: "Visual AI w Marketingu Wideo",
+        description: "UX w animacjach",
+        url: "/blog/visual-ai-marketing-wideo"
+      }
+    ]
   },
   {
     id: "bounce-rate",
-    term: "Bounce Rate (Wskaźnik Odrzuceń)",
+    term: "Bounce Rate (Wskaźnik Odrzućeń)",
     category: "seo",
     definition: "Procent osób, które opuszczają stronę bez wykonania żadnej akcji. Wysoki bounce rate (>70%) oznacza, że strona nie spełnia oczekiwań użytkownika. Niska konwersja = wysoki bounce rate.",
-    relatedTerms: ["user-experience", "conversion-rate"]
+    relatedTerms: ["user-experience", "conversion-rate"],
+    relatedArticles: [
+      {
+        id: "cro-marki-premium",
+        title: "CRO dla Marek Premium",
+        description: "Zmniejszanie bounce rate",
+        url: "/blog/cro-marki-premium"
+      },
+      {
+        id: "audyt-neuromarketingowy",
+        title: "Audyt Neuromarketingowy",
+        description: "Analiza bounce rate",
+        url: "/blog/audyt-neuromarketingowy"
+      }
+    ]
   },
   {
     id: "seo",
@@ -211,14 +323,42 @@ const glossaryItems: GlossaryItem[] = [
     term: "Copywriting",
     category: "conversion",
     definition: "Sztuka pisania tekstu, który sprzedaje. Dobry copywriting: rozumie problemy klienta, pokazuje benefity (nie features), buduje zaufanie, ma jasny CTA. Copywriting oparty na psychologii zwiększa konwersję.",
-    relatedTerms: ["conversion-rate-optimization", "emotional-triggers"]
+    relatedTerms: ["conversion-rate-optimization", "emotional-triggers"],
+    relatedArticles: [
+      {
+        id: "psychologia-sprzedazy",
+        title: "Psychologia Sprzedaży w E-commerce",
+        description: "Copywriting oparty na psychologii",
+        url: "/blog/psychologia-sprzedazy-ecommerce"
+      },
+      {
+        id: "visual-ai-wideo",
+        title: "Visual AI w Marketingu Wideo",
+        description: "Copywriting w animacjach",
+        url: "/blog/visual-ai-marketing-wideo"
+      }
+    ]
   },
   {
     id: "emotional-triggers",
     term: "Emotional Triggers (Wyzwalacze Emocji)",
     category: "psychology",
     definition: "Słowa, obrazy lub sytuacje, które wyzwalają emocje (strach, radość, zaufanie). Marketerzy wykorzystują emotional triggers w copywritingu, designie i reklamach. Przykład: 'Nie stracisz tej okazji' wyzwala strach przed stratą.",
-    relatedTerms: ["copywriting", "neuromarketing"]
+    relatedTerms: ["copywriting", "neuromarketing"],
+    relatedArticles: [
+      {
+        id: "psychologia-sprzedazy",
+        title: "Psychologia Sprzedaży w E-commerce",
+        description: "Wyzwalacze emocji w sprzedaży",
+        url: "/blog/psychologia-sprzedazy-ecommerce"
+      },
+      {
+        id: "visual-ai-wideo",
+        title: "Visual AI w Marketingu Wideo",
+        description: "Emocje w animacjach",
+        url: "/blog/visual-ai-marketing-wideo"
+      }
+    ]
   },
   {
     id: "ctr",
@@ -232,7 +372,15 @@ const glossaryItems: GlossaryItem[] = [
     term: "ROAS (Return on Ad Spend)",
     category: "ecommerce",
     definition: "Stosunek przychodu do wydatków na reklamy. Przykład: jeśli wydałeś 1000 zł na reklamy i zarabiasz 5000 zł, ROAS = 5. ROAS 3+ to dobry wynik.",
-    relatedTerms: ["conversion-rate", "roi"]
+    relatedTerms: ["conversion-rate", "roi"],
+    relatedArticles: [
+      {
+        id: "cro-marki-premium",
+        title: "CRO dla Marek Premium",
+        description: "Poprawa ROAS",
+        url: "/blog/cro-marki-premium"
+      }
+    ]
   }
 ];
 
