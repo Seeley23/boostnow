@@ -19,6 +19,9 @@ import AdminCRM from "./pages/AdminCRM";
 import Glossary from "./pages/Glossary";
 import BlogArticleKonwersja from "./pages/BlogArticleKonwersja";
 import OlsztynPage from "./pages/OlsztynPage";
+import WarszawaPage from "./pages/WarszawaPage";
+import KrakowPage from "./pages/KrakowPage";
+import GdanskPage from "./pages/GdanskPage";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -34,6 +37,9 @@ function Router() {
       <Route path={"/admin/crm"} component={AdminCRM} />
       <Route path={"/glossary"} component={Glossary} />
       <Route path={"/olsztyn"} component={OlsztynPage} />
+      <Route path={"/warszawa"} component={WarszawaPage} />
+      <Route path={"/krakow"} component={KrakowPage} />
+      <Route path={"/gdansk"} component={GdanskPage} />
       <Route path={"/blog/jak-zwiekszac-konwersje-ecommerce"} component={BlogArticleKonwersja} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />

@@ -15,6 +15,9 @@ const navItems = [
   { label: "Oblicz straty", href: "/calculator" },
   { label: "Blog", href: "/blog" },
   { label: "Słownik", href: "/glossary" },
+  { label: "Warszawa", href: "/warszawa" },
+  { label: "Kraków", href: "/krakow" },
+  { label: "Gdańsk", href: "/gdansk" },
   { label: "Olsztyn", href: "/olsztyn" },
   { label: "Kontakt", href: "#contact" },
 ];
@@ -75,12 +78,12 @@ export default function Navigation() {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
+            <div className="hidden lg:flex items-center gap-3 lg:gap-4 flex-1 justify-center overflow-x-auto">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+                  className="text-xs lg:text-sm font-medium text-foreground/70 hover:text-foreground transition-colors whitespace-nowrap"
                 >
                   {item.label}
                 </button>
