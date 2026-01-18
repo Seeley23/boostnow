@@ -49,8 +49,8 @@ export default function Home() {
       <Helmet>
         <title>Agencja Neuromarketingowa - CRO & Decision Science</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Agencja Neuromarketingowa specjalizująca się w CRO i Decision Science. Zwiększamy ROAS e-commerce o 150% w 90 dni." />
-        <meta name="keywords" content="agencja neuromarketingowa, optymalizacja konwersji CRO, decision science" />
+        <meta name="description" content="Agencja Neuromarketingowa w Olsztynie - CRO i Decision Science. Zwiększamy ROAS e-commerce o 150% w 90 dni dla marek z całej Polski." />
+        <meta name="keywords" content="agencja neuromarketingowa olsztyn, optymalizacja konwersji CRO, decision science, agencja marketingowa" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://boostnow.pl" />
         <meta property="og:title" content="BoostNow - Skalujemy wyniki, o których inni tylko marzą" />

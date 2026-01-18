@@ -18,6 +18,7 @@ import PolitykaCookies from "./pages/PolitykaCookies";
 import AdminCRM from "./pages/AdminCRM";
 import Glossary from "./pages/Glossary";
 import BlogArticleKonwersja from "./pages/BlogArticleKonwersja";
+import OlsztynPage from "./pages/OlsztynPage";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -32,6 +33,7 @@ function Router() {
       <Route path={"/polityka-cookies"} component={PolitykaCookies} />
       <Route path={"/admin/crm"} component={AdminCRM} />
       <Route path={"/glossary"} component={Glossary} />
+      <Route path={"/olsztyn"} component={OlsztynPage} />
       <Route path={"/blog/jak-zwiekszac-konwersje-ecommerce"} component={BlogArticleKonwersja} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />

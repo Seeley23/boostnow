@@ -66,7 +66,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-6"
             >
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-medium text-primary">Agencja Neuromarketingowa</span>
+              <span className="text-sm font-medium text-primary">Agencja Neuromarketingowa • Olsztyn</span>
             </motion.div>
 
             {/* Main headline - Updated */}
