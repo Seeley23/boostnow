@@ -96,7 +96,7 @@ const WarszawaPage: React.FC = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        {/* Add canonical link if necessary */}
+        <link rel="canonical" href="https://boostnow.pl/warszawa" />
       </Helmet>
 
       <Header />

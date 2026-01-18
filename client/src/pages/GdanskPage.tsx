@@ -64,7 +64,7 @@ const GdanskPage: React.FC = () => {
                 <meta name="description" content={seo.description} />
                 <meta name="keywords" content={seo.keywords} />
                 {/* Dodatkowe meta tagi, np. canonical */}
-                <link rel="canonical" href="https://twoja-domena.pl/gdansk" />
+                <link rel="canonical" href="https://boostnow.pl/gdansk" />
             </Helmet>
 
             <main className="gdansk-page">

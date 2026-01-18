@@ -11,7 +11,7 @@ export default function Regulamin() {
         <meta name="keywords" content="regulamin, warunki korzystania, terms of service, BoostNow, usługi marketingowe, polityka prywatności" />
         <meta property="og:title" content="Regulamin - BoostNow" />
         <meta property="og:description" content="Regulamin strony BoostNow - warunki korzystania z usług, zasady ochrony danych osobowych i prawa własności intelektualnej." />
-        <link rel="canonical" content="https://boostnow.pl/regulamin" />
+        <link rel="canonical" href="https://boostnow.pl/regulamin" />
       </Helmet>
       <BreadcrumbSchema items={[
         { name: 'Strona główna', url: 'https://boostnow.pl' },

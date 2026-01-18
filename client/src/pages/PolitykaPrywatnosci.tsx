@@ -11,7 +11,7 @@ export default function PolitykaPrywatnosci() {
         <meta name="keywords" content="polityka prywatności, RODO, ochrona danych, privacy policy, BoostNow, dane osobowe, cookies" />
         <meta property="og:title" content="Polityka Prywatności - BoostNow" />
         <meta property="og:description" content="Polityka Prywatności BoostNow - zasady przetwarzania danych osobowych zgodnie z RODO, cookies, analityka i prawa użytkowników." />
-        <link rel="canonical" content="https://boostnow.pl/polityka-prywatnosci" />
+        <link rel="canonical" href="https://boostnow.pl/polityka-prywatnosci" />
       </Helmet>
       <BreadcrumbSchema items={[
         { name: 'Strona główna', url: 'https://boostnow.pl' },
