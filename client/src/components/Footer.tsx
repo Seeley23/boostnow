@@ -101,16 +101,21 @@ export default function Footer() {
             <div className="space-y-4">
               <a 
                 href="mailto:kontakt@boostnow.pl"
-                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded px-2 py-1"
               >
                 <Mail className="w-4 h-4" />
                 kontakt@boostnow.pl
               </a>
               
+              <p className="text-sm text-muted-foreground">
+                Tel: +48 123 456 789
+              </p>
+              
               <div className="pt-4">
                 <button
                   onClick={() => scrollToSection("#contact")}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 glow-lime"
+                  aria-label="Zboostuj wyniki - przejdź do formularza"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime"
                 >
                   Zboostuj wyniki
                 </button>
@@ -121,6 +126,24 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 pb-6 border-b border-border">
+            <div className="text-xs text-muted-foreground">
+              <p className="font-semibold text-foreground mb-1">BoostNow Sp. z o.o.</p>
+              <p>ul. Przykładowa 123</p>
+              <p>10-001 Olsztyn, Polska</p>
+            </div>
+            <div className="text-xs text-muted-foreground">
+              <p className="font-semibold text-foreground mb-1">Dane Rejestrowe</p>
+              <p>NIP: 123-456-78-90</p>
+              <p>REGON: 123456789</p>
+            </div>
+            <div className="text-xs text-muted-foreground">
+              <p className="font-semibold text-foreground mb-1">Godziny Dostępności</p>
+              <p>Pn-Pt: 09:00 - 17:00</p>
+              <p>Sb-Nd: Zamknięte</p>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} BoostNow. Wszystkie prawa zastrzeżone.
