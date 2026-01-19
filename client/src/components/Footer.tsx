@@ -107,10 +107,6 @@ export default function Footer() {
                 kontakt@boostnow.pl
               </a>
               
-              <p className="text-sm text-muted-foreground">
-                Tel: +48 123 456 789
-              </p>
-              
               <div className="pt-4">
                 <button
                   onClick={() => scrollToSection("#contact")}
