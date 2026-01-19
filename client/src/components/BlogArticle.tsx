@@ -218,11 +218,6 @@ const BlogArticle: React.FC = () => {
           try {
             // Załaduj zawartość markdown
             const response = await fetch(`/blog-articles/${fileInfo.filename}`);
-            
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            
             let content = await response.text();
             
             // Usuń YAML frontmatter jeśli istnieje
@@ -243,7 +238,7 @@ const BlogArticle: React.FC = () => {
               content: content
             });
           } catch (error) {
-            console.error('Błąd ładowania artykułu:', error, 'Plik:', fileInfo.filename);
+            console.error('Błąd ładowania artykułu:', error);
             setArticle({
               title: articles[articleIndex].title,
               meta_description: articles[articleIndex].meta_description,
