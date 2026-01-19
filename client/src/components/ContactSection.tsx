@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 import DOMPurify from "dompurify";
 import { trackFormSubmit } from "@/lib/analytics";
+import { RecaptchaV3, getRecaptchaToken } from "./RecaptchaV3";
 
 /* ContactSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -57,19 +58,29 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
-    
-    // Sanitize input data to prevent XSS attacks
-    const data = {
-      name: DOMPurify.sanitize(formData.get("name") as string, { ALLOWED_TAGS: [] }),
-      email: DOMPurify.sanitize(formData.get("email") as string, { ALLOWED_TAGS: [] }),
-      company: formData.get("company") ? DOMPurify.sanitize(formData.get("company") as string, { ALLOWED_TAGS: [] }) : undefined,
-      message: DOMPurify.sanitize(formData.get("message") as string, { ALLOWED_TAGS: [] }),
-    };
+    try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await getRecaptchaToken('contact_form');
 
-    console.log("[ContactSection] Sanitized data:", data);
+      const formData = new FormData(e.currentTarget);
+      
+      // Sanitize input data to prevent XSS attacks
+      const data = {
+        name: DOMPurify.sanitize(formData.get("name") as string, { ALLOWED_TAGS: [] }),
+        email: DOMPurify.sanitize(formData.get("email") as string, { ALLOWED_TAGS: [] }),
+        company: formData.get("company") ? DOMPurify.sanitize(formData.get("company") as string, { ALLOWED_TAGS: [] }) : undefined,
+        message: DOMPurify.sanitize(formData.get("message") as string, { ALLOWED_TAGS: [] }),
+        recaptchaToken, // Add reCAPTCHA token
+      };
 
-    contactMutation.mutate(data);
+      console.log("[ContactSection] Sanitized data:", data);
+
+      contactMutation.mutate(data);
+    } catch (error) {
+      console.error('[ContactSection] reCAPTCHA error:', error);
+      toast.error('Błąd weryfikacji bezpieczeństwa. Spróbuj ponownie.');
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -143,6 +154,9 @@ export default function ContactSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+            {/* reCAPTCHA v3 - invisible */}
+            <RecaptchaV3 action="contact_form" onToken={() => {}} />
+            
             <div className="rounded-2xl bg-card border border-border p-4 sm:p-6 lg:p-8">
               {isSubmitted ? (
                 <div className="text-center py-12">
