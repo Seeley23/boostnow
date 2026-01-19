@@ -297,8 +297,6 @@ const BlogArticle: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <meta name="description" content={article.meta_description} />
         <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, decision science, neuromarketing, psychologia konwersji`} />
-        <h1 style={{display: 'none'}}>{article.title}</h1>
-        <h2 style={{display: 'none'}}>{article.meta_description}</h2>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://boostnow.pl/blog/${id}`} />
         <meta property="og:title" content={article.title} />
