@@ -181,7 +181,10 @@ export default function ContactSection() {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
+                      aria-label="Imię i nazwisko"
+                      aria-required="true"
+                      aria-describedby="name-error"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
                       placeholder="Jan Kowalski"
                     />
                   </div>
@@ -195,7 +198,10 @@ export default function ContactSection() {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
+                      aria-label="Adres email"
+                      aria-required="true"
+                      aria-describedby="email-error"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
                       placeholder="jan@firma.pl"
                     />
                   </div>
@@ -208,9 +214,12 @@ export default function ContactSection() {
                       type="text"
                       id="company"
                       name="company"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
+                      aria-label="Nazwa firmy"
+                      aria-describedby="company-help"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
                       placeholder="Nazwa firmy"
                     />
+                    <p id="company-help" className="text-xs text-muted-foreground mt-1">Opcjonalnie</p>
                   </div>
 
                   <div>
@@ -222,15 +231,21 @@ export default function ContactSection() {
                       name="message"
                       rows={4}
                       required
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none text-base"
+                      aria-label="Wiadomość"
+                      aria-required="true"
+                      aria-describedby="message-help"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all resize-none text-base"
                       placeholder="Opisz swoje wyzwanie lub cel..."
                     />
+                    <p id="message-help" className="text-xs text-muted-foreground mt-1">Minimum 10 znaków</p>
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] glow-lime hover:glow-lime-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 min-h-[44px]"
+                    aria-label="Wyślij formularz kontaktu"
+                    aria-busy={isSubmitting}
+                    className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 min-h-[44px]"
                   >
                     {isSubmitting ? (
                       <>
