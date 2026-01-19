@@ -6,7 +6,6 @@ import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 import DOMPurify from "dompurify";
 import { trackFormSubmit } from "@/lib/analytics";
-import { RecaptchaV3, getRecaptchaToken } from "./RecaptchaV3";
 
 /* ContactSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -58,33 +57,23 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      // Get reCAPTCHA token
-      const recaptchaToken = await getRecaptchaToken('contact_form');
+    const formData = new FormData(e.currentTarget);
+    
+    // Sanitize input data to prevent XSS attacks
+    const data = {
+      name: DOMPurify.sanitize(formData.get("name") as string, { ALLOWED_TAGS: [] }),
+      email: DOMPurify.sanitize(formData.get("email") as string, { ALLOWED_TAGS: [] }),
+      company: formData.get("company") ? DOMPurify.sanitize(formData.get("company") as string, { ALLOWED_TAGS: [] }) : undefined,
+      message: DOMPurify.sanitize(formData.get("message") as string, { ALLOWED_TAGS: [] }),
+    };
 
-      const formData = new FormData(e.currentTarget);
-      
-      // Sanitize input data to prevent XSS attacks
-      const data = {
-        name: DOMPurify.sanitize(formData.get("name") as string, { ALLOWED_TAGS: [] }),
-        email: DOMPurify.sanitize(formData.get("email") as string, { ALLOWED_TAGS: [] }),
-        company: formData.get("company") ? DOMPurify.sanitize(formData.get("company") as string, { ALLOWED_TAGS: [] }) : undefined,
-        message: DOMPurify.sanitize(formData.get("message") as string, { ALLOWED_TAGS: [] }),
-        recaptchaToken, // Add reCAPTCHA token
-      };
+    console.log("[ContactSection] Sanitized data:", data);
 
-      console.log("[ContactSection] Sanitized data:", data);
-
-      contactMutation.mutate(data);
-    } catch (error) {
-      console.error('[ContactSection] reCAPTCHA error:', error);
-      toast.error('Błąd weryfikacji bezpieczeństwa. Spróbuj ponownie.');
-      setIsSubmitting(false);
-    }
+    contactMutation.mutate(data);
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 lg:py-32 relative overflow-hidden">
+    <section id="contact-section" className="py-16 sm:py-20 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
@@ -154,9 +143,6 @@ export default function ContactSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {/* reCAPTCHA v3 - invisible */}
-            <RecaptchaV3 action="contact_form" onToken={() => {}} />
-            
             <div className="rounded-2xl bg-card border border-border p-4 sm:p-6 lg:p-8">
               {isSubmitted ? (
                 <div className="text-center py-12">
@@ -181,10 +167,7 @@ export default function ContactSection() {
                       id="name"
                       name="name"
                       required
-                      aria-label="Imię i nazwisko"
-                      aria-required="true"
-                      aria-describedby="name-error"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
                       placeholder="Jan Kowalski"
                     />
                   </div>
@@ -198,10 +181,7 @@ export default function ContactSection() {
                       id="email"
                       name="email"
                       required
-                      aria-label="Adres email"
-                      aria-required="true"
-                      aria-describedby="email-error"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
                       placeholder="jan@firma.pl"
                     />
                   </div>
@@ -214,12 +194,9 @@ export default function ContactSection() {
                       type="text"
                       id="company"
                       name="company"
-                      aria-label="Nazwa firmy"
-                      aria-describedby="company-help"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base"
                       placeholder="Nazwa firmy"
                     />
-                    <p id="company-help" className="text-xs text-muted-foreground mt-1">Opcjonalnie</p>
                   </div>
 
                   <div>
@@ -231,21 +208,15 @@ export default function ContactSection() {
                       name="message"
                       rows={4}
                       required
-                      aria-label="Wiadomość"
-                      aria-required="true"
-                      aria-describedby="message-help"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all resize-none text-base"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none text-base"
                       placeholder="Opisz swoje wyzwanie lub cel..."
                     />
-                    <p id="message-help" className="text-xs text-muted-foreground mt-1">Minimum 10 znaków</p>
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    aria-label="Wyślij formularz kontaktu"
-                    aria-busy={isSubmitting}
-                    className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 min-h-[44px]"
+                    className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] glow-lime hover:glow-lime-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 min-h-[44px]"
                   >
                     {isSubmitting ? (
                       <>

@@ -100,8 +100,7 @@ export default function HeroSection() {
             >
               <button
                 onClick={scrollToContact}
-                aria-label="Zboostuj wyniki TERAZ - przejdź do formularza"
-                className="group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong"
               >
                 <span>Zboostuj wyniki TERAZ</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -109,8 +108,7 @@ export default function HeroSection() {
               
               <button
                 onClick={scrollToServices}
-                aria-label="Zobacz jak działamy - przejdź do sekcji usług"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 border border-border text-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 border border-border text-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/5"
               >
                 Zobacz jak działamy
               </button>

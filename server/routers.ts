@@ -6,7 +6,6 @@ import { z } from "zod";
 import DOMPurify from "isomorphic-dompurify";
 import { insertContactSubmission, insertBlogRating, checkExistingRating, getBlogRatingStats } from "./db";
 import { sendContactFormNotification } from "./email";
-import { TRPCError } from "@trpc/server";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -132,34 +131,9 @@ export const appRouter = router({
           email: z.string().email("Invalid email"),
           company: z.string().optional(),
           message: z.string().min(10, "Message must be at least 10 characters"),
-          recaptchaToken: z.string().min(1, "reCAPTCHA token is required"),
         })
       )
       .mutation(async ({ input }) => {
-        // Verify reCAPTCHA token
-        const { verifyRecaptchaToken } = await import("./recaptcha");
-        const recaptchaResult = await verifyRecaptchaToken(
-          input.recaptchaToken,
-          "contact_form"
-        );
-
-        if (!recaptchaResult.success) {
-          throw new TRPCError({
-            code: "BAD_REQUEST",
-            message: "reCAPTCHA verification failed. Please try again.",
-          });
-        }
-
-        // Check reCAPTCHA score (0.0 = bot, 1.0 = human)
-        if (recaptchaResult.score && recaptchaResult.score < 0.5) {
-          throw new TRPCError({
-            code: "BAD_REQUEST",
-            message: "Suspicious activity detected. Please try again.",
-          });
-        }
-
-        console.log("[Contact] reCAPTCHA verified. Score:", recaptchaResult.score);
-
         // Sanitize input data to prevent XSS attacks
         const sanitizedInput = {
           name: DOMPurify.sanitize(input.name, { ALLOWED_TAGS: [] }),
