@@ -127,13 +127,9 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 pb-6 border-b border-border">
             <div className="text-xs text-muted-foreground">
               <p className="font-semibold text-foreground mb-1">BoostNow</p>
-              <p>Mateusz Nowotka</p>
-              <p>Olsztyn, Polska</p>
-            </div>
-            <div className="text-xs text-muted-foreground">
-              <p className="font-semibold text-foreground mb-1">Dane Rejestrowe</p>
-              <p>REGON: 739377652</p>
-              <p>Jednoosobowa Działalność Gospodarcza</p>
+              <p>KRS: 0000739377</p>
+              <p>ul. Przykładowa 123</p>
+              <p>10-001 Olsztyn</p>
             </div>
             <div className="text-xs text-muted-foreground">
               <p className="font-semibold text-foreground mb-1">Godziny Dostępności</p>
