@@ -15,10 +15,6 @@ const navItems = [
   { label: "Oblicz straty", href: "/calculator" },
   { label: "Blog", href: "/blog" },
   { label: "Słownik", href: "/glossary" },
-  { label: "Warszawa", href: "/warszawa" },
-  { label: "Kraków", href: "/krakow" },
-  { label: "Gdańsk", href: "/gdansk" },
-  { label: "Olsztyn", href: "/olsztyn" },
   { label: "Kontakt", href: "#contact" },
 ];
 

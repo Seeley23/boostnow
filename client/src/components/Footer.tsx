@@ -107,7 +107,9 @@ export default function Footer() {
                 kontakt@boostnow.pl
               </a>
               
-
+              <p className="text-sm text-muted-foreground">
+                Tel: +48 123 456 789
+              </p>
               
               <div className="pt-4">
                 <button
@@ -126,14 +128,14 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 pb-6 border-b border-border">
             <div className="text-xs text-muted-foreground">
-              <p className="font-semibold text-foreground mb-1">BoostNow</p>
-              <p>Mateusz Nowotka</p>
-              <p>Olsztyn, Polska</p>
+              <p className="font-semibold text-foreground mb-1">BoostNow Sp. z o.o.</p>
+              <p>ul. Przykładowa 123</p>
+              <p>10-001 Olsztyn, Polska</p>
             </div>
             <div className="text-xs text-muted-foreground">
               <p className="font-semibold text-foreground mb-1">Dane Rejestrowe</p>
-              <p>REGON: 739377652</p>
-              <p>Jednoosobowa Działalność Gospodarcza</p>
+              <p>NIP: 123-456-78-90</p>
+              <p>REGON: 123456789</p>
             </div>
             <div className="text-xs text-muted-foreground">
               <p className="font-semibold text-foreground mb-1">Godziny Dostępności</p>
