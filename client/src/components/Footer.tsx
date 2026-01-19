@@ -126,21 +126,15 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 pb-6 border-b border-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 pb-6 border-b border-border">
             <div className="text-xs text-muted-foreground">
-              <p className="font-semibold text-foreground mb-1">BoostNow Sp. z o.o.</p>
-              <p>ul. Przykładowa 123</p>
-              <p>10-001 Olsztyn, Polska</p>
+              <p className="font-semibold text-foreground mb-1">BoostNow Agencja marketingowa</p>
+              <p>ul. Marii Konopnickiej 11</p>
+              <p>11-040 Dobre Miasto</p>
             </div>
             <div className="text-xs text-muted-foreground">
               <p className="font-semibold text-foreground mb-1">Dane Rejestrowe</p>
-              <p>NIP: 123-456-78-90</p>
-              <p>REGON: 123456789</p>
-            </div>
-            <div className="text-xs text-muted-foreground">
-              <p className="font-semibold text-foreground mb-1">Godziny Dostępności</p>
-              <p>Pn-Pt: 09:00 - 17:00</p>
-              <p>Sb-Nd: Zamknięte</p>
+              <p>NIP: 7393776527</p>
             </div>
           </div>
           
