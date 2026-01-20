@@ -32,21 +32,29 @@ const cardVariants = {
 export default function SolutionSection() {
   const solutions = [
     {
-      title: "Precyzja słowa",
-      desc: "Tylko to, co ważne. Bez szumu.",
-      emoji: "✂️",
+      title: "Strategia & Audyt",
+      desc: "Znajdujemy i łatamy dziury, przez które uciekają Twoje pieniądze. Optymalizacja konwersji (CRO) oparta na nauce.",
     },
     {
-      title: "Kontrola wzroku",
-      desc: "Klient widzi dokładnie to, co chcesz.",
-      emoji: "👁️",
+      title: "Płatne Kampanie (Ads)",
+      desc: "Precyzyjne dotarcie. Kupujemy zysk, nie puste kliknięcia. Facebook, Google, TikTok, LinkedIn.",
     },
     {
-      title: "Architektura wyboru",
-      desc: "Decyzja staje się oczywista.",
-      emoji: "🏗️",
+      title: "AI Agents & Automatyzacja",
+      desc: "Zatrudnij cyfrowych pracowników. Autonomiczne agenty i systemy przejmują leady, obsługę i sprzedaż 24/7. Skaluj biznes bez rekrutacji.",
+    },
+    {
+      title: "Video AI",
+      desc: "Szybciej. Taniej. Skuteczniej. Generujemy kompletne ekosystemy wideo (Influencers, UGC, Motion), które sprzedają za Ciebie.",
     },
   ];
+
+  const scrollToContact = () => {
+    const element = document.querySelector("#contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="relative py-24 overflow-hidden bg-black">
@@ -62,21 +70,13 @@ export default function SolutionSection() {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white"
           >
-            Twoja oferta jest ignorowana, bo zmuszasz ludzi do wysilku.
+            Narzędzia Wzrostu
           </motion.h2>
 
-          {/* Description */}
-          <motion.p 
-            variants={itemVariants}
-            className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
-          >
-            Nasze 3 filary:
-          </motion.p>
-
-          {/* Three Solutions */}
+          {/* Solutions Grid */}
           <motion.div 
             variants={containerVariants}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 gap-8 mb-12"
           >
             {solutions.map((solution, idx) => (
               <motion.div
@@ -85,12 +85,6 @@ export default function SolutionSection() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 group cursor-pointer transition-all hover:border-lime-400/50"
               >
-                <motion.div 
-                  className="text-4xl mb-4 flex-shrink-0 group-hover:scale-110 transition-transform"
-                  whileHover={{ rotate: 10 }}
-                >
-                  {solution.emoji}
-                </motion.div>
                 <h3 className="text-lg font-semibold text-lime-400 mb-3 group-hover:text-lime-300 transition-colors">
                   {solution.title}
                 </h3>
@@ -99,6 +93,20 @@ export default function SolutionSection() {
                 </p>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.div
+            variants={itemVariants}
+            className="flex justify-center"
+          >
+            <button
+              onClick={scrollToContact}
+              aria-label="Zobacz ofertę"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong"
+            >
+              <span>Zobacz ofertę</span>
+            </button>
           </motion.div>
         </motion.div>
       </div>
