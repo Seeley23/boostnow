@@ -61,6 +61,7 @@ export default function VideoAnimationSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
+          className="max-w-4xl mx-auto text-center"
         >
           {/* Main Heading */}
           <motion.h2 

@@ -10,8 +10,8 @@ export default function IndustriesSection() {
       <div className="container">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Personalizowanie w zależności od <span className="text-lime-400">branży</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white text-center">
+            Personalizowanie w zależności od <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">branży</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Psychologia decyzji + mierzalne wyniki

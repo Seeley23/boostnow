@@ -44,8 +44,8 @@ export default function RecentArticlesSection() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Architekci Decyzji dzielą się <span className="text-lime-400">wiedzą</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white text-center">
+            Architekci Decyzji dzielą się <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">wiedzą</span>
           </h2>
           <p className="text-xl text-gray-300 mb-4">
             Nowe artykuły co tydzień o psychologii decyzji, neuromarketing'u i Decision Science

@@ -143,8 +143,8 @@ export default function FAQSection() {
           {/* Header */}
           <div className="text-center mb-16">
             <p className="text-lime-400 text-sm font-semibold mb-2">NAJCZĘSTSZE PYTANIA</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Odpowiedzi na Twoje <span className="text-lime-400">pytania</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">
+              Odpowiedzi na Twoje <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">pytania</span>
             </h2>
             <p className="text-gray-400 text-lg">
               Wszystko co musisz wiedzieć o usługach, procesie i współpracy z BoostNow.
