@@ -77,7 +77,7 @@ export default function HeroSection() {
               className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-4 sm:mb-6"
             >
               <div>Agencja marketingowa</div>
-              <div><span className="text-cyan-400">Skalujemy Twoją markę!</span></div>
+              <div><span className="text-lime-400">Skalujemy Twoją markę!</span></div>
             </motion.h1>
 
             {/* Subheadline */}
