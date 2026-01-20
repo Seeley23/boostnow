@@ -33,17 +33,17 @@ export default function SolutionSection() {
   const solutions = [
     {
       title: "Precyzja słowa",
-      desc: "Wycinamy zbędny szum. Stosujemy psychologię języka, by skrócić Twój przekaz do konkretu, który klient doczyta do końca bez wysiłku.",
+      desc: "Tylko to, co ważne. Bez szumu.",
       emoji: "✂️",
     },
     {
       title: "Kontrola wzroku",
-      desc: "Wykorzystujemy instynktowną reakcję na ruch. Motion designem zatrzymujemy kciuk odbiorcy dokładnie tam, gdzie podejmuje decyzję o zakupie.",
+      desc: "Klient widzi dokładnie to, co chcesz.",
       emoji: "👁️",
     },
     {
       title: "Architektura wyboru",
-      desc: "Projektujemy komunikację o niskim tarciu. Usuwamy bariery informacyjne, sprawiając, że Twoja marka staje się najprostszym wyborem na rynku.",
+      desc: "Decyzja staje się oczywista.",
       emoji: "🏗️",
     },
   ];
@@ -70,7 +70,7 @@ export default function SolutionSection() {
             variants={itemVariants}
             className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
           >
-            Oto jak to zmieniamy:
+            Nasze 3 filary:
           </motion.p>
 
           {/* Three Solutions */}

@@ -91,28 +91,20 @@ export default function HeroSection() {
               <strong className="text-foreground">Przestań finansować swoją niewidzialność.</strong> Wdróż system przymusu uwagi!
             </motion.p>
 
-            {/* CTA Buttons */}
+            {/* CTA Button - Single Main CTA */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
+              className="mb-8 sm:mb-12"
             >
               <button
                 onClick={scrollToContact}
-                aria-label="Zboostuj wyniki TERAZ - przejdź do formularza"
+                aria-label="Zarezerwuj Konsultację"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong"
               >
-                <span>Zboostuj wyniki TERAZ</span>
+                <span>Zarezerwuj Konsultację</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </button>
-              
-              <button
-                onClick={scrollToServices}
-                aria-label="Zobacz jak działamy - przejdź do sekcji usług"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 border border-border text-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              >
-                Zobacz jak działamy
               </button>
             </motion.div>
 

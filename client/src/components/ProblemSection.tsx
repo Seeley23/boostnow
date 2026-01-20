@@ -43,7 +43,7 @@ export default function ProblemSection() {
             variants={itemVariants}
             className="text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
           >
-            Większość firm płaci za treści, których nikt nie doczytuje do końca. Każde zbędne zdanie i każda sekunda nudy w wideo to moment, w którym klient rezygnuje.
+            Zbyt wiele informacji = brak decyzji. Klient nie wie, co zrobić, więc idzie do konkurencji.
           </motion.p>
 
           {/* Three Errors */}

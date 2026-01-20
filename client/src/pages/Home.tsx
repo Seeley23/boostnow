@@ -3,40 +3,26 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 // import AboutSection from "@/components/AboutSection"; // WYCIĄTE
-import ServicesSection from "@/components/ServicesSection";
-// import ProcessSection from "@/components/ProcessSection"; // WYCIĄTE
 import ResultsSection from "@/components/ResultsSection";
-// import TargetAudienceSection from "@/components/TargetAudienceSection"; // WYCIĄTE
 import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
-// import LossCalculator from "@/components/LossCalculator"; // WYCIĄTE
-// import RecentBlog from "@/components/RecentBlog"; // WYCIĄTE
-import IndustriesSection from "@/components/IndustriesSection";
-import VideoAnimationSection from "@/components/VideoAnimationSection";
-import RecentArticlesSection from "@/components/RecentArticlesSection";
-import ProcessSectionShort from "@/components/ProcessSectionShort";
-import ComparisonSection from "@/components/ComparisonSection";
 
 /* Home Page - BoostNow
    Design: "Precision Strike" - Military-Grade Minimalism
+   Low Cognitive Load - 5 Main Sections
    
    Structure:
    1. Navigation
    2. Hero Section
    3. Problem Section
    4. Solution Section
-   5. Industries Section
-   6. Video Animation Section
-   7. Process Section (Short)
-   8. Comparison Section
-   9. Recent Articles Section
-   10. Results Section (Case Studies)
-   11. FAQ Section
-   12. Contact Section
-   13. Footer
+   5. Results Section (Case Studies)
+   6. FAQ Section
+   7. Contact Section
+   8. Footer
 */
 
 export default function Home() {
@@ -70,13 +56,7 @@ export default function Home() {
         <HeroSection />
         <ProblemSection />
         <SolutionSection />
-        <IndustriesSection />
-        <VideoAnimationSection />
-        <ProcessSectionShort />
-        <ComparisonSection />
-        <RecentArticlesSection />
         <ResultsSection />
-
         <FAQSection />
         <ContactSection />
         <Footer />
