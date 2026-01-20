@@ -36,7 +36,7 @@ export default function ProblemSection() {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white"
           >
-            Twój marketing jest zbyt skomplikowany, by sprzedawać.
+            Masz 0.4 sekundy.
           </motion.h2>
 
           {/* Description */}
@@ -44,22 +44,20 @@ export default function ProblemSection() {
             variants={itemVariants}
             className="text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
           >
-            Zbyt wiele informacji = brak decyzji. Klient nie wie, co zrobić, więc idzie do konkurencji.
+            Większość firm traci klienta w mgnieniu oka przez "tarcie poznawcze". Twoja strona i reklamy są ignorowane. My to zmieniamy.
           </motion.p>
 
-          {/* Three Errors */}
+          {/* Three Solutions */}
           <motion.div 
             variants={itemVariants}
             className="mb-12"
           >
-            <h3 className="text-xl font-semibold text-lime-400 mb-8">Twoje straty wynikają z trzech błędów:</h3>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: "Przeładowanie", desc: "Zbyt dużo informacji sprawia, że odbiorca przestaje uważać." },
-                { title: "Brak priorytetów", desc: "Klient nie wie, na co ma patrzeć, więc patrzy na konkurencję." },
-                { title: "Wysiłek", desc: "Zrozumienie Twojej oferty zajmuje zbyt dużo czasu." },
-              ].map((error, idx) => (
+                { title: "Usuwamy opór", desc: "Projektujemy ścieżki zakupu zgodne z pracą ludzkiego mózgu." },
+                { title: "Hakujemy uwagę", desc: "Tworzymy przekaz, który omija filtry krytyczne i trafia do decyzji." },
+                { title: "Dowożimy ROI", desc: "Interesuje nas Twój zysk, nie puste zasięgi." },
+              ].map((solution, idx) => (
                 <motion.div
                   key={idx}
                   variants={itemVariants}
@@ -68,21 +66,13 @@ export default function ProblemSection() {
                 >
                   <div className="flex items-start gap-3 mb-3">
                     <AlertCircle className="w-5 h-5 text-lime-400 flex-shrink-0 mt-0.5" />
-                    <h4 className="text-base font-semibold text-white">{error.title}</h4>
+                    <h4 className="text-base font-semibold text-white">{solution.title}</h4>
                   </div>
-                  <p className="text-sm text-gray-400 leading-relaxed">{error.desc}</p>
+                  <p className="text-sm text-gray-400 leading-relaxed">{solution.desc}</p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-
-          {/* Final Statement */}
-          <motion.p 
-            variants={itemVariants}
-            className="text-xl font-bold text-lime-400 mt-12"
-          >
-            Efekt? <span className="text-white">Finansujesz ignorancję rynku.</span>
-          </motion.p>
         </motion.div>
       </div>
     </section>
