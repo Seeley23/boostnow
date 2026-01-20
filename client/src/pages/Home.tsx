@@ -71,8 +71,8 @@ export default function Home() {
         <SolutionSection />
         <IndustriesSection />
         <VideoAnimationSection />
-        <ComparisonSection />
         <RecentArticlesSection />
+        <ComparisonSection />
         <ResultsSection />
 
         <FAQSection />
