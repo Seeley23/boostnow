@@ -88,23 +88,31 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mb-6 sm:mb-8 leading-relaxed"
             >
-              Eliminujemy domysły z marketingu. Łączymy psychologię decyzji, dane i AI, abyś przestał przepalać budżet i zaczął skalować sprzedaż.
+              <strong className="text-foreground">Przestań finansować swoją niewidzialność.</strong> Wdróż system przymusu uwagi!
             </motion.p>
 
-            {/* CTA Button - Single Main CTA */}
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mb-8 sm:mb-12"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
             >
               <button
                 onClick={scrollToContact}
-                aria-label="Zarezerwuj Konsultację"
+                aria-label="Zboostuj wyniki TERAZ - przejdź do formularza"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong"
               >
-                <span>Zarezerwuj Konsultację</span>
+                <span>Zboostuj wyniki TERAZ</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </button>
+              
+              <button
+                onClick={scrollToServices}
+                aria-label="Zobacz jak działamy - przejdź do sekcji usług"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 border border-border text-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              >
+                Zobacz jak działamy
               </button>
             </motion.div>
 
