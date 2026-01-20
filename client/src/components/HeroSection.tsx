@@ -76,9 +76,9 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-4 sm:mb-6"
             >
-              <div>Agencja</div>
-              <div>Neuromarketingowa</div>
-              <div><span className="text-gradient-lime">Skalujemy Twoją markę!</span></div>
+              <div>Agencja Marketingowa</div>
+              <div>nowej generacji.</div>
+              <div>Napędzana <span className="text-gradient-lime">Neuromarketingiem.</span></div>
             </motion.h1>
 
             {/* Subheadline */}
@@ -88,7 +88,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mb-6 sm:mb-8 leading-relaxed"
             >
-              <strong className="text-foreground">Przestań finansować swoją niewidzialność.</strong> Wdróż system przymusu uwagi!
+              Eliminujemy domysły z marketingu. Łączymy psychologię decyzji, dane i AI, abyś przestał przepalać budżet i zaczął skalować sprzedaż.
             </motion.p>
 
             {/* CTA Buttons */}
