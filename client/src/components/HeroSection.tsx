@@ -88,7 +88,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mb-6 sm:mb-8 leading-relaxed"
             >
-              Eliminujemy domysły z marketingu. Łączymy psychologię decyzji, dane i AI, abyś przestał przepalać budżet i zaczął skalować sprzedaż.
+              <strong className="text-foreground">Przestań finansować swoją niewidzialność.</strong> Wdróż system przymusu uwagi!
             </motion.p>
 
             {/* CTA Button - Single Main CTA */}
