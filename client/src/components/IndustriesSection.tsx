@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import industries from '@/data/industries.json';
 
 export default function IndustriesSection() {
@@ -9,7 +10,13 @@ export default function IndustriesSection() {
     <section className="py-20 bg-background">
       <div className="container">
         {/* Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white text-center">
             Personalizowanie w zależności od <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">branży</span>
           </h2>
@@ -19,7 +26,7 @@ export default function IndustriesSection() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
             Każda branża ma unikalne wyzwania. Dlatego personalizujemy naszą strategię do Twoich konkretnych potrzeb, celów i rynku.
           </p>
-        </div>
+        </motion.div>
 
         {/* Industry Tabs */}
         <div className="flex flex-wrap gap-3 justify-center mb-12">
