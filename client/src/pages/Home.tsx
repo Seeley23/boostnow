@@ -68,7 +68,6 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <ProblemSection />
         <SolutionSection />
         <IndustriesSection />
         <VideoAnimationSection />

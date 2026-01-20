@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { CheckCircle } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -32,19 +33,16 @@ const cardVariants = {
 export default function SolutionSection() {
   const solutions = [
     {
-      title: "Precyzja słowa",
-      desc: "Wycinamy zbędny szum. Stosujemy psychologię języka, by skrócić Twój przekaz do konkretu, który klient doczyta do końca bez wysiłku.",
-      emoji: "✂️",
+      title: "Usuwamy opór",
+      desc: "Projektujemy ścieżki zakupu zgodne z pracą ludzkiego mózgu.",
     },
     {
-      title: "Kontrola wzroku",
-      desc: "Wykorzystujemy instynktowną reakcję na ruch. Motion designem zatrzymujemy kciuk odbiorcy dokładnie tam, gdzie podejmuje decyzję o zakupie.",
-      emoji: "👁️",
+      title: "Hakujemy uwagę",
+      desc: "Tworzymy przekaz, który omija filtry krytyczne i trafia do decyzji.",
     },
     {
-      title: "Architektura wyboru",
-      desc: "Projektujemy komunikację o niskim tarciu. Usuwamy bariery informacyjne, sprawiając, że Twoja marka staje się najprostszym wyborem na rynku.",
-      emoji: "🏗️",
+      title: "Dowożimy ROI",
+      desc: "Interesuje nas Twój zysk, nie puste zasięgi.",
     },
   ];
 
@@ -62,15 +60,15 @@ export default function SolutionSection() {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white"
           >
-            Twoja oferta jest ignorowana, bo zmuszasz ludzi do wysilku.
+            Masz 0.4 sekundy.
           </motion.h2>
 
           {/* Description */}
           <motion.p 
             variants={itemVariants}
-            className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
+            className="text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
           >
-            Oto jak to zmieniamy:
+            Większość firm traci klienta w mgnieniu oka przez "tarcie poznawcze". Twoja strona i reklamy są ignorowane. My to zmieniamy.
           </motion.p>
 
           {/* Three Solutions */}
@@ -85,15 +83,12 @@ export default function SolutionSection() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 group cursor-pointer transition-all hover:border-lime-400/50"
               >
-                <motion.div 
-                  className="text-4xl mb-4 flex-shrink-0 group-hover:scale-110 transition-transform"
-                  whileHover={{ rotate: 10 }}
-                >
-                  {solution.emoji}
-                </motion.div>
-                <h3 className="text-lg font-semibold text-lime-400 mb-3 group-hover:text-lime-300 transition-colors">
-                  {solution.title}
-                </h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0 mt-0.5" />
+                  <h3 className="text-lg font-semibold text-lime-400 group-hover:text-lime-300 transition-colors">
+                    {solution.title}
+                  </h3>
+                </div>
                 <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
                   {solution.desc}
                 </p>
