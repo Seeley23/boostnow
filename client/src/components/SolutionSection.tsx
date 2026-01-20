@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { CheckCircle } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -85,15 +86,12 @@ export default function SolutionSection() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 group cursor-pointer transition-all hover:border-lime-400/50"
               >
-                <motion.div 
-                  className="text-4xl mb-4 flex-shrink-0 group-hover:scale-110 transition-transform"
-                  whileHover={{ rotate: 10 }}
-                >
-                  {solution.emoji}
-                </motion.div>
-                <h3 className="text-lg font-semibold text-lime-400 mb-3 group-hover:text-lime-300 transition-colors">
-                  {solution.title}
-                </h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <CheckCircle className="w-5 h-5 text-lime-400 flex-shrink-0 mt-0.5" />
+                  <h3 className="text-lg font-semibold text-lime-400 group-hover:text-lime-300 transition-colors">
+                    {solution.title}
+                  </h3>
+                </div>
                 <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
                   {solution.desc}
                 </p>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { AlertCircle } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -65,7 +66,10 @@ export default function ProblemSection() {
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
                   className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 cursor-pointer transition-all hover:border-lime-400/50"
                 >
-                  <h4 className="text-base font-semibold mb-3 text-white">{error.title}</h4>
+                  <div className="flex items-start gap-3 mb-3">
+                    <AlertCircle className="w-5 h-5 text-lime-400 flex-shrink-0 mt-0.5" />
+                    <h4 className="text-base font-semibold text-white">{error.title}</h4>
+                  </div>
                   <p className="text-sm text-gray-400 leading-relaxed">{error.desc}</p>
                 </motion.div>
               ))}
