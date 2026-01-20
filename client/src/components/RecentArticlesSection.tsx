@@ -44,7 +44,7 @@ export default function RecentArticlesSection() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Architekci Decyzji dzielą się wiedzą
           </h2>
           <p className="text-xl text-gray-300 mb-4">
