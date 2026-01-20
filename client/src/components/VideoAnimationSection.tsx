@@ -67,7 +67,7 @@ export default function VideoAnimationSection() {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-12 leading-tight max-w-4xl text-white"
           >
-            Co robimy?
+            Co <span className="text-lime-400">robimy?</span>
           </motion.h2>
 
           {/* Services Grid */}

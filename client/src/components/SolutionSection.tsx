@@ -62,7 +62,7 @@ export default function SolutionSection() {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white"
           >
-            Masz 0.4 sekundy.
+            Masz <span className="text-lime-400">0.4 sekundy.</span>
           </motion.h2>
 
           {/* Description */}

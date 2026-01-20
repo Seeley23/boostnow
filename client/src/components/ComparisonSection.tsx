@@ -57,7 +57,7 @@ export default function ComparisonSection() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Czym się różnimy?
+            Czym się <span className="text-lime-400">różnimy?</span>
           </h2>
           <p className="text-xl text-gray-300">
             BoostNow vs. Tradycyjne agencje marketingowe

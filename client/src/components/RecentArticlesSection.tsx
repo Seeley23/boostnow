@@ -45,7 +45,7 @@ export default function RecentArticlesSection() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Architekci Decyzji dzielą się wiedzą
+            Architekci Decyzji dzielą się <span className="text-lime-400">wiedzą</span>
           </h2>
           <p className="text-xl text-gray-300 mb-4">
             Nowe artykuły co tydzień o psychologii decyzji, neuromarketing'u i Decision Science
