@@ -60,9 +60,9 @@ export default function SolutionSection() {
           {/* Main Heading */}
           <motion.h2 
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white"
+            className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white text-center"
           >
-            Masz <span className="text-lime-400">0.4 sekundy.</span>
+            Masz <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">0.4 sekundy.</span>
           </motion.h2>
 
           {/* Description */}
