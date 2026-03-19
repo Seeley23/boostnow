@@ -1,63 +1,64 @@
 import { useEffect } from 'react';
 
+const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY as string | undefined;
+
 interface RecaptchaV3Props {
   onToken: (token: string) => void;
   action?: string;
 }
 
+/**
+ * Loads the reCAPTCHA v3 script and executes a token request.
+ * Gracefully no-ops when VITE_RECAPTCHA_SITE_KEY is not configured.
+ */
 export function RecaptchaV3({ onToken, action = 'submit' }: RecaptchaV3Props) {
   useEffect(() => {
-    // Load reCAPTCHA script
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
+    if (!SITE_KEY) return; // No key configured — skip silently
 
-    return () => {
-      // Cleanup
-      const existingScript = document.querySelector('script[src="https://www.google.com/recaptcha/api.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
-
-  const executeRecaptcha = async () => {
-    if (typeof window !== 'undefined' && (window as any).grecaptcha) {
-      try {
-        const token = await (window as any).grecaptcha.execute(
-          import.meta.env.VITE_RECAPTCHA_SITE_KEY,
-          { action }
-        );
-        onToken(token);
-      } catch (error) {
-        console.error('reCAPTCHA error:', error);
-      }
+    // Avoid adding the script more than once
+    const scriptId = 'recaptcha-v3-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
     }
-  };
 
-  // Execute reCAPTCHA when component mounts
-  useEffect(() => {
-    const timer = setTimeout(executeRecaptcha, 1000);
+    // Wait for grecaptcha to be ready before calling execute
+    const timer = setTimeout(() => {
+      const gr = (window as any).grecaptcha;
+      if (!gr) return;
+      gr.ready(() => {
+        gr.execute(SITE_KEY, { action })
+          .then((token: string) => onToken(token))
+          .catch((err: unknown) => {
+            // Log only in dev to avoid noise in production
+            if (import.meta.env.DEV) {
+              console.warn('[reCAPTCHA]', err);
+            }
+          });
+      });
+    }, 500);
+
     return () => clearTimeout(timer);
-  }, [action]);
+  }, [action, onToken]);
 
   return null; // reCAPTCHA v3 is invisible
 }
 
 export async function getRecaptchaToken(action: string = 'submit'): Promise<string> {
-  if (typeof window !== 'undefined' && (window as any).grecaptcha) {
-    try {
-      const token = await (window as any).grecaptcha.execute(
-        import.meta.env.VITE_RECAPTCHA_SITE_KEY,
-        { action }
-      );
-      return token;
-    } catch (error) {
-      console.error('reCAPTCHA error:', error);
-      return '';
-    }
-  }
-  return '';
+  if (!SITE_KEY) return '';
+
+  const gr = (window as any).grecaptcha;
+  if (!gr) return '';
+
+  return new Promise((resolve) => {
+    gr.ready(() => {
+      gr.execute(SITE_KEY, { action })
+        .then((token: string) => resolve(token))
+        .catch(() => resolve(''));
+    });
+  });
 }
