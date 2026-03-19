@@ -4,7 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import DOMPurify from "isomorphic-dompurify";
-import { insertContactSubmission, insertBlogRating, checkExistingRating, getBlogRatingStats } from "./db";
+import { insertContactSubmission, insertBlogRating, checkExistingRating, getBlogRatingStats, insertAioLead } from "./db";
 import { sendContactFormNotification } from "./email";
 import { TRPCError } from "@trpc/server";
 
@@ -79,6 +79,38 @@ export const appRouter = router({
       .query(async ({ input }) => {
         const { getBlogRatingStats } = await import("./db");
         return getBlogRatingStats(input.articleId);
+      }),
+  }),
+
+  aio: router({
+    submit: publicProcedure
+      .input(
+        z.object({
+          name: z.string().min(1, "Imię jest wymagane"),
+          email: z.string().email("Nieprawidłowy adres e-mail"),
+          domain: z.string().min(1, "Domena jest wymagana"),
+          industry: z.string().optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        const sanitized = {
+          name: DOMPurify.sanitize(input.name, { ALLOWED_TAGS: [] }),
+          email: DOMPurify.sanitize(input.email, { ALLOWED_TAGS: [] }),
+          domain: DOMPurify.sanitize(input.domain, { ALLOWED_TAGS: [] }),
+          industry: input.industry ? DOMPurify.sanitize(input.industry, { ALLOWED_TAGS: [] }) : undefined,
+        };
+
+        // Save to database
+        await insertAioLead(sanitized);
+
+        // Notify owner
+        const { notifyOwner } = await import("./_core/notification");
+        await notifyOwner({
+          title: `🚀 Nowe zgłoszenie AIO: ${sanitized.name}`,
+          content: `Imię: ${sanitized.name}\nE-mail: ${sanitized.email}\nDomena: ${sanitized.domain}${sanitized.industry ? `\nBranża: ${sanitized.industry}` : ""}`,
+        });
+
+        return { success: true };
       }),
   }),
 

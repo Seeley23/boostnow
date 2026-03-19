@@ -50,3 +50,17 @@ export const blogRatings = mysqlTable("blog_ratings", {
 
 export type BlogRating = typeof blogRatings.$inferSelect;
 export type InsertBlogRating = typeof blogRatings.$inferInsert;
+
+// AIO landing page lead submissions
+export const aioLeads = mysqlTable("aio_leads", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  domain: varchar("domain", { length: 255 }).notNull(),
+  industry: varchar("industry", { length: 255 }),
+  status: mysqlEnum("status", ["new", "contacted", "closed"]).default("new").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type AioLead = typeof aioLeads.$inferSelect;
+export type InsertAioLead = typeof aioLeads.$inferInsert;

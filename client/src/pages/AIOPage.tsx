@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
+import { trpc } from "@/lib/trpc";
 
 /* ─────────────────────────────────────────────
    AIO PAGE – AI Optimization for E-commerce
@@ -140,22 +141,36 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-// ── Contact Form ──────────────────────────────
+// ── Contact Form ──────────────────────────────────────────
 function ContactForm() {
-  const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    shop: "",
-    industry: "",
-  });
+  const [form, setForm] = useState({ name: "", email: "", domain: "", industry: "" });
+  const [regulamin, setRegulamin] = useState(false);
+  const [regulaminError, setRegulaminError] = useState(false);
+
+  const submitMutation = trpc.aio.submit.useMutation();
+
+  const inputStyle = {
+    background: "rgba(247,248,250,0.06)",
+    border: "1px solid rgba(247,248,250,0.12)",
+  };
+  const focusStyle = (e: React.FocusEvent<HTMLInputElement>) =>
+    (e.target.style.borderColor = LIME);
+  const blurStyle = (e: React.FocusEvent<HTMLInputElement>) =>
+    (e.target.style.borderColor = "rgba(247,248,250,0.12)");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    if (!regulamin) { setRegulaminError(true); return; }
+    setRegulaminError(false);
+    submitMutation.mutate({
+      name: form.name,
+      email: form.email,
+      domain: form.domain,
+      industry: form.industry || undefined,
+    });
   };
 
-  if (sent) {
+  if (submitMutation.isSuccess) {
     return (
       <div className="text-center py-16">
         <div
@@ -186,16 +201,9 @@ function ContactForm() {
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
             className="px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
-            style={{
-              background: "rgba(247,248,250,0.06)",
-              border: "1px solid rgba(247,248,250,0.12)",
-            }}
-            onFocus={(e) =>
-              (e.target.style.borderColor = LIME)
-            }
-            onBlur={(e) =>
-              (e.target.style.borderColor = "rgba(247,248,250,0.12)")
-            }
+            style={inputStyle}
+            onFocus={focusStyle}
+            onBlur={blurStyle}
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -209,14 +217,9 @@ function ContactForm() {
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className="px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
-            style={{
-              background: "rgba(247,248,250,0.06)",
-              border: "1px solid rgba(247,248,250,0.12)",
-            }}
-            onFocus={(e) => (e.target.style.borderColor = LIME)}
-            onBlur={(e) =>
-              (e.target.style.borderColor = "rgba(247,248,250,0.12)")
-            }
+            style={inputStyle}
+            onFocus={focusStyle}
+            onBlur={blurStyle}
           />
         </div>
       </div>
@@ -228,17 +231,12 @@ function ContactForm() {
           required
           type="text"
           placeholder="twojastrona.pl"
-          value={form.shop}
-          onChange={(e) => setForm({ ...form, shop: e.target.value })}
+          value={form.domain}
+          onChange={(e) => setForm({ ...form, domain: e.target.value })}
           className="px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
-          style={{
-            background: "rgba(247,248,250,0.06)",
-            border: "1px solid rgba(247,248,250,0.12)",
-          }}
-          onFocus={(e) => (e.target.style.borderColor = LIME)}
-          onBlur={(e) =>
-            (e.target.style.borderColor = "rgba(247,248,250,0.12)")
-          }
+          style={inputStyle}
+          onFocus={focusStyle}
+          onBlur={blurStyle}
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -251,22 +249,66 @@ function ContactForm() {
           value={form.industry}
           onChange={(e) => setForm({ ...form, industry: e.target.value })}
           className="px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
-          style={{
-            background: "rgba(247,248,250,0.06)",
-            border: "1px solid rgba(247,248,250,0.12)",
-          }}
-          onFocus={(e) => (e.target.style.borderColor = LIME)}
-          onBlur={(e) =>
-            (e.target.style.borderColor = "rgba(247,248,250,0.12)")
-          }
+          style={inputStyle}
+          onFocus={focusStyle}
+          onBlur={blurStyle}
         />
       </div>
+
+      {/* Regulamin checkbox */}
+      <div className="flex items-start gap-3 mt-1">
+        <button
+          type="button"
+          role="checkbox"
+          aria-checked={regulamin}
+          onClick={() => { setRegulamin(!regulamin); setRegulaminError(false); }}
+          className="mt-0.5 w-5 h-5 rounded flex-shrink-0 flex items-center justify-center transition-all"
+          style={{
+            background: regulamin ? LIME : "rgba(247,248,250,0.06)",
+            border: regulaminError
+              ? "1.5px solid #ff4e4e"
+              : regulamin
+              ? `1.5px solid ${LIME}`
+              : "1.5px solid rgba(247,248,250,0.25)",
+          }}
+        >
+          {regulamin && (
+            <svg width="12" height="9" viewBox="0 0 12 9" fill="none">
+              <path d="M1 4L4.5 7.5L11 1" stroke="#0b1020" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          )}
+        </button>
+        <p className="text-xs leading-relaxed" style={{ color: regulaminError ? "#ff6b6b" : "rgba(247,248,250,0.5)" }}>
+          Akceptuję{" "}
+          <Link href="/regulamin" className="underline hover:text-white transition-colors">
+            Regulamin
+          </Link>{" "}
+          i{" "}
+          <Link href="/polityka-prywatnosci" className="underline hover:text-white transition-colors">
+            Politykę Prywatności
+          </Link>{" "}
+          BoostNow. Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi zgłoszenia. *
+        </p>
+      </div>
+      {regulaminError && (
+        <p className="text-xs" style={{ color: "#ff6b6b" }}>
+          Musisz zaakceptować regulamin, aby wysłać zgłoszenie.
+        </p>
+      )}
+
+      {submitMutation.isError && (
+        <p className="text-sm text-center" style={{ color: "#ff6b6b" }}>
+          Wystąpił błąd. Spróbuj ponownie lub napisz na kontakt@boostnow.pl
+        </p>
+      )}
+
       <button
         type="submit"
-        className="mt-2 py-4 px-8 rounded-xl font-black text-base tracking-wide transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+        disabled={submitMutation.isPending}
+        className="mt-2 py-4 px-8 rounded-xl font-black text-base tracking-wide transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
         style={{ background: LIME, color: NAVY }}
       >
-        Zgłoś firmę do AIO →
+        {submitMutation.isPending ? "Wysyłanie..." : "Zgłoś firmę do AIO →"}
       </button>
       <p className="text-xs text-center" style={{ color: "rgba(247,248,250,0.4)" }}>
         Odezwiemy się i pokażemy, jak możemy ustawić Twoją firmę w wynikach AI.

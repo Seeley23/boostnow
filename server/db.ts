@@ -1,6 +1,6 @@
 import { eq, desc, asc, and } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, contactSubmissions, InsertContactSubmission, blogRatings, InsertBlogRating } from "../drizzle/schema";
+import { InsertUser, users, contactSubmissions, InsertContactSubmission, blogRatings, InsertBlogRating, aioLeads, InsertAioLead } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -190,6 +190,21 @@ export async function checkExistingRating(articleId: number, userIp: string): Pr
   } catch (error) {
     console.error("[Database] Failed to check existing rating:", error);
     return false;
+  }
+}
+
+// AIO leads
+export async function insertAioLead(lead: InsertAioLead): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot insert AIO lead: database not available");
+    throw new Error("Database not available");
+  }
+  try {
+    await db.insert(aioLeads).values(lead);
+  } catch (error) {
+    console.error("[Database] Failed to insert AIO lead:", error);
+    throw error;
   }
 }
 
