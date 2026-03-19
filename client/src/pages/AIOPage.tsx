@@ -166,7 +166,7 @@ function ContactForm() {
         </div>
         <h3 className="text-2xl font-bold text-white mb-3">Zgłoszenie wysłane</h3>
         <p style={{ color: "rgba(247,248,250,0.6)" }}>
-          Odezwiemy się i pokażemy, jak możemy ustawić Twój sklep w wynikach AI.
+          Odezwiemy się i pokażemy, jak możemy ustawić Twoją firmę w wynikach AI.
         </p>
       </div>
     );
@@ -205,7 +205,7 @@ function ContactForm() {
           <input
             required
             type="email"
-            placeholder="jan@sklep.pl"
+            placeholder="jan@firma.pl"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className="px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
@@ -222,12 +222,12 @@ function ContactForm() {
       </div>
       <div className="flex flex-col gap-2">
         <label className="text-sm font-medium" style={{ color: "rgba(247,248,250,0.7)" }}>
-          Adres sklepu / domena *
+          Adres strony / domena *
         </label>
         <input
           required
           type="text"
-          placeholder="twojsklep.pl"
+          placeholder="twojastrona.pl"
           value={form.shop}
           onChange={(e) => setForm({ ...form, shop: e.target.value })}
           className="px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
@@ -247,7 +247,7 @@ function ContactForm() {
         </label>
         <input
           type="text"
-          placeholder="np. moda, elektronika, kosmetyki..."
+          placeholder="np. e-commerce, usługi, B2B, lokalny biznes..."
           value={form.industry}
           onChange={(e) => setForm({ ...form, industry: e.target.value })}
           className="px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
@@ -266,10 +266,10 @@ function ContactForm() {
         className="mt-2 py-4 px-8 rounded-xl font-black text-base tracking-wide transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
         style={{ background: LIME, color: NAVY }}
       >
-        Zgłoś sklep do AIO →
+        Zgłoś firmę do AIO →
       </button>
       <p className="text-xs text-center" style={{ color: "rgba(247,248,250,0.4)" }}>
-        Odezwiemy się i pokażemy, jak możemy ustawić Twój sklep w wynikach AI.
+        Odezwiemy się i pokażemy, jak możemy ustawić Twoją firmę w wynikach AI.
       </p>
     </form>
   );
@@ -291,7 +291,7 @@ export default function AIOPage() {
         <title>AIO dla E-commerce – Pozycjonowanie w AI | BoostNow</title>
         <meta
           name="description"
-          content="AI już wpływa na decyzje zakupowe. BoostNow wdraża AIO i pozycjonuje Twój sklep w odpowiedziach AI. Pierwsze efekty nawet w 10 dni."
+          content="AI zmienia sposób, w jaki klienci szukają firm i usług. BoostNow wdraża AIO i pozycjonuje Twoją stronę w odpowiedziach ChatGPT, Perplexity i Gemini. Pierwsze efekty nawet w 10 dni."
         />
       </Helmet>
 
@@ -325,7 +325,7 @@ export default function AIOPage() {
                   className="w-2 h-2 rounded-full animate-pulse"
                   style={{ background: LIME }}
                 />
-                Nowy standard – AIO dla e-commerce
+                Nowy standard – AIO: Pozycjonowanie w AI
               </span>
             </div>
           </FadeIn>
@@ -335,7 +335,7 @@ export default function AIOPage() {
             <h1
               className="text-5xl md:text-7xl lg:text-8xl font-black text-center leading-[0.95] tracking-tight mb-8"
             >
-              AI już sprzedaje
+              AI już decyduje,
               <br />
               <span
                 className="bg-clip-text text-transparent"
@@ -343,7 +343,7 @@ export default function AIOPage() {
                   backgroundImage: `linear-gradient(135deg, ${LIME} 0%, ${EMERALD} 100%)`,
                 }}
               >
-                za Twoich klientów.
+                kogo poleca.
               </span>
             </h1>
           </FadeIn>
@@ -354,10 +354,10 @@ export default function AIOPage() {
               className="text-xl md:text-2xl text-center max-w-2xl mx-auto mb-10 leading-relaxed"
               style={{ color: "rgba(247,248,250,0.65)" }}
             >
-              Pytanie brzmi: czy Twoje produkty — czy{" "}
+              Pytanie brzmi: czy Twoja firma — czy{" "}
               <span className="text-white font-semibold">konkurencji?</span>
               <br />
-              W BoostNow ustawiamy sklepy i produkty tak, żeby AI zaczęła je rekomendować.
+              W BoostNow ustawiamy strony i marki tak, żeby AI zaczęła je rekomendować.
             </p>
           </FadeIn>
 
@@ -373,7 +373,7 @@ export default function AIOPage() {
                   boxShadow: `0 0 40px rgba(199,255,78,0.25)`,
                 }}
               >
-                Zgłoś się po widoczność w AI →
+                Chcę być widoczny w AI →
               </button>
               <span
                 className="text-sm font-medium"
@@ -414,13 +414,13 @@ export default function AIOPage() {
               {
                 icon: "⚡",
                 title: "Dziś",
-                desc: "Klient pyta ChatGPT, Perplexity lub asystenta AI sklepu: \"Co kupić?\" — i dostaje gotową odpowiedź.",
+                desc: "Klient pyta ChatGPT, Perplexity lub Gemini: \"Jaka firma to robi?\" — i dostaje gotową rekomendację.",
                 muted: false,
               },
               {
                 icon: "🎯",
                 title: "Jutro",
-                desc: "AI będzie decydować o 30–50% decyzji zakupowych. Kto nie jest zoptymalizowany, nie istnieje.",
+                desc: "AI będzie filtrować 30–50% zapytań przed Google. Kto nie jest zoptymalizowany pod AI, nie istnieje.",
                 muted: false,
               },
             ].map((item, i) => (
@@ -492,15 +492,16 @@ export default function AIOPage() {
                 style={{ color: "rgba(247,248,250,0.6)" }}
               >
                 SEO optymalizuje pod Google. AIO optymalizuje pod AI — ChatGPT, Perplexity, 
-                Gemini, Copilot i asystentów zakupowych, którzy decydują, co trafia do koszyka.
+                Gemini, Copilot i asystentów, którzy coraz częściej są pierwszym punktem kontaktu klienta z marką.
               </p>
               <p
                 className="text-base leading-relaxed"
                 style={{ color: "rgba(247,248,250,0.6)" }}
               >
                 InPost uruchomił asystenta AI. Allegro testuje rekomendacje AI. 
-                Klienci pytają ChatGPT zanim wejdą na sklep. To nie jest przyszłość — 
-                to dzieje się teraz.
+                Klienci pytają AI o firmy, usługi, specjalistów i produkty — zanim wejdą na stronę.
+                Agencje, sklepy, kancelarie, gabinety, deweloperzy — każda branża jest już w grze.
+                To nie jest przyszłość — to dzieje się teraz.
               </p>
             </FadeIn>
 
@@ -514,7 +515,7 @@ export default function AIOPage() {
                   },
                   {
                     label: "AIO",
-                    desc: "Optymalizacja pod modele AI. Twoje produkty w odpowiedziach asystentów zakupowych.",
+                    desc: "Optymalizacja pod modele AI. Twoja firma i strona w odpowiedziach ChatGPT, Perplexity i Gemini.",
                     active: true,
                   },
                 ].map((item, i) => (
@@ -614,7 +615,7 @@ export default function AIOPage() {
               {
                 num: "01",
                 title: "Analiza obecności w AI",
-                desc: "Sprawdzamy, jak modele AI postrzegają Twój sklep i produkty. Co cytują, co pomijają, gdzie jest luka.",
+                desc: "Sprawdzamy, jak modele AI postrzegają Twoją firmę i stronę. Co cytują, co pomijają, gdzie jest luka.",
               },
               {
                 num: "02",
@@ -629,7 +630,7 @@ export default function AIOPage() {
               {
                 num: "04",
                 title: "Pozycjonowanie w AI",
-                desc: "Twoje produkty zaczynają pojawiać się w odpowiedziach ChatGPT, Perplexity i innych asystentów zakupowych.",
+                desc: "Twoja firma zaczyna pojawiać się w odpowiedziach ChatGPT, Perplexity, Gemini i innych modeli AI.",
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.08}>
@@ -708,11 +709,11 @@ export default function AIOPage() {
               }}
             >
               <p className="text-lg font-semibold text-white mb-2">
-                "Nasze produkty zaczęły pojawiać się w odpowiedziach ChatGPT. 
+                "Nasza firma zaczęła pojawiać się w odpowiedziach ChatGPT. 
                 Klienci piszą, że znaleźli nas przez AI."
               </p>
               <p className="text-sm" style={{ color: "rgba(247,248,250,0.4)" }}>
-                — Klient BoostNow, branża e-commerce
+                — Klient BoostNow, branża usługowa
               </p>
             </div>
           </FadeIn>
@@ -750,7 +751,7 @@ export default function AIOPage() {
             {[
               {
                 title: "Dziś: niska konkurencja w AI",
-                desc: "Większość sklepów nie wie jeszcze, że AIO istnieje. Kto wejdzie teraz, buduje pozycję bez walki.",
+                desc: "Większość firm nie wie jeszcze, że AIO istnieje. Kto wejdzie teraz, buduje pozycję bez walki.",
                 color: LIME,
               },
               {
@@ -760,7 +761,7 @@ export default function AIOPage() {
               },
               {
                 title: "AI uczy się na danych",
-                desc: "Im wcześniej Twoje produkty pojawiają się w odpowiedziach AI, tym silniejszy sygnał autorytetu budujesz.",
+                desc: "Im wcześniej Twoja firma pojawia się w odpowiedziach AI, tym silniejszy sygnał autorytetu budujesz.",
                 color: LIME,
               },
               {
@@ -815,22 +816,22 @@ export default function AIOPage() {
               {
                 icon: "🛒",
                 title: "Sklep e-commerce",
-                desc: "Sprzedajesz produkty online i chcesz, żeby AI je rekomendowała.",
+                desc: "Sprzedajesz produkty online i chcesz, żeby AI je rekomendowała zanim klient trafi na stronę.",
               },
               {
-                icon: "🏷️",
+                icon: "🏢",
                 title: "Marka DTC",
                 desc: "Budujesz markę bezpośrednio do klienta i chcesz być tam, gdzie klient szuka.",
               },
               {
-                icon: "📦",
-                title: "Szeroki katalog",
-                desc: "Masz setki lub tysiące produktów, które mogą być cytowane przez AI.",
+                icon: "📍",
+                title: "Biznes lokalny",
+                desc: "Działasz lokalnie i chcesz, żeby AI wskazywała Cię klientom szukającym w Twoim mieście.",
               },
               {
                 icon: "🚀",
                 title: "Founder / Manager",
-                desc: "Chcesz przejąć ruch z AI, zanim zrobi to konkurencja.",
+                desc: "Chcesz przejąć ruch z AI, zanim zrobi to konkurencja — niezależnie od branży.",
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.08}>
@@ -876,7 +877,7 @@ export default function AIOPage() {
               <StepCard
                 num="1"
                 title="Zgłoszenie"
-                desc="Wypełniasz formularz. Podajesz domenę sklepu. My analizujemy Twoją obecną widoczność w AI — bez zobowiązań."
+                desc="Wypełniasz formularz. Podajesz domenę strony. My analizujemy Twoją obecną widoczność w AI — bez zobowiązań."
               />
             </FadeIn>
             <FadeIn delay={0.1}>
@@ -898,7 +899,7 @@ export default function AIOPage() {
               <StepCard
                 num="3"
                 title="Wdrożenie i pozycjonowanie w AI"
-                desc="Wdrażamy AIO. Przebudowujemy treści, strukturę danych i sygnały. Twoje produkty zaczynają pojawiać się w odpowiedziach AI."
+                desc="Wdrażamy AIO. Przebudowujemy treści, strukturę danych i sygnały. Twoja firma zaczyna pojawiać się w odpowiedziach AI."
               />
             </FadeIn>
           </div>
@@ -925,14 +926,14 @@ export default function AIOPage() {
             >
               Nie pozwól, żeby AI
               <br />
-              sprzedawała konkurencję.
+              polecała konkurencję.
             </h2>
             <p
               className="text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed"
               style={{ color: "rgba(11,16,32,0.7)" }}
             >
-              Zgłoś się do BoostNow i ustaw swój sklep tam, gdzie klienci 
-              zaczynają podejmować decyzje zakupowe.
+              Zgłoś się do BoostNow i ustaw swoją firmę tam, gdzie klienci 
+              zaczynają szukać — w odpowiedziach AI.
             </p>
             <button
               onClick={scrollToForm}
@@ -943,7 +944,7 @@ export default function AIOPage() {
                 boxShadow: "0 8px 40px rgba(11,16,32,0.3)",
               }}
             >
-              Chcę być rekomendowany w AI →
+              Chcę być widoczny w AI →
             </button>
           </FadeIn>
         </div>
@@ -960,7 +961,7 @@ export default function AIOPage() {
               Zgłoszenie
             </p>
             <h2 className="text-4xl md:text-5xl font-black text-center leading-tight mb-4">
-              Ustaw swój sklep w AI.
+              Ustaw swoją firmę w AI.
             </h2>
             <p
               className="text-center mb-12"
@@ -1000,8 +1001,8 @@ export default function AIOPage() {
                   a: "Pierwsze cytowania w odpowiedziach AI mogą pojawić się nawet w ciągu 10 dni od wdrożenia. Pełne efekty — stabilna widoczność w wielu modelach AI — budują się przez 4–8 tygodni.",
                 },
                 {
-                  q: "Dla jakich sklepów to działa?",
-                  a: "AIO działa najlepiej dla sklepów z wyraźną ofertą produktową, opisami i kategoryzacją. Branże: moda, elektronika, kosmetyki, sport, wyposażenie domu, suplementy, artykuły dla dzieci. Im więcej produktów, tym więcej okazji do cytowań.",
+                  q: "Dla jakich firm i stron to działa?",
+                  a: "AIO działa dla każdej firmy, która chce być rekomendowana przez AI. Najlepsze efekty osiągają: sklepy e-commerce, firmy usługowe (agencje, kancelarie, gabinety), biznesy lokalne oraz marki B2B. Kluczowe jest posiadanie wartościowych treści na stronie — im lepsza baza, tym szybsze efekty.",
                 },
                 {
                   q: "Czy to działa tylko dla ChatGPT?",
@@ -1009,7 +1010,7 @@ export default function AIOPage() {
                 },
                 {
                   q: "Jak wygląda współpraca z BoostNow?",
-                  a: "Zgłaszasz sklep przez formularz. Robimy analizę obecności w AI. Przygotowujemy strategię AIO. Wdrażamy — przebudowujemy treści, opisy, strukturę danych. Monitorujemy cytowania i raportujemy wyniki. Ty skupiasz się na sprzedaży.",
+                  a: "Zgłaszasz firmę przez formularz. Robimy analizę obecności w AI. Przygotowujemy strategię AIO. Wdrażamy — przebudowujemy treści, strukturę danych, sygnały autorytetu. Monitorujemy cytowania i raportujemy wyniki. Ty skupiasz się na biznesie.",
                 },
               ].map((item, i) => (
                 <FAQItem key={i} q={item.q} a={item.a} />
@@ -1030,7 +1031,7 @@ export default function AIOPage() {
         <div className="container max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <Link href="/">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/logo_f76f3dc6.svg"
+              src="/images/logo.svg"
               alt="BoostNow"
               className="h-8 w-auto opacity-90"
             />
@@ -1060,7 +1061,7 @@ export default function AIOPage() {
           className="w-full py-4 rounded-xl font-black text-base tracking-wide"
           style={{ background: LIME, color: NAVY }}
         >
-          Zgłoś się po widoczność w AI →
+          Chcę być widoczny w AI →
         </button>
       </div>
     </div>
