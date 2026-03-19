@@ -330,10 +330,14 @@ export default function AIOPage() {
   return (
     <div style={{ background: NAVY, color: "#f7f8fa" }} className="min-h-screen">
       <Helmet>
-        <title>AIO dla E-commerce – Pozycjonowanie w AI | BoostNow</title>
+        <title>AIO – Pozycjonowanie w AI | BoostNow</title>
         <meta
           name="description"
-          content="AI zmienia sposób, w jaki klienci szukają firm i usług. BoostNow wdraża AIO i pozycjonuje Twoją stronę w odpowiedziach ChatGPT, Perplexity i Gemini. Pierwsze efekty nawet w 10 dni."
+          content="Pozycjonowanie stron w AI — ChatGPT, Perplexity, Gemini. BoostNow wdraża AIO i sprawia, że Twoja firma pojawia się w odpowiedziach AI."
+        />
+        <meta
+          name="keywords"
+          content="AIO, AI Optimization, pozycjonowanie w AI, ChatGPT SEO, Perplexity SEO, Gemini SEO, optymalizacja pod AI, widoczność w AI, pozycjonowanie stron, agencja SEO, BoostNow"
         />
       </Helmet>
 

@@ -13,3 +13,4 @@
 - [x] Popraw copy na /aio - rozszerz poza e-commerce, uwzględnij pozycjonowanie stron jako główny kontekst
 - [x] Napraw błąd reCAPTCHA "No reCAPTCHA clients exist" na stronie głównej
 - [x] Napraw formularz na /aio - podłącz wysyłkę (notifyOwner) i dodaj checkbox akceptacji regulaminu
+- [x] Napraw SEO na /aio: skróć meta description do max 160 znaków, dodaj meta keywords
