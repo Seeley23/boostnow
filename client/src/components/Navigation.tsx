@@ -64,7 +64,7 @@ export default function Navigation() {
               className="flex-shrink-0 flex items-center justify-center gap-0 group bg-transparent p-0 py-0"
             >
               <img 
-                src="/images/logo.svg" 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/logo_f76f3dc6.svg" 
                 alt="BoostNow Logo"
                 width="288"
                 height="72"

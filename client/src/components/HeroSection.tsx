@@ -31,7 +31,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-success.png"
+          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/hero-success_4c4a89bf.png"
           alt="Digital growth visualization"
           loading="eager"
           width="1920"

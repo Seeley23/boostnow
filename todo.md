@@ -7,3 +7,4 @@
 - [x] Napraw SEO na stronach regulaminów (/regulamin, /polityka-prywatnosci, /polityka-cookies) - dodaj title (30-60 znaków), description (50-160 znaków), keywords
 - [x] Dodaj eventy GTM/GA4 - calculator_complete i lead_form_submit dla trackowania konwersji
 - [x] Dodaj system ocen i feedbacku użytkowników do artykułów blogowych (rating 1-5 gwiazdek + opcjonalny komentarz)
+- [x] Podstrona AIO (AI Optimization) dla e-commerce - premium landing z 12 sekcjami, formularz kontaktowy, FAQ, sticky CTA mobile (/aio)
