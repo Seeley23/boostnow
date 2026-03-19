@@ -22,6 +22,13 @@ const footerLinks = [
   { label: "Kontakt", href: "#contact" },
 ];
 
+const serviceLinks = [
+  { label: "AIO dla e-commerce", href: "/aio", highlight: true },
+  { label: "Blog", href: "/blog" },
+  { label: "Kalkulator strat", href: "/calculator" },
+  { label: "Słownik marketingowy", href: "/glossary" },
+];
+
 export default function Footer() {
   const scrollToSection = (href: string) => {
     if (href === "#") {
@@ -39,7 +46,7 @@ export default function Footer() {
       <div className="container py-12 lg:py-16">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Brand column */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
             <a
               href="/"
               className="inline-flex items-center gap-2 mb-4 bg-transparent"
@@ -74,8 +81,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links column */}
-          <div className="lg:col-span-4">
+          {/* Navigation links column */}
+          <div className="lg:col-span-3">
             <h4 className="font-heading font-semibold text-foreground mb-4">
               Nawigacja
             </h4>
@@ -93,8 +100,34 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Services / Products column */}
+          <div className="lg:col-span-3">
+            <h4 className="font-heading font-semibold text-foreground mb-4">
+              Usługi
+            </h4>
+            <ul className="space-y-3">
+              {serviceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`text-sm transition-colors inline-flex items-center gap-1.5 ${
+                      (link as any).highlight
+                        ? "text-lime-400 hover:text-lime-300 font-semibold"
+                        : "text-muted-foreground hover:text-primary"
+                    }`}
+                  >
+                    {link.label}
+                    {(link as any).highlight && (
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse" />
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact column */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
             <h4 className="font-heading font-semibold text-foreground mb-4">
               Kontakt
             </h4>

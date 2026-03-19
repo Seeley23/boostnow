@@ -8,3 +8,4 @@
 - [x] Dodaj eventy GTM/GA4 - calculator_complete i lead_form_submit dla trackowania konwersji
 - [x] Dodaj system ocen i feedbacku użytkowników do artykułów blogowych (rating 1-5 gwiazdek + opcjonalny komentarz)
 - [x] Podstrona AIO (AI Optimization) dla e-commerce - premium landing z 12 sekcjami, formularz kontaktowy, FAQ, sticky CTA mobile (/aio)
+- [x] Dodaj link do AIO w nawigacji głównej i stopce

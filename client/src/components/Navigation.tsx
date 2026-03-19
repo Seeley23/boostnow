@@ -12,6 +12,7 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "O nas", href: "/about" },
+  { label: "AIO dla e-commerce", href: "/aio", highlight: true },
   { label: "Oblicz straty", href: "/calculator" },
   { label: "Blog", href: "/blog" },
   { label: "Słownik", href: "/glossary" },
@@ -79,9 +80,16 @@ export default function Navigation() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-xs lg:text-sm font-medium text-foreground/70 hover:text-foreground transition-colors whitespace-nowrap"
+                  className={`text-xs lg:text-sm font-medium transition-colors whitespace-nowrap ${
+                    (item as any).highlight
+                      ? "text-lime-400 hover:text-lime-300 font-semibold"
+                      : "text-foreground/70 hover:text-foreground"
+                  }`}
                 >
                   {item.label}
+                  {(item as any).highlight && (
+                    <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse align-middle" />
+                  )}
                 </button>
               ))}
             </div>
@@ -115,9 +123,16 @@ export default function Navigation() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-2 text-foreground/70 hover:text-foreground hover:bg-background/50 rounded-lg transition-colors"
+                  className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
+                    (item as any).highlight
+                      ? "text-lime-400 hover:text-lime-300 font-semibold hover:bg-lime-400/10"
+                      : "text-foreground/70 hover:text-foreground hover:bg-background/50"
+                  }`}
                 >
                   {item.label}
+                  {(item as any).highlight && (
+                    <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse align-middle" />
+                  )}
                 </button>
               ))}
               <button
