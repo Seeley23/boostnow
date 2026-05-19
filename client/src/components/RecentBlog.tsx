@@ -5,10 +5,11 @@ import articlesMetadata from '../data/blog/articles-metadata.json';
 interface Article {
   id: number;
   title: string;
-  meta_description: string;
-  semantic_anchors: string;
-  target_industry: string;
-  word_count: number;
+  content?: string;
+  meta_description?: string;
+  semantic_anchors?: string;
+  target_industry?: string;
+  word_count?: number;
   slug: string;
   date: string;
 }
@@ -71,7 +72,7 @@ const RecentBlog: React.FC = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {article.semantic_anchors.split(', ').slice(0, 2).map((anchor) => (
+                  {(article.semantic_anchors || '').split(', ').slice(0, 2).map((anchor) => (
                     <span
                       key={anchor}
                       className="text-xs bg-[#c7ff4e] bg-opacity-20 text-[#c7ff4e] px-2 py-1 rounded"
@@ -82,8 +83,8 @@ const RecentBlog: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-700">
-                  <span>{article.word_count} słów</span>
-                  <span>~{Math.ceil(article.word_count / 200)} min</span>
+                  <span>{article.word_count || 0} słów</span>
+                  <span>~{Math.ceil((article.word_count || 0) / 200)} min</span>
                 </div>
 
                 <div className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">

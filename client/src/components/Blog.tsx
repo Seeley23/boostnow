@@ -6,10 +6,11 @@ import articlesMetadata from '../data/blog/articles-metadata.json';
 interface Article {
   id: number;
   title: string;
-  meta_description: string;
-  semantic_anchors: string;
-  target_industry: string;
-  word_count: number;
+  content?: string;
+  meta_description?: string;
+  semantic_anchors?: string;
+  target_industry?: string;
+  word_count?: number;
   slug: string;
   date: string;
 }
@@ -23,10 +24,10 @@ const Blog: React.FC = () => {
   // Filtruj artykuły
   const filteredArticles = selectedIndustry === 'all' 
     ? articles 
-    : articles.filter(a => a.target_industry === selectedIndustry);
+    : articles.filter(a => (a.target_industry || 'all') === selectedIndustry);
 
   // Unikalne branże
-  const industriesSet = new Set(articles.map(a => a.target_industry));
+  const industriesSet = new Set(articles.map(a => a.target_industry || 'Inne').filter(Boolean));
   const industries = ['all', ...Array.from(industriesSet)];
 
   const industryLabels: Record<string, string> = {
@@ -124,7 +125,7 @@ const Blog: React.FC = () => {
 
                   {/* Semantic Anchors */}
                   <div className="flex flex-wrap gap-2 mb-3">
-                    {article.semantic_anchors.split(',').map((anchor, i) => (
+                    {(article.semantic_anchors || '').split(',').map((anchor, i) => (
                       <span
                         key={i}
                         className="text-xs bg-[#c7ff4e]/10 text-[#c7ff4e] px-2 py-1 rounded font-medium"
@@ -137,8 +138,8 @@ const Blog: React.FC = () => {
                   {/* Metadata */}
                   <div className="flex items-center gap-4 text-xs text-[#9aa0b3]">
                     <span>📅 {article.date}</span>
-                    <span>📝 {article.word_count} słów</span>
-                    <span>⏱️ ~{Math.ceil(article.word_count / 200)} min czytania</span>
+                    <span>📝 {article.word_count || 0} słów</span>
+                    <span>⏱️ ~{Math.ceil((article.word_count || 0) / 200)} min czytania</span>
                   </div>
                 </div>
 

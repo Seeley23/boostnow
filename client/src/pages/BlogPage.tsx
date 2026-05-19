@@ -7,10 +7,11 @@ import articlesMetadata from '../data/blog/articles-metadata.json';
 interface Article {
   id: number;
   title: string;
-  meta_description: string;
-  semantic_anchors: string;
-  target_industry: string;
-  word_count: number;
+  content?: string;
+  meta_description?: string;
+  semantic_anchors?: string;
+  target_industry?: string;
+  word_count?: number;
   slug: string;
   date: string;
 }
@@ -67,7 +68,7 @@ const BlogPage: React.FC = () => {
   // Filtruj artykuły
   const filteredArticles = selectedIndustry === 'all' 
     ? articles 
-    : articles.filter(a => a.target_industry === selectedIndustry);
+    : articles.filter(a => (a.target_industry || 'all') === selectedIndustry);
 
   // Paginacja
   const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
@@ -75,7 +76,7 @@ const BlogPage: React.FC = () => {
   const paginatedArticles = filteredArticles.slice(startIndex, startIndex + ARTICLES_PER_PAGE);
 
   // Unikalne branże
-  const industriesSet = new Set(articles.map(a => a.target_industry));
+  const industriesSet = new Set(articles.map(a => a.target_industry || 'Inne').filter(Boolean));
   const industries = ['all', ...Array.from(industriesSet)];
 
   const industryLabels: Record<string, string> = {
@@ -198,7 +199,10 @@ const BlogPage: React.FC = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {article.semantic_anchors.split(', ').map((anchor) => (
+                  {(article.semantic_anchors || '')
+                    .split(', ')
+                    .filter(Boolean)
+                    .map((anchor) => (
                     <span
                       key={anchor}
                       className="text-xs bg-[#c7ff4e] bg-opacity-20 text-[#c7ff4e] px-2 py-1 rounded"
@@ -209,8 +213,8 @@ const BlogPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-700">
-                  <span>{article.word_count} słów</span>
-                  <span>~{Math.ceil(article.word_count / 200)} min czytania</span>
+                  <span>{article.word_count || 0} słów</span>
+                  <span>~{Math.ceil((article.word_count || 0) / 200)} min czytania</span>
                 </div>
 
                 <Link href={`/blog/${article.id}`}>
