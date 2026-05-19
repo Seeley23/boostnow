@@ -8,5 +8,15 @@
     "semantic_anchors": "marketing, neuromarketing",
     "target_industry": "E-commerce",
     "word_count": 100
+  },
+  {
+    "id": 2,
+    "title": "Przykład 2",
+    "content": "test test test",
+    "slug": "przyklad-2",
+    "date": "2026-05-19",
+    "semantic_anchors": "test",
+    "target_industry": "General",
+    "word_count": 50
   }
 ]

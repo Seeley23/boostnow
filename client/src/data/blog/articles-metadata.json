@@ -8,5 +8,15 @@
     "word_count": 100,
     "slug": "przykladowy-artykul",
     "date": "2026-05-19"
+  },
+  {
+    "id": 2,
+    "title": "Przykład 2",
+    "meta_description": "te",
+    "semantic_anchors": "test",
+    "target_industry": "General",
+    "word_count": 50,
+    "slug": "przyklad-2",
+    "date": "2026-05-19"
   }
 ]
