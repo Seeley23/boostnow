@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Przykładowy Artykuł",
+    "meta_description": "To jest opis meta Twojego artykułu...",
+    "slug": "przykladowy-artykul",
+    "date": "2026-05-19"
+  }
+]

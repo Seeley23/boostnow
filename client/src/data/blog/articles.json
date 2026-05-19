@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Przykładowy Artykuł",
+    "content": "To jest treść Twojego pierwszego artykułu...",
+    "slug": "przykladowy-artykul",
+    "date": "2026-05-19"
+  }
+]
