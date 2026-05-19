@@ -3,6 +3,9 @@
     "id": 1,
     "title": "Przykładowy Artykuł",
     "meta_description": "To jest opis meta Twojego artykułu...",
+    "semantic_anchors": "marketing, neuromarketing",
+    "target_industry": "E-commerce",
+    "word_count": 100,
     "slug": "przykladowy-artykul",
     "date": "2026-05-19"
   }

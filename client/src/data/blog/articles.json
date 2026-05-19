@@ -4,6 +4,9 @@
     "title": "Przykładowy Artykuł",
     "content": "To jest treść Twojego pierwszego artykułu...",
     "slug": "przykladowy-artykul",
-    "date": "2026-05-19"
+    "date": "2026-05-19",
+    "semantic_anchors": "marketing, neuromarketing",
+    "target_industry": "E-commerce",
+    "word_count": 100
   }
 ]
