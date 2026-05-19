@@ -1,0 +1,39 @@
+name: Sync Airtable CMS
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'  # Every hour
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Sync Airtable CMS
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+        run: node scripts/sync-airtable.js
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'Airtable Bot'
+          git config --global user.email 'bot@boostnow.pl'
+
+      - name: Commit and Push changes
+        run: |
+          git add client/src/data/blog/ client/public/blog-articles/
+          git commit -m "🤖 Sync from Airtable CMS [skip ci]" || echo "No changes to commit"
+          git push || echo "Nothing to push"
