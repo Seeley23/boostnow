@@ -120,7 +120,29 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Filters removed - showing all articles */}
+      {/* Filters */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-wrap gap-3">
+            {industries.map((industry) => (
+              <button
+                key={industry}
+                onClick={() => handleFilterChange(industry)}
+                className={`px-4 py-2 rounded-lg font-medium transition ${
+                  selectedIndustry === industry
+                    ? 'bg-[#c7ff4e] text-[#0b1020]'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                }`}
+              >
+                {industryLabels[industry]}
+              </button>
+            ))}
+          </div>
+          <p className="text-gray-400 text-sm mt-4">
+            {filteredArticles.length} artykułów
+          </p>
+        </div>
+      </section>
 
       {/* Articles Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">

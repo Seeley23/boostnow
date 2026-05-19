@@ -31,6 +31,16 @@
   },
   {
     "id": 4,
+    "title": "kolejny test",
+    "content": "kolejny test",
+    "slug": "kolejny-test",
+    "date": "2026-05-19",
+    "semantic_anchors": "",
+    "target_industry": "General",
+    "word_count": 2
+  },
+  {
+    "id": 5,
     "title": "test automat",
     "content": "test automat",
     "slug": "test-automat",
