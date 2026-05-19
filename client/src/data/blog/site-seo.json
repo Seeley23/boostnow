@@ -1,0 +1,20 @@
+{
+  "Blog": {
+    "title": "Blog BoostNow | Decision Science & Psychologia Konwersji",
+    "description": "50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych i e-commerce.",
+    "keywords": "decision science, neuromarketing, psychologia konwersji, inzynieria konwersji, GEO positioning, architekci decyzji, blog marketingowy",
+    "og:title": "Blog BoostNow - Decision Science & Psychologia Konwersji",
+    "og:description": "50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych.",
+    "og:image": "https://boostnow.pl/og-image.jpg",
+    "og:url": "https://boostnow.pl/blog"
+  },
+  "Home": {
+    "title": "Agencja Neuromarketingowa - BoostNow",
+    "description": "Profesjonalna strona internetowa dla agencji marketingowej BoostNow specjalizującej się w aktywacji klientów, psychologii decyzji i przyspieszaniu wzrostu marek.",
+    "keywords": "agencja marketingowa, neuromarketing, psychologia konwersji, growth marketing, e-commerce",
+    "og:title": "Agencja Neuromarketingowa - BoostNow",
+    "og:description": "Profesjonalna strona internetowa dla agencji marketingowej BoostNow.",
+    "og:image": "https://boostnow.pl/og-image.jpg",
+    "og:url": "https://boostnow.pl"
+  }
+}

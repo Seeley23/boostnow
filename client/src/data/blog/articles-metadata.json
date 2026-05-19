@@ -1,22 +1,42 @@
 [
   {
     "id": 1,
-    "title": "Przykładowy Artykuł",
-    "meta_description": "To jest opis meta Twojego artykułu...",
-    "semantic_anchors": "marketing, neuromarketing",
-    "target_industry": "E-commerce",
-    "word_count": 100,
-    "slug": "przykladowy-artykul",
+    "title": "Przuykład 2",
+    "meta_description": "",
+    "semantic_anchors": "",
+    "target_industry": "General",
+    "word_count": 4,
+    "slug": "przuykad-2",
     "date": "2026-05-19"
   },
   {
     "id": 2,
-    "title": "Przykład 2",
-    "meta_description": "te",
+    "title": "Przykładowy Artykuł",
+    "meta_description": "To jest opis meta Twojego artykułu...",
+    "semantic_anchors": "marketing",
+    "target_industry": "General",
+    "word_count": 6,
+    "slug": "przykadowy-artyku",
+    "date": "2026-05-19"
+  },
+  {
+    "id": 3,
+    "title": "po wgraniu test",
+    "meta_description": "test",
     "semantic_anchors": "test",
     "target_industry": "General",
-    "word_count": 50,
-    "slug": "przyklad-2",
+    "word_count": 3,
+    "slug": "po-wgraniu-test",
+    "date": "2026-05-19"
+  },
+  {
+    "id": 4,
+    "title": "test automat",
+    "meta_description": "test automat ",
+    "semantic_anchors": "",
+    "target_industry": "General",
+    "word_count": 2,
+    "slug": "test-automat",
     "date": "2026-05-19"
   }
 ]

@@ -16,34 +16,15 @@ interface Article {
 }
 
 const Blog: React.FC = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
+  
   const [expandedArticle, setExpandedArticle] = useState<number | null>(null);
 
   const articles: Article[] = articlesMetadata;
 
   // Filtruj artykuły
-  const filteredArticles = selectedIndustry === 'all' 
-    ? articles 
-    : articles.filter(a => (a.target_industry || 'all') === selectedIndustry);
+  const filteredArticles = articles;
 
-  // Unikalne branże
-  const industriesSet = new Set(articles.map(a => a.target_industry || 'Inne').filter(Boolean));
-  const industries = ['all', ...Array.from(industriesSet)];
-
-  const industryLabels: Record<string, string> = {
-    all: `Wszystkie artykuły (${articles.length})`,
-    'E-commerce': `🛒 E-commerce (${articles.filter(a => a.target_industry === 'E-commerce').length})`,
-    'Marki Premium': `✨ Marki Premium (${articles.filter(a => a.target_industry === 'Marki Premium').length})`,
-    'Usługi & Consulting': `💼 Usługi & Consulting (${articles.filter(a => a.target_industry === 'Usługi & Consulting').length})`
-  };
-
-  // Dynamicznie generuj etykiety dla branż, które nie są w liście
-  industries.forEach(industry => {
-    if (industry !== 'all' && !industryLabels[industry]) {
-      const count = articles.filter(a => a.target_industry === industry).length;
-      industryLabels[industry] = `${industry} (${count})`;
-    }
-  });
+  
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0b1020]">
@@ -68,29 +49,6 @@ const Blog: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Filtry branż */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap gap-3 justify-center mb-12"
-        >
-          {industries.map((industry) => (
-            <button
-              key={industry}
-              onClick={() => setSelectedIndustry(industry)}
-              className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
-                selectedIndustry === industry
-                  ? 'bg-[#c7ff4e] text-[#0b1020]'
-                  : 'bg-[#1a1f2e] text-[#9aa0b3] hover:bg-[#2a2f3e] hover:text-white'
-              }`}
-            >
-              {industryLabels[industry]}
-            </button>
-          ))}
-        </motion.div>
-
         {/* Lista artykułów */}
         <div className="grid gap-6">
           {filteredArticles.map((article, index) => (
@@ -108,9 +66,7 @@ const Blog: React.FC = () => {
                   {/* Numer i branża */}
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-[#c7ff4e] font-bold text-sm">#{article.id.toString().padStart(2, '0')}</span>
-                    <span className="text-[#00c88a] text-xs font-semibold px-2 py-1 bg-[#00c88a]/10 rounded">
-                      {article.target_industry}
-                    </span>
+                    
                   </div>
 
                   {/* Tytuł */}

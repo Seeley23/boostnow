@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import siteSeo from '../data/blog/site-seo.json';
 import { Link } from 'wouter';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 
@@ -20,7 +21,7 @@ const ARTICLES_PER_PAGE = 6;
 
 const BlogPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
+  
 
   const articles: Article[] = articlesMetadata;
 
@@ -66,47 +67,23 @@ const BlogPage: React.FC = () => {
   }, []);
 
   // Filtruj artykuły
-  const filteredArticles = selectedIndustry === 'all' 
-    ? articles 
-    : articles.filter(a => (a.target_industry || 'all') === selectedIndustry);
+  const filteredArticles = articles;
 
   // Paginacja
   const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
   const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
   const paginatedArticles = filteredArticles.slice(startIndex, startIndex + ARTICLES_PER_PAGE);
 
-  // Unikalne branże
-  const industriesSet = new Set(articles.map(a => a.target_industry || 'Inne').filter(Boolean));
-  const industries = ['all', ...Array.from(industriesSet)];
-
-  const industryLabels: Record<string, string> = {
-    all: 'Wszystkie artykuły',
-    'E-commerce': '🛒 E-commerce',
-    'Marki Premium': '✨ Marki Premium',
-    'Usługi & Consulting': '💼 Usługi & Consulting'
-  };
-
-  const handleFilterChange = (industry: string) => {
-    setSelectedIndustry(industry);
-    setCurrentPage(1);
-  };
+  
 
   return (
     <div className="min-h-screen bg-[#0b1020]">
+      
       <Helmet>
-        <title>Blog BoostNow | Decision Science & Psychologia Konwersji</title>
+        <title>{(siteSeo as any)['Blog']?.title || 'Blog BoostNow | Decision Science & Psychologia Konwersji'}</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych i e-commerce." />
-        <meta name="keywords" content="decision science, neuromarketing, psychologia konwersji, inzynieria konwersji, GEO positioning, architekci decyzji, blog marketingowy" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://boostnow.pl/blog" />
-        <meta property="og:title" content="Blog BoostNow - Decision Science & Psychologia Konwersji" />
-        <meta property="og:description" content="50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych." />
-        <meta property="og:image" content="https://boostnow.pl/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Blog BoostNow - Decision Science & Psychologia Konwersji" />
-        <meta name="twitter:description" content="50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji." />
-        <link rel="canonical" href="https://boostnow.pl/blog" />
+        <meta name="description" content={(siteSeo as any)['Blog']?.description || '50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych i e-commerce.'} />
+        <meta name="keywords" content={(siteSeo as any)['Blog']?.keywords || 'decision science, neuromarketing, psychologia konwersji, inzynieria konwersji, GEO positioning, architekci decyzji, blog marketingowy'} />
       </Helmet>
       {/* Breadcrumbs */}
       <div className="px-4 sm:px-6 lg:px-8 py-4">
@@ -143,29 +120,7 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap gap-3">
-            {industries.map((industry) => (
-              <button
-                key={industry}
-                onClick={() => handleFilterChange(industry)}
-                className={`px-4 py-2 rounded-lg font-medium transition ${
-                  selectedIndustry === industry
-                    ? 'bg-[#c7ff4e] text-[#0b1020]'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                }`}
-              >
-                {industryLabels[industry]}
-              </button>
-            ))}
-          </div>
-          <p className="text-gray-400 text-sm mt-4">
-            {filteredArticles.length} artykułów
-          </p>
-        </div>
-      </section>
+      {/* Filters removed - showing all articles */}
 
       {/* Articles Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
@@ -181,9 +136,7 @@ const BlogPage: React.FC = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-[#c7ff4e] font-bold text-sm">#{article.id}</span>
-                  <span className="text-gray-500 text-xs bg-gray-800 px-2 py-1 rounded">
-                    {article.target_industry}
-                  </span>
+                  
                 </div>
 
                 <Link href={`/blog/${article.id}`}>

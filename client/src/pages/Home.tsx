@@ -1,4 +1,5 @@
 import { useAuth } from "@/_core/hooks/useAuth";
+import siteSeo from '../data/blog/site-seo.json';
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
@@ -46,24 +47,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background pt-20 lg:pt-24">
+      
       <Helmet>
-        <title>Agencja Neuromarketingowa - CRO & Decision Science</title>
+        <title>{(siteSeo as any)['Home']?.title || 'Agencja Neuromarketingowa - CRO & Decision Science'}</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Agencja Neuromarketingowa w Olsztynie - CRO i Decision Science. Zwiększamy ROAS e-commerce o 150% w 90 dni dla marek z całej Polski." />
-        <meta name="keywords" content="agencja neuromarketingowa olsztyn, optymalizacja konwersji CRO, decision science, agencja marketingowa" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://boostnow.pl" />
-        <meta property="og:title" content="BoostNow - Skalujemy wyniki, o których inni tylko marzą" />
-        <meta property="og:description" content="Agencja aktywacji klientów specjalizująca się w Decision Science, Inżynierii Konwersji i GEO Positioning. +150% ROAS w 90 dni. Przestań finansować swoją niewidzialność." />
-        <meta property="og:image" content="https://boostnow.pl/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://boostnow.pl" />
-        <meta name="twitter:title" content="BoostNow - Skalujemy wyniki, o których inni tylko marzą" />
-        <meta name="twitter:description" content="Agencja aktywacji klientów specjalizująca się w Decision Science, Inżynierii Konwersji i GEO Positioning. +150% ROAS w 90 dni." />
-        <meta name="twitter:image" content="https://boostnow.pl/og-image.jpg" />
-        <link rel="canonical" href="https://boostnow.pl" />
+        <meta name="description" content={(siteSeo as any)['Home']?.description || 'Agencja Neuromarketingowa w Olsztynie - CRO i Decision Science. Zwiększamy ROAS e-commerce o 150% w 90 dni dla marek z całej Polski.'} />
+        <meta name="keywords" content={(siteSeo as any)['Home']?.keywords || 'agencja neuromarketingowa olsztyn, optymalizacja konwersji CRO, decision science, agencja marketingowa'} />
       </Helmet>
       <Navigation />
       <main>

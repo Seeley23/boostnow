@@ -1,4 +1,14 @@
 {
-  "1": { "filename": "przykladowy-artykul.md" },
-  "2": { "filename": "przyklad-2.md" }
+  "1": {
+    "filename": "przuykad-2.md"
+  },
+  "2": {
+    "filename": "przykadowy-artyku.md"
+  },
+  "3": {
+    "filename": "po-wgraniu-test.md"
+  },
+  "4": {
+    "filename": "test-automat.md"
+  }
 }

@@ -1,22 +1,42 @@
 [
   {
     "id": 1,
-    "title": "Przykładowy Artykuł",
-    "content": "To jest treść Twojego pierwszego artykułu...",
-    "slug": "przykladowy-artykul",
+    "title": "Przuykład 2",
+    "content": "test test test ",
+    "slug": "przuykad-2",
     "date": "2026-05-19",
-    "semantic_anchors": "marketing, neuromarketing",
-    "target_industry": "E-commerce",
-    "word_count": 100
+    "semantic_anchors": "",
+    "target_industry": "General",
+    "word_count": 4
   },
   {
     "id": 2,
-    "title": "Przykład 2",
-    "content": "test test test",
-    "slug": "przyklad-2",
+    "title": "Przykładowy Artykuł",
+    "content": "To jest treść Twojego pierwszego artykułu...",
+    "slug": "przykadowy-artyku",
+    "date": "2026-05-19",
+    "semantic_anchors": "marketing",
+    "target_industry": "General",
+    "word_count": 6
+  },
+  {
+    "id": 3,
+    "title": "po wgraniu test",
+    "content": "po wgraniu test",
+    "slug": "po-wgraniu-test",
     "date": "2026-05-19",
     "semantic_anchors": "test",
     "target_industry": "General",
-    "word_count": 50
+    "word_count": 3
+  },
+  {
+    "id": 4,
+    "title": "test automat",
+    "content": "test automat",
+    "slug": "test-automat",
+    "date": "2026-05-19",
+    "semantic_anchors": "",
+    "target_industry": "General",
+    "word_count": 2
   }
 ]
