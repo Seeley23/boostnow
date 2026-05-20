@@ -13,7 +13,8 @@ export default function Home() {
   const seo = homePage?.seo || {
     title: 'Agencja Neuromarketingowa - CRO & Decision Science | BoostNow',
     description: 'Agencja Neuromarketingowa w Olsztynie - CRO i Decision Science. Zwiększamy ROAS e-commerce o 150% w 90 dni.',
-    primaryKeyword: 'agencja neuromarketingowa'
+    primaryKeyword: 'agencja neuromarketingowa',
+    canonicalUrl: undefined
   };
 
   return (

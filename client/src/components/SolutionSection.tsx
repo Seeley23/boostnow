@@ -29,7 +29,12 @@ const cardVariants = {
   },
 };
 
-export default function SolutionSection() {
+interface SolutionSectionProps {
+  title?: string;
+  content?: string;
+}
+
+export default function SolutionSection({ title, content }: SolutionSectionProps = {}) {
   const solutions = [
     {
       title: "Usuwamy opór",

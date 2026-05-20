@@ -103,7 +103,12 @@ const services = [
   },
 ];
 
-export default function ServicesSection() {
+interface ServicesSectionProps {
+  title?: string;
+  description?: string;
+}
+
+export default function ServicesSection({ title, description }: ServicesSectionProps = {}) {
   const ref = useRef(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });

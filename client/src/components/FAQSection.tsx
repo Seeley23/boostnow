@@ -111,7 +111,12 @@ const faqItems: FAQItem[] = [
   },
 ];
 
-export default function FAQSection() {
+interface FAQSectionProps {
+  title?: string;
+  description?: string;
+}
+
+export default function FAQSection({ title, description }: FAQSectionProps = {}) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState<"services" | "process" | "general">("services");
 

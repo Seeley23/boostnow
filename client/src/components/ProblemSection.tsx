@@ -20,7 +20,12 @@ const itemVariants = {
   },
 };
 
-export default function ProblemSection() {
+interface ProblemSectionProps {
+  title?: string;
+  content?: string;
+}
+
+export default function ProblemSection({ title, content }: ProblemSectionProps = {}) {
   return (
     <section className="relative py-24 overflow-hidden bg-black">
       <div className="container">

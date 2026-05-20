@@ -49,7 +49,12 @@ const caseStudies = [
   },
 ];
 
-export default function ResultsSection() {
+interface ResultsSectionProps {
+  title?: string;
+  description?: string;
+}
+
+export default function ResultsSection({ title, description }: ResultsSectionProps = {}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 

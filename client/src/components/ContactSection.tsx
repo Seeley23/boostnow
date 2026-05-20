@@ -30,7 +30,12 @@ const benefits = [
   },
 ];
 
-export default function ContactSection() {
+interface ContactSectionProps {
+  title?: string;
+  description?: string;
+}
+
+export default function ContactSection({ title, description }: ContactSectionProps = {}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);

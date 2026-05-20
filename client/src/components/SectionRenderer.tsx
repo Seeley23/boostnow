@@ -9,7 +9,7 @@ import FAQSection from './FAQSection';
 import ContactSection from './ContactSection';
 import TargetAudienceSection from './TargetAudienceSection';
 
-interface SectionProps {
+interface Section {
   type: string;
   title: string;
   content: string;
@@ -21,9 +21,12 @@ interface SectionProps {
   stats?: string;
 }
 
-const SectionRenderer: React.FC<SectionProps> = ({ 
-  type, title, content, extraData, htmlTag, geoCitability, imageAlt, schemaMarkup, stats 
-}) => {
+interface SectionProps {
+  section: Section;
+}
+
+const SectionRenderer: React.FC<SectionProps> = ({ section }) => {
+  const { type, title, content, extraData, htmlTag, geoCitability, imageAlt, schemaMarkup, stats } = section;
   const Tag = (htmlTag || 'section').toLowerCase() as any;
   
   const renderContent = () => {

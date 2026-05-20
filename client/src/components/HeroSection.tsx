@@ -9,7 +9,12 @@ import { trackCTAClick } from "@/lib/analytics";
    - Command center aesthetic
 */
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function HeroSection({ title, subtitle }: HeroSectionProps = {}) {
   const scrollToContact = () => {
     trackCTAClick('hero_primary_cta', 'Zboostuj wyniki TERAZ', '#contact');
     const element = document.querySelector("#contact");

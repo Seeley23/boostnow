@@ -60,7 +60,12 @@ const audiences = [
   },
 ];
 
-export default function TargetAudienceSection() {
+interface TargetAudienceSectionProps {
+  title?: string;
+  description?: string;
+}
+
+export default function TargetAudienceSection({ title, description }: TargetAudienceSectionProps = {}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
