@@ -5,48 +5,52 @@
     "content": "test test test ",
     "slug": "przuykad-2",
     "date": "2026-05-20",
-    "semantic_anchors": "",
-    "target_industry": "General",
-    "word_count": 4
+    "excerpt": "",
+    "category": "General"
   },
   {
     "id": 2,
+    "title": "hehe",
+    "content": "hehe",
+    "slug": "hehe",
+    "date": "2026-05-20",
+    "excerpt": "hehe",
+    "category": "General"
+  },
+  {
+    "id": 3,
     "title": "Przykładowy Artykuł",
     "content": "To jest treść Twojego pierwszego artykułu...",
     "slug": "przykadowy-artyku",
     "date": "2026-05-20",
-    "semantic_anchors": "marketing",
-    "target_industry": "General",
-    "word_count": 6
+    "excerpt": "To jest opis meta Twojego artykułu...",
+    "category": "General"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "po wgraniu test",
     "content": "po wgraniu test",
     "slug": "po-wgraniu-test",
     "date": "2026-05-20",
-    "semantic_anchors": "test",
-    "target_industry": "General",
-    "word_count": 3
+    "excerpt": "test",
+    "category": "General"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "kolejny test",
     "content": "kolejny test",
     "slug": "kolejny-test",
     "date": "2026-05-20",
-    "semantic_anchors": "",
-    "target_industry": "General",
-    "word_count": 2
+    "excerpt": "kolejny test",
+    "category": "General"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "test automat",
     "content": "test automat",
     "slug": "test-automat",
     "date": "2026-05-20",
-    "semantic_anchors": "",
-    "target_industry": "General",
-    "word_count": 2
+    "excerpt": "test automat ",
+    "category": "General"
   }
 ]
