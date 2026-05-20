@@ -56,10 +56,14 @@ export default function Home() {
         <IndustriesSection />
         <VideoAnimationSection />
         <ComparisonSection />
-        <ResultsSection />
+        <div id="results-section">
+          <ResultsSection />
+        </div>
         <RecentArticlesSection />
         <FAQSection />
-        <ContactSection />
+        <div id="contact-section">
+          <ContactSection />
+        </div>
         <Footer />
       </main>
     </div>

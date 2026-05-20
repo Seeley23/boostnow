@@ -46,11 +46,11 @@ export default function HeroSection({ title, subtitle }: HeroProps) {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <button className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong">
+                <button onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })} className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong">
                   Zboostuj wyniki TERAZ
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </button>
-                <button className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-foreground font-heading font-semibold text-lg rounded-lg border border-border transition-all hover:bg-secondary/80">
+                <button onClick={() => document.getElementById('results-section')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-foreground font-heading font-semibold text-lg rounded-lg border border-border transition-all hover:bg-secondary/80">
                   Zobacz Case Studies
                 </button>
               </div>
