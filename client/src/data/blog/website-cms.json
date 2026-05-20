@@ -112,6 +112,61 @@
           "geoCitability": true,
           "imageAlt": "GEO Optimization Process",
           "stats": "90+ punktów w audytach GEO."
+        },
+        {
+          "type": "Industries",
+          "title": "Branże, które dominujemy",
+          "content": "E-commerce, SaaS, FinTech, Healthcare. Specjalizujemy się w sektorach o wysokiej konkurencji.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Branże, które dominujemy"
+        },
+        {
+          "type": "Video",
+          "title": "Video & Animation",
+          "content": "Tworzymy animacje, które tłumaczą skomplikowane procesy w 60 sekund.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Video & Animation"
+        },
+        {
+          "type": "Comparison",
+          "title": "Porównanie: Tradycyjne SEO vs Elite GEO",
+          "content": "Tradycyjne SEO skupia się na linkach. Elite GEO skupia się na tym, jak AI rozumie Twoją markę.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Porównanie: Tradycyjne SEO vs Elite GEO"
+        },
+        {
+          "type": "Results",
+          "title": "Nasze Wyniki (Case Studies)",
+          "content": "Zwiększyliśmy widoczność klienta X o 300% w wynikach Perplexity w 30 dni.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Nasze Wyniki (Case Studies)",
+          "stats": "300% wzrostu w Perplexity"
+        },
+        {
+          "type": "FAQ",
+          "title": "Często Zadawane Pytania",
+          "content": "Co to jest GEO? Jak długo czeka się na wyniki? Czy to bezpieczne?",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Często Zadawane Pytania"
+        },
+        {
+          "type": "Contact",
+          "title": "Zboostuj wyniki TERAZ",
+          "content": "Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zboostuj wyniki TERAZ"
         }
       ]
     }
