@@ -20,6 +20,7 @@ import Glossary from "./pages/Glossary";
 import BlogArticleKonwersja from "./pages/BlogArticleKonwersja";
 import AIOPage from "./pages/AIOPage";
 import DynamicPage from "./pages/DynamicPage";
+import VisualBuilder from "./pages/VisualBuilder";
 
 function Router() {
   return (
@@ -38,6 +39,9 @@ function Router() {
       <Route path={"/blog/jak-zwiekszac-konwersje-ecommerce"} component={BlogArticleKonwersja} />
       <Route path={"/aio"} component={AIOPage} />
       
+      {/* Wizualny Kreator Builder.io */}
+      <Route path={"/builder/:slug*"} component={VisualBuilder} />
+
       {/* Dynamiczne strony z Airtable */}
       <Route path={"/:slug"} component={DynamicPage} />
       
