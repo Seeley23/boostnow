@@ -78,15 +78,78 @@ async function sync() {
           type: s.fields.Section_Type,
           title: s.fields.Title || '',
           content: s.fields.Content || '',
-          extraData: s.fields.Extra_Data ? JSON.parse(s.fields.Extra_Data) : null
+          extraData: s.fields.Extra_Data ? JSON.parse(s.fields.Extra_Data) : null,
+          htmlTag: s.fields.HTML_Tag,
+          geoCitability: s.fields.GEO_Citability_Mode,
+          imageAlt: s.fields.Image_Alt,
+          schemaMarkup: s.fields.Schema_Markup,
+          stats: s.fields.Statistical_Data
         }));
+
+      const seo = {
+        title: pFields.SEO_Title,
+        description: pFields.SEO_Desc,
+        primaryKeyword: pFields.Primary_Keyword,
+        semanticKeywords: pFields.Semantic_Keywords,
+        aiSummary: pFields.AI_Summary,
+        canonicalUrl: pFields.Canonical_URL,
+        schemaType: pFields.Schema_Type || 'Article',
+        author: {
+          name: pFields.Author_Name,
+          bio: pFields.Author_Bio
+        },
+        lastUpdated: pFields.Last_Updated || new Date().toISOString().split('T')[0]
+      };
+
+      // Generate JSON-LD
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": seo.schemaType,
+        "headline": seo.title,
+        "description": seo.description,
+        "dateModified": seo.lastUpdated,
+        "author": {
+          "@type": "Person",
+          "name": seo.author.name || "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      };
+
+      if (seo.schemaType === 'FAQPage') {
+        const faqSections = pageSections.filter(s => s.type === 'FAQ');
+        if (faqSections.length > 0) {
+          jsonLd.mainEntity = faqSections.map(s => ({
+            "@type": "Question",
+            "name": s.title,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": s.content
+            }
+          }));
+        }
+      }
 
       return {
         slug: pFields.Slug,
         name: pFields.PageName,
-        seo: { title: pFields.SEO_Title, description: pFields.SEO_Desc },
+        seo,
+        jsonLd,
         status: pFields.Status,
-        sections: pageSections
+        sections: pageSections.map(s => ({
+          ...s,
+          htmlTag: s.htmlTag || (s.type === 'Hero' ? 'H1' : 'H2'),
+          geoCitability: s.geoCitability || false,
+          imageAlt: s.imageAlt || s.title,
+          schemaMarkup: s.schemaMarkup,
+          stats: s.stats
+        }))
       };
     })
   };

@@ -36,6 +36,20 @@ const DynamicPage: React.FC = () => {
       <Helmet>
         <title>{pageData.seo.title || pageData.name}</title>
         <meta name="description" content={pageData.seo.description} />
+        {pageData.seo.canonicalUrl && <link rel="canonical" href={pageData.seo.canonicalUrl} />}
+        {pageData.seo.primaryKeyword && <meta name="keywords" content={`${pageData.seo.primaryKeyword}, ${pageData.seo.semanticKeywords || ''}`} />}
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={pageData.seo.title || pageData.name} />
+        <meta property="og:description" content={pageData.seo.description} />
+        <meta property="og:type" content="website" />
+        
+        {/* JSON-LD Structured Data */}
+        {pageData.jsonLd && (
+          <script type="application/ld+json">
+            {JSON.stringify(pageData.jsonLd)}
+          </script>
+        )}
       </Helmet>
       
       <Navigation />
@@ -48,6 +62,11 @@ const DynamicPage: React.FC = () => {
             title={section.title}
             content={section.content}
             extraData={section.extraData}
+            htmlTag={section.htmlTag}
+            geoCitability={section.geoCitability}
+            imageAlt={section.imageAlt}
+            schemaMarkup={section.schemaMarkup}
+            stats={section.stats}
           />
         ))}
       </main>
