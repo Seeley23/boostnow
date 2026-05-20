@@ -1,3 +1,73 @@
 {
-  "pages": []
+  "pages": [
+    {
+      "slug": "test",
+      "seo": {
+        "aiSummary": "test",
+        "schemaType": "Article",
+        "author": {
+          "name": "teset",
+          "bio": "test"
+        },
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "teset"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "sections": []
+    },
+    {
+      "slug": "home",
+      "name": "Strona Główna",
+      "seo": {
+        "title": "BoostNow - Elite SEO & GEO Agency",
+        "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
+        "primaryKeyword": "SEO Agency",
+        "semanticKeywords": "GEO, AI Search Optimization, ChatGPT SEO, Perplexity Optimization",
+        "aiSummary": "BoostNow to wiodąca agencja specjalizująca się w Generative Engine Optimization (GEO).",
+        "canonicalUrl": "https://boostnow.pl",
+        "schemaType": "LocalBusiness",
+        "author": {
+          "name": "Mateusz",
+          "bio": "Ekspert SEO/GEO z wieloletnim doświadczeniem."
+        },
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "headline": "BoostNow - Elite SEO & GEO Agency",
+        "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "Mateusz"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
+      "sections": []
+    }
+  ]
 }
