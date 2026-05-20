@@ -19,9 +19,9 @@ import AdminCRM from "./pages/AdminCRM";
 import Glossary from "./pages/Glossary";
 import BlogArticleKonwersja from "./pages/BlogArticleKonwersja";
 import AIOPage from "./pages/AIOPage";
+import DynamicPage from "./pages/DynamicPage";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
@@ -37,6 +37,10 @@ function Router() {
 
       <Route path={"/blog/jak-zwiekszac-konwersje-ecommerce"} component={BlogArticleKonwersja} />
       <Route path={"/aio"} component={AIOPage} />
+      
+      {/* Dynamiczne strony z Airtable */}
+      <Route path={"/:slug"} component={DynamicPage} />
+      
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
