@@ -74,6 +74,26 @@
           "stats": "Wzrost widoczności w AI o średnio 115%."
         },
         {
+          "type": "Hero",
+          "title": "Agencja Neuromarketingowa - CRO & Decision Science",
+          "content": "Zwiększamy ROAS e-commerce o 150% w 90 dni dla marek z całej Polski. Architektura konwersji oparta na psychologii.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": true,
+          "imageAlt": "Agencja Neuromarketingowa - CRO & Decision Science",
+          "stats": "+150% ROAS, 90 dni do wyników, 7+ lat doświadczenia"
+        },
+        {
+          "type": "Solution",
+          "title": "Masz 0.4 sekundy.",
+          "content": "Większość firm traci klienta w mgnieniu oka przez tarcie poznawcze. Twoja strona i reklamy są ignorowane. My to zmieniamy. Usuwamy opór, hakujemy uwagę, dowożimy ROI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Masz 0.4 sekundy.",
+          "stats": "0.4 sekundy na decyzję klienta"
+        },
+        {
           "type": "Problem",
           "title": "Problem: Tradycyjne SEO to za mało",
           "content": "W 2026 roku 50% ruchu pochodzi z odpowiedzi AI. Jeśli Cię tam nie ma, nie istniejesz.",
