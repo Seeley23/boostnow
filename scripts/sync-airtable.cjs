@@ -1,94 +1,98 @@
 const fs = require('fs');
 const path = require('path');
 
-// Dane konfiguracyjne
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = 'appB0MrrpweuNvlQd';
-const AIRTABLE_TABLE_NAME = 'Articles 2';
-const AIRTABLE_SITE_TABLE = 'Site';
+
+const TABLES = {
+  ARTICLES: 'Articles 2',
+  SITE_SEO: 'Site',
+  PAGES: 'Pages',
+  SECTIONS: 'Page_Sections'
+};
+
+async function fetchAirtableData(tableName) {
+  try {
+    console.log(`Pobieranie danych z tabeli: ${tableName}...`);
+    const response = await fetch(
+      `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(tableName)}`,
+      { headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` } }
+    );
+    const data = await response.json();
+    return data.records || [];
+  } catch (error) {
+    console.error(`Błąd przy pobieraniu tabeli ${tableName}:`, error.message);
+    return [];
+  }
+}
 
 async function sync() {
-  console.log('Rozpoczynam synchronizację z Airtable...');
-  
-  try {
-    const dataPath = path.join(process.cwd(), 'client/src/data/blog');
-    if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath, { recursive: true });
+  const dataPath = path.join(process.cwd(), 'client/src/data/blog');
+  if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath, { recursive: true });
 
-    // 1. Synchronizacja Artykułów
-    const response = await fetch(
-      `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`,
-      { headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` } }
-    );
-    
-    const data = await response.json();
-    if (data.records) {
-      const articles = [];
-      const metadata = [];
-      const fileMap = {};
-      const publicPath = path.join(process.cwd(), 'client/public/blog-articles');
-      if (!fs.existsSync(publicPath)) fs.mkdirSync(publicPath, { recursive: true });
+  // 1. Blog
+  const articles = await fetchAirtableData(TABLES.ARTICLES);
+  const blogData = articles.map((record, index) => {
+    const f = record.fields;
+    const slug = f.Slug || (f.Title ? f.Title.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '') : record.id);
+    return {
+      id: index + 1,
+      title: f.Title || 'Bez tytułu',
+      content: f.Content || '',
+      slug,
+      date: new Date().toISOString().split('T')[0],
+      excerpt: f['Meta Description'] || '',
+      category: 'General'
+    };
+  });
+  fs.writeFileSync(path.join(dataPath, 'articles.json'), JSON.stringify(blogData, null, 2));
 
-      data.records.forEach((record, index) => {
-        const fields = record.fields;
-        if (!fields.Title) return;
-        const id = index + 1;
-        const slug = fields.Slug || fields.Title.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
-        const filename = `${slug}.md`;
+  const blogDir = path.join(process.cwd(), 'client/public/blog-articles');
+  if (!fs.existsSync(blogDir)) fs.mkdirSync(blogDir, { recursive: true });
+  blogData.forEach(article => {
+    fs.writeFileSync(path.join(blogDir, `${article.slug}.md`), article.content);
+  });
 
-        articles.push({
-          id, title: fields.Title, content: fields.Content || '', slug,
-          date: new Date().toISOString().split('T')[0],
-          semantic_anchors: fields['Key Phrase'] || '',
-          target_industry: 'General',
-          word_count: fields.Content ? fields.Content.split(/\s+/).length : 0
-        });
-
-        metadata.push({
-          id, title: fields.Title, meta_description: fields['Meta Description'] || '',
-          semantic_anchors: fields['Key Phrase'] || '',
-          target_industry: 'General',
-          word_count: fields.Content ? fields.Content.split(/\s+/).length : 0,
-          slug, date: new Date().toISOString().split('T')[0]
-        });
-
-        fileMap[id.toString()] = { filename };
-        const mdContent = `---\ntitle: ${fields.Title}\ndate: ${new Date().toISOString().split('T')[0]}\nslug: ${slug}\nmeta_description: ${fields['Meta Description'] || ''}\n---\n\n${fields.Content || ''}`;
-        fs.writeFileSync(path.join(publicPath, filename), mdContent);
-      });
-
-      fs.writeFileSync(path.join(dataPath, 'articles.json'), JSON.stringify(articles, null, 2));
-      fs.writeFileSync(path.join(dataPath, 'articles-metadata.json'), JSON.stringify(metadata, null, 2));
-      fs.writeFileSync(path.join(dataPath, 'article-files.json'), JSON.stringify(fileMap, null, 2));
-      console.log(`Zsynchronizowano pomyślnie ${articles.length} artykułów!`);
+  // 2. Site SEO
+  const seoRecords = await fetchAirtableData(TABLES.SITE_SEO);
+  const seoData = {};
+  seoRecords.forEach(record => {
+    const f = record.fields;
+    if (f.Page) {
+      seoData[f.Page] = { title: f.Title || '', description: f.Description || '' };
     }
+  });
+  fs.writeFileSync(path.join(dataPath, 'site-seo.json'), JSON.stringify(seoData, null, 2));
 
-    // 2. Synchronizacja SEO Strony (Tabela Site)
-    console.log('Pobieranie danych SEO z tabeli Site...');
-    const siteResponse = await fetch(
-      `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_SITE_TABLE)}`,
-      { headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` } }
-    );
-    const siteData = await siteResponse.json();
-    const siteSeo = {};
-    if (siteData.records) {
-      siteData.records.forEach(record => {
-        const f = record.fields;
-        if (f.Page) {
-          siteSeo[f.Page] = {
-            title: f.Title || '',
-            description: f.Description || '',
-            keywords: f.Keywords || ''
-          };
-        }
-      });
-      fs.writeFileSync(path.join(dataPath, 'site-seo.json'), JSON.stringify(siteSeo, null, 2));
-      console.log(`Zsynchronizowano SEO dla ${Object.keys(siteSeo).length} stron.`);
-    }
+  // 3. Dynamic Pages & Sections
+  const pages = await fetchAirtableData(TABLES.PAGES);
+  const sections = await fetchAirtableData(TABLES.SECTIONS);
 
-  } catch (error) {
-    console.error('Wystąpił błąd podczas synchronizacji:', error);
-    process.exit(1);
-  }
+  const websiteData = {
+    pages: pages.map(p => {
+      const pFields = p.fields;
+      const pageSections = sections
+        .filter(s => s.fields.Page && s.fields.Page.includes(p.id))
+        .sort((a, b) => (a.fields.Order || 0) - (b.fields.Order || 0))
+        .map(s => ({
+          type: s.fields.Section_Type,
+          title: s.fields.Title || '',
+          content: s.fields.Content || '',
+          extraData: s.fields.Extra_Data ? JSON.parse(s.fields.Extra_Data) : null
+        }));
+
+      return {
+        slug: pFields.Slug,
+        name: pFields.PageName,
+        seo: { title: pFields.SEO_Title, description: pFields.SEO_Desc },
+        status: pFields.Status,
+        sections: pageSections
+      };
+    })
+  };
+  fs.writeFileSync(path.join(dataPath, 'website-cms.json'), JSON.stringify(websiteData, null, 2));
+
+  console.log(`Zsynchronizowano: ${blogData.length} artykułów, ${Object.keys(seoData).length} stron SEO, ${websiteData.pages.length} dynamicznych stron.`);
 }
 
 sync();
