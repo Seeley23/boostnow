@@ -8,6 +8,7 @@ import ProblemSection from './components/ProblemSection';
 import SolutionSection from './components/SolutionSection';
 import IndustriesSection from './components/IndustriesSection';
 import FAQSection from './components/FAQSection';
+import { BeautyHero, BeautyServiceCard, BeautyTestimonial } from './components/EliteBeautyComponents';
 
 // Register your components for use in the visual editor
 builder.registerComponent(HeroSection, {
@@ -40,4 +41,30 @@ builder.registerComponent(IndustriesSection, {
 
 builder.registerComponent(FAQSection, {
   name: 'FAQ Section',
+});
+
+builder.registerComponent(BeautyHero, {
+  name: 'Beauty: Hero',
+  inputs: [
+    { name: 'title', type: 'string' },
+    { name: 'subtitle', type: 'string' },
+    { name: 'ctaText', type: 'string' },
+  ],
+});
+
+builder.registerComponent(BeautyServiceCard, {
+  name: 'Beauty: Service Card',
+  inputs: [
+    { name: 'name', type: 'string' },
+    { name: 'description', type: 'string' },
+    { name: 'price', type: 'string' },
+  ],
+});
+
+builder.registerComponent(BeautyTestimonial, {
+  name: 'Beauty: Testimonial',
+  inputs: [
+    { name: 'quote', type: 'string' },
+    { name: 'author', type: 'string' },
+  ],
 });
