@@ -2,290 +2,700 @@
   "pages": [
     {
       "slug": "slownik",
-      "pageName": "Słownik",
-      "SEO_Title": "Słownik AI | BoostNow",
-      "SEO_Desc": "Pojęcia AI wyjaśnione prosto.",
+      "name": "Słownik",
+      "seo": {
+        "title": "Słownik AI | BoostNow",
+        "description": "Pojęcia AI wyjaśnione prosto.",
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Słownik AI | BoostNow",
+        "description": "Pojęcia AI wyjaśnione prosto.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
       "sections": [
         {
           "type": "Hero",
           "title": "Witamy na stronie Słownik",
-          "content": "To jest profesjonalna podstrona Słownik zoptymalizowana pod kątem konwersji i AI."
+          "content": "To jest profesjonalna podstrona Słownik zoptymalizowana pod kątem konwersji i AI.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "Witamy na stronie Słownik"
         },
         {
           "type": "Solution",
           "title": "Odkryj Słownik",
-          "content": "Tutaj znajdziesz szczegółowe informacje na temat Słownik. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI."
+          "content": "Tutaj znajdziesz szczegółowe informacje na temat Słownik. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Odkryj Słownik"
         },
         {
           "type": "Contact",
           "title": "Zacznijmy współpracę",
-          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć."
+          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zacznijmy współpracę"
         }
       ]
     },
     {
       "slug": "oblicz-straty",
-      "pageName": "Oblicz straty",
-      "SEO_Title": "Kalkulator Strat | BoostNow",
-      "SEO_Desc": "Sprawdź ile tracisz bez automatyzacji.",
+      "name": "Oblicz straty",
+      "seo": {
+        "title": "Kalkulator Strat | BoostNow",
+        "description": "Sprawdź ile tracisz bez automatyzacji.",
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Kalkulator Strat | BoostNow",
+        "description": "Sprawdź ile tracisz bez automatyzacji.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
       "sections": [
         {
           "type": "Hero",
           "title": "Witamy na stronie Oblicz straty",
-          "content": "To jest profesjonalna podstrona Oblicz straty zoptymalizowana pod kątem konwersji i AI."
+          "content": "To jest profesjonalna podstrona Oblicz straty zoptymalizowana pod kątem konwersji i AI.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "Witamy na stronie Oblicz straty"
         },
         {
           "type": "Solution",
           "title": "Odkryj Oblicz straty",
-          "content": "Tutaj znajdziesz szczegółowe informacje na temat Oblicz straty. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI."
+          "content": "Tutaj znajdziesz szczegółowe informacje na temat Oblicz straty. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Odkryj Oblicz straty"
         },
         {
           "type": "Contact",
           "title": "Zacznijmy współpracę",
-          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć."
+          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zacznijmy współpracę"
         }
       ]
     },
     {
       "slug": "kontakt",
-      "pageName": "Kontakt",
-      "SEO_Title": "Kontakt | BoostNow",
-      "SEO_Desc": "Skontaktuj się z nami.",
+      "name": "Kontakt",
+      "seo": {
+        "title": "Kontakt | BoostNow",
+        "description": "Skontaktuj się z nami.",
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Kontakt | BoostNow",
+        "description": "Skontaktuj się z nami.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
       "sections": [
         {
           "type": "Hero",
           "title": "Witamy na stronie Kontakt",
-          "content": "To jest profesjonalna podstrona Kontakt zoptymalizowana pod kątem konwersji i AI."
+          "content": "To jest profesjonalna podstrona Kontakt zoptymalizowana pod kątem konwersji i AI.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "Witamy na stronie Kontakt"
         },
         {
           "type": "Solution",
           "title": "Odkryj Kontakt",
-          "content": "Tutaj znajdziesz szczegółowe informacje na temat Kontakt. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI."
+          "content": "Tutaj znajdziesz szczegółowe informacje na temat Kontakt. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Odkryj Kontakt"
         },
         {
           "type": "Contact",
           "title": "Zacznijmy współpracę",
-          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć."
+          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zacznijmy współpracę"
         }
       ]
     },
     {
       "slug": "olsztyn",
-      "pageName": "Olsztyn",
-      "SEO_Title": "Pozycjonowanie i SEO Olsztyn | Agencja Elite GEO BoostNow",
-      "SEO_Desc": "Zdominuj wyniki wyszukiwania w Olsztynie. Wykorzystaj potęgę AI i Elite GEO, aby Twoja firma była numerem 1 w ChatGPT i Google.",
-      "Focus_Keyphrase": "SEO Olsztyn, pozycjonowanie stron Olsztyn",
-      "FAQ_Data": "[{\"question\":\"Dlaczego SEO w Olsztynie jest ważne?\",\"answer\":\"Lokalne SEO pozwala dotrzeć do klientów dokładnie wtedy, gdy szukają Twoich usług w regionie Warmii i Mazur.\"},{\"question\":\"Jak długo czeka się na efekty w Olsztynie?\",\"answer\":\"Pierwsze wzrosty widoczności lokalnej zauważamy zazwyczaj już po 30-60 dniach dzięki naszej metodzie Elite GEO.\"}]",
+      "name": "Olsztyn",
+      "seo": {
+        "title": "Pozycjonowanie i SEO Olsztyn | Agencja Elite GEO BoostNow",
+        "description": "Zdominuj wyniki wyszukiwania w Olsztynie. Wykorzystaj potęgę AI i Elite GEO, aby Twoja firma była numerem 1 w ChatGPT i Google.",
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Pozycjonowanie i SEO Olsztyn | Agencja Elite GEO BoostNow",
+        "description": "Zdominuj wyniki wyszukiwania w Olsztynie. Wykorzystaj potęgę AI i Elite GEO, aby Twoja firma była numerem 1 w ChatGPT i Google.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
       "sections": [
         {
           "type": "Hero",
           "title": "SEO & Elite GEO w Olsztynie",
           "content": "Twoja firma zasługuje na widoczność, która wyprzedza konkurencję. W Olsztynie tradycyjne SEO to już za mało – czas na Elite GEO.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "SEO & Elite GEO w Olsztynie",
           "stats": "Wzrost ruchu lokalnego o średnio 140%"
         },
         {
           "type": "Solution",
           "title": "Dlaczego BoostNow w Olsztynie?",
-          "content": "Łączymy głęboką znajomość lokalnego rynku z globalnymi standardami optymalizacji pod silniki AI. Nie tylko pozycjonujemy – budujemy autorytet Twojej marki."
+          "content": "Łączymy głęboką znajomość lokalnego rynku z globalnymi standardami optymalizacji pod silniki AI. Nie tylko pozycjonujemy – budujemy autorytet Twojej marki.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Dlaczego BoostNow w Olsztynie?"
         },
         {
           "type": "Contact",
           "title": "Darmowy Audyt dla Firm z Olsztyna",
-          "content": "Sprawdź, jak Twoja firma prezentuje się w wynikach AI. Zamów bezpłatną analizę widoczności lokalnej."
+          "content": "Sprawdź, jak Twoja firma prezentuje się w wynikach AI. Zamów bezpłatną analizę widoczności lokalnej.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Darmowy Audyt dla Firm z Olsztyna"
         }
       ]
     },
     {
+      "seo": {
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
       "sections": []
     },
     {
       "slug": "aio-ecommerce",
-      "pageName": "AIO dla e-commerce",
-      "SEO_Title": "AIO dla e-commerce | BoostNow",
-      "SEO_Desc": "Automatyzacja i AI dla Twojego sklepu.",
+      "name": "AIO dla e-commerce",
+      "seo": {
+        "title": "AIO dla e-commerce | BoostNow",
+        "description": "Automatyzacja i AI dla Twojego sklepu.",
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AIO dla e-commerce | BoostNow",
+        "description": "Automatyzacja i AI dla Twojego sklepu.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
       "sections": [
         {
           "type": "Hero",
           "title": "Witamy na stronie AIO dla e-commerce",
-          "content": "To jest profesjonalna podstrona AIO dla e-commerce zoptymalizowana pod kątem konwersji i AI."
+          "content": "To jest profesjonalna podstrona AIO dla e-commerce zoptymalizowana pod kątem konwersji i AI.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "Witamy na stronie AIO dla e-commerce"
         },
         {
           "type": "Solution",
           "title": "Odkryj AIO dla e-commerce",
-          "content": "Tutaj znajdziesz szczegółowe informacje na temat AIO dla e-commerce. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI."
+          "content": "Tutaj znajdziesz szczegółowe informacje na temat AIO dla e-commerce. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Odkryj AIO dla e-commerce"
         },
         {
           "type": "Contact",
           "title": "Zacznijmy współpracę",
-          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć."
+          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zacznijmy współpracę"
         }
       ]
     },
     {
+      "seo": {
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
       "sections": [
         {
           "type": "Hero",
           "title": "Witamy na stronie undefined",
-          "content": "To jest profesjonalna podstrona undefined zoptymalizowana pod kątem konwersji i AI."
+          "content": "To jest profesjonalna podstrona undefined zoptymalizowana pod kątem konwersji i AI.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "Witamy na stronie undefined"
         },
         {
           "type": "Solution",
           "title": "Odkryj undefined",
-          "content": "Tutaj znajdziesz szczegółowe informacje na temat undefined. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI."
+          "content": "Tutaj znajdziesz szczegółowe informacje na temat undefined. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Odkryj undefined"
         },
         {
           "type": "Contact",
           "title": "Zacznijmy współpracę",
-          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć."
+          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zacznijmy współpracę"
         }
       ]
     },
     {
       "slug": "blog",
-      "pageName": "Blog",
-      "SEO_Title": "Blog | BoostNow",
-      "SEO_Desc": "Wiedza o AI i automatyzacji.",
+      "name": "Blog",
+      "seo": {
+        "title": "Blog | BoostNow",
+        "description": "Wiedza o AI i automatyzacji.",
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Blog | BoostNow",
+        "description": "Wiedza o AI i automatyzacji.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
       "sections": [
         {
           "type": "Hero",
           "title": "Witamy na stronie Blog",
-          "content": "To jest profesjonalna podstrona Blog zoptymalizowana pod kątem konwersji i AI."
+          "content": "To jest profesjonalna podstrona Blog zoptymalizowana pod kątem konwersji i AI.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "Witamy na stronie Blog"
         },
         {
           "type": "Solution",
           "title": "Odkryj Blog",
-          "content": "Tutaj znajdziesz szczegółowe informacje na temat Blog. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI."
+          "content": "Tutaj znajdziesz szczegółowe informacje na temat Blog. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Odkryj Blog"
         },
         {
           "type": "Contact",
           "title": "Zacznijmy współpracę",
-          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć."
+          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zacznijmy współpracę"
         }
       ]
     },
     {
       "slug": "home",
-      "pageName": "Strona Główna",
-      "SEO_Title": "BoostNow - Elite SEO & GEO Agency",
-      "SEO_Desc": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
+      "name": "Strona Główna",
+      "seo": {
+        "title": "BoostNow - Elite SEO & GEO Agency",
+        "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
+        "primaryKeyword": "SEO Agency",
+        "semanticKeywords": "GEO, AI Search Optimization, ChatGPT SEO, Perplexity Optimization",
+        "aiSummary": "BoostNow to wiodąca agencja specjalizująca się w Generative Engine Optimization (GEO).",
+        "canonicalUrl": "https://boostnow.pl",
+        "schemaType": "LocalBusiness",
+        "author": {
+          "name": "Mateusz",
+          "bio": "Ekspert SEO/GEO z wieloletnim doświadczeniem."
+        },
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "headline": "BoostNow - Elite SEO & GEO Agency",
+        "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "Mateusz"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
       "sections": [
         {
           "type": "Hero",
           "title": "Witamy w Erze AI",
           "content": "Pomagamy markom zdominować wyniki w ChatGPT, Perplexity i Google AI Overviews.",
-          "stats": "Wzrost widoczności w AI o średnio 115%.",
-          "imageAlt": "BoostNow Hero Image"
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": true,
+          "imageAlt": "BoostNow Hero Image",
+          "stats": "Wzrost widoczności w AI o średnio 115%."
         },
         {
           "type": "Hero",
           "title": "Agencja Neuromarketingowa - CRO & Decision Science",
           "content": "Zwiększamy ROAS e-commerce o 150% w 90 dni dla marek z całej Polski. Architektura konwersji oparta na psychologii.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": true,
+          "imageAlt": "Agencja Neuromarketingowa - CRO & Decision Science",
           "stats": "+150% ROAS, 90 dni do wyników, 7+ lat doświadczenia"
         },
         {
           "type": "Solution",
           "title": "Masz 0.4 sekundy.",
           "content": "Większość firm traci klienta w mgnieniu oka przez tarcie poznawcze. Twoja strona i reklamy są ignorowane. My to zmieniamy. Usuwamy opór, hakujemy uwagę, dowożimy ROI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Masz 0.4 sekundy.",
           "stats": "0.4 sekundy na decyzję klienta"
         },
         {
           "type": "Problem",
           "title": "Problem: Tradycyjne SEO to za mało",
           "content": "W 2026 roku 50% ruchu pochodzi z odpowiedzi AI. Jeśli Cię tam nie ma, nie istniejesz.",
-          "stats": "50% spadku ruchu z tradycyjnego Google do 2028 wg Gartnera.",
-          "imageAlt": "AI Search Market Share Chart"
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "AI Search Market Share Chart",
+          "stats": "50% spadku ruchu z tradycyjnego Google do 2028 wg Gartnera."
         },
         {
           "type": "Solution",
           "title": "Nasze Rozwiązanie: Elite GEO",
           "content": "Optymalizujemy treść pod kątem cytowalności (Citability) i autorytetu (E-E-A-T).",
-          "stats": "90+ punktów w audytach GEO.",
-          "imageAlt": "GEO Optimization Process"
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "GEO Optimization Process",
+          "stats": "90+ punktów w audytach GEO."
         },
         {
           "type": "Industries",
           "title": "Branże, które dominujemy",
-          "content": "E-commerce, SaaS, FinTech, Healthcare. Specjalizujemy się w sektorach o wysokiej konkurencji."
+          "content": "E-commerce, SaaS, FinTech, Healthcare. Specjalizujemy się w sektorach o wysokiej konkurencji.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Branże, które dominujemy"
         },
         {
           "type": "Video",
           "title": "Video & Animation",
-          "content": "Tworzymy animacje, które tłumaczą skomplikowane procesy w 60 sekund."
+          "content": "Tworzymy animacje, które tłumaczą skomplikowane procesy w 60 sekund.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Video & Animation"
         },
         {
           "type": "Industries",
           "title": "Branże, które dominujemy",
-          "content": "E-commerce, SaaS, FinTech, Healthcare. Specjalizujemy się w sektorach o wysokiej konkurencji, gdzie psychologia decyzji i szybkość ładowania strony decydują o zysku."
+          "content": "E-commerce, SaaS, FinTech, Healthcare. Specjalizujemy się w sektorach o wysokiej konkurencji, gdzie psychologia decyzji i szybkość ładowania strony decydują o zysku.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Branże, które dominujemy"
         },
         {
           "type": "Video",
           "title": "Video & Animation",
-          "content": "Tworzymy animacje, które tłumaczą skomplikowane procesy w 60 sekund. Zwiększamy zrozumienie Twojej oferty i eliminujemy tarcie poznawcze."
+          "content": "Tworzymy animacje, które tłumaczą skomplikowane procesy w 60 sekund. Zwiększamy zrozumienie Twojej oferty i eliminujemy tarcie poznawcze.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Video & Animation"
         },
         {
           "type": "Comparison",
           "title": "Porównanie: Tradycyjne SEO vs Elite GEO",
-          "content": "Tradycyjne SEO skupia się na linkach. Elite GEO skupia się na tym, jak AI rozumie Twoją markę."
+          "content": "Tradycyjne SEO skupia się na linkach. Elite GEO skupia się na tym, jak AI rozumie Twoją markę.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Porównanie: Tradycyjne SEO vs Elite GEO"
         },
         {
           "type": "Comparison",
           "title": "Tradycyjne SEO vs Elite GEO",
-          "content": "Tradycyjne SEO skupia się na linkach i słowach kluczowych. Elite GEO skupia się na tym, jak modele AI (LLM) kategoryzują i polecają Twoją markę jako lidera opinii."
+          "content": "Tradycyjne SEO skupia się na linkach i słowach kluczowych. Elite GEO skupia się na tym, jak modele AI (LLM) kategoryzują i polecają Twoją markę jako lidera opinii.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Tradycyjne SEO vs Elite GEO"
         },
         {
           "type": "Results",
           "title": "Nasze Wyniki (Case Studies)",
           "content": "Zwiększyliśmy widoczność klienta X o 300% w wynikach Perplexity w 30 dni.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Nasze Wyniki (Case Studies)",
           "stats": "300% wzrostu w Perplexity"
         },
         {
           "type": "Results",
           "title": "Nasze Wyniki",
           "content": "Zwiększyliśmy ROAS e-commerce o 150% w 90 dni. Nasze strategie Decision Science przekładają się na realne wzrosty przychodów.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "Nasze Wyniki",
           "stats": "150% wzrostu ROAS"
         },
         {
           "type": "FAQ",
           "title": "Często Zadawane Pytania",
-          "content": "Co to jest GEO? Jak długo czeka się na wyniki? Czy to bezpieczne?"
+          "content": "Co to jest GEO? Jak długo czeka się na wyniki? Czy to bezpieczne?",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Często Zadawane Pytania"
         },
         {
           "type": "FAQ",
           "title": "Często Zadawane Pytania",
-          "content": "Dowiedz się więcej o tym, jak pracujemy i jakich wyników możesz się spodziewać."
+          "content": "Dowiedz się więcej o tym, jak pracujemy i jakich wyników możesz się spodziewać.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Często Zadawane Pytania"
         },
         {
           "type": "Contact",
           "title": "Zboostuj wyniki TERAZ",
-          "content": "Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony."
+          "content": "Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zboostuj wyniki TERAZ"
         },
         {
           "type": "Contact",
           "title": "Zboostuj wyniki TERAZ",
-          "content": "Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony i plan dominacji w wynikach AI."
+          "content": "Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony i plan dominacji w wynikach AI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zboostuj wyniki TERAZ"
         }
       ]
     },
     {
       "slug": "o-nas",
-      "pageName": "O nas",
-      "SEO_Title": "O nas | BoostNow",
-      "SEO_Desc": "Poznaj zespół BoostNow i naszą misję.",
+      "name": "O nas",
+      "seo": {
+        "title": "O nas | BoostNow",
+        "description": "Poznaj zespół BoostNow i naszą misję.",
+        "schemaType": "Article",
+        "author": {},
+        "lastUpdated": "2026-05-20"
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "O nas | BoostNow",
+        "description": "Poznaj zespół BoostNow i naszą misję.",
+        "dateModified": "2026-05-20",
+        "author": {
+          "@type": "Person",
+          "name": "BoostNow Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BoostNow",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://boostnow.pl/logo.png"
+          }
+        }
+      },
+      "status": "Published",
       "sections": [
         {
           "type": "Hero",
           "title": "Witamy na stronie O nas",
-          "content": "To jest profesjonalna podstrona O nas zoptymalizowana pod kątem konwersji i AI."
+          "content": "To jest profesjonalna podstrona O nas zoptymalizowana pod kątem konwersji i AI.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "Witamy na stronie O nas"
         },
         {
           "type": "Solution",
           "title": "Odkryj O nas",
-          "content": "Tutaj znajdziesz szczegółowe informacje na temat O nas. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI."
+          "content": "Tutaj znajdziesz szczegółowe informacje na temat O nas. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Odkryj O nas"
         },
         {
           "type": "Contact",
           "title": "Zacznijmy współpracę",
-          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć."
+          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Zacznijmy współpracę"
         }
       ]
     }
