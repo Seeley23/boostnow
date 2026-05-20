@@ -52,8 +52,7 @@ function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        {/* Human-Centric Design: Light theme by default */}
-        <ThemeProvider defaultTheme="light">
+        <ThemeProvider defaultTheme="dark">
           <TooltipProvider>
             <Toaster />
             <Router />
