@@ -48,7 +48,7 @@ const audiences = [
   },
 ];
 
-export default function TargetAudienceSection() {
+export default function TargetAudienceSection(_props?: { title?: string; description?: string }) {
   return (
     <section id="for-whom" className="py-24 lg:py-32 bg-slate-50">
       <div className="container mx-auto px-6">

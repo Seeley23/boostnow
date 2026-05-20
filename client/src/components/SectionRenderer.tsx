@@ -8,7 +8,7 @@ import ProcessSection from './ProcessSection';
 import FAQSection from './FAQSection';
 import ContactSection from './ContactSection';
 import TargetAudienceSection from './TargetAudienceSection';
-import { BeautyHero, BeautyServiceCard, BeautyTestimonial, BeautyStats } from './EliteBeautyComponents';
+
 
 interface Section {
   type: string;
@@ -49,16 +49,6 @@ const SectionRenderer: React.FC<SectionProps> = ({ section }) => {
       case 'Solution':
         return <SolutionSection title={title} content={content} />;
       
-      // Elite Beauty Sections (Human-Centric)
-      case 'BeautyHero':
-        return <BeautyHero title={title} subtitle={content} ctaLabel={ctaLabel} ctaLink={ctaLink} />;
-      case 'BeautyService':
-        return <BeautyServiceCard name={title} description={content} price={price} stats={stats} />;
-      case 'BeautyTestimonial':
-        return <BeautyTestimonial quote={content} author={author} role={role} />;
-      case 'BeautyStats':
-        return <BeautyStats items={items} />;
-
       // Standard Sections
       case 'Services':
         return <ServicesSection />;
