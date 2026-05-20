@@ -1,14 +1,9 @@
 {
   "pages": [
     {
-      "slug": "test",
       "seo": {
-        "aiSummary": "test",
         "schemaType": "Article",
-        "author": {
-          "name": "teset",
-          "bio": "test"
-        },
+        "author": {},
         "lastUpdated": "2026-05-20"
       },
       "jsonLd": {
@@ -17,7 +12,7 @@
         "dateModified": "2026-05-20",
         "author": {
           "@type": "Person",
-          "name": "teset"
+          "name": "BoostNow Team"
         },
         "publisher": {
           "@type": "Organization",
@@ -67,7 +62,38 @@
         }
       },
       "status": "Published",
-      "sections": []
+      "sections": [
+        {
+          "type": "Hero",
+          "title": "Witamy w Erze AI",
+          "content": "Pomagamy markom zdominować wyniki w ChatGPT, Perplexity i Google AI Overviews.",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": true,
+          "imageAlt": "BoostNow Hero Image",
+          "stats": "Wzrost widoczności w AI o średnio 115%."
+        },
+        {
+          "type": "Problem",
+          "title": "Problem: Tradycyjne SEO to za mało",
+          "content": "W 2026 roku 50% ruchu pochodzi z odpowiedzi AI. Jeśli Cię tam nie ma, nie istniejesz.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "AI Search Market Share Chart",
+          "stats": "50% spadku ruchu z tradycyjnego Google do 2028 wg Gartnera."
+        },
+        {
+          "type": "Solution",
+          "title": "Nasze Rozwiązanie: Elite GEO",
+          "content": "Optymalizujemy treść pod kątem cytowalności (Citability) i autorytetu (E-E-A-T).",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": true,
+          "imageAlt": "GEO Optimization Process",
+          "stats": "90+ punktów w audytach GEO."
+        }
+      ]
     }
   ]
 }
