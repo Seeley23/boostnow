@@ -8,7 +8,6 @@ import ProcessSection from './ProcessSection';
 import FAQSection from './FAQSection';
 import ContactSection from './ContactSection';
 import TargetAudienceSection from './TargetAudienceSection';
-import { BeautyHero, BeautyServiceCard, BeautyTestimonial, BeautyStats } from './EliteBeautyComponents';
 
 interface Section {
   type: string;
@@ -20,12 +19,6 @@ interface Section {
   imageAlt?: string;
   schemaMarkup?: string;
   stats?: string;
-  ctaLabel?: string;
-  ctaLink?: string;
-  price?: string;
-  author?: string;
-  role?: string;
-  items?: any[];
 }
 
 interface SectionProps {
@@ -33,59 +26,43 @@ interface SectionProps {
 }
 
 const SectionRenderer: React.FC<SectionProps> = ({ section }) => {
-  const { 
-    type, title, content, extraData, htmlTag, 
-    geoCitability, imageAlt, schemaMarkup, stats,
-    ctaLabel, ctaLink, price, author, role, items
-  } = section;
+  const { type, title, content, extraData, htmlTag, geoCitability, imageAlt, schemaMarkup, stats } = section;
+  const Tag = (htmlTag || 'section').toLowerCase() as any;
   
   const renderContent = () => {
     switch (type) {
-      // Legacy / Tech Sections (Now updated to Human-Centric)
       case 'Hero':
         return <HeroSection title={title} subtitle={content} />;
       case 'Problem':
         return <ProblemSection title={title} content={content} />;
       case 'Solution':
         return <SolutionSection title={title} content={content} />;
-      
-      // Elite Beauty Sections (Human-Centric)
-      case 'BeautyHero':
-        return <BeautyHero title={title} subtitle={content} ctaLabel={ctaLabel} ctaLink={ctaLink} />;
-      case 'BeautyService':
-        return <BeautyServiceCard name={title} description={content} price={price} stats={stats} />;
-      case 'BeautyTestimonial':
-        return <BeautyTestimonial quote={content} author={author} role={role} />;
-      case 'BeautyStats':
-        return <BeautyStats items={items} />;
-
-      // Standard Sections
       case 'Services':
-        return <ServicesSection />;
+        return <ServicesSection title={title} description={content} />;
       case 'Results':
-        return <ResultsSection />;
+        return <ResultsSection title={title} description={content} />;
       case 'Process':
-        return <ProcessSection />;
+        return <ProcessSection title={title} description={content} />;
       case 'FAQ':
-        return <FAQSection />;
+        return <FAQSection title={title} description={content} />;
       case 'Contact':
-        return <ContactSection />;
+        return <ContactSection title={title} description={content} />;
       case 'Target':
         return <TargetAudienceSection title={title} description={content} />;
-      
       default:
         return (
-          <div className="py-10 text-center border-2 border-dashed border-slate-200 rounded-3xl">
-            <p className="text-slate-400 font-medium">Sekcja typu "{type}" nie jest jeszcze obsługiwana.</p>
+          <div className="py-10 text-center border-2 border-dashed border-gray-300 rounded-lg">
+            <p className="text-gray-500">Sekcja typu "{type}" nie jest jeszcze obsługiwana.</p>
           </div>
         );
     }
   };
 
   return (
-    <div 
+    <Tag 
       className={geoCitability ? "geo-citable-block" : ""} 
       data-geo-cite={geoCitability ? "true" : undefined}
+      data-stats={stats}
     >
       {schemaMarkup && (
         <script type="application/ld+json">
@@ -93,7 +70,7 @@ const SectionRenderer: React.FC<SectionProps> = ({ section }) => {
         </script>
       )}
       {renderContent()}
-    </div>
+    </Tag>
   );
 };
 

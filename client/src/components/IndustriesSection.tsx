@@ -1,91 +1,173 @@
 import { useState } from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import industries from '@/data/industries.json';
 
 export default function IndustriesSection() {
   const [selectedIndustry, setSelectedIndustry] = useState(industries[0]);
 
   return (
-    <section className="py-24 lg:py-32 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl lg:text-6xl font-serif text-slate-900 mb-8 leading-tight">
-            Rozwiązania skrojone pod Twoją branżę.
+    <section className="py-20 bg-background">
+      <div className="container">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white text-center">
+            Personalizowanie w zależności od <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">branży</span>
           </h2>
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Każdy rynek ma swoją specyfikę. Personalizujemy naszą strategię, aby trafić dokładnie w potrzeby Twoich klientów.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Psychologia decyzji + mierzalne wyniki
           </p>
-        </div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+            Każda branża ma unikalne wyzwania. Dlatego personalizujemy naszą strategię do Twoich konkretnych potrzeb, celów i rynku.
+          </p>
+        </motion.div>
 
         {/* Industry Tabs */}
-        <div className="flex flex-wrap gap-3 mb-16">
+        <div className="flex flex-wrap gap-3 justify-center mb-12">
           {industries.map((industry) => (
             <button
               key={industry.id}
               onClick={() => setSelectedIndustry(industry)}
-              className={`px-6 py-3 rounded-2xl font-medium transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-lg font-medium transition-all ${
                 selectedIndustry.id === industry.id
-                  ? 'bg-slate-900 text-white shadow-lg shadow-slate-200'
-                  : 'bg-slate-50 text-slate-500 hover:bg-slate-100'
+                  ? 'bg-lime-400 text-black'
+                  : 'bg-card text-foreground hover:bg-card/80 border border-border'
               }`}
             >
-              {industry.name}
+              {industry.icon} {industry.name}
             </button>
           ))}
         </div>
 
         {/* Selected Industry Details */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedIndustry.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="grid lg:grid-cols-2 gap-12"
-          >
-            <div className="bg-slate-50 p-10 lg:p-16 rounded-[48px]">
-              <h3 className="text-3xl font-serif text-slate-900 mb-6">{selectedIndustry.name}</h3>
-              <p className="text-lg text-slate-600 mb-10 leading-relaxed">{selectedIndustry.description}</p>
-              
-              <div className="space-y-8">
-                {selectedIndustry.solutions.map((solution, idx) => (
-                  <div key={idx} className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0 mt-1">
-                      <CheckCircle2 size={16} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 mb-1">{solution.title}</h4>
-                      <p className="text-slate-600 text-sm leading-relaxed">{solution.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* Left: Problem & Solutions */}
+          <div>
+            <div className="bg-card rounded-xl p-8 border border-border">
+              <h3 className="text-2xl font-bold mb-4 text-foreground">
+                {selectedIndustry.name}
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                {selectedIndustry.description}
+              </p>
 
-            <div className="bg-slate-900 p-10 lg:p-16 rounded-[48px] text-white flex flex-col justify-between">
+              {/* Problem */}
+              <div className="mb-8">
+                <h4 className="text-lg font-semibold mb-3 text-foreground">
+                  Problem
+                </h4>
+                <p className="text-muted-foreground">
+                  {selectedIndustry.problem}
+                </p>
+              </div>
+
+              {/* Solutions */}
               <div>
-                <span className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 block">Case Study</span>
-                <h4 className="text-3xl font-serif mb-8">{selectedIndustry.caseStudy.title}</h4>
-                
-                <div className="grid grid-cols-2 gap-8 mb-12">
-                  {selectedIndustry.caseStudy.results.map((result, idx) => (
-                    <div key={idx}>
-                      <div className="text-4xl font-serif text-emerald-400 mb-1">{result.value}</div>
-                      <div className="text-sm text-slate-400">{result.metric}</div>
+                <h4 className="text-lg font-semibold mb-4 text-foreground">
+                  Nasze Rozwiązanie
+                </h4>
+                <div className="space-y-4">
+                  {selectedIndustry.solutions.map((solution, idx) => (
+                    <div key={idx} className="flex gap-3">
+                      <div className="w-2 h-2 rounded-full bg-lime-400 mt-2 flex-shrink-0" />
+                      <div>
+                        <h5 className="font-semibold text-foreground">
+                          {solution.title}
+                        </h5>
+                        <p className="text-sm text-muted-foreground">
+                          {solution.description}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <button className="group flex items-center gap-3 text-lg font-bold hover:gap-5 transition-all cursor-pointer">
-                Zobacz szczegóły wdrożenia
-                <ArrowRight className="w-6 h-6" />
-              </button>
+              {/* Result */}
+              <div className="mt-8 p-4 bg-lime-400/10 rounded-lg border border-lime-400/20">
+                <p className="text-sm text-muted-foreground mb-2">Wynik</p>
+                <p className="text-lg font-bold text-lime-400">
+                  {selectedIndustry.result}
+                </p>
+              </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+
+          {/* Right: Case Study */}
+          <div>
+            <div className="bg-card rounded-xl p-8 border border-border h-full">
+              <h4 className="text-2xl font-bold mb-2 text-foreground">
+                Case Study
+              </h4>
+              <p className="text-muted-foreground mb-6">
+                {selectedIndustry.caseStudy.title}
+              </p>
+
+              {/* Challenge */}
+              <div className="mb-6">
+                <h5 className="font-semibold text-foreground mb-2">Wyzwanie</h5>
+                <p className="text-sm text-muted-foreground">
+                  {selectedIndustry.caseStudy.challenge}
+                </p>
+              </div>
+
+              {/* Strategy */}
+              <div className="mb-6">
+                <h5 className="font-semibold text-foreground mb-2">Strategia</h5>
+                <p className="text-sm text-muted-foreground">
+                  {selectedIndustry.caseStudy.strategy}
+                </p>
+              </div>
+
+              {/* Results */}
+              <div className="mb-6">
+                <h5 className="font-semibold text-foreground mb-4">Wyniki</h5>
+                <div className="space-y-3">
+                  {selectedIndustry.caseStudy.results.map((result, idx) => (
+                    <div key={idx} className="flex justify-between items-start">
+                      <div>
+                        <p className="text-sm text-muted-foreground">
+                          {result.metric}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {result.detail}
+                        </p>
+                      </div>
+                      <p className="text-xl font-bold text-lime-400">
+                        {result.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Timeline */}
+              <div className="p-4 bg-lime-400/10 rounded-lg border border-lime-400/20">
+                <p className="text-sm text-muted-foreground mb-1">Czas realizacji</p>
+                <p className="text-lg font-bold text-lime-400">
+                  {selectedIndustry.caseStudy.timeline}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <button className="inline-flex items-center gap-2 px-8 py-4 bg-lime-400 text-black font-semibold rounded-lg hover:bg-lime-500 transition-colors">
+            Omów swoją sytuację
+            <ChevronRight className="w-5 h-5" />
+          </button>
+          <p className="text-sm text-muted-foreground mt-4">
+            Nie znalazłeś swojej branży? Skontaktuj się z nami - mamy rozwiązanie dla każdego biznesu.
+          </p>
+        </div>
       </div>
     </section>
   );

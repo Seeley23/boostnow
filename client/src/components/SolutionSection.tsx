@@ -1,74 +1,109 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, Sparkles, Target, Zap } from "lucide-react";
 
 interface SolutionProps {
   title?: string;
   content?: string;
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
 export default function SolutionSection({ title, content }: SolutionProps) {
-  const displayTitle = title || "Projektujemy dla ludzkiego mózgu.";
-  const displayContent = content || "Większość firm traci klienta przez tarcie poznawcze. My usuwamy bariery, tworząc ścieżki zakupu, które są naturalne, intuicyjne i skuteczne.";
+  const displayTitle = title || "Masz 0.4 sekundy.";
+  const displayContent = content || "Większość firm traci klienta w mgnieniu oka przez tarcie poznawcze. Twoja strona i reklamy są ignorowane. My to zmieniamy.";
 
   const solutions = [
     {
       title: "Usuwamy opór",
-      desc: "Projektujemy interfejsy, które nie wymagają myślenia. Klient po prostu wie, co robić.",
-      icon: Zap,
+      desc: "Projektujemy ścieżki zakupu zgodne z pracą ludzkiego mózgu.",
+      emoji: "✂️",
     },
     {
-      title: "Budujemy autorytet",
-      desc: "Tworzymy przekaz, który buduje zaufanie od pierwszej sekundy kontaktu z marką.",
-      icon: Target,
+      title: "Hakujemy uwagę",
+      desc: "Tworzymy przekaz, który omija filtry krytyczne i trafia do decyzji.",
+      emoji: "👁️",
     },
     {
-      title: "Maksymalizujemy ROI",
-      desc: "Każdy piksel i każde słowo ma jeden cel: zwiększenie Twojej konwersji.",
-      icon: Sparkles,
+      title: "Dowożimy ROI",
+      desc: "Interesuje nas Twój zysk, nie puste zasięgi.",
+      emoji: "🏗️",
     },
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+    <section className="relative py-24 overflow-hidden bg-black">
+      <div className="container">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="max-w-4xl mx-auto text-center"
+        >
+          <motion.h2 
+            variants={itemVariants}
+            className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white text-center"
           >
-            <h2 className="text-4xl lg:text-6xl font-serif text-slate-900 mb-8 leading-tight">
-              {displayTitle}
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-              {displayContent}
-            </p>
-          </motion.div>
-        </div>
+            {displayTitle}
+          </motion.h2>
+          
+          <motion.p 
+            variants={itemVariants}
+            className="text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto"
+          >
+            {displayContent}
+          </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-12">
-          {solutions.map((solution, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group cursor-pointer"
-            >
-              <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-900 mb-8 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300 group-hover:rotate-3">
-                <solution.icon className="w-8 h-8" />
-              </div>
-              <h3 className="text-2xl font-serif text-slate-900 mb-4">{solution.title}</h3>
-              <p className="text-slate-600 leading-relaxed mb-6">{solution.desc}</p>
-              <div className="flex items-center gap-2 text-emerald-500 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                <CheckCircle2 className="w-4 h-4" />
-                Sprawdzone rozwiązanie
-              </div>
-            </motion.div>
-          ))}
-        </div>
+          <motion.div 
+            variants={containerVariants}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {solutions.map((solution, idx) => (
+              <motion.div
+                key={idx}
+                variants={cardVariants}
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 group cursor-pointer transition-all hover:border-lime-400/50"
+              >
+                <div className="text-4xl mb-4 flex-shrink-0 group-hover:scale-110 transition-transform">
+                  {solution.emoji}
+                </div>
+                <h3 className="text-lg font-semibold text-lime-400 mb-3 group-hover:text-lime-300 transition-colors">
+                  {solution.title}
+                </h3>
+                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
+                  {solution.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
