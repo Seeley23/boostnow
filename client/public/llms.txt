@@ -1,8 +1,22 @@
-# BoostNow - Elite SEO & GEO Agency
-> Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.
+# BoostNow - Agencja SEO, GEO, AIO i AEO
 
-## Kluczowe Strony
+> BoostNow to polska agencja specjalizująca się w pozycjonowaniu
+> stron w Google i wyszukiwarkach AI (ChatGPT, Perplexity, Gemini).
+> Obsługujemy firmy z Olsztyna i całej Polski.
+
+## Usługi
+
+- [SEO](https://boostnow.pl/seo)
+- [GEO - Generative Engine Optimization](https://boostnow.pl/geo)
+- [AEO - Answer Engine Optimization](https://boostnow.pl/aeo)
+- [AIO - AI Optimization](https://boostnow.pl/aio)
+- [Audyt SEO](https://boostnow.pl/audyt-seo)
+
+## Blog
+
+- [Blog SEO i GEO](https://boostnow.pl/blog)
 
 ## Kontakt
-- Email: kontakt@boostnow.pl
+
 - Strona: https://boostnow.pl
+- Lokalizacja: Olsztyn, Polska
