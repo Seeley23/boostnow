@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: '18'
       - name: Install dependencies
-        run: npm install axios
+        npm install axios --legacy-peer-deps
       - name: Run Setup Script
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
