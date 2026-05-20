@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
 
+interface SolutionProps {
+  title?: string;
+  content?: string;
+}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -29,12 +34,10 @@ const cardVariants = {
   },
 };
 
-interface SolutionSectionProps {
-  title?: string;
-  content?: string;
-}
+export default function SolutionSection({ title, content }: SolutionProps) {
+  const displayTitle = title || "Masz 0.4 sekundy.";
+  const displayContent = content || "Większość firm traci klienta w mgnieniu oka przez tarcie poznawcze. Twoja strona i reklamy są ignorowane. My to zmieniamy.";
 
-export default function SolutionSection({ title, content }: SolutionSectionProps = {}) {
   const solutions = [
     {
       title: "Usuwamy opór",
@@ -63,23 +66,20 @@ export default function SolutionSection({ title, content }: SolutionSectionProps
           variants={containerVariants}
           className="max-w-4xl mx-auto text-center"
         >
-          {/* Main Heading */}
           <motion.h2 
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white text-center"
           >
-            Masz <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">0.4 sekundy.</span>
+            {displayTitle}
           </motion.h2>
-
-          {/* Description */}
+          
           <motion.p 
             variants={itemVariants}
-            className="text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
+            className="text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto"
           >
-            Większość firm traci klienta w mgnieniu oka przez "tarcie poznawcze". Twoja strona i reklamy są ignorowane. My to zmieniamy.
+            {displayContent}
           </motion.p>
 
-          {/* Three Solutions */}
           <motion.div 
             variants={containerVariants}
             className="grid md:grid-cols-3 gap-8"
@@ -91,12 +91,9 @@ export default function SolutionSection({ title, content }: SolutionSectionProps
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 group cursor-pointer transition-all hover:border-lime-400/50"
               >
-                <motion.div 
-                  className="text-4xl mb-4 flex-shrink-0 group-hover:scale-110 transition-transform"
-                  whileHover={{ rotate: 10 }}
-                >
+                <div className="text-4xl mb-4 flex-shrink-0 group-hover:scale-110 transition-transform">
                   {solution.emoji}
-                </motion.div>
+                </div>
                 <h3 className="text-lg font-semibold text-lime-400 mb-3 group-hover:text-lime-300 transition-colors">
                   {solution.title}
                 </h3>

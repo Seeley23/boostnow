@@ -25,7 +25,10 @@ interface ProblemSectionProps {
   content?: string;
 }
 
-export default function ProblemSection({ title, content }: ProblemSectionProps = {}) {
+export default function ProblemSection({ title, content }: ProblemSectionProps) {
+  const displayTitle = title || "Twój marketing jest zbyt skomplikowany, by sprzedawać.";
+  const displayContent = content || "Większość firm płaci za treści, których nikt nie doczytuje do końca. Każde zbędne zdanie i każda sekunda nudy w wideo to moment, w którym klient rezygnuje.";
+
   return (
     <section className="relative py-24 overflow-hidden bg-black">
       <div className="container">
@@ -40,15 +43,15 @@ export default function ProblemSection({ title, content }: ProblemSectionProps =
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white"
           >
-            Twój marketing jest zbyt skomplikowany, by sprzedawać.
+            {displayTitle}
           </motion.h2>
-
+          
           {/* Description */}
           <motion.p 
             variants={itemVariants}
             className="text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl"
           >
-            Większość firm płaci za treści, których nikt nie doczytuje do końca. Każde zbędne zdanie i każda sekunda nudy w wideo to moment, w którym klient rezygnuje.
+            {displayContent}
           </motion.p>
 
           {/* Three Errors */}
@@ -57,7 +60,6 @@ export default function ProblemSection({ title, content }: ProblemSectionProps =
             className="mb-12"
           >
             <h3 className="text-xl font-semibold text-lime-400 mb-8">Twoje straty wynikają z trzech błędów:</h3>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { title: "Przeładowanie", desc: "Zbyt dużo informacji sprawia, że odbiorca przestaje uważać." },
