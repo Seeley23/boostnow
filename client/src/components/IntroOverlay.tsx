@@ -1,13 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MousePointerClick } from "lucide-react";
-
-/* IntroOverlay Component
-   Design: "Precision Strike" - Military-Grade Minimalism
-   - Terminal-style text animation
-   - Animated cursor icon for CTA
-   - Only shows on first visit (localStorage)
-*/
 
 interface IntroOverlayProps {
   onComplete: () => void;
@@ -15,144 +7,50 @@ interface IntroOverlayProps {
 
 export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
   const [showText, setShowText] = useState(false);
-  const [showButton, setShowButton] = useState(false);
-  const [displayedText, setDisplayedText] = useState("");
-  const fullText = "Make your brand fly";
 
   useEffect(() => {
-    // Start text animation after initial delay
-    const textTimer = setTimeout(() => {
-      setShowText(true);
-    }, 500);
-
-    return () => clearTimeout(textTimer);
+    const timer = setTimeout(() => setShowText(true), 500);
+    return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    if (!showText) return;
-
-    let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setDisplayedText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
-        setTimeout(() => setShowButton(true), 300);
-      }
-    }, 80);
-
-    return () => clearInterval(typingInterval);
-  }, [showText]);
-
-  const handleClick = () => {
-    onComplete();
-  };
 
   return (
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background"
-        style={{
-          background: "linear-gradient(180deg, oklch(0.08 0.01 260) 0%, oklch(0.10 0.01 260) 50%, oklch(0.08 0.01 260) 100%)",
-        }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white"
       >
-        {/* Subtle grid background */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(oklch(0.89 0.23 128 / 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, oklch(0.89 0.23 128 / 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
-          }}
-        />
-
-        {/* Animated scan line */}
-        <motion.div
-          className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"
-          initial={{ top: "0%" }}
-          animate={{ top: "100%" }}
-          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-        />
-
-        {/* Main content */}
         <div className="relative z-10 text-center px-6">
-          {/* Logo/Brand mark */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-8"
-          >
-            <div className="inline-flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-primary animate-pulse-glow" />
-              <span className="text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase">
-                BoostNow
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Main headline with typing effect */}
-          <div className="min-h-[120px] flex items-center justify-center">
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">
-              {displayedText}
-              {showText && displayedText.length < fullText.length && (
-                <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 animate-blink" />
-              )}
-            </h1>
-          </div>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: showButton ? 1 : 0 }}
-            transition={{ duration: 0.5 }}
-            className="mt-4 text-lg text-muted-foreground font-body"
-          >
-            Zboostuj z nami swoją markę
-          </motion.p>
-
-          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: showButton ? 1 : 0, y: showButton ? 0 : 20 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-12"
+            animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
+            <div className="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center text-white font-serif text-3xl mx-auto mb-8">
+              B
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-serif text-slate-900 mb-6 tracking-tight">
+              BoostNow
+            </h1>
+            <p className="text-xl text-slate-500 font-medium tracking-widest uppercase mb-12">
+              Architekci Decyzji
+            </p>
+            
             <button
-              onClick={handleClick}
-              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-lg transition-all duration-300 hover:scale-105 glow-lime hover:glow-lime-strong"
+              onClick={onComplete}
+              className="group bg-slate-900 text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-slate-800 transition-all cursor-pointer shadow-xl shadow-slate-200"
             >
-              <span>Kliknij i przejdź dalej</span>
-              <motion.div
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  rotate: [0, -10, 10, 0]
-                }}
-                transition={{ 
-                  duration: 1.5, 
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <MousePointerClick className="w-5 h-5" />
-              </motion.div>
-              
-              {/* Animated border */}
-              <span className="absolute inset-0 rounded-lg border-2 border-primary opacity-50 animate-pulse" />
+              Wejdź do świata wzrostu
             </button>
           </motion.div>
         </div>
 
-        {/* Bottom decorative elements */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs text-muted-foreground">
-          <div className="w-2 h-2 rounded-full bg-primary/50" />
-          <span className="tracking-wider">SYSTEM READY</span>
+        {/* Human-Centric Decorative Element */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+          <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <path d="M500,100 C600,200 800,300 900,500 C1000,700 800,900 500,900 C200,900 0,700 100,500 C200,300 400,200 500,100" fill="currentColor" />
+          </svg>
         </div>
       </motion.div>
     </AnimatePresence>

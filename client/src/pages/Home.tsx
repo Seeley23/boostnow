@@ -32,7 +32,7 @@ export default function Home() {
   const getSection = (type: string) => homePage?.sections?.find(s => s.type === type);
 
   return (
-    <div className="min-h-screen bg-background pt-20 lg:pt-24">
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>{seo.title}</title>
         <meta name="robots" content="index, follow" />
@@ -60,8 +60,8 @@ export default function Home() {
         <RecentArticlesSection />
         <FAQSection />
         <ContactSection />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

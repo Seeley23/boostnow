@@ -1,21 +1,12 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
-
-/* Navigation Component
-   Design: "Precision Strike" - Military-Grade Minimalism
-   - Fixed sticky header with glass effect on scroll
-   - Status indicator (green dot)
-   - Mobile hamburger menu
-   - Logo with negative margins to prevent height overflow
-*/
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 const navItems = [
   { label: "O nas", href: "/about" },
-  { label: "AIO dla e-commerce", href: "/aio", highlight: true },
-  { label: "Oblicz straty", href: "/calculator" },
+  { label: "Usługi", href: "/services" },
+  { label: "Case Studies", href: "/cases" },
   { label: "Blog", href: "/blog" },
-  { label: "Słownik", href: "/glossary" },
   { label: "Kontakt", href: "#contact" },
 ];
 
@@ -25,7 +16,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -45,109 +36,86 @@ export default function Navigation() {
   };
 
   return (
-    <>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 1000 }}
-        className={`${
-          isScrolled
-            ? "bg-background/95 backdrop-blur-xl border-b border-border/50" 
-            : "bg-background/95 border-b border-border/30"
-        }`}
-      >
-        <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4 lg:gap-8 py-3 lg:py-4">
-            {/* Logo */}
-            <a
-              href="/"
-              className="flex-shrink-0 flex items-center justify-center gap-0 group bg-transparent p-0 py-0"
-            >
-              <img 
-                src="/images/logo.svg" 
-                alt="BoostNow Logo"
-                width="288"
-                height="72"
-                style={{ display: "block", margin: "0" }}
-                className="h-12 sm:h-14 lg:h-[72px] w-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 
-              />
-            </a>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-3 lg:gap-4 flex-1 justify-center overflow-x-auto">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`text-xs lg:text-sm font-medium transition-colors whitespace-nowrap ${
-                    (item as any).highlight
-                      ? "text-lime-400 hover:text-lime-300 font-semibold"
-                      : "text-foreground/70 hover:text-foreground"
-                  }`}
-                >
-                  {item.label}
-                  {(item as any).highlight && (
-                    <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse align-middle" />
-                  )}
-                </button>
-              ))}
+    <header
+      className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
+        isScrolled
+          ? "py-4 bg-white/80 backdrop-blur-lg border-b border-slate-100 shadow-sm"
+          : "py-6 bg-transparent"
+      }`}
+    >
+      <nav className="container mx-auto px-6">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <a href="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white font-serif text-xl group-hover:rotate-3 transition-transform">
+              B
             </div>
+            <span className="text-xl font-serif font-bold text-slate-900 tracking-tight">BoostNow</span>
+          </a>
 
-            {/* CTA Button */}
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-8">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center gap-4">
             <button
               onClick={() => scrollToSection("#contact")}
-              className="hidden lg:inline-flex flex-shrink-0 px-6 py-2 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
+              className="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-all flex items-center gap-2 cursor-pointer"
             >
-              Zboostuj wyniki
-            </button>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden flex-shrink-0 text-foreground"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              Rozpocznij projekt
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 text-slate-900 cursor-pointer"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="lg:hidden border-t border-border/30 py-4 space-y-2"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden overflow-hidden bg-white border-t border-slate-100 mt-4"
             >
-              {navItems.map((item) => (
+              <div className="py-6 space-y-4">
+                {navItems.map((item) => (
+                  <button
+                    key={item.href}
+                    onClick={() => scrollToSection(item.href)}
+                    className="block w-full text-left text-lg font-medium text-slate-600 hover:text-slate-900 py-2 cursor-pointer"
+                  >
+                    {item.label}
+                  </button>
+                ))}
                 <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
-                    (item as any).highlight
-                      ? "text-lime-400 hover:text-lime-300 font-semibold hover:bg-lime-400/10"
-                      : "text-foreground/70 hover:text-foreground hover:bg-background/50"
-                  }`}
+                  onClick={() => scrollToSection("#contact")}
+                  className="w-full bg-slate-900 text-white px-6 py-4 rounded-2xl text-center font-medium cursor-pointer"
                 >
-                  {item.label}
-                  {(item as any).highlight && (
-                    <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse align-middle" />
-                  )}
+                  Rozpocznij projekt
                 </button>
-              ))}
-              <button
-                onClick={() => scrollToSection("#contact")}
-                className="block w-full px-4 py-3 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity"
-              >
-                Zboostuj wyniki
-              </button>
+              </div>
             </motion.div>
           )}
-        </nav>
-      </motion.header>
-
-      {/* Spacer to prevent content overlap with fixed header */}
-      <div className="h-16 sm:h-20 lg:h-24" />
-    </>
+        </AnimatePresence>
+      </nav>
+    </header>
   );
 }

@@ -1,14 +1,5 @@
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import { Search, Lightbulb, Rocket, BarChart3 } from "lucide-react";
-
-/* ProcessSection Component
-   Design: "Precision Strike" - Military-Grade Minimalism
-   - Glass-box transparency approach
-   - Timeline visualization
-   - Step-by-step process
-*/
 
 const steps = [
   {
@@ -41,120 +32,51 @@ const steps = [
   },
 ];
 
-interface ProcessSectionProps {
-  title?: string;
-  description?: string;
-}
-
-export default function ProcessSection({ title, description }: ProcessSectionProps = {}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+export default function ProcessSection() {
   return (
-    <section id="process" className="py-24 lg:py-32 relative overflow-hidden">
-      {/* Background with process image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/process-bg_2fb02c4b.png"
-          alt="Process background"
-          loading="lazy"
-          width="1920"
-          height="1080"
-          className="w-full h-full object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-      </div>
-
-      <div className="container relative z-10" ref={ref}>
-        {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <span className="inline-block text-sm font-medium text-primary tracking-wider uppercase mb-4">
-            Nasz Proces
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Transparentność{" "}
-            <span className="text-gradient-lime">buduje dystans do konkurencji</span>
+    <section id="process" className="py-24 lg:py-32 bg-slate-50">
+      <div className="container mx-auto px-6">
+        <div className="max-w-3xl mb-20">
+          <h2 className="text-4xl lg:text-6xl font-serif text-slate-900 mb-8 leading-tight">
+            Protokół Twojego wzrostu.
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Oto protokół Twojego wzrostu. Żadnych domysłów. Tylko systematyczna eliminacja błędów poznawczych Twoich klientów.
+          <p className="text-xl text-slate-600 leading-relaxed">
+            Żadnych domysłów. Tylko systematyczna eliminacja błędów poznawczych Twoich klientów i budowanie trwałej przewagi.
           </p>
-        </motion.div>
-
-        {/* Process timeline */}
-        <div className="relative">
-          {/* Connecting line - desktop */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 40 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.15 * index }}
-                className="relative"
-              >
-                {/* Step card */}
-                <div className="group h-full p-6 rounded-xl bg-card/50 border border-border hover:border-primary/30 backdrop-blur-sm transition-all duration-300">
-                  {/* Number and icon */}
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="relative">
-                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                        <step.icon className="w-7 h-7 text-primary" />
-                      </div>
-                      {/* Status dot */}
-                      <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-primary animate-pulse" />
-                    </div>
-                    <span className="font-heading text-4xl font-bold text-border group-hover:text-primary/30 transition-colors">
-                      {step.number}
-                    </span>
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="font-heading font-bold text-lg text-foreground mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {step.description}
-                  </p>
-
-                  {/* Duration badge */}
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary text-xs font-medium text-secondary-foreground">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    {step.duration}
-                  </div>
-                </div>
-
-                {/* Arrow connector - mobile/tablet */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center my-4">
-                    <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
         </div>
 
-        {/* Bottom note */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-border bg-card/50">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground">
-              Średni czas do pierwszych wyników: <strong className="text-foreground">90 dni</strong>
-            </span>
-          </div>
-        </motion.div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative group"
+            >
+              <div className="bg-white p-10 rounded-[40px] border border-slate-100 h-full flex flex-col shadow-sm hover:shadow-xl transition-all">
+                <div className="flex justify-between items-start mb-8">
+                  <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-900 group-hover:bg-slate-900 group-hover:text-white transition-all">
+                    <step.icon className="w-6 h-6" />
+                  </div>
+                  <span className="text-4xl font-serif text-slate-100 group-hover:text-slate-200 transition-colors">
+                    {step.number}
+                  </span>
+                </div>
+                
+                <h3 className="text-xl font-serif text-slate-900 mb-4">{step.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
+                  {step.description}
+                </p>
+                
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                  {step.duration}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

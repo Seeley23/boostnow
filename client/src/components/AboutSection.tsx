@@ -1,111 +1,77 @@
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { Brain, Rocket, Shield, Users } from "lucide-react";
-
-/* AboutSection Component
-   Design: "Precision Strike" - Military-Grade Minimalism
-   - Asymmetric two-column layout
-   - Value propositions with icons
-   - Data-driven credibility
-*/
+import { Brain, Sparkles, Shield, Users } from "lucide-react";
 
 const values = [
   {
     icon: Brain,
     title: "Decision Science",
-    description: "Neuromarketing, który paraliżuje konkurencję.",
+    description: "Wykorzystujemy psychologię poznawczą, aby Twoja oferta była naturalnym wyborem.",
   },
   {
-    icon: Rocket,
-    title: "Amunicja Wizualna",
-    description: "Treści wideo projektowane do przejęcia kontroli nad okiem w 0.4 sekundy.",
+    icon: Sparkles,
+    title: "Elite Design",
+    description: "Tworzymy interfejsy, które zachwycają estetyką i prowadzą do konwersji.",
   },
   {
     icon: Shield,
-    title: "Kolonizacja Rynku",
-    description: "Budujemy społeczności, które nie kupują produktów. One wyznają Twoją markę.",
+    title: "Budowanie Zaufania",
+    description: "Projektujemy komunikację, która buduje autorytet Twojej marki od pierwszej sekundy.",
   },
   {
     icon: Users,
-    title: "Kontrola Narracji",
-    description: "Twoja marka staje się głosem, któremu słuchają. Eliminujemy szum.",
+    title: "Ludzkie Podejście",
+    description: "Wierzymy, że za każdą liczbą stoi człowiek. Projektujemy dla ludzi, nie dla algorytmów.",
   },
 ];
 
 export default function AboutSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="about" className="py-24 lg:py-32 relative overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent" />
-      
-      <div className="container relative z-10" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left column - Text content */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-block text-sm font-medium text-primary tracking-wider uppercase mb-4">
-                O BoostNow
-              </span>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Jesteśmy <span className="text-gradient-lime">Architektami Decyzji</span>. Reszta to tylko dekoracja.
-              </h2>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="space-y-4 text-muted-foreground text-lg leading-relaxed"
-            >
+    <section id="about" className="py-24 lg:py-32 bg-white overflow-hidden">
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 block">
+              O BoostNow
+            </span>
+            <h2 className="text-4xl lg:text-6xl font-serif text-slate-900 mb-8 leading-tight">
+              Jesteśmy Architektami Decyzji.
+            </h2>
+            <div className="space-y-6 text-xl text-slate-600 leading-relaxed mb-12">
               <p>
-                W erze cyfrowego szumu marketing oparty na nadziei to sabotaż budżetu. <strong className="text-foreground">My nie zgadujemy. My egzekwujemy.</strong>
+                W świecie przeładowanym informacjami, prostota jest najwyższą formą wyrafinowania. My nie tylko robimy marketing – my projektujemy doświadczenia, które usuwają tarcie poznawcze.
               </p>
               <p>
-                Wykorzystujemy mechanizmy <strong className="text-primary">Decision Science</strong>, aby ominąć racjonalne filtry Twoich odbiorców i trafić prosto w ich instynkty, sprawiając, że wybiera Ciebie.
+                Łączymy precyzję danych z głębokim zrozumieniem ludzkich zachowań, aby Twoja marka nie tylko była widoczna, ale przede wszystkim – wybierana.
               </p>
-            </motion.div>
+            </div>
+            
+            <div className="p-8 bg-slate-50 rounded-[32px] border border-slate-100 italic text-slate-700 text-lg">
+              "Naszą misją jest przywrócenie ludzkiego wymiaru technologii. Projektujemy tak, aby technologia służyła człowiekowi, a nie odwrotnie."
+            </div>
+          </motion.div>
 
-            {/* Manifest quote */}
-            <motion.blockquote
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-8 pl-6 border-l-2 border-primary"
-            >
-              <p className="text-lg italic text-foreground">
-                "Nie sprzedajemy - egzekwujemy pożądanie. Brak kontroli jest czystą stratą. I jest nieakceptowalny."
-              </p>
-              <cite className="block mt-2 text-sm text-muted-foreground not-italic">
-                — Manifest BoostNow
-              </cite>
-            </motion.blockquote>
-          </div>
-
-          {/* Right column - Value cards */}
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-6">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
-                className="group p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="p-8 rounded-[32px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <value.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover:bg-slate-900 group-hover:text-white transition-all">
+                  <value.icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                <h3 className="text-xl font-serif text-slate-900 mb-3">
                   {value.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
