@@ -1,6 +1,6 @@
 ---
 title: kolejny test
-date: 2026-05-19
+date: 2026-05-20
 slug: kolejny-test
 meta_description: kolejny test
 ---

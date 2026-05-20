@@ -1,6 +1,6 @@
 ---
 title: Przykładowy Artykuł
-date: 2026-05-19
+date: 2026-05-20
 slug: przykadowy-artyku
 meta_description: To jest opis meta Twojego artykułu...
 ---

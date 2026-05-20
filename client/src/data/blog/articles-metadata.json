@@ -7,7 +7,7 @@
     "target_industry": "General",
     "word_count": 4,
     "slug": "przuykad-2",
-    "date": "2026-05-19"
+    "date": "2026-05-20"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "target_industry": "General",
     "word_count": 6,
     "slug": "przykadowy-artyku",
-    "date": "2026-05-19"
+    "date": "2026-05-20"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "target_industry": "General",
     "word_count": 3,
     "slug": "po-wgraniu-test",
-    "date": "2026-05-19"
+    "date": "2026-05-20"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "target_industry": "General",
     "word_count": 2,
     "slug": "kolejny-test",
-    "date": "2026-05-19"
+    "date": "2026-05-20"
   },
   {
     "id": 5,
@@ -47,6 +47,6 @@
     "target_industry": "General",
     "word_count": 2,
     "slug": "test-automat",
-    "date": "2026-05-19"
+    "date": "2026-05-20"
   }
 ]
