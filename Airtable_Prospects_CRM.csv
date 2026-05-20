@@ -1,0 +1,4 @@
+Company,Domain,Status,GEO_Score,Monthly_Value,Notes
+"Przykładowy Klient Sp. z o.o.",https://przyklad.pl,Lead,35,2500,"Strona ma bardzo słabą widoczność w ChatGPT. Wymaga pełnego audytu GEO."
+"Tech Solutions Inc.",https://tech-solutions.com,Qualified,42,5000,"Klient zainteresowany pakietem Elite GEO. Czeka na propozycję."
+"E-commerce Giant",https://big-shop.pl,Proposal,58,8000,"Wysłano ofertę na optymalizację 1000 kart produktów pod AI Overviews."
