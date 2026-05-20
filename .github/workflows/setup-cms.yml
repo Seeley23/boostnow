@@ -5,53 +5,40 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - name: Install dependencies
-        npm install axios --legacy-peer-deps
-      - name: Run Setup Script
+      - name: Run Setup via Curl
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
         run: |
-          cat << 'EOF' > setup.js
-          const axios = require('axios');
-          const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
-          const AIRTABLE_BASE_ID = 'appB0MrrpweuNvlQd';
-          async function createTable(tableData) {
-            try {
-              console.log(`Tworzenie tabeli: ${tableData.name}...`);
-              const response = await axios.post(`https://api.airtable.com/v0/meta/bases/${AIRTABLE_BASE_ID}/tables`, tableData, {
-                headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}`, 'Content-Type': 'application/json' }
-              } );
-              console.log(`Sukces! Tabela ${tableData.name} utworzona.`);
-              return response.data;
-            } catch (e) { console.log(`Tabela ${tableData.name} już istnieje lub błąd.`); }
-          }
-          async function setup() {
-            const pages = await createTable({
-              name: "Pages",
-              fields: [
-                { name: "Slug", type: "singleLineText" },
-                { name: "PageName", type: "singleLineText" },
-                { name: "SEO_Title", type: "singleLineText" },
-                { name: "SEO_Desc", type: "multilineText" },
-                { name: "Status", type: "singleSelect", options: { choices: [{ name: "Draft" }, { name: "Published" }] } }
+          # Tworzenie tabeli Pages
+          PAGES_RESPONSE=$(curl -s -X POST https://api.airtable.com/v0/meta/bases/appB0MrrpweuNvlQd/tables \
+            -H "Authorization: Bearer $AIRTABLE_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "name": "Pages",
+              "fields": [
+                {"name": "Slug", "type": "singleLineText"},
+                {"name": "PageName", "type": "singleLineText"},
+                {"name": "SEO_Title", "type": "singleLineText"},
+                {"name": "SEO_Desc", "type": "multilineText"},
+                {"name": "Status", "type": "singleSelect", "options": {"choices": [{"name": "Draft"}, {"name": "Published"}]}}
               ]
-            });
-            await createTable({
-              name: "Page_Sections",
-              fields: [
-                { name: "Page", type: "multipleRecordLinks", options: { foreignTableId: pages ? pages.id : "Pages" } },
-                { name: "Section_Type", type: "singleSelect", options: { choices: [{ name: "Hero" }, { name: "Problem" }, { name: "Solution" }, { name: "Services" }, { name: "Results" }, { name: "Urgency" }, { name: "Target" }, { name: "Process" }, { name: "FAQ" }, { name: "Contact" }] } },
-                { name: "Order", type: "number", options: { precision: 0 } },
-                { name: "Title", type: "singleLineText" },
-                { name: "Content", type: "multilineText" },
-                { name: "Extra_Data", type: "multilineText" }
+            }' )
+          
+          PAGES_ID=$(echo $PAGES_RESPONSE | jq -r '.id')
+          echo "Pages Table ID: $PAGES_ID"
+
+          # Tworzenie tabeli Page_Sections
+          curl -s -X POST https://api.airtable.com/v0/meta/bases/appB0MrrpweuNvlQd/tables \
+            -H "Authorization: Bearer $AIRTABLE_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"name\": \"Page_Sections\",
+              \"fields\": [
+                {\"name\": \"Page\", \"type\": \"multipleRecordLinks\", \"options\": {\"foreignTableId\": \"$PAGES_ID\"}},
+                {\"name\": \"Section_Type\", \"type\": \"singleSelect\", \"options\": {\"choices\": [{\"name\": \"Hero\"}, {\"name\": \"Problem\"}, {\"name\": \"Solution\"}, {\"name\": \"Services\"}, {\"name\": \"Results\"}, {\"name\": \"Urgency\"}, {\"name\": \"Target\"}, {\"name\": \"Process\"}, {\"name\": \"FAQ\"}, {\"name\": \"Contact\"}]}},
+                {\"name\": \"Order\", \"type\": \"number\", \"options\": {\"precision\": 0}},
+                {\"name\": \"Title\", \"type\": \"singleLineText\"},
+                {\"name\": \"Content\", \"type\": \"multilineText\"},
+                {\"name\": \"Extra_Data\", \"type\": \"multilineText\"}
               ]
-            });
-          }
-          setup();
-          EOF
-          node setup.js
+            }"
