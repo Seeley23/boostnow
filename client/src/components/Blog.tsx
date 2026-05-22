@@ -127,9 +127,9 @@ const Blog: React.FC = () => {
                     {article.meta_description}
                   </p>
                   <div className="flex gap-3">
-                    <Link href={`/blog/${article.id}`} className="px-4 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-[#b8e63d] transition-colors text-sm">
+                    <button onClick={() => window.location.href = `/blog/${article.id}`} className="px-4 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-[#b8e63d] transition-colors text-sm">
                       Czytaj artykuł
-                    </Link>
+                    </button>
                     <button className="px-4 py-2 bg-[#2a2f3e] text-white rounded-lg font-semibold hover:bg-[#3a3f4e] transition-colors text-sm">
                       Zapisz
                     </button>
