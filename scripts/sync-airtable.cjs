@@ -47,6 +47,19 @@ async function sync() {
   });
   fs.writeFileSync(path.join(dataPath, 'articles.json'), JSON.stringify(blogData, null, 2));
 
+  // Update articles-metadata.json for the BlogPage component
+  const metadataData = blogData.map(a => ({
+    id: a.id,
+    title: a.title,
+    meta_description: a.excerpt,
+    semantic_anchors: "", // Can be expanded if field exists in Airtable
+    target_industry: "General",
+    word_count: a.content.split(/\s+/).length,
+    slug: a.slug,
+    date: a.date
+  }));
+  fs.writeFileSync(path.join(dataPath, 'articles-metadata.json'), JSON.stringify(metadataData, null, 2));
+
   const blogDir = path.join(process.cwd(), 'client/public/blog-articles');
   if (!fs.existsSync(blogDir)) fs.mkdirSync(blogDir, { recursive: true });
   blogData.forEach(article => {
