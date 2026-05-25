@@ -118,12 +118,6 @@
       ]
     },
     {
-      "seo": {
-        "schemaType": "Article"
-      },
-      "sections": []
-    },
-    {
       "slug": "aio-ecommerce",
       "name": "AIO dla e-commerce",
       "seo": {
@@ -142,31 +136,6 @@
           "type": "Solution",
           "title": "Odkryj AIO dla e-commerce",
           "content": "Tutaj znajdziesz szczegółowe informacje na temat AIO dla e-commerce. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
-          "extraData": null
-        },
-        {
-          "type": "Contact",
-          "title": "Zacznijmy współpracę",
-          "content": "Skontaktuj się z nami, aby dowiedzieć się, jak możemy pomóc Twojej marce urosnąć.",
-          "extraData": null
-        }
-      ]
-    },
-    {
-      "seo": {
-        "schemaType": "Article"
-      },
-      "sections": [
-        {
-          "type": "Hero",
-          "title": "Witamy na stronie undefined",
-          "content": "To jest profesjonalna podstrona undefined zoptymalizowana pod kątem konwersji i AI.",
-          "extraData": null
-        },
-        {
-          "type": "Solution",
-          "title": "Odkryj undefined",
-          "content": "Tutaj znajdziesz szczegółowe informacje na temat undefined. Nasze podejście łączy psychologię decyzji z najnowszą technologią AI.",
           "extraData": null
         },
         {
