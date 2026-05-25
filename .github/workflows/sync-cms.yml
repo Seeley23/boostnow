@@ -1,27 +1,92 @@
-name: Sync CMS Data from Airtable
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Run CMS Sync Script
-        env:
-          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-          AIRTABLE_BASE_ID: appB0MrrpweuNvlQd
-        run: node scripts/sync-airtable.cjs
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add client/src/data/blog/*.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Sync CMS data [skip ci]" && git push )
+const fs = require('fs');
+const path = require('path');
+
+const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
+const BASE_ID = process.env.AIRTABLE_BASE_ID || 'appB0MrrpweuNvlQd';
+
+const TABLES = {
+  ARTICLES: 'Articles 2',
+  PAGES: 'Pages',
+  SECTIONS: 'Page_Sections'
+};
+
+async function fetchAirtableData(tableName) {
+  try {
+    console.log(`Pobieranie danych z tabeli: ${tableName}...`);
+    const response = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(tableName )}`, {
+      headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` }
+    });
+    const data = await response.json();
+    if (data.error) throw new Error(data.error.message);
+    return data.records || [];
+  } catch (error) {
+    console.error(`Błąd pobierania ${tableName}:`, error.message);
+    return [];
+  }
+}
+
+async function sync() {
+  const dataPath = path.join(process.cwd(), 'client/src/data/blog');
+  if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath, { recursive: true });
+
+  // 1. Synchronizacja Artykułów
+  const articles = await fetchAirtableData(TABLES.ARTICLES);
+  const blogData = articles.map((record) => {
+    const f = record.fields;
+    // Używamy kolumny Slug, jeśli jest pusta - generujemy z tytułu
+    const slug = f.Slug || (f.Title ? f.Title.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '') : record.id);
+    
+    return {
+      id: record.id,
+      title: f.Title || 'Bez tytułu',
+      content: f.Content || '', // Pobieramy z Twojej kolumny Content
+      slug: slug,
+      date: f.Date || new Date().toISOString().split('T')[0],
+      excerpt: f['Meta Description'] || '',
+      category: f.Category || 'General',
+      seo: {
+        title: f['SEO Title'] || f.Title,
+        description: f['Meta Description'] || '',
+        schema: f['Schema JSON'] || null
+      }
+    };
+  });
+
+  fs.writeFileSync(path.join(dataPath, 'articles.json'), JSON.stringify(blogData, null, 2));
+
+  // 2. Synchronizacja Stron i Sekcji (Twoja oryginalna logika)
+  const pages = await fetchAirtableData(TABLES.PAGES);
+  const sections = await fetchAirtableData(TABLES.SECTIONS);
+
+  const websiteData = {
+    pages: pages.map(p => {
+      const pFields = p.fields;
+      const pageSections = sections
+        .filter(s => s.fields.Page && s.fields.Page.includes(p.id))
+        .sort((a, b) => (a.fields.Order || 0) - (b.fields.Order || 0))
+        .map(s => ({
+          type: s.fields.Section_Type,
+          title: s.fields.Title || '',
+          content: s.fields.Content || '',
+          htmlTag: s.fields.HTML_Tag || (s.fields.Section_Type === 'Hero' ? 'H1' : 'H2'),
+          schemaMarkup: s.fields.Schema_Markup
+        }));
+
+      return {
+        slug: pFields.Slug,
+        name: pFields.PageName,
+        seo: {
+          title: pFields.SEO_Title,
+          description: pFields.SEO_Desc,
+          schemaType: pFields.Schema_Type || 'Article'
+        },
+        sections: pageSections
+      };
+    })
+  };
+
+  fs.writeFileSync(path.join(dataPath, 'website-cms.json'), JSON.stringify(websiteData, null, 2));
+  console.log(`Zsynchronizowano: ${blogData.length} artykułów, ${websiteData.pages.length} dynamicznych stron.`);
+}
+
+sync();
