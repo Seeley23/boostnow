@@ -1,60 +1,33 @@
-name: Setup Airtable CMS Structure
+name: Sync CMS Data from Airtable
+
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
+
 jobs:
-  setup:
+  sync:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Run Setup via Curl
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run CMS Sync Script
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: appB0MrrpweuNvlQd
+        run: node scripts/sync-airtable.cjs
+
+      - name: Commit and push changes
         run: |
-          # 1. Tworzenie tabeli Pages (Twoja oryginalna struktura)
-          PAGES_RESPONSE=$(curl -s -X POST https://api.airtable.com/v0/meta/bases/appB0MrrpweuNvlQd/tables \
-            -H "Authorization: Bearer $AIRTABLE_API_KEY" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "name": "Pages",
-              "fields": [
-                {"name": "Slug", "type": "singleLineText"},
-                {"name": "PageName", "type": "singleLineText"},
-                {"name": "SEO_Title", "type": "singleLineText"},
-                {"name": "SEO_Desc", "type": "multilineText"},
-                {"name": "Primary_Keyword", "type": "singleLineText"},
-                {"name": "Schema_Type", "type": "singleLineText"},
-                {"name": "Status", "type": "singleSelect", "options": {"choices": [{"name": "Draft"}, {"name": "Published"}]}}
-              ]
-            }' )
-          
-          PAGES_ID=$(echo $PAGES_RESPONSE | jq -r '.id')
-          echo "Pages Table ID: $PAGES_ID"
-
-          # 2. Tworzenie tabeli Page_Sections (Twoja oryginalna struktura)
-          if [ "$PAGES_ID" != "null" ] && [ "$PAGES_ID" != "" ]; then
-            curl -s -X POST https://api.airtable.com/v0/meta/bases/appB0MrrpweuNvlQd/tables \
-              -H "Authorization: Bearer $AIRTABLE_API_KEY" \
-              -H "Content-Type: application/json" \
-              -d "{
-                \"name\": \"Page_Sections\",
-                \"fields\": [
-                  {\"name\": \"Page\", \"type\": \"multipleRecordLinks\", \"options\": {\"foreignTableId\": \"$PAGES_ID\"}},
-                  {\"name\": \"Section_Type\", \"type\": \"singleSelect\", \"options\": {\"choices\": [{\"name\": \"Hero\"}, {\"name\": \"Problem\"}, {\"name\": \"Solution\"}, {\"name\": \"Services\"}, {\"name\": \"Results\"}, {\"name\": \"Urgency\"}, {\"name\": \"Target\"}, {\"name\": \"Process\"}, {\"name\": \"FAQ\"}, {\"name\": \"Contact\"}]}},
-                  {\"name\": \"Order\", \"type\": \"number\", \"options\": {\"precision\": 0}},
-                  {\"name\": \"Title\", \"type\": \"singleLineText\"},
-                  {\"name\": \"Content\", \"type\": \"multilineText\"},
-                  {\"name\": \"Extra_Data\", \"type\": \"multilineText\"},
-                  {\"name\": \"HTML_Tag\", \"type\": \"singleLineText\"},
-                  {\"name\": \"Schema_Markup\", \"type\": \"multilineText\"}
-                ]
-              }"
-          fi
-
-          # 3. DODATKOWO: Dodawanie pola Slug do tabeli Articles 2
-          curl -s -X POST https://api.airtable.com/v0/meta/bases/appB0MrrpweuNvlQd/tables/Articles%202/fields \
-            -H "Authorization: Bearer $AIRTABLE_API_KEY" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "name": "Slug",
-              "type": "singleLineText",
-              "description": "Przyjazny adres URL, np. pozycjonowanie-geo"
-            }'
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add client/src/data/blog/*.json client/public/blog-articles/*.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Sync CMS data from Airtable [skip ci]" && git push)
