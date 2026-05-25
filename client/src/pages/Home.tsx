@@ -21,12 +21,18 @@ export default function Home() {
   // Find the home page data from the synced CMS data
   const homePage = websiteCms.pages.find(p => p.slug === 'home');
   
-  const seo = homePage?.seo || {
+  const seo = (homePage?.seo || {
     title: (siteSeo as any)['Home']?.title || 'Agencja Neuromarketingowa - CRO & Decision Science',
     description: (siteSeo as any)['Home']?.description || 'Agencja Neuromarketingowa w Olsztynie - CRO i Decision Science. Zwiększamy ROAS e-commerce o 150% w 90 dni dla marek z całej Polski.',
     primaryKeyword: (siteSeo as any)['Home']?.keywords || 'agencja neuromarketingowa olsztyn, optymalizacja konwersji CRO, decision science, agencja marketingowa',
     canonicalUrl: undefined
+  }) as {
+    title?: string;
+    description?: string;
+    primaryKeyword?: string;
+    canonicalUrl?: string;
   };
+  const homeJsonLd = (homePage as any)?.jsonLd;
 
   // Helper to find a section by type
   const getSection = (type: string) => homePage?.sections?.find(s => s.type === type);
@@ -39,9 +45,9 @@ export default function Home() {
         <meta name="description" content={seo.description} />
         <meta name="keywords" content={seo.primaryKeyword} />
         {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
-        {homePage?.jsonLd && (
+        {homeJsonLd && (
           <script type="application/ld+json">
-            {JSON.stringify(homePage.jsonLd)}
+            {JSON.stringify(homeJsonLd)}
           </script>
         )}
       </Helmet>

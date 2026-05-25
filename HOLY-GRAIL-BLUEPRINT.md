@@ -8,7 +8,7 @@ This blueprint is a master template for creating high-performance, automated web
 | :--- | :--- | :--- |
 | **Logic & CRM** | **Airtable** | Source of truth for content, SEO/GEO data, Design Tokens, and CRM. |
 | **Visual Design** | **Builder.io** | Visual editor for landing pages using pre-registered React components. |
-| **Automation** | **GitHub Actions** | Automated sync, build, and deployment (Vercel recommended). |
+| **Automation** | **GitHub Actions** | Automated sync, build, and deployment to the self-hosted Cloudflare/Express origin. |
 | **Content Agent** | **Manus AI** | Autonomous research, writing, and publishing to Airtable. |
 
 ## 🛠️ Setup Instructions for Manus

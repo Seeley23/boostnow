@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { mapPagesForWebsiteCms } = require('./cms-data-helpers.cjs');
 
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const BASE_ID = process.env.AIRTABLE_BASE_ID || 'appB0MrrpweuNvlQd';
@@ -105,35 +106,7 @@ async function sync() {
   const sections = await fetchAirtableData(TABLES.SECTIONS);
 
   const websiteData = {
-    pages: pages.map(p => {
-      const pFields = p.fields;
-      const pageSections = sections
-        .filter(s => s.fields.Page && s.fields.Page.includes(p.id))
-        .sort((a, b) => (a.fields.Order || 0) - (b.fields.Order || 0))
-        .map(s => ({
-          type: s.fields.Section_Type,
-          title: s.fields.Title || '',
-          content: s.fields.Content || '',
-          extraData: s.fields.Extra_Data ? JSON.parse(s.fields.Extra_Data) : null,
-          htmlTag: s.fields.HTML_Tag,
-          geoCitability: s.fields.GEO_Citability_Mode,
-          imageAlt: s.fields.Image_Alt,
-          schemaMarkup: s.fields.Schema_Markup,
-          stats: s.fields.Statistical_Data
-        }));
-
-      return {
-        slug: pFields.Slug,
-        name: pFields.PageName,
-        seo: {
-          title: pFields.SEO_Title,
-          description: pFields.SEO_Desc,
-          primaryKeyword: pFields.Primary_Keyword,
-          schemaType: pFields.Schema_Type || 'Article'
-        },
-        sections: pageSections
-      };
-    })
+    pages: mapPagesForWebsiteCms(pages, sections)
   };
 
   fs.writeFileSync(path.join(dataPath, 'website-cms.json'), JSON.stringify(websiteData, null, 2));

@@ -7,6 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import NotFound from './NotFound';
 import websiteData from '../data/blog/website-cms.json';
+import { findCmsPageBySlug, getCmsPageDisplayName, getCmsPageMeta } from './dynamic-page-data';
 
 const LIME = "#c7ff4e";
 const NAVY = "#0b1020";
@@ -81,14 +82,7 @@ const DynamicPage: React.FC = () => {
   const slug = params?.slug as string;
 
   useEffect(() => {
-    if (slug && websiteData && websiteData.pages) {
-      const foundPage = websiteData.pages.find(p => p.slug === slug);
-      setPage(foundPage || null);
-    } else if (!slug && websiteData && websiteData.pages) {
-      // Handle home page if slug is empty
-      const homePage = websiteData.pages.find(p => p.slug === 'home');
-      setPage(homePage || null);
-    }
+    setPage(findCmsPageBySlug(websiteData, slug));
   }, [slug]);
 
   if (!page) {
@@ -113,16 +107,18 @@ const DynamicPage: React.FC = () => {
   } : null;
 
   const isHome = page.slug === 'home';
+  const pageMeta = getCmsPageMeta(page);
+  const pageDisplayName = getCmsPageDisplayName(page);
 
   return (
     <div style={{ background: NAVY, color: "#f7f8fa" }} className="min-h-screen">
       <Helmet>
-        <title>{page.SEO_Title || page.PageName || 'BoostNow'}</title>
-        <meta name="description" content={page.SEO_Desc || ''} />
-        <meta name="keywords" content={page.Focus_Keyphrase || ''} />
-        {page.Schema_Markup && (
+        <title>{pageMeta.title}</title>
+        <meta name="description" content={pageMeta.description} />
+        <meta name="keywords" content={pageMeta.keywords} />
+        {pageMeta.schemaMarkup && (
           <script type="application/ld+json">
-            {page.Schema_Markup}
+            {pageMeta.schemaMarkup}
           </script>
         )}
         {faqSchema && (
@@ -159,14 +155,14 @@ const DynamicPage: React.FC = () => {
                       color: LIME,
                     }}
                   >
-                    {page.pageName}
+                    {pageDisplayName}
                   </span>
                 </div>
               </FadeIn>
 
               <FadeIn delay={0.1}>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-center leading-[0.95] tracking-tight mb-8">
-                  {page.sections?.find((s: any) => s.type === 'Hero')?.title || page.pageName}
+                  {page.sections?.find((s: any) => s.type === 'Hero')?.title || pageDisplayName}
                 </h1>
               </FadeIn>
 

@@ -506,7 +506,7 @@ ${metaDescription}`,
                               {relArticle.title}
                             </p>
                             <p className="text-xs text-[#9aa0b3] mt-1">
-                              {Math.ceil(relArticle.word_count / 200)} min czytania
+                              {Math.ceil((relArticle.word_count || 0) / 200)} min czytania
                             </p>
                           </div>
                         </div>
