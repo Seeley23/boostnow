@@ -20,7 +20,7 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        run: npm install # Usunięto --prefix client
+        run: npm install --legacy-peer-deps # Dodano flagę
 
       - name: Run CMS Sync Script
         env:
