@@ -6,7 +6,13 @@
     "slug": "przuykad-2",
     "date": "2026-05-25",
     "excerpt": "",
-    "category": "General"
+    "category": "General",
+    "seo": {
+      "title": "te",
+      "description": "",
+      "keywords": "",
+      "schema": null
+    }
   },
   {
     "id": 2,
@@ -15,7 +21,13 @@
     "slug": "hehe",
     "date": "2026-05-25",
     "excerpt": "hehe",
-    "category": "General"
+    "category": "General",
+    "seo": {
+      "title": "hehe",
+      "description": "hehe",
+      "keywords": "",
+      "schema": null
+    }
   },
   {
     "id": 3,
@@ -24,7 +36,13 @@
     "slug": "pozycjonowanie-geo-jak-by-cytowanym-przez-chatgpt-perplexity-i-gemini-w-2025",
     "date": "2026-05-25",
     "excerpt": "Pozycjonowanie GEO (Generative Engine Optimization) — dowiedz się jak optymalizować treści pod cytowania AI: ChatGPT, Perplexity, Gemini i Google AI Overviews. Kompletny przewodnik 2025.",
-    "category": "General"
+    "category": "General",
+    "seo": {
+      "title": "Pozycjonowanie GEO: Cytowania w ChatGPT, Perplexity i Gemini",
+      "description": "Pozycjonowanie GEO (Generative Engine Optimization) — dowiedz się jak optymalizować treści pod cytowania AI: ChatGPT, Perplexity, Gemini i Google AI Overviews. Kompletny przewodnik 2025.",
+      "keywords": "pozycjonowanie GEO",
+      "schema": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"headline\":\"Pozycjonowanie GEO: Jak Być Cytowanym przez ChatGPT, Perplexity i Gemini w 2025\",\"datePublished\":\"2025-05-22\",\"dateModified\":\"2025-05-22\",\"description\":\"Pozycjonowanie GEO (Generative Engine Optimization) — kompletny przewodnik jak optymalizować treści pod cytowania AI: ChatGPT, Perplexity, Gemini i Google AI Overviews.\",\"keywords\":[\"pozycjonowanie GEO\",\"generative engine optimization\",\"GEO SEO różnica\",\"seo ai\",\"widoczność w chatgpt\",\"pozycjonowanie w ai\",\"aeo\"],\"author\":{\"@type\":\"Person\",\"name\":\"Zespół BoostNow\",\"jobTitle\":\"Decision Science Architecture\",\"affiliation\":\"BoostNow\",\"sameAs\":[\"https://boostnow.pl\"],\"knowsAbout\":[\"Generative Engine Optimization\",\"SEO\",\"Decision Science\",\"AI Marketing\",\"Content Strategy\"]},\"publisher\":{\"@type\":\"Organization\",\"name\":\"BoostNow\",\"url\":\"https://boostnow.pl\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://boostnow.pl/logo.png\"}},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://boostnow.pl/pozycjonowanie-geo\"},\"image\":{\"@type\":\"ImageObject\",\"url\":\"https://boostnow.pl/images/pozycjonowanie-geo-chatgpt-perplexity-2025.jpg\",\"alt\":\"Pozycjonowanie GEO – optymalizacja pod AI ChatGPT Perplexity 2025\"}},{\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Czym jest pozycjonowanie GEO i jak działa?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Pozycjonowanie GEO (Generative Engine Optimization) to optymalizacja treści pod cytowania przez modele AI takie jak ChatGPT, Perplexity i Gemini. Działa poprzez dostosowanie struktury tekstu do mechanizmu RAG, który AI używa do pobierania i cytowania fragmentów.\"}},{\"@type\":\"Question\",\"name\":\"Jaka jest różnica między GEO a SEO?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"SEO optymalizuje pod algorytm Google PageRank: linki, autorytet domeny i pozycje w wynikach. GEO optymalizuje pod systemy AI: cytowalność chunków, entity clarity i freshness treści. Obie strategie są komplementarne.\"}},{\"@type\":\"Question\",\"name\":\"Jak szybko widać efekty pozycjonowania GEO?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Pierwsze cytowania w Perplexity i ChatGPT pojawiają się po 4–8 tygodniach od wdrożenia struktury GEO. Google AI Overviews wymaga 2–4 miesięcy. Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań niż treści statyczne.\"}},{\"@type\":\"Question\",\"name\":\"Czy pozycjonowanie GEO zastąpi klasyczne SEO?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"GEO nie zastępuje SEO — uzupełnia je. Według danych Sparktoro (2024), 41% zapytań B2B kończy się na odpowiedzi AI bez kliknięcia w wynik wyszukiwania. Strategia contentowa musi obsługiwać oba kanały jednocześnie.\"}},{\"@type\":\"Question\",\"name\":\"Ile kosztuje pozycjonowanie GEO?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Koszt pozycjonowania GEO zależy od zakresu: audyt GEO to usługa jednorazowa, wdrożenie strategii contentowej to proces ciągły. BoostNow oferuje bezpłatny audyt GEO jako pierwszy krok bez zobowiązań.\"}}]}]}"
+    }
   },
   {
     "id": 4,
@@ -33,7 +51,13 @@
     "slug": "przykadowy-artyku",
     "date": "2026-05-25",
     "excerpt": "To jest opis meta Twojego artykułu...",
-    "category": "General"
+    "category": "General",
+    "seo": {
+      "title": "Przykładowy Artykuł - BoostNow",
+      "description": "To jest opis meta Twojego artykułu...",
+      "keywords": "marketing",
+      "schema": "{}"
+    }
   },
   {
     "id": 5,
@@ -42,7 +66,13 @@
     "slug": "po-wgraniu-test",
     "date": "2026-05-25",
     "excerpt": "test",
-    "category": "General"
+    "category": "General",
+    "seo": {
+      "title": "test",
+      "description": "test",
+      "keywords": "test",
+      "schema": null
+    }
   },
   {
     "id": 6,
@@ -51,7 +81,13 @@
     "slug": "kolejny-test",
     "date": "2026-05-25",
     "excerpt": "kolejny test",
-    "category": "General"
+    "category": "General",
+    "seo": {
+      "title": "kolejny test",
+      "description": "kolejny test",
+      "keywords": "",
+      "schema": null
+    }
   },
   {
     "id": 7,
@@ -60,6 +96,12 @@
     "slug": "test-automat",
     "date": "2026-05-25",
     "excerpt": "test automat ",
-    "category": "General"
+    "category": "General",
+    "seo": {
+      "title": "test aumoat seo title",
+      "description": "test automat ",
+      "keywords": "",
+      "schema": null
+    }
   }
 ]
