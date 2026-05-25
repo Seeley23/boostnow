@@ -44,29 +44,45 @@ async function sync() {
       slug: slug,
       date: f.Date || new Date().toISOString().split('T')[0],
       excerpt: f['Meta Description'] || '',
-      category: f.Category || 'General',
+      category: f.Category || f['Key Phrase'] || 'General',
+      semantic_anchors: f['Key Phrase'] || '',
+      target_industry: f.Category || 'General',
       seo: {
         title: f['SEO Title'] || f.Title,
         description: f['Meta Description'] || '',
         keywords: f['Key Phrase'] || '',
-        schema: f['Schema JSON'] || null
+        schema: (() => {
+          try {
+            return f['Schema JSON'] ? JSON.parse(f['Schema JSON']) : null;
+          } catch (error) {
+            console.warn(`Nieprawidłowy Schema JSON dla artykułu: ${f.Title || record.id}`);
+            return null;
+          }
+        })()
       }
     };
   });
 
   fs.writeFileSync(path.join(dataPath, 'articles.json'), JSON.stringify(blogData, null, 2));
 
-  // Metadata for Blog List
-  const metadataData = blogData.map(a => ({
-    id: a.id,
+  // Metadata for Blog List and Article Pages
+  const metadataData = blogData.map((a, index) => ({
+    id: index + 1,
+    record_id: a.id,
     title: a.title,
-    meta_description: a.excerpt,
+    meta_description: a.seo.description || a.excerpt,
+    semantic_anchors: a.semantic_anchors,
+    target_industry: a.target_industry,
     slug: a.slug,
     date: a.date,
-    word_count: a.content.split(/\s+/).length
+    word_count: a.content.split(/\s+/).filter(Boolean).length
   }));
   fs.writeFileSync(path.join(dataPath, 'articles-metadata.json'), JSON.stringify(metadataData, null, 2));
 
+  const articleFilesMap = Object.fromEntries(metadataData.map((a) => [String(a.id), { filename: `${a.slug}.md`, slug: a.slug }]));
+  fs.writeFileSync(path.join(dataPath, 'article-files.json'), JSON.stringify(articleFilesMap, null, 2));
+
+  // Save individual markdown files
   const blogDir = path.join(process.cwd(), 'client/public/blog-articles');
   if (!fs.existsSync(blogDir)) fs.mkdirSync(blogDir, { recursive: true });
   blogData.forEach(article => {

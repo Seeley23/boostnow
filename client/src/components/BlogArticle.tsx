@@ -4,27 +4,44 @@ import { useParams, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import articlesMetadata from '../data/blog/articles-metadata.json';
+import articlesData from '../data/blog/articles.json';
 import articleFilesMap from '../data/blog/article-files.json';
 import { BlogRating } from './BlogRating';
 
 interface Article {
-  id: number;
+  id: number | string;
   title: string;
-  meta_description: string;
-  semantic_anchors: string;
-  target_industry: string;
-  word_count: number;
-  slug: string;
-  date: string;
+  meta_description?: string;
+  semantic_anchors?: string;
+  target_industry?: string;
+  word_count?: number;
+  slug?: string;
+  date?: string;
+}
+
+interface FullArticle extends Article {
+  content?: string;
+  excerpt?: string;
+  category?: string;
+  seo?: {
+    title?: string;
+    description?: string;
+    schema?: Record<string, unknown> | null;
+  };
 }
 
 interface ArticleContent {
+  id: number | string;
   title: string;
+  seo_title: string;
   meta_description: string;
   semantic_anchors: string;
   target_industry: string;
   word_count: number;
   content: string;
+  slug: string;
+  date: string;
+  schema?: Record<string, unknown> | null;
 }
 
 const BlogArticle: React.FC = () => {
@@ -37,6 +54,9 @@ const BlogArticle: React.FC = () => {
   // Title jest teraz ustawiany przez Helmet w return statement
 
   const articles: Article[] = articlesMetadata as Article[];
+  const fullArticles: FullArticle[] = articlesData as FullArticle[];
+  const routeParam = id || '1';
+  const getArticleUrlPart = (item: Article | ArticleContent) => item.slug || String(item.id);
 
   // Ustaw meta tags dla GEO
   useEffect(() => {
@@ -63,7 +83,7 @@ const BlogArticle: React.FC = () => {
 
       // og:image
       const ogImage = document.querySelector('meta[property="og:image"]');
-      const imageUrl = `/og-images/${id}.png`;
+      const imageUrl = `/og-images/${String(article.id).replace(/[^a-zA-Z0-9_-]/g, '')}.png`;
       if (ogImage) ogImage.setAttribute('content', imageUrl);
       else {
         const meta = document.createElement('meta');
@@ -84,7 +104,7 @@ const BlogArticle: React.FC = () => {
 
       // article:published_time
       const pubTime = document.querySelector('meta[property="article:published_time"]');
-      const articleData = articlesMetadata[parseInt(id || '1') - 1] as any;
+      const articleData = article;
       if (articleData?.date) {
         if (pubTime) pubTime.setAttribute('content', articleData.date);
         else {
@@ -96,7 +116,7 @@ const BlogArticle: React.FC = () => {
       }
 
       // article:tag (semantic anchors)
-      const tags = article.semantic_anchors.split(',').map(t => t.trim());
+      const tags = article.semantic_anchors.split(',').map(t => t.trim()).filter(Boolean);
       tags.forEach(tag => {
         const meta = document.createElement('meta');
         meta.setAttribute('property', 'article:tag');
@@ -106,8 +126,8 @@ const BlogArticle: React.FC = () => {
 
       // JSON-LD Schema for Article (Google Rich Results)
       const schemaScript = document.querySelector('script[type="application/ld+json"][data-article-schema]');
-      const articleUrl = `https://boostnow.pl/blog/${id}`;
-      const schema = {
+      const articleUrl = `https://boostnow.pl/blog/${getArticleUrlPart(article)}`;
+      const schema = article.schema || {
         '@context': 'https://schema.org',
         '@type': 'Article',
         '@id': articleUrl,
@@ -207,64 +227,69 @@ const BlogArticle: React.FC = () => {
 
   useEffect(() => {
     const loadArticle = async () => {
-      const articleIndex = parseInt(id || '1') - 1;
-      
-      if (articleIndex >= 0 && articleIndex < articles.length) {
-        const articleId = articleIndex + 1;
+      const articleMeta = articles.find((item, index) =>
+        String(item.id) === routeParam ||
+        item.slug === routeParam ||
+        String(index + 1) === routeParam
+      );
+
+      if (articleMeta) {
+        const fullArticle = fullArticles.find((item, index) =>
+          String(item.id) === String(articleMeta.id) ||
+          item.slug === articleMeta.slug ||
+          item.slug === routeParam ||
+          String(index + 1) === routeParam
+        );
+        let content = fullArticle?.content || '';
         const fileMap = articleFilesMap as Record<string, any>;
-        const fileInfo = fileMap[articleId.toString()];
-        
-        if (fileInfo) {
+        const fileInfo = fileMap[String(articleMeta.id)] || (articleMeta.slug ? { filename: `${articleMeta.slug}.md` } : null);
+
+        if (!content && fileInfo) {
           try {
-            // Załaduj zawartość markdown
             const response = await fetch(`/blog-articles/${fileInfo.filename}`);
-            let content = await response.text();
-            
-            // Usuń YAML frontmatter jeśli istnieje
+            content = await response.text();
             const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
             content = content.replace(frontmatterRegex, '');
-            
-            // Jeśli ładowanie nie powiodło się, użyj fallback
-            if (!content) {
-              content = `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`;
-            }
-            
-            setArticle({
-              title: articles[articleIndex].title,
-              meta_description: articles[articleIndex].meta_description,
-              semantic_anchors: articles[articleIndex].semantic_anchors,
-              target_industry: articles[articleIndex].target_industry,
-              word_count: articles[articleIndex].word_count,
-              content: content
-            });
           } catch (error) {
             console.error('Błąd ładowania artykułu:', error);
-            setArticle({
-              title: articles[articleIndex].title,
-              meta_description: articles[articleIndex].meta_description,
-              semantic_anchors: articles[articleIndex].semantic_anchors,
-              target_industry: articles[articleIndex].target_industry,
-              word_count: articles[articleIndex].word_count,
-              content: `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`
-            });
           }
         }
 
-        // Pobierz powiązane artykuły (z tej samej branży, max 3)
+        const metaDescription = fullArticle?.seo?.description || fullArticle?.excerpt || articleMeta.meta_description || '';
+        const semanticAnchors = articleMeta.semantic_anchors || '';
+        const targetIndustry = fullArticle?.category || articleMeta.target_industry || 'General';
+        const wordCount = articleMeta.word_count || (content ? content.split(/\s+/).filter(Boolean).length : 0);
+
+        setArticle({
+          id: articleMeta.id,
+          title: articleMeta.title,
+          seo_title: fullArticle?.seo?.title || articleMeta.title,
+          meta_description: metaDescription,
+          semantic_anchors: semanticAnchors,
+          target_industry: targetIndustry,
+          word_count: wordCount,
+          content: content || `# ${articleMeta.title}
+
+${metaDescription}`,
+          slug: articleMeta.slug || String(articleMeta.id),
+          date: articleMeta.date || new Date().toISOString(),
+          schema: fullArticle?.seo?.schema || null
+        });
+
         const related = articles
-          .filter(a => 
-            a.target_industry === articles[articleIndex].target_industry && 
-            a.id !== articles[articleIndex].id
+          .filter(a =>
+            (a.target_industry || 'General') === (articleMeta.target_industry || 'General') &&
+            a.id !== articleMeta.id
           )
           .slice(0, 3);
-        
+
         setRelatedArticles(related);
       }
       setLoading(false);
     };
-    
+
     loadArticle();
-  }, [id, articles]);
+  }, [routeParam]);
 
   if (loading) {
     return (
@@ -293,19 +318,19 @@ const BlogArticle: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0b1020] py-20 px-4 sm:px-6 lg:px-8">
       <Helmet>
-        <title>{article.title.length > 45 ? article.title.substring(0, 45) + '...' : article.title} | BoostNow</title>
+        <title>{article.seo_title}</title>
         <meta name="robots" content="index, follow" />
         <meta name="description" content={article.meta_description} />
         <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, decision science, neuromarketing, psychologia konwersji`} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://boostnow.pl/blog/${id}`} />
+        <meta property="og:url" content={`https://boostnow.pl/blog/${getArticleUrlPart(article)}`} />
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.meta_description} />
-        <meta property="og:image" content={`https://boostnow.pl/og-images/${id}.png`} />
+        <meta property="og:image" content={`https://boostnow.pl/og-images/${String(article.id).replace(/[^a-zA-Z0-9_-]/g, '')}.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={article.meta_description} />
-        <link rel="canonical" content={`https://boostnow.pl/blog/${id}`} />
+        <link rel="canonical" href={`https://boostnow.pl/blog/${getArticleUrlPart(article)}`} />
       </Helmet>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -469,7 +494,7 @@ const BlogArticle: React.FC = () => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: index * 0.1 }}
-                        onClick={() => setLocation(`/blog/${relArticle.id}`)}
+                        onClick={() => setLocation(`/blog/${getArticleUrlPart(relArticle)}`)}
                         className="w-full text-left p-3 rounded-lg bg-[#0b1020] hover:bg-[#1a1f2e] transition-all duration-300 group"
                       >
                         <div className="flex items-start gap-2">
@@ -494,7 +519,7 @@ const BlogArticle: React.FC = () => {
               </div>
 
               {/* Blog Rating */}
-              {id && <BlogRating articleId={parseInt(id)} />}
+              {article && <BlogRating articleId={Number(article.id) || 0} />}
 
               {/* Newsletter CTA */}
               <div className="bg-gradient-to-br from-[#c7ff4e]/10 to-[#00c88a]/10 border border-[#c7ff4e]/20 rounded-lg p-6">

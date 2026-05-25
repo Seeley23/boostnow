@@ -6,14 +6,14 @@ import { Link } from 'wouter';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 
 interface Article {
-  id: number;
+  id: number | string;
   title: string;
   content?: string;
   meta_description?: string;
   semantic_anchors?: string;
   target_industry?: string;
   word_count?: number;
-  slug: string;
+  slug?: string;
   date: string;
 }
 
@@ -24,6 +24,7 @@ const BlogPage: React.FC = () => {
   
 
   const articles: Article[] = articlesMetadata;
+  const getArticleUrlPart = (article: Article) => article.slug || String(article.id);
 
   // BreadcrumbList Schema for Blog Page
   useEffect(() => {
@@ -138,7 +139,7 @@ const BlogPage: React.FC = () => {
                   
                 </div>
 
-                <Link href={`/blog/${article.id}`}>
+                <Link href={`/blog/${getArticleUrlPart(article)}`}>
                   <a className="block group">
                     <h2 className="text-lg font-bold text-white mb-3 group-hover:text-[#c7ff4e] transition line-clamp-2">
                       {article.title}
@@ -169,7 +170,7 @@ const BlogPage: React.FC = () => {
                   <span>~{Math.ceil((article.word_count || 0) / 200)} min czytania</span>
                 </div>
 
-                <Link href={`/blog/${article.id}`}>
+                <Link href={`/blog/${getArticleUrlPart(article)}`}>
                   <a className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">
                     Czytaj artykuł →
                   </a>
