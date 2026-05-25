@@ -1,32 +1,48 @@
-name: Setup CMS Data
-
+name: Setup Airtable CMS Structure
 on:
   workflow_dispatch:
-
 jobs:
   setup:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Run Setup Script
+      - name: Run Setup via Curl
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-        run: node scripts/holy-grail-setup.cjs
-
-      - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add client/src/data/blog/articles.json client/src/data/blog/articles-metadata.json client/src/data/blog/website-cms.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Initial CMS data setup [skip ci]" && git push)
+          # Tworzenie tabeli Pages z pełnym SEO
+          PAGES_RESPONSE=$(curl -s -X POST https://api.airtable.com/v0/meta/bases/appB0MrrpweuNvlQd/tables \
+            -H "Authorization: Bearer $AIRTABLE_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "name": "Pages",
+              "fields": [
+                {"name": "Slug", "type": "singleLineText"},
+                {"name": "PageName", "type": "singleLineText"},
+                {"name": "SEO_Title", "type": "singleLineText"},
+                {"name": "SEO_Desc", "type": "multilineText"},
+                {"name": "Primary_Keyword", "type": "singleLineText"},
+                {"name": "Schema_Type", "type": "singleLineText"},
+                {"name": "Status", "type": "singleSelect", "options": {"choices": [{"name": "Draft"}, {"name": "Published"}]}}
+              ]
+            }'  )
+          
+          PAGES_ID=$(echo $PAGES_RESPONSE | jq -r '.id')
+          echo "Pages Table ID: $PAGES_ID"
+
+          # Tworzenie tabeli Page_Sections
+          curl -s -X POST https://api.airtable.com/v0/meta/bases/appB0MrrpweuNvlQd/tables \
+            -H "Authorization: Bearer $AIRTABLE_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"name\": \"Page_Sections\",
+              \"fields\": [
+                {\"name\": \"Page\", \"type\": \"multipleRecordLinks\", \"options\": {\"foreignTableId\": \"$PAGES_ID\"}},
+                {\"name\": \"Section_Type\", \"type\": \"singleSelect\", \"options\": {\"choices\": [{\"name\": \"Hero\"}, {\"name\": \"Problem\"}, {\"name\": \"Solution\"}, {\"name\": \"Services\"}, {\"name\": \"Results\"}, {\"name\": \"Urgency\"}, {\"name\": \"Target\"}, {\"name\": \"Process\"}, {\"name\": \"FAQ\"}, {\"name\": \"Contact\"}]}},
+                {\"name\": \"Order\", \"type\": \"number\", \"options\": {\"precision\": 0}},
+                {\"name\": \"Title\", \"type\": \"singleLineText\"},
+                {\"name\": \"Content\", \"type\": \"multilineText\"},
+                {\"name\": \"Extra_Data\", \"type\": \"multilineText\"},
+                {\"name\": \"HTML_Tag\", \"type\": \"singleLineText\"},
+                {\"name\": \"Schema_Markup\", \"type\": \"multilineText\"}
+              ]
+            }"
