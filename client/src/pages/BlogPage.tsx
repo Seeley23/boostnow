@@ -23,7 +23,10 @@ const BlogPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   
 
-  const articles: Article[] = articlesMetadata;
+  const JUNK_SLUGS = new Set(['przuykad-2','hehe','po-wgraniu-test','kolejny-test','test-automat','przykadowy-artyku']);
+  const articles: Article[] = (articlesMetadata as Article[]).filter(
+    a => a.slug && !JUNK_SLUGS.has(a.slug as string)
+  );
   const getArticleUrlPart = (article: Article) => article.slug || String(article.id);
 
   // BreadcrumbList Schema for Blog Page
@@ -139,12 +142,10 @@ const BlogPage: React.FC = () => {
                   
                 </div>
 
-                <Link href={`/blog/${getArticleUrlPart(article)}`}>
-                  <a className="block group">
-                    <h2 className="text-lg font-bold text-white mb-3 group-hover:text-[#c7ff4e] transition line-clamp-2">
-                      {article.title}
-                    </h2>
-                  </a>
+                <Link href={`/blog/${getArticleUrlPart(article)}`} className="block group">
+                  <h2 className="text-lg font-bold text-white mb-3 group-hover:text-[#c7ff4e] transition line-clamp-2">
+                    {article.title}
+                  </h2>
                 </Link>
 
                 <p className="text-gray-400 text-sm mb-4 line-clamp-2">
@@ -170,10 +171,8 @@ const BlogPage: React.FC = () => {
                   <span>~{Math.ceil((article.word_count || 0) / 200)} min czytania</span>
                 </div>
 
-                <Link href={`/blog/${getArticleUrlPart(article)}`}>
-                  <a className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">
-                    Czytaj artykuł →
-                  </a>
+                <Link href={`/blog/${getArticleUrlPart(article)}`} className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">
+                  Czytaj: {article.title}
                 </Link>
               </motion.div>
             ))}

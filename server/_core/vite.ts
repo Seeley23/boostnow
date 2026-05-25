@@ -8,6 +8,26 @@ import viteConfig from "../../vite.config";
 
 const SITE_URL = "https://boostnow.pl";
 
+// Opaque Airtable-generated slugs that should 301 to canonical URLs
+// Format: { opaqueSlug: canonicalSlug }
+const BLOG_REDIRECTS: Record<string, string> = {};
+
+// Valid canonical blog slugs (from articles-metadata.json)
+const VALID_BLOG_SLUGS = new Set([
+  "pozycjonowanie-geo-jak-by-cytowanym-przez-chatgpt-perplexity-i-gemini-w-2025",
+  "jak-zwiekszac-konwersje-ecommerce",
+]);
+
+// Test/junk slugs that should return 404
+const JUNK_BLOG_SLUGS = new Set([
+  "przuykad-2",
+  "hehe",
+  "po-wgraniu-test",
+  "kolejny-test",
+  "test-automat",
+  "przykadowy-artyku",
+]);
+
 const DEFAULT_SEO = {
   title: "BoostNow | GEO, SEO i konwersja dla firm",
   description:
@@ -37,6 +57,8 @@ type SeoData = {
   title: string;
   description: string;
   canonical: string;
+  ogImage?: string;
+  type?: string;
 };
 
 function readJsonFile<T>(candidatePaths: string[], fallback: T): T {
@@ -108,11 +130,17 @@ function buildSeoData(urlPath: string, pages: CmsPage[], articles: ArticleMetada
   if (normalizedPath.startsWith("/blog/")) {
     const articleSlug = normalizedPath.replace("/blog/", "");
     const article = articles.find((item) => item.slug === articleSlug);
+    const articleId = article?.id ? String(article.id).replace(/[^a-zA-Z0-9_-]/g, '') : null;
+    const ogImage = articleId
+      ? `${SITE_URL}/og-images/${articleId}.png`
+      : `${SITE_URL}/og-images/default.png`;
 
     return {
       title: article?.seo?.title || (article?.title ? `${article.title} | BoostNow` : DEFAULT_SEO.title),
       description: article?.seo?.description || article?.meta_description || DEFAULT_SEO.description,
       canonical,
+      ogImage,
+      type: 'article',
     };
   }
 
@@ -127,6 +155,19 @@ function buildSeoData(urlPath: string, pages: CmsPage[], articles: ArticleMetada
 }
 
 function injectSeoMeta(html: string, seo: SeoData): string {
+  const ogTags = [
+    `<meta property="og:title" content="${escapeHtml(seo.title)}" />`,
+    `<meta property="og:description" content="${escapeHtml(seo.description)}" />`,
+    `<meta property="og:url" content="${escapeHtml(seo.canonical)}" />`,
+    `<meta property="og:type" content="${seo.type || 'website'}" />`,
+    `<meta property="og:site_name" content="BoostNow" />`,
+    `<meta property="og:image" content="${escapeHtml(seo.ogImage || 'https://boostnow.pl/og-images/default.png')}" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
+    `<meta name="twitter:title" content="${escapeHtml(seo.title)}" />`,
+    `<meta name="twitter:description" content="${escapeHtml(seo.description)}" />`,
+    `<meta name="twitter:image" content="${escapeHtml(seo.ogImage || 'https://boostnow.pl/og-images/default.png')}" />`,
+  ].join('\n    ');
+
   return html
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(seo.title)}</title>`)
     .replace(
@@ -136,7 +177,9 @@ function injectSeoMeta(html: string, seo: SeoData): string {
     .replace(
       /<link\s+rel="canonical"\s+href="[^"]*"\s*\/>/,
       `<link rel="canonical" href="${escapeHtml(seo.canonical)}" />`,
-    );
+    )
+    // Inject OG/Twitter tags before </head>
+    .replace('</head>', `    ${ogTags}\n  </head>`);
 }
 
 export async function setupVite(app: Express, server: Server) {
@@ -196,6 +239,24 @@ export function serveStatic(app: Express) {
   }
 
   app.use(express.static(distPath));
+
+  // Handle blog slug redirects and 404s before SPA fallback
+  app.use("/blog/:slug", (req, res, next) => {
+    const slug = req.params.slug;
+    // 301 redirect for opaque/old slugs
+    if (BLOG_REDIRECTS[slug]) {
+      return res.redirect(301, `/blog/${BLOG_REDIRECTS[slug]}`);
+    }
+    // 301 redirect for numeric IDs (old routing)
+    if (/^\d+$/.test(slug)) {
+      return res.redirect(301, "/blog");
+    }
+    // 404 for junk/test slugs
+    if (JUNK_BLOG_SLUGS.has(slug)) {
+      return res.status(404).sendFile(indexHtmlPath);
+    }
+    next();
+  });
 
   // fall through to index.html if the file doesn't exist
   app.use("*", (req, res) => {

@@ -25,3 +25,14 @@
 - [Regulamin](https://boostnow.pl/regulamin)
 - [Polityka prywatnosci](https://boostnow.pl/polityka-prywatnosci)
 - [Polityka cookies](https://boostnow.pl/polityka-cookies)
+
+## O firmie
+BoostNow to agencja marketingowa z Olsztyna, zalozono w 2025 roku przez Mateusza Nowotke.
+Specjalizujemy sie w Generative Engine Optimization (GEO) — nowej dziedzinie SEO skupionej
+na widocznosci w odpowiedziach AI. Oferujemy audyty, strategie i wdrozenia dla firm B2B i e-commerce.
+
+## Kontakt
+- Email: kontakt@boostnow.pl
+- LinkedIn: https://www.linkedin.com/company/boostnowmarketing
+- Facebook: https://www.facebook.com/profile.php?id=61585415810749
+- Instagram: https://www.instagram.com/boostnow_marketing/
