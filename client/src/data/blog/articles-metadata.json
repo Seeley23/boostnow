@@ -1,56 +1,77 @@
 [
   {
     "id": 1,
+    "record_id": 1,
     "title": "Przuykład 2",
     "meta_description": "",
+    "semantic_anchors": "",
+    "target_industry": "General",
     "slug": "przuykad-2",
     "date": "2026-05-25",
-    "word_count": 4
+    "word_count": 3
   },
   {
     "id": 2,
+    "record_id": 2,
     "title": "hehe",
     "meta_description": "hehe",
+    "semantic_anchors": "",
+    "target_industry": "General",
     "slug": "hehe",
     "date": "2026-05-25",
     "word_count": 1
   },
   {
     "id": 3,
+    "record_id": 3,
     "title": "Pozycjonowanie GEO: Jak Być Cytowanym przez ChatGPT, Perplexity i Gemini w 2025",
     "meta_description": "Pozycjonowanie GEO (Generative Engine Optimization) — dowiedz się jak optymalizować treści pod cytowania AI: ChatGPT, Perplexity, Gemini i Google AI Overviews. Kompletny przewodnik 2025.",
+    "semantic_anchors": "pozycjonowanie GEO",
+    "target_industry": "General",
     "slug": "pozycjonowanie-geo-jak-by-cytowanym-przez-chatgpt-perplexity-i-gemini-w-2025",
     "date": "2026-05-25",
     "word_count": 1365
   },
   {
     "id": 4,
+    "record_id": 4,
     "title": "Przykładowy Artykuł",
     "meta_description": "To jest opis meta Twojego artykułu...",
+    "semantic_anchors": "marketing",
+    "target_industry": "General",
     "slug": "przykadowy-artyku",
     "date": "2026-05-25",
     "word_count": 6
   },
   {
     "id": 5,
+    "record_id": 5,
     "title": "po wgraniu test",
     "meta_description": "test",
+    "semantic_anchors": "test",
+    "target_industry": "General",
     "slug": "po-wgraniu-test",
     "date": "2026-05-25",
     "word_count": 3
   },
   {
     "id": 6,
+    "record_id": 6,
     "title": "kolejny test",
     "meta_description": "kolejny test",
+    "semantic_anchors": "",
+    "target_industry": "General",
     "slug": "kolejny-test",
     "date": "2026-05-25",
     "word_count": 2
   },
   {
     "id": 7,
+    "record_id": 7,
     "title": "test automat",
     "meta_description": "test automat ",
+    "semantic_anchors": "",
+    "target_industry": "General",
     "slug": "test-automat",
     "date": "2026-05-25",
     "word_count": 2
