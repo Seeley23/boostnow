@@ -69,6 +69,11 @@ type ArticleMetadata = {
     description?: string;
   };
 };
+type ArticleFull = ArticleMetadata & {
+  content?: string;
+  excerpt?: string;
+  category?: string;
+};
 
 type SeoData = {
   title: string;
@@ -108,6 +113,15 @@ function loadArticleMetadata(): ArticleMetadata[] {
     [
       path.resolve(process.cwd(), "client/src/data/blog/articles-metadata.json"),
       path.resolve(import.meta.dirname, "../client/src/data/blog/articles-metadata.json"),
+    ],
+    [],
+  );
+}
+function loadFullArticles(): ArticleFull[] {
+  return readJsonFile<ArticleFull[]>(
+    [
+      path.resolve(process.cwd(), "client/src/data/blog/articles.json"),
+      path.resolve(import.meta.dirname, "../client/src/data/blog/articles.json"),
     ],
     [],
   );
@@ -192,8 +206,20 @@ function buildArticleJsonLd(seo: SeoData): string {
   return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
 }
 
-// Build server-side SEO content block (crawlable H1 + description + internal links)
-function buildSeoContentBlock(seo: SeoData, articles: ArticleMetadata[]): string {
+// Strip HTML tags from content for safe plain-text injection
+function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+// Build server-side SEO content block (crawlable H1 + description + full article content)
+function buildSeoContentBlock(seo: SeoData, articles: ArticleMetadata[], fullArticles: ArticleFull[]): string {
   const internalLinks = [
     `<a href="/">Strona główna</a>`,
     `<a href="/blog">Blog</a>`,
@@ -202,14 +228,21 @@ function buildSeoContentBlock(seo: SeoData, articles: ArticleMetadata[]): string
     `<a href="/o-nas">O nas</a>`,
   ].join(" · ");
 
-  // For blog articles
+  // For blog articles — inject FULL content
   if (seo.type === "article" && seo.article) {
     const a = seo.article;
+    const slug = a.slug || "";
     const h1 = escapeHtml(a.title || seo.title.replace(" | BoostNow", ""));
     const desc = escapeHtml(a.meta_description || seo.description);
+    // Find full content from articles.json
+    const full = fullArticles.find((f) => f.slug === slug);
+    const rawContent = full?.content || "";
+    // Strip HTML tags so bots read clean text; escape for safe injection
+    const bodyText = rawContent ? escapeHtml(stripHtml(rawContent)) : desc;
     return `<main id="seo-content" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap" aria-hidden="true">
   <h1>${h1}</h1>
   <p>${desc}</p>
+  <article>${bodyText}</article>
   <nav>${internalLinks}</nav>
 </main>`;
   }
@@ -250,7 +283,7 @@ function buildSeoContentBlock(seo: SeoData, articles: ArticleMetadata[]): string
 </main>`;
 }
 
-function injectSeoMeta(html: string, seo: SeoData, articles: ArticleMetadata[]): string {
+function injectSeoMeta(html: string, seo: SeoData, articles: ArticleMetadata[], fullArticles: ArticleFull[] = []): string {
   const ogTags = [
     `<meta property="og:title" content="${escapeHtml(seo.title)}" />`,
     `<meta property="og:description" content="${escapeHtml(seo.description)}" />`,
@@ -265,7 +298,7 @@ function injectSeoMeta(html: string, seo: SeoData, articles: ArticleMetadata[]):
     buildArticleJsonLd(seo),
   ].join("\n    ");
 
-  const seoContentBlock = buildSeoContentBlock(seo, articles);
+  const seoContentBlock = buildSeoContentBlock(seo, articles, fullArticles);
 
   return html
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(seo.title)}</title>`)
@@ -319,6 +352,7 @@ export function serveStatic(app: Express) {
   const indexHtmlPath = path.resolve(distPath, "index.html");
   const cmsPages = loadCmsPages();
   const articleMetadata = loadArticleMetadata();
+  const fullArticles = loadFullArticles();
 
   // Sync VALID_BLOG_SLUGS from loaded metadata
   articleMetadata.forEach((a) => {
@@ -366,7 +400,7 @@ export function serveStatic(app: Express) {
         return;
       }
       const seo = buildSeoData(req.originalUrl, cmsPages, articleMetadata);
-      res.type("html").send(injectSeoMeta(html, seo, articleMetadata));
+      res.type("html").send(injectSeoMeta(html, seo, articleMetadata, fullArticles));
     });
   });
 }
