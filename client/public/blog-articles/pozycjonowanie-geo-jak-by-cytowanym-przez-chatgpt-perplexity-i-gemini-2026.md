@@ -1,10 +1,3 @@
----
-canonical: https://boostnow.pl/blog/pozycjonowanie-geo
-author: Mateusz Nowotka
-date_published: 2025-12-30
-date_modified: 2026-05-20
----
-
 # Pozycjonowanie GEO: Jak Być Cytowanym przez ChatGPT, Perplexity i Gemini [2026]
 
 **Marki bez pozycjonowania GEO tracą widoczność w AI — i nie wiedzą dlaczego.**
@@ -34,17 +27,20 @@ date_modified: 2026-05-20
 
 GEO różni się od SEO fundamentalnie: Google PageRank mierzy linki i autorytet domeny. Systemy AI — ChatGPT, Perplexity, Google Gemini — używają mechanizmu **RAG (Retrieval-Augmented Generation)**. RAG pobiera fragmenty tekstu z indeksu, ocenia ich cytowalność i wkleja do odpowiedzi. Treść nieustrukturyzowana, bez jasnych encji i definicji, nie przechodzi przez filtr RAG — nawet jeśli rankujesz na pozycji 1 w Google.
 
-### Kluczowe różnice: GEO vs SEO
+### Kluczowe różnice: GEO vs klasyczne SEO
 
-| Kryterium | SEO (Google) | GEO (AI Engines) |
-|---|---|---|
-| Cel | Pozycja w SERP | Cytowanie w odpowiedzi AI |
-| Algorytm | PageRank + 200 sygnałów | RAG + embeddings |
-| Miernik sukcesu | Pozycja, CTR, ruch | Cytowania AI, entity mentions |
-| Kluczowy element | Backlinki, autorytet domeny | Entity clarity, chunk autonomy |
-| Platforma | Google, Bing SERP | ChatGPT, Perplexity, Gemini |
-| Horyzont efektów | 3–12 miesięcy | 4–8 tygodni |
-| KD w Polsce (2026) | 0–76 | 0–5 (rynek nascent) |
+<table>
+<thead><tr><th>Kryterium</th><th>SEO (Google)</th><th>GEO (AI Engines)</th></tr></thead>
+<tbody>
+<tr><td>Cel</td><td>Pozycja w SERP</td><td>Cytowanie w odpowiedzi AI</td></tr>
+<tr><td>Algorytm</td><td>PageRank + 200 sygnałów</td><td>RAG + embeddings</td></tr>
+<tr><td>Miernik sukcesu</td><td>Pozycja, CTR, ruch</td><td>Cytowania AI, entity mentions</td></tr>
+<tr><td>Kluczowy element</td><td>Backlinki, autorytet domeny</td><td>Entity clarity, chunk autonomy</td></tr>
+<tr><td>Platforma</td><td>Google, Bing SERP</td><td>ChatGPT, Perplexity, Gemini</td></tr>
+<tr><td>Horyzont efektów</td><td>3–12 miesięcy</td><td>4–8 tygodni</td></tr>
+<tr><td>KD w Polsce (2026)</td><td>0–76</td><td>0–5 (rynek nascent)</td></tr>
+</tbody>
+</table>
 
 ---
 
@@ -52,7 +48,7 @@ GEO różni się od SEO fundamentalnie: Google PageRank mierzy linki i autorytet
 
 **41% zapytań w kategoriach B2B kończy się dziś na odpowiedzi AI — bez wizyty na stronie.** (Sparktoro, 2024)
 
-Użytkownicy przestają klikać w wyniki Google. Pytają bezpośrednio ChatGPT, Perplexity lub Gemini — i dostają odpowiedź z cytowaniem jednej lub dwóch marek. Google wyświetla 10 wyników. ChatGPT cytuje 1-2 źródła. Jeśli nie jesteś wśród tych dwóch, nie istniejesz dla użytkownika w tym momencie decyzji.
+Użytkownicy przestają klikać w wyniki Google. Pytają bezpośrednio ChatGPT, Perplexity lub Gemini — i dostają odpowiedź z cytowaniem jednej lub dwóch marek. Google wyświetla 10 wyników. ChatGPT cytuje 1–2 źródła. Jeśli nie jesteś wśród tych dwóch, nie istniejesz dla użytkownika w tym momencie decyzji.
 
 **68% marketerów B2B przyznaje, że ich klienci używają AI do researchu przed zakupem.** (BrightEdge, 2024)
 
@@ -67,14 +63,17 @@ Firmy z wdrożonym GEO raportują wzrost ruchu z AI o **średnio 280% w 6 miesi�
 
 ## GEO vs SEO vs AEO: Kluczowe Różnice
 
-| Kryterium | SEO (Google) | GEO (AI Engines) | AEO (Answer Engines) |
-|---|---|---|---|
-| Cel | Pozycja w SERP | Cytowanie w AI | Wyróżniony wynik (Featured Snippet) |
-| Algorytm | PageRank + 200 sygnałów | RAG + embeddings | Featured Snippet rules |
-| Miernik sukcesu | Pozycja, CTR, ruch | Cytowania AI, entity mentions | Snippet ownership |
-| Kluczowy element | Backlinki, autorytet | Entity clarity, chunk autonomy | Direct answer format |
-| Platforma | Google, Bing | ChatGPT, Perplexity, Gemini | Google, Bing Featured |
-| Horyzont | 3–12 mies. | 4–8 tygodni | 2–6 tygodni |
+<table>
+<thead><tr><th>Kryterium</th><th>SEO (Google)</th><th>GEO (AI Engines)</th><th>AEO (Answer Engines)</th></tr></thead>
+<tbody>
+<tr><td>Cel</td><td>Pozycja w SERP</td><td>Cytowanie w AI</td><td>Wyróżniony wynik (Featured Snippet)</td></tr>
+<tr><td>Algorytm</td><td>PageRank + 200 sygnałów</td><td>RAG + embeddings</td><td>Featured Snippet rules</td></tr>
+<tr><td>Miernik sukcesu</td><td>Pozycja, CTR, ruch</td><td>Cytowania AI, entity mentions</td><td>Snippet ownership</td></tr>
+<tr><td>Kluczowy element</td><td>Backlinki, autorytet</td><td>Entity clarity, chunk autonomy</td><td>Direct answer format</td></tr>
+<tr><td>Platforma</td><td>Google, Bing</td><td>ChatGPT, Perplexity, Gemini</td><td>Google, Bing Featured</td></tr>
+<tr><td>Horyzont</td><td>3–12 mies.</td><td>4–8 tygodni</td><td>2–6 tygodni</td></tr>
+</tbody>
+</table>
 
 ---
 
@@ -93,7 +92,7 @@ Trzy różne branże. Trzy różne rynki. Ten sam wynik — bez płatnych reklam
 - 910 kluczowych zdarzeń (+2 066%)
 - Cytowana w Gemini: 41 sesji | Perplexity: 9 sesji
 - TOP 1 organicznie na 5+ frazach globalnych
-- Cytowana 2-3x w jednym AI Overview wielokrotnie
+- Cytowana 2–3x w jednym AI Overview wielokrotnie
 - **Panel boczny AI obok KPMG i Komisji Europejskiej**
 
 ### Case Study 2: SU-2 Kiteboards — E-commerce / Sport
@@ -119,12 +118,15 @@ Trzy różne branże. Trzy różne rynki. Ten sam wynik — bez płatnych reklam
 
 ### Wzorzec powtarzający się we wszystkich 3 projektach
 
-| | Caruma | SU-2 | RudStudio |
-|---|---|---|---|
-| Branża | B2B RegTech | E-commerce | Fashion/ESG |
-| Rynek | Globalny EN | Globalny EN | Globalny EN |
-| AI Overview | ✅ wielokrotnie | ✅ 4x w jednym | ✅ panel |
-| Płatne reklamy | ❌ | ❌ | ❌ |
+<table>
+<thead><tr><th></th><th>Caruma</th><th>SU-2</th><th>RudStudio</th></tr></thead>
+<tbody>
+<tr><td>Branża</td><td>B2B RegTech</td><td>E-commerce</td><td>Fashion/ESG</td></tr>
+<tr><td>Rynek</td><td>Globalny EN</td><td>Globalny EN</td><td>Globalny EN</td></tr>
+<tr><td>AI Overview</td><td>✅ wielokrotnie</td><td>✅ 4x w jednym</td><td>✅ panel</td></tr>
+<tr><td>Płatne reklamy</td><td>❌</td><td>❌</td><td>❌</td></tr>
+</tbody>
+</table>
 
 **Zero reklam. Wyłącznie GEO + SEO content.**
 
@@ -133,7 +135,7 @@ Trzy różne branże. Trzy różne rynki. Ten sam wynik — bez płatnych reklam
 ## Jak Wdrożyć Pozycjonowanie GEO w 4 Krokach?
 
 ### Krok 1: Audyt cytowalności treści
-Sprawdź, które artykuły mają format autonomicznych chunków: Direct Answer Boxes, listy, tabele z pełnymi definicjami. Optymalny chunk pod cytowanie AI ma 134-167 słów, zawiera minimum 1 statystykę z datą i źródłem, oraz zaczyna się od zdania definiującego temat (Bortolato 2025).
+Sprawdź, które artykuły mają format autonomicznych chunków: Direct Answer Boxes, listy, tabele z pełnymi definicjami. Optymalny chunk pod cytowanie AI ma 134–167 słów, zawiera minimum 1 statystykę z datą i źródłem, oraz zaczyna się od zdania definiującego temat (Bortolato 2025).
 
 ### Krok 2: Przebudowa struktury pod entity disambiguation
 Każda encja w tekście musi mieć zdanie definiujące: "[Encja X] to [kategoria] która [różni się od Y przez cechę Z]." Modele AI używają tej struktury do identyfikacji autorytetu tematycznego.
@@ -150,13 +152,16 @@ Testuj zapytania ręcznie w ChatGPT, Perplexity i Gemini co 30 dni. Odświeżaj 
 
 Tylko **11% domen** jest cytowanych jednocześnie przez ChatGPT i Google AI Overviews dla tego samego zapytania.
 
-| Platforma | Priorytet #1 | Priorytet #2 |
-|---|---|---|
-| Google AI Overviews | Top-10 ranking | Pytania jako nagłówki H2/H3 |
-| ChatGPT Web Search | Wikipedia/Wikidata entity | Bing SEO |
-| Perplexity AI | Reddit presence | Świeżość treści |
-| Google Gemini | YouTube channel | Schema.org |
-| Bing Copilot | IndexNow | Bing WMT |
+<table>
+<thead><tr><th>Platforma</th><th>Priorytet #1</th><th>Priorytet #2</th></tr></thead>
+<tbody>
+<tr><td>Google AI Overviews</td><td>Top-10 ranking</td><td>Pytania jako nagłówki H2/H3</td></tr>
+<tr><td>ChatGPT Web Search</td><td>Wikipedia/Wikidata entity</td><td>Bing SEO</td></tr>
+<tr><td>Perplexity AI</td><td>Reddit presence</td><td>Świeżość treści</td></tr>
+<tr><td>Google Gemini</td><td>YouTube channel</td><td>Schema.org</td></tr>
+<tr><td>Bing Copilot</td><td>IndexNow</td><td>Bing WMT</td></tr>
+</tbody>
+</table>
 
 ---
 
@@ -166,16 +171,16 @@ Tylko **11% domen** jest cytowanych jednocześnie przez ChatGPT i Google AI Over
 Pozycjonowanie GEO (Generative Engine Optimization) to optymalizacja treści pod cytowania przez modele AI — ChatGPT, Perplexity i Gemini. Działa przez dostosowanie struktury tekstu do mechanizmu RAG, który AI używa do pobierania i cytowania fragmentów. Kluczowe elementy: chunk autonomy, entity disambiguation, statistical density.
 
 **Jaka jest różnica między GEO a SEO?**
-SEO optymalizuje pod Google PageRank (linki, pozycje). GEO optymalizuje pod systemy AI (cytowalność chunków, entity clarity, freshness). SEO: horyzont 3-12 miesięcy. GEO: pierwsze cytowania po 4-8 tygodniach.
+SEO optymalizuje pod Google PageRank (linki, pozycje). GEO optymalizuje pod systemy AI (cytowalność chunków, entity clarity, freshness). SEO: horyzont 3–12 miesięcy. GEO: pierwsze cytowania po 4–8 tygodniach.
 
 **Czy GEO zastąpi SEO?**
 GEO nie zastępuje SEO — uzupełnia je. 41% zapytań B2B kończy się na odpowiedzi AI bez kliknięcia (Sparktoro, 2024). Strategia musi obsługiwać oba kanały.
 
 **Jak szybko widać efekty GEO?**
-Pierwsze cytowania w Perplexity i ChatGPT po 4-8 tygodniach. Google AI Overviews: 2-4 miesiące. Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań (BrightEdge, 2024).
+Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews: 2–4 miesiące. Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań (BrightEdge, 2024).
 
 **Ile kosztuje pozycjonowanie GEO?**
-BoostNow oferuje bezpłatny audyt GEO jako pierwszy krok. Szczegóły: boostnow.pl/audyt
+BoostNow oferuje bezpłatne konsultacje jako pierwszy krok. Szczegóły i kontakt: [boostnow.pl](https://boostnow.pl)
 
 ---
 
@@ -187,14 +192,15 @@ BoostNow oferuje bezpłatny audyt GEO jako pierwszy krok. Szczegóły: boostnow.
 - ✅ Widoczność obok KPMG, Komisji Europejskiej, globalnych liderów
 - ✅ Zero płatnych reklam
 
-→ Zarezerwuj bezpłatny audyt GEO: boostnow.pl/audyt
+→ [Zarezerwuj bezpłatną konsultację — boostnow.pl](https://boostnow.pl)
 
 ---
 
 ## Źródła
-1. Princeton University, "GEO: Generative Engine Optimization" (2024) — https://arxiv.org/abs/2311.09735
-2. BrightEdge Research, "AI Search Behavior Report" (2024)
-3. Sparktoro, "How People Use Search in 2024"
-4. Schema App, "Structured Data Impact Study" (2024)
-5. Bortolato, "Optimal Passage Length for AI Citation" (2025)
-6. BoostNow, dane własne: Caruma, SU-2, RudStudio (2025-2026)
+
+1. [Princeton University, "GEO: Generative Engine Optimization" (2024)](https://arxiv.org/abs/2311.09735)
+2. [BrightEdge Research, "AI Search Behavior Report" (2024)](https://www.brightedge.com/research-report)
+3. [Sparktoro, "How People Use Search in 2024"](https://sparktoro.com/research)
+4. [Schema App, "Structured Data Impact Study" (2024)](https://schema.app/resources)
+5. [Google Search Central, "Introduction to Structured Data"](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
+6. BoostNow, dane własne: projekty Caruma, SU-2, RudStudio (2025–2026)
