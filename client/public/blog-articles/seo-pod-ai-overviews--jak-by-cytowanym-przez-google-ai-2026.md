@@ -6,7 +6,7 @@
 
 ---
 
-> **BEZPOŚREDNIA ODPOWIEDŹ:** SEO pod AI Overviews (Google AIO) to optymalizacja stron internetowych pod cytowania w generatywnych podsumowan Google. 92% cytowań AI Overviews pochodzi z stron w TOP 10 wyników organicznych — klasyczne SEO jest bramą wejścia. Jednak 47% cytowań to strony poniżej pozycji 5 — Google AIO faworyzuje jasność i bezpośrednie odpowiedzi ponad sam ranking.
+> **BEZPOŚREDNIA ODPOWIEDŹ:** SEO pod AI Overviews (Google AIO) to optymalizacja stron internetowych pod cytowania w generatywnych podsumowaniach Google. 92% cytowań AI Overviews pochodzi z stron w TOP 10 wyników organicznych — klasyczne SEO jest bramą wejścia. Jednak 47% cytowań to strony poniżej pozycji 5 — Google AIO faworyzuje jasność i bezpośrednie odpowiedzi ponad sam ranking.
 
 ---
 
@@ -24,53 +24,53 @@ AIO działa inaczej niż Featured Snippets:
 
 ## Jak Google AI Overviews Wybiera Źródła?
 
-**Fakt #1:** 92% cytowań AIO pochodzi z stron rankujących w TOP 10 organic dla danego zapytania.
+**Fakt #1:** 92% cytowań AIO pochodzi z stron rankujących w TOP 10 organic.
 
-**Fakt #2:** 47% cytowań to strony poniżej pozycji 5 — AIO ma własną logikę selekcji favuryzującą jasność i bezpośrednie odpowiedzi.
+**Fakt #2:** 47% cytowań to strony poniżej pozycji 5 — AIO ma własną logikę faworyzującą jasność i bezpośrednie odpowiedzi.
 
 **Fakt #3:** Featured Snippet optymalizacja ma ~70% overlap z AIO optymalizacją.
 
-**Wniosek:** Musisz rankować organicznie (SEO), ALE równocześnie optymalizować format treści pod AIO. Sam ranking nie wystarcza.
+**Wniosek:** Musisz rankować organicznie (SEO), ALE równocześnie optymalizować format treści pod AIO.
 
 ---
 
 ## 10 Elementów Optymalizacji pod Google AI Overviews
 
 ### 1. Pytania jako nagłówki H2/H3
-Używaj nagrówków w formie pytań odpowiadających na rzeczywiste zapytania Google. Źródło: sekcja "People Also Ask" dla Twojego tematu.
+Używaj nagłówków w formie pytań odpowiadających na rzeczywiste zapytania Google.
 
 ### 2. Bezpośrednia odpowiedź w pierwszym zdaniu
-Po każdym pytającym nagłówku: 1–2 zdania bezpośredniej odpowiedzi, potem rozszerzenie. Google AIO pobiera pierwsze zdanie jako kandydata do cytowania.
+Po każdym pytającym nagłówku: 1–2 zdania bezpośredniej odpowiedzi, potem rozszerzenie.
 
-### 3. Tabele i listy strukturalne
-AIO często cytuje tabele. Każde porównanie, cennik, zestawienie funkcji — wstaw jako tabelę HTML.
-
-### 4. Sekcja FAQ z 5+ pytaniami
+### 3. Sekcja FAQ z 5+ pytaniami
 Dedykowana sekcja FAQ z pytaniami jako H3 i krótkimi odpowiedziami (40–60 słów). Dodaj FAQPage Schema.
 
-### 5. Statystyki z nazwanymi źródłami
-AIO preferuje cytowalne, konkretne twierdzenia: "Według [nazwanego źródła], [konkretna liczba]." Cytaty z autorytetów zwiększają widoczność o 115% (IIT Delhi, 2024).
+### 4. Statystyki z nazwanymi źródłami
+AIO preferuje cytowalne, konkretne twierdzenia: „Według [nazwanego źródła], [konkretna liczba].” Cytaty z autorytetów zwiększają widoczność o 115% (IIT Delhi, 2024).
 
-### 6. Widoczna data publikacji i modyfikacji
-AIO depriorytetyzuje nieodatowane treści dla zapytań zależnych od czasu. Wymaganie: widoczna data + aktualizacja co 30 dni.
+### 5. Widoczna data publikacji i modyfikacji
+AIO depriorytetyzuje nieodatowane treści. Aktualizacja co 30 dni.
 
-### 7. Autor z bio i kwalifikacjami
-E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) to fundament AIO. Wymaganie: widoczne imię autora, stanowisko, link do profilu.
+### 6. Autor z bio i kwalifikacjami
+E-E-A-T: widoczne imię autora, stanowisko, link do profilu.
 
-### 8. Author Schema z sameAs
-Schema Person z atrybutem sameAs (linki do LinkedIn, LinkedIn Company) potwierdza tożsamość autora dla Google.
+### 7. Author Schema z sameAs
+Schema Person z atrybutem sameAs (linki do LinkedIn) potwierdza tożsamość autora dla Google.
 
-### 9. Głębokość treści
-AIO rzadko cytuje strony orphaned lub płytkie. Strony docelowe w TOP 10 dla typowych zapytań AIO mają średnio 1500–2500 słów.
+### 8. Głębokość treści
+Strony docelowe w TOP 10 dla typowych zapytań AIO mają średnio 1500–2500 słów.
 
-### 10. Core Web Vitals
-AIO fetchuje strony real-time. LCP powyżej 2.5s = ryzyko pominięcia. Cel: LCP < 2.5s, CLS < 0.1, INP < 200ms.
+### 9. Core Web Vitals
+LCP powyżej 2.5s = ryzyko pominięcia. Cel: LCP < 2.5s, CLS < 0.1, INP < 200ms.
+
+### 10. Listy i punkty
+AIO często cytuje listy. Każde zestawienie — wstaw jako listę lub sekcję z nagrówkiem.
 
 ---
 
 ## Czego AI Overviews NIE Cytuje
 
-- Stron poza TOP 20 organic dla danego zapytania
+- Stron poza TOP 20 organic
 - Treści bez daty lub przestarzałych (> 12 miesięcy bez aktualizacji)
 - Stron z wolnym LCP (> 4s)
 - Treści bez autora i E-E-A-T sygnałów
@@ -83,7 +83,6 @@ AIO fetchuje strony real-time. LCP powyżej 2.5s = ryzyko pominięcia. Cel: LCP 
 **SU-2 Kiteboards:**
 - 4x cytowania w jednym Google AI Overview
 - TOP 1 panel boczny AIO z obrazkiem
-- Fraza: "split kiteboard" globalnie
 
 **Caruma:**
 - Cytowania 2–3x w jednym AI Overview wielokrotnie
@@ -98,13 +97,13 @@ AIO fetchuje strony real-time. LCP powyżej 2.5s = ryzyko pominięcia. Cel: LCP 
 ## Często Zadawane Pytania
 
 **Czym są Google AI Overviews?**
-Google AI Overviews (AIO) to generatywne podsumowania wyświetlane nad wynikami wyszukiwania Google, które syntetyzują informacje z wielu źródeł i cytują strony jako źródła odpowiedzi.
+Google AI Overviews (AIO) to generatywne podsumowania wyświetlane nad wynikami wyszukiwania Google, które syntetyzują informacje z wielu źródeł i cytują strony jako źródła odpowiedzi. Dostępne globalnie od maja 2024.
 
 **Jak optymalizować stronę pod AI Overviews?**
 Kluczowe kroki: rankowanie w TOP 10 organic, pytania jako H2/H3, bezpośrednie odpowiedzi w pierwszym zdaniu, FAQ Schema, statystyki ze źródłami, widoczna data i autor.
 
 **Czy AI Overviews zmniejszają ruch na stronie?**
-Dla niektórych zapytań informacyjnych tak — użytkownik dostaje odpowiedź bez kliknięcia. Jednak cytowanie w AIO buduje autorytet i generalnie zwiększa ruch z zapytań komercyjnych.
+Dla niektórych zapytań informacyjnych tak. Jednak cytowanie w AIO buduje autorytet i generalnie zwiększa ruch z zapytań komercyjnych.
 
 ---
 
@@ -116,7 +115,7 @@ Dla niektórych zapytań informacyjnych tak — użytkownik dostaje odpowiedź b
 
 ## Źródła
 
-1. [Google, "About AI Overviews"](https://support.google.com/websearch/answer/14901683)
-2. [BrightEdge, "AI Search Behavior Report" (2024)](https://www.brightedge.com/research-report)
-3. [IIT Delhi, "Quotes in GEO" (2024)](https://arxiv.org/abs/2311.09735)
+1. [Google, „About AI Overviews”](https://support.google.com/websearch/answer/14901683)
+2. [BrightEdge, „New Report: Surge in AI Search Engines” (grudzień 2024)](https://www.brightedge.com/news/press-releases/new-report-brightedge-reveals-surge-ai-search-engines-signaling-new-era-online)
+3. [Princeton University, „GEO: Generative Engine Optimization” (2024)](https://arxiv.org/abs/2311.09735)
 4. BoostNow, dane własne (2025–2026)

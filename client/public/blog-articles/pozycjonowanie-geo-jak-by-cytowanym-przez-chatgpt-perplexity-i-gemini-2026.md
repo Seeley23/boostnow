@@ -63,7 +63,7 @@ GEO różni się od SEO fundamentalnie: Google PageRank mierzy linki i autorytet
 
 **41% zapytań w kategoriach B2B kończy się dziś na odpowiedzi AI — bez wizyty na stronie.** (Sparktoro, 2024)
 
-Użytkownicy przestają klikać w wyniki Google. Pytają bezpośrednio ChatGPT, Perplexity lub Gemini — i dostają odpowiedź z cytowaniem jednej lub dwóch marek. Google wyświetla 10 wyników. ChatGPT cytuje 1–2 źródła. Jeśli nie jesteś wśród tych dwóch, nie istniejesz dla użytkownika w tym momencie decyzji.
+Użytkownicy przestają klikać w wyniki Google. Pytają bezpośrednio ChatGPT, Perplexity lub Gemini — i dostają odpowiedź z cytowaniem jednej lub dwóch marek. Google wyświetla 10 wyników. ChatGPT cytuje 1-2 źródła. Jeśli nie jesteś wśród tych dwóch, nie istniejesz dla użytkownika w tym momencie decyzji.
 
 **68% marketerów B2B przyznaje, że ich klienci używają AI do researchu przed zakupem.** (BrightEdge, 2024)
 
@@ -104,7 +104,7 @@ Firmy z wdrożonym GEO raportują wzrost ruchu z AI o **średnio 280% w 6 miesi�
 — AEO: Google, Bing Featured
 
 **Horyzont**
-— SEO: 3–12 miesięcy
+— SEO: 3–12 mies.
 — GEO: 4–8 tygodni
 — AEO: 2–6 tygodni
 
@@ -153,19 +153,16 @@ Trzy różne branże. Trzy różne rynki. Ten sam wynik — bez płatnych reklam
 
 **Caruma**
 — Branża: B2B RegTech
-— Rynek: Globalny EN
 — AI Overview: ✅ wielokrotnie
 — Płatne reklamy: ❌
 
 **SU-2 Kiteboards**
 — Branża: E-commerce
-— Rynek: Globalny EN
 — AI Overview: ✅ 4x w jednym
 — Płatne reklamy: ❌
 
 **RudStudio**
 — Branża: Fashion/ESG
-— Rynek: Globalny EN
 — AI Overview: ✅ panel
 — Płatne reklamy: ❌
 
@@ -176,10 +173,10 @@ Trzy różne branże. Trzy różne rynki. Ten sam wynik — bez płatnych reklam
 ## Jak Wdrożyć Pozycjonowanie GEO w 4 Krokach?
 
 ### Krok 1: Audyt cytowalności treści
-Sprawdź, które artykuły mają format autonomicznych chunków: Direct Answer Boxes, listy, tabele z pełnymi definicjami. Optymalny chunk pod cytowanie AI ma 134–167 słów, zawiera minimum 1 statystykę z datą i źródłem, oraz zaczyna się od zdania definiującego temat (Bortolato 2025).
+Sprawdź, które artykuły mają format autonomicznych chunków: Direct Answer Boxes, listy, tabele z pełnymi definicjami. Optymalny chunk pod cytowanie AI ma 134–167 słów, zawiera minimum 1 statystykę z datą i źródłem, oraz zaczyna się od zdania definiującego temat.
 
 ### Krok 2: Przebudowa struktury pod entity disambiguation
-Każda encja w tekście musi mieć zdanie definiujące: „[Encja X] to [kategoria] która [różni się od Y przez cechę Z].” Modele AI używają tej struktury do identyfikacji autorytetu tematycznego.
+Każda encja musi mieć zdanie definiujące: „[Encja X] to [kategoria] która [różni się od Y przez cechę Z].” Modele AI używają tej struktury do identyfikacji autorytetu tematycznego.
 
 ### Krok 3: Wdrożenie Schema JSON-LD
 Schema dla AI Overviews wymaga pełnego Article schema z atrybutami Person i Publisher. Generyczna schema (Article bez author) obniża citability score o 41.6% (Schema App, 2024).
@@ -230,7 +227,7 @@ GEO nie zastępuje SEO — uzupełnia je. 41% zapytań B2B kończy się na odpow
 Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews: 2–4 miesiące. Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań (BrightEdge, 2024).
 
 **Ile kosztuje pozycjonowanie GEO?**
-BoostNow oferuje bezpłatne konsultacje jako pierwszy krok. Szczegóły i kontakt: [boostnow.pl](https://boostnow.pl)
+BoostNow oferuje bezpłatne konsultacje jako pierwszy krok. Szczegóły: [boostnow.pl](https://boostnow.pl)
 
 ---
 
@@ -249,8 +246,8 @@ BoostNow oferuje bezpłatne konsultacje jako pierwszy krok. Szczegóły i kontak
 ## Źródła
 
 1. [Princeton University, „GEO: Generative Engine Optimization” (2024)](https://arxiv.org/abs/2311.09735)
-2. [BrightEdge Research, „AI Search Behavior Report” (2024)](https://www.brightedge.com/research-report)
-3. [Sparktoro, „How People Use Search in 2024”](https://sparktoro.com/research)
-4. [Schema App, „Structured Data Impact Study” (2024)](https://schema.app/resources)
+2. [BrightEdge, „New Report: Surge in AI Search Engines” (grudzień 2024)](https://www.brightedge.com/news/press-releases/new-report-brightedge-reveals-surge-ai-search-engines-signaling-new-era-online)
+3. [Sparktoro, blog badawczy (2024)](https://sparktoro.com/blog)
+4. [Schema App, strona główna](https://schema.app)
 5. [Google Search Central, „Introduction to Structured Data”](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
-6. BoostNow, dane własne: projekty Caruma, SU-2, RudStudio (2025–2026)
+6. BoostNow, dane własne: Caruma, SU-2, RudStudio (2025–2026)

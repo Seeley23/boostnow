@@ -25,8 +25,6 @@
 
 **Pozycjonowanie w AI** (AI Search Optimization) to proces dostosowywania treści, struktury i autorytetu marki tak, by modele językowe — ChatGPT, Google Gemini, Perplexity AI i Microsoft Copilot — cytowały ją w odpowiedziach na zapytania użytkowników.
 
-Różni się od klasycznego SEO fundamentalnie:
-
 **Tradycyjne SEO**
 — Cel: Pozycja w wynikach Google
 — Algorytm: PageRank + 200 sygnałów rankingowych
@@ -60,8 +58,6 @@ Firmy z wdrożonym pozycjonowaniem w AI raportują wzrost ruchu z AI o **średni
 
 ## Jak Działa Cytowanie przez ChatGPT, Gemini i Perplexity?
 
-Każda platforma AI ma inną logikę wyboru źródeł:
-
 **ChatGPT (Web Search)**
 — Używa indeksu Bing (nie Google)
 — Wikipedia dominuje z 47.9% udziałem cytowań
@@ -84,64 +80,29 @@ Każda platforma AI ma inną logikę wyboru źródeł:
 ## 5 Kroków do Pozycjonowania w AI
 
 ### Krok 1: Audyt cytowalności (AI Citability Score)
-
 Sprawdź czy Twoje treści mają format rozpoznawalny przez AI:
 - Bezpośrednia odpowiedź w pierwszym zdaniu każdej sekcji
 - Akapity 2–4 zdaniowe (optymalna długość chunka AI: 134–167 słów)
 - Minimum 1 statystyka z datą i źródłem per 500 słów
-- Nagrówki H2/H3 jako pytania ("Jak...?", "Co to jest...?")
+- Nagłówki H2/H3 jako pytania
 
 ### Krok 2: Przebudowa struktury pod entity disambiguation
-
-Każda encja musi mieć zdanie definiujące:
-*"[Encja X] to [kategoria] która [różni się od Y przez cechę Z]."*
-
-Modele AI używają tej struktury do identyfikacji autorytetu tematycznego.
+Każda encja musi mieć zdanie definiujące: *„[Encja X] to [kategoria] która [różni się od Y przez cechę Z].”*
 
 ### Krok 3: Wdrożenie Schema JSON-LD
-
-Bez Schema markup AI ma utrudniony dostęp do struktury treści. Minimalne wymagania:
-- `Article` z pełnym `author` (Person + sameAs)
-- `FAQPage` dla sekcji pytania i odpowiedzi
-- `Organization` na stronie głównej
+Minimalne wymagania: `Article` z pełnym `author` (Person + sameAs), `FAQPage` dla sekcji Q&A, `Organization` na stronie głównej.
 
 ### Krok 4: Budowanie brand entity
+Wedug badań Ahrefs (grudzień 2025, analiza 75 000 marek), wzmianki o marce korelują 3x silniej z cytowaniami AI niż backlinki.
 
-Wedug badań Ahrefs (grudzień 2025, analiza 75 000 marek), **wzmianki o marce korelują 3x silniej z cytowaniami AI niż backlinki**.
-
-Najważniejsze platformy:
-- YouTube — korelacja ~0.737 (najsilniejsza)
-- Reddit — wysoka korelacja
-- Wikipedia/Wikidata — wysoka korelacja
-- LinkedIn — umiarkowana korelacja
-
-Domain Rating koreluje jedynie ~0.266 z cytowaniami AI — 10x słabiej niż obecność na YouTube.
+**Najważniejsze platformy:**
+— YouTube — korelacja ~0.737 (najsilniejsza)
+— Reddit — wysoka korelacja
+— Wikipedia/Wikidata — wysoka korelacja
+— LinkedIn — umiarkowana korelacja
 
 ### Krok 5: Monitorowanie i aktualizacja co 30 dni
-
-Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań niż treści statyczne (BrightEdge, 2024). Testuj ręcznie zapytania w ChatGPT, Perplexity i Gemini co miesiąc.
-
----
-
-## Brand Mentions — Dlaczego YouTube i Reddit Ważniejsze niż Backlinki
-
-Wedug badania Ahrefs z grudnia 2025 roku (analiza 75 000 marek):
-
-**YouTube mentions** — korelacja ~0.737 z cytowaniami AI
-— AI trenowane na transkryptach YouTube
-— Gemini i AI Overviews bezpośrednio referują YouTube
-— Jeden film = tysiące naturalnych wzmianek marki
-
-**Reddit mentions** — wysoka korelacja
-— Google wydał 60 mln USD/rok za licencję danych Reddit (2024)
-— Perplexity cytuje Reddit w 46.7% odpowiedzi
-— ChatGPT i Claude referują wątki Reddit
-
-**Domain Rating** — korelacja tylko ~0.266
-— 10x słabsza korelacja niż YouTube
-— Tradycyjny SEO gold standard jest słabym predyktorem AI visibility
-
-**Wniosek dla BoostNow:** Firmy które inwestują w YouTube i Reddit zamiast samych backlinków, budują widoczność AI szybciej i taniej.
+Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań niż treści statyczne (BrightEdge, 2024).
 
 ---
 
@@ -151,19 +112,17 @@ Wedug badania Ahrefs z grudnia 2025 roku (analiza 75 000 marek):
 - 151 000 wyświetleń w Google (+12 421%)
 - Cytowana w Gemini: 41 sesji | Perplexity: 9 sesji
 - **Panel boczny AI obok KPMG i Komisji Europejskiej**
-- Start: zero ruchu organicznego
 
 ### SU-2 Kiteboards — E-commerce (120 dni)
 - TOP 2 globalnie na "split kiteboard"
 - **Cytowany 4x w jednym Google AI Overview**
-- Widoczny w ChatGPT i Perplexity
 - Wyprzedził: Nobile, Cabrinha, CrazyFly
 
 ### RudStudio — Fashion/CSRD
 - Panel boczny AI Overview na "csrd requirements fashion"
 - **Widoczny obok KPMG, Komisji Europejskiej, Carbonfact**
 
-**Wzór: Zero reklam. Wyłącznie pozycjonowanie w AI + SEO content.**
+**Zero reklam. Wyłącznie pozycjonowanie w AI + SEO content.**
 
 ---
 
@@ -173,10 +132,10 @@ Wedug badania Ahrefs z grudnia 2025 roku (analiza 75 000 marek):
 SEO optymalizuje pod algorytm Google PageRank i pozycje w wynikach wyszukiwania. Pozycjonowanie w AI optymalizuje pod mechanizm RAG — pobieranie i cytowanie fragmentów przez modele językowe. SEO ma horyzont 3–12 miesięcy. Pozycjonowanie w AI daje pierwsze cytowania po 4–8 tygodniach.
 
 **Czy pozycjonowanie w AI zastąpi klasyczne SEO?**
-Nie — uzupełnia je. 92% cytowań Google AI Overviews pochodzi z stron w TOP 10 organic, więc klasyczne SEO nadal jest bramą wejścia dla Gemini. Strategie są komplementarne.
+Nie — uzupełnia je. 92% cytowań Google AI Overviews pochodzi z stron w TOP 10 organic, więc klasyczne SEO nadal jest bramą wejścia.
 
 **Jak szybko widać efekty pozycjonowania w AI?**
-Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews wymaga 2–4 miesięcy. Kluczowa zmienna: treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań (BrightEdge, 2024).
+Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews wymaga 2–4 miesięcy.
 
 **Ile kosztuje pozycjonowanie w AI?**
 BoostNow oferuje bezpłatne konsultacje jako pierwszy krok. Kontakt: [boostnow.pl](https://boostnow.pl)
@@ -188,7 +147,6 @@ BoostNow oferuje bezpłatne konsultacje jako pierwszy krok. Kontakt: [boostnow.p
 35+ firm B2B wdrożyło pozycjonowanie w AI z BoostNow:
 - ✅ Cytowania w ChatGPT, Perplexity i Gemini
 - ✅ Wzrost ruchu z AI o średnio 280% w 6 miesięcy
-- ✅ Widoczność obok globalnych liderów branży
 - ✅ Zero płatnych reklam
 
 → [Skontaktuj się z BoostNow](https://boostnow.pl)
@@ -197,8 +155,8 @@ BoostNow oferuje bezpłatne konsultacje jako pierwszy krok. Kontakt: [boostnow.p
 
 ## Źródła
 
-1. [Princeton University, "GEO: Generative Engine Optimization" (2024)](https://arxiv.org/abs/2311.09735)
-2. [BrightEdge Research, "AI Search Behavior Report" (2024)](https://www.brightedge.com/research-report)
-3. [Sparktoro, "How People Use Search in 2024"](https://sparktoro.com/research)
-4. [Ahrefs, "Brand Mentions and AI Citation Correlation Study" (grudzien 2025)](https://ahrefs.com/blog)
+1. [Princeton University, „GEO: Generative Engine Optimization” (2024)](https://arxiv.org/abs/2311.09735)
+2. [BrightEdge, „New Report: Surge in AI Search Engines” (grudzień 2024)](https://www.brightedge.com/news/press-releases/new-report-brightedge-reveals-surge-ai-search-engines-signaling-new-era-online)
+3. [Sparktoro, blog badawczy (2024)](https://sparktoro.com/blog)
+4. [Ahrefs Blog](https://ahrefs.com/blog)
 5. BoostNow, dane własne: Caruma, SU-2, RudStudio (2025–2026)

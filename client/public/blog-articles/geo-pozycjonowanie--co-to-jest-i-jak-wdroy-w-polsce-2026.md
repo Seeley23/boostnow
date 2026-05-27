@@ -14,7 +14,7 @@
 
 **GEO pozycjonowanie** (Generative Engine Optimization) to dyscyplina optymalizacji treści pod systemy AI, które generują odpowiedzi na podstawie pobieranych fragmentów stron internetowych.
 
-Nazwa pochodzi od badania Princeton University z 2024 roku: *"GEO: Generative Engine Optimization"* (arxiv.org/abs/2311.09735). Autorzy udowodnili, że treści zoptymalizowane pod GEO uzyskują o 40% więcej cytowań w odpowiedziach AI niż treści standardowe.
+Nazwa pochodzi od badania Princeton University z 2024 roku. Autorzy udowodnili, że treści zoptymalizowane pod GEO uzyskują o 40% więcej cytowań w odpowiedziach AI niż treści standardowe.
 
 ### GEO vs SEO — kluczowe różnice
 
@@ -51,26 +51,20 @@ Polski rynek GEO pozycjonowania jest praktycznie niezagospodarowany. Dane z anal
 - "agencja seo ai" — Vol 80, KD 0
 - "aeo co to jest" — Vol 70, KD 0
 
-Każda z tych fraz ma **pusty SERP** — pierwsza strona która pojawi się pod te frazy, zajmuje je bez walki, bez backlinków, bez historii domeny.
-
 Okno czasowe: szacunkowo 3–6 miesięcy zanim duże agencje SEO wejdą w tą niszę.
 
 ---
 
 ## Jak Działa GEO Pozycjonowanie Technicznie?
 
-Modele AI używają mechanizmu **RAG (Retrieval-Augmented Generation)**:
-
 **Krok 1 — Retrieval**
-Model pobiera fragmenty tekstu z indeksu stron internetowych. Pobierane są chunki o optymalnej długości 134–167 słów (Bortolato, 2025).
+Model pobiera fragmenty tekstu z indeksu stron internetowych. Pobierane są chunki o optymalnej długości 134–167 słów.
 
 **Krok 2 — Augmentation**
 Pobrane chunki są oceniane pod kątem cytowalności: czy są samowystarczalne, czy zawierają fakty, czy zaczynają się od bezpośredniej odpowiedzi.
 
 **Krok 3 — Generation**
-Model generuje odpowiedź, wplatając cytowania z najwyżej ocenionych fragmentów. Nie cytuje całych stron — cytuje konkretne chunki.
-
-**Wniosek:** Treść musi być pisana na poziomie chunka, nie strony.
+Model generuje odpowiedź, wplatając cytowania z najwyżej ocenionych fragmentów.
 
 ---
 
@@ -80,25 +74,25 @@ Model generuje odpowiedź, wplatając cytowania z najwyżej ocenionych fragment�
 Każdy akapit musi być zrozumiały bez kontekstu poprzednich sekcji. AI nie czyta stron sekwencyjnie — pobiera i ocenia fragmenty izolowanie.
 
 ### Filar 2: Entity Disambiguation
-Każda encja musi być jasno zdefiniowana: *"[X] to [kategoria] która [różni się od Y przez cechę Z]."* Wzorzec definicji zwiększa częstotliwość cytowania o 2.1x (Georgia Tech, 2024).
+Każda encja musi być jasno zdefiniowana: *„[X] to [kategoria] która [różni się od Y przez cechę Z].”* Wzorzec definicji zwiększa częstotliwość cytowania o 2.1x (Georgia Tech, 2024).
 
 ### Filar 3: Statistical Density
 Dodanie statystyk do chunków zwiększa cytowanie o 40% (Princeton, 2024). Wymaganie: minimum 1 statystyka z nazwanym źródłem i datą per 500 słów.
 
 ### Filar 4: Freshness Signals
-Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań niż treści statyczne (BrightEdge, 2024). Widoczna data modyfikacji to obowiązkowy element każdej strony.
+Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań niż treści statyczne (BrightEdge, 2024).
 
 ---
 
 ## GEO Pozycjonowanie w Praktyce — Wyniki BoostNow
 
-### Case Study: Caruma (90 dni, B2B RegTech)
+### Caruma (90 dni, B2B RegTech)
 - Start: zero ruchu organicznego, nowa domena
 - 151 000 wyświetleń (+12 421%), 376 kliknięć (+974%)
 - Cytowania AI: Gemini 41 sesji, Perplexity 9 sesji
 - Panel boczny AI obok KPMG i Komisji Europejskiej
 
-### Case Study: SU-2 Kiteboards (120 dni, E-commerce)
+### SU-2 Kiteboards (120 dni, E-commerce)
 - TOP 2 globalnie na "split kiteboard"
 - 4x cytowania w jednym Google AI Overview
 - Wyprzedził Nobile, Cabrinha, CrazyFly w AI visibility
@@ -110,17 +104,15 @@ Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań niż treści st
 **Co to jest GEO pozycjonowanie?**
 GEO pozycjonowanie (Generative Engine Optimization) to optymalizacja treści pod cytowania przez wyszukiwarki AI — ChatGPT, Perplexity, Gemini i Google AI Overviews. Polega na dostosowaniu struktury, języka i autorytetu treści do mechanizmu RAG używanego przez modele językowe.
 
-**Czy GEO pozycjonowanie zastapi SEO w Polsce?**
-GEO nie zastapi SEO — uzupełnia je. 92% cytowań Google AI Overviews pochodzi z stron w TOP 10 organic, więc klasyczne SEO nadal jest konieczne. Jednak firmy które ignorują GEO tracą rosnący segment ruchu — szacowany na 50% wszystkich zapytań do końca 2026.
+**Czy GEO pozycjonowanie zastąpi SEO w Polsce?**
+GEO nie zastąpi SEO — uzupełnia je. 92% cytowań Google AI Overviews pochodzi z stron w TOP 10 organic. Jednak firmy które ignorują GEO tracą rosnący segment ruchu — szacowany na 50% wszystkich zapytań do końca 2026.
 
 **Jak szybko widać efekty GEO pozycjonowania?**
-Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews: 2–4 miesiące. BoostNow osiągnął pierwsze cytowania AI dla klientów w 90 dni od zera.
+Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews: 2–4 miesiące.
 
 ---
 
 ## Zacznij GEO Pozycjonowanie
-
-BoostNow to jedyna agencja w Polsce specjalizująca się w SEO, GEO, AIO i AEO jednocześnie.
 
 → [Bezpłatna konsultacja — boostnow.pl](https://boostnow.pl)
 
@@ -128,7 +120,7 @@ BoostNow to jedyna agencja w Polsce specjalizująca się w SEO, GEO, AIO i AEO j
 
 ## Źródła
 
-1. [Princeton University, "GEO: Generative Engine Optimization" (2024)](https://arxiv.org/abs/2311.09735)
-2. [BrightEdge Research, "AI Search Behavior Report" (2024)](https://www.brightedge.com/research-report)
-3. [Ahrefs, analiza słów kluczowych PL, maj 2026](https://ahrefs.com)
+1. [Princeton University, „GEO: Generative Engine Optimization” (2024)](https://arxiv.org/abs/2311.09735)
+2. [BrightEdge, „New Report: Surge in AI Search Engines” (grudzień 2024)](https://www.brightedge.com/news/press-releases/new-report-brightedge-reveals-surge-ai-search-engines-signaling-new-era-online)
+3. [Ahrefs, analiza słów kluczowych PL (maj 2026)](https://ahrefs.com/blog)
 4. BoostNow, dane własne: Caruma, SU-2, RudStudio (2025–2026)
