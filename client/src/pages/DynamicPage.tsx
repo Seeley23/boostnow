@@ -85,7 +85,6 @@ const DynamicPage: React.FC = () => {
       const foundPage = websiteData.pages.find(p => p.slug === slug);
       setPage(foundPage || null);
     } else if (!slug && websiteData && websiteData.pages) {
-      // Handle home page if slug is empty
       const homePage = websiteData.pages.find(p => p.slug === 'home');
       setPage(homePage || null);
     }
@@ -95,20 +94,27 @@ const DynamicPage: React.FC = () => {
     return <NotFound />;
   }
 
-  // Parse FAQ Data if it exists
-  const faqs = page.FAQ_Data ? JSON.parse(page.FAQ_Data) : [];
-  
-  // Generate FAQ Schema
+  // Support both old flat structure and new nested seo/jsonLd structure
+  const seoTitle = page.seo?.title || page.SEO_Title || page.name || page.PageName || 'BoostNow';
+  const seoDesc = page.seo?.description || page.SEO_Desc || '';
+  const seoKeywords = page.seo?.primaryKeyword || page.Focus_Keyphrase || '';
+  const pageName = page.name || page.pageName || page.PageName || '';
+
+  // FAQ sections from sections array (new structure) or legacy FAQ_Data field
+  const faqSections = page.sections?.filter((s: any) => s.type === 'FAQ') || [];
+  const legacyFaqs = page.FAQ_Data ? (() => { try { return JSON.parse(page.FAQ_Data); } catch { return []; } })() : [];
+  const faqs = faqSections.length > 0
+    ? faqSections.map((s: any) => ({ question: s.title, answer: s.content }))
+    : legacyFaqs;
+
+  // FAQ schema from sections
   const faqSchema = faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": faqs.map((faq: any) => ({
       "@type": "Question",
       "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
     }))
   } : null;
 
@@ -117,10 +123,17 @@ const DynamicPage: React.FC = () => {
   return (
     <div style={{ background: NAVY, color: "#f7f8fa" }} className="min-h-screen">
       <Helmet>
-        <title>{page.SEO_Title || page.PageName || 'BoostNow'}</title>
-        <meta name="description" content={page.SEO_Desc || ''} />
-        <meta name="keywords" content={page.Focus_Keyphrase || ''} />
-        {page.Schema_Markup && (
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDesc} />
+        <meta name="keywords" content={seoKeywords} />
+        {/* jsonLd from sync-airtable (new structure) */}
+        {page.jsonLd && (
+          <script type="application/ld+json">
+            {JSON.stringify(page.jsonLd)}
+          </script>
+        )}
+        {/* Legacy flat Schema_Markup field */}
+        {!page.jsonLd && page.Schema_Markup && (
           <script type="application/ld+json">
             {page.Schema_Markup}
           </script>
@@ -159,14 +172,14 @@ const DynamicPage: React.FC = () => {
                       color: LIME,
                     }}
                   >
-                    {page.pageName}
+                    {pageName}
                   </span>
                 </div>
               </FadeIn>
 
               <FadeIn delay={0.1}>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-center leading-[0.95] tracking-tight mb-8">
-                  {page.sections?.find((s: any) => s.type === 'Hero')?.title || page.pageName}
+                  {page.sections?.find((s: any) => s.type === 'Hero')?.title || pageName}
                 </h1>
               </FadeIn>
 
