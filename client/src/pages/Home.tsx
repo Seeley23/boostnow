@@ -1,5 +1,4 @@
 import { useAuth } from "@/_core/hooks/useAuth";
-import siteSeo from '../data/blog/site-seo.json';
 import websiteCms from '../data/blog/website-cms.json';
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
@@ -21,12 +20,7 @@ export default function Home() {
   // Find the home page data from the synced CMS data
   const homePage = websiteCms.pages.find(p => p.slug === 'home');
   
-  const seo = homePage?.seo || {
-    title: (siteSeo as any)['Home']?.title || 'Agencja Neuromarketingowa - CRO & Decision Science',
-    description: (siteSeo as any)['Home']?.description || 'Agencja Neuromarketingowa w Olsztynie - CRO i Decision Science. Zwiększamy ROAS e-commerce o 150% w 90 dni dla marek z całej Polski.',
-    primaryKeyword: (siteSeo as any)['Home']?.keywords || 'agencja neuromarketingowa olsztyn, optymalizacja konwersji CRO, decision science, agencja marketingowa',
-    canonicalUrl: undefined
-  };
+  const seo = homePage?.seo || {};
 
   // Helper to find a section by type
   const getSection = (type: string) => homePage?.sections?.find(s => s.type === type);
@@ -34,10 +28,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background pt-20 lg:pt-24">
       <Helmet>
-        <title>{seo.title}</title>
+        <title>{seo.title || 'BoostNow'}</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content={seo.description} />
-        <meta name="keywords" content={seo.primaryKeyword} />
+        {seo.description && <meta name="description" content={seo.description} />}
+        {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
         {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
         {homePage?.jsonLd && (
           <script type="application/ld+json">
