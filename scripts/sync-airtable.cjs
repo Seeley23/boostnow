@@ -30,22 +30,70 @@ async function sync() {
   const dataPath = path.join(process.cwd(), 'client/src/data/blog');
   if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath, { recursive: true });
 
+  // Parses a Schema JSON field that may contain multiple JSON objects separated by blank lines
+  // Returns an array of parsed schema objects (or single object), or null on failure
+  function parseSchemaField(raw, label) {
+    if (!raw || typeof raw !== 'string') return null;
+    const text = raw.trim();
+    if (!text) return null;
+
+    // Try as a single JSON first
+    try {
+      return JSON.parse(text);
+    } catch (_) {}
+
+    // Split multiple JSON objects separated by blank lines between } and {
+    const parts = [];
+    let depth = 0, start = 0, inStr = false, escape = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (escape) { escape = false; continue; }
+      if (c === '\\' && inStr) { escape = true; continue; }
+      if (c === '"') { inStr = !inStr; continue; }
+      if (inStr) continue;
+      if (c === '{') depth++;
+      if (c === '}') {
+        depth--;
+        if (depth === 0) {
+          parts.push(text.slice(start, i + 1));
+          start = i + 1;
+        }
+      }
+    }
+
+    if (parts.length === 0) {
+      console.warn(`[${label}] Schema JSON: nie można sparsować`);
+      return null;
+    }
+    try {
+      const parsed = parts.map(p => JSON.parse(p.trim()));
+      return parsed.length === 1 ? parsed[0] : parsed;
+    } catch (e) {
+      console.warn(`[${label}] Schema JSON parse error:`, e.message);
+      return null;
+    }
+  }
+
   // 1. Blog
   const articles = await fetchAirtableData(TABLES.ARTICLES);
   const blogData = articles.map((record, index) => {
     const f = record.fields;
-    const slug = f.Slug || (f.Title ? f.Title.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '') : record.id);
-    // Schema_JSON: manually written full schema (takes priority over auto-generated)
-    const rawSchemaJson = f['Schema_JSON'] || f['Schema JSON'] || null;
-    let schemaJson = null;
-    if (rawSchemaJson) {
-      try {
-        schemaJson = typeof rawSchemaJson === 'string' ? JSON.parse(rawSchemaJson) : rawSchemaJson;
-      } catch (e) {
-        console.warn(`[${slug}] Schema_JSON nie jest poprawnym JSON:`, e.message);
-        schemaJson = null;
-      }
+
+    // Schema JSON field: may contain multiple schemas (Article + FAQPage) separated by blank lines
+    const schemaJson = parseSchemaField(f['Schema JSON'], f.Title || record.id);
+
+    // Extract real slug from mainEntityOfPage URL in schema if available
+    let slug = f.Slug || null;
+    if (!slug && schemaJson) {
+      const firstSchema = Array.isArray(schemaJson) ? schemaJson[0] : schemaJson;
+      const mpId = firstSchema?.mainEntityOfPage?.['@id'] || firstSchema?.url || '';
+      const match = mpId.match(/\/blog\/([^\/]+)$/);
+      if (match) slug = match[1];
     }
+    if (!slug) {
+      slug = f.Title ? f.Title.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '') : record.id;
+    }
+
     return {
       id: index + 1,
       title: f.Title || 'Bez tytułu',
@@ -53,9 +101,10 @@ async function sync() {
       slug,
       date: new Date().toISOString().split('T')[0],
       excerpt: f['Meta Description'] || '',
+      seoTitle: f['SEO Title'] || f.Title || '',
+      keyPhrase: f['Key Phrase'] || '',
       category: 'General',
-      schemaType: f['Schema_Type'] || f['Schema Type'] || 'Article',
-      schemaJson,  // manually written schema from Airtable (used in <script type="application/ld+json">)
+      schemaJson,  // Article schema + optionally FAQPage schema from Airtable
     };
   });
   fs.writeFileSync(path.join(dataPath, 'articles.json'), JSON.stringify(blogData, null, 2));
@@ -114,14 +163,14 @@ async function sync() {
         lastUpdated: pFields.Last_Updated || new Date().toISOString().split('T')[0]
       };
 
-      // Schema_JSON: manually written full schema from Airtable (takes priority)
-      const rawPageSchemaJson = pFields['Schema_JSON'] || pFields['Schema JSON'] || null;
+      // Schema_Markup: manually written full schema from Airtable Pages table (takes priority)
+      const rawPageSchemaJson = pFields['Schema_Markup'] || null;
       let manualJsonLd = null;
       if (rawPageSchemaJson) {
         try {
           manualJsonLd = typeof rawPageSchemaJson === 'string' ? JSON.parse(rawPageSchemaJson) : rawPageSchemaJson;
         } catch (e) {
-          console.warn(`[${pFields.Slug}] Schema_JSON nie jest poprawnym JSON:`, e.message);
+          console.warn(`[${pFields.Slug}] Schema_Markup nie jest poprawnym JSON:`, e.message);
         }
       }
 

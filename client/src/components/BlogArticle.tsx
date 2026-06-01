@@ -158,18 +158,21 @@ const BlogArticle: React.FC = () => {
         }
       };
 
-      // Use Schema_JSON from Airtable if available, otherwise use auto-generated
-      const schema = (article as any).schemaJson || autoSchema;
+      // Use Schema_JSON from Airtable if available (may be array: [Article, FAQPage])
+      // Otherwise fall back to auto-generated Article schema
+      const rawSchema = (article as any).schemaJson || autoSchema;
+      const schemas: any[] = Array.isArray(rawSchema) ? rawSchema : [rawSchema];
 
-      if (schemaScript) {
-        schemaScript.textContent = JSON.stringify(schema);
-      } else {
+      // Remove previously injected article schemas
+      document.querySelectorAll('script[data-article-schema]').forEach(el => el.remove());
+
+      schemas.forEach((s, i) => {
         const script = document.createElement('script');
         script.type = 'application/ld+json';
-        script.setAttribute('data-article-schema', 'true');
-        script.textContent = JSON.stringify(schema);
+        script.setAttribute('data-article-schema', String(i));
+        script.textContent = JSON.stringify(s);
         document.head.appendChild(script);
-      }
+      });
 
       // BreadcrumbList Schema for Article
       const breadcrumbScript = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
