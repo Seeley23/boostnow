@@ -105,11 +105,13 @@ const BlogArticle: React.FC = () => {
       });
 
       // JSON-LD Schema for Article (Google Rich Results)
+      // Priority: manually written Schema_JSON from Airtable > auto-generated
       const schemaScript = document.querySelector('script[type="application/ld+json"][data-article-schema]');
       const articleUrl = `https://boostnow.pl/blog/${id}`;
-      const schema = {
+
+      const autoSchema = {
         '@context': 'https://schema.org',
-        '@type': 'Article',
+        '@type': (article as any).schemaType || 'Article',
         '@id': articleUrl,
         mainEntityOfPage: {
           '@type': 'WebPage',
@@ -152,10 +154,13 @@ const BlogArticle: React.FC = () => {
         inLanguage: 'pl-PL',
         about: {
           '@type': 'Thing',
-          name: article.semantic_anchors.split(',')[0].trim()
+          name: article.semantic_anchors?.split(',')[0]?.trim() || article.title
         }
       };
-      
+
+      // Use Schema_JSON from Airtable if available, otherwise use auto-generated
+      const schema = (article as any).schemaJson || autoSchema;
+
       if (schemaScript) {
         schemaScript.textContent = JSON.stringify(schema);
       } else {

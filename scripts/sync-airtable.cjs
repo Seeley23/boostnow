@@ -35,6 +35,17 @@ async function sync() {
   const blogData = articles.map((record, index) => {
     const f = record.fields;
     const slug = f.Slug || (f.Title ? f.Title.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '') : record.id);
+    // Schema_JSON: manually written full schema (takes priority over auto-generated)
+    const rawSchemaJson = f['Schema_JSON'] || f['Schema JSON'] || null;
+    let schemaJson = null;
+    if (rawSchemaJson) {
+      try {
+        schemaJson = typeof rawSchemaJson === 'string' ? JSON.parse(rawSchemaJson) : rawSchemaJson;
+      } catch (e) {
+        console.warn(`[${slug}] Schema_JSON nie jest poprawnym JSON:`, e.message);
+        schemaJson = null;
+      }
+    }
     return {
       id: index + 1,
       title: f.Title || 'Bez tytułu',
@@ -42,7 +53,9 @@ async function sync() {
       slug,
       date: new Date().toISOString().split('T')[0],
       excerpt: f['Meta Description'] || '',
-      category: 'General'
+      category: 'General',
+      schemaType: f['Schema_Type'] || f['Schema Type'] || 'Article',
+      schemaJson,  // manually written schema from Airtable (used in <script type="application/ld+json">)
     };
   });
   fs.writeFileSync(path.join(dataPath, 'articles.json'), JSON.stringify(blogData, null, 2));
@@ -101,8 +114,19 @@ async function sync() {
         lastUpdated: pFields.Last_Updated || new Date().toISOString().split('T')[0]
       };
 
-      // Generate JSON-LD
-      const jsonLd = {
+      // Schema_JSON: manually written full schema from Airtable (takes priority)
+      const rawPageSchemaJson = pFields['Schema_JSON'] || pFields['Schema JSON'] || null;
+      let manualJsonLd = null;
+      if (rawPageSchemaJson) {
+        try {
+          manualJsonLd = typeof rawPageSchemaJson === 'string' ? JSON.parse(rawPageSchemaJson) : rawPageSchemaJson;
+        } catch (e) {
+          console.warn(`[${pFields.Slug}] Schema_JSON nie jest poprawnym JSON:`, e.message);
+        }
+      }
+
+      // Auto-generate JSON-LD (used only when Schema_JSON is empty in Airtable)
+      const autoJsonLd = {
         "@context": "https://schema.org",
         "@type": seo.schemaType,
         "headline": seo.title,
@@ -125,7 +149,7 @@ async function sync() {
       if (seo.schemaType === 'FAQPage') {
         const faqSections = pageSections.filter(s => s.type === 'FAQ');
         if (faqSections.length > 0) {
-          jsonLd.mainEntity = faqSections.map(s => ({
+          autoJsonLd.mainEntity = faqSections.map(s => ({
             "@type": "Question",
             "name": s.title,
             "acceptedAnswer": {
@@ -135,6 +159,9 @@ async function sync() {
           }));
         }
       }
+
+      // Prefer manually written schema; fall back to auto-generated
+      const jsonLd = manualJsonLd || autoJsonLd;
 
       return {
         slug: pFields.Slug,
