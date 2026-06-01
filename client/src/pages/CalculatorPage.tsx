@@ -4,23 +4,23 @@ import LossCalculator from "@/components/LossCalculator";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import websiteCms from '../data/blog/website-cms.json';
 
 export default function CalculatorPage() {
+  const cmsPage = (websiteCms as any).pages?.find((p: any) => p.slug === 'oblicz-straty');
+  const seo = cmsPage?.seo || {};
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Kalkulator Strat Marketingowych | Oblicz straty - BoostNow</title>
+        <title>{seo.title || 'Kalkulator Strat | BoostNow'}</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Oblicz ile pieniędzy tracisz przez błędy marketingowe. Darmowy kalkulator strat: konwersje, churn, czas zespołu. Wyniki w 2 minuty!" />
-        <meta name="keywords" content="kalkulator strat, kalkulator marketingowy, straty marketingowe, ROI, konwersje, błędy marketingowe, audyt marketingowy" />
-        <meta property="og:title" content="Kalkulator Strat Marketingowych | BoostNow" />
-        <meta property="og:description" content="Oblicz ile pieniędzy tracisz przez błędy marketingowe. Darmowy kalkulator strat: konwersje, churn, czas zespołu. Wyniki w 2 minuty!" />
-        <meta property="og:url" content="https://boostnow.pl/calculator" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kalkulator Strat Marketingowych | BoostNow" />
-        <meta name="twitter:description" content="Oblicz ile pieniędzy tracisz przez błędy marketingowe. Darmowy kalkulator strat: konwersje, churn, czas zespołu. Wyniki w 2 minuty!" />
-        <link rel="canonical" href="https://boostnow.pl/calculator" />
+        {seo.description && <meta name="description" content={seo.description} />}
+        {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
+        {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
+        {cmsPage?.jsonLd && (
+          <script type="application/ld+json">{JSON.stringify(cmsPage.jsonLd)}</script>
+        )}
       </Helmet>
       <BreadcrumbSchema items={[
         { name: 'Strona główna', url: 'https://boostnow.pl' },

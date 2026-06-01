@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import { trpc } from "@/lib/trpc";
+import websiteCms from '../data/blog/website-cms.json';
 
 /* ─────────────────────────────────────────────
    AIO PAGE – AI Optimization for E-commerce
@@ -321,6 +322,9 @@ function ContactForm() {
 // MAIN PAGE
 // ─────────────────────────────────────────────
 export default function AIOPage() {
+  const cmsPage = (websiteCms as any).pages?.find((p: any) => p.slug === 'aio');
+  const seo = cmsPage?.seo || {};
+
   const formRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
@@ -330,15 +334,16 @@ export default function AIOPage() {
   return (
     <div style={{ background: NAVY, color: "#f7f8fa" }} className="min-h-screen">
       <Helmet>
-        <title>AIO – Pozycjonowanie w AI | BoostNow</title>
-        <meta
-          name="description"
-          content="Pozycjonowanie stron w AI — ChatGPT, Perplexity, Gemini. BoostNow wdraża AIO i sprawia, że Twoja firma pojawia się w odpowiedziach AI."
-        />
-        <meta
-          name="keywords"
-          content="AIO, AI Optimization, pozycjonowanie w AI, ChatGPT SEO, Perplexity SEO, Gemini SEO, optymalizacja pod AI, widoczność w AI, pozycjonowanie stron, agencja SEO, BoostNow"
-        />
+        <title>{seo.title || 'AIO – Pozycjonowanie w AI | BoostNow'}</title>
+        {seo.description
+          ? <meta name="description" content={seo.description} />
+          : <meta name="description" content="Pozycjonowanie stron w AI — ChatGPT, Perplexity, Gemini. BoostNow wdraża AIO i sprawia, że Twoja firma pojawia się w odpowiedziach AI." />
+        }
+        {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
+        {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
+        {cmsPage?.jsonLd && (
+          <script type="application/ld+json">{JSON.stringify(cmsPage.jsonLd)}</script>
+        )}
       </Helmet>
 
       <Navigation />

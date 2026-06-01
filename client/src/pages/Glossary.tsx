@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import websiteCms from '../data/blog/website-cms.json';
 import { Search, ChevronDown } from "lucide-react";
 
 interface Article {
@@ -394,6 +395,9 @@ const categories = [
 ];
 
 export default function Glossary() {
+  const cmsPage = (websiteCms as any).pages?.find((p: any) => p.slug === 'slownik');
+  const seo = cmsPage?.seo || {};
+
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedId, setExpandedId] = useState<string | null>(null);
@@ -429,15 +433,14 @@ export default function Glossary() {
 
       <div className="min-h-screen bg-background pt-20 lg:pt-24">
         <Helmet>
-          <title>Słownik Pojęć - Neuromarketing, SEO, CRO | BoostNow</title>
+          <title>{seo.title || 'Słownik | BoostNow'}</title>
           <meta name="robots" content="index, follow" />
-          <meta name="description" content="Słownik pojęć z zakresu neuromarketingu, SEO, optymalizacji konwersji i psychologii e-commerce. 20+ definicji dla marketerów i przedsiębiorców." />
-          <meta name="keywords" content="słownik neuromarketing, decision science, CRO, SEO, psychologia konwersji, e-commerce" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://boostnow.pl/glossary" />
-          <meta property="og:title" content="Słownik Pojęć - Neuromarketing, SEO, CRO" />
-          <meta property="og:description" content="Kompletny słownik pojęć z zakresu neuromarketingu i optymalizacji konwersji" />
-          <link rel="canonical" href="https://boostnow.pl/glossary" />
+          {seo.description && <meta name="description" content={seo.description} />}
+          {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
+          {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
+          {cmsPage?.jsonLd && (
+            <script type="application/ld+json">{JSON.stringify(cmsPage.jsonLd)}</script>
+          )}
         </Helmet>
 
         <main>
