@@ -26,7 +26,9 @@ const serviceLinks = [
   { label: "AIO dla e-commerce", href: "/aio", highlight: true },
   { label: "AIO dla e-commerce (szczegóły)", href: "/aio-ecommerce" },
   { label: "Blog", href: "/blog" },
+  { label: "Jak zwiększać konwersje", href: "/blog/jak-zwiekszac-konwersje-ecommerce" },
   { label: "Kalkulator strat", href: "/calculator" },
+  { label: "Oblicz straty", href: "/oblicz-straty" },
   { label: "Słownik marketingowy", href: "/glossary" },
   { label: "Agencja Olsztyn", href: "/olsztyn" },
 ];
