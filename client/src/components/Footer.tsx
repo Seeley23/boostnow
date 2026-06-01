@@ -24,9 +24,11 @@ const footerLinks = [
 
 const serviceLinks = [
   { label: "AIO dla e-commerce", href: "/aio", highlight: true },
+  { label: "AIO dla e-commerce (szczegóły)", href: "/aio-ecommerce" },
   { label: "Blog", href: "/blog" },
   { label: "Kalkulator strat", href: "/calculator" },
   { label: "Słownik marketingowy", href: "/glossary" },
+  { label: "Agencja Olsztyn", href: "/olsztyn" },
 ];
 
 export default function Footer() {
