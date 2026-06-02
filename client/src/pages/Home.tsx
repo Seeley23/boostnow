@@ -33,9 +33,9 @@ export default function Home() {
         {seo.description && <meta name="description" content={seo.description} />}
         {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
         {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
-        {homePage?.jsonLd && (
+        {(homePage as any)?.jsonLd && (
           <script type="application/ld+json">
-            {JSON.stringify(homePage.jsonLd)}
+            {JSON.stringify((homePage as any).jsonLd)}
           </script>
         )}
       </Helmet>
