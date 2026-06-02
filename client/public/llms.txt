@@ -1,22 +1,62 @@
-# BoostNow - Agencja SEO, GEO, AIO i AEO
+# BoostNow - Agencja Aktywacji Klientów | Elite SEO & GEO
 
-> BoostNow to polska agencja specjalizująca się w pozycjonowaniu
-> stron w Google i wyszukiwarkach AI (ChatGPT, Perplexity, Gemini).
-> Obsługujemy firmy z Olsztyna i całej Polski.
+> BoostNow to polska agencja marketingowa specjalizująca się w pozycjonowaniu stron internetowych
+> w Google oraz w wyszukiwarkach AI (ChatGPT, Perplexity, Gemini, Copilot).
+> Pomagamy firmom zwiększać widoczność, konwersje i sprzedaż poprzez psychologię decyzji
+> oraz mierzalne strategie oparte na danych.
+
+## Dane Firmy
+
+- Nazwa: BoostNow Agencja Marketingowa
+- NIP: 7393776527
+- Adres: ul. Marii Konopnickiej 11, 11-040 Dobre Miasto, Polska
+- Email: kontakt@boostnow.pl
+- Strona: https://boostnow.pl
+- Lokalizacja obsługi: Olsztyn, Warmia i Mazury, cała Polska
 
 ## Usługi
 
-- [SEO](https://boostnow.pl/seo)
-- [GEO - Generative Engine Optimization](https://boostnow.pl/geo)
-- [AEO - Answer Engine Optimization](https://boostnow.pl/aeo)
-- [AIO - AI Optimization](https://boostnow.pl/aio)
-- [Audyt SEO](https://boostnow.pl/audyt-seo)
+- [AIO - AI Optimization dla e-commerce](https://boostnow.pl/aio)
+- [AIO dla e-commerce - szczegółowa oferta](https://boostnow.pl/aio-ecommerce)
+- [SEO i GEO dla firm z Olsztyna](https://boostnow.pl/olsztyn)
+- [Kalkulator strat bez automatyzacji](https://boostnow.pl/calculator)
 
-## Blog
+## Strony informacyjne
 
-- [Blog SEO i GEO](https://boostnow.pl/blog)
+- [Strona główna](https://boostnow.pl/)
+- [O nas - zespół i misja](https://boostnow.pl/o-nas)
+- [Kontakt](https://boostnow.pl/kontakt)
+- [Słownik pojęć AI i marketingu](https://boostnow.pl/glossary)
+- [Blog SEO, GEO i AI](https://boostnow.pl/blog)
 
-## Kontakt
+## Artykuły na blogu
 
-- Strona: https://boostnow.pl
-- Lokalizacja: Olsztyn, Polska
+- [Jak zwiększać konwersje w e-commerce](https://boostnow.pl/blog/jak-zwiekszac-konwersje-ecommerce)
+- [Czym jest llms.txt i dlaczego warto go mieć](https://boostnow.pl/blog/llms-txt)
+- [Pozycjonowanie GEO - co to jest](https://boostnow.pl/blog/pozycjonowanie-geo)
+- [GEO pozycjonowanie - przewodnik](https://boostnow.pl/blog/geo-pozycjonowanie)
+- [Pozycjonowanie w AI - jak działać](https://boostnow.pl/blog/pozycjonowanie-w-ai)
+- [Agencja SEO i AI - jak wybrać](https://boostnow.pl/blog/agencja-seo-ai)
+- [AI SEO - optymalizacja pod algorytmy AI](https://boostnow.pl/blog/ai-seo)
+- [Widoczność w ChatGPT - jak ją zwiększyć](https://boostnow.pl/blog/widocznosc-w-chatgpt)
+- [AEO - Answer Engine Optimization co to jest](https://boostnow.pl/blog/aeo-co-to-jest)
+- [Generative Engine Optimization (GEO)](https://boostnow.pl/blog/generative-engine-optimization)
+- [SEO pod AI Overviews w Google](https://boostnow.pl/blog/seo-pod-ai-overviews)
+
+## Specjalizacja i metodologia
+
+BoostNow łączy klasyczne SEO z GEO (Generative Engine Optimization), AEO (Answer Engine Optimization)
+i AIO (AI Optimization). Nasze podejście opiera się na:
+
+- Optymalizacji treści pod wyszukiwarki AI (ChatGPT, Perplexity, Gemini)
+- Psychologii decyzji zakupowych i optymalizacji konwersji (CRO)
+- Mierzalnych strategiach wzrostu opartych na danych
+- Automatyzacji marketingu dla sklepów e-commerce
+- Budowaniu autorytetu marki w ekosystemie AI
+
+## Dla kogo
+
+- Sklepy e-commerce szukające wzrostu sprzedaży
+- Firmy z Olsztyna i Warmii chcące dominować lokalnie
+- Marki chcące być widoczne w odpowiedziach AI
+- Przedsiębiorcy szukający mierzalnych efektów marketingu
