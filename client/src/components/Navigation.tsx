@@ -11,7 +11,7 @@ import { Menu, X } from "lucide-react";
 */
 
 const navItems = [
-  { label: "O nas", href: "/about" },
+  { label: "O nas", href: "/o-nas" },
   { label: "AIO dla e-commerce", href: "/aio", highlight: true },
   { label: "Oblicz straty", href: "/calculator" },
   { label: "Blog", href: "/blog" },

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import siteSeo from '../data/blog/site-seo.json';
+import websiteCms from '../data/blog/website-cms.json';
 import { Link } from 'wouter';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 
@@ -21,7 +21,9 @@ const ARTICLES_PER_PAGE = 6;
 
 const BlogPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  
+
+  const blogPage = (websiteCms as any).pages?.find((p: any) => p.slug === 'blog');
+  const seo = blogPage?.seo || {};
 
   const JUNK_SLUGS = new Set(['przuykad-2','hehe','po-wgraniu-test','kolejny-test','test-automat','przykadowy-artyku']);
   const articles: Article[] = (articlesMetadata as Article[]).filter(
@@ -84,10 +86,14 @@ const BlogPage: React.FC = () => {
     <div className="min-h-screen bg-[#0b1020]">
       
       <Helmet>
-        <title>{(siteSeo as any)['Blog']?.title || 'Blog BoostNow | Decision Science & Psychologia Konwersji'}</title>
+        <title>{seo.title || 'Blog | BoostNow'}</title>
         <meta name="robots" content="index, follow" />
-        <meta name="description" content={(siteSeo as any)['Blog']?.description || '50+ artykułów o Decision Science, Neuromarketing i Psychologii Konwersji. Praktyczna wiedza dla agencji marketingowych i e-commerce.'} />
-        <meta name="keywords" content={(siteSeo as any)['Blog']?.keywords || 'decision science, neuromarketing, psychologia konwersji, inzynieria konwersji, GEO positioning, architekci decyzji, blog marketingowy'} />
+        {seo.description && <meta name="description" content={seo.description} />}
+        {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
+        {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
+        {blogPage?.jsonLd && (
+          <script type="application/ld+json">{JSON.stringify(blogPage.jsonLd)}</script>
+        )}
       </Helmet>
       {/* Breadcrumbs */}
       <div className="px-4 sm:px-6 lg:px-8 py-4">

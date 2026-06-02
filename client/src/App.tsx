@@ -8,7 +8,6 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import CookieBanner from "./components/CookieBanner";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 import Home from "./pages/Home";
-import AboutPage from "./pages/AboutPage";
 import CalculatorPage from "./pages/CalculatorPage";
 import BlogArticle from "./components/BlogArticle";
 import BlogPage from "./pages/BlogPage";
@@ -26,7 +25,6 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/about"} component={AboutPage} />
       <Route path={"/calculator"} component={CalculatorPage} />
       <Route path={"/blog"} component={BlogPage} />
       <Route path={"/blog/:id"} component={BlogArticle} />
