@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
-import { META_MAP } from "../page-meta";
+import { getMetaForPath } from "../page-meta";
 
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
@@ -62,8 +62,7 @@ function getIndexHtml(distPath: string): string {
 }
 
 function injectPageMeta(html: string, reqPath: string): string {
-  const normalised = reqPath.endsWith("/") && reqPath !== "/" ? reqPath.slice(0, -1) : reqPath;
-  const meta = META_MAP[normalised] ?? META_MAP[normalised + "/"];
+  const meta = getMetaForPath(reqPath);
   if (!meta) return html;
 
   const lines = [

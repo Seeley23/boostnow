@@ -4,6 +4,11 @@ const path = require('path');
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = 'appB0MrrpweuNvlQd';
 
+if (!AIRTABLE_API_KEY) {
+  console.log('[sync-airtable] AIRTABLE_API_KEY not set — skipping sync, existing JSON files unchanged.');
+  process.exit(0);
+}
+
 const TABLES = {
   ARTICLES: 'Articles 2',
   SITE_SEO: 'Site',
