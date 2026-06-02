@@ -20,7 +20,7 @@ export default function Home() {
   // Find the home page data from the synced CMS data
   const homePage = websiteCms.pages.find(p => p.slug === 'home');
   
-  const seo = homePage?.seo || {};
+  const seo = (homePage?.seo || {}) as any;
 
   // Helper to find a section by type
   const getSection = (type: string) => homePage?.sections?.find(s => s.type === type);
