@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
+import { META_MAP } from "../page-meta";
 
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
@@ -47,6 +48,33 @@ export async function setupVite(app: Express, server: Server) {
   });
 }
 
+// Bots that don't execute JavaScript but crawl HTML
+const BOT_RE =
+  /GPTBot|OAI-SearchBot|ChatGPT-User|ClaudeBot|PerplexityBot|Google-Extended|GoogleOther|Googlebot|Bingbot|YandexBot|DuckDuckBot|Applebot/i;
+
+let indexHtmlCache: string | null = null;
+
+function getIndexHtml(distPath: string): string {
+  if (!indexHtmlCache) {
+    indexHtmlCache = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
+  }
+  return indexHtmlCache;
+}
+
+function injectPageMeta(html: string, reqPath: string): string {
+  const normalised = reqPath.endsWith("/") && reqPath !== "/" ? reqPath.slice(0, -1) : reqPath;
+  const meta = META_MAP[normalised] ?? META_MAP[normalised + "/"];
+  if (!meta) return html;
+
+  const lines = [
+    `<title>${meta.title.replace(/</g, "&lt;")}</title>`,
+    `<meta name="description" content="${meta.description.replace(/"/g, "&quot;")}" />`,
+    `<link rel="canonical" href="${meta.canonical}" />`,
+  ].join("\n    ");
+
+  return html.replace("</head>", `  ${lines}\n  </head>`);
+}
+
 export function serveStatic(app: Express) {
   const distPath =
     process.env.NODE_ENV === "development"
@@ -60,8 +88,15 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+  // Serve index.html for all routes; inject per-page meta for known bots
+  app.use("*", (req, res) => {
+    const ua = (req.headers["user-agent"] as string) || "";
+    if (BOT_RE.test(ua)) {
+      const base = getIndexHtml(distPath);
+      const html = injectPageMeta(base, req.path);
+      res.status(200).type("html").send(html);
+    } else {
+      res.sendFile(path.resolve(distPath, "index.html"));
+    }
   });
 }
