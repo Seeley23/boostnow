@@ -138,6 +138,14 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Autor -->
+  <url>
+    <loc>https://boostnow.pl/mateusz-nowotka</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Strony lokalne (GEO) -->
   <url>
     <loc>https://boostnow.pl/olsztyn</loc>
