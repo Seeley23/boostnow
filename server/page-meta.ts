@@ -9,27 +9,36 @@ export interface PageMeta {
   canonical: string;
 }
 
-// Locate website-cms.json at runtime (works in dev and production)
-function findCmsJson(): any {
-  const candidates = [
-    path.resolve(process.cwd(), "client/src/data/blog/website-cms.json"),
-    path.resolve(import.meta.dirname, "../../client/src/data/blog/website-cms.json"),
-  ];
+// ── Runtime file loaders ──────────────────────────────────────────────────────
+
+function readJson(candidates: string[]): any {
   for (const p of candidates) {
     if (fs.existsSync(p)) {
-      try {
-        return JSON.parse(fs.readFileSync(p, "utf-8"));
-      } catch {
-        // try next
-      }
+      try { return JSON.parse(fs.readFileSync(p, "utf-8")); } catch { /* try next */ }
     }
   }
-  return { pages: [] };
+  return null;
 }
 
-function buildMetaMap(): Record<string, PageMeta> {
-  const cmsData = findCmsJson();
+function findCmsJson(): any {
+  return readJson([
+    path.resolve(process.cwd(), "client/src/data/blog/website-cms.json"),
+    path.resolve(import.meta.dirname, "../../client/src/data/blog/website-cms.json"),
+  ]) ?? { pages: [] };
+}
 
+function findArticlesMetadata(): any[] {
+  return readJson([
+    path.resolve(process.cwd(), "client/src/data/blog/articles-metadata.json"),
+    path.resolve(import.meta.dirname, "../../client/src/data/blog/articles-metadata.json"),
+  ]) ?? [];
+}
+
+// ── Meta map builder ──────────────────────────────────────────────────────────
+
+function buildMetaMap(): Record<string, PageMeta> {
+  // 1. CMS pages (source of truth: Airtable → website-cms.json)
+  const cmsData = findCmsJson();
   const cmsMeta: Record<string, PageMeta> = {};
   (cmsData.pages ?? []).forEach((page: any) => {
     const slug: string | undefined = page.slug;
@@ -43,7 +52,23 @@ function buildMetaMap(): Record<string, PageMeta> {
     };
   });
 
-  const hardcoded: Record<string, PageMeta> = {
+  // 2. Blog articles — dynamic from articles-metadata.json (Airtable → sync → file)
+  //    Any new article added in Airtable with a Slug field will appear here
+  //    automatically after npm run sync, without touching this file.
+  const articles = findArticlesMetadata();
+  const articlesMeta: Record<string, PageMeta> = {};
+  articles.forEach((a: any) => {
+    if (!a.slug) return;
+    const routePath = `/blog/${a.slug}`;
+    articlesMeta[routePath] = {
+      title: (a.seoTitle && a.seoTitle !== a.title ? a.seoTitle : a.title) || "BoostNow Blog",
+      description: a.meta_description || "",
+      canonical: BASE + routePath,
+    };
+  });
+
+  // 3. Hardcoded static pages (not in Airtable)
+  const staticMeta: Record<string, PageMeta> = {
     "/aio": {
       title: "AIO – AI Optimization dla E-commerce | BoostNow",
       description:
@@ -53,7 +78,7 @@ function buildMetaMap(): Record<string, PageMeta> {
     "/calculator": {
       title: "Kalkulator ROI Marketingowego | BoostNow",
       description:
-        "Oblicz zwrot z inwestycji w marketing i SEO. Bezpłatny kalkulator ROI dla e-commerce i firm usługowych. Sprawdź, ile możesz zyskać.",
+        "Oblicz zwrot z inwestycji w marketing i SEO. Bezpłatny kalkulator ROI dla e-commerce i firm usługowych.",
       canonical: BASE + "/calculator",
     },
     "/mateusz-nowotka": {
@@ -65,7 +90,7 @@ function buildMetaMap(): Record<string, PageMeta> {
     "/glossary": {
       title: "Słownik AI i SEO | BoostNow",
       description:
-        "Kompletny słownik pojęć z zakresu GEO, SEO, AI i marketingu cyfrowego. Definicje: GEO, AEO, llms.txt, AI Overviews, schema markup, E-E-A-T i wiele więcej.",
+        "Kompletny słownik pojęć z zakresu GEO, SEO, AI i marketingu cyfrowego.",
       canonical: BASE + "/glossary",
     },
     "/regulamin": {
@@ -82,81 +107,24 @@ function buildMetaMap(): Record<string, PageMeta> {
     "/polityka-cookies": {
       title: "Polityka Cookies | BoostNow",
       description:
-        "Polityka plików cookies serwisu boostnow.pl. Informacje o rodzajach cookies i sposobie ich zarządzania.",
+        "Polityka plików cookies serwisu boostnow.pl.",
       canonical: BASE + "/polityka-cookies",
     },
     "/blog/jak-zwiekszac-konwersje-ecommerce": {
       title: "Jak Zwiększać Konwersje w E-commerce | BoostNow",
       description:
-        "Sprawdzone strategie zwiększania konwersji w sklepie internetowym. Psychologia decyzji, CRO, UX i AI – kompletny przewodnik dla e-commerce.",
+        "Sprawdzone strategie zwiększania konwersji w sklepie internetowym. Psychologia decyzji, CRO, UX i AI.",
       canonical: BASE + "/blog/jak-zwiekszac-konwersje-ecommerce",
-    },
-    "/blog/llms-txt": {
-      title: "Czym jest llms.txt i dlaczego warto go mieć | BoostNow",
-      description:
-        "Poznaj plik llms.txt – narzędzie, które mówi modelom AI (ChatGPT, Claude, Gemini), jak interpretować Twoją stronę. Przewodnik wdrożenia krok po kroku.",
-      canonical: BASE + "/blog/llms-txt",
-    },
-    "/blog/pozycjonowanie-geo": {
-      title: "Pozycjonowanie GEO – Kompletny Przewodnik 2025 | BoostNow",
-      description:
-        "Czym jest GEO (Generative Engine Optimization)? Jak pozycjonować firmę w ChatGPT, Perplexity i Gemini? Kompletny przewodnik po pozycjonowaniu w wyszukiwarkach AI.",
-      canonical: BASE + "/blog/pozycjonowanie-geo",
-    },
-    "/blog/geo-pozycjonowanie": {
-      title: "GEO Pozycjonowanie – Jak Działać w Epoce AI | BoostNow",
-      description:
-        "GEO pozycjonowanie to przyszłość SEO. Dowiedz się, jak zoptymalizować swoją stronę pod wyszukiwarki generatywne i zdobyć widoczność w odpowiedziach AI.",
-      canonical: BASE + "/blog/geo-pozycjonowanie",
-    },
-    "/blog/pozycjonowanie-w-ai": {
-      title: "Pozycjonowanie w AI – Strategie i Techniki | BoostNow",
-      description:
-        "Jak pozycjonować się w wynikach generowanych przez AI? Poznaj strategie GEO, AEO i AI Search Optimization, które pomagają firmom być cytowanymi przez modele językowe.",
-      canonical: BASE + "/blog/pozycjonowanie-w-ai",
-    },
-    "/blog/agencja-seo-ai": {
-      title: "Agencja SEO i AI – Jak Wybrać Partnera | BoostNow",
-      description:
-        "Jak wybrać agencję SEO, która rozumie AI i GEO? Sprawdź, na co zwrócić uwagę, pytania do agencji i czerwone flagi. Praktyczny przewodnik dla przedsiębiorców.",
-      canonical: BASE + "/blog/agencja-seo-ai",
-    },
-    "/blog/ai-seo": {
-      title: "AI SEO – Optymalizacja Pod Algorytmy AI | BoostNow",
-      description:
-        "AI SEO to nowe podejście do pozycjonowania uwzględniające algorytmy oparte na sztucznej inteligencji. Dowiedz się, jak adaptować strategię SEO do ery generatywnego AI.",
-      canonical: BASE + "/blog/ai-seo",
-    },
-    "/blog/widocznosc-w-chatgpt": {
-      title: "Jak Zwiększyć Widoczność w ChatGPT | BoostNow",
-      description:
-        "Praktyczny przewodnik po zwiększaniu widoczności marki w ChatGPT. Poznaj techniki GEO, które sprawiają, że AI cytuje Twoją firmę w odpowiedziach.",
-      canonical: BASE + "/blog/widocznosc-w-chatgpt",
-    },
-    "/blog/aeo-co-to-jest": {
-      title: "AEO – Answer Engine Optimization: Co To Jest? | BoostNow",
-      description:
-        "AEO (Answer Engine Optimization) to optymalizacja pod wyszukiwarki odpowiedzi. Dowiedz się, czym różni się od SEO i jak wdrożyć strategię AEO dla swojej firmy.",
-      canonical: BASE + "/blog/aeo-co-to-jest",
-    },
-    "/blog/generative-engine-optimization": {
-      title: "Generative Engine Optimization (GEO) – Przewodnik | BoostNow",
-      description:
-        "Czym jest Generative Engine Optimization? GEO to strategia, która sprawia, że Twoja marka pojawia się w wynikach generowanych przez AI. Kompletny poradnik.",
-      canonical: BASE + "/blog/generative-engine-optimization",
-    },
-    "/blog/seo-pod-ai-overviews": {
-      title: "SEO Pod AI Overviews w Google – Jak Się Przygotować | BoostNow",
-      description:
-        "Google AI Overviews zmieniają SEO. Dowiedz się, jak zoptymalizować treści, by pojawiać się w AI-generowanych podsumowaniach wyników wyszukiwania Google.",
-      canonical: BASE + "/blog/seo-pod-ai-overviews",
     },
   };
 
-  return { ...cmsMeta, ...hardcoded };
+  // Priority: static > articles (Airtable) > CMS pages
+  // Articles override static only for /blog/* routes — intentional
+  return { ...cmsMeta, ...articlesMeta, ...staticMeta };
 }
 
-// In-memory meta map — rebuilt on demand via reloadMetaMap()
+// ── Public API ────────────────────────────────────────────────────────────────
+
 let currentMap: Record<string, PageMeta> = buildMetaMap();
 
 export function getMetaForPath(reqPath: string): PageMeta | undefined {
@@ -164,8 +132,8 @@ export function getMetaForPath(reqPath: string): PageMeta | undefined {
   return currentMap[norm] ?? currentMap[norm + "/"];
 }
 
-/** Call after sync-airtable runs to pick up new CMS titles/descriptions without restart. */
+/** Call after sync-airtable runs to pick up new slugs without server restart. */
 export function reloadMetaMap(): void {
   currentMap = buildMetaMap();
-  console.log("[page-meta] Meta map reloaded from website-cms.json");
+  console.log("[page-meta] Meta map reloaded —", Object.keys(currentMap).length, "routes");
 }
