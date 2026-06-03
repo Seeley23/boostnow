@@ -114,6 +114,26 @@ async function sync() {
   });
   fs.writeFileSync(path.join(dataPath, 'articles.json'), JSON.stringify(blogData, null, 2));
 
+  // articles-metadata.json — read by BlogPage and BlogArticle components
+  const articlesMetadata = blogData.map(article => ({
+    id: article.id,
+    title: article.title,
+    meta_description: article.excerpt || '',
+    semantic_anchors: article.keyPhrase || '',
+    target_industry: article.category || 'General',
+    word_count: article.content ? Math.ceil(article.content.split(/\s+/).length) : 0,
+    slug: article.slug,
+    date: article.date,
+  }));
+  fs.writeFileSync(path.join(dataPath, 'articles-metadata.json'), JSON.stringify(articlesMetadata, null, 2));
+
+  // article-files.json — maps article index (1-based) to .md filename
+  const articleFilesMap = {};
+  blogData.forEach((article, idx) => {
+    articleFilesMap[String(idx + 1)] = { filename: `${article.slug}.md` };
+  });
+  fs.writeFileSync(path.join(dataPath, 'article-files.json'), JSON.stringify(articleFilesMap, null, 2));
+
   const blogDir = path.join(process.cwd(), 'client/public/blog-articles');
   if (!fs.existsSync(blogDir)) fs.mkdirSync(blogDir, { recursive: true });
   blogData.forEach(article => {

@@ -144,7 +144,7 @@ const BlogPage: React.FC = () => {
                   
                 </div>
 
-                <Link href={`/blog/${article.id}`}>
+                <Link href={`/blog/${article.slug}`}>
                   <a className="block group">
                     <h2 className="text-lg font-bold text-white mb-3 group-hover:text-[#c7ff4e] transition line-clamp-2">
                       {article.title}
@@ -175,7 +175,7 @@ const BlogPage: React.FC = () => {
                   <span>~{Math.ceil((article.word_count || 0) / 200)} min czytania</span>
                 </div>
 
-                <Link href={`/blog/${article.id}`}>
+                <Link href={`/blog/${article.slug}`}>
                   <a className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">
                     Czytaj artykuł →
                   </a>
