@@ -118,12 +118,14 @@ async function sync() {
   const articlesMetadata = blogData.map(article => ({
     id: article.id,
     title: article.title,
+    seoTitle: article.seoTitle || article.title,
     meta_description: article.excerpt || '',
     semantic_anchors: article.keyPhrase || '',
     target_industry: article.category || 'General',
     word_count: article.content ? Math.ceil(article.content.split(/\s+/).length) : 0,
     slug: article.slug,
     date: article.date,
+    schemaJson: article.schemaJson || null,
   }));
   fs.writeFileSync(path.join(dataPath, 'articles-metadata.json'), JSON.stringify(articlesMetadata, null, 2));
 
