@@ -4,8 +4,8 @@
       "slug": "slownik",
       "name": "Słownik",
       "seo": {
-        "title": "Słownik AI | BoostNow",
-        "description": "Pojęcia AI wyjaśnione prosto.",
+        "title": "Słownik AI i SEO | BoostNow",
+        "description": "Słownik pojęć z zakresu AI, SEO, GEO i marketingu cyfrowego. Proste wyjaśnienia pojęć jak GEO, AEO, AIO, LLM, RAG, prompt engineering i więcej.",
         "schemaType": "Article",
         "author": {},
         "lastUpdated": "2026-06-03"
@@ -64,8 +64,8 @@
       "slug": "oblicz-straty",
       "name": "Oblicz straty",
       "seo": {
-        "title": "Kalkulator Strat | BoostNow",
-        "description": "Sprawdź ile tracisz bez automatyzacji.",
+        "title": "Kalkulator Strat Marketingowych | BoostNow",
+        "description": "Oblicz ile tracisz każdego miesiąca bez skutecznej strategii SEO i GEO. Bezpłatny kalkulator strat dla firm e-commerce i usługowych.",
         "schemaType": "Article",
         "author": {},
         "lastUpdated": "2026-06-03"
@@ -124,8 +124,8 @@
       "slug": "kontakt",
       "name": "Kontakt",
       "seo": {
-        "title": "Kontakt | BoostNow",
-        "description": "Skontaktuj się z nami.",
+        "title": "Kontakt | BoostNow – Agencja GEO & SEO",
+        "description": "Skontaktuj się z BoostNow. Porozmawiajmy o widoczności Twojej firmy w Google i wyszukiwarkach AI. Odpowiadamy w ciągu 24 godzin. Bezpłatna konsultacja.",
         "schemaType": "Article",
         "author": {},
         "lastUpdated": "2026-06-03"
@@ -408,7 +408,7 @@
       "name": "AIO dla e-commerce",
       "seo": {
         "title": "AIO dla e-commerce | BoostNow",
-        "description": "Automatyzacja i AI dla Twojego sklepu.",
+        "description": "Kompletna oferta AIO dla sklepów e-commerce. Automatyzacja marketingu, optymalizacja konwersji i widoczność w AI. Sprawdź jak BoostNow zwiększa sprzedaż online.",
         "schemaType": "Article",
         "author": {},
         "lastUpdated": "2026-06-03"
@@ -520,8 +520,8 @@
       "slug": "blog",
       "name": "Blog",
       "seo": {
-        "title": "Blog | BoostNow",
-        "description": "Wiedza o AI i automatyzacji.",
+        "title": "Blog GEO, SEO i AI | BoostNow",
+        "description": "Artykuły o pozycjonowaniu w wyszukiwarkach AI (ChatGPT, Perplexity, Gemini) i Google. Praktyczna wiedza o GEO, AEO, AIO i strategiach wzrostu dla firm w Polsce.",
         "schemaType": "Article",
         "author": {},
         "lastUpdated": "2026-06-03"
@@ -580,8 +580,8 @@
       "slug": "home",
       "name": "Strona Główna",
       "seo": {
-        "title": "BoostNow - Elite SEO & GEO Agency",
-        "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
+        "title": "BoostNow – Agencja GEO & SEO | Widoczność w AI i Google",
+        "description": "BoostNow – polska agencja GEO i SEO. Zwiększamy widoczność firm w ChatGPT, Perplexity, Gemini i Google. Mierzalne strategie, psychologia decyzji i realne wyniki.",
         "primaryKeyword": "SEO Agency",
         "semanticKeywords": "GEO, AI Search Optimization, ChatGPT SEO, Perplexity Optimization",
         "aiSummary": "BoostNow to wiodąca agencja specjalizująca się w Generative Engine Optimization (GEO).",
@@ -780,8 +780,8 @@
       "slug": "o-nas",
       "name": "O nas",
       "seo": {
-        "title": "O nas | BoostNow",
-        "description": "Poznaj zespół BoostNow i naszą misję.",
+        "title": "O nas – Agencja GEO & SEO BoostNow",
+        "description": "Poznaj zespół BoostNow i naszą misję. Jesteśmy agencją specjalizującą się w widoczności firm w AI i Google. Łączymy SEO, GEO i psychologię decyzji w jedną strategię.",
         "schemaType": "Article",
         "author": {},
         "lastUpdated": "2026-06-03"

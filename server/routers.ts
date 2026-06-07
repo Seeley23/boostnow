@@ -7,6 +7,7 @@ import DOMPurify from "isomorphic-dompurify";
 import { insertContactSubmission, insertBlogRating, checkExistingRating, getBlogRatingStats, insertAioLead } from "./db";
 import { sendContactFormNotification } from "./email";
 import { TRPCError } from "@trpc/server";
+import { reloadMetaMap } from "./page-meta";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -217,6 +218,48 @@ export const appRouter = router({
           message: "Wiadomość wysłana pomyślnie!",
         };
       }),
+  }),
+
+  // Airtable sync webhook — call from Airtable Automation or CI/CD
+  // Requires header: x-sync-secret: <SYNC_SECRET env var>
+  sync: router({
+    airtable: publicProcedure.mutation(async ({ ctx }) => {
+      const secret = process.env.SYNC_SECRET;
+      if (!secret) {
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "SYNC_SECRET not configured" });
+      }
+      const provided = ctx.req.headers["x-sync-secret"] as string | undefined;
+      if (!provided || provided !== secret) {
+        throw new TRPCError({ code: "UNAUTHORIZED", message: "Invalid sync secret" });
+      }
+
+      const airtableKey = process.env.AIRTABLE_API_KEY;
+      if (!airtableKey) {
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "AIRTABLE_API_KEY not set" });
+      }
+
+      const { execFile } = await import("child_process");
+      const { promisify } = await import("util");
+      const exec = promisify(execFile);
+
+      try {
+        const { stdout, stderr } = await exec("node", ["scripts/sync-airtable.cjs"], {
+          env: { ...process.env },
+          cwd: process.cwd(),
+          timeout: 60_000,
+        });
+        if (stdout) console.log("[sync] stdout:", stdout.trim());
+        if (stderr) console.warn("[sync] stderr:", stderr.trim());
+      } catch (err: any) {
+        console.error("[sync] sync-airtable failed:", err.message);
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Sync script failed" });
+      }
+
+      // Reload bot-visible meta map from freshly written website-cms.json
+      reloadMetaMap();
+
+      return { success: true, syncedAt: new Date().toISOString() };
+    }),
   }),
 });
 

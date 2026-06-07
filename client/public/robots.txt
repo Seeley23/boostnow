@@ -34,3 +34,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://boostnow.pl/sitemap.xml
+
+# IndexNow key
+IndexNow-Key: bc336320cd0e4476a1314f872d676c4e

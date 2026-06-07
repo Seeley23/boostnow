@@ -84,7 +84,9 @@ const BlogArticle: React.FC = () => {
 
       // article:published_time
       const pubTime = document.querySelector('meta[property="article:published_time"]');
-      const articleData = articlesMetadata[parseInt(id || '1') - 1] as any;
+      const articleData = (/^\d+$/.test(id || '')
+        ? articlesMetadata[parseInt(id!) - 1]
+        : articlesMetadata.find((a: any) => a.slug === id)) as any;
       if (articleData?.date) {
         if (pubTime) pubTime.setAttribute('content', articleData.date);
         else {
@@ -215,47 +217,43 @@ const BlogArticle: React.FC = () => {
 
   useEffect(() => {
     const loadArticle = async () => {
-      const articleIndex = parseInt(id || '1') - 1;
-      
+      // Support both numeric IDs (/blog/1) and slugs (/blog/pozycjonowanie-geo)
+      const articleIndex = /^\d+$/.test(id || '')
+        ? parseInt(id!) - 1
+        : articles.findIndex(a => a.slug === id);
+
       if (articleIndex >= 0 && articleIndex < articles.length) {
         const articleId = articleIndex + 1;
         const fileMap = articleFilesMap as Record<string, any>;
         const fileInfo = fileMap[articleId.toString()];
-        
-        if (fileInfo) {
-          try {
-            // Załaduj zawartość markdown
-            const response = await fetch(`/blog-articles/${fileInfo.filename}`);
-            let content = await response.text();
-            
-            // Usuń YAML frontmatter jeśli istnieje
-            const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
-            content = content.replace(frontmatterRegex, '');
-            
-            // Jeśli ładowanie nie powiodło się, użyj fallback
-            if (!content) {
-              content = `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`;
-            }
-            
-            setArticle({
-              title: articles[articleIndex].title,
-              meta_description: articles[articleIndex].meta_description,
-              semantic_anchors: articles[articleIndex].semantic_anchors,
-              target_industry: articles[articleIndex].target_industry,
-              word_count: articles[articleIndex].word_count,
-              content: content
-            });
-          } catch (error) {
-            console.error('Błąd ładowania artykułu:', error);
-            setArticle({
-              title: articles[articleIndex].title,
-              meta_description: articles[articleIndex].meta_description,
-              semantic_anchors: articles[articleIndex].semantic_anchors,
-              target_industry: articles[articleIndex].target_industry,
-              word_count: articles[articleIndex].word_count,
-              content: `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`
-            });
-          }
+
+        const articleMeta = articles[articleIndex];
+        const fallbackContent = `# ${articleMeta.title}\n\n${articleMeta.meta_description}`;
+
+        const buildArticleState = (content: string) => ({
+          title: articleMeta.title,
+          meta_description: articleMeta.meta_description,
+          semantic_anchors: articleMeta.semantic_anchors,
+          target_industry: articleMeta.target_industry,
+          word_count: articleMeta.word_count,
+          content,
+          seoTitle: (articleMeta as any).seoTitle || null,
+          schemaJson: (articleMeta as any).schemaJson || null,
+        });
+
+        // Try to load .md content; fall back to title+desc if not available
+        const filename = fileInfo?.filename || `${articleMeta.slug}.md`;
+        try {
+          const response = await fetch(`/blog-articles/${filename}`);
+          let content = response.ok ? await response.text() : '';
+
+          // Usuń YAML frontmatter jeśli istnieje
+          const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
+          content = content.replace(frontmatterRegex, '').trim();
+
+          setArticle(buildArticleState(content || fallbackContent) as any);
+        } catch {
+          setArticle(buildArticleState(fallbackContent) as any);
         }
 
         // Pobierz powiązane artykuły (z tej samej branży, max 3)
@@ -301,19 +299,19 @@ const BlogArticle: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0b1020] py-20 px-4 sm:px-6 lg:px-8">
       <Helmet>
-        <title>{article.title.length > 45 ? article.title.substring(0, 45) + '...' : article.title} | BoostNow</title>
+        <title>{(article as any).seoTitle || article.title} | BoostNow</title>
         <meta name="robots" content="index, follow" />
         <meta name="description" content={article.meta_description} />
         <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, decision science, neuromarketing, psychologia konwersji`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://boostnow.pl/blog/${id}`} />
-        <meta property="og:title" content={article.title} />
+        <meta property="og:title" content={(article as any).seoTitle || article.title} />
         <meta property="og:description" content={article.meta_description} />
         <meta property="og:image" content={`https://boostnow.pl/og-images/${id}.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={article.title} />
+        <meta name="twitter:title" content={(article as any).seoTitle || article.title} />
         <meta name="twitter:description" content={article.meta_description} />
-        <link rel="canonical" content={`https://boostnow.pl/blog/${id}`} />
+        <link rel="canonical" href={`https://boostnow.pl/blog/${id}`} />
       </Helmet>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -31,6 +31,7 @@ const serviceLinks = [
   { label: "Oblicz straty", href: "/oblicz-straty" },
   { label: "Słownik marketingowy", href: "/glossary" },
   { label: "Agencja Olsztyn", href: "/olsztyn" },
+  { label: "Mateusz Nowotka – autor", href: "/mateusz-nowotka" },
 ];
 
 export default function Footer() {
