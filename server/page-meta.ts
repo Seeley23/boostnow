@@ -7,6 +7,8 @@ export interface PageMeta {
   title: string;
   description: string;
   canonical: string;
+  /** JSON-LD schema objects (e.g. Article + FAQPage) for non-JS crawlers. */
+  schema?: any[];
 }
 
 // ── Runtime file loaders ──────────────────────────────────────────────────────
@@ -60,10 +62,20 @@ function buildMetaMap(): Record<string, PageMeta> {
   articles.forEach((a: any) => {
     if (!a.slug) return;
     const routePath = `/blog/${a.slug}`;
+    // schemaJson may be a single object, an array, or a {"@graph": [...]} wrapper
+    let schema: any[] | undefined;
+    if (a.schemaJson) {
+      schema = Array.isArray(a.schemaJson)
+        ? a.schemaJson
+        : a.schemaJson["@graph"]
+          ? [a.schemaJson] // keep @graph wrapper intact as one script
+          : [a.schemaJson];
+    }
     articlesMeta[routePath] = {
       title: (a.seoTitle && a.seoTitle !== a.title ? a.seoTitle : a.title) || "BoostNow Blog",
       description: a.meta_description || "",
       canonical: BASE + routePath,
+      schema,
     };
   });
 

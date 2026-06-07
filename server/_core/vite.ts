@@ -69,9 +69,19 @@ function injectPageMeta(html: string, reqPath: string): string {
     `<title>${meta.title.replace(/</g, "&lt;")}</title>`,
     `<meta name="description" content="${meta.description.replace(/"/g, "&quot;")}" />`,
     `<link rel="canonical" href="${meta.canonical}" />`,
-  ].join("\n    ");
+  ];
 
-  return html.replace("</head>", `  ${lines}\n  </head>`);
+  // Inject JSON-LD schema (Article + FAQPage) so non-JS AI crawlers
+  // (GPTBot, PerplexityBot, ClaudeBot, …) see structured data without
+  // executing the React app.
+  if (meta.schema?.length) {
+    for (const s of meta.schema) {
+      const json = JSON.stringify(s).replace(/<\/script/gi, "<\\/script");
+      lines.push(`<script type="application/ld+json">${json}</script>`);
+    }
+  }
+
+  return html.replace("</head>", `  ${lines.join("\n    ")}\n  </head>`);
 }
 
 export function serveStatic(app: Express) {
