@@ -91,8 +91,11 @@ export function serveStatic(app: Express) {
   app.use("*", (req, res) => {
     const ua = (req.headers["user-agent"] as string) || "";
     if (BOT_RE.test(ua)) {
+      // In an app.use("*") handler req.path is always "/"; use originalUrl
+      // (minus query string) to get the real requested path.
+      const reqPath = (req.originalUrl || req.url || "/").split("?")[0];
       const base = getIndexHtml(distPath);
-      const html = injectPageMeta(base, req.path);
+      const html = injectPageMeta(base, reqPath);
       res.status(200).type("html").send(html);
     } else {
       res.sendFile(path.resolve(distPath, "index.html"));
