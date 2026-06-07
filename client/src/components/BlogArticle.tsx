@@ -84,7 +84,9 @@ const BlogArticle: React.FC = () => {
 
       // article:published_time
       const pubTime = document.querySelector('meta[property="article:published_time"]');
-      const articleData = articlesMetadata[parseInt(id || '1') - 1] as any;
+      const articleData = (/^\d+$/.test(id || '')
+        ? articlesMetadata[parseInt(id!) - 1]
+        : articlesMetadata.find((a: any) => a.slug === id)) as any;
       if (articleData?.date) {
         if (pubTime) pubTime.setAttribute('content', articleData.date);
         else {
@@ -225,44 +227,33 @@ const BlogArticle: React.FC = () => {
         const fileMap = articleFilesMap as Record<string, any>;
         const fileInfo = fileMap[articleId.toString()];
 
-        if (fileInfo) {
-          try {
-            // Załaduj zawartość markdown
-            const response = await fetch(`/blog-articles/${fileInfo.filename}`);
-            let content = await response.text();
+        const articleMeta = articles[articleIndex];
+        const fallbackContent = `# ${articleMeta.title}\n\n${articleMeta.meta_description}`;
 
-            // Usuń YAML frontmatter jeśli istnieje
-            const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
-            content = content.replace(frontmatterRegex, '');
+        const buildArticleState = (content: string) => ({
+          title: articleMeta.title,
+          meta_description: articleMeta.meta_description,
+          semantic_anchors: articleMeta.semantic_anchors,
+          target_industry: articleMeta.target_industry,
+          word_count: articleMeta.word_count,
+          content,
+          seoTitle: (articleMeta as any).seoTitle || null,
+          schemaJson: (articleMeta as any).schemaJson || null,
+        });
 
-            // Jeśli ładowanie nie powiodło się, użyj fallback
-            if (!content) {
-              content = `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`;
-            }
+        // Try to load .md content; fall back to title+desc if not available
+        const filename = fileInfo?.filename || `${articleMeta.slug}.md`;
+        try {
+          const response = await fetch(`/blog-articles/${filename}`);
+          let content = response.ok ? await response.text() : '';
 
-            setArticle({
-              title: articles[articleIndex].title,
-              meta_description: articles[articleIndex].meta_description,
-              semantic_anchors: articles[articleIndex].semantic_anchors,
-              target_industry: articles[articleIndex].target_industry,
-              word_count: articles[articleIndex].word_count,
-              content: content,
-              seoTitle: (articles[articleIndex] as any).seoTitle || null,
-              schemaJson: (articles[articleIndex] as any).schemaJson || null,
-            } as any);
-          } catch (error) {
-            console.error('Błąd ładowania artykułu:', error);
-            setArticle({
-              title: articles[articleIndex].title,
-              meta_description: articles[articleIndex].meta_description,
-              semantic_anchors: articles[articleIndex].semantic_anchors,
-              target_industry: articles[articleIndex].target_industry,
-              word_count: articles[articleIndex].word_count,
-              content: `# ${articles[articleIndex].title}\n\n${articles[articleIndex].meta_description}`,
-              seoTitle: (articles[articleIndex] as any).seoTitle || null,
-              schemaJson: (articles[articleIndex] as any).schemaJson || null,
-            } as any);
-          }
+          // Usuń YAML frontmatter jeśli istnieje
+          const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
+          content = content.replace(frontmatterRegex, '').trim();
+
+          setArticle(buildArticleState(content || fallbackContent) as any);
+        } catch {
+          setArticle(buildArticleState(fallbackContent) as any);
         }
 
         // Pobierz powiązane artykuły (z tej samej branży, max 3)

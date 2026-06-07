@@ -79,6 +79,27 @@ async function sync() {
     }
   }
 
+  // Polish char transliteration for slug generation
+  const POLISH_MAP = {
+    'ą':'a','ć':'c','ę':'e','ł':'l','ń':'n','ó':'o','ś':'s','ź':'z','ż':'z',
+    'Ą':'A','Ć':'C','Ę':'E','Ł':'L','Ń':'N','Ó':'O','Ś':'S','Ź':'Z','Ż':'Z'
+  };
+  const transliterate = str => str.split('').map(c => POLISH_MAP[c] || c).join('');
+
+  // Extract blog slug from a schema object (handles both flat and @graph formats)
+  function extractSlugFromSchema(schemaJson) {
+    if (!schemaJson) return null;
+    const candidates = Array.isArray(schemaJson)
+      ? schemaJson
+      : (schemaJson['@graph'] ? schemaJson['@graph'] : [schemaJson]);
+    for (const s of candidates) {
+      const mpId = s?.mainEntityOfPage?.['@id'] || s?.url || '';
+      const match = mpId.match(/\/blog\/([^\/?\s]+)$/);
+      if (match) return match[1];
+    }
+    return null;
+  }
+
   // 1. Blog
   const articles = await fetchAirtableData(TABLES.ARTICLES);
   const blogData = articles.map((record, index) => {
@@ -87,16 +108,14 @@ async function sync() {
     // Schema JSON field: may contain multiple schemas (Article + FAQPage) separated by blank lines
     const schemaJson = parseSchemaField(f['Schema JSON'], f.Title || record.id);
 
-    // Extract real slug from mainEntityOfPage URL in schema if available
-    let slug = f.Slug || null;
-    if (!slug && schemaJson) {
-      const firstSchema = Array.isArray(schemaJson) ? schemaJson[0] : schemaJson;
-      const mpId = firstSchema?.mainEntityOfPage?.['@id'] || firstSchema?.url || '';
-      const match = mpId.match(/\/blog\/([^\/]+)$/);
-      if (match) slug = match[1];
-    }
+    // Slug priority: Airtable Slug field → mainEntityOfPage URL in schema → transliterated title
+    let slug = (f.Slug || '').trim() || null;
+    if (!slug) slug = extractSlugFromSchema(schemaJson);
     if (!slug) {
-      slug = f.Title ? f.Title.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '') : record.id;
+      slug = f.Title
+        ? transliterate(f.Title).toLowerCase().trim()
+            .replace(/[^\w\s\-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
+        : record.id;
     }
 
     return {
