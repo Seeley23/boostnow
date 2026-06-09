@@ -1,119 +1,118 @@
-# AEO — Co to Jest Answer Engine Optimization i Jak Działa [2026]
+Google odpowiada na pytanie Twojego klienta bez pokazania Twojej strony. AEO to zmienia.
 
-**AEO to dyscyplina SEO która istnieje od lat — ale w 2026 roku stała się krytyczna dla każdej firmy chcącej być widocznej w AI.**
-
-📅 Zaktualizowano: 26 maja 2026 | ✍️ Mateusz Nowotka, BoostNow | ⏱️ 6 min czytania
-
----
-
-> **BEZPOŚREDNIA ODPOWIEDŹ:** AEO (Answer Engine Optimization) to optymalizacja treści pod silniki odpowiedzi — systemy które odpowiadają na pytania użytkowników bezpośrednio, bez konieczności klikania w wyniki. Do silników odpowiedzi należą: Google Featured Snippets, Google AI Overviews, ChatGPT, Perplexity AI i Siri. AEO różni się od SEO skupieniem na formacie odpowiedzi zamiast pozycji rankingowej.
-
----
-
-## Czym Jest AEO (Answer Engine Optimization)?
-
-**AEO (Answer Engine Optimization)** to optymalizacja treści internetowych pod silniki odpowiedzi — systemy które analizują zapytania użytkowników i generują lub wybierają bezpośrednie odpowiedzi bez wymagania kliknięcia w link.
-
-Pojęcie AEO obejmuje optymalizację pod:
-- **Google Featured Snippets** (wyróżnione fragmenty w SERP)
-- **Google AI Overviews** (generatywne podsumowania nad wynikami)
-- **ChatGPT i Claude** (bezpośrednie odpowiedzi na pytania)
-- **Perplexity AI** (syntetyczne odpowiedzi ze źródłami)
-- **Siri, Alexa, Google Assistant** (odpowiedzi głosowe)
+**W tym artykule:**
+- [AEO co to jest i dlaczego pojawiło się dopiero teraz?](#czym-jest)
+- [Jak AEO wprowadziło Caruma do Google AI Overview obok KPMG?](#caruma)
+- [AEO vs SEO vs GEO — kluczowe różnice](#porownanie)
+- [Jak wdrożyć AEO w Twojej firmie?](#wdrozenie)
+- [Najczęściej zadawane pytania](#faq)
+- [Źródła](#zrodla)
 
 ---
 
-## AEO vs SEO vs GEO — Czym Się Różnią?
-
-**Cel optymalizacji**
-— SEO: Pozycja w wynikach wyszukiwania
-— AEO: Bycie wybraną odpowiedzią (snippet/direct answer)
-— GEO: Cytowanie przez model generatywny AI
-
-**Kluczowy sygnał**
-— SEO: Backlinki, autorytet domeny
-— AEO: Format odpowiedzi (pytanie + krótka odpowiedź)
-— GEO: Chunk autonomy, entity clarity
-
-**Platforma docelowa**
-— SEO: Strona wyników Google/Bing
-— AEO: Featured Snippet, AI Overviews, asystenci głosowi
-— GEO: ChatGPT, Perplexity, Gemini
-
-**Horyzont efektów**
-— SEO: 3–12 miesięcy
-— AEO: 2–6 tygodni
-— GEO: 4–8 tygodni
+> **BEZPOŚREDNIA ODPOWIEDŹ**
+> AEO co to jest — to skrót od Answer Engine Optimization, optymalizacji strony pod bezpośrednie cytowania w Google AI Overview, Featured Snippet, ChatGPT i Siri. Google AI Mode odpowiada na 38% zapytań informacyjnych bez pokazywania klasycznych wyników (Search Engine Land, 2026). BoostNow wdrożył AEO dla Caruma: cytowania w Google AI Overview obok KPMG i Komisji Europejskiej, dominacja kategorii DPP w 90 dni. AEO uzupełnia SEO i GEO — bez niego tracisz klientów którzy nie klikają w żadne linki.
+> *Zaktualizowano: czerwiec 2026*
 
 ---
 
-## Jak Działa AEO Technicznie?
-
-### Krok 1: Identyfikacja zapytań pytających
-AEO skupia się na zapytaniach: *Co to jest...?, Jak...?, Dlaczego...?, Ile kosztuje...?*
-
-### Krok 2: Format odpowiedzi direct answer
-1. Nagłówek H2/H3 jako pytanie
-2. Bezpośrednia odpowiedź w 40–60 słowach
-3. Rozszerzona odpowiedź z danymi i przykładami
-4. FAQ Schema markup
-
-### Krok 3: Schema FAQPage
-FAQ Schema markup mówi Google i modelom AI że treść jest ustrukturyzowana jako pytania i odpowiedzi.
-
-### Krok 4: Optymalizacja głosowa
-Odpowiedzi głosowe preferują odpowiedzi 29 słów (Backlinko, 2020). Język naturalny, zdania oznajmujące, bez żargonu.
+Otwórz Google i wpisz pytanie które zadaje Twój klient: „jak wybrać [Twoja usługa]”. Na samej górze pojawia się odpowiedź AI Overview z konkretną rekomendacją firmy. Czy to Twoja firma? Jeśli nie — Google właśnie obsłużyło Twojego potencjalnego klienta bez wyświetlenia Twojej strony. Klient dostał odpowiedź. Poszedł gdzie indziej. AEO sprawia, że to Twoja firma jest tą odpowiedzią.
 
 ---
 
-## AEO dla Różnych Branż
+## AEO co to jest i dlaczego pojawiło się dopiero teraz? {#czym-jest}
 
-**AEO dla e-commerce**
-— Zapytania: "ile kosztuje X", "jaka jest różnica między X a Y"
-— Efekt: Featured Snippets na frazy zakupowe
+AEO to zbiór technik formatowania treści, które sprawiają że silniki AI cytują stronę jako bezpośrednią odpowiedź. AEO różni się od SEO fundamentalnie: SEO walczy o miejsce na liście wyników, AEO walczy o bycie tą odpowiedzią — w Featured Snippet, AI Overview lub odpowiedzi chatbota. Termin AEO stał się krytyczny w 2024 roku, gdy Google wprowadził AI Mode obsługujący 38% zapytań informacyjnych.
 
-**AEO dla usług profesjonalnych (prawo, medycyna)**
-— Zapytania: "co to jest X", "jak działa Y"
-— Efekt: Cytowania AI w odpowiedziach na pytania prawne/medyczne
+Kluczowe formaty AEO to: pytanie-odpowiedź (FAQ Schema), definicje w pierwszym zdaniu, listy numerowane dla procedur, tabele porównawcze. Każdy z tych formatów mapuje się bezpośrednio na typ zapytania użytkownika.
 
-**AEO dla agencji SEO**
-— Zapytania: "co to jest seo", "ile kosztuje pozycjonowanie", "jak działa geo"
-— Efekt: Budowanie autorytetu i generowanie leadów
+**Firmy bez AEO tracą 20-40% potencjalnego ruchu informacyjnego — bo Google odpowiada za nich.**
 
 ---
 
-## Wyniki BoostNow — AEO+GEO w Praktyce
+## Jak AEO wprowadziło Caruma do Google AI Overview obok KPMG? {#caruma}
 
-BoostNow wdrożył strategię AEO+GEO dla 35+ firm B2B:
-- Średnio 4–8 tygodni do pierwszych cytowań AI
-- Wzrost ruchu z AI o średnio 280% w 6 miesięcy
-- Caruma: panel boczny AI obok KPMG i Komisji Europejskiej
-- RudStudio: AI Overview na "csrd requirements fashion" globalnie
+Caruma — klient BoostNow z sektora Digital Product Passport — to dowód, że AEO działa również w wąskich B2B niszach. W 90 dni od wdrożenia Caruma była cytowana wielokrotnie w Google AI Overview obok takich autorytetów jak KPMG i Komisja Europejska. To efekt zoptymalizowanej struktury FAQ Schema, Direct Answer Box w pierwszych 30% każdej podstrony i autonomicznych fragmentów treści.
 
----
+**Caruma zdominowała kategorię DPP — fashion, textiles, batteries, electronics — wyprzedzając globalnych konkurentów.** Dodatkowo: 41 sesji w Gemini, 9 w Perplexity, TOP 1-2 organicznie na 5+ frazach globalnych EN.
 
-## Często Zadawane Pytania
-
-**Co to jest AEO?**
-AEO (Answer Engine Optimization) to optymalizacja treści pod silniki odpowiedzi — systemy które generują bezpośrednie odpowiedzi bez kliknięcia w link, takie jak Google Featured Snippets, AI Overviews, ChatGPT i Perplexity.
-
-**Czym różni się AEO od SEO?**
-SEO optymalizuje pod pozycję w wynikach wyszukiwania. AEO optymalizuje pod bycie wybraną odpowiedzią. AEO ma krótszy horyzont (2–6 tygodni vs 3–12 miesięcy).
-
-**Jak wdrożyć AEO na stronie?**
-Podstawowe kroki: format pytanie-odpowiedź, nagłówki H2/H3 jako pytania, FAQ Schema markup, odpowiedzi 40–60 słów.
+AEO działa, gdy każda kluczowa podstrona ma: jedno wyraźne pytanie w H1, Direct Answer Box w pierwszych 30%, FAQ Schema z minimum 3 pytaniami, autonomiczne sekcje 120-180 słów.
 
 ---
 
-## Wdróż AEO z BoostNow
+## AEO vs SEO vs GEO — kluczowe różnice {#porownanie}
 
-→ [Bezpłatna konsultacja AEO+GEO — boostnow.pl](https://boostnow.pl)
+AEO, SEO i GEO to trzy uzupełniające się dyscypliny widoczności w wyszukiwaniach. Tabela pokazuje gdzie każda działa — i dlaczego firma potrzebuje wszystkich trzech w 2026.
+
+| Wymiar | SEO | GEO | AEO |
+|---|---|---|---|
+| Gdzie się pojawia | Wyniki organiczne Google | Odpowiedzi ChatGPT, Perplexity, Gemini | Featured Snippet, AI Overview |
+| Główny format | Long-form artykuł | Autonomiczne chunki | FAQ + definicje + listy |
+| Sygnał #1 | Backlinki | Autorytet encji | FAQ Schema + Direct Answer |
+| Przykład Caruma | 5+ fraz TOP 1-2 globalnie | Cytowania w Gemini i Perplexity | Google AI Overview obok KPMG |
+
+**Strategia bez AEO traci klientów którzy nie klikają w żadne linki.** Google obsługuje ich bezpośrednio na stronie wyników — i firma cytowana w AI Overview ma ekspozycję większą niż pozycja 1 organicznie.
 
 ---
 
-## Źródła
+## Jak wdrożyć AEO w Twojej firmie? {#wdrozenie}
 
-1. [Google Search Central, „Featured Snippets and Your Website”](https://developers.google.com/search/docs/appearance/featured-snippets)
-2. [BrightEdge, „New Report: Surge in AI Search Engines” (grudzień 2024)](https://www.brightedge.com/news/press-releases/new-report-brightedge-reveals-surge-ai-search-engines-signaling-new-era-online)
-3. [Backlinko, „Voice Search SEO Study” (2020)](https://backlinko.com/voice-search-seo-study)
-4. BoostNow, dane własne (2025–2026)
+Wdrożenie AEO obejmuje trzy etapy: audyt fraz generujących AI Overview, optymalizacja struktury treści, wdrożenie FAQ Schema i monitoring cytowań.
+
+1. **Audyt fraz AI Overview.** Identyfikujemy zapytania w Twojej branży które Google obsługuje przez AI Overview. Sprawdzamy które firmy są dziś cytowane. Pokazujemy konkretną lukę.
+2. **Optymalizacja struktury pod AEO.** Każda kluczowa podstrona dostaje: pytanie w H1, Direct Answer Box, FAQ Schema, autonomiczne sekcje. Bez tutoriali — BoostNow wdraża to za Ciebie.
+3. **FAQ Schema + monitoring.** Implementujemy pełną FAQPage Schema JSON-LD. Monitorujemy cytowania w Google AI Overview, Featured Snippet i AI Mode.
+
+**Caruma przeszła ten proces w 90 dni do cytowań w Google AI Overview obok KPMG i Komisji Europejskiej.** RudStudio osiągnęła panel boczny AI Overview obok Carbonfact i Renoon na frazie „csrd requirements fashion”.
+
+→ [Sprawdź czy Twoja firma jest w Google AI Overview — bezpłatna analiza](/kontakt)
+
+---
+
+## Najczęściej zadawane pytania {#faq}
+
+**AEO co to jest dokładnie?**
+AEO co to jest — to optymalizacja strony pod bezpośrednie cytowania w Google AI Overview, Featured Snippet, ChatGPT i Siri. Cel AEO: być cytowanym jako źródło odpowiedzi na konkretne pytanie, nie tylko wynikiem na liście. AEO stosuje się razem z SEO i GEO. → [Co to jest GEO →](/blog/geo-co-to-jest)
+
+**Czym AEO różni się od SEO?**
+SEO optymalizuje pod pozycję w liście wyników Google. AEO optymalizuje pod bycie bezpośrednią odpowiedzią — Featured Snippet, AI Overview lub odpowiedź chatbota. Używają różnych formatów treści, choć część sygnałów technicznych jest wspólna. → [Co to jest SEO →](/blog/co-to-jest-seo)
+
+**Czy AEO działa dla małych firm?**
+Tak. Caruma, klient BoostNow z niszowej kategorii DPP, osiągnęła cytowania w Google AI Overview obok globalnych autorytetów (KPMG, Komisja Europejska) w 90 dni. AEO premiuje precyzję merytoryczną, nie wielkość firmy. → [Bezpłatna konsultacja →](/kontakt)
+
+**Jak szybko widać efekty AEO?**
+Featured Snippet i Google AI Overview reagują w 4-12 tygodni od wdrożenia. Caruma osiągnęła pierwsze cytowania w Google AI Overview w 90 dni. RudStudio — panel boczny AI Overview w podobnym czasie. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)
+
+**Ile kosztuje wdrożenie AEO?**
+BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie. AEO jest integralną częścią każdego pakietu — nie sprzedajemy osobno, bo wszystkie trzy warstwy razem decydują o widoczności. → [Cennik BoostNow →](/blog/ile-kosztuje-pozycjonowanie)
+
+---
+
+## Źródła {#zrodla}
+
+1. Kanu, A. et al. (2024). *GEO: Generative Engine Optimization.* Princeton University. https://arxiv.org/abs/2311.09735
+2. Search Engine Land (2026). *AI Mode Impact Report 2026.* https://searchengineland.com
+3. Google Search Central (2025). *Featured Snippets and AI Overview.* https://developers.google.com/search/docs
+4. Search Engine Journal (2025). *AI Overview CTR Study.* https://searchenginejournal.com
+5. Google (2025). *AI Mode Quality Guidelines.* https://developers.google.com/search/docs/ai-mode
+
+---
+
+## Bądź odpowiedzią Google — nie pomijaną stroną na liście
+
+**Każdy tydzień bez AEO to tydzień, w którym Google odpowiada Twoim klientom nazwą Twojej konkurencji.**
+
+Klienci BoostNow w Google AI Overview:
+- ✓ **Caruma** — cytowania obok KPMG i Komisji Europejskiej, dominacja kategorii DPP
+- ✓ **RudStudio** — panel boczny AI Overview obok Carbonfact i Renoon
+- ✓ **SU-2 Kiteboards** — 4x cytowania w jednym AI Overview, panel z obrazkiem
+
+**[ZAREZERWUJ BEZPŁATNĄ KONSULTACJĘ →](/kontakt)**
+Jedno spotkanie. Konkretny plan. Zero zobowiązań.
+
+---
+
+*Powiązane artykuły:*
+*[Co to jest GEO →](/blog/geo-co-to-jest)*
+*[Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)*
+*[Jak pojawić się w ChatGPT →](/blog/jak-pojawic-sie-w-chatgpt)*
