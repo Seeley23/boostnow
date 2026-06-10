@@ -1,102 +1,106 @@
 [
   {
     "id": 1,
-    "title": "llms.txt — Co to Jest i Jak Dodać do Swojej Strony [2026]",
-    "seoTitle": "llms.txt — Co to Jest i Jak Dodać do Strony [2026]",
-    "meta_description": "Strony z llms.txt uzyskują 23–40% więcej cytowań przez AI. Dowiedz się co to jest \ni dodaj plik do swojej strony w 3 krokach.",
+    "title": "llms.txt — Co to Jest i Jak Dodać do Swojej Strony 2026",
+    "seoTitle": "llms.txt — Co to Jest i Jak Dodać do Strony 2026",
+    "meta_description": "llms.txt — plik kierujący ChatGPT, Claude i Perplexity. Case Caruma: cytowania AI obok KPMG w 90 dni. Strategia wdrożenia z BoostNow.",
     "semantic_anchors": "llms.txt",
     "target_industry": "General",
-    "word_count": 284,
+    "word_count": 1495,
     "slug": "llms-txt",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "llms.txt — Co to Jest i Jak Dodać do Swojej Strony [2026]",
-        "datePublished": "2026-05-28",
-        "dateModified": "2026-05-28",
-        "inLanguage": "pl-PL",
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "llms.txt",
-            "GEO",
-            "AI SEO",
-            "AI Crawlers",
-            "Pozycjonowanie",
-            "GPTBot"
+    "date": "2026-06-10",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "llms.txt — Co to Jest i Jak Dodać do Swojej Strony 2026",
+          "description": "llms.txt informuje ChatGPT, Claude i Perplexity o strukturze strony. Case Caruma: cytowania AI obok KPMG w 90 dni.",
+          "datePublished": "2026-05-15",
+          "dateModified": "2026-06-02",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "llms.txt",
+              "GEO",
+              "Generative Engine Optimization",
+              "AI crawlers",
+              "GPTBot",
+              "ClaudeBot",
+              "PerplexityBot",
+              "AI SEO"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/llms-txt"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest llms.txt?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "llms.txt to plik tekstowy informujacy modele AI (ChatGPT, Claude, Perplexity, Gemini) o strukturze i priorytetach tresci strony. Standard zaproponowal Jeremy Howard w sierpniu 2024."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy llms.txt jest obowiazkowy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie, to dobrowolny standard. Strony bez llms.txt maja o 23-40 procent nizsza szanse na cytowanie w odpowiedzi AI."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge napisac llms.txt sam?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Strategicznie zle zaprojektowany llms.txt moze szkodzic wizerunkowi marki w AI. BoostNow projektuje go jako czesc strategii GEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak szybko llms.txt wplywa na cytowania AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Perplexity reaguje w czasie rzeczywistym (7-14 dni). ChatGPT co 30 dni. Google AI Overview 4-12 tygodni. Caruma 90 dni do pierwszych cytowan."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy llms.txt zastepuje robots.txt?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie. To dwa rozne pliki dla roznych odbiorcow. Robots.txt kontroluje indeksacje dla wyszukiwarek. llms.txt informuje AI crawlery o priorytetach tresci."
+              }
+            }
           ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/llms-txt"
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Co to jest llms.txt?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "llms.txt to plik Markdown w katalogu głównym domeny, który informuje modele językowe (ChatGPT, Claude, Perplexity) o strukturze witryny. Standard zaproponował Jeremy Howard w 2024 roku. Strony z llms.txt uzyskują lepszą indeksację przez AI crawlery."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy llms.txt wpływa na klasyczne SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "llms.txt nie wpływa bezpośrednio na pozycje w Google. Wpływa na GEO: cytowania w AI Overviews, ChatGPT Search i Perplexity. Pośrednio lepsza widoczność AI może zwiększyć branded search i wzmocnić SEO klasyczne."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak sprawdzić czy moja strona ma llms.txt?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Wpisz w przeglądarce: twojadomena.pl/llms.txt. Jeśli wyświetli się tekst Markdown — plik istnieje. Jeśli pojawi się błąd 404 — strona nie ma llms.txt i traci szanse na cytowanie przez AI."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czym różni się llms.txt od llms-full.txt?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "llms.txt to skrócona mapa witryny z linkami i opisami (do 50 KB). llms-full.txt to pełna treść wszystkich stron w jednym pliku Markdown. llms-full.txt umożliwia deep-indexing przez crawlery pobierające pełną treść."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy muszę aktualizować llms.txt po każdej zmianie na stronie?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "llms.txt aktualizuj przy dodaniu nowych kluczowych podstron lub artykułów. Dla optymalnego efektu w Perplexity aktualizuj co 30 dni dodając nowe treści. Nie wymaga aktualizacji przy każdej małej zmianie."
-            }
-          }
-        ]
-      }
-    ]
+      ]
+    }
   },
   {
     "id": 2,
@@ -107,7 +111,7 @@
     "target_industry": "General",
     "word_count": 1084,
     "slug": "jak-pojawic-sie-w-chatgpt",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -209,7 +213,7 @@
     "target_industry": "General",
     "word_count": 907,
     "slug": "pozycjonowanie-wroclaw-niedoinwestowany-rynek-seo",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -269,7 +273,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "seo-dla-kliniki-pacjenci-szukaja-specjalistow-w-google",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -334,280 +338,6 @@
   },
   {
     "id": 5,
-    "title": "Pozycjonowanie GEO: Jak Być Cytowanym przez ChatGPT, Perplexity i Gemini [2026]",
-    "seoTitle": "Pozycjonowanie GEO: Jak Być Cytowanym przez ChatGPT i Gemini [2026]",
-    "meta_description": "Pozycjonowanie GEO (Generative Engine Optimization) — wyniki z 3 realnych projektów: +280% ruchu AI w 90 dni. Kompletny przewodnik + case studies.",
-    "semantic_anchors": "pozycjonowanie GEO",
-    "target_industry": "General",
-    "word_count": 1358,
-    "slug": "pozycjonowanie-geo",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Pozycjonowanie GEO: Jak Być Cytowanym przez ChatGPT, Perplexity i Gemini [2026]",
-        "description": "Pozycjonowanie GEO — wyniki z 3 realnych projektów: +280% ruchu AI w 90 dni. Kompletny przewodnik 2026.",
-        "url": "https://boostnow.pl/blog/pozycjonowanie-geo",
-        "datePublished": "2025-12-30",
-        "dateModified": "2026-05-20",
-        "inLanguage": "pl-PL",
-        "keywords": [
-          "pozycjonowanie GEO",
-          "generative engine optimization",
-          "ChatGPT SEO",
-          "AI Overviews",
-          "GEO vs SEO"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "SEO",
-            "GEO",
-            "Generative Engine Optimization",
-            "ChatGPT SEO",
-            "AI Overviews",
-            "Pozycjonowanie"
-          ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/pozycjonowanie-geo"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Co to jest pozycjonowanie GEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pozycjonowanie GEO (Generative Engine Optimization) to optymalizacja treści pod cytowania przez wyszukiwarki AI — ChatGPT, Perplexity, Gemini i Google AI Overviews. Polega na dostosowaniu struktury treści do mechanizmu RAG używanego przez modele językowe."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Ile czasu zajmuje pozycjonowanie GEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach od wdrożenia. Google AI Overviews: 2–4 miesiące. BoostNow osiągnął pierwsze cytowania AI dla Carumy w 90 dni startując od nowej domeny."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy pozycjonowanie GEO zastąpi SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nie — pozycjonowanie GEO uzupełnia klasyczne SEO. 92% cytowań AI Overviews pochodzi ze stron w TOP 10 Google. Firmy potrzebują obu: SEO jako fundament i GEO jako warstwa cytowań AI."
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "title": "GEO Pozycjonowanie — Co to Jest i Jak Wdrożyć w Polsce [2026]",
-    "seoTitle": "GEO Pozycjonowanie w Polsce — Kompletny Przewodnik",
-    "meta_description": "GEO to nowa dyscyplina SEO dla wyszukiwarek AI. Kompletny przewodnik wdrożenia generative engine optimization dla polskich firm.",
-    "semantic_anchors": "GEO pozycjonowanie",
-    "target_industry": "General",
-    "word_count": 724,
-    "slug": "geo-pozycjonowanie",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "GEO Pozycjonowanie — Co to Jest i Jak Wdrożyć w Polsce [2026]",
-        "description": "GEO pozycjonowanie to optymalizacja pod AI. Kompletny przewodnik dla polskich firm.",
-        "url": "https://boostnow.pl/blog/geo-pozycjonowanie",
-        "datePublished": "2026-05-26",
-        "dateModified": "2026-05-26",
-        "inLanguage": "pl-PL",
-        "keywords": [
-          "GEO pozycjonowanie",
-          "Generative Engine Optimization",
-          "pozycjonowanie AI",
-          "GEO Polska"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "GEO",
-            "Generative Engine Optimization",
-            "AI SEO",
-            "ChatGPT SEO",
-            "Pozycjonowanie AI"
-          ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/geo-pozycjonowanie"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Co to jest GEO pozycjonowanie?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "GEO pozycjonowanie to optymalizacja treści pod cytowania przez wyszukiwarki AI — ChatGPT, Perplexity, Gemini i Google AI Overviews. Polega na dostosowaniu struktury treści do mechanizmu RAG używanego przez modele językowe."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy GEO pozycjonowanie zastąpi SEO w Polsce?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "GEO nie zastąpi SEO — uzupełnia je. 92% cytowań Google AI Overviews pochodzi z stron w TOP 10 organic. Firmy ignorujące GEO tracą rosnący segment ruchu szacowany na 50% wszystkich zapytań do końca 2026."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak szybko widać efekty GEO pozycjonowania?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews: 2–4 miesiące. BoostNow osiągnął pierwsze cytowania AI dla klientów w 90 dni od zera."
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "title": "Pozycjonowanie w AI — Jak Pojawić Się w ChatGPT, Gemini i Perplexity [2026]",
-    "seoTitle": "Pozycjonowanie w AI [2026] — Efekty w 4–8 Tygodni",
-    "meta_description": "Dowiedz się jak pojawić się w odpowiedziach ChatGPT, Gemini i Perplexity. Sprawdzone strategie — efekty w 4–8 tygodni.",
-    "semantic_anchors": "pozycjonowanie w AI",
-    "target_industry": "General",
-    "word_count": 966,
-    "slug": "pozycjonowanie-w-ai",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Pozycjonowanie w AI — Jak Pojawić Się w ChatGPT, Gemini i Perplexity [2026]",
-        "description": "Pozycjonowanie w AI: optymalizacja pod cytowania ChatGPT, Gemini, Perplexity. Efekty w 4–8 tygodni.",
-        "url": "https://boostnow.pl/blog/pozycjonowanie-w-ai",
-        "datePublished": "2026-05-26",
-        "dateModified": "2026-05-26",
-        "inLanguage": "pl-PL",
-        "keywords": [
-          "pozycjonowanie w AI",
-          "AI SEO",
-          "ChatGPT SEO",
-          "widoczność w AI",
-          "GEO"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "Pozycjonowanie w AI",
-            "AI SEO",
-            "GEO",
-            "ChatGPT",
-            "Perplexity",
-            "Gemini"
-          ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/pozycjonowanie-w-ai"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Czym różni się pozycjonowanie w AI od SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "SEO optymalizuje pod algorytm Google PageRank. Pozycjonowanie w AI optymalizuje pod mechanizm RAG — pobieranie i cytowanie fragmentów przez modele językowe. SEO ma horyzont 3–12 miesięcy. Pozycjonowanie w AI daje pierwsze cytowania po 4–8 tygodniach."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy pozycjonowanie w AI zastąpi klasyczne SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nie — uzupełnia je. 92% cytowań Google AI Overviews pochodzi z stron w TOP 10 organic. SEO nadal jest bramą wejścia dla Gemini. Strategie są komplementarne."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak szybko widać efekty pozycjonowania w AI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews wymaga 2–4 miesięcy. Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań (BrightEdge, 2024)."
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 8,
     "title": "Ile Kosztuje Pozycjonowanie — Realne Stawki i ROI w 2026",
     "seoTitle": "Ile Kosztuje Pozycjonowanie — Realne Stawki 2026",
     "meta_description": "Ile kosztuje pozycjonowanie? Cennik SEO 2026 + case Caruma — 151k wyświetleń i 910 konwersji w 90 dni. Bezpłatna wycena BoostNow.",
@@ -615,7 +345,7 @@
     "target_industry": "General",
     "word_count": 1062,
     "slug": "ile-kosztuje-pozycjonowanie",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -707,99 +437,109 @@
     }
   },
   {
-    "id": 9,
+    "id": 6,
     "title": "Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]",
-    "seoTitle": "Agencja SEO AI — SEO, GEO i AEO dla Polskich Firm",
-    "meta_description": "Agencja SEO AI łącząca SEO, GEO i AEO. Sprawdź jak różnimy się od tradycyjnej agencji i zacznij pojawiać się w AI.",
+    "seoTitle": "Agencja SEO AI — SEO + GEO + AEO dla Polskich Firm",
+    "meta_description": "Agencja SEO AI — SEO + GEO + AEO w jednym pakiecie. Case Caruma: cytowania AI obok KPMG w 90 dni. Bezpłatna analiza BoostNow.",
     "semantic_anchors": "agencja seo ai",
     "target_industry": "General",
-    "word_count": 582,
+    "word_count": 1317,
     "slug": "agencja-seo-ai",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]",
-        "description": "Agencja SEO AI łączy klasyczne pozycjonowanie z optymalizacją pod ChatGPT, Gemini i Perplexity.",
-        "url": "https://boostnow.pl/blog/agencja-seo-ai",
-        "datePublished": "2026-05-26",
-        "dateModified": "2026-05-26",
-        "inLanguage": "pl-PL",
-        "keywords": [
-          "agencja seo ai",
-          "agencja SEO AI Polska",
-          "SEO AI",
-          "GEO agencja",
-          "BoostNow"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "Agencja SEO AI",
-            "SEO",
-            "GEO",
-            "AEO",
-            "AI Marketing",
-            "Pozycjonowanie"
+    "date": "2026-06-10",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO",
+          "description": "Agencja SEO AI łączy SEO + GEO + AEO. Case Caruma: cytowania w AI Overview obok KPMG w 90 dni.",
+          "datePublished": "2026-05-26",
+          "dateModified": "2026-06-02",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "agencja SEO AI",
+              "SEO",
+              "GEO",
+              "AEO",
+              "AI search",
+              "ChatGPT optimization",
+              "Google AI Mode"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/agencja-seo-ai"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest agencja SEO AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Agencja SEO AI laczy klasyczne SEO z GEO i AEO w jednej strategii. Obsluguje Google (60%) + AI search (40%)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy agencja SEO AI jest drozsza?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie znaczaco. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesiecznie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moja firma potrzebuje agencji SEO AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W 2026 wiekszosc firm B2B i e-commerce potrzebuje pelnej strategii SEO + GEO + AEO. Dla 80% firm tradycyjne SEO to juz niepelna oferta."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak szybko widac efekty?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GEO i AEO daja pierwsze efekty szybciej niz klasyczne SEO. Perplexity 7-30 dni, ChatGPT 30 dni, Google AI Overview 4-12 tygodni. Caruma 90 dni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge zmienic obecna agencje SEO na agencje SEO AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Audyt pokazuje konkretne luki: brak Person Schema, brak monitoringu Perplexity, brak optymalizacji pod ChatGPT."
+              }
+            }
           ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/agencja-seo-ai"
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Co to jest agencja SEO AI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Agencja SEO AI łączy klasyczne pozycjonowanie Google z optymalizacją pod wyszukiwarki AI: GEO, AEO i AIO. Optymalizuje widoczność zarówno w Google, jak i w ChatGPT, Perplexity i Gemini."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czym różni się agencja SEO AI od tradycyjnej?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Tradycyjna agencja SEO optymalizuje wyłącznie pod Google PageRank. Agencja SEO AI optymalizuje równocześnie pod Google i pod mechanizm RAG używany przez ChatGPT, Perplexity i Gemini. Mierzy też cytowania AI i share of voice w AI."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak sprawdzić czy agencja SEO naprawdę działa w AI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Poprosi o konkretne przykłady cytowań AI dla obecnych klientów, dane GA4 z sesji z chatgpt.com i perplexity.ai, oraz demonstrację jak firma pojawia się w odpowiedziach ChatGPT na zapytania w swojej kategorii."
-            }
-          }
-        ]
-      }
-    ]
+      ]
+    }
   },
   {
-    "id": 10,
+    "id": 7,
     "title": "SEO dla Hoteli — Zbieraj Rezerwacje Bezpośrednie, Płać Mniej OTA",
     "seoTitle": "SEO dla Hotelu — Mniej Booking, Więcej Rezerwacji 2026",
     "meta_description": "SEO dla hotelu — zbieraj rezerwacje bezpośrednie, płać mniej Booking. Case SU-2: TOP 1 globalnie w 120 dni. Analiza BoostNow.",
@@ -807,7 +547,7 @@
     "target_industry": "General",
     "word_count": 1078,
     "slug": "seo-dla-hoteli-zbieraj-rezerwacje-bezposrednie-plac-mniej-ota",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -871,7 +611,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 8,
     "title": "SEO dla Sklepu Internetowego — Jak Sklep Trafia do TOP 1 Globalnie",
     "seoTitle": "SEO dla Sklepu Internetowego — TOP 1 w 120 Dni",
     "meta_description": "SEO dla sklepu internetowego. Case SU-2 Kiteboards — TOP 1 globalnie w 120 dni, 4x cytowania w Google AI Overview. Bezpłatna analiza BoostNow.",
@@ -879,7 +619,7 @@
     "target_industry": "General",
     "word_count": 1114,
     "slug": "seo-dla-sklepu-internetowego",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -972,7 +712,7 @@
     }
   },
   {
-    "id": 12,
+    "id": 9,
     "title": "Pozycjonowanie Warszawa — Jak Firma z Warszawy Trafia do TOP Google",
     "seoTitle": "Pozycjonowanie Warszawa — Agencja SEO i GEO 2026",
     "meta_description": "Pozycjonowanie Warszawa — SEO + GEO + AEO dla firm warszawskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -980,7 +720,7 @@
     "target_industry": "General",
     "word_count": 1075,
     "slug": "pozycjonowanie-warszawa-jak-firma-z-warszawy-trafia-do-top-google",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1032,106 +772,109 @@
     }
   },
   {
-    "id": 13,
+    "id": 10,
     "title": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "seoTitle": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
-    "meta_description": "Czym jest AI SEO i czy zastępuje klasyczne SEO? Sprawdź jak małe firmy wyprzedzają liderów branży w AI Overviews bez backlinków.",
+    "meta_description": "AI SEO — czy zastępuje klasyczne SEO? 42% zapytań omija Twoją stronę. Case Caruma: cytowania AI obok KPMG w 90 dni.",
     "semantic_anchors": "ai seo",
     "target_industry": "General",
-    "word_count": 316,
+    "word_count": 1378,
     "slug": "ai-seo",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "AI SEO — Czym Jest i Jak Pozycjonować Stronę w Erze AI [2026]",
-        "datePublished": "2026-05-28",
-        "dateModified": "2026-05-28",
-        "inLanguage": "pl-PL",
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "SEO",
-            "GEO",
-            "AEO",
-            "AI SEO",
-            "AI Marketing",
-            "Pozycjonowanie"
+    "date": "2026-06-10",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
+          "description": "AI SEO to optymalizacja pod ChatGPT, Perplexity, Gemini i Google AI Mode. 42% zapytań kończy się w AI Overview.",
+          "datePublished": "2026-05-28",
+          "dateModified": "2026-06-02",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "AI SEO",
+              "GEO",
+              "AEO",
+              "SEO",
+              "AI search",
+              "ChatGPT",
+              "Google AI Overview"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/ai-seo"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest AI SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI SEO to optymalizacja strony pod widocznosc w wyszukiwarkach AI (ChatGPT, Perplexity, Gemini, Google AI Mode)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy AI SEO zastepuje klasyczne SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie zastepuje, uzupelnia. Klasyczne SEO obsluguje 60% wyszukiwan. AI SEO obsluguje 40% (w tym 42% zero-click)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dlaczego 42% zapytan omija strone?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Google AI Overview obsluguje 42% zapytan informacyjnych w trybie zero-click. Uzytkownik dostaje odpowiedz bez klikniecia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje wdrozenie AI SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesiecznie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mala firma moze wyprzedzic duzych konkurentow przez AI SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Caruma jest cytowana w Google AI Overview obok KPMG i Komisji Europejskiej w 90 dni. AI SEO premiuje autorytet encji autora."
+              }
+            }
           ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/ai-seo"
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Czym jest AI SEO w skrócie?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "AI SEO to optymalizacja strony pod algorytmy Google i modele językowe (ChatGPT, Perplexity, Gemini). AI SEO łączy SEO z GEO i AEO, by treść była cytowana w odpowiedziach AI. Strony z AI SEO uzyskują 30–115% więcej cytowań w AI niż bez tej optymalizacji."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Ile kosztuje wdrożenie AI SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Wdrożenie AI SEO w warstwie technicznej kosztuje jednorazowo 500–2000 zł. Optymalizacja contentowa to 200–500 zł za artykuł. Pełny audyt i wdrożenie przez agencję kosztuje 3000–8000 zł miesięcznie."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak długo trwa wdrożenie AI SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Efekty techniczne AI SEO są widoczne po 2–4 tygodniach. Cytowania w AI Overviews pojawiają się po 4–8 tygodniach. Pełna widoczność w ChatGPT i Perplexity wymaga 2–3 miesięcy aktywnej strategii contentowej."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy AI SEO zastępuje klasyczne SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "AI SEO nie zastępuje klasycznego SEO. Backlinki, Core Web Vitals i keyword optimization pozostają krytyczne. AI SEO dodaje warstwę cytowalności treści i entity footprint, które decydują o obecności w AI Overviews."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy małe firmy mogą wdrożyć AI SEO samodzielnie?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Małe firmy mogą samodzielnie wdrożyć llms.txt, robots.txt z GPTBot i FAQ Schema. Przepisanie treści pod standard GEO wymaga znajomości protokołu answer-capsule architecture i kryteriów cytowania platform AI."
-            }
-          }
-        ]
-      }
-    ]
+      ]
+    }
   },
   {
-    "id": 14,
+    "id": 11,
     "title": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "seoTitle": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "meta_description": "Co to jest SEO i ile klientów tracisz bez niego? Case Caruma — 151k wyświetleń w Google w 90 dni. Bezpłatna analiza SEO BoostNow.",
@@ -1139,7 +882,7 @@
     "target_industry": "General",
     "word_count": 1166,
     "slug": "co-to-jest-seo",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1233,7 +976,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 12,
     "title": "SEO dla Prawnika — Widoczność z Poszanowaniem KEA i KRRP",
     "seoTitle": "SEO dla Prawnika — Kancelaria z Widocznością w Google 2026",
     "meta_description": "SEO dla prawnika i kancelarii — widoczność dla klientów szukających pomocy prawnej. Z poszanowaniem KEA i KRRP. Analiza BoostNow.",
@@ -1241,7 +984,7 @@
     "target_industry": "General",
     "word_count": 1013,
     "slug": "seo-dla-prawnika-widocznosc-z-poszanowaniem-kea-i-krrp",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1305,97 +1048,7 @@
     }
   },
   {
-    "id": 16,
-    "title": "Widoczność w ChatGPT — Jak Pojawić Się w Odpowiedziach ChatGPT [2026]",
-    "seoTitle": "Widoczność w ChatGPT — Jak Pojawić Się w Wynikach AI",
-    "meta_description": "Zwiększ widoczność firmy w ChatGPT. Optymalizuj treści pod cytowania i buduj brand entity rozpoznawany przez AI w Polsce.",
-    "semantic_anchors": "widoczność w ChatGPT",
-    "target_industry": "General",
-    "word_count": 638,
-    "slug": "widocznosc-w-chatgpt",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Widoczność w ChatGPT — Jak Pojawić Się w Odpowiedziach ChatGPT [2026]",
-        "description": "Jak zwiększyć widoczność firmy w ChatGPT? Optymalizacja treści pod cytowania ChatGPT i budowanie brand entity.",
-        "url": "https://boostnow.pl/blog/widocznosc-w-chatgpt",
-        "datePublished": "2026-05-26",
-        "dateModified": "2026-05-26",
-        "inLanguage": "pl-PL",
-        "keywords": [
-          "widoczność w ChatGPT",
-          "ChatGPT SEO",
-          "jak pojawić się w ChatGPT",
-          "ChatGPT cytowania"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "ChatGPT SEO",
-            "Widoczność w AI",
-            "GEO",
-            "Brand Entity",
-            "AI Citations"
-          ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/widocznosc-w-chatgpt"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Dlaczego moja firma nie pojawia się w ChatGPT?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Najczęstsze przyczyny: brak encji Wikidata, brak indeksacji w Bing, brak obecności na platformach które ChatGPT preferuje (Reddit, Wikipedia). Sama strona internetowa to za mało — ChatGPT musi rozpoznać markę jako znaną encję."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak szybko moja firma może pojawić się w ChatGPT?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Po wdrożeniu Wikidata i Bing WMT: 4–8 tygodni. Budowanie organicznej obecności na Reddit: 2–3 miesiące. Cytowania przez ChatGPT w odpowiedziach na konkurencyjne zapytania: 3–6 miesięcy."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy ChatGPT cytuje strony po polsku?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Tak — dla zapytań w języku polskim ChatGPT preferuje polskie źródła. Jednak dla zapytań globalnych (np. o GEO czy AI SEO) konkurujesz z treściami anglojęzycznymi."
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 17,
+    "id": 13,
     "title": "Co To Jest GEO — Generative Engine Optimization po Polsku",
     "seoTitle": "Co To Jest GEO — Generative Engine Optimization 2026",
     "meta_description": "Co to jest GEO? Case Caruma — cytowania w Google AI Overview obok KPMG w 90 dni. Pełna definicja, różnice vs SEO i wdrożenie z BoostNow.",
@@ -1403,7 +1056,7 @@
     "target_industry": "General",
     "word_count": 1199,
     "slug": "geo-co-to-jest",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1498,7 +1151,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 14,
     "title": "Audyt SEO — Co Musi Zawierać, Żeby Faktycznie Pomóc Twojej Firmie",
     "seoTitle": "Audyt SEO — Co Musi Zawierać Żeby Faktycznie Pomóc",
     "meta_description": "Audyt SEO — czego wymagać od agencji? Case Caruma: audyt → 151k wyświetleń w 90 dni, cytowania w AI Overview obok KPMG.",
@@ -1506,7 +1159,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "audyt-seo",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1599,7 +1252,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 15,
     "title": "Pozycjonowanie Kraków — Niedoinwestowany Rynek SEO w Polsce",
     "seoTitle": "Pozycjonowanie Kraków — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie Kraków — SEO + GEO + AEO dla firm krakowskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1607,7 +1260,7 @@
     "target_industry": "General",
     "word_count": 1074,
     "slug": "pozycjonowanie-krakow-niedoinwestowany-rynek-seo-w-polsce",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1659,97 +1312,7 @@
     }
   },
   {
-    "id": 20,
-    "title": "AEO — Co to Jest Answer Engine Optimization i Jak Działa [2026]",
-    "seoTitle": "AEO — Co to Jest i Jak Wdrożyć w Polsce [2026]",
-    "meta_description": "AEO to optymalizacja pod silniki odpowiedzi AI. Poznaj różnice AEO vs SEO vs GEO i wdrożenie krok po kroku w Polsce.",
-    "semantic_anchors": "aeo co to jest",
-    "target_industry": "General",
-    "word_count": 628,
-    "slug": "aeo-co-to-jest",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "AEO — Co to Jest Answer Engine Optimization i Jak Działa [2026]",
-        "description": "AEO to optymalizacja treści pod silniki odpowiedzi AI. Przewodnik wdrożenia dla polskich firm.",
-        "url": "https://boostnow.pl/blog/aeo-co-to-jest",
-        "datePublished": "2026-05-26",
-        "dateModified": "2026-05-26",
-        "inLanguage": "pl-PL",
-        "keywords": [
-          "AEO",
-          "Answer Engine Optimization",
-          "co to jest AEO",
-          "AEO vs SEO"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "AEO",
-            "Answer Engine Optimization",
-            "SEO",
-            "GEO",
-            "AI Overviews"
-          ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/aeo-co-to-jest"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Co to jest AEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "AEO (Answer Engine Optimization) to optymalizacja treści pod silniki odpowiedzi — systemy które generują bezpośrednie odpowiedzi bez kliknięcia w link, jak Google Featured Snippets, AI Overviews, ChatGPT i Perplexity."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czym różni się AEO od SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "SEO optymalizuje pod pozycję w wynikach wyszukiwania. AEO optymalizuje pod bycie wybraną odpowiedzią — Featured Snippet lub direct answer w AI. AEO ma krótszy horyzont efektów: 2–6 tygodni vs 3–12 miesięcy dla SEO."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak wdrożyć AEO na stronie?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Podstawowe kroki: format pytanie-odpowiedź w treści, nagłówki H2/H3 jako pytania, FAQ Schema markup, krótkie odpowiedzi 40–60 słów w pierwszym zdaniu każdej sekcji."
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 21,
+    "id": 16,
     "title": "Pozycjonowanie w AI: Co Musi Wiedzieć Twoja Firma w 2026",
     "seoTitle": "Pozycjonowanie w AI — Czy ChatGPT Zna Twoją Firmę?",
     "meta_description": "Pozycjonowanie w AI — case Caruma: 151k wyświetleń w 90 dni, cytowania w Google AI Overview obok KPMG. Sprawdź widoczność Twojej firmy z BoostNow.",
@@ -1757,7 +1320,7 @@
     "target_industry": "General",
     "word_count": 1391,
     "slug": "pozycjonowanie-w-ai",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1853,7 +1416,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 17,
     "title": "Pozycjonowanie Katowice — 2 Miliony Klientów, Niska Konkurencja",
     "seoTitle": "Pozycjonowanie Katowice — SEO + GEO Aglomeracja Śląska",
     "meta_description": "Pozycjonowanie Katowice — SEO + GEO dla aglomeracji śląskiej. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1861,7 +1424,7 @@
     "target_industry": "General",
     "word_count": 884,
     "slug": "pozycjonowanie-katowice-2-miliony-klientow-niska-konkurencja",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1935,189 +1498,108 @@
     }
   },
   {
-    "id": 23,
-    "title": "Generative Engine Optimization (GEO) — Przewodnik dla Firm [2026]",
-    "seoTitle": "GEO dla Firm — Bądź Cytowanym przez ChatGPT i Gemini",
-    "meta_description": "GEO to optymalizacja pod wyszukiwarki AI. Sprawdź jak BoostNow pomaga firmom być cytowanymi przez ChatGPT i Gemini.",
-    "semantic_anchors": "generative engine optimization",
-    "target_industry": "General",
-    "word_count": 682,
-    "slug": "generative-engine-optimization",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Generative Engine Optimization (GEO) — Przewodnik dla Firm [2026]",
-        "description": "GEO to optymalizacja pod wyszukiwarki AI. Jak BoostNow pomaga firmom być cytowanymi przez ChatGPT i Gemini.",
-        "url": "https://boostnow.pl/blog/generative-engine-optimization",
-        "datePublished": "2026-05-26",
-        "dateModified": "2026-05-26",
-        "inLanguage": "pl-PL",
-        "keywords": [
-          "generative engine optimization",
-          "GEO",
-          "GEO SEO",
-          "optymalizacja AI",
-          "Princeton GEO"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "Generative Engine Optimization",
-            "GEO",
-            "SEO",
-            "AI Overviews",
-            "Pozycjonowanie AI"
-          ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/generative-engine-optimization"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Co to jest Generative Engine Optimization?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Generative Engine Optimization (GEO) to optymalizacja treści internetowych pod cytowania przez generatywne systemy AI — ChatGPT, Perplexity, Gemini i Google AI Overviews. Termin wprowadził Princeton University w 2023 roku."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak GEO różni się od SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "SEO optymalizuje pod algorytm rankingowy Google. GEO optymalizuje pod mechanizm RAG używany przez generatywne AI do pobierania i cytowania fragmentów. SEO ma horyzont 3–12 miesięcy. GEO daje efekty w 4–8 tygodni."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jakie techniki GEO są najbardziej skuteczne?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Według badania Princeton (2024): cytaty z autorytetów (+115% cytowalności), statystyki ze źródłami (+40%), płynność językowa (+30%), struktura chunk autonomy i entity disambiguation."
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 24,
+    "id": 18,
     "title": "SEO pod AI Overviews — Jak Być Cytowanym przez Google AI [2026]",
     "seoTitle": "SEO pod Google AI Overviews — Przewodnik [2026]",
-    "meta_description": "SEO pod AI Overviews wymaga nowej strategii. Dowiedz się jak zwiększyć widoczność w Google AI Overviews — przewodnik 2026.",
+    "meta_description": "SEO pod AI Overviews — jak być cytowanym przez Google AI. Case Caruma: panel AI Overview obok KPMG w 90 dni. BoostNow.",
     "semantic_anchors": "seo pod ai overviews",
     "target_industry": "General",
-    "word_count": 674,
+    "word_count": 1321,
     "slug": "seo-pod-ai-overviews",
-    "date": "2026-06-09",
-    "schemaJson": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "SEO pod AI Overviews — Jak Być Cytowanym przez Google AI [2026]",
-        "description": "SEO pod AI Overviews wymaga innej strategii niż klasyczne SEO. Jak optymalizować treści pod Google AI Overviews.",
-        "url": "https://boostnow.pl/blog/seo-pod-ai-overviews",
-        "datePublished": "2026-05-26",
-        "dateModified": "2026-05-26",
-        "inLanguage": "pl-PL",
-        "keywords": [
-          "seo pod ai overviews",
-          "Google AI Overviews",
-          "AIO SEO",
-          "AI Overview optymalizacja"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Mateusz Nowotka",
-          "jobTitle": "CEO & SEO Strategist",
-          "affiliation": "BoostNow",
-          "url": "https://boostnow.pl",
-          "sameAs": [
-            "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/",
-            "https://boostnow.pl"
-          ],
-          "knowsAbout": [
-            "Google AI Overviews",
-            "SEO",
-            "AIO",
-            "GEO",
-            "AI Citations",
-            "Pozycjonowanie"
+    "date": "2026-06-10",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "SEO pod AI Overviews — Jak Być Cytowanym przez Google AI",
+          "description": "SEO pod AI Overviews — case Caruma: cytowania w Google AI Overview obok KPMG w 90 dni.",
+          "datePublished": "2026-05-26",
+          "dateModified": "2026-06-02",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "Google AI Overview",
+              "AEO",
+              "SEO",
+              "GEO",
+              "Featured Snippet",
+              "AI Mode"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/seo-pod-ai-overviews"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Czym jest SEO pod AI Overviews?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SEO pod AI Overviews to optymalizacja pod cytowania w Google AI Overview. Wymaga E-E-A-T, Direct Answer Box, FAQ Schema, autorytetu encji marki i chunkow 120-180 slow."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy AI Overview zastepuje klasyczne wyniki?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie calkowicie, ale dla 42% zapytan informacyjnych obsluguje pierwszy ekran uzytkownika. Klasyczne wyniki ponizej."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak szybko moge pojawic sie w AI Overview?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "4-12 tygodni dla wiekszosci branz przy kompletnym wdrozeniu. Caruma osiagnela cytowania w 90 dni od nowej domeny."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge sam zoptymalizowac strone pod AI Overview?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie wymaga koordynacji technikaliow, contentu i autorytetu marki. BoostNow integruje wszystkie warstwy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Co jesli konkurencja jest juz w AI Overview?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Google AI Overview wybiera 3-7 zrodel dla kazdego zapytania. Zawsze jest miejsce na nowe. Wymaga udowodnienia wyzszej jakosci niz obecny cytowany."
+              }
+            }
           ]
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "url": "https://boostnow.pl",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/images/logo.svg"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://boostnow.pl/blog/seo-pod-ai-overviews"
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Czym są Google AI Overviews?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Google AI Overviews to generatywne podsumowania wyświetlane nad wynikami wyszukiwania Google, które syntetyzują informacje z wielu źródeł i cytują strony jako źródła odpowiedzi. Dostępne globalnie od maja 2024."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak optymalizować stronę pod AI Overviews?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Kluczowe kroki: rankowanie w TOP 10 organic, pytania jako H2/H3, bezpośrednie odpowiedzi w pierwszym zdaniu, FAQ Schema, statystyki ze źródłami, widoczna data i autor."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy AI Overviews zmniejszają ruch na stronie?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Dla niektórych zapytań informacyjnych tak. Jednak cytowanie w AIO buduje autorytet i zwiększa ruch z zapytań komercyjnych — użytkownicy widzą markę jako eksperta."
-            }
-          }
-        ]
-      }
-    ]
+      ]
+    }
   },
   {
-    "id": 25,
+    "id": 19,
     "title": "AEO Co To Jest — Answer Engine Optimization Wyjaśnione",
     "seoTitle": "AEO Co To Jest — Answer Engine Optimization 2026",
     "meta_description": "AEO co to jest? Optymalizacja pod Google AI Overview i Featured Snippet. Case Caruma — cytowania obok KPMG i Komisji Europejskiej w 90 dni.",
@@ -2125,7 +1607,7 @@
     "target_industry": "General",
     "word_count": 1129,
     "slug": "aeo-co-to-jest",
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
