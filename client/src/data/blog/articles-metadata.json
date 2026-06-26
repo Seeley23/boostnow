@@ -420,6 +420,108 @@
   },
   {
     "id": 6,
+    "title": "Optymalizacja SEO — Co Naprawdę Optymalizować w 2026",
+    "seoTitle": "Optymalizacja SEO 2026 — Cztery Warstwy Razem",
+    "meta_description": "Optymalizacja SEO 2026 — cztery warstwy, które muszą zagrać razem. Case Caruma: +12 421% wyświetleń w 90 dni. BoostNow.",
+    "semantic_anchors": "optymalizacja seo",
+    "target_industry": "General",
+    "word_count": 1729,
+    "slug": "optymalizacja-seo",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Optymalizacja SEO 2026 — Cztery Warstwy, Które Muszą Zagrać Razem",
+          "description": "Optymalizacja SEO 2026: techniczna, content, autorytet, AI (GEO+AEO). Case Caruma: +12 421% wyswietlen w 90 dni.",
+          "datePublished": "2026-06-26",
+          "dateModified": "2026-06-26",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "optymalizacja SEO",
+              "SEO techniczne",
+              "on-page SEO",
+              "Core Web Vitals",
+              "Schema markup",
+              "GEO",
+              "E-E-A-T"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/optymalizacja-seo"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest optymalizacja SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Optymalizacja SEO to zintegrowana praca nad czterema warstwami widocznosci marki: techniczna, content, autorytetu i AI (GEO + AEO). To proces ciagly, nie jednorazowa interwencja."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile czasu zajmuje optymalizacja SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Warstwa techniczna i AI 4-12 tygodni. Content 3-9 miesiecy. Autorytetu 6-18 miesiecy. Pelne efekty 6-12 miesiecy. Caruma osiagnela +12 421% w 90 dni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje optymalizacja SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W Polsce 1 500-15 000 PLN miesiecznie. Pelna czterowarstwowa optymalizacja z GEO + AEO zaczyna sie od 2 500 PLN miesiecznie w BoostNow."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge zoptymalizowac strone sam?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie wymaga koordynacji czterech warstw, znajomosci E-E-A-T, Person Schema, llms.txt, GEO. Blednie wdrozona optymalizacja moze aktywnie szkodzic."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy optymalizacja SEO jest jednorazowa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie. Algorytmy Google i AI search zmieniaja sie kwartalnie. Konkurencja takze optymalizuje. Optymalizacja SEO to proces ciagly."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
     "title": "Generative Engine Optimization (GEO) — Definicja, Badania i Wdrożenie [2026]",
     "seoTitle": "Generative Engine Optimization — GEO Przewodnik 2026",
     "meta_description": "Generative Engine Optimization (GEO) — nowa dyscyplina po SEO. Princeton 2024. Case Caruma: cytowania w AI Overview obok KPMG w 90 dni.",
@@ -521,7 +623,108 @@
     }
   },
   {
-    "id": 7,
+    "id": 8,
+    "title": "Ile Kosztuje Strona Internetowa w 2026? Pełny Cennik + Ukryty Koszt",
+    "seoTitle": "Ile Kosztuje Strona Internetowa 2026? Pełny Cennik",
+    "meta_description": "Ile kosztuje strona internetowa 2026 — pełny cennik landing, WordPress, e-commerce. Ukryty koszt strony bez pozycjonowania. BoostNow.",
+    "semantic_anchors": "ile kosztuje strona internetowa",
+    "target_industry": "General",
+    "word_count": 1800,
+    "slug": "ile-kosztuje-strona-internetowa",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Ile Kosztuje Strona Internetowa w 2026? Pełny Cennik + Ukryty Koszt",
+          "description": "Ile kosztuje strona internetowa 2026 — pełny cennik landing, WordPress, e-commerce. Ukryty koszt strony bez pozycjonowania.",
+          "datePublished": "2026-06-26",
+          "dateModified": "2026-06-26",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "ile kosztuje strona internetowa",
+              "cennik stron www",
+              "koszt strony firmowej",
+              "SEO techniczne",
+              "budowa strony",
+              "web development Polska"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/ile-kosztuje-strona-internetowa"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje strona internetowa dla malej firmy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Uczciwy zakres 5 000-15 000 PLN za custom WordPress z 5-10 podstronami, copywritingiem i podstawowym SEO technicznym. Plus 500-1 500 PLN rocznie hosting i domena. Kluczowe: doliczyc pozycjonowanie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge zrobic strone internetowa sam?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak (Wix, Squarespace, WordPress.com 50-300 PLN miesiecznie). Praktycznie strona DIY czesto nie spelnia podstaw SEO. Wynik: piekna strona ktorej Google nie pokazuje."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje sklep internetowy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sklep internetowy 8 000-30 000 PLN za budowe (WooCommerce, PrestaShop, Shopify) zaleznie od liczby produktow. E-commerce wymaga 70% budzetu na pozycjonowanie w pierwszym roku."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa budowa strony internetowej?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Landing page 2-4 tygodnie. Custom WordPress 6-10 tygodni. Sklep internetowy 8-16 tygodni. Aplikacja webowa 4-9 miesiecy. Plus 2-4 tygodnie na launch SEO + GEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy lepiej zaczac od taniej strony i pozniej rozwijac?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla wiekszosci malych firm tak, pod warunkiem ze podstawy techniczne SEO sa wbudowane od poczatku (Schema, Core Web Vitals, struktura URL)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
     "title": "Ile Kosztuje Pozycjonowanie — Realne Stawki i ROI w 2026",
     "seoTitle": "Ile Kosztuje Pozycjonowanie — Realne Stawki 2026",
     "meta_description": "Ile kosztuje pozycjonowanie? Cennik SEO 2026 + case Caruma — 151k wyświetleń i 910 konwersji w 90 dni. Bezpłatna wycena BoostNow.",
@@ -621,7 +824,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 10,
     "title": "Pozycjonowanie GEO — Praktyczna Strategia dla Firm B2B w Polsce [2026]",
     "seoTitle": "Pozycjonowanie GEO — Strategia dla Firm B2B w Polsce 2026",
     "meta_description": "Pozycjonowanie GEO w Polsce — strategia dla firm B2B z case studies. Caruma: 90 dni, cytowania w AI Overview obok KPMG. BoostNow.",
@@ -722,7 +925,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 11,
     "title": "Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]",
     "seoTitle": "Agencja SEO AI — SEO + GEO + AEO dla Polskich Firm",
     "meta_description": "Agencja SEO AI — SEO + GEO + AEO w jednym pakiecie. Case Caruma: cytowania AI obok KPMG w 90 dni. Bezpłatna analiza BoostNow.",
@@ -824,7 +1027,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 12,
     "title": "SEO dla Hoteli — Zbieraj Rezerwacje Bezpośrednie, Płać Mniej OTA",
     "seoTitle": "SEO dla Hotelu — Mniej Booking, Więcej Rezerwacji 2026",
     "meta_description": "SEO dla hotelu — zbieraj rezerwacje bezpośrednie, płać mniej Booking. Case SU-2: TOP 1 globalnie w 120 dni. Analiza BoostNow.",
@@ -896,7 +1099,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 13,
     "title": "SEO dla Sklepu Internetowego — Jak Sklep Trafia do TOP 1 Globalnie",
     "seoTitle": "SEO dla Sklepu Internetowego — TOP 1 w 120 Dni",
     "meta_description": "SEO dla sklepu internetowego. Case SU-2 Kiteboards — TOP 1 globalnie w 120 dni, 4x cytowania w Google AI Overview. Bezpłatna analiza BoostNow.",
@@ -997,7 +1200,7 @@
     }
   },
   {
-    "id": 12,
+    "id": 14,
     "title": "Pozycjonowanie Wizytówki Google — Jak Twoja Firma Trafia do Local Pack [2026]",
     "seoTitle": "Pozycjonowanie Wizytówki Google — Local Pack 2026",
     "meta_description": "Pozycjonowanie wizytówki Google — jak firma trafia do Local Pack. 46% kliknięć lokalnych zbiera top 3. Strategia BoostNow z case studies.",
@@ -1098,7 +1301,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 15,
     "title": "Pozycjonowanie Warszawa — Jak Firma z Warszawy Trafia do TOP Google",
     "seoTitle": "Pozycjonowanie Warszawa — Agencja SEO i GEO 2026",
     "meta_description": "Pozycjonowanie Warszawa — SEO + GEO + AEO dla firm warszawskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1158,7 +1361,7 @@
     }
   },
   {
-    "id": 14,
+    "id": 16,
     "title": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "seoTitle": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "meta_description": "AI SEO — czy zastępuje klasyczne SEO? 42% zapytań omija Twoją stronę. Case Caruma: cytowania AI obok KPMG w 90 dni.",
@@ -1260,7 +1463,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 17,
     "title": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "seoTitle": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "meta_description": "Co to jest SEO i ile klientów tracisz bez niego? Case Caruma — 151k wyświetleń w Google w 90 dni. Bezpłatna analiza SEO BoostNow.",
@@ -1362,7 +1565,110 @@
     }
   },
   {
-    "id": 16,
+    "id": 18,
+    "title": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO i AEO",
+    "seoTitle": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO",
+    "meta_description": "SEO 2026 — pełna mapa dyscypliny: techniczna, content, autorytet, GEO i AEO. Case Caruma: 90 dni, cytowania w AI Overview obok KPMG.",
+    "semantic_anchors": "seo",
+    "target_industry": "General",
+    "word_count": 1899,
+    "slug": "seo",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO i AEO",
+          "description": "SEO 2026 — pełna mapa dyscypliny: techniczna, content, autorytet, GEO i AEO. Case Caruma: 90 dni, cytowania w AI Overview obok KPMG.",
+          "datePublished": "2026-06-26",
+          "dateModified": "2026-06-26",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "SEO",
+              "GEO",
+              "AEO",
+              "Generative Engine Optimization",
+              "Local SEO",
+              "Technical SEO",
+              "E-E-A-T",
+              "Knowledge Graph"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/seo"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SEO (Search Engine Optimization) to dyscyplina optymalizacji widocznosci strony w wyszukiwarkach. W 2026 obejmuje cztery warstwy: techniczna, content, autorytet i AI (GEO + AEO). To architektura widocznosci marki, nie lista czynnosci."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy SEO jeszcze ma sens w 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, w nowej formie. Klasyczne SEO obsluguje 60% zapytan informacyjnych. SEO 2026 musi obejmowac GEO i AEO obslugujace pozostale 40% (AI Overview, ChatGPT, Perplexity, Gemini)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile czasu zajmuje pozycjonowanie SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Warstwa techniczna 4-12 tygodni. AI (GEO+AEO) 4-12 tygodni. Content 3-9 miesiecy. Autorytet 6-18 miesiecy. Pelne efekty SEO 6-12 miesiecy. Caruma osiagnela globalna widocznosc w 90 dni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje SEO miesiecznie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W Polsce 1 500-15 000 PLN miesiecznie zaleznie od branzy, miasta i zakresu. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge robic SEO sam?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie wymaga koordynacji czterech warstw, monitoringu narzedziami i znajomosci E-E-A-T, Schema, GEO. Blednie wdrozone SEO moze szkodzic."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
     "title": "SEO dla Prawnika — Widoczność z Poszanowaniem KEA i KRRP",
     "seoTitle": "SEO dla Prawnika — Kancelaria z Widocznością w Google 2026",
     "meta_description": "SEO dla prawnika i kancelarii — widoczność dla klientów szukających pomocy prawnej. Z poszanowaniem KEA i KRRP. Analiza BoostNow.",
@@ -1434,7 +1740,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 20,
     "title": "Tanie Pozycjonowanie — Co Znaczy Tanie i Co Naprawdę Się Opłaca [2026]",
     "seoTitle": "Tanie Pozycjonowanie — Kiedy Opłaca, Kiedy Pułapka 2026",
     "meta_description": "Tanie pozycjonowanie — co oznacza „tanie\" i co naprawdę się opłaca. Case Caruma: ROI w 90 dni. Analiza BoostNow.",
@@ -1534,7 +1840,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 21,
     "title": "Co To Jest GEO — Generative Engine Optimization po Polsku",
     "seoTitle": "Co To Jest GEO — Generative Engine Optimization 2026",
     "meta_description": "Co to jest GEO? Case Caruma — cytowania w Google AI Overview obok KPMG w 90 dni. Pełna definicja, różnice vs SEO i wdrożenie z BoostNow.",
@@ -1637,7 +1943,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 22,
     "title": "Pozycjonowanie Lokalne — Strategia dla Firm B2B i Lokalnych w Polsce [2026]",
     "seoTitle": "Pozycjonowanie Lokalne — GBP + Local Pack + AI Search 2026",
     "meta_description": "Pozycjonowanie lokalne 2026 — GBP + Local Pack + AI search dla firm B2B i usługowych. Case Caruma: 151k wyświetleń w 90 dni. BoostNow.",
@@ -1738,7 +2044,7 @@
     }
   },
   {
-    "id": 20,
+    "id": 23,
     "title": "Audyt SEO — Co Musi Zawierać, Żeby Faktycznie Pomóc Twojej Firmie",
     "seoTitle": "Audyt SEO — Co Musi Zawierać Żeby Faktycznie Pomóc",
     "meta_description": "Audyt SEO — czego wymagać od agencji? Case Caruma: audyt → 151k wyświetleń w 90 dni, cytowania w AI Overview obok KPMG.",
@@ -1839,7 +2145,109 @@
     }
   },
   {
-    "id": 21,
+    "id": 24,
+    "title": "Jak Założyć Sklep Internetowy w 2026 — Pełny Przewodnik dla Początkujących",
+    "seoTitle": "Jak Założyć Sklep Internetowy w 2026 — Przewodnik",
+    "meta_description": "Jak założyć sklep internetowy 2026 — 5 decyzji, platformy, koszty. Case SU-2 Kiteboards: TOP 1 globalnie w 120 dni. BoostNow.",
+    "semantic_anchors": "jak założyć sklep internetowy",
+    "target_industry": "General",
+    "word_count": 1814,
+    "slug": "jak-zalozyc-sklep-internetowy",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Jak Założyć Sklep Internetowy w 2026 — Pełny Przewodnik",
+          "description": "Jak założyć sklep internetowy 2026 — 5 decyzji, platformy, koszty. Case SU-2 Kiteboards: TOP 1 globalnie w 120 dni.",
+          "datePublished": "2026-06-26",
+          "dateModified": "2026-06-26",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "e-commerce SEO",
+              "Shopify",
+              "WooCommerce",
+              "PrestaShop",
+              "IdoSell",
+              "sklep internetowy",
+              "e-commerce GEO"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/jak-zalozyc-sklep-internetowy"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje zalozenie sklepu internetowego?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Minimum realne 15 000-25 000 PLN za sklep WooCommerce/Shopify z 50 produktami. Plus 24 000-60 000 PLN rocznie na pozycjonowanie SEO + GEO. Razem ok 40-85 tys PLN na pierwszy rok dla malego sklepu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ktora platforma jest najlepsza dla poczatkujacego?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Shopify (najszybsze wdrozenie) lub WooCommerce (najlepsze SEO, wymaga technikalia WordPress). PrestaShop dla budzetu, IdoSell dla polskich integracji ksiegowosci."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa zalozenie sklepu internetowego?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Shopify lub IdoSell 2-4 tygodnie do launchu. WooCommerce lub PrestaShop 4-12 tygodni. Plus 2-4 tygodnie launch SEO + GEO. SU-2 Kiteboards: launch + 120 dni do TOP 1 globalnie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge sam zrobic sklep internetowy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Shopify i IdoSell pozwalaja uruchomic sklep bez technikalia. Praktycznie konfiguracja sklepu to 20% sukcesu. 80% to fotografia, copywriting, SEO i strategia ruchu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy potrzebuje firmy, zeby zalozyc sklep internetowy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W Polsce sprzedaz regularna online wymaga zarejestrowania dzialalnosci (JDG lub spolka). Dla sklepu z produktami nowymi i regularna sprzedaza JDG to minimum."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 25,
     "title": "Pozycjonowanie Kraków — Niedoinwestowany Rynek SEO w Polsce",
     "seoTitle": "Pozycjonowanie Kraków — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie Kraków — SEO + GEO + AEO dla firm krakowskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1899,7 +2307,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 26,
     "title": "Pozycjonowanie Google — Jak Działa Algorytm i Co Decyduje o Pozycji [2026]",
     "seoTitle": "Pozycjonowanie Google — Sygnały Rankingowe 2026",
     "meta_description": "Pozycjonowanie Google — jak działa algorytm i co decyduje o pozycji w 2026. 200+ sygnałów rankingowych. Case Caruma: TOP 1-2 w 90 dni. BoostNow.",
@@ -2001,7 +2409,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 27,
     "title": "Pozycjonowanie w AI: Co Musi Wiedzieć Twoja Firma w 2026",
     "seoTitle": "Pozycjonowanie w AI — Czy ChatGPT Zna Twoją Firmę?",
     "meta_description": "Pozycjonowanie w AI — case Caruma: 151k wyświetleń w 90 dni, cytowania w Google AI Overview obok KPMG. Sprawdź widoczność Twojej firmy z BoostNow.",
@@ -2105,7 +2513,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 28,
     "title": "Pozycjonowanie Katowice — 2 Miliony Klientów, Niska Konkurencja",
     "seoTitle": "Pozycjonowanie Katowice — SEO + GEO Aglomeracja Śląska",
     "meta_description": "Pozycjonowanie Katowice — SEO + GEO dla aglomeracji śląskiej. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -2187,7 +2595,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 29,
     "title": "SEO pod AI Overviews — Jak Być Cytowanym przez Google AI [2026]",
     "seoTitle": "SEO pod Google AI Overviews — Przewodnik [2026]",
     "meta_description": "SEO pod AI Overviews — jak być cytowanym przez Google AI. Case Caruma: panel AI Overview obok KPMG w 90 dni. BoostNow.",
@@ -2288,7 +2696,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 30,
     "title": "AEO Co To Jest — Answer Engine Optimization Wyjaśnione",
     "seoTitle": "AEO Co To Jest — Answer Engine Optimization 2026",
     "meta_description": "AEO co to jest? Optymalizacja pod Google AI Overview i Featured Snippet. Case Caruma — cytowania obok KPMG i Komisji Europejskiej w 90 dni.",
