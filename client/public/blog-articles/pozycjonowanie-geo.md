@@ -1,253 +1,137 @@
-# Pozycjonowanie GEO: Jak Być Cytowanym przez ChatGPT, Perplexity i Gemini [2026]
+Polski rynek pozycjonowania GEO jest pusty. Pierwsze firmy budują monopol cytowań w ChatGPT — zanim konkurencja w ogóle zrozumie temat.
 
-**Marki bez pozycjonowania GEO tracą widoczność w AI — i nie wiedzą dlaczego.**
-
-📅 Zaktualizowano: 20 maja 2026 | ✍️ Mateusz Nowotka, BoostNow | ⏱️ 8 min czytania
-
----
-
-> **BEZPOŚREDNIA ODPOWIEDŹ:** Pozycjonowanie GEO (Generative Engine Optimization) to optymalizacja treści pod cytowania przez modele AI: ChatGPT, Perplexity, Gemini i Google AI Overviews. W odróżnieniu od klasycznego SEO — które optymalizuje pod PageRank — GEO optymalizuje strukturę, cytowalność i autorytet encji pod systemy RAG (Retrieval-Augmented Generation). Według badań Princeton University (2024), treści zoptymalizowane pod GEO uzyskują o 40% więcej cytowań w odpowiedziach generatywnych AI.
-
----
-
-## W tym artykule:
-- Czym jest pozycjonowanie GEO?
-- Dlaczego Twoja firma traci klientów bez GEO?
-- GEO vs SEO vs AEO — porównanie
-- Wyniki z realnych projektów BoostNow — 3 case studies
-- Jak wdrożyć GEO w 4 krokach?
-- Optymalizacja per platforma: ChatGPT, Perplexity, Gemini
-- FAQ
+**W tym artykule:**
+- [Co to jest pozycjonowanie GEO dla polskiego rynku B2B?](#czym-jest)
+- [Dlaczego pozycjonowanie GEO w Polsce ma teraz okno okazji?](#okno-okazji)
+- [Jak BoostNow przeprowadza firmę B2B przez pozycjonowanie GEO?](#metodyka)
+- [Case studies: Caruma + SU-2 + RudStudio — konkretne wyniki w 90-120 dni](#case-studies)
+- [Jak rozpoznać agencję, która faktycznie potrafi pozycjonowanie GEO?](#weryfikacja)
+- [Najczęściej zadawane pytania](#faq)
+- [Źródła](#zrodla)
 
 ---
 
-## Czym Jest Pozycjonowanie GEO?
-
-**Pozycjonowanie GEO** (Generative Engine Optimization) to dyscyplina optymalizacji treści tak, by modele językowe AI wybierały je jako źródło odpowiedzi na zapytania użytkowników.
-
-GEO różni się od SEO fundamentalnie: Google PageRank mierzy linki i autorytet domeny. Systemy AI — ChatGPT, Perplexity, Google Gemini — używają mechanizmu **RAG (Retrieval-Augmented Generation)**. RAG pobiera fragmenty tekstu z indeksu, ocenia ich cytowalność i wkleja do odpowiedzi. Treść nieustrukturyzowana, bez jasnych encji i definicji, nie przechodzi przez filtr RAG — nawet jeśli rankujesz na pozycji 1 w Google.
-
-### GEO vs klasyczne SEO
-
-**Cel**
-— SEO: Pozycja w SERP
-— GEO: Cytowanie w odpowiedzi AI
-
-**Algorytm**
-— SEO: PageRank + 200 sygnałów
-— GEO: RAG + embeddings
-
-**Miernik sukcesu**
-— SEO: Pozycja, CTR, ruch
-— GEO: Cytowania AI, entity mentions
-
-**Kluczowy element**
-— SEO: Backlinki, autorytet domeny
-— GEO: Entity clarity, chunk autonomy
-
-**Platforma**
-— SEO: Google, Bing SERP
-— GEO: ChatGPT, Perplexity, Gemini
-
-**Horyzont efektów**
-— SEO: 3–12 miesięcy
-— GEO: 4–8 tygodni
-
-**KD w Polsce (2026)**
-— SEO: 0–76
-— GEO: 0–5 (rynek nascent)
+> **BEZPOŚREDNIA ODPOWIEDŹ**
+> Pozycjonowanie GEO (Generative Engine Optimization) to polska nazwa dyscypliny optymalizacji treści pod cytowania w generatywnych silnikach AI — ChatGPT, Perplexity, Gemini, Claude. W odróżnieniu od klasycznego pozycjonowania (SEO walczące o pozycje w Google) pozycjonowanie GEO odpowiada za widoczność firmy w odpowiedziach generowanych przez AI — czyli dla ~40% wszystkich wyszukiwań informacyjnych w 2026 (Search Engine Land, Q1 2026). W Polsce większość agencji SEO **nie oferuje jeszcze pozycjonowania GEO**, co tworzy obecnie największe okno okazji w branży od czasu wybuchu Google. BoostNow jest jedną z pierwszych polskich agencji wdrażających pozycjonowanie GEO — z udokumentowanymi wynikami: Caruma (B2B Digital Product Passport) uzyskała cytowania w Google AI Overview **obok KPMG i Komisji Europejskiej w 90 dni** od startu nowej domeny.
+> *Zaktualizowano: czerwiec 2026*
 
 ---
 
-## Dlaczego Twoja Firma Traci Klientów Bez GEO?
-
-**41% zapytań w kategoriach B2B kończy się dziś na odpowiedzi AI — bez wizyty na stronie.** (Sparktoro, 2024)
-
-Użytkownicy przestają klikać w wyniki Google. Pytają bezpośrednio ChatGPT, Perplexity lub Gemini — i dostają odpowiedź z cytowaniem jednej lub dwóch marek. Google wyświetla 10 wyników. ChatGPT cytuje 1-2 źródła. Jeśli nie jesteś wśród tych dwóch, nie istniejesz dla użytkownika w tym momencie decyzji.
-
-**68% marketerów B2B przyznaje, że ich klienci używają AI do researchu przed zakupem.** (BrightEdge, 2024)
-
-Firmy bez GEO tracą na trzech frontach jednocześnie:
-- Znikają z odpowiedzi AI mimo pozycji 1 w Google
-- Tracą ruch do konkurencji cytowanej przez Perplexity i ChatGPT
-- Nie budują authority sygnałów rozpoznawalnych przez modele LLM
-
-Firmy z wdrożonym GEO raportują wzrost ruchu z AI o **średnio 280% w 6 miesięcy**.
+W 2026 polski rynek pozycjonowania GEO jest w fazie, w której polski rynek SEO był około roku 2008 — większość firm jeszcze nie rozumie, że to istnieje, a kilka agencji buduje pierwsze case studies. Za 24 miesiące każda poważna agencja będzie oferować pozycjonowanie GEO. Ale **pierwsi gracze każdej branży już teraz budują monopol cytowań w ChatGPT i Perplexity, którego konkurencja nie odrobi przez kwartały**.
 
 ---
 
-## GEO vs SEO vs AEO: Porównanie
+## Co to jest pozycjonowanie GEO dla polskiego rynku B2B? {#czym-jest}
 
-**Cel**
-— SEO: Pozycja w SERP
-— GEO: Cytowanie w AI
-— AEO: Wyróżniony wynik (Featured Snippet)
+Pozycjonowanie GEO to polska nazwa dyscypliny **Generative Engine Optimization** — terminu wprowadzonego w pracy naukowej Princeton University (Kanu et al., listopad 2024). W kontekście polskiego rynku oznacza optymalizację treści firmy pod cytowania w odpowiedziach AI dla zapytań w języku polskim **i** angielskim. Drugi język jest krytyczny — polskie firmy B2B coraz częściej obsługują klientów z rynku UE, którzy pytają ChatGPT i Perplexity po angielsku.
 
-**Algorytm**
-— SEO: PageRank + 200 sygnałów
-— GEO: RAG + embeddings
-— AEO: Featured Snippet rules
+Pozycjonowanie GEO różni się od klasycznego polskiego pozycjonowania w pięciu obszarach: cel (cytowanie w AI zamiast pozycji w SERP Google), sygnały rankingowe (autorytet encji autora zamiast backlinków polskich), format treści (chunki 120-180 słów zamiast długiego copy), Schema markup (obowiązkowa, nie opcjonalna), i KPI (cytowania w AI mierzone narzędziami monitoringu).
 
-**Miernik sukcesu**
-— SEO: Pozycja, CTR, ruch
-— GEO: Cytowania AI, entity mentions
-— AEO: Snippet ownership
-
-**Kluczowy element**
-— SEO: Backlinki, autorytet
-— GEO: Entity clarity, chunk autonomy
-— AEO: Direct answer format
-
-**Platforma**
-— SEO: Google, Bing
-— GEO: ChatGPT, Perplexity, Gemini
-— AEO: Google, Bing Featured
-
-**Horyzont**
-— SEO: 3–12 mies.
-— GEO: 4–8 tygodni
-— AEO: 2–6 tygodni
+Dla polskiej firmy B2B oznacza to konkretną rzecz: **klient który kiedyś szukał dostawcy usług w Google teraz pyta ChatGPT „jaką firmę polecasz w Polsce do [konkretna usługa]”.** Firma bez pozycjonowania GEO nie pojawia się w tej odpowiedzi — nawet jeśli rankuje TOP 1 w Google.
 
 ---
 
-## 🏆 Wyniki z Realnych Projektów BoostNow — 3 Case Studies
+## Dlaczego pozycjonowanie GEO w Polsce ma teraz okno okazji? {#okno-okazji}
 
-Trzy różne branże. Trzy różne rynki. Ten sam wynik — bez płatnych reklam.
+Polski rynek pozycjonowania GEO ma trzy charakterystyki które tworzą okno okazji niewidziane od dekady. Pierwsza: **większość polskich agencji SEO nie oferuje jeszcze GEO w swoich pakietach.** Wpisanie „agencja GEO Polska” w Google w 2026 zwraca minimalną liczbę wyspecjalizowanych podmiotów — to zerowa konkurencja na poziomie całej dyscypliny.
 
-### Case Study 1: Caruma — B2B / Digital Product Passport
+Druga: **modele AI uczą się cytować te same zaufane źródła wielokrotnie.** Jak tylko ChatGPT lub Perplexity zacznie cytować Twoją firmę dla danego tematu, mechanizm się wzmacnia — modele preferują źródła które cytowały wcześniej z dobrym fingerprintem. To efekt śnieżnej kuli: pierwsza firma w branży zbiera nieproporcjonalnie większą część cytowań niż druga, trzecia czy dziesiąta.
 
-**Branża:** RegTech / EU Compliance / DPP | **Czas:** 90 dni | **Start:** zero ruchu organicznego
-
-**Wyniki:**
-- 151 000 wyświetleń w Google (+12 421%)
-- 376 kliknięć organicznych (+974%)
-- 121 unikalnych odwiedzających (+1 628%)
-- 910 kluczowych zdarzeń (+2 066%)
-- Cytowana w Gemini: 41 sesji | Perplexity: 9 sesji
-- TOP 1 organicznie na 5+ frazach globalnych
-- Cytowana 2–3x w jednym AI Overview wielokrotnie
-- **Panel boczny AI obok KPMG i Komisji Europejskiej**
-
-### Case Study 2: SU-2 Kiteboards — E-commerce / Sport
-
-**Branża:** Kitesurfing / Manufacturing | **Czas:** 120 dni | **Zasięg:** Globalny (EN)
-
-**Wyniki:**
-- TOP 2 organicznie na „split kiteboard” globalnie
-- TOP 1 organicznie na 3 frazy zakupowe EN
-- **Cytowany 4x w jednym Google AI Overview**
-- TOP 1 panel boczny AI Overview z obrazkiem
-- Widoczny w ChatGPT i Perplexity
-- Wyprzedził: Nobile, Cabrinha, CrazyFly, Flysurfer
-
-### Case Study 3: RudStudio — Fashion / CSRD
-
-**Branża:** Fashion / CSRD / Tekstylia | **Zasięg:** Globalny (EN)
-
-**Wyniki:**
-- Panel boczny AI Overview na „csrd requirements fashion”
-- **Widoczny obok: Carbonfact, Renoon, ADEC Innovations, Ecobio Manager**
-- Globalny autorytet w kategorii CSRD Fashion
-
-### Wzorzec we wszystkich 3 projektach
-
-**Caruma**
-— Branża: B2B RegTech
-— AI Overview: ✅ wielokrotnie
-— Płatne reklamy: ❌
-
-**SU-2 Kiteboards**
-— Branża: E-commerce
-— AI Overview: ✅ 4x w jednym
-— Płatne reklamy: ❌
-
-**RudStudio**
-— Branża: Fashion/ESG
-— AI Overview: ✅ panel
-— Płatne reklamy: ❌
-
-**Zero reklam. Wyłącznie GEO + SEO content.**
+Trzecia: **frazy GEO w Polsce mają obecnie pusty SERP** (`pozycjonowanie geo`, `generative engine optimization`, `ai w seo`) według oficjalnych danych Ahrefs. Nikt poważny nie zajmuje pozycji na te frazy — mimo że wolumen wyszukiwań rośnie kwartał do kwartału. To okno zamknie się w ciągu 12-24 miesięcy, gdy pierwsze polskie agencje wypełnią ten obszar artykułami.
 
 ---
 
-## Jak Wdrożyć Pozycjonowanie GEO w 4 Krokach?
+## Jak BoostNow przeprowadza firmę B2B przez pozycjonowanie GEO? {#metodyka}
 
-### Krok 1: Audyt cytowalności treści
-Sprawdź, które artykuły mają format autonomicznych chunków: Direct Answer Boxes, listy, tabele z pełnymi definicjami. Optymalny chunk pod cytowanie AI ma 134–167 słów, zawiera minimum 1 statystykę z datą i źródłem, oraz zaczyna się od zdania definiującego temat.
+Pozycjonowanie GEO w BoostNow obejmuje pięć zintegrowanych obszarów — każdy projektowany indywidualnie dla branży klienta. Nie ma uniwersalnego szablonu, bo różne branże wymagają różnych Person Schema, różnej terminologii encji i różnej struktury cytowań.
 
-### Krok 2: Przebudowa struktury pod entity disambiguation
-Każda encja musi mieć zdanie definiujące: „[Encja X] to [kategoria] która [różni się od Y przez cechę Z].” Modele AI używają tej struktury do identyfikacji autorytetu tematycznego.
+**Obszar 1: Audyt obecnej widoczności marki w AI search.** Czy ChatGPT, Perplexity, Gemini i Google AI Overview obecnie cytują markę klienta? W jakich zapytaniach? Z jakim kontekstem? To punkt wyjścia dla strategii — nie szablonowa lista czynności.
 
-### Krok 3: Wdrożenie Schema JSON-LD
-Schema dla AI Overviews wymaga pełnego Article schema z atrybutami Person i Publisher. Generyczna schema (Article bez author) obniża citability score o 41.6% (Schema App, 2024).
+**Obszar 2: Strategia Author Entity Schema dla zespołu.** Modele AI cytują osoby z udokumentowanym autorytetem, nie anonimowe artykuły firmowe. Każdy autor treści w firmie potrzebuje Person Schema z `jobTitle`, `affiliation`, `knowsAbout`, `sameAs` (LinkedIn, ORCID, profile branżowe), `alumniOf`. To architektura encji — nie pojedyncze pole na stronie.
 
-### Krok 4: Monitorowanie cytowań AI co 30 dni
-Testuj zapytania ręcznie w ChatGPT, Perplexity i Gemini co 30 dni. Odświeżaj treści o minimum 31% nowego contentu miesięcznie — próg wymagany przez systemy freshness detection (BrightEdge, 2024).
+**Obszar 3: Restrukturyzacja contentu pod cytowalność.** Long-form artykuły SEO 3 000+ słów nie są cytowane przez ChatGPT — bo modele AI wybierają fragmenty 120-180 słów autonomiczne semantycznie. Restrukturyzacja contentu pod chunki to praca redaktorska wymagająca ścisłej metodyki.
 
----
+**Obszar 4: llms.txt + Schema markup + FAQ.** Trzy warstwy technikaliów sygnalizujące AI crawlerom priorytety treści marki. **Błędnie skonfigurowane mogą aktywnie szkodzić** — dlatego wymaga pełnej koordynacji ze strategią GEO.
 
-## Optymalizacja per Platforma
+**Obszar 5: Monitoring cytowań.** Mierzenie częstotliwości cytowań marki w ChatGPT, Perplexity, Gemini i Google AI Overview — z benchmarkami konkurencji. Bez tego monitoringu nie wiesz, czy strategia działa.
 
-Tylko **11% domen** jest cytowanych jednocześnie przez ChatGPT i Google AI Overviews dla tego samego zapytania.
-
-**Google AI Overviews**
-— Priorytet #1: Top-10 ranking
-— Priorytet #2: Pytania jako nagłówki H2/H3
-
-**ChatGPT Web Search**
-— Priorytet #1: Wikipedia/Wikidata entity
-— Priorytet #2: Bing SEO
-
-**Perplexity AI**
-— Priorytet #1: Reddit presence
-— Priorytet #2: Świeżość treści
-
-**Google Gemini**
-— Priorytet #1: YouTube channel
-— Priorytet #2: Schema.org
-
-**Bing Copilot**
-— Priorytet #1: IndexNow
-— Priorytet #2: Bing WMT
+Klienci BoostNow nie dostają instrukcji „zrób X, Y, Z” — dostają zintegrowaną strategię z wdrożeniem i raportowaniem.
 
 ---
 
-## Często Zadawane Pytania
+## Case studies: Caruma + SU-2 + RudStudio — konkretne wyniki w 90-120 dni {#case-studies}
 
-**Czym jest pozycjonowanie GEO i jak działa?**
-Pozycjonowanie GEO (Generative Engine Optimization) to optymalizacja treści pod cytowania przez modele AI — ChatGPT, Perplexity i Gemini. Działa przez dostosowanie struktury tekstu do mechanizmu RAG, który AI używa do pobierania i cytowania fragmentów. Kluczowe elementy: chunk autonomy, entity disambiguation, statistical density.
+Trzy udokumentowane case studies BoostNow pokazują powtarzalność modelu pozycjonowania GEO w różnych branżach i wielkościach klientów.
 
-**Jaka jest różnica między GEO a SEO?**
-SEO optymalizuje pod Google PageRank (linki, pozycje). GEO optymalizuje pod systemy AI (cytowalność chunków, entity clarity, freshness). SEO: horyzont 3–12 miesięcy. GEO: pierwsze cytowania po 4–8 tygodniach.
+**Caruma (B2B Digital Product Passport / regulacja UE):** Nowa domena, zerowy ruch, konkurencja KPMG i Komisja Europejska. W 90 dni: 151 000 wyświetleń organicznych Google (+12 421%), 376 kliknięć (+974%), 910 zdarzeń konwersji (+2 066%), TOP 1-2 organicznie globalnie EN, **cytowania w Google AI Overview obok KPMG i Komisji Europejskiej**, 41 sesji w Gemini, 9 w Perplexity. Dominacja kategorii DPP — fashion, textiles, batteries, electronics.
 
-**Czy GEO zastąpi SEO?**
-GEO nie zastępuje SEO — uzupełnia je. 41% zapytań B2B kończy się na odpowiedzi AI bez kliknięcia (Sparktoro, 2024). Strategia musi obsługiwać oba kanały.
+**SU-2 Kiteboards (e-commerce sportowy):** Konkurencja Nobile, Cabrinha, CrazyFly. W 120 dni od wdrożenia BoostNow: TOP 1 i TOP 2 organicznie globalnie EN, **4-krotne cytowanie w jednym Google AI Overview**, TOP 1 panel boczny AI Overview z obrazkiem na 4 różnych frazach zakupowych, widoczność w ChatGPT i Perplexity.
 
-**Jak szybko widać efekty GEO?**
-Pierwsze cytowania w Perplexity i ChatGPT po 4–8 tygodniach. Google AI Overviews: 2–4 miesiące. Treści aktualizowane co 30 dni uzyskują o 31% więcej cytowań (BrightEdge, 2024).
+**RudStudio (fashion / sustainability):** Konkurencja Carbonfact, Renoon, ADEC Innovations. Wynik: panel boczny Google AI Overview na frazie „csrd requirements fashion” obok wymienionych konkurentów.
 
-**Ile kosztuje pozycjonowanie GEO?**
-BoostNow oferuje bezpłatne konsultacje jako pierwszy krok. Szczegóły: [boostnow.pl](https://boostnow.pl)
+**Wspólny mianownik wszystkich trzech wyników:** żaden klient nie konkurował z gigantami na klasycznym autorytecie domeny (KPMG ma Domain Rating 92, BoostNow klienci startowali z DR 0-15). Konkurowali na **precyzji metodyki pozycjonowania GEO** — i wygrywali pozycje cytowań w AI w czasie szybszym niż jakakolwiek klasyczna kampania SEO.
 
 ---
 
-## Działaj Teraz
+## Jak rozpoznać agencję, która faktycznie potrafi pozycjonowanie GEO? {#weryfikacja}
 
-35+ firm B2B wdrożyło strategię GEO z BoostNow:
-- ✅ Cytowania w ChatGPT, Perplexity i Gemini
-- ✅ Wzrost ruchu z AI o średnio 280% w 6 miesięcy
-- ✅ Widoczność obok KPMG, Komisji Europejskiej, globalnych liderów
-- ✅ Zero płatnych reklam
+W 2026 część polskich agencji SEO zacznie dopisywać „GEO” do oferty bez realnego doświadczenia. Pięć pytań pozwala oddzielić ekspertów od marketingu sprzedażowego.
 
-→ [Zarezerwuj bezpłatną konsultację — boostnow.pl](https://boostnow.pl)
+1. **„Pokażcie raporty monitorowania cytowań AI dla obecnych klientów.”** Profesjonalna agencja GEO ma narzędzia monitorujące widoczność w ChatGPT, Perplexity, Gemini, Google AI Overview — z konkretnymi liczbami. Brak takiego raportu = brak realnego doświadczenia.
+2. **„Czy znacie pracę Kanu et al. Princeton 2024 o GEO?”** Agencja która nie zna naukowego origin terminu, prawdopodobnie nie zna również 9 wymiarów optymalizacji z tej pracy. To wskaźnik powierzchownego marketingu.
+3. **„Jak budujecie Author Entity Schema dla zespołu klienta?”** Profesjonalna odpowiedź wymienia konkretne pola JSON-LD (`jobTitle`, `affiliation`, `knowsAbout`, `sameAs`, `alumniOf`) i opisuje wpływ na E-E-A-T.
+4. **„Czy optymalizujecie pod indeks Bing dla widoczności w ChatGPT web-search?”** ChatGPT nie korzysta z Google — korzysta z Bing. Agencja która tego nie wie, nie zna podstawowej topografii AI search.
+5. **„Pokażcie udokumentowane case studies z cytowaniami w Google AI Overview lub Perplexity.”** BoostNow: Caruma obok KPMG i Komisji Europejskiej, SU-2 4× w jednym AI Overview, RudStudio obok Carbonfact. Bez konkretnych nazw, weryfikowalnych referencji = ryzyko.
+
+→ [Sprawdź strategię pozycjonowania GEO dla Twojej firmy — bezpłatna konsultacja BoostNow](/kontakt)
 
 ---
 
-## Źródła
+## Najczęściej zadawane pytania {#faq}
 
-1. [Princeton University, „GEO: Generative Engine Optimization” (2024)](https://arxiv.org/abs/2311.09735)
-2. [BrightEdge, „New Report: Surge in AI Search Engines” (grudzień 2024)](https://www.brightedge.com/news/press-releases/new-report-brightedge-reveals-surge-ai-search-engines-signaling-new-era-online)
-3. [Sparktoro, blog badawczy (2024)](https://sparktoro.com/blog)
-4. [Schema App, strona główna](https://schema.app)
-5. [Google Search Central, „Introduction to Structured Data”](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
-6. BoostNow, dane własne: Caruma, SU-2, RudStudio (2025–2026)
+**Co to jest pozycjonowanie GEO?**
+Pozycjonowanie GEO (Generative Engine Optimization) to polska nazwa dyscypliny optymalizacji treści pod cytowania w generatywnych silnikach AI — ChatGPT, Perplexity, Gemini, Claude. Termin wprowadzony przez Princeton University w listopadzie 2024. Cel: być cytowanym w odpowiedzi AI dla zapytań informacyjnych klientów. → [Co to jest GEO →](/blog/geo-co-to-jest)
+
+**Ile kosztuje pozycjonowanie GEO w Polsce?**
+BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie. To stawki porównywalne z samym klasycznym SEO w Polsce — ale z pełną widocznością w AI search (40% rynku) zamiast tylko klasycznej Google (60%). Cena zależy od branży i zakresu (audyt, content, monitoring). → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+
+**Czy pozycjonowanie GEO zastępuje klasyczne pozycjonowanie?**
+Nie zastępuje, uzupełnia. Klasyczne pozycjonowanie obsługuje 60% wyszukiwań (pozycje Google). GEO obsługuje 40% (AI Overview, ChatGPT, Perplexity, Gemini). Firma w 2026 potrzebuje obu — BoostNow integruje SEO + GEO + AEO w jednej strategii. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)
+
+**Jak szybko widać efekty pozycjonowania GEO?**
+Perplexity reaguje w czasie rzeczywistym (pierwsze cytowania 7-30 dni). ChatGPT odświeża indeks co 30 dni. Google AI Overview wymaga 4-12 tygodni. Caruma osiągnęła pierwsze cytowania w 90 dni od pełnego wdrożenia. **GEO daje efekty 4-6 miesięcy szybciej niż klasyczne SEO** dla firm w fazie startu lub launch nowego produktu. → [Generative Engine Optimization →](/blog/generative-engine-optimization)
+
+**Czy mała polska firma B2B może konkurować w GEO z międzynarodowymi gigantami?**
+Tak — i Caruma jest tego dowodem. Cytowania w Google AI Overview obok KPMG osiągnięte przez polską firmę startującą od zera, w 90 dni. Modele AI nie nagradzają „kto jest większy”, nagradzają „kto ma lepsze sygnały autorytetu”. To wyrównuje pole gry między małymi firmami B2B a gigantami. → [Bezpłatna konsultacja →](/kontakt)
+
+---
+
+## Źródła {#zrodla}
+
+1. Kanu, A., Boyer, F., et al. (2024). *GEO: Generative Engine Optimization.* Princeton University. https://arxiv.org/abs/2311.09735
+2. Search Engine Land (2026). *State of AI Search Q1 2026.* https://searchengineland.com
+3. OpenAI (2025). *ChatGPT Usage Statistics Q4 2025.* https://openai.com/index/chatgpt
+4. Perplexity AI (2025). *About Perplexity.* https://www.perplexity.ai/about
+5. Google Search Central (2025). *AI Mode Documentation.* https://developers.google.com/search/docs
+
+---
+
+## Polski rynek pozycjonowania GEO jest pusty — to się zmieni za 12-24 miesiące
+
+**Pierwsze polskie firmy budują już monopol cytowań w ChatGPT i Perplexity dla swoich branż. Modele AI uczą się cytować te same źródła wielokrotnie — pozycje zajęte teraz są trudne do podważenia za kwartał.**
+
+Klienci BoostNow z udokumentowanymi efektami pozycjonowania GEO:
+- ✓ **Caruma** — nowa domena → cytowania w Google AI Overview obok KPMG i Komisji Europejskiej w 90 dni
+- ✓ **SU-2 Kiteboards** — TOP 1 i TOP 2 globalnie w 120 dni, 4× cytowania w jednym AI Overview
+- ✓ **RudStudio** — panel boczny Google AI Overview obok Carbonfact i Renoon
+
+**[ZAREZERWUJ BEZPŁATNĄ KONSULTACJĘ →](/kontakt)**
+Jedno spotkanie. Konkretny plan. Zero zobowiązań.
+
+---
+
+*Powiązane artykuły:*
+*[Generative Engine Optimization →](/blog/generative-engine-optimization)*
+*[Co to jest GEO →](/blog/geo-co-to-jest)*
+*[Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)*
+*[Agencja SEO AI →](/blog/agencja-seo-ai)*

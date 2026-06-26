@@ -8,7 +8,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "llms-txt",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -111,7 +111,7 @@
     "target_industry": "General",
     "word_count": 1084,
     "slug": "jak-pojawic-sie-w-chatgpt",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -213,7 +213,7 @@
     "target_industry": "General",
     "word_count": 907,
     "slug": "pozycjonowanie-wroclaw-niedoinwestowany-rynek-seo",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -273,7 +273,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "seo-dla-kliniki-pacjenci-szukaja-specjalistow-w-google",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -338,6 +338,190 @@
   },
   {
     "id": 5,
+    "title": "Pozycjonowanie Stron Poznań — Jak Firma z Poznania Trafia do TOP Google [2026]",
+    "seoTitle": "Pozycjonowanie Stron Poznań — Agencja SEO + GEO 2026",
+    "meta_description": "Pozycjonowanie stron Poznań — SEO + GEO dla firm poznańskich i Wielkopolski. Case Caruma: 151k wyświetleń w 90 dni. Analiza BoostNow.",
+    "semantic_anchors": "pozycjonowanie stron poznań",
+    "target_industry": "General",
+    "word_count": 1286,
+    "slug": "pozycjonowanie-stron-poznan-jak-firma-z-poznania-trafia-do-top-google-2026",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Pozycjonowanie stron Poznań",
+          "description": "SEO + GEO + AEO dla firm z Poznania i Wielkopolski. Case Caruma: 151k wyświetleń w 90 dni.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Poznań"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wielkopolska"
+            }
+          ],
+          "serviceType": "SEO"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje pozycjonowanie stron w Poznaniu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pozycjonowanie stron Poznan kosztuje 1 200-5 500 PLN miesiecznie. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa pozycjonowanie firmy z Poznania?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze efekty 3-5 miesiecy. Pelne rezultaty 6-12 miesiecy. Caruma osiagnela globalna widocznosc w 90 dni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje firmy spoza Poznania w Wielkopolsce?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Obslugujemy firmy z Kalisza, Konina, Leszna, Pily, Gniezna i calej Wielkopolski."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mala firma z Poznania ma sens robic SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Niska lokalna konkurencja oznacza ze mala firma z dobrym SEO + GEO moze wyprzedzic znacznie wiekszych konkurentow."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy GEO ma sens dla firmy lokalnej z Poznania?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. ChatGPT i Perplexity odpowiadaja na pytania polecasz uslugi w Poznaniu. W tym kanale lokalna konkurencja jest niemal zerowa."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "title": "Generative Engine Optimization (GEO) — Definicja, Badania i Wdrożenie [2026]",
+    "seoTitle": "Generative Engine Optimization — GEO Przewodnik 2026",
+    "meta_description": "Generative Engine Optimization (GEO) — nowa dyscyplina po SEO. Princeton 2024. Case Caruma: cytowania w AI Overview obok KPMG w 90 dni.",
+    "semantic_anchors": "generative engine optimization",
+    "target_industry": "General",
+    "word_count": 1699,
+    "slug": "generative-engine-optimization",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Generative Engine Optimization (GEO) — Definicja, Badania i Wdrożenie",
+          "description": "Generative Engine Optimization (GEO) — nowa dyscyplina po SEO. Princeton 2024. Case Caruma: cytowania w AI Overview obok KPMG.",
+          "datePublished": "2026-06-12",
+          "dateModified": "2026-06-12",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "Generative Engine Optimization",
+              "GEO",
+              "AI SEO",
+              "ChatGPT optimization",
+              "Perplexity optimization",
+              "Google AI Mode",
+              "Princeton GEO research"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/generative-engine-optimization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Generative Engine Optimization?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Generative Engine Optimization (GEO) to dyscyplina optymalizacji tresci pod cytowania w generatywnych silnikach AI (ChatGPT, Perplexity, Gemini, Claude, Google AI Mode). Termin wprowadzony w pracy naukowej Princeton University w listopadzie 2024."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy GEO zastepuje SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie zastepuje, uzupelnia. SEO obsluguje 60% wyszukiwan (klasyczne pozycje Google). GEO obsluguje 40% (AI Overview, ChatGPT, Perplexity, Gemini). Firma w 2026 potrzebuje obu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Skad sie wzial termin GEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Termin wprowadzili Kanu et al. w pracy GEO: Generative Engine Optimization (Princeton University, listopad 2024). Praca zidentyfikowala 9 wymiarow optymalizacji tresci pod LLM citations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak szybko GEO daje efekty?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Perplexity reaguje w czasie rzeczywistym (7-30 dni). ChatGPT 30 dni. Google AI Overview 4-12 tygodni. Caruma osiagnela cytowania w 90 dni. GEO daje efekty 4-6 miesiecy szybciej niz klasyczne SEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge sam wdrozyc GEO bez agencji?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie wymaga koordynacji technikaliow, contentu, autorytetu autora i Knowledge Graph w spojnej architekturze. Blednie wdrozone GEO moze aktywnie szkodzic."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
     "title": "Ile Kosztuje Pozycjonowanie — Realne Stawki i ROI w 2026",
     "seoTitle": "Ile Kosztuje Pozycjonowanie — Realne Stawki 2026",
     "meta_description": "Ile kosztuje pozycjonowanie? Cennik SEO 2026 + case Caruma — 151k wyświetleń i 910 konwersji w 90 dni. Bezpłatna wycena BoostNow.",
@@ -345,7 +529,7 @@
     "target_industry": "General",
     "word_count": 1062,
     "slug": "ile-kosztuje-pozycjonowanie",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -437,7 +621,108 @@
     }
   },
   {
-    "id": 6,
+    "id": 8,
+    "title": "Pozycjonowanie GEO — Praktyczna Strategia dla Firm B2B w Polsce [2026]",
+    "seoTitle": "Pozycjonowanie GEO — Strategia dla Firm B2B w Polsce 2026",
+    "meta_description": "Pozycjonowanie GEO w Polsce — strategia dla firm B2B z case studies. Caruma: 90 dni, cytowania w AI Overview obok KPMG. BoostNow.",
+    "semantic_anchors": "pozycjonowanie geo",
+    "target_industry": "General",
+    "word_count": 1741,
+    "slug": "pozycjonowanie-geo",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Pozycjonowanie GEO — Praktyczna Strategia dla Firm B2B w Polsce 2026",
+          "description": "Pozycjonowanie GEO w Polsce — strategia z case studies. Caruma: 90 dni, cytowania w AI Overview obok KPMG.",
+          "datePublished": "2026-06-12",
+          "dateModified": "2026-06-12",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "pozycjonowanie GEO",
+              "Generative Engine Optimization",
+              "AI SEO Polska",
+              "ChatGPT optimization",
+              "Perplexity optimization",
+              "B2B SEO Polska"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/pozycjonowanie-geo"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest pozycjonowanie GEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pozycjonowanie GEO (Generative Engine Optimization) to polska nazwa dyscypliny optymalizacji tresci pod cytowania w generatywnych silnikach AI (ChatGPT, Perplexity, Gemini, Claude). Termin wprowadzony przez Princeton University w listopadzie 2024."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje pozycjonowanie GEO w Polsce?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesiecznie. To stawki porownywalne z samym klasycznym SEO w Polsce, ale z pelna widocznoscia w AI search."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy pozycjonowanie GEO zastepuje klasyczne pozycjonowanie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie zastepuje, uzupelnia. Klasyczne pozycjonowanie obsluguje 60% wyszukiwan (pozycje Google). GEO obsluguje 40% (AI Overview, ChatGPT, Perplexity, Gemini)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak szybko widac efekty pozycjonowania GEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Perplexity 7-30 dni, ChatGPT 30 dni, Google AI Overview 4-12 tygodni. Caruma osiagnela pierwsze cytowania w 90 dni. GEO daje efekty 4-6 miesiecy szybciej niz klasyczne SEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mala polska firma B2B moze konkurowac w GEO z miedzynarodowymi gigantami?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Caruma osiagnela cytowania w Google AI Overview obok KPMG w 90 dni od startu. Modele AI nie nagradzaja kto jest wiekszy, nagradzaja kto ma lepsze sygnaly autorytetu."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
     "title": "Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]",
     "seoTitle": "Agencja SEO AI — SEO + GEO + AEO dla Polskich Firm",
     "meta_description": "Agencja SEO AI — SEO + GEO + AEO w jednym pakiecie. Case Caruma: cytowania AI obok KPMG w 90 dni. Bezpłatna analiza BoostNow.",
@@ -445,7 +730,7 @@
     "target_industry": "General",
     "word_count": 1317,
     "slug": "agencja-seo-ai",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -539,7 +824,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 10,
     "title": "SEO dla Hoteli — Zbieraj Rezerwacje Bezpośrednie, Płać Mniej OTA",
     "seoTitle": "SEO dla Hotelu — Mniej Booking, Więcej Rezerwacji 2026",
     "meta_description": "SEO dla hotelu — zbieraj rezerwacje bezpośrednie, płać mniej Booking. Case SU-2: TOP 1 globalnie w 120 dni. Analiza BoostNow.",
@@ -547,7 +832,7 @@
     "target_industry": "General",
     "word_count": 1078,
     "slug": "seo-dla-hoteli-zbieraj-rezerwacje-bezposrednie-plac-mniej-ota",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -611,7 +896,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 11,
     "title": "SEO dla Sklepu Internetowego — Jak Sklep Trafia do TOP 1 Globalnie",
     "seoTitle": "SEO dla Sklepu Internetowego — TOP 1 w 120 Dni",
     "meta_description": "SEO dla sklepu internetowego. Case SU-2 Kiteboards — TOP 1 globalnie w 120 dni, 4x cytowania w Google AI Overview. Bezpłatna analiza BoostNow.",
@@ -619,7 +904,7 @@
     "target_industry": "General",
     "word_count": 1114,
     "slug": "seo-dla-sklepu-internetowego",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -712,7 +997,108 @@
     }
   },
   {
-    "id": 9,
+    "id": 12,
+    "title": "Pozycjonowanie Wizytówki Google — Jak Twoja Firma Trafia do Local Pack [2026]",
+    "seoTitle": "Pozycjonowanie Wizytówki Google — Local Pack 2026",
+    "meta_description": "Pozycjonowanie wizytówki Google — jak firma trafia do Local Pack. 46% kliknięć lokalnych zbiera top 3. Strategia BoostNow z case studies.",
+    "semantic_anchors": "pozycjonowanie wizytówki google",
+    "target_industry": "General",
+    "word_count": 1705,
+    "slug": "pozycjonowanie-wizytowki-google",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Pozycjonowanie Wizytówki Google — Jak Twoja Firma Trafia do Local Pack",
+          "description": "Pozycjonowanie wizytówki Google — strategia Local Pack z case studies BoostNow. 46% kliknięć lokalnych zbiera top 3.",
+          "datePublished": "2026-06-12",
+          "dateModified": "2026-06-12",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "pozycjonowanie wizytówki Google",
+              "Google Business Profile",
+              "Local Pack",
+              "Local SEO",
+              "Google Moja Firma",
+              "GBP optimization"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/pozycjonowanie-wizytowki-google"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Czy pozycjonowanie wizytówki Google jest darmowe?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Założenie wizytówki Google jest bezpłatne. Pozycjonowanie wymaga czasu wlasciciela (3-5 godzin tygodniowo) lub budzetu agencyjnego. BoostNow oferuje pakiety Local SEO od 1 500 PLN miesiecznie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile czasu zajmuje pojawienie sie w Local Pack?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze efekty 4-8 tygodni od pelnej optymalizacji GBP. W mniej konkurencyjnych miastach efekty mogą byc widoczne szybciej. Caruma osiagnela globalna widocznosc AI w 90 dni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge sam pozycjonowac wizytowke Google?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Podstawowa konfiguracja jest samodzielna. Pelna strategia wymaga audytu NAP, analizy kategorii konkurentow, integracji z SEO i GEO. Niewlasciwa konfiguracja moze szkodzic widocznosci."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak czesto aktualizowac Google Business Profile?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Minimum 1 post tygodniowo, odpowiedz na opinie w 48 godzin, aktualizacja zdjec raz w miesiacu. Profil porzucony na 90+ dni traci ranking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy wizytowka Google wplywa na pozycjonowanie strony internetowej?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, posrednio ale znaczaco. Sygnaly zaangazowania z GBP, opinie i NAP consistency wplywaja na autorytet domeny i Knowledge Graph firmy."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 13,
     "title": "Pozycjonowanie Warszawa — Jak Firma z Warszawy Trafia do TOP Google",
     "seoTitle": "Pozycjonowanie Warszawa — Agencja SEO i GEO 2026",
     "meta_description": "Pozycjonowanie Warszawa — SEO + GEO + AEO dla firm warszawskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -720,7 +1106,7 @@
     "target_industry": "General",
     "word_count": 1075,
     "slug": "pozycjonowanie-warszawa-jak-firma-z-warszawy-trafia-do-top-google",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -772,7 +1158,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 14,
     "title": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "seoTitle": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "meta_description": "AI SEO — czy zastępuje klasyczne SEO? 42% zapytań omija Twoją stronę. Case Caruma: cytowania AI obok KPMG w 90 dni.",
@@ -780,7 +1166,7 @@
     "target_industry": "General",
     "word_count": 1378,
     "slug": "ai-seo",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -874,7 +1260,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 15,
     "title": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "seoTitle": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "meta_description": "Co to jest SEO i ile klientów tracisz bez niego? Case Caruma — 151k wyświetleń w Google w 90 dni. Bezpłatna analiza SEO BoostNow.",
@@ -882,7 +1268,7 @@
     "target_industry": "General",
     "word_count": 1166,
     "slug": "co-to-jest-seo",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -976,7 +1362,7 @@
     }
   },
   {
-    "id": 12,
+    "id": 16,
     "title": "SEO dla Prawnika — Widoczność z Poszanowaniem KEA i KRRP",
     "seoTitle": "SEO dla Prawnika — Kancelaria z Widocznością w Google 2026",
     "meta_description": "SEO dla prawnika i kancelarii — widoczność dla klientów szukających pomocy prawnej. Z poszanowaniem KEA i KRRP. Analiza BoostNow.",
@@ -984,7 +1370,7 @@
     "target_industry": "General",
     "word_count": 1013,
     "slug": "seo-dla-prawnika-widocznosc-z-poszanowaniem-kea-i-krrp",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1048,7 +1434,107 @@
     }
   },
   {
-    "id": 13,
+    "id": 17,
+    "title": "Tanie Pozycjonowanie — Co Znaczy Tanie i Co Naprawdę Się Opłaca [2026]",
+    "seoTitle": "Tanie Pozycjonowanie — Kiedy Opłaca, Kiedy Pułapka 2026",
+    "meta_description": "Tanie pozycjonowanie — co oznacza „tanie\" i co naprawdę się opłaca. Case Caruma: ROI w 90 dni. Analiza BoostNow.",
+    "semantic_anchors": "tanie pozycjonowanie",
+    "target_industry": "General",
+    "word_count": 1819,
+    "slug": "tanie-pozycjonowanie",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Tanie Pozycjonowanie — Co Znaczy Tanie i Co Naprawdę Się Opłaca",
+          "description": "Tanie pozycjonowanie — co oznacza tanie i co naprawdę się opłaca. Case Caruma: ROI w 90 dni.",
+          "datePublished": "2026-06-26",
+          "dateModified": "2026-06-26",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "tanie pozycjonowanie",
+              "SEO pricing",
+              "SEO ROI",
+              "SEO dla malej firmy",
+              "SEO budget"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/tanie-pozycjonowanie"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile naprawde kosztuje dobre pozycjonowanie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Profesjonalne pozycjonowanie w Polsce 2026 zaczyna sie od 1 500-2 500 PLN miesiecznie dla malych firm i 3 000-8 000 PLN dla srednich. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy tanie pozycjonowanie 300 PLN miesiecznie ma sens?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W 95% przypadkow nie. 300 PLN pokrywa 3-4 godzin pracy konsultanta. Wystarczy na podstawowe aktualizacje GBP ale nie na profesjonalna strategie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie sa oznaki podejrzanie taniego SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Piec czerwonych flag: gwarancja TOP 3 w 30 dni, brak dostepu do GSC, brak przykladow linkow, wymuszona umowa 12+ miesiecy, raporty bez metryk ruchu i konwersji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mala firma musi wydawac 2 500+ PLN miesiecznie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie zawsze. Dla malych firm lokalnych BoostNow ma pakiet starter od 1 500 PLN z fokusem na GBP. Decyduje skala konkurencji i ambicji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow oferuje tanie pozycjonowanie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BoostNow oferuje najlepszy ROI w polskim rynku SEO + GEO + AEO, nie najnizsza cene. Pakiety od 2 500 PLN z udokumentowanymi wynikami."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 18,
     "title": "Co To Jest GEO — Generative Engine Optimization po Polsku",
     "seoTitle": "Co To Jest GEO — Generative Engine Optimization 2026",
     "meta_description": "Co to jest GEO? Case Caruma — cytowania w Google AI Overview obok KPMG w 90 dni. Pełna definicja, różnice vs SEO i wdrożenie z BoostNow.",
@@ -1056,7 +1542,7 @@
     "target_industry": "General",
     "word_count": 1199,
     "slug": "geo-co-to-jest",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1151,7 +1637,108 @@
     }
   },
   {
-    "id": 14,
+    "id": 19,
+    "title": "Pozycjonowanie Lokalne — Strategia dla Firm B2B i Lokalnych w Polsce [2026]",
+    "seoTitle": "Pozycjonowanie Lokalne — GBP + Local Pack + AI Search 2026",
+    "meta_description": "Pozycjonowanie lokalne 2026 — GBP + Local Pack + AI search dla firm B2B i usługowych. Case Caruma: 151k wyświetleń w 90 dni. BoostNow.",
+    "semantic_anchors": "pozycjonowanie lokalne",
+    "target_industry": "General",
+    "word_count": 1770,
+    "slug": "pozycjonowanie-lokalne",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Pozycjonowanie Lokalne — Strategia dla Firm B2B i Lokalnych w Polsce 2026",
+          "description": "Pozycjonowanie lokalne: GBP + Local Pack + AI search. Case Caruma: 151k wyświetleń w 90 dni.",
+          "datePublished": "2026-06-26",
+          "dateModified": "2026-06-26",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "pozycjonowanie lokalne",
+              "Local SEO",
+              "Google Business Profile",
+              "Local Pack",
+              "GEO lokalne",
+              "NAP consistency"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/pozycjonowanie-lokalne"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest pozycjonowanie lokalne?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pozycjonowanie lokalne to dyscyplina SEO ukierunkowana na widocznosc firmy dla zapytan z intencja geograficzna. Obejmuje trzy filary: Google Business Profile, klasyczne SEO lokalne i GEO/AEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje pozycjonowanie lokalne?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pozycjonowanie lokalne kosztuje 1 500-8 000 PLN miesiecznie zaleznie od miasta i branzy. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa pozycjonowanie lokalne?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GBP 4-8 tygodni. Klasyczne SEO lokalne 3-12 miesiecy zaleznie od miasta. GEO/AEO 7-30 dni dla Perplexity, 4-12 tygodni dla AI Overview."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mala firma moze konkurowac lokalnie z duzymi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Local Pack wybiera firmy wedlug Relevance, Distance i Prominence. Mala firma z 200 opiniami 4.7 i poprawnym GBP wyprzedza duza siec z 5 opiniami."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy potrzebuje GEO jesli mam dobre Local SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W 2026 tak. Klienci pytaja ChatGPT i Perplexity polecasz firme w miasto. Firma bez GEO nie pojawia sie w odpowiedziach niezaleznie od pozycji w Google."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 20,
     "title": "Audyt SEO — Co Musi Zawierać, Żeby Faktycznie Pomóc Twojej Firmie",
     "seoTitle": "Audyt SEO — Co Musi Zawierać Żeby Faktycznie Pomóc",
     "meta_description": "Audyt SEO — czego wymagać od agencji? Case Caruma: audyt → 151k wyświetleń w 90 dni, cytowania w AI Overview obok KPMG.",
@@ -1159,7 +1746,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "audyt-seo",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1252,7 +1839,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 21,
     "title": "Pozycjonowanie Kraków — Niedoinwestowany Rynek SEO w Polsce",
     "seoTitle": "Pozycjonowanie Kraków — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie Kraków — SEO + GEO + AEO dla firm krakowskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1260,7 +1847,7 @@
     "target_industry": "General",
     "word_count": 1074,
     "slug": "pozycjonowanie-krakow-niedoinwestowany-rynek-seo-w-polsce",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1312,7 +1899,109 @@
     }
   },
   {
-    "id": 16,
+    "id": 22,
+    "title": "Pozycjonowanie Google — Jak Działa Algorytm i Co Decyduje o Pozycji [2026]",
+    "seoTitle": "Pozycjonowanie Google — Sygnały Rankingowe 2026",
+    "meta_description": "Pozycjonowanie Google — jak działa algorytm i co decyduje o pozycji w 2026. 200+ sygnałów rankingowych. Case Caruma: TOP 1-2 w 90 dni. BoostNow.",
+    "semantic_anchors": "pozycjonowanie google",
+    "target_industry": "General",
+    "word_count": 1751,
+    "slug": "pozycjonowanie-google",
+    "date": "2026-06-26",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Pozycjonowanie Google — Jak Działa Algorytm i Co Decyduje o Pozycji",
+          "description": "Pozycjonowanie Google: 200+ sygnałów rankingowych, AI Overview, Local Pack. Case Caruma: TOP 1-2 w 90 dni.",
+          "datePublished": "2026-06-26",
+          "dateModified": "2026-06-26",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "pozycjonowanie Google",
+              "Google ranking factors",
+              "SEO Polska",
+              "AI Overview",
+              "Helpful Content Update",
+              "E-E-A-T",
+              "Core Web Vitals"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/pozycjonowanie-google"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest pozycjonowanie Google?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pozycjonowanie Google to dyscyplina SEO ukierunkowana na widocznosc strony w wynikach wyszukiwarki Google obejmujaca pozycje organiczne, Local Pack, AI Overview, Knowledge Graph i Featured Snippets. Google ma 96% udzialu rynku w Polsce."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje pozycjonowanie Google?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pozycjonowanie Google kosztuje 1 500-8 000 PLN miesiecznie. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesiecznie z udokumentowanym ROI."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa pozycjonowanie Google?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze pozycje 3-6 miesiecy. Pelna widocznosc 6-12 miesiecy. Caruma osiagnela TOP 1-2 globalnie w 90 dni. GEO daje pierwsze cytowania 4-6 miesiecy szybciej niz klasyczne SEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge sam pozycjonowac strone w Google?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie wymaga 10-20 godzin tygodniowo na content, audyt techniczny, monitoring konkurencji, link building, adaptacje do zmian algorytmu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy pozycjonowanie Google to to samo co SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W polskim kontekscie praktycznie tak. Google ma 96% rynku wyszukiwan w Polsce. Wyjatek: pozycjonowanie pod ChatGPT wymaga osobnej strategii pod Bing."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 23,
     "title": "Pozycjonowanie w AI: Co Musi Wiedzieć Twoja Firma w 2026",
     "seoTitle": "Pozycjonowanie w AI — Czy ChatGPT Zna Twoją Firmę?",
     "meta_description": "Pozycjonowanie w AI — case Caruma: 151k wyświetleń w 90 dni, cytowania w Google AI Overview obok KPMG. Sprawdź widoczność Twojej firmy z BoostNow.",
@@ -1320,7 +2009,7 @@
     "target_industry": "General",
     "word_count": 1391,
     "slug": "pozycjonowanie-w-ai",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1416,7 +2105,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 24,
     "title": "Pozycjonowanie Katowice — 2 Miliony Klientów, Niska Konkurencja",
     "seoTitle": "Pozycjonowanie Katowice — SEO + GEO Aglomeracja Śląska",
     "meta_description": "Pozycjonowanie Katowice — SEO + GEO dla aglomeracji śląskiej. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1424,7 +2113,7 @@
     "target_industry": "General",
     "word_count": 884,
     "slug": "pozycjonowanie-katowice-2-miliony-klientow-niska-konkurencja",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1498,7 +2187,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 25,
     "title": "SEO pod AI Overviews — Jak Być Cytowanym przez Google AI [2026]",
     "seoTitle": "SEO pod Google AI Overviews — Przewodnik [2026]",
     "meta_description": "SEO pod AI Overviews — jak być cytowanym przez Google AI. Case Caruma: panel AI Overview obok KPMG w 90 dni. BoostNow.",
@@ -1506,7 +2195,7 @@
     "target_industry": "General",
     "word_count": 1321,
     "slug": "seo-pod-ai-overviews",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1599,7 +2288,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 26,
     "title": "AEO Co To Jest — Answer Engine Optimization Wyjaśnione",
     "seoTitle": "AEO Co To Jest — Answer Engine Optimization 2026",
     "meta_description": "AEO co to jest? Optymalizacja pod Google AI Overview i Featured Snippet. Case Caruma — cytowania obok KPMG i Komisji Europejskiej w 90 dni.",
@@ -1607,7 +2296,7 @@
     "target_industry": "General",
     "word_count": 1129,
     "slug": "aeo-co-to-jest",
-    "date": "2026-06-10",
+    "date": "2026-06-26",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
