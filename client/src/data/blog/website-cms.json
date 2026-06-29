@@ -8,14 +8,14 @@
         "description": "Pojęcia AI wyjaśnione prosto.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Słownik AI | BoostNow",
         "description": "Pojęcia AI wyjaśnione prosto.",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -68,14 +68,14 @@
         "description": "Sprawdź ile tracisz bez automatyzacji.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Kalkulator Strat | BoostNow",
         "description": "Sprawdź ile tracisz bez automatyzacji.",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -128,14 +128,14 @@
         "description": "Skontaktuj się z nami.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Kontakt | BoostNow",
         "description": "Skontaktuj się z nami.",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -195,7 +195,7 @@
           "name": "Mateusz Nowotka",
           "bio": "Founder & CEO BoostNow | Specjalista SEO, GEO i AEO | 4 lata doświadczenia w marketingu cyfrowym"
         },
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
@@ -382,12 +382,12 @@
       "seo": {
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -411,14 +411,14 @@
         "description": "Automatyzacja i AI dla Twojego sklepu.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "AIO dla e-commerce | BoostNow",
         "description": "Automatyzacja i AI dla Twojego sklepu.",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -467,12 +467,12 @@
       "seo": {
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -524,14 +524,14 @@
         "description": "Wiedza o AI i automatyzacji.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Blog | BoostNow",
         "description": "Wiedza o AI i automatyzacji.",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -591,14 +591,14 @@
           "name": "Mateusz",
           "bio": "Ekspert SEO/GEO z wieloletnim doświadczeniem."
         },
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "headline": "BoostNow - Elite SEO & GEO Agency",
         "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "Mateusz"
@@ -784,14 +784,14 @@
         "description": "Poznaj zespół BoostNow i naszą misję.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-06-26"
+        "lastUpdated": "2026-06-29"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "O nas | BoostNow",
         "description": "Poznaj zespół BoostNow i naszą misję.",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-29",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
