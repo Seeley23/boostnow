@@ -8,7 +8,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "llms-txt",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -111,7 +111,7 @@
     "target_industry": "General",
     "word_count": 1084,
     "slug": "jak-pojawic-sie-w-chatgpt",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -213,7 +213,7 @@
     "target_industry": "General",
     "word_count": 907,
     "slug": "pozycjonowanie-wroclaw-niedoinwestowany-rynek-seo",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -273,7 +273,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "seo-dla-kliniki-pacjenci-szukaja-specjalistow-w-google",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -345,7 +345,7 @@
     "target_industry": "General",
     "word_count": 1286,
     "slug": "pozycjonowanie-stron-poznan-jak-firma-z-poznania-trafia-do-top-google-2026",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -427,7 +427,7 @@
     "target_industry": "General",
     "word_count": 1729,
     "slug": "optymalizacja-seo",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -522,6 +522,106 @@
   },
   {
     "id": 7,
+    "title": "Agencja SEO Barczewo — Pięć Kryteriów Wyboru Wykonawcy Pozycjonowania [2026]",
+    "seoTitle": "Agencja SEO Barczewo — 5 Kryteriów Wyboru 2026",
+    "meta_description": "Agencja SEO Barczewo — pięć kryteriów wyboru wykonawcy 2026. Case studies BoostNow z konkretnymi liczbami. AI Search ready.",
+    "semantic_anchors": "agencja seo barczewo pozycjonowanie",
+    "target_industry": "General",
+    "word_count": 1831,
+    "slug": "agencja-seo-barczewo-pozycjonowanie",
+    "date": "2026-06-30",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Agencja SEO Barczewo — Pięć Kryteriów Wyboru Wykonawcy 2026",
+          "description": "Jak wybrać agencję SEO dla firmy z Barczewa. 5 kryteriów + case studies BoostNow z konkretnymi liczbami.",
+          "datePublished": "2026-06-29",
+          "dateModified": "2026-06-29",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "agencja SEO Barczewo",
+              "pozycjonowanie Barczewo",
+              "Local SEO Warmia",
+              "wybór agencji SEO",
+              "GEO"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/agencja-seo-barczewo-pozycjonowanie"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jaka jest najlepsza agencja SEO w Barczewie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Najlepsza agencja SEO dla firmy z Barczewa to ta, ktora spelnia 5 kryteriow: znajomosc hiperlokalnej Warmii, wdrozenie SEO + GEO od dnia 1, udokumentowane case studies, brak dlugich umow, pelny dostep do Google Search Console + GA4."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje pozycjonowanie strony firmy z Barczewa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malej firmy uslugowej 800-1 500 PLN miesiecznie. Dla firm z multi-location 1 500-3 000 PLN. Stawki nizsze niz w Olsztynie ze wzgledu na konkurencje niemal zerowa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa pozycjonowanie firmy z Barczewa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla fraz hiperlokalnych 2-4 tygodnie do TOP 1. Dla fraz olsztynskich 4-8 miesiecy. Cytowania w ChatGPT i Perplexity 30-60 dni. Pelna widocznosc dla 20-50 fraz 3-6 miesiecy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge zatrudnic freelancera SEO z Barczewa zamiast agencji?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Freelancer moze wykonac czesc dzialan SEO, ale rzadko spelnia kryterium GEO + AEO oraz multi-location strategy. Wybor freelancera moze byc sensowny dla typowo lokalnego pozycjonowania."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez sasiednie miejscowosci gminy Barczewo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Obslugujemy firmy z Barczewa, Wipsowa, Klebarka, Lomny, Bartazkowa oraz sasiednich gmin Biskupiec, Jeziorany, Olsztyn."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
     "title": "Generative Engine Optimization (GEO) — Definicja, Badania i Wdrożenie [2026]",
     "seoTitle": "Generative Engine Optimization — GEO Przewodnik 2026",
     "meta_description": "Generative Engine Optimization (GEO) — nowa dyscyplina po SEO. Princeton 2024. Case Caruma: cytowania w AI Overview obok KPMG w 90 dni.",
@@ -529,7 +629,7 @@
     "target_industry": "General",
     "word_count": 1699,
     "slug": "generative-engine-optimization",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -623,7 +723,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Ile Kosztuje Strona Internetowa w 2026? Pełny Cennik + Ukryty Koszt",
     "seoTitle": "Ile Kosztuje Strona Internetowa 2026? Pełny Cennik",
     "meta_description": "Ile kosztuje strona internetowa 2026 — pełny cennik landing, WordPress, e-commerce. Ukryty koszt strony bez pozycjonowania. BoostNow.",
@@ -631,7 +731,7 @@
     "target_industry": "General",
     "word_count": 1800,
     "slug": "ile-kosztuje-strona-internetowa",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -724,7 +824,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Ile Kosztuje Pozycjonowanie — Realne Stawki i ROI w 2026",
     "seoTitle": "Ile Kosztuje Pozycjonowanie — Realne Stawki 2026",
     "meta_description": "Ile kosztuje pozycjonowanie? Cennik SEO 2026 + case Caruma — 151k wyświetleń i 910 konwersji w 90 dni. Bezpłatna wycena BoostNow.",
@@ -732,7 +832,7 @@
     "target_industry": "General",
     "word_count": 1062,
     "slug": "ile-kosztuje-pozycjonowanie",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -824,7 +924,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Pozycjonowanie GEO — Praktyczna Strategia dla Firm B2B w Polsce [2026]",
     "seoTitle": "Pozycjonowanie GEO — Strategia dla Firm B2B w Polsce 2026",
     "meta_description": "Pozycjonowanie GEO w Polsce — strategia dla firm B2B z case studies. Caruma: 90 dni, cytowania w AI Overview obok KPMG. BoostNow.",
@@ -832,7 +932,7 @@
     "target_industry": "General",
     "word_count": 1741,
     "slug": "pozycjonowanie-geo",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -925,7 +1025,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]",
     "seoTitle": "Agencja SEO AI — SEO + GEO + AEO dla Polskich Firm",
     "meta_description": "Agencja SEO AI — SEO + GEO + AEO w jednym pakiecie. Case Caruma: cytowania AI obok KPMG w 90 dni. Bezpłatna analiza BoostNow.",
@@ -933,7 +1033,7 @@
     "target_industry": "General",
     "word_count": 1317,
     "slug": "agencja-seo-ai",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1027,7 +1127,89 @@
     }
   },
   {
-    "id": 12,
+    "id": 13,
+    "title": "Pozycjonowanie Stron WWW Dywity — SEO dla Istniejących Stron Firm Satelitarnych [2026]",
+    "seoTitle": "Pozycjonowanie Stron WWW Dywity — SEO 2026",
+    "meta_description": "Pozycjonowanie stron www Dywity 2026 — SEO dla istniejących stron firm satelitarnych. Pakiety od 1 000 PLN. BoostNow.",
+    "semantic_anchors": "pozycjonowanie stron www dywity",
+    "target_industry": "General",
+    "word_count": 1561,
+    "slug": "pozycjonowanie-stron-www-dywity-seo-dla-istniejacych-stron-firm-satelitarnych-2026",
+    "date": "2026-06-30",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Pozycjonowanie stron www Dywity",
+          "description": "Optymalizacja istniejacych stron firm z Dywit pod widocznosc w Google i AI search. Pakiety od 1 000 PLN.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Dywity"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Warmia-Mazury"
+            }
+          ],
+          "serviceType": "Local SEO"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje pozycjonowanie istniejacej strony www w Dywitach?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malej firmy uslugowej 1 000-2 000 PLN miesiecznie. Dla firm z multi-location 2 000-3 000 PLN. Plus opcjonalny audyt zaawansowany 1 500-2 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moja stara strona z 2018 roku nadaje sie do pozycjonowania?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W wiekszosci przypadkow tak. Strona z 2018-2023 zwykle ma dzialajacy fundament, wymaga aktualizacji Schema, Core Web Vitals i GEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa pozycjonowanie istniejacej strony z Dywit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze efekty 2-4 tygodnie. Pierwsze TOP 1 dla fraz lokalnych 4-8 tygodni. Pelna widocznosc dla 20-50 fraz 3-6 miesiecy. Cytowania w AI 30-60 dni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge wypowiedziec umowe jesli nie bede widzial efektow?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BoostNow nie wiaze klientow dlugimi umowami. Standardowo umowa 6-miesieczna z mozliwoscia wypowiedzenia bez kar po 3 miesiacach."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez firmy z sasiednich miejscowosci?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Obslugujemy firmy z Dywit, Sprecowa, Bukwaldu, Brusow oraz sasiednich gmin Jonkowo, Gietrzwald, Olsztyn."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 14,
     "title": "SEO dla Hoteli — Zbieraj Rezerwacje Bezpośrednie, Płać Mniej OTA",
     "seoTitle": "SEO dla Hotelu — Mniej Booking, Więcej Rezerwacji 2026",
     "meta_description": "SEO dla hotelu — zbieraj rezerwacje bezpośrednie, płać mniej Booking. Case SU-2: TOP 1 globalnie w 120 dni. Analiza BoostNow.",
@@ -1035,7 +1217,7 @@
     "target_industry": "General",
     "word_count": 1078,
     "slug": "seo-dla-hoteli-zbieraj-rezerwacje-bezposrednie-plac-mniej-ota",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1099,7 +1281,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 15,
     "title": "SEO dla Sklepu Internetowego — Jak Sklep Trafia do TOP 1 Globalnie",
     "seoTitle": "SEO dla Sklepu Internetowego — TOP 1 w 120 Dni",
     "meta_description": "SEO dla sklepu internetowego. Case SU-2 Kiteboards — TOP 1 globalnie w 120 dni, 4x cytowania w Google AI Overview. Bezpłatna analiza BoostNow.",
@@ -1107,7 +1289,7 @@
     "target_industry": "General",
     "word_count": 1114,
     "slug": "seo-dla-sklepu-internetowego",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1200,7 +1382,7 @@
     }
   },
   {
-    "id": 14,
+    "id": 16,
     "title": "Pozycjonowanie Wizytówki Google — Jak Twoja Firma Trafia do Local Pack [2026]",
     "seoTitle": "Pozycjonowanie Wizytówki Google — Local Pack 2026",
     "meta_description": "Pozycjonowanie wizytówki Google — jak firma trafia do Local Pack. 46% kliknięć lokalnych zbiera top 3. Strategia BoostNow z case studies.",
@@ -1208,7 +1390,7 @@
     "target_industry": "General",
     "word_count": 1705,
     "slug": "pozycjonowanie-wizytowki-google",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1301,7 +1483,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 17,
     "title": "Pozycjonowanie Warszawa — Jak Firma z Warszawy Trafia do TOP Google",
     "seoTitle": "Pozycjonowanie Warszawa — Agencja SEO i GEO 2026",
     "meta_description": "Pozycjonowanie Warszawa — SEO + GEO + AEO dla firm warszawskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1309,7 +1491,7 @@
     "target_industry": "General",
     "word_count": 1075,
     "slug": "pozycjonowanie-warszawa-jak-firma-z-warszawy-trafia-do-top-google",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1361,7 +1543,89 @@
     }
   },
   {
-    "id": 16,
+    "id": 18,
+    "title": "Tworzenie Stron Internetowych Barczewo — Strony dla Firm Lokalnych [2026]",
+    "seoTitle": "Tworzenie Stron Internetowych Barczewo — Pakiety 2026",
+    "meta_description": "Tworzenie stron internetowych Barczewo 2026 — budowa strony dla firmy z gminy z SEO + GEO od dnia 1. Pakiety od 4 500 PLN. BoostNow.",
+    "semantic_anchors": "tworzenie stron internetowych barczewo",
+    "target_industry": "General",
+    "word_count": 1694,
+    "slug": "tworzenie-stron-internetowych-barczewo-strony-dla-firm-lokalnych-2026",
+    "date": "2026-06-30",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Tworzenie stron internetowych Barczewo",
+          "description": "Profesjonalne projekty stron www dla firm z gminy Barczewo z fundamentem SEO + GEO od dnia 1.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Barczewo"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Warmia-Mazury"
+            }
+          ],
+          "serviceType": "Web Design"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje strona internetowa dla firmy z Barczewa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malej firmy uslugowej 4 500-12 000 PLN za pelna strone z SEO + GEO od dnia 1. Dla agroturystyki 9 000-18 000 PLN. Sklep lokalny 12 000-25 000 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa tworzenie strony www dla firmy z Barczewa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Typowa strona firmowa z multi-location 8-10 tygodni. Strona agroturystyki 10-14 tygodni. Sklep e-commerce 12-18 tygodni. Plus 2-4 tygodnie launch SEO + GEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge zrobic strone sam Wix WordPress?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie strona DIY czesto nie spelnia podstaw SEO. Roznica miedzy zbudowalem sam a zbudowala profesjonalna agencja widoczna w analityce po 6 miesiacach jako brak ruchu organicznego."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy strona dla agroturystyki nad Wadagiem rozni sie od strony dla firmy uslugowej?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, w czterech wymiarach: galeria obiektowa, system rezerwacji (Booking, Airbnb), sezonowy content, specyficzna strategia GEO turystyczna."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez okoliczne miejscowosci gminy Barczewo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Projektujemy strony dla firm z Barczewa, Wipsowa, Klebarka, Lomny, Bartazkowa, Mokin oraz sasiednich gmin Biskupiec, Jeziorany, Jonkowo, Olsztyn."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
     "title": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "seoTitle": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "meta_description": "AI SEO — czy zastępuje klasyczne SEO? 42% zapytań omija Twoją stronę. Case Caruma: cytowania AI obok KPMG w 90 dni.",
@@ -1369,7 +1633,7 @@
     "target_industry": "General",
     "word_count": 1378,
     "slug": "ai-seo",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1463,7 +1727,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 20,
     "title": "Marketing Internetowy dla Firm w Dobrym Mieście — Strategia 2026",
     "seoTitle": "Marketing Internetowy Dobre Miasto — Strategia 2026",
     "meta_description": "Marketing internetowy Dobre Miasto 2026 — strategia dla firm z zabytkowej gminy warmińskiej. Pakiety od 900 PLN. BoostNow.",
@@ -1471,7 +1735,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "marketing-internetowy-dla-firm-w-dobrym-miescie-strategia-2026",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1545,7 +1809,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 21,
     "title": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "seoTitle": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "meta_description": "Co to jest SEO i ile klientów tracisz bez niego? Case Caruma — 151k wyświetleń w Google w 90 dni. Bezpłatna analiza SEO BoostNow.",
@@ -1553,7 +1817,7 @@
     "target_industry": "General",
     "word_count": 1166,
     "slug": "co-to-jest-seo",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1647,7 +1911,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 22,
     "title": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO i AEO",
     "seoTitle": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO",
     "meta_description": "SEO 2026 — pełna mapa dyscypliny: techniczna, content, autorytet, GEO i AEO. Case Caruma: 90 dni, cytowania w AI Overview obok KPMG.",
@@ -1655,7 +1919,7 @@
     "target_industry": "General",
     "word_count": 1899,
     "slug": "seo",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1750,7 +2014,7 @@
     }
   },
   {
-    "id": 20,
+    "id": 23,
     "title": "SEO dla Prawnika — Widoczność z Poszanowaniem KEA i KRRP",
     "seoTitle": "SEO dla Prawnika — Kancelaria z Widocznością w Google 2026",
     "meta_description": "SEO dla prawnika i kancelarii — widoczność dla klientów szukających pomocy prawnej. Z poszanowaniem KEA i KRRP. Analiza BoostNow.",
@@ -1758,7 +2022,7 @@
     "target_industry": "General",
     "word_count": 1013,
     "slug": "seo-dla-prawnika-widocznosc-z-poszanowaniem-kea-i-krrp",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1822,7 +2086,7 @@
     }
   },
   {
-    "id": 21,
+    "id": 24,
     "title": "Tanie Pozycjonowanie — Co Znaczy Tanie i Co Naprawdę Się Opłaca [2026]",
     "seoTitle": "Tanie Pozycjonowanie — Kiedy Opłaca, Kiedy Pułapka 2026",
     "meta_description": "Tanie pozycjonowanie — co oznacza „tanie\" i co naprawdę się opłaca. Case Caruma: ROI w 90 dni. Analiza BoostNow.",
@@ -1830,7 +2094,7 @@
     "target_industry": "General",
     "word_count": 1819,
     "slug": "tanie-pozycjonowanie",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1922,7 +2186,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 25,
     "title": "Co To Jest GEO — Generative Engine Optimization po Polsku",
     "seoTitle": "Co To Jest GEO — Generative Engine Optimization 2026",
     "meta_description": "Co to jest GEO? Case Caruma — cytowania w Google AI Overview obok KPMG w 90 dni. Pełna definicja, różnice vs SEO i wdrożenie z BoostNow.",
@@ -1930,7 +2194,7 @@
     "target_industry": "General",
     "word_count": 1199,
     "slug": "geo-co-to-jest",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2025,7 +2289,107 @@
     }
   },
   {
-    "id": 23,
+    "id": 26,
+    "title": "Kto Robi Dobre Strony Internetowe w Dywitach? Przewodnik Wyboru Wykonawcy [2026]",
+    "seoTitle": "Kto Robi Dobre Strony Internetowe w Dywitach? 2026",
+    "meta_description": "Kto robi dobre strony internetowe w Dywitach? Przewodnik wyboru wykonawcy 2026. Pięć kryteriów + case studies BoostNow.",
+    "semantic_anchors": "kto robi dobre strony internetowe w dywitach",
+    "target_industry": "General",
+    "word_count": 1814,
+    "slug": "kto-robi-dobre-strony-internetowe-w-dywitach",
+    "date": "2026-06-30",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Kto Robi Dobre Strony Internetowe w Dywitach? Przewodnik Wyboru 2026",
+          "description": "Pięć kryteriów wyboru wykonawcy strony www w Dywitach. Case studies BoostNow z konkretnymi liczbami.",
+          "datePublished": "2026-06-29",
+          "dateModified": "2026-06-29",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "strony internetowe Dywity",
+              "projektowanie stron www",
+              "agencja web dev Olsztyn",
+              "wybór wykonawcy strony",
+              "Local SEO Warmia"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/kto-robi-dobre-strony-internetowe-w-dywitach"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Kto robi najlepsze strony internetowe w Dywitach?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Najlepsze strony projektuja wykonawcy spelniajacy 5 kryteriow: znajomosc multi-location strategy, wdrozenie SEO + GEO od dnia 1, udokumentowane case studies, brak dlugich umow, pelny dostep do Google Search Console + GA4."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje dobra strona internetowa w Dywitach?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malej firmy uslugowej 4 500-12 000 PLN za pelna strone z SEO + GEO od dnia 1. Dla agroturystyki 9 000-18 000 PLN. Strony za 2 000 PLN wymagaja przebudowy po roku."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge zatrudnic freelancera z Dywit zamiast agencji?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Freelancer moze wykonac sam projekt graficzny i kod, ale rzadko spelnia kryterium multi-location i GEO. Strona od freelancera czesto wymaga przeprojektowania po roku."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez okoliczne miejscowosci?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Obslugujemy firmy z Dywit, Sprecowa, Bukwaldu, Brusow, Gradek, Fraczek oraz sasiednich gmin Jonkowo, Gietrzwald, Olsztyn."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy potrzebuje strony jesli mam profil Google Business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GBP obsluguje czesc widocznosci lokalnej. Strona internetowa obsluguje SEO organiczne i GEO (cytowania w ChatGPT, Perplexity). Razem buduja pelna widocznosc."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 27,
     "title": "Pozycjonowanie Stron Stawiguda — Strategia SEO dla Firm z Gminy [2026]",
     "seoTitle": "Pozycjonowanie Stron Stawiguda — SEO Lokalne 2026",
     "meta_description": "Pozycjonowanie stron Stawiguda 2026 — SEO dla firm z rosnącej gminy pod Olsztynem. Zerowa konkurencja, TOP 1 w 2-4 tygodnie. BoostNow.",
@@ -2033,7 +2397,7 @@
     "target_industry": "General",
     "word_count": 1425,
     "slug": "pozycjonowanie-stron-stawiguda-strategia-seo-dla-firm-z-gminy-2026",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2107,7 +2471,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 28,
     "title": "Pozycjonowanie Lokalne — Strategia dla Firm B2B i Lokalnych w Polsce [2026]",
     "seoTitle": "Pozycjonowanie Lokalne — GBP + Local Pack + AI Search 2026",
     "meta_description": "Pozycjonowanie lokalne 2026 — GBP + Local Pack + AI search dla firm B2B i usługowych. Case Caruma: 151k wyświetleń w 90 dni. BoostNow.",
@@ -2115,7 +2479,7 @@
     "target_industry": "General",
     "word_count": 1770,
     "slug": "pozycjonowanie-lokalne",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2208,7 +2572,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 29,
     "title": "Audyt SEO — Co Musi Zawierać, Żeby Faktycznie Pomóc Twojej Firmie",
     "seoTitle": "Audyt SEO — Co Musi Zawierać Żeby Faktycznie Pomóc",
     "meta_description": "Audyt SEO — czego wymagać od agencji? Case Caruma: audyt → 151k wyświetleń w 90 dni, cytowania w AI Overview obok KPMG.",
@@ -2216,7 +2580,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "audyt-seo",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2309,7 +2673,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 30,
     "title": "Jak Założyć Sklep Internetowy w 2026 — Pełny Przewodnik dla Początkujących",
     "seoTitle": "Jak Założyć Sklep Internetowy w 2026 — Przewodnik",
     "meta_description": "Jak założyć sklep internetowy 2026 — 5 decyzji, platformy, koszty. Case SU-2 Kiteboards: TOP 1 globalnie w 120 dni. BoostNow.",
@@ -2317,7 +2681,7 @@
     "target_industry": "General",
     "word_count": 1814,
     "slug": "jak-zalozyc-sklep-internetowy",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2411,7 +2775,7 @@
     }
   },
   {
-    "id": 27,
+    "id": 31,
     "title": "Pozycjonowanie Kraków — Niedoinwestowany Rynek SEO w Polsce",
     "seoTitle": "Pozycjonowanie Kraków — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie Kraków — SEO + GEO + AEO dla firm krakowskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -2419,7 +2783,7 @@
     "target_industry": "General",
     "word_count": 1074,
     "slug": "pozycjonowanie-krakow-niedoinwestowany-rynek-seo-w-polsce",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2471,7 +2835,7 @@
     }
   },
   {
-    "id": 28,
+    "id": 32,
     "title": "SEO dla Firm Barczewo — Strategia Pozycjonowania Małych Firm [2026]",
     "seoTitle": "SEO dla Firm Barczewo — Pozycjonowanie 2026",
     "meta_description": "SEO dla firm Barczewo 2026 — strategia dla małych firm z gminy warmińsko-mazurskiej. Zerowa konkurencja, TOP 1 w 2-4 tygodnie. BoostNow.",
@@ -2479,7 +2843,7 @@
     "target_industry": "General",
     "word_count": 1504,
     "slug": "seo-dla-firm-barczewo-strategia-pozycjonowania-malych-firm-2026",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2553,7 +2917,7 @@
     }
   },
   {
-    "id": 29,
+    "id": 33,
     "title": "Marketing Internetowy Dywity — Strategia dla Firm Satelitarnych Olsztyna [2026]",
     "seoTitle": "Marketing Internetowy Dywity — Strategia 2026",
     "meta_description": "Marketing internetowy Dywity 2026 — strategia dla firm satelitarnych Olsztyna. Zerowa konkurencja lokalna, szybki TOP 1. BoostNow.",
@@ -2561,7 +2925,7 @@
     "target_industry": "General",
     "word_count": 1449,
     "slug": "marketing-internetowy-dywity-strategia-dla-firm-satelitarnych-olsztyna-2026",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2639,7 +3003,7 @@
     }
   },
   {
-    "id": 30,
+    "id": 34,
     "title": "Pozycjonowanie Google — Jak Działa Algorytm i Co Decyduje o Pozycji [2026]",
     "seoTitle": "Pozycjonowanie Google — Sygnały Rankingowe 2026",
     "meta_description": "Pozycjonowanie Google — jak działa algorytm i co decyduje o pozycji w 2026. 200+ sygnałów rankingowych. Case Caruma: TOP 1-2 w 90 dni. BoostNow.",
@@ -2647,7 +3011,7 @@
     "target_industry": "General",
     "word_count": 1751,
     "slug": "pozycjonowanie-google",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2741,7 +3105,7 @@
     }
   },
   {
-    "id": 31,
+    "id": 35,
     "title": "Projektowanie Stron WWW Stawiguda — Strony dla Firm Lokalnych [2026]",
     "seoTitle": "Projektowanie Stron WWW Stawiguda — Pakiety 2026",
     "meta_description": "Projektowanie stron www Stawiguda 2026 — strona dla firmy z gminy z SEO od dnia 1. Pakiety od 4 500 PLN. BoostNow.",
@@ -2749,7 +3113,7 @@
     "target_industry": "General",
     "word_count": 1615,
     "slug": "projektowanie-stron-www-stawiguda-strony-dla-firm-lokalnych-2026",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2823,7 +3187,7 @@
     }
   },
   {
-    "id": 32,
+    "id": 36,
     "title": "Pozycjonowanie w AI: Co Musi Wiedzieć Twoja Firma w 2026",
     "seoTitle": "Pozycjonowanie w AI — Czy ChatGPT Zna Twoją Firmę?",
     "meta_description": "Pozycjonowanie w AI — case Caruma: 151k wyświetleń w 90 dni, cytowania w Google AI Overview obok KPMG. Sprawdź widoczność Twojej firmy z BoostNow.",
@@ -2831,7 +3195,7 @@
     "target_industry": "General",
     "word_count": 1391,
     "slug": "pozycjonowanie-w-ai",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2927,7 +3291,7 @@
     }
   },
   {
-    "id": 33,
+    "id": 37,
     "title": "Pozycjonowanie Katowice — 2 Miliony Klientów, Niska Konkurencja",
     "seoTitle": "Pozycjonowanie Katowice — SEO + GEO Aglomeracja Śląska",
     "meta_description": "Pozycjonowanie Katowice — SEO + GEO dla aglomeracji śląskiej. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -2935,7 +3299,7 @@
     "target_industry": "General",
     "word_count": 884,
     "slug": "pozycjonowanie-katowice-2-miliony-klientow-niska-konkurencja",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3009,7 +3373,7 @@
     }
   },
   {
-    "id": 34,
+    "id": 38,
     "title": "Marketing dla Małych Firm Olsztynek — Strategia 2026 dla Historycznej Gminy",
     "seoTitle": "Marketing dla Małych Firm Olsztynek — Strategia 2026",
     "meta_description": "Marketing dla małych firm Olsztynek 2026 — strategia dla gminy historycznej i bramy autostrady A7. Pakiety od 900 PLN. BoostNow.",
@@ -3017,7 +3381,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "marketing-dla-malych-firm-olsztynek-strategia-2026-dla-historycznej-gminy",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3091,7 +3455,7 @@
     }
   },
   {
-    "id": 35,
+    "id": 39,
     "title": "SEO pod AI Overviews — Jak Być Cytowanym przez Google AI [2026]",
     "seoTitle": "SEO pod Google AI Overviews — Przewodnik [2026]",
     "meta_description": "SEO pod AI Overviews — jak być cytowanym przez Google AI. Case Caruma: panel AI Overview obok KPMG w 90 dni. BoostNow.",
@@ -3099,7 +3463,7 @@
     "target_industry": "General",
     "word_count": 1321,
     "slug": "seo-pod-ai-overviews",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3192,7 +3556,7 @@
     }
   },
   {
-    "id": 36,
+    "id": 40,
     "title": "AEO Co To Jest — Answer Engine Optimization Wyjaśnione",
     "seoTitle": "AEO Co To Jest — Answer Engine Optimization 2026",
     "meta_description": "AEO co to jest? Optymalizacja pod Google AI Overview i Featured Snippet. Case Caruma — cytowania obok KPMG i Komisji Europejskiej w 90 dni.",
@@ -3200,7 +3564,7 @@
     "target_industry": "General",
     "word_count": 1129,
     "slug": "aeo-co-to-jest",
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
