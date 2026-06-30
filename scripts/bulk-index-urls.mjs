@@ -11,7 +11,7 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
 const CREDENTIALS_PATH = resolve('./indexer-boostnow-4f8f1ba29e6e.json');
-const DOMAIN = 'https://boostnow.pl';
+const DOMAIN = 'https://boostnow-8tjh5w8x.manus.space';
 
 // List of all URLs to index
 const URLS_TO_INDEX = [

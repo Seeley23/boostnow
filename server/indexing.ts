@@ -8,7 +8,7 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
 const CREDENTIALS_PATH = resolve('./indexer-boostnow-4f8f1ba29e6e.json');
-const DOMAIN = process.env.VITE_APP_DOMAIN || 'https://boostnow.pl';
+const DOMAIN = process.env.VITE_APP_DOMAIN || 'https://boostnow-8tjh5w8x.manus.space';
 
 let indexingClient: ReturnType<typeof google.indexing> | null = null;
 
