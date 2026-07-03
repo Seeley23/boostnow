@@ -8,7 +8,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "llms-txt",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -111,7 +111,7 @@
     "target_industry": "General",
     "word_count": 1084,
     "slug": "jak-pojawic-sie-w-chatgpt",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -206,6 +206,170 @@
   },
   {
     "id": 3,
+    "title": "Agencja SEO Blisko Centrum Olsztyna — Strategia dla Firm z Serca Miasta [2026]",
+    "seoTitle": "Agencja SEO Blisko Centrum Olsztyna 2026",
+    "meta_description": "Agencja SEO blisko centrum Olsztyna 2026 — pozycjonowanie firm z serca miasta. Restauracje, hotele, kancelarie, gastronomia. Pakiety od 1 800 PLN. BoostNow.",
+    "semantic_anchors": "agencja seo blisko centrum olsztyna",
+    "target_industry": "General",
+    "word_count": 1689,
+    "slug": "agencja-seo-blisko-centrum-olsztyna-strategia-dla-firm-z-serca-miasta-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Agencja SEO blisko centrum Olsztyna",
+          "description": "Pozycjonowanie firm z centrum Olsztyna: restauracje, hotele, kancelarie, gabinety. Strategia trzech grup klientow. Pakiety od 1 800 PLN.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Centrum Olsztyna"
+            },
+            {
+              "@type": "City",
+              "name": "Olsztyn"
+            }
+          ],
+          "serviceType": "Local SEO"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje pozycjonowanie firmy z centrum Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Zaleznie od branzy 1 800-4 500 PLN miesiecznie. Restauracje 1 800-3 000 PLN. Hotele 3 000-4 500 PLN. Kancelarie prawne 2 500-4 000 PLN. Gabinety lekarskie 2 000-3 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa pozycjonowanie firmy z centrum Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze efekty w Local Pack 4-8 tygodni. Pierwsze widoczne wzrosty ruchu 8-12 tygodni. Pelna dominacja kategorii 6-12 miesiecy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy potrzebuje tresci w jezyku niemieckim dla firmy z centrum?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla gastronomii premium, hoteli, sklepow z pamiatkami tak, dodaje 15-30% ruchu. Dla firm B2B, kancelarii, klinik lokalnych nie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy strategia trzech grup pasuje do kazdej firmy w centrum?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie. Dla gastronomii, hoteli, atrakcji turystycznych tak. Dla kancelarii prawnej strategia dwoch grup. BoostNow projektuje strategie pod konkretna firme, nie szablon."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez firmy z innych czesci Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Obslugujemy firmy z centrum, Jarot, Kortowa, Nagorkow, Osiedla Mazurskiego, Pieczewa, Podlesia oraz gmin satelitarnych Olsztyna."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "title": "Agencja SEO Olsztyn — Czysty SEO + GEO + AEO dla Firm z Warmii [2026]",
+    "seoTitle": "Agencja SEO Olsztyn — Czysty SEO + GEO + AEO 2026",
+    "meta_description": "Agencja SEO Olsztyn 2026 — czysty SEO + GEO + AEO dla firm z Warmii. Case Caruma: 90 dni, cytowania w AI Overview obok KPMG. BoostNow.",
+    "semantic_anchors": "agencja seo olsztyn",
+    "target_industry": "General",
+    "word_count": 1726,
+    "slug": "agencja-seo-olsztyn-czysty-seo-geo-aeo-dla-firm-z-warmii-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Agencja SEO Olsztyn",
+          "description": "Czysta agencja SEO + GEO + AEO dla firm z Olsztyna. Bez Ads/social/branding. Pakiety od 2 000 PLN miesiecznie.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Olsztyn"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Warmia-Mazury"
+            }
+          ],
+          "serviceType": "Pure SEO Agency"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje agencja SEO w Olsztynie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla czystej agencji SEO 2 000-6 000 PLN miesiecznie. Dla agencji marketingowej full-service 4 500-8 000 PLN. Stawki 30-50 procent nizsze niz warszawskie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kiedy wybrac czysta agencje SEO a kiedy agencje marketingowa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Czysta agencja SEO gdy prowadzisz Ads sam, masz wewnetrzny zespol, chcesz glebszej ekspertyzy. Agencja full-service gdy chcesz jednego partnera do wszystkich uslug."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile trwa pozycjonowanie strony firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze efekty 4-8 tygodni. Pierwsze TOP 3 8-12 tygodni. Cytowania w Perplexity 30-60 dni. Pelna widocznosc 6-12 miesiecy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow wspolpracuje z inna agencja Ads?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, to jest optymalna konfiguracja. Wspolpracujemy z klientami korzystajacymi z zewnetrznej agencji Ads. Bez konfliktow, dzielimy sie danymi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow gwarantuje pozycje w Google?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie, zadna powazna agencja tego nie gwarantuje. BoostNow gwarantuje metodyke i mozliwosc wypowiedzenia bez kar po 3 miesiacach."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
     "title": "Pozycjonowanie Wrocław — Niedoinwestowany Rynek SEO",
     "seoTitle": "Pozycjonowanie Wrocław — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie Wrocław — SEO + GEO + AEO dla firm z Wrocławia. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -213,7 +377,7 @@
     "target_industry": "General",
     "word_count": 907,
     "slug": "pozycjonowanie-wroclaw-niedoinwestowany-rynek-seo",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -265,7 +429,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "SEO dla Kliniki — Pacjenci Szukają Specjalistów w Google",
     "seoTitle": "SEO dla Kliniki — E-E-A-T + Local SEO + GEO 2026",
     "meta_description": "SEO dla kliniki medycznej — pacjenci szukają specjalistów w Google. Strategia E-E-A-T + Local SEO + GEO. Bezpłatna analiza BoostNow.",
@@ -273,7 +437,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "seo-dla-kliniki-pacjenci-szukaja-specjalistow-w-google",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -337,7 +501,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "Pozycjonowanie Stron Poznań — Jak Firma z Poznania Trafia do TOP Google [2026]",
     "seoTitle": "Pozycjonowanie Stron Poznań — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie stron Poznań — SEO + GEO dla firm poznańskich i Wielkopolski. Case Caruma: 151k wyświetleń w 90 dni. Analiza BoostNow.",
@@ -345,7 +509,7 @@
     "target_industry": "General",
     "word_count": 1286,
     "slug": "pozycjonowanie-stron-poznan-jak-firma-z-poznania-trafia-do-top-google-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -419,7 +583,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 8,
     "title": "Optymalizacja SEO — Co Naprawdę Optymalizować w 2026",
     "seoTitle": "Optymalizacja SEO 2026 — Cztery Warstwy Razem",
     "meta_description": "Optymalizacja SEO 2026 — cztery warstwy, które muszą zagrać razem. Case Caruma: +12 421% wyświetleń w 90 dni. BoostNow.",
@@ -427,7 +591,7 @@
     "target_industry": "General",
     "word_count": 1729,
     "slug": "optymalizacja-seo",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -521,7 +685,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 9,
     "title": "Agencja SEO Barczewo — Pięć Kryteriów Wyboru Wykonawcy Pozycjonowania [2026]",
     "seoTitle": "Agencja SEO Barczewo — 5 Kryteriów Wyboru 2026",
     "meta_description": "Agencja SEO Barczewo — pięć kryteriów wyboru wykonawcy 2026. Case studies BoostNow z konkretnymi liczbami. AI Search ready.",
@@ -529,7 +693,7 @@
     "target_industry": "General",
     "word_count": 1831,
     "slug": "agencja-seo-barczewo-pozycjonowanie",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -621,7 +785,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 10,
     "title": "Generative Engine Optimization (GEO) — Definicja, Badania i Wdrożenie [2026]",
     "seoTitle": "Generative Engine Optimization — GEO Przewodnik 2026",
     "meta_description": "Generative Engine Optimization (GEO) — nowa dyscyplina po SEO. Princeton 2024. Case Caruma: cytowania w AI Overview obok KPMG w 90 dni.",
@@ -629,7 +793,7 @@
     "target_industry": "General",
     "word_count": 1699,
     "slug": "generative-engine-optimization",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -723,7 +887,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 11,
     "title": "Ile Kosztuje Strona Internetowa w 2026? Pełny Cennik + Ukryty Koszt",
     "seoTitle": "Ile Kosztuje Strona Internetowa 2026? Pełny Cennik",
     "meta_description": "Ile kosztuje strona internetowa 2026 — pełny cennik landing, WordPress, e-commerce. Ukryty koszt strony bez pozycjonowania. BoostNow.",
@@ -731,7 +895,7 @@
     "target_industry": "General",
     "word_count": 1800,
     "slug": "ile-kosztuje-strona-internetowa",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -824,7 +988,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 12,
     "title": "Ile Kosztuje Pozycjonowanie — Realne Stawki i ROI w 2026",
     "seoTitle": "Ile Kosztuje Pozycjonowanie — Realne Stawki 2026",
     "meta_description": "Ile kosztuje pozycjonowanie? Cennik SEO 2026 + case Caruma — 151k wyświetleń i 910 konwersji w 90 dni. Bezpłatna wycena BoostNow.",
@@ -832,7 +996,7 @@
     "target_industry": "General",
     "word_count": 1062,
     "slug": "ile-kosztuje-pozycjonowanie",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -924,7 +1088,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 13,
     "title": "Pozycjonowanie GEO — Praktyczna Strategia dla Firm B2B w Polsce [2026]",
     "seoTitle": "Pozycjonowanie GEO — Strategia dla Firm B2B w Polsce 2026",
     "meta_description": "Pozycjonowanie GEO w Polsce — strategia dla firm B2B z case studies. Caruma: 90 dni, cytowania w AI Overview obok KPMG. BoostNow.",
@@ -932,7 +1096,7 @@
     "target_industry": "General",
     "word_count": 1741,
     "slug": "pozycjonowanie-geo",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1025,7 +1189,7 @@
     }
   },
   {
-    "id": 12,
+    "id": 14,
     "title": "Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]",
     "seoTitle": "Agencja SEO AI — SEO + GEO + AEO dla Polskich Firm",
     "meta_description": "Agencja SEO AI — SEO + GEO + AEO w jednym pakiecie. Case Caruma: cytowania AI obok KPMG w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1033,7 +1197,7 @@
     "target_industry": "General",
     "word_count": 1317,
     "slug": "agencja-seo-ai",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1127,7 +1291,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 15,
     "title": "Pozycjonowanie Stron WWW Dywity — SEO dla Istniejących Stron Firm Satelitarnych [2026]",
     "seoTitle": "Pozycjonowanie Stron WWW Dywity — SEO 2026",
     "meta_description": "Pozycjonowanie stron www Dywity 2026 — SEO dla istniejących stron firm satelitarnych. Pakiety od 1 000 PLN. BoostNow.",
@@ -1135,7 +1299,7 @@
     "target_industry": "General",
     "word_count": 1561,
     "slug": "pozycjonowanie-stron-www-dywity-seo-dla-istniejacych-stron-firm-satelitarnych-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1209,7 +1373,7 @@
     }
   },
   {
-    "id": 14,
+    "id": 16,
     "title": "SEO dla Hoteli — Zbieraj Rezerwacje Bezpośrednie, Płać Mniej OTA",
     "seoTitle": "SEO dla Hotelu — Mniej Booking, Więcej Rezerwacji 2026",
     "meta_description": "SEO dla hotelu — zbieraj rezerwacje bezpośrednie, płać mniej Booking. Case SU-2: TOP 1 globalnie w 120 dni. Analiza BoostNow.",
@@ -1217,7 +1381,7 @@
     "target_industry": "General",
     "word_count": 1078,
     "slug": "seo-dla-hoteli-zbieraj-rezerwacje-bezposrednie-plac-mniej-ota",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1281,7 +1445,171 @@
     }
   },
   {
-    "id": 15,
+    "id": 17,
+    "title": "Agencja Marketingowa Olsztyn — Pełen Stack SEO + GEO + Ads dla Firm z Miasta [2026]",
+    "seoTitle": "Agencja Marketingowa Olsztyn — SEO + GEO + Ads 2026",
+    "meta_description": "Agencja marketingowa Olsztyn 2026 — SEO, GEO, Meta Ads, Google Ads dla firm z całego miasta. Klienci z efektami globalnymi. BoostNow.",
+    "semantic_anchors": "agencja marketingowa olsztyn",
+    "target_industry": "General",
+    "word_count": 1983,
+    "slug": "agencja-marketingowa-olsztyn-pelen-stack-seo-geo-ads-dla-firm-z-miasta-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Agencja marketingowa Olsztyn",
+          "description": "Pelna agencja marketingowa z Olsztyna: SEO, GEO, AEO, Meta Ads, Google Ads, content. Klienci skali miedzynarodowej. Pakiety od 1 500 PLN.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Olsztyn"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Warmia-Mazury"
+            }
+          ],
+          "serviceType": "Full-Service Marketing Agency"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje agencja marketingowa w Olsztynie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malej firmy uslugowej 1 500-3 000 PLN miesiecznie. Dla srednich firm B2B lub sklepow e-Commerce 3 000-5 000 PLN. Stawki 30-50 procent nizsze niz warszawskie przy tej samej jakosci."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy lokalna agencja z Olsztyna daje nizsza jakosc niz warszawska?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie. Roznica stawek wynika z kosztu utrzymania biura, wynagrodzen lokalnych specjalistow, obciazenia stalymi kosztami. BoostNow oferuje te sama zaawansowana metodyke."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile trwa dojazd do skutecznosci marketingu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla platnej reklamy 24-72 godziny do pierwszych klikniec, 4-8 tygodni do pelnej optymalizacji ROAS. Dla SEO + GEO 4-8 tygodni do pierwszych wzrostow, 6-12 miesiecy do pelnej dominacji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez firmy spoza Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Obslugujemy firmy z calej Warmii-Mazur oraz klientow miedzynarodowych: Caruma, SU-2 Kiteboards, RudStudio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow wspolpracuje z sektorem B2B?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, to jedna z glownych specjalizacji. Klient Caruma osiagnal dominacje kategorii w 90 dni. Metoda szczegolnie efektywna dla firm B2B z niszowym pozycjonowaniem."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "title": "Prowadzenie Social Media Olsztyn — Strategia dla Firm z Miasta i Regionu [2026]",
+    "seoTitle": "Prowadzenie Social Media Olsztyn 2026",
+    "meta_description": "Prowadzenie social media Olsztyn 2026 — content, community, algorytmy dla Facebook, Instagram, LinkedIn, TikTok. Pakiety od 1 500 PLN. BoostNow.",
+    "semantic_anchors": "prowadzenie social media olsztyn",
+    "target_industry": "General",
+    "word_count": 1792,
+    "slug": "prowadzenie-social-media-olsztyn-strategia-dla-firm-z-miasta-i-regionu-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Prowadzenie social media Olsztyn",
+          "description": "Kompleksowe prowadzenie social media dla firm z Olsztyna: Facebook, Instagram, LinkedIn, TikTok. Pakiety od 1 500 PLN.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Olsztyn"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Warmia-Mazury"
+            }
+          ],
+          "serviceType": "Social Media Management"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje prowadzenie social media firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malej firmy (2 platformy) 1 500-2 000 PLN miesiecznie. Dla sredniej firmy (3 platformy) 2 500-3 500 PLN. Dla wiekszej firmy (4 platformy + influencerzy) 4 000-6 000 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile trwa budowa zasiegu w social media?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze wzrosty zasiegu 4-8 tygodni. Pierwsze konwersje 6-12 tygodni. Pelna dominacja lokalna 6-12 miesiecy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ktore platformy sa najlepsze dla firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Zalezy od branzy: gastronomia Facebook + Instagram + TikTok, kancelaria LinkedIn + Facebook, sklep e-Commerce Instagram + Facebook + TikTok. Wybierz 2-3 platformy nie 4."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy potrzebuje wideo w social media firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, bezwzglednie. 80% czasu uzytkownikow Instagram i Facebook to wideo. Firma bez wideo pracuje w 20% mozliwego zasiegu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy warto wspolpracowac z lokalnymi influencerami warminskimi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, z wysokim ROI. Lokalny influencer 1 000-10 000 obserwujacych z Olsztyna daje wielokrotnie wyzszy zwrot niz warszawski z 100 000+. Autentycznosc lokalna, niska cena, docelowa publicznosc."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
     "title": "SEO dla Sklepu Internetowego — Jak Sklep Trafia do TOP 1 Globalnie",
     "seoTitle": "SEO dla Sklepu Internetowego — TOP 1 w 120 Dni",
     "meta_description": "SEO dla sklepu internetowego. Case SU-2 Kiteboards — TOP 1 globalnie w 120 dni, 4x cytowania w Google AI Overview. Bezpłatna analiza BoostNow.",
@@ -1289,7 +1617,7 @@
     "target_industry": "General",
     "word_count": 1114,
     "slug": "seo-dla-sklepu-internetowego",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1382,7 +1710,7 @@
     }
   },
   {
-    "id": 16,
+    "id": 20,
     "title": "Pozycjonowanie Wizytówki Google — Jak Twoja Firma Trafia do Local Pack [2026]",
     "seoTitle": "Pozycjonowanie Wizytówki Google — Local Pack 2026",
     "meta_description": "Pozycjonowanie wizytówki Google — jak firma trafia do Local Pack. 46% kliknięć lokalnych zbiera top 3. Strategia BoostNow z case studies.",
@@ -1390,7 +1718,7 @@
     "target_industry": "General",
     "word_count": 1705,
     "slug": "pozycjonowanie-wizytowki-google",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1483,7 +1811,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 21,
     "title": "Pozycjonowanie Warszawa — Jak Firma z Warszawy Trafia do TOP Google",
     "seoTitle": "Pozycjonowanie Warszawa — Agencja SEO i GEO 2026",
     "meta_description": "Pozycjonowanie Warszawa — SEO + GEO + AEO dla firm warszawskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1491,7 +1819,7 @@
     "target_industry": "General",
     "word_count": 1075,
     "slug": "pozycjonowanie-warszawa-jak-firma-z-warszawy-trafia-do-top-google",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1543,7 +1871,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 22,
     "title": "Tworzenie Stron Internetowych Barczewo — Strony dla Firm Lokalnych [2026]",
     "seoTitle": "Tworzenie Stron Internetowych Barczewo — Pakiety 2026",
     "meta_description": "Tworzenie stron internetowych Barczewo 2026 — budowa strony dla firmy z gminy z SEO + GEO od dnia 1. Pakiety od 4 500 PLN. BoostNow.",
@@ -1551,7 +1879,7 @@
     "target_industry": "General",
     "word_count": 1694,
     "slug": "tworzenie-stron-internetowych-barczewo-strony-dla-firm-lokalnych-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1625,7 +1953,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 23,
     "title": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "seoTitle": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "meta_description": "AI SEO — czy zastępuje klasyczne SEO? 42% zapytań omija Twoją stronę. Case Caruma: cytowania AI obok KPMG w 90 dni.",
@@ -1633,7 +1961,7 @@
     "target_industry": "General",
     "word_count": 1378,
     "slug": "ai-seo",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1727,7 +2055,7 @@
     }
   },
   {
-    "id": 20,
+    "id": 24,
     "title": "Marketing Internetowy dla Firm w Dobrym Mieście — Strategia 2026",
     "seoTitle": "Marketing Internetowy Dobre Miasto — Strategia 2026",
     "meta_description": "Marketing internetowy Dobre Miasto 2026 — strategia dla firm z zabytkowej gminy warmińskiej. Pakiety od 900 PLN. BoostNow.",
@@ -1735,7 +2063,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "marketing-internetowy-dla-firm-w-dobrym-miescie-strategia-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1809,7 +2137,7 @@
     }
   },
   {
-    "id": 21,
+    "id": 25,
     "title": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "seoTitle": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "meta_description": "Co to jest SEO i ile klientów tracisz bez niego? Case Caruma — 151k wyświetleń w Google w 90 dni. Bezpłatna analiza SEO BoostNow.",
@@ -1817,7 +2145,7 @@
     "target_industry": "General",
     "word_count": 1166,
     "slug": "co-to-jest-seo",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1911,7 +2239,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 26,
     "title": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO i AEO",
     "seoTitle": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO",
     "meta_description": "SEO 2026 — pełna mapa dyscypliny: techniczna, content, autorytet, GEO i AEO. Case Caruma: 90 dni, cytowania w AI Overview obok KPMG.",
@@ -1919,7 +2247,7 @@
     "target_industry": "General",
     "word_count": 1899,
     "slug": "seo",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2014,7 +2342,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 27,
     "title": "SEO dla Prawnika — Widoczność z Poszanowaniem KEA i KRRP",
     "seoTitle": "SEO dla Prawnika — Kancelaria z Widocznością w Google 2026",
     "meta_description": "SEO dla prawnika i kancelarii — widoczność dla klientów szukających pomocy prawnej. Z poszanowaniem KEA i KRRP. Analiza BoostNow.",
@@ -2022,7 +2350,7 @@
     "target_industry": "General",
     "word_count": 1013,
     "slug": "seo-dla-prawnika-widocznosc-z-poszanowaniem-kea-i-krrp",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2086,7 +2414,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 28,
     "title": "Tanie Pozycjonowanie — Co Znaczy Tanie i Co Naprawdę Się Opłaca [2026]",
     "seoTitle": "Tanie Pozycjonowanie — Kiedy Opłaca, Kiedy Pułapka 2026",
     "meta_description": "Tanie pozycjonowanie — co oznacza „tanie\" i co naprawdę się opłaca. Case Caruma: ROI w 90 dni. Analiza BoostNow.",
@@ -2094,7 +2422,7 @@
     "target_industry": "General",
     "word_count": 1819,
     "slug": "tanie-pozycjonowanie",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2186,7 +2514,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 29,
     "title": "Co To Jest GEO — Generative Engine Optimization po Polsku",
     "seoTitle": "Co To Jest GEO — Generative Engine Optimization 2026",
     "meta_description": "Co to jest GEO? Case Caruma — cytowania w Google AI Overview obok KPMG w 90 dni. Pełna definicja, różnice vs SEO i wdrożenie z BoostNow.",
@@ -2194,7 +2522,7 @@
     "target_industry": "General",
     "word_count": 1199,
     "slug": "geo-co-to-jest",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2289,7 +2617,107 @@
     }
   },
   {
-    "id": 26,
+    "id": 30,
+    "title": "Tanie Pozycjonowanie Stron — Kiedy Realny Produkt, Kiedy Fałszywa Oszczędność [2026]",
+    "seoTitle": "Tanie Pozycjonowanie Stron — Kiedy Realne, Kiedy Iluzja 2026",
+    "meta_description": "Tanie pozycjonowanie stron 2026 — kiedy jest realną opcją, kiedy fałszywą oszczędnością. BoostNow. Pakiety od 800 PLN.",
+    "semantic_anchors": "tanie pozycjonowanie stron",
+    "target_industry": "General",
+    "word_count": 1860,
+    "slug": "tanie-pozycjonowanie-stron",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Tanie Pozycjonowanie Stron — Kiedy Realny Produkt, Kiedy Fałszywa Oszczędność [2026]",
+          "description": "Tanie pozycjonowanie za 500 PLN moze kosztowac 15 000 PLN utraconych klientow rocznie. Kiedy realne, kiedy iluzja.",
+          "datePublished": "2026-07-02",
+          "dateModified": "2026-07-02",
+          "inLanguage": "pl-PL",
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka/",
+              "https://boostnow.pl"
+            ],
+            "knowsAbout": [
+              "pozycjonowanie stron",
+              "SEO pricing",
+              "tanie SEO",
+              "cennik pozycjonowania",
+              "realne SEO"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/tanie-pozycjonowanie-stron"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Czy tanie pozycjonowanie za 300-500 PLN miesiecznie dziala?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W 95% przypadkow nie. Za 300-500 PLN miesiecznie profesjonalna agencja nie moze zapewnic realnej pracy nad SEO. Uczciwe minimum 800 PLN dla hiperlokalnych, 1 500 PLN dla wiekszosci firm."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kiedy tanie pozycjonowanie ma sens?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla firm hiperlokalnych z zerowa konkurencja: gminy 5-10 tys. mieszkancow, sklepy niszowe. Tam 800-1 500 PLN miesiecznie daje realne efekty. Dla srednich i wysokich rynkow minimum 1 500-2 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile realnie kosztuje profesjonalne SEO w Polsce 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malych firm hiperlokalnych 800-1 500 PLN. Dla srednich uslugowych 1 500-3 500 PLN. Dla wiekszych B2B 3 500-6 000 PLN. Dla sklepow e-Commerce 4 500-8 000 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mozna pozycjonowac strone samemu za darmo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie wymaga 15-30 godzin pracy miesiecznie, znajomosci Schema, Core Web Vitals, GEO. Dla wiekszosci firm oszczednosc kosztuje wielokrotnie wiecej w utraconych klientach."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow oferuje pakiet ponizej 800 PLN miesiecznie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie, z wyboru uczciwosci wobec klienta. Ponizej 800 PLN nie mozemy zapewnic realnej pracy. Wyjatek dla firm hiperlokalnych z ograniczonym zakresem."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 31,
     "title": "Kto Robi Dobre Strony Internetowe w Dywitach? Przewodnik Wyboru Wykonawcy [2026]",
     "seoTitle": "Kto Robi Dobre Strony Internetowe w Dywitach? 2026",
     "meta_description": "Kto robi dobre strony internetowe w Dywitach? Przewodnik wyboru wykonawcy 2026. Pięć kryteriów + case studies BoostNow.",
@@ -2297,7 +2725,7 @@
     "target_industry": "General",
     "word_count": 1814,
     "slug": "kto-robi-dobre-strony-internetowe-w-dywitach",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2389,7 +2817,7 @@
     }
   },
   {
-    "id": 27,
+    "id": 32,
     "title": "Pozycjonowanie Stron Stawiguda — Strategia SEO dla Firm z Gminy [2026]",
     "seoTitle": "Pozycjonowanie Stron Stawiguda — SEO Lokalne 2026",
     "meta_description": "Pozycjonowanie stron Stawiguda 2026 — SEO dla firm z rosnącej gminy pod Olsztynem. Zerowa konkurencja, TOP 1 w 2-4 tygodnie. BoostNow.",
@@ -2397,7 +2825,7 @@
     "target_industry": "General",
     "word_count": 1425,
     "slug": "pozycjonowanie-stron-stawiguda-strategia-seo-dla-firm-z-gminy-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2471,7 +2899,7 @@
     }
   },
   {
-    "id": 28,
+    "id": 33,
     "title": "Pozycjonowanie Lokalne — Strategia dla Firm B2B i Lokalnych w Polsce [2026]",
     "seoTitle": "Pozycjonowanie Lokalne — GBP + Local Pack + AI Search 2026",
     "meta_description": "Pozycjonowanie lokalne 2026 — GBP + Local Pack + AI search dla firm B2B i usługowych. Case Caruma: 151k wyświetleń w 90 dni. BoostNow.",
@@ -2479,7 +2907,7 @@
     "target_industry": "General",
     "word_count": 1770,
     "slug": "pozycjonowanie-lokalne",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2572,7 +3000,7 @@
     }
   },
   {
-    "id": 29,
+    "id": 34,
     "title": "Audyt SEO — Co Musi Zawierać, Żeby Faktycznie Pomóc Twojej Firmie",
     "seoTitle": "Audyt SEO — Co Musi Zawierać Żeby Faktycznie Pomóc",
     "meta_description": "Audyt SEO — czego wymagać od agencji? Case Caruma: audyt → 151k wyświetleń w 90 dni, cytowania w AI Overview obok KPMG.",
@@ -2580,7 +3008,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "audyt-seo",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2673,7 +3101,7 @@
     }
   },
   {
-    "id": 30,
+    "id": 35,
     "title": "Jak Założyć Sklep Internetowy w 2026 — Pełny Przewodnik dla Początkujących",
     "seoTitle": "Jak Założyć Sklep Internetowy w 2026 — Przewodnik",
     "meta_description": "Jak założyć sklep internetowy 2026 — 5 decyzji, platformy, koszty. Case SU-2 Kiteboards: TOP 1 globalnie w 120 dni. BoostNow.",
@@ -2681,7 +3109,7 @@
     "target_industry": "General",
     "word_count": 1814,
     "slug": "jak-zalozyc-sklep-internetowy",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2775,7 +3203,89 @@
     }
   },
   {
-    "id": 31,
+    "id": 36,
+    "title": "Pozycjonowanie Stron Olsztyn — SEO dla Istniejących Stron Firm [2026]",
+    "seoTitle": "Pozycjonowanie Stron Olsztyn — SEO Istniejących Stron 2026",
+    "meta_description": "Pozycjonowanie stron Olsztyn 2026 — SEO istniejących stron firm z miasta. Pakiety od 2 000 PLN. Case Caruma: 90 dni, cytowania w AI Overview.",
+    "semantic_anchors": "pozycjonowanie stron olsztyn",
+    "target_industry": "General",
+    "word_count": 1721,
+    "slug": "pozycjonowanie-stron-olsztyn-seo-dla-istniejacych-stron-firm-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Pozycjonowanie stron Olsztyn",
+          "description": "SEO istniejacych stron firm z Olsztyna. Naprawa 4 systematycznych problemow. Pakiety od 2 000 PLN miesiecznie.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Olsztyn"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Warmia-Mazury"
+            }
+          ],
+          "serviceType": "Local SEO"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje pozycjonowanie strony firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malej firmy uslugowej 2 000-3 000 PLN miesiecznie. Dla sredniej firmy B2B 3 000-4 500 PLN. Dla hotelu/restauracji 4 000-6 000 PLN. Dla sklepu e-Commerce 4 500-7 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile trwa pozycjonowanie strony firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze efekty 2-4 tygodnie. Pierwsze TOP 3 4-8 tygodni. Cytowania w Perplexity 30-60 dni. Pelna widocznosc dla 50-150 fraz 6-12 miesiecy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moja stara strona z 2018 nadaje sie do pozycjonowania?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W wiekszosci przypadkow tak. Strona z 2018-2023 wymaga aktualizacji Schema, Core Web Vitals i GEO. Tylko strony 7+ letnie lub niezgodne z mobile wymagaja przebudowy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge pozycjonowac strone sam?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie wymaga koordynacji 4 warstw, znajomosci E-E-A-T, Person Schema, llms.txt. Blednie wdrozone SEO moze aktywnie szkodzic."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow gwarantuje pozycje w Google?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie i zadna powazna agencja tego nie gwarantuje. Google nie sprzedaje pozycji. BoostNow gwarantuje metodyke i mozliwosc wypowiedzenia bez kar po 3 miesiacach."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 37,
     "title": "Pozycjonowanie Kraków — Niedoinwestowany Rynek SEO w Polsce",
     "seoTitle": "Pozycjonowanie Kraków — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie Kraków — SEO + GEO + AEO dla firm krakowskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -2783,7 +3293,7 @@
     "target_industry": "General",
     "word_count": 1074,
     "slug": "pozycjonowanie-krakow-niedoinwestowany-rynek-seo-w-polsce",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2835,7 +3345,7 @@
     }
   },
   {
-    "id": 32,
+    "id": 38,
     "title": "SEO dla Firm Barczewo — Strategia Pozycjonowania Małych Firm [2026]",
     "seoTitle": "SEO dla Firm Barczewo — Pozycjonowanie 2026",
     "meta_description": "SEO dla firm Barczewo 2026 — strategia dla małych firm z gminy warmińsko-mazurskiej. Zerowa konkurencja, TOP 1 w 2-4 tygodnie. BoostNow.",
@@ -2843,7 +3353,7 @@
     "target_industry": "General",
     "word_count": 1504,
     "slug": "seo-dla-firm-barczewo-strategia-pozycjonowania-malych-firm-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2917,7 +3427,93 @@
     }
   },
   {
-    "id": 33,
+    "id": 39,
+    "title": "SEO Agency for International Markets — Poland-Based, Global Clients [2026]",
+    "seoTitle": "SEO Agency — International SEO for Polish B2B 2026",
+    "meta_description": "SEO agency for international markets 2026 — Poland-based, global clients (Caruma, SU-2 Kiteboards). Documented AI Overview citations. BoostNow.",
+    "semantic_anchors": "seo agency",
+    "target_industry": "General",
+    "word_count": 1888,
+    "slug": "seo-agency-for-international-markets-poland-based-global-clients-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "International SEO Agency",
+          "description": "Poland-based international SEO + GEO + AEO agency for B2B companies exporting to EU, USA, UK. Documented global results.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Poland"
+            },
+            {
+              "@type": "Country",
+              "name": "European Union"
+            },
+            {
+              "@type": "Country",
+              "name": "United States"
+            }
+          ],
+          "serviceType": "International SEO Agency"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does international SEO agency cost for Polish B2B?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Depending on strategy level: 4 500-6 500 PLN (level 1 EN content on .pl), 6 500-10 000 PLN (level 2 separate .com domain), 10 000-18 000 PLN (level 3 multi-regional DE/FR/NL), 18 000+ PLN (level 4 global enterprise). Warsaw premium agencies typically 2x more."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long to see international SEO results?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For level 1 (EN content on .pl): 4-8 weeks. For level 2 (separate EN domain): 3-6 months. For level 3 (multi-regional): 6-12 months. Caruma client achieved DPP category dominance in 90 days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need separate .com domain for export?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For B2B companies with serious export ambitions: yes, we recommend. Separate .com domain gives clean signals to Google, allows separate link building strategy, no I am Polish company in URL."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does BoostNow provide English-language reports for investors?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Standard monthly reports for INTERNATIONAL STANDARD, MULTI-REGIONAL, GLOBAL ENTERPRISE packages are delivered in Polish + English languages without additional fees."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does BoostNow work with clients outside Poland?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Currently serving Polish clients (exporting to EU, USA, UK) and international clients (Caruma EU compliance, SU-2 Kiteboards global e-commerce). Contact in Polish, English, German."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 40,
     "title": "Marketing Internetowy Dywity — Strategia dla Firm Satelitarnych Olsztyna [2026]",
     "seoTitle": "Marketing Internetowy Dywity — Strategia 2026",
     "meta_description": "Marketing internetowy Dywity 2026 — strategia dla firm satelitarnych Olsztyna. Zerowa konkurencja lokalna, szybki TOP 1. BoostNow.",
@@ -2925,7 +3521,7 @@
     "target_industry": "General",
     "word_count": 1449,
     "slug": "marketing-internetowy-dywity-strategia-dla-firm-satelitarnych-olsztyna-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3003,7 +3599,7 @@
     }
   },
   {
-    "id": 34,
+    "id": 41,
     "title": "Pozycjonowanie Lokalne dla Sklepów w Stawigudzie — Stacjonarne i e-Commerce [2026]",
     "seoTitle": "Pozycjonowanie Lokalne Sklepów Stawiguda 2026",
     "meta_description": "Pozycjonowanie lokalne sklepów Stawiguda 2026 — sklepy stacjonarne i e-Commerce z gminy. Pakiety od 1 200 PLN. BoostNow.",
@@ -3011,7 +3607,7 @@
     "target_industry": "General",
     "word_count": 1805,
     "slug": "pozycjonowanie-lokalne-dla-sklepow-w-stawigudzie-stacjonarne-i-e-commerce-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3085,7 +3681,7 @@
     }
   },
   {
-    "id": 35,
+    "id": 42,
     "title": "Pozycjonowanie Google — Jak Działa Algorytm i Co Decyduje o Pozycji [2026]",
     "seoTitle": "Pozycjonowanie Google — Sygnały Rankingowe 2026",
     "meta_description": "Pozycjonowanie Google — jak działa algorytm i co decyduje o pozycji w 2026. 200+ sygnałów rankingowych. Case Caruma: TOP 1-2 w 90 dni. BoostNow.",
@@ -3093,7 +3689,7 @@
     "target_industry": "General",
     "word_count": 1751,
     "slug": "pozycjonowanie-google",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3187,7 +3783,89 @@
     }
   },
   {
-    "id": 36,
+    "id": 43,
+    "title": "Agencja Reklamowa Stawiguda — Meta Ads, Google Ads, Social Media, Branding [2026]",
+    "seoTitle": "Agencja Reklamowa Stawiguda — Meta + Google Ads 2026",
+    "meta_description": "Agencja reklamowa Stawiguda 2026 — Meta Ads, Google Ads, social media, branding dla firm z gminy. Pakiety od 1 500 PLN. BoostNow.",
+    "semantic_anchors": "agencja reklamowa stawiguda",
+    "target_industry": "General",
+    "word_count": 1694,
+    "slug": "agencja-reklamowa-stawiguda-meta-ads-google-ads-social-media-branding-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Agencja reklamowa Stawiguda",
+          "description": "Meta Ads, Google Ads, social media, branding dla firm z gminy Stawiguda. Pakiety od 1 500 PLN miesiecznie.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Stawiguda"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Warmia-Mazury"
+            }
+          ],
+          "serviceType": "Advertising Agency"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje agencja reklamowa dla firmy ze Stawigudy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Prowadzenie kampanii 1 500-4 500 PLN miesiecznie. Plus budzet reklamowy 500-3 000 PLN dla malych firm. Total 2 000-7 500 PLN miesiecznie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kiedy zobacze efekty reklamy Meta lub Google Ads?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwsze kliknieicia i wizyty 24-72 godziny. Pierwsze konwersje 3-7 dni. Pelna optymalizacja pod ROAS 4-8 tygodni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy potrzebuje zarowno Meta Ads jak i SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla wiekszosci firm tak. Meta/Google Ads daja natychmiastowych klientow. SEO buduje staly strumien na kwartaly. Razem to najlepszy ROI."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge prowadzic Meta Ads samodzielnie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie 80% samodzielnych kampanii traci pieniadze z powodu zlego targetingu, slabych kreacji, braku optymalizacji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez inne gminy Warmii?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Prowadzimy kampanie dla firm ze Stawigudy, Olsztyna, Barczewa, Dywit, Olsztynka, Dobrego Miasta, Lidzbarka Warminskiego oraz innych gmin Warmii-Mazur."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 44,
     "title": "Projektowanie Stron WWW Stawiguda — Strony dla Firm Lokalnych [2026]",
     "seoTitle": "Projektowanie Stron WWW Stawiguda — Pakiety 2026",
     "meta_description": "Projektowanie stron www Stawiguda 2026 — strona dla firmy z gminy z SEO od dnia 1. Pakiety od 4 500 PLN. BoostNow.",
@@ -3195,7 +3873,7 @@
     "target_industry": "General",
     "word_count": 1615,
     "slug": "projektowanie-stron-www-stawiguda-strony-dla-firm-lokalnych-2026",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3269,7 +3947,89 @@
     }
   },
   {
-    "id": 37,
+    "id": 45,
+    "title": "Tworzenie Stron Internetowych Olsztyn — Strony z SEO + GEO od Dnia 1 [2026]",
+    "seoTitle": "Tworzenie Stron Internetowych Olsztyn 2026",
+    "meta_description": "Tworzenie stron internetowych Olsztyn 2026 — strony z SEO + GEO od dnia 1 dla firm miejskich. Pakiety od 6 500 PLN. BoostNow.",
+    "semantic_anchors": "tworzenie stron internetowych olsztyn",
+    "target_industry": "General",
+    "word_count": 2086,
+    "slug": "tworzenie-stron-internetowych-olsztyn-strony-z-seo-geo-od-dnia-1-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Tworzenie stron internetowych Olsztyn",
+          "description": "Profesjonalne projekty stron www dla firm z Olsztyna z fundamentem SEO + GEO od dnia 1. Pakiety od 6 500 PLN.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Olsztyn"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Warmia-Mazury"
+            }
+          ],
+          "serviceType": "Web Design"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje strona internetowa dla firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla firmy uslugowej 6 500-12 000 PLN. Dla firmy B2B sredniej 12 000-25 000 PLN. Dla hotelu z rezerwacja 15 000-30 000 PLN. Sklep e-Commerce 18 000-40 000 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak dlugo trwa budowa strony dla firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Typowa strona firmowa 10-12 tygodni. Strona hotelu z rezerwacja 12-16 tygodni. Sklep e-Commerce 14-20 tygodni. Plus 2-4 tygodnie launch SEO + GEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy moge zbudowac strone samodzielnie Wix WordPress?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technicznie tak. Praktycznie strona DIY nie spelnia podstaw SEO i GEO. Roznica widoczna w analityce po 6 miesiacach jako brak ruchu organicznego."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ktory CMS jest najlepszy dla firmy z Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla wiekszosci firm WordPress. Dla premium brandingu Webflow. Dla sklepow e-Commerce WordPress + WooCommerce lub PrestaShop."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez firmy z gmin satelitarnych Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Projektujemy strony dla firm z Olsztyna oraz sasiednich gmin Dywity, Stawiguda, Jonkowo, Purda, Barczewo, Olsztynek, Dobre Miasto."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 46,
     "title": "Pozycjonowanie w AI: Co Musi Wiedzieć Twoja Firma w 2026",
     "seoTitle": "Pozycjonowanie w AI — Czy ChatGPT Zna Twoją Firmę?",
     "meta_description": "Pozycjonowanie w AI — case Caruma: 151k wyświetleń w 90 dni, cytowania w Google AI Overview obok KPMG. Sprawdź widoczność Twojej firmy z BoostNow.",
@@ -3277,7 +4037,7 @@
     "target_industry": "General",
     "word_count": 1391,
     "slug": "pozycjonowanie-w-ai",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3373,7 +4133,7 @@
     }
   },
   {
-    "id": 38,
+    "id": 47,
     "title": "Pozycjonowanie Katowice — 2 Miliony Klientów, Niska Konkurencja",
     "seoTitle": "Pozycjonowanie Katowice — SEO + GEO Aglomeracja Śląska",
     "meta_description": "Pozycjonowanie Katowice — SEO + GEO dla aglomeracji śląskiej. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -3381,7 +4141,7 @@
     "target_industry": "General",
     "word_count": 884,
     "slug": "pozycjonowanie-katowice-2-miliony-klientow-niska-konkurencja",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3455,7 +4215,7 @@
     }
   },
   {
-    "id": 39,
+    "id": 48,
     "title": "Marketing dla Małych Firm Olsztynek — Strategia 2026 dla Historycznej Gminy",
     "seoTitle": "Marketing dla Małych Firm Olsztynek — Strategia 2026",
     "meta_description": "Marketing dla małych firm Olsztynek 2026 — strategia dla gminy historycznej i bramy autostrady A7. Pakiety od 900 PLN. BoostNow.",
@@ -3463,7 +4223,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "marketing-dla-malych-firm-olsztynek-strategia-2026-dla-historycznej-gminy",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3537,7 +4297,89 @@
     }
   },
   {
-    "id": 40,
+    "id": 49,
+    "title": "Agencja Marketingowa Blisko Jaroty Olsztyn — Hiperlokalna Strategia [2026]",
+    "seoTitle": "Agencja Marketingowa Blisko Jaroty Olsztyn 2026",
+    "meta_description": "Agencja marketingowa blisko Jaroty Olsztyn 2026 — hiperlokalna strategia dla firm z największej dzielnicy Olsztyna. Pakiety od 1 200 PLN. BoostNow.",
+    "semantic_anchors": "agencja marketingowa blisko jaroty olsztyn",
+    "target_industry": "General",
+    "word_count": 1653,
+    "slug": "agencja-marketingowa-blisko-jaroty-olsztyn-hiperlokalna-strategia-2026",
+    "date": "2026-07-03",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Agencja marketingowa blisko Jaroty Olsztyn",
+          "description": "Hiperlokalny marketing dla firm z najwiekszej dzielnicy Olsztyna. Meta Ads, Google Ads, GEO. Pakiety od 1 200 PLN.",
+          "provider": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl"
+          },
+          "areaServed": [
+            {
+              "@type": "Place",
+              "name": "Jaroty, Olsztyn"
+            },
+            {
+              "@type": "City",
+              "name": "Olsztyn"
+            }
+          ],
+          "serviceType": "Hyperlocal Marketing"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje hiperlokalny marketing dla firmy z Jarot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla malej firmy uslugowej 1 200-2 500 PLN miesiecznie. Dla firm z Meta Ads plus Google Ads 2 500-4 500 PLN. Plus budzet reklamowy 500-1 500 PLN."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy strategia dzielnicowa dziala lepiej niz ogolnomiejska?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dla firm uslugowych obslugujacych klientow z promienia 1-3 km tak, 2-4-krotnie wyzszy ROI. Dla firm obslugujacych caly Olsztyn ogolnomiejska."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ktore osiedla najlepiej dolaczyc do strategii Jaroty plus?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kortowo, Nagorki, Osiedle Mazurskie, Pieczewo. Lacznie z Jarotami 60 000+ mieszkancow."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy AI Search dla dzielnic Olsztyna to realny kanal w 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, szybko rosnacy. 42% uzytkownikow internetowej Polski ponizej 35 roku zycia korzysta z ChatGPT lub Perplexity do wyszukiwan lokalnych."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy BoostNow obsluguje rowniez inne dzielnice Olsztyna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Obslugujemy firmy z Jarot, Kortowa, Nagorkow, Osiedla Mazurskiego, Pieczewa, Podlesia, Zatorow, Bretowa oraz centrum Olsztyna."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 50,
     "title": "SEO pod AI Overviews — Jak Być Cytowanym przez Google AI [2026]",
     "seoTitle": "SEO pod Google AI Overviews — Przewodnik [2026]",
     "meta_description": "SEO pod AI Overviews — jak być cytowanym przez Google AI. Case Caruma: panel AI Overview obok KPMG w 90 dni. BoostNow.",
@@ -3545,7 +4387,7 @@
     "target_industry": "General",
     "word_count": 1321,
     "slug": "seo-pod-ai-overviews",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3638,7 +4480,7 @@
     }
   },
   {
-    "id": 41,
+    "id": 51,
     "title": "AEO Co To Jest — Answer Engine Optimization Wyjaśnione",
     "seoTitle": "AEO Co To Jest — Answer Engine Optimization 2026",
     "meta_description": "AEO co to jest? Optymalizacja pod Google AI Overview i Featured Snippet. Case Caruma — cytowania obok KPMG i Komisji Europejskiej w 90 dni.",
@@ -3646,7 +4488,7 @@
     "target_industry": "General",
     "word_count": 1129,
     "slug": "aeo-co-to-jest",
-    "date": "2026-06-30",
+    "date": "2026-07-03",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
