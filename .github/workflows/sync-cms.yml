@@ -1,4 +1,4 @@
-name: Sync CMS Data from Airtable
+name: Sync CMS Data and Deploy to Smarthost
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync:
+  sync-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,13 +19,34 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
+          run_install: false
+
       - name: Run CMS Sync Script
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           AIRTABLE_BASE_ID: appB0MrrpweuNvlQd
         run: node scripts/sync-airtable.cjs
 
-      - name: Commit and push changes
+      - name: Install dependencies & Build static site
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm run build:static
+
+      - name: Deploy to Smarthost via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.SMARTHOST_FTP_SERVER }}
+          username: ${{ secrets.SMARTHOST_FTP_USERNAME }}
+          password: ${{ secrets.SMARTHOST_FTP_PASSWORD }}
+          server-dir: ${{ secrets.SMARTHOST_SERVER_DIR }}
+          local-dir: dist/public/
+          protocol: ftp
+
+      - name: Commit synced CMS changes back to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
