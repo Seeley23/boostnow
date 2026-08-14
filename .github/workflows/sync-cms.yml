@@ -6,6 +6,13 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-cms-smarthost
+  cancel-in-progress: false
+
 jobs:
   sync-and-deploy:
     runs-on: ubuntu-latest
@@ -13,30 +20,57 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: pnpm
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4
         with:
-          version: latest
+          version: 10
           run_install: false
 
-      - name: Run CMS Sync Script
+      - name: Validate required secrets
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          SMARTHOST_FTP_SERVER: ${{ secrets.SMARTHOST_FTP_SERVER }}
+          SMARTHOST_FTP_USERNAME: ${{ secrets.SMARTHOST_FTP_USERNAME }}
+          SMARTHOST_FTP_PASSWORD: ${{ secrets.SMARTHOST_FTP_PASSWORD }}
+          SMARTHOST_SERVER_DIR: ${{ secrets.SMARTHOST_SERVER_DIR }}
+        run: |
+          test -n "$AIRTABLE_API_KEY" || { echo "Missing AIRTABLE_API_KEY"; exit 1; }
+          test -n "$SMARTHOST_FTP_SERVER" || { echo "Missing SMARTHOST_FTP_SERVER"; exit 1; }
+          test -n "$SMARTHOST_FTP_USERNAME" || { echo "Missing SMARTHOST_FTP_USERNAME"; exit 1; }
+          test -n "$SMARTHOST_FTP_PASSWORD" || { echo "Missing SMARTHOST_FTP_PASSWORD"; exit 1; }
+          test -n "$SMARTHOST_SERVER_DIR" || { echo "Missing SMARTHOST_SERVER_DIR"; exit 1; }
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Sync CMS data from Airtable
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           AIRTABLE_BASE_ID: appB0MrrpweuNvlQd
         run: node scripts/sync-airtable.cjs
 
-      - name: Install dependencies & Build static site
-        run: |
-          pnpm install --frozen-lockfile
-          pnpm run build:static
+      - name: Build static site
+        run: pnpm run build:static
 
-      - name: Deploy to Smarthost via FTP
+      - name: Validate build artifact
+        run: |
+          test -f dist/public/index.html
+          test -f dist/public/robots.txt
+          test -f dist/public/sitemap.xml
+          test -f dist/public/.htaccess
+          test -s dist/public/index.html
+          test -s dist/public/sitemap.xml
+
+      - name: Deploy to Smarthost via encrypted FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.SMARTHOST_FTP_SERVER }}
@@ -44,11 +78,17 @@ jobs:
           password: ${{ secrets.SMARTHOST_FTP_PASSWORD }}
           server-dir: ${{ secrets.SMARTHOST_SERVER_DIR }}
           local-dir: dist/public/
-          protocol: ftp
+          protocol: ftps
+          port: 21
 
-      - name: Commit synced CMS changes back to repo
+      - name: Commit synced CMS data back to repository
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add client/src/data/blog/*.json client/public/blog-articles/*.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Sync CMS data from Airtable [skip ci]" && git push)
+          if git diff --cached --quiet; then
+            echo "No CMS changes to commit."
+          else
+            git commit -m "Sync CMS data from Airtable [skip ci]"
+            git push origin HEAD:main
+          fi
