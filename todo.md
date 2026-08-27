@@ -50,3 +50,4 @@
 - [x] Uprościć cennik do jednej czytelnej strony z trzema pakietami i jasnymi różnicami.
 - [x] Podkreślić w cenniku, że social media są optymalizowane pod lokalne wyszukiwania.
 - [x] Zmienić liczby publikacji w ofercie na maksymalne limity, np. „do 12 postów” i „do 4 rolek”.
+- [x] Przepisać opis pakietu podstawowego tak, aby uzasadniał cenę 1 490 zł konkretnym zakresem lokalnego SEO.

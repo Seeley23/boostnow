@@ -86,7 +86,7 @@ p.add_run('klient przekazuje zdjęcia, nagrania i informacje. W ramach pakietu p
 
 section_title(doc, 'PAKIETY MIESIĘCZNE')
 make_table(doc, ['Pakiet', 'Cena netto', 'W pakiecie'], [
-    ['Podstawowy', '1 490 zł / mies.', 'do 8 postów • do 2 rolek • do 4 relacji • 1 kanał social • podstawowe dopasowanie treści do wyszukiwań lokalnych'],
+    ['Podstawowy', '1 490 zł / mies.', 'do 8 postów • do 2 rolek • do 4 relacji • 1 kanał social • analiza 5–10 fraz lokalnych • optymalizacja profilu Google • plan treści • raport widoczności'],
     ['Rozszerzony', '2 490 zł / mies.', 'do 12 postów • do 4 rolek • do 8 relacji • Instagram + Facebook • profil Google • plan fraz lokalnych • raport'],
     ['Pełny', '3 490 zł / mies.', 'do 16 postów • do 6 rolek • do 12 relacji • Instagram + Facebook • profil Google • treści pod frazy lokalne • kampanie Meta • raport'],
 ], [1.25,1.45,5.0])
