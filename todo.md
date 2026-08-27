@@ -51,3 +51,7 @@
 - [x] Podkreślić w cenniku, że social media są optymalizowane pod lokalne wyszukiwania.
 - [x] Zmienić liczby publikacji w ofercie na maksymalne limity, np. „do 12 postów” i „do 4 rolek”.
 - [x] Przepisać opis pakietu podstawowego tak, aby uzasadniał cenę 1 490 zł konkretnym zakresem lokalnego SEO.
+- [x] Utworzyć nowoczesną wizytówkę z logo i ofertą usług: strony internetowe, marketing online, social media, płatne reklamy i SEO/AI.
+- [x] Przygotować dwustronną wizytówkę do druku w minimalistycznym stylu Apple, z plikiem produkcyjnym dla drukarni.
+- [x] Zmienić wizytówkę na ogólną prezentację usług: bez cennika, pakietów, limitów i treści z oferty self-storage.
+- [x] Zastąpić ogólne hasło na wizytówce konkretnymi nazwami usług i słowami kluczowymi zrozumiałymi dla przedsiębiorców.
