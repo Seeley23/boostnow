@@ -82,16 +82,19 @@ r.font.color.rgb = RGBColor(84, 110, 122)
 p = doc.add_paragraph()
 p.paragraph_format.space_after = Pt(4)
 p.add_run('Jak działa współpraca: ').bold = True
-p.add_run('klient przekazuje zdjęcia, nagrania i informacje. W ramach pakietu przygotowujemy treści pod wyszukiwania lokalne, montujemy rolki, dodajemy napisy, publikujemy materiały i przekazujemy krótkie podsumowanie działań.')
+p.add_run('klient przekazuje zdjęcia, nagrania i informacje. W ramach pakietu przygotowujemy do określonej liczby materiałów miesięcznie treści pod wyszukiwania lokalne, montujemy rolki, dodajemy napisy, publikujemy materiały i przekazujemy krótkie podsumowanie działań.')
 
 section_title(doc, 'PAKIETY MIESIĘCZNE')
 make_table(doc, ['Pakiet', 'Cena netto', 'W pakiecie'], [
-    ['Podstawowy', '1 490 zł / mies.', '8 postów • 2 rolki • 4 relacje • 1 kanał social • podstawowe dopasowanie treści do wyszukiwań lokalnych'],
-    ['Rozszerzony', '2 490 zł / mies.', '12 postów • 4 rolki • 8 relacji • Instagram + Facebook • profil Google • plan fraz lokalnych • raport'],
-    ['Pełny', '3 490 zł / mies.', '16 postów • 6 rolek • 12 relacji • Instagram + Facebook • profil Google • treści pod frazy lokalne • kampanie Meta • raport'],
+    ['Podstawowy', '1 490 zł / mies.', 'do 8 postów • do 2 rolek • do 4 relacji • 1 kanał social • podstawowe dopasowanie treści do wyszukiwań lokalnych'],
+    ['Rozszerzony', '2 490 zł / mies.', 'do 12 postów • do 4 rolek • do 8 relacji • Instagram + Facebook • profil Google • plan fraz lokalnych • raport'],
+    ['Pełny', '3 490 zł / mies.', 'do 16 postów • do 6 rolek • do 12 relacji • Instagram + Facebook • profil Google • treści pod frazy lokalne • kampanie Meta • raport'],
 ], [1.25,1.45,5.0])
 
 section_title(doc, 'CO OZNACZAJĄ ELEMENTY PAKIETU?')
+p = doc.add_paragraph()
+p.paragraph_format.space_after = Pt(3)
+p.add_run('Podane liczby są limitami maksymalnymi w miesiącu — nie oznaczają obowiązku wykorzystania całego limitu.').italic = True
 make_table(doc, ['Element', 'Zakres'], [
     ['Post', 'Tekst i grafika lub obróbka materiału klienta, z dopasowaniem do usług i zapytań lokalnych.'],
     ['Rolka', 'Montaż dostarczonego nagrania, napisy, muzyka z biblioteki i opis wspierający lokalną widoczność.'],
@@ -101,8 +104,8 @@ make_table(doc, ['Element', 'Zakres'], [
 
 section_title(doc, 'DODATKOWO, JEŚLI POTRZEBNE')
 make_table(doc, ['Usługa', 'Cena netto'], [
-    ['Dodatkowe 4 rolki z materiałów klienta', '700 zł / mies.'],
-    ['Dodatkowe 4 posty', '500 zł / mies.'],
+    ['do 4 dodatkowych rolek z materiałów klienta', '700 zł / mies.'],
+    ['do 4 dodatkowych postów', '500 zł / mies.'],
     ['Dodatkowy kanał social', '350 zł / mies.'],
     ['Prowadzenie Google Ads', 'od 900 zł / mies.'],
 ], [6.1,1.6])
