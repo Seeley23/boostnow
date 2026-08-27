@@ -48,3 +48,4 @@
 - [x] Skorygować ofertę: właściciel dostarcza zdjęcia i nagrania, a usługa obejmuje montaż, publikację i obsługę bez dojazdów.
 - [x] Przebudować ofertę na poziom firmy self-storage, bez odniesień do lokalizacji i obiektów.
 - [x] Uprościć cennik do jednej czytelnej strony z trzema pakietami i jasnymi różnicami.
+- [x] Podkreślić w cenniku, że social media są optymalizowane pod lokalne wyszukiwania.
