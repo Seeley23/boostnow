@@ -42,3 +42,6 @@
 - [x] Verify SEO meta tags in browser DevTools (DONE - Helmet tags verified)
 - [x] Test internal links (DONE - internal links working)
 - [x] Create git checkpoint (DONE - checkpoint 27543373)
+
+## Current deliverables
+- [x] Przygotować czystą ofertę DOCX dla self-storage bez brandingu BoostNow i bez języka marketingowego.
