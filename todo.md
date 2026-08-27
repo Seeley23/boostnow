@@ -55,3 +55,11 @@
 - [x] Przygotować dwustronną wizytówkę do druku w minimalistycznym stylu Apple, z plikiem produkcyjnym dla drukarni.
 - [x] Zmienić wizytówkę na ogólną prezentację usług: bez cennika, pakietów, limitów i treści z oferty self-storage.
 - [x] Zastąpić ogólne hasło na wizytówce konkretnymi nazwami usług i słowami kluczowymi zrozumiałymi dla przedsiębiorców.
+- [x] Przeprojektować wizytówkę od podstaw po negatywnej ocenie: dopracowany układ premium, poprawne proporcje logo i lepsza hierarchia.
+- [x] Zastosować kierunek z referencji: ciemne premium, subtelny limonkowy gradient, elegancka typografia i układ danych.
+- [x] Pozyskać i podmienić prawdziwy oficjalny plik logo do druku zamiast ręcznie rekonstruowanego wordmarku.
+- [x] Wygenerować finalną wersję premium wizytówki z właściwym logo i ponownie zweryfikować front/back.
+- [x] Zapisać końcowy checkpoint dopiero po podmianie logo i finalnej kontroli wizualnej wersji premium.
+- [x] Pozyskać rzeczywisty oficjalny plik logo do druku (SVG/PDF/AI lub zatwierdzony high-res asset) bez ręcznego odtwarzania elementów znaku. Użyto dokładnego `client/public/images/logo.svg`, renderowanego przez Chromium w 1600 × 800 px.
+- [x] Podmienić logo w finalnej premium wizytówce na zatwierdzony asset i ponownie zweryfikować front/back.
+- [x] Zapisać nowy checkpoint po finalnej podmianie logo i końcowej kontroli wizualnej wersji premium.
