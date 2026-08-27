@@ -63,3 +63,4 @@
 - [x] Pozyskać rzeczywisty oficjalny plik logo do druku (SVG/PDF/AI lub zatwierdzony high-res asset) bez ręcznego odtwarzania elementów znaku. Użyto dokładnego `client/public/images/logo.svg`, renderowanego przez Chromium w 1600 × 800 px.
 - [x] Podmienić logo w finalnej premium wizytówce na zatwierdzony asset i ponownie zweryfikować front/back.
 - [x] Zapisać nowy checkpoint po finalnej podmianie logo i końcowej kontroli wizualnej wersji premium.
+- [x] Skrócić treści na wizytówce do hasłowych nazw usług i usunąć długie zdania opisowe.

@@ -63,9 +63,6 @@ def front(c):
     c.setFont('DejaVu-Bold', 15.5)
     c.drawString(x, BLEED + 17*mm, 'Mateusz')
     c.drawString(x, BLEED + 10.5*mm, 'Nowotka')
-    c.setFillColor(MUTED)
-    c.setFont('DejaVu', 6.5)
-    c.drawString(x, BLEED + 5.5*mm, 'strony internetowe · marketing online')
     # fine trim-safe frame only inside bleed
     c.setStrokeColor(Color(0.25,0.30,0.20))
     c.setLineWidth(0.25)
@@ -77,30 +74,24 @@ def back(c):
     glow(c, 4*mm, 8*mm, 22*mm, LIME)
     x = BLEED + 9*mm
     top = H - BLEED - 10*mm
-    c.setFillColor(white)
-    c.setFont('DejaVu-Bold', 10.3)
-    c.drawString(x, top, 'Marketing, który')
     c.setFillColor(LIME)
-    c.drawString(x, top - 5.3*mm, 'pracuje lokalnie.')
-    c.setFillColor(Color(0.78,0.80,0.82))
-    c.setFont('DejaVu', 6.8)
-    c.drawString(x, top - 11.3*mm, 'Usługi dla firm, które chcą być')
-    c.drawString(x, top - 15.2*mm, 'widoczne i wybierane online.')
+    c.setFont('DejaVu-Bold', 8.2)
+    c.drawString(x, top, 'USŁUGI')
     c.setStrokeColor(Color(0.35,0.45,0.25))
     c.setLineWidth(0.35)
-    c.line(x, top - 19*mm, W - BLEED - 9*mm, top - 19*mm)
+    c.line(x, top - 8*mm, W - BLEED - 9*mm, top - 8*mm)
     c.setFont('DejaVu', 6.8)
-    left_services = ['Strony internetowe', 'Marketing online', 'Social media']
-    right_services = ['Reklamy Google i Facebook', 'SEO i AI']
-    y = top - 22.5*mm
+    left_services = ['STRONY WWW', 'MARKETING ONLINE', 'SOCIAL MEDIA']
+    right_services = ['GOOGLE ADS', 'SEO / AI']
+    y = top - 12*mm
     for s in left_services:
         c.setFillColor(white)
         c.drawString(x, y, s)
         y -= 5.0*mm
-    y = top - 22.5*mm
+    y = top - 12*mm
     right_x = W / 2 + 2*mm
     for s in right_services:
-        c.setFillColor(LIME if s == 'SEO i AI' else white)
+        c.setFillColor(LIME if s == 'SEO / AI' else white)
         c.drawString(right_x, y, s)
         y -= 5.0*mm
     cx = W - BLEED - 9*mm

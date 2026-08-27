@@ -5,3 +5,6 @@ Kontrola 2026-08-27 po podmianie na boostnow-logo-rendered.png wykazała błąd:
 
 
 Kontrola końcowa: po renderze Chromium z dokładnego `client/public/images/logo.svg` pełny wordmark „boostnow” jest czytelny i nie jest przycięty. Front zachowuje bezpieczne marginesy, czytelne imię i opis usług. Rewers zachowuje poprawny układ usług i kontaktu bez kolizji. PDF ma 2 strony o wymiarach roboczych 91 × 61 mm, czyli 85 × 55 mm netto + 3 mm spadu z każdej strony.
+
+
+Po uwadze użytkownika skrócono treści do formy hasłowej. Front zawiera wyłącznie logo i „Mateusz Nowotka”. Rewers zawiera tylko nagłówek „USŁUGI”, pięć krótkich etykiet: „STRONY WWW”, „MARKETING ONLINE”, „SOCIAL MEDIA”, „GOOGLE ADS”, „SEO / AI”, oraz dane kontaktowe. Kontrola front/back potwierdziła czytelność, brak przeładowania i zachowanie minimalistycznego układu.
