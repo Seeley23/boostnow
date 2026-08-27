@@ -46,3 +46,4 @@
 ## Current deliverables
 - [x] Przygotować czystą ofertę DOCX dla self-storage bez brandingu BoostNow i bez języka marketingowego.
 - [x] Skorygować ofertę: właściciel dostarcza zdjęcia i nagrania, a usługa obejmuje montaż, publikację i obsługę bez dojazdów.
+- [x] Przebudować ofertę na poziom firmy self-storage, bez odniesień do lokalizacji i obiektów.
