@@ -87,7 +87,7 @@ heading(doc, '1. Pakiety miesięczne', 1)
 table(doc, ['Pakiet', 'Cena netto / mies.', 'Lokalizacje', 'Zakres podstawowy'], [
     ['Local Presence', '1 490 zł', '1', 'Google Business Profile, 8 postów, 2 rolki, 4 relacje, raport miesięczny'],
     ['Occupancy Growth', '2 490 zł', '1', 'Google, Instagram i Facebook, 12 postów, 4 rolki, 8 relacji, Meta Ads, pomiar leadów'],
-    ['Multi-Location Growth', 'od 3 990 zł', 'do 3', 'Profile lokalizacji, 18 postów, 6 rolek, 12 relacji, kampanie lokalne, landing page, raport zbiorczy'],
+    ['Multi-Location Growth', 'od 3 990 zł', 'do 3 obiektów', 'Obsługa komunikacji dla maks. 3 obiektów klienta, 18 postów, 6 rolek, kampanie lokalne i raport zbiorczy'],
 ], [1.35,1.15,0.8,4.15])
 
 heading(doc, '2. Zakres prac', 1)
@@ -107,8 +107,7 @@ heading(doc, '3. Usługi jednorazowe i dodatki', 1)
 table(doc, ['Usługa', 'Cena netto', 'Zakres'], [
     ['Onboarding lokalizacji', '1 490 zł', 'audyt Google, social media, strony, konkurencji i konfiguracja pomiaru'],
     ['Launch Sprint nowego obiektu', '3 900 zł', 'przygotowanie profili, landing page, kampania startowa i treści na 30 dni'],
-    ['Dzień nagraniowy na miejscu', '1 800 zł + dojazd', 'plan ujęć, nagranie i selekcja materiału'],
-    ['Pakiet 8 rolek', '2 400 zł', 'montaż, napisy, okładki i wersje kanałowe'],
+    ['Pakiet 8 rolek', '2 400 zł', 'montaż z materiałów dostarczonych przez klienta, napisy i okładki'],
     ['Landing page lokalny', 'od 1 900 zł', 'strona lokalizacji z CTA, formularzem i analityką'],
     ['Audyt Google Business Profile', '790 zł', 'kategorie, zdjęcia, opinie, lokalne sygnały i rekomendacje'],
     ['Prowadzenie Google Ads', 'od 900 zł / mies.', 'obsługa kampanii; budżet reklamowy rozliczany osobno'],
@@ -119,18 +118,18 @@ table(doc, ['Usługa', 'Cena netto', 'Zakres'], [
 
 heading(doc, '4. Warunki współpracy', 1)
 for text in [
-    'Ceny są cenami netto i nie obejmują budżetu reklamowego, dojazdów, produkcji na miejscu ani kosztów narzędzi zewnętrznych.',
+    'Ceny są cenami netto i nie obejmują budżetu reklamowego ani kosztów narzędzi zewnętrznych. Zdjęcia i nagrania dostarcza właściciel obiektu.',
     'Minimalny okres współpracy wynosi 3 miesiące. Pierwszy miesiąc obejmuje konfigurację, przygotowanie materiałów i zebranie danych.',
     'Onboarding jest rozliczany jednorazowo przed rozpoczęciem obsługi miesięcznej.',
     'Budżet reklamowy pozostaje własnością klienta i jest opłacany bezpośrednio na platformie reklamowej.',
-    'Zakres materiałów wymaga terminowego dostarczenia informacji, zdjęć, nagrań, dostępów i akceptacji po stronie klienta.',
+    'Właściciel obiektu dostarcza zdjęcia, nagrania, informacje, dostępy i akceptacje. Usługa obejmuje selekcję, montaż, przygotowanie publikacji i publikację materiałów.',
     'Oferta nie obejmuje gwarancji określonej liczby leadów, rezerwacji ani pozycji w wynikach wyszukiwania.',
 ]:
     p = doc.add_paragraph(style='List Bullet')
     p.add_run(text)
 
 heading(doc, '5. Opcja dla wielu lokalizacji', 1)
-doc.add_paragraph('Dla operatorów posiadających więcej niż trzy lokalizacje przygotowywana jest wycena indywidualna. Cena uwzględnia liczbę obiektów, obszar działania, ilość materiałów, potrzebę nagrań na miejscu oraz liczbę kampanii reklamowych.')
+doc.add_paragraph('„Lokalizacja” oznacza osobny obiekt self-storage klienta, którego komunikacja i profil Google są obsługiwane w ramach umowy. Właściciel dostarcza materiały, a usługa obejmuje ich montaż, przygotowanie i publikację. Dla operatorów posiadających więcej niż trzy lokalizacje przygotowywana jest wycena indywidualna.')
 
 table(doc, ['Przykładowy zakres', 'Cena netto / mies.'], [
     ['4 lokalizacje przy wspólnym systemie treści', 'od 4 890 zł'],
@@ -139,7 +138,7 @@ table(doc, ['Przykładowy zakres', 'Cena netto / mies.'], [
 ], [5.2,2.2])
 
 heading(doc, '6. Dane do rozpoczęcia współpracy', 1)
-doc.add_paragraph('Do przygotowania zakresu dla konkretnej lokalizacji potrzebne są: adres obiektu, liczba i typy boksów, obszar obsługi, aktualne obłożenie, średnia wartość umowy, dostępne materiały zdjęciowe i wideo, dostępy do profilu Google oraz kanałów social media, a także osoba odpowiedzialna za obsługę zapytań.')
+doc.add_paragraph('Do rozpoczęcia współpracy potrzebne są: nazwy i adresy obsługiwanych obiektów, liczba i typy boksów, obszar obsługi, aktualne obłożenie, dostępne zdjęcia i nagrania dostarczone przez właściciela, dostępy do profilu Google oraz kanałów social media, a także osoba odpowiedzialna za przekazywanie materiałów i obsługę zapytań.')
 
 p = doc.add_paragraph()
 p.paragraph_format.space_before = Pt(14)
