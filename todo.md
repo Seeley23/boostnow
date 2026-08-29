@@ -64,3 +64,6 @@
 - [x] Podmienić logo w finalnej premium wizytówce na zatwierdzony asset i ponownie zweryfikować front/back.
 - [x] Zapisać nowy checkpoint po finalnej podmianie logo i końcowej kontroli wizualnej wersji premium.
 - [x] Skrócić treści na wizytówce do hasłowych nazw usług i usunąć długie zdania opisowe.
+- [x] Przygotować CSV z 50 frazami zakupowymi do bezpośredniego importu do Keywords Explorer Ahrefs.
+- [x] Usunąć nagłówek `keyword`, aby CSV zawierał wyłącznie frazy.
+- [x] Ponownie zweryfikować CSV: dokładnie 50 niepustych wierszy, UTF-8, jedna kolumna i brak nagłówka.
