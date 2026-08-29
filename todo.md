@@ -67,3 +67,5 @@
 - [x] Przygotować CSV z 50 frazami zakupowymi do bezpośredniego importu do Keywords Explorer Ahrefs.
 - [x] Usunąć nagłówek `keyword`, aby CSV zawierał wyłącznie frazy.
 - [x] Ponownie zweryfikować CSV: dokładnie 50 niepustych wierszy, UTF-8, jedna kolumna i brak nagłówka.
+- [x] Przeanalizować eksport Ahrefs dla 50 fraz i wybrać priorytetowe tematy SEO e-commerce, GEO i AEO.
+- [x] Przygotować mapę rekomendowanych podstron i kolejność publikacji dla BoostNow.
