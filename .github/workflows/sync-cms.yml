@@ -49,7 +49,7 @@ jobs:
           test -n "$SMARTHOST_SERVER_DIR" || { echo "Missing SMARTHOST_SERVER_DIR"; exit 1; }
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Sync CMS data from Airtable
         env:
