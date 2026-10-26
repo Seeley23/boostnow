@@ -61,8 +61,7 @@ const Blog: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6 hover:border-[#c7ff4e] transition-all duration-300 cursor-pointer group"
-              onClick={() => setExpandedArticle(expandedArticle === article.id ? null : article.id)}
+              className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6 hover:border-[#c7ff4e] transition-all duration-300 group"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
@@ -72,9 +71,11 @@ const Blog: React.FC = () => {
                     
                   </div>
 
-                  {/* Tytuł */}
+                  {/* Tytuł jako link */}
                   <h3 className="text-xl font-bold text-white mb-2 font-playfair group-hover:text-[#c7ff4e] transition-colors">
-                    {article.title}
+                    <Link href={`/blog/${article.slug}`} className="hover:underline">
+                      {article.title}
+                    </Link>
                   </h3>
 
                   {/* Meta description */}
@@ -100,10 +101,20 @@ const Blog: React.FC = () => {
                     <span>📝 {article.word_count || 0} słów</span>
                     <span>⏱️ ~{Math.ceil((article.word_count || 0) / 200)} min czytania</span>
                   </div>
+
+                  {/* Always visible CTA link */}
+                  <div className="mt-4">
+                    <Link
+                      href={`/blog/${article.slug}`}
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-[#c7ff4e] hover:text-[#b8e63d] transition-colors"
+                    >
+                      Czytaj artykuł →
+                    </Link>
+                  </div>
                 </div>
 
-                {/* Chevron */}
-                <div className="ml-4 flex-shrink-0">
+                {/* Chevron for expand (optional) */}
+                <div className="ml-4 flex-shrink-0 cursor-pointer" onClick={() => setExpandedArticle(expandedArticle === article.id ? null : article.id)}>
                   <svg
                     className={`w-6 h-6 text-[#c7ff4e] transition-transform duration-300 ${
                       expandedArticle === article.id ? 'rotate-180' : ''
@@ -129,18 +140,6 @@ const Blog: React.FC = () => {
                   <p className="text-[#9aa0b3] text-sm leading-relaxed mb-4">
                     {article.meta_description}
                   </p>
-                  <div className="flex gap-3">
-                    <Link
-                      href={`/blog/${article.slug}`}
-                      className="px-4 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-[#b8e63d] transition-colors text-sm inline-block"
-                      onClick={e => e.stopPropagation()}
-                    >
-                      Czytaj artykuł: {article.title}
-                    </Link>
-                    <button className="px-4 py-2 bg-[#2a2f3e] text-white rounded-lg font-semibold hover:bg-[#3a3f4e] transition-colors text-sm">
-                      Zapisz
-                    </button>
-                  </div>
                 </motion.div>
               )}
             </motion.div>
