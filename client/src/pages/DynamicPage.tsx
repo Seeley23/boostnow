@@ -11,7 +11,29 @@ import websiteData from '../data/blog/website-cms.json';
 const LIME = "#c7ff4e";
 const NAVY = "#0b1020";
 
-// ── Reusable fade-in wrapper ──────────────────
+const LOCAL_SEO: Record<string, { title: string; description: string }> = {
+  olsztyn: {
+    title: "Agencja Marketingowa Olsztyn — SEO, GEO i Tworzenie Stron | BoostNow",
+    description: "BoostNow w Olsztynie: SEO, GEO (AI Search), AEO i strony internetowe dla firm z Warmii. Widoczność w Google i ChatGPT. Darmowy audyt."
+  },
+  barczewo: {
+    title: "SEO i Marketing Internetowy Barczewo | BoostNow",
+    description: "Pozycjonowanie i marketing dla firm z Barczewa. Lokalne SEO, strony www i widoczność w AI. BoostNow — agencja z regionu Olsztyna."
+  },
+  stawiguda: {
+    title: "Agencja SEO Stawiguda — Pozycjonowanie Lokalne | BoostNow",
+    description: "SEO i GEO dla firm ze Stawigudy. Budujemy widoczność w Google i AI Search. Strony, audyty i strategia marketingowa od BoostNow."
+  },
+  dywity: {
+    title: "SEO Dywity — Pozycjonowanie dla Firm Satelitarnych Olsztyna | BoostNow",
+    description: "Marketing internetowy i SEO dla firm z Dywit. Lokalna widoczność, strony www i optymalizacja pod AI. BoostNow."
+  },
+  olsztynek: {
+    title: "Marketing Internetowy Olsztynek | SEO i GEO | BoostNow",
+    description: "Strategia SEO i marketingu dla firm z Olsztynka. Widoczność w Google, ChatGPT i lokalnych wynikach. BoostNow."
+  }
+};
+
 function FadeIn({
   children,
   delay = 0,
@@ -36,7 +58,6 @@ function FadeIn({
   );
 }
 
-// ── FAQ item ──────────────────────────────────
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
@@ -64,10 +85,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         transition={{ duration: 0.3 }}
         className="overflow-hidden"
       >
-        <p
-          className="pb-5 text-sm leading-relaxed"
-          style={{ color: "rgba(247,248,250,0.6)" }}
-        >
+        <p className="pb-5 text-sm leading-relaxed" style={{ color: "rgba(247,248,250,0.6)" }}>
           {a}
         </p>
       </motion.div>
@@ -82,32 +100,31 @@ const DynamicPage: React.FC = () => {
 
   useEffect(() => {
     if (slug && websiteData && websiteData.pages) {
-      const foundPage = websiteData.pages.find(p => p.slug === slug);
+      const foundPage = websiteData.pages.find((p: any) => p.slug === slug);
       setPage(foundPage || null);
     } else if (!slug && websiteData && websiteData.pages) {
-      const homePage = websiteData.pages.find(p => p.slug === 'home');
+      const homePage = websiteData.pages.find((p: any) => p.slug === 'home');
       setPage(homePage || null);
     }
   }, [slug]);
 
-  if (!page) {
+  if (!page && !LOCAL_SEO[slug]) {
     return <NotFound />;
   }
 
-  // Support both old flat structure and new nested seo/jsonLd structure
-  const seoTitle = page.seo?.title || page.SEO_Title || page.name || page.PageName || 'BoostNow';
-  const seoDesc = page.seo?.description || page.SEO_Desc || '';
-  const seoKeywords = page.seo?.primaryKeyword || page.Focus_Keyphrase || '';
-  const pageName = page.name || page.pageName || page.PageName || '';
+  const local = LOCAL_SEO[slug] || {};
+  const seoTitle = page?.seo?.title || page?.SEO_Title || local.title || page?.name || page?.PageName || 'BoostNow';
+  const seoDesc = page?.seo?.description || page?.SEO_Desc || local.description || '';
+  const seoKeywords = page?.seo?.primaryKeyword || page?.Focus_Keyphrase || '';
+  const pageName = page?.name || page?.pageName || page?.PageName || slug || '';
+  const canonical = `https://boostnow.pl/${slug || ''}`;
 
-  // FAQ sections from sections array (new structure) or legacy FAQ_Data field
-  const faqSections = page.sections?.filter((s: any) => s.type === 'FAQ') || [];
-  const legacyFaqs = page.FAQ_Data ? (() => { try { return JSON.parse(page.FAQ_Data); } catch { return []; } })() : [];
+  const faqSections = page?.sections?.filter((s: any) => s.type === 'FAQ') || [];
+  const legacyFaqs = page?.FAQ_Data ? (() => { try { return JSON.parse(page.FAQ_Data); } catch { return []; } })() : [];
   const faqs = faqSections.length > 0
     ? faqSections.map((s: any) => ({ question: s.title, answer: s.content }))
     : legacyFaqs;
 
-  // FAQ schema from sections
   const faqSchema = faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -118,30 +135,28 @@ const DynamicPage: React.FC = () => {
     }))
   } : null;
 
-  const isHome = page.slug === 'home';
+  const isHome = page?.slug === 'home';
 
   return (
     <div style={{ background: NAVY, color: "#f7f8fa" }} className="min-h-screen">
       <Helmet>
         <title>{seoTitle}</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content={seoDesc} />
-        <meta name="keywords" content={seoKeywords} />
-        {/* jsonLd from sync-airtable (new structure) */}
-        {page.jsonLd && (
-          <script type="application/ld+json">
-            {JSON.stringify(page.jsonLd)}
-          </script>
+        {seoKeywords && <meta name="keywords" content={seoKeywords} />}
+        <link rel="canonical" href={canonical} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDesc} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="website" />
+        {page?.jsonLd && (
+          <script type="application/ld+json">{JSON.stringify(page.jsonLd)}</script>
         )}
-        {/* Legacy flat Schema_Markup field */}
-        {!page.jsonLd && page.Schema_Markup && (
-          <script type="application/ld+json">
-            {page.Schema_Markup}
-          </script>
+        {!page?.jsonLd && page?.Schema_Markup && (
+          <script type="application/ld+json">{page.Schema_Markup}</script>
         )}
         {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
+          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         )}
       </Helmet>
 
@@ -155,7 +170,6 @@ const DynamicPage: React.FC = () => {
         </main>
       ) : (
         <main>
-          {/* ── 1. HERO (AIO Style) ─────────────────────────────── */}
           <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
             <div
               className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full blur-[120px] pointer-events-none"
@@ -179,29 +193,24 @@ const DynamicPage: React.FC = () => {
 
               <FadeIn delay={0.1}>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-center leading-[0.95] tracking-tight mb-8">
-                  {page.sections?.find((s: any) => s.type === 'Hero')?.title || pageName}
+                  {page?.sections?.find((s: any) => s.type === 'Hero')?.title || pageName}
                 </h1>
               </FadeIn>
 
               <FadeIn delay={0.2}>
                 <p className="text-xl md:text-2xl text-center max-w-2xl mx-auto mb-10 leading-relaxed" style={{ color: "rgba(247,248,250,0.65)" }}>
-                  {page.sections?.find((s: any) => s.type === 'Hero')?.content}
+                  {page?.sections?.find((s: any) => s.type === 'Hero')?.content || seoDesc}
                 </p>
               </FadeIn>
             </div>
           </section>
 
-          {/* ── 2. CONTENT SECTIONS ─────────────────────────────── */}
-          {page.sections?.filter((s: any) => s.type !== 'Hero' && s.type !== 'FAQ' && s.type !== 'Contact').map((section: any, idx: number) => (
+          {page?.sections?.filter((s: any) => s.type !== 'Hero' && s.type !== 'FAQ' && s.type !== 'Contact').map((section: any, idx: number) => (
             <section key={idx} className="py-24 border-t" style={{ borderColor: "rgba(247,248,250,0.05)" }}>
               <div className="container max-w-4xl mx-auto px-6">
                 <FadeIn>
-                  <h2 className="text-3xl md:text-5xl font-black mb-8 text-white leading-tight">
-                    {section.title}
-                  </h2>
-                  <div className="text-lg md:text-xl leading-relaxed" style={{ color: "rgba(247,248,250,0.7)" }}>
-                    {section.content}
-                  </div>
+                  <h2 className="text-3xl md:text-5xl font-black mb-8 text-white leading-tight">{section.title}</h2>
+                  <div className="text-lg md:text-xl leading-relaxed" style={{ color: "rgba(247,248,250,0.7)" }}>{section.content}</div>
                   {section.stats && (
                     <div className="mt-10 p-8 rounded-2xl border" style={{ background: "rgba(199,255,78,0.04)", borderColor: "rgba(199,255,78,0.18)" }}>
                       <span className="text-4xl font-black block mb-2" style={{ color: LIME }}>{section.stats}</span>
@@ -212,7 +221,6 @@ const DynamicPage: React.FC = () => {
             </section>
           ))}
 
-          {/* ── 3. FAQ (AIO Style) ─────────────────────────────── */}
           {faqs.length > 0 && (
             <section className="py-24 border-t" style={{ borderColor: "rgba(247,248,250,0.05)" }}>
               <div className="container max-w-3xl mx-auto px-6">
@@ -228,22 +236,21 @@ const DynamicPage: React.FC = () => {
             </section>
           )}
 
-          {/* ── 4. CONTACT (AIO Style) ─────────────────────────────── */}
           <section className="py-24 border-t" style={{ borderColor: "rgba(247,248,250,0.05)" }}>
             <div className="container max-w-4xl mx-auto px-6">
               <div className="bg-white/5 p-8 md:p-12 rounded-3xl border border-white/10">
                 <FadeIn>
                   <h2 className="text-3xl md:text-5xl font-black mb-6 text-white">
-                    {page.sections?.find((s: any) => s.type === 'Contact')?.title || 'Zacznijmy współpracę'}
+                    {page?.sections?.find((s: any) => s.type === 'Contact')?.title || 'Zacznijmy współpracę'}
                   </h2>
                   <p className="text-lg mb-10" style={{ color: "rgba(247,248,250,0.6)" }}>
-                    {page.sections?.find((s: any) => s.type === 'Contact')?.content || 'Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony.'}
+                    {page?.sections?.find((s: any) => s.type === 'Contact')?.content || 'Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony.'}
                   </p>
-                  <button 
+                  <button
                     className="py-4 px-8 rounded-xl font-black text-base tracking-wide transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                     style={{ background: LIME, color: NAVY }}
                   >
-                    {page.sections?.find((s: any) => s.type === 'Contact')?.ctaLabel || 'Darmowy Audyt →'}
+                    {page?.sections?.find((s: any) => s.type === 'Contact')?.ctaLabel || 'Darmowy Audyt →'}
                   </button>
                 </FadeIn>
               </div>
