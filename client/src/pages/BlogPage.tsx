@@ -31,25 +31,14 @@ const BlogPage: React.FC = () => {
   );
   const getArticleUrlPart = (article: Article) => article.slug || String(article.id);
 
-  // BreadcrumbList Schema for Blog Page
   useEffect(() => {
     const breadcrumbScript = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
     const breadcrumbSchema = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        {
-          '@type': 'ListItem',
-          'position': 1,
-          'name': 'Strona główna',
-          'item': 'https://boostnow.pl'
-        },
-        {
-          '@type': 'ListItem',
-          'position': 2,
-          'name': 'Blog',
-          'item': 'https://boostnow.pl/blog'
-        }
+        { '@type': 'ListItem', 'position': 1, 'name': 'Strona główna', 'item': 'https://boostnow.pl' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://boostnow.pl/blog' }
       ]
     };
 
@@ -63,39 +52,38 @@ const BlogPage: React.FC = () => {
       document.head.appendChild(script);
     }
 
-    // Cleanup on unmount
     return () => {
       const scriptToRemove = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
+      if (scriptToRemove) scriptToRemove.remove();
     };
   }, []);
 
-  // Filtruj artykuły
   const filteredArticles = articles;
-
-  // Paginacja
   const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
   const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
   const paginatedArticles = filteredArticles.slice(startIndex, startIndex + ARTICLES_PER_PAGE);
 
-  
+  const pageTitle = seo.title || 'Blog o GEO, AEO i SEO | BoostNow';
+  const pageDescription = seo.description || 'Artykuły o GEO (Generative Engine Optimization), AEO, SEO, psychologii decyzji i optymalizacji konwersji. Praktyczna wiedza od BoostNow.';
+  const pageCanonical = seo.canonicalUrl || 'https://boostnow.pl/blog';
 
   return (
     <div className="min-h-screen bg-[#0b1020]">
-      
       <Helmet>
-        <title>{seo.title || 'Blog | BoostNow'}</title>
+        <title>{pageTitle}</title>
         <meta name="robots" content="index, follow" />
-        {seo.description && <meta name="description" content={seo.description} />}
+        <meta name="description" content={pageDescription} />
         {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
-        {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
+        <link rel="canonical" href={pageCanonical} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={pageCanonical} />
+        <meta property="og:type" content="website" />
         {blogPage?.jsonLd && (
           <script type="application/ld+json">{JSON.stringify(blogPage.jsonLd)}</script>
         )}
       </Helmet>
-      {/* Breadcrumbs */}
+
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-2 text-sm text-gray-400">
@@ -108,7 +96,6 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Header */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -130,8 +117,6 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
 
-
-      {/* Articles Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -145,7 +130,6 @@ const BlogPage: React.FC = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-[#c7ff4e] font-bold text-sm">#{article.id}</span>
-                  
                 </div>
 
                 <Link href={`/blog/${getArticleUrlPart(article)}`} className="block group">
@@ -184,7 +168,6 @@ const BlogPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Pagination */}
           {totalPages > 1 && (
             <div className="flex items-center justify-center gap-2 mt-12">
               <button
