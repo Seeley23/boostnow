@@ -15,23 +15,28 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { label: "O nas", href: "#about" },
+  { label: "O nas", href: "/o-nas" },
   { label: "Usługi", href: "#services" },
   { label: "Proces", href: "#process" },
   { label: "Rezultaty", href: "#results" },
-  { label: "Kontakt", href: "#contact" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 const serviceLinks = [
   { label: "AIO dla e-commerce", href: "/aio", highlight: true },
   { label: "AIO dla e-commerce (szczegóły)", href: "/aio-ecommerce" },
   { label: "Blog", href: "/blog" },
-  { label: "Jak zwiększać konwersje", href: "/blog/jak-zwiekszac-konwersje-ecommerce" },
   { label: "Kalkulator strat", href: "/calculator" },
   { label: "Oblicz straty", href: "/oblicz-straty" },
   { label: "Słownik marketingowy", href: "/glossary" },
+  { label: "Słownik", href: "/slownik" },
   { label: "Agencja Olsztyn", href: "/olsztyn" },
   { label: "Mateusz Nowotka – autor", href: "/mateusz-nowotka" },
+  { label: "GEO co to jest", href: "/blog/geo-co-to-jest" },
+  { label: "AEO co to jest", href: "/blog/aeo-co-to-jest" },
+  { label: "Pozycjonowanie lokalne", href: "/blog/pozycjonowanie-lokalne" },
+  { label: "SEO co to", href: "/blog/seo-co-to" },
+  { label: "Audyt SEO", href: "/blog/audyt-seo" },
 ];
 
 export default function Footer() {
@@ -94,12 +99,18 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </button>
+                  {link.href.startsWith('#') ? (
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -108,7 +119,7 @@ export default function Footer() {
           {/* Services / Products column */}
           <div className="lg:col-span-3">
             <h4 className="font-heading font-semibold text-foreground mb-4">
-              Usługi
+              Usługi & Artykuły
             </h4>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
