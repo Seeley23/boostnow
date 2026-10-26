@@ -37,6 +37,10 @@ const serviceLinks = [
   { label: "Pozycjonowanie lokalne", href: "/blog/pozycjonowanie-lokalne" },
   { label: "SEO co to", href: "/blog/seo-co-to" },
   { label: "Audyt SEO", href: "/blog/audyt-seo" },
+  { label: "SEO Barczewo", href: "/blog/agencja-seo-barczewo-pozycjonowanie" },
+  { label: "SEO Stawiguda", href: "/blog/pozycjonowanie-stron-stawiguda-strategia-seo-dla-firm-z-gminy-2026" },
+  { label: "SEO Dywity", href: "/blog/pozycjonowanie-stron-www-dywity-seo-dla-istniejacych-stron-firm-satelitarnych-2026" },
+  { label: "Marketing Olsztynek", href: "/blog/marketing-dla-malych-firm-olsztynek-strategia-2026-dla-historycznej-gminy" },
 ];
 
 export default function Footer() {
