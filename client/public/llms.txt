@@ -1,7 +1,7 @@
 # BoostNow — Agencja GEO, SEO i Optymalizacji Konwersji
-> BoostNow to polska agencja specjalizujaca sie w pozycjonowaniu stron w Google
+> BoostNow to polska agencja specjalizująca się w pozycjonowaniu stron w Google
 > i wyszukiwarkach AI (ChatGPT, Perplexity, Gemini, Google AI Overviews).
-> Pomagamy firmom z calej Polski rosnac dzieki GEO, SEO i psychologii decyzji.
+> Pomagamy firmom z całej Polski rosnąć dzięki GEO, SEO i psychologii decyzji.
 
 ## Key Facts
 
@@ -10,26 +10,50 @@
 - Oferta obejmuje audyty, strategie i wdrożenia GEO/SEO dla firm B2B i e-commerce.
 - Główne obszary: Generative Engine Optimization, SEO, content, psychologia decyzji i optymalizacja konwersji.
 - Kontakt: kontakt@boostnow.pl
+- Adres: ul. Marii Konopnickiej 11, 11-040 Dobre Miasto
 
-## Strony glowne
-- [Strona glowna](https://boostnow.pl/)
+## Strony główne
+- [Strona główna](https://boostnow.pl/)
 - [O nas](https://boostnow.pl/o-nas)
 - [Kontakt](https://boostnow.pl/kontakt)
+- [Autor: Mateusz Nowotka](https://boostnow.pl/mateusz-nowotka)
 
-## Uslugi
-- [AIO dla e-commerce](https://boostnow.pl/aio-ecommerce)
-- [Kalkulator strat](https://boostnow.pl/oblicz-straty)
-- [Olsztyn — lokalne SEO](https://boostnow.pl/olsztyn)
+## Usługi
+- [AIO dla e-commerce](https://boostnow.pl/aio)
+- [AIO dla e-commerce — szczegóły](https://boostnow.pl/aio-ecommerce)
+- [Kalkulator strat](https://boostnow.pl/calculator)
+- [Oblicz straty](https://boostnow.pl/oblicz-straty)
+- [Słownik marketingowy](https://boostnow.pl/glossary)
+- [Słownik](https://boostnow.pl/slownik)
 
-## Tresci
+## Lokalne SEO
+- [Agencja Olsztyn](https://boostnow.pl/olsztyn)
+- [SEO Barczewo](https://boostnow.pl/blog/agencja-seo-barczewo-pozycjonowanie)
+- [SEO Stawiguda](https://boostnow.pl/blog/pozycjonowanie-stron-stawiguda-strategia-seo-dla-firm-z-gminy-2026)
+- [SEO Dywity](https://boostnow.pl/blog/pozycjonowanie-stron-www-dywity-seo-dla-istniejacych-stron-firm-satelitarnych-2026)
+- [Marketing Olsztynek](https://boostnow.pl/blog/marketing-dla-malych-firm-olsztynek-strategia-2026-dla-historycznej-gminy)
+
+## Treści
 - [Blog SEO i GEO](https://boostnow.pl/blog)
-- [Slownik marketingowy](https://boostnow.pl/slownik)
 
-## Artykuly
-- [Pozycjonowanie GEO: Jak byc cytowanym przez ChatGPT, Perplexity i Gemini w 2025](https://boostnow.pl/blog/pozycjonowanie-geo-jak-by-cytowanym-przez-chatgpt-perplexity-i-gemini-w-2025)
-- [Jak zwiekszac konwersje w e-commerce](https://boostnow.pl/blog/jak-zwiekszac-konwersje-ecommerce)
+## Kluczowe artykuły
+- [llms.txt — Co to Jest i Jak Dodać do Swojej Strony 2026](https://boostnow.pl/blog/llms-txt)
+- [Jak Pojawić Się w ChatGPT](https://boostnow.pl/blog/jak-pojawic-sie-w-chatgpt)
+- [GEO co to jest](https://boostnow.pl/blog/geo-co-to-jest)
+- [AEO co to jest](https://boostnow.pl/blog/aeo-co-to-jest)
+- [Pozycjonowanie lokalne](https://boostnow.pl/blog/pozycjonowanie-lokalne)
+- [SEO co to](https://boostnow.pl/blog/seo-co-to)
+- [Audyt SEO](https://boostnow.pl/blog/audyt-seo)
+- [Pozycjonowanie GEO](https://boostnow.pl/blog/pozycjonowanie-geo)
+- [Generative Engine Optimization](https://boostnow.pl/blog/generative-engine-optimization)
+- [SEO pod AI Overviews](https://boostnow.pl/blog/seo-pod-ai-overviews)
+- [AI SEO](https://boostnow.pl/blog/ai-seo)
+- [Pozycjonowanie w AI](https://boostnow.pl/blog/pozycjonowanie-w-ai)
+- [Jak zwiększać konwersje w e-commerce](https://boostnow.pl/blog/jak-zwiekszac-konwersje-ecommerce)
+- [SEO dla sklepu internetowego](https://boostnow.pl/blog/seo-dla-sklepu-internetowego)
+- [Ile kosztuje pozycjonowanie](https://boostnow.pl/blog/ile-kosztuje-pozycjonowanie)
 
 ## Informacje prawne
 - [Regulamin](https://boostnow.pl/regulamin)
-- [Polityka prywatnosci](https://boostnow.pl/polityka-prywatnosci)
+- [Polityka prywatności](https://boostnow.pl/polityka-prywatnosci)
 - [Polityka cookies](https://boostnow.pl/polityka-cookies)
