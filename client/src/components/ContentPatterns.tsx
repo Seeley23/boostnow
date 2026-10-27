@@ -52,6 +52,41 @@ export const DefinitionBlock: React.FC<DefinitionBlockProps> = ({ term, definiti
   </div>
 );
 
+interface ComparisonRow {
+  feature: string;
+  seo: string;
+  geo: string;
+}
+
+interface ComparisonTableProps {
+  title: string;
+  rows: ComparisonRow[];
+}
+
+export const ComparisonTable: React.FC<ComparisonTableProps> = ({ title, rows }) => (
+  <div className="my-6 overflow-x-auto">
+    <h4 className="text-lg font-bold text-white mb-3">{title}</h4>
+    <table className="w-full text-sm border-collapse">
+      <thead>
+        <tr className="border-b border-[#2a2f3e]">
+          <th className="text-left py-2 text-[#9aa0b3] font-medium">Cecha</th>
+          <th className="text-left py-2 text-[#9aa0b3] font-medium">SEO</th>
+          <th className="text-left py-2 text-[#c7ff4e] font-medium">GEO</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, i) => (
+          <tr key={i} className="border-b border-[#2a2f3e]">
+            <td className="py-2 text-white">{row.feature}</td>
+            <td className="py-2 text-[#9aa0b3]">{row.seo}</td>
+            <td className="py-2 text-white">{row.geo}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
 interface FAQItemProps {
   question: string;
   answer: string;
