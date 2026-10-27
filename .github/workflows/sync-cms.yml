@@ -60,6 +60,9 @@ jobs:
       - name: Build static site
         run: pnpm run build:static
 
+      - name: Prerender key articles for AI crawlers
+        run: node scripts/prerender-articles.cjs
+
       - name: Validate build artifact
         run: |
           test -f dist/public/index.html
