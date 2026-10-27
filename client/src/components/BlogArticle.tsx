@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
@@ -43,21 +43,38 @@ const SEO_VS_GEO = [
   { feature: 'Czas efektu', seo: '3-6 miesięcy', geo: '7-90 dni' },
 ];
 
+const ARTICLES: Article[] = articlesMetadata as Article[];
+
 const BlogArticle: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [, setLocation] = useLocation();
   const [article, setArticle] = useState<ArticleContent | null>(null);
-  const [relatedArticles, setRelatedArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const articles: Article[] = articlesMetadata as Article[];
+  const navigate = useCallback((path: string) => setLocation(path), [setLocation]);
+
+  const relatedArticles = useMemo(() => {
+    if (!id) return [];
+    const current = ARTICLES.find(a => a.slug === id || String(a.id) === id);
+    if (!current) return [];
+    const currentAnchors = new Set((current.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean));
+    return ARTICLES
+      .filter(a => a.id !== current.id)
+      .map(a => {
+        const anchors = (a.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
+        return { a, overlap: anchors.filter(x => currentAnchors.has(x)).length };
+      })
+      .sort((x, y) => y.overlap - x.overlap || x.a.id - y.a.id)
+      .slice(0, 3)
+      .map(x => x.a);
+  }, [id]);
 
   useEffect(() => {
     if (article) {
       const articleUrl = `https://boostnow.pl/blog/${id}`;
       const articleData = (/^\d+$/.test(id || '')
-        ? articlesMetadata[parseInt(id!) - 1]
-        : articlesMetadata.find((a: any) => a.slug === id)) as any;
+        ? ARTICLES[parseInt(id!) - 1]
+        : ARTICLES.find((a: any) => a.slug === id)) as any;
 
       const articleSchema = {
         '@context': 'https://schema.org',
@@ -129,13 +146,13 @@ const BlogArticle: React.FC = () => {
     const loadArticle = async () => {
       const articleIndex = /^\d+$/.test(id || '')
         ? parseInt(id!) - 1
-        : articles.findIndex(a => a.slug === id);
+        : ARTICLES.findIndex(a => a.slug === id);
 
-      if (articleIndex >= 0 && articleIndex < articles.length) {
+      if (articleIndex >= 0 && articleIndex < ARTICLES.length) {
         const articleId = articleIndex + 1;
         const fileMap = articleFilesMap as Record<string, any>;
         const fileInfo = fileMap[articleId.toString()];
-        const articleMeta = articles[articleIndex];
+        const articleMeta = ARTICLES[articleIndex];
         const fallbackContent = `# ${articleMeta.title}\n\n${articleMeta.meta_description}`;
 
         const buildArticleState = (content: string): ArticleContent => ({
@@ -159,26 +176,12 @@ const BlogArticle: React.FC = () => {
         } catch {
           setArticle(buildArticleState(fallbackContent));
         }
-
-        const current = articles[articleIndex];
-        const currentAnchors = new Set((current.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean));
-        const related = articles
-          .filter(a => a.id !== current.id)
-          .map(a => {
-            const anchors = (a.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
-            return { a, overlap: anchors.filter(x => currentAnchors.has(x)).length };
-          })
-          .sort((x, y) => y.overlap - x.overlap || x.a.id - y.a.id)
-          .slice(0, 3)
-          .map(x => x.a);
-
-        setRelatedArticles(related);
       }
       setLoading(false);
     };
 
     loadArticle();
-  }, [id, articles]);
+  }, [id]);
 
   if (loading) {
     return (
@@ -193,7 +196,7 @@ const BlogArticle: React.FC = () => {
       <div className="min-h-screen bg-[#0b1020] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Artykuł nie znaleziony</h1>
-          <button onClick={() => setLocation('/')} className="px-6 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-white transition-colors">
+          <button onClick={() => navigate('/')} className="px-6 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-white transition-colors">
             Wróć do strony głównej
           </button>
         </div>
@@ -227,9 +230,9 @@ const BlogArticle: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="lg:col-span-2">
             <nav className="flex items-center gap-2 mb-8 text-sm text-[#9aa0b3]">
-              <button onClick={() => setLocation('/')} className="hover:text-[#c7ff4e] transition-colors">Strona główna</button>
+              <button onClick={() => navigate('/')} className="hover:text-[#c7ff4e] transition-colors">Strona główna</button>
               <span>/</span>
-              <button onClick={() => setLocation('/blog')} className="hover:text-[#c7ff4e] transition-colors">Blog</button>
+              <button onClick={() => navigate('/blog')} className="hover:text-[#c7ff4e] transition-colors">Blog</button>
               <span>/</span>
               <span className="text-[#c7ff4e]">{article.title.substring(0, 40)}...</span>
             </nav>
@@ -329,7 +332,7 @@ const BlogArticle: React.FC = () => {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
-                      onClick={() => setLocation(`/blog/${relArticle.slug || relArticle.id}`)}
+                      onClick={() => navigate(`/blog/${relArticle.slug || relArticle.id}`)}
                       className="w-full text-left p-3 rounded-lg bg-[#0b1020] hover:bg-[#1a1f2e] transition-all duration-300 group"
                     >
                       <div className="flex items-start gap-2">
