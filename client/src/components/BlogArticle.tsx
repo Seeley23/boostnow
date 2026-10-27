@@ -24,6 +24,8 @@ interface ArticleContent {
   target_industry: string;
   word_count: number;
   content: string;
+  seoTitle?: string | null;
+  schemaJson?: any;
 }
 
 const BlogArticle: React.FC = () => {
@@ -37,70 +39,15 @@ const BlogArticle: React.FC = () => {
 
   useEffect(() => {
     if (article) {
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', article.title);
-      else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:title');
-        meta.setAttribute('content', article.title);
-        document.head.appendChild(meta);
-      }
-
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', article.meta_description);
-      else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:description');
-        meta.setAttribute('content', article.meta_description);
-        document.head.appendChild(meta);
-      }
-
-      const ogImage = document.querySelector('meta[property="og:image"]');
-      const imageUrl = `/og-images/${id}.png`;
-      if (ogImage) ogImage.setAttribute('content', imageUrl);
-      else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:image');
-        meta.setAttribute('content', imageUrl);
-        document.head.appendChild(meta);
-      }
-
-      const ogType = document.querySelector('meta[property="og:type"]');
-      if (ogType) ogType.setAttribute('content', 'article');
-      else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:type');
-        meta.setAttribute('content', 'article');
-        document.head.appendChild(meta);
-      }
-
-      const pubTime = document.querySelector('meta[property="article:published_time"]');
+      const articleUrl = `https://boostnow.pl/blog/${id}`;
       const articleData = (/^\d+$/.test(id || '')
         ? articlesMetadata[parseInt(id!) - 1]
         : articlesMetadata.find((a: any) => a.slug === id)) as any;
-      if (articleData?.date) {
-        if (pubTime) pubTime.setAttribute('content', articleData.date);
-        else {
-          const meta = document.createElement('meta');
-          meta.setAttribute('property', 'article:published_time');
-          meta.setAttribute('content', articleData.date);
-          document.head.appendChild(meta);
-        }
-      }
 
-      const tags = article.semantic_anchors.split(',').map(t => t.trim());
-      tags.forEach(tag => {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'article:tag');
-        meta.setAttribute('content', tag);
-        document.head.appendChild(meta);
-      });
-
-      const articleUrl = `https://boostnow.pl/blog/${id}`;
-
-      const autoSchema = {
+      // Article schema
+      const articleSchema = {
         '@context': 'https://schema.org',
-        '@type': (article as any).schemaType || 'Article',
+        '@type': 'Article',
         '@id': articleUrl,
         mainEntityOfPage: {
           '@type': 'WebPage',
@@ -110,20 +57,21 @@ const BlogArticle: React.FC = () => {
         description: article.meta_description,
         image: {
           '@type': 'ImageObject',
-          url: `https://boostnow.pl${imageUrl}`,
+          url: `https://boostnow.pl/og-images/${id}.png`,
           width: 1200,
           height: 630
         },
-        datePublished: articleData?.date || new Date().toISOString(),
-        dateModified: articleData?.date || new Date().toISOString(),
+        datePublished: articleData?.date || new Date().toISOString().split('T')[0],
+        dateModified: articleData?.date || new Date().toISOString().split('T')[0],
         author: {
           '@type': 'Person',
           name: 'Mateusz Nowotka',
-          url: 'https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/',
+          url: 'https://boostnow.pl/mateusz-nowotka',
           jobTitle: 'Founder & CEO',
           worksFor: {
             '@type': 'Organization',
-            name: 'BoostNow'
+            name: 'BoostNow',
+            url: 'https://boostnow.pl'
           }
         },
         publisher: {
@@ -140,17 +88,47 @@ const BlogArticle: React.FC = () => {
         articleSection: article.target_industry,
         wordCount: article.word_count,
         keywords: [article.semantic_anchors, article.target_industry].join(', '),
-        inLanguage: 'pl-PL',
-        about: {
-          '@type': 'Thing',
-          name: article.semantic_anchors?.split(',')[0]?.trim() || article.title
-        }
+        inLanguage: 'pl-PL'
       };
 
-      const rawSchema = (article as any).schemaJson || autoSchema;
-      const schemas: any[] = Array.isArray(rawSchema) ? rawSchema : [rawSchema];
+      // BreadcrumbList schema
+      const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Strona główna',
+            item: 'https://boostnow.pl'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog',
+            item: 'https://boostnow.pl/blog'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: article.title,
+            item: articleUrl
+          }
+        ]
+      };
 
+      // FAQPage schema (if schemaJson has FAQ or we generate a basic one)
+      let faqSchema = null;
+      if (article.schemaJson && article.schemaJson['@graph']) {
+        const faq = article.schemaJson['@graph'].find((s: any) => s['@type'] === 'FAQPage');
+        if (faq) faqSchema = faq;
+      }
+
+      // Inject schemas
       document.querySelectorAll('script[data-article-schema]').forEach(el => el.remove());
+
+      const schemas = [articleSchema, breadcrumbSchema];
+      if (faqSchema) schemas.push(faqSchema);
 
       schemas.forEach((s, i) => {
         const script = document.createElement('script');
@@ -159,42 +137,6 @@ const BlogArticle: React.FC = () => {
         script.textContent = JSON.stringify(s);
         document.head.appendChild(script);
       });
-
-      const breadcrumbScript = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
-      const breadcrumbSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement': [
-          {
-            '@type': 'ListItem',
-            'position': 1,
-            'name': 'Strona główna',
-            'item': 'https://boostnow.pl'
-          },
-          {
-            '@type': 'ListItem',
-            'position': 2,
-            'name': 'Blog',
-            'item': 'https://boostnow.pl/blog'
-          },
-          {
-            '@type': 'ListItem',
-            'position': 3,
-            'name': article.title,
-            'item': articleUrl
-          }
-        ]
-      };
-
-      if (breadcrumbScript) {
-        breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
-      } else {
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.setAttribute('data-breadcrumb-schema', 'true');
-        script.textContent = JSON.stringify(breadcrumbSchema);
-        document.head.appendChild(script);
-      }
     }
   }, [article, id]);
 
@@ -212,7 +154,7 @@ const BlogArticle: React.FC = () => {
         const articleMeta = articles[articleIndex];
         const fallbackContent = `# ${articleMeta.title}\n\n${articleMeta.meta_description}`;
 
-        const buildArticleState = (content: string) => ({
+        const buildArticleState = (content: string): ArticleContent => ({
           title: articleMeta.title,
           meta_description: articleMeta.meta_description,
           semantic_anchors: articleMeta.semantic_anchors,
@@ -231,12 +173,12 @@ const BlogArticle: React.FC = () => {
           const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
           content = content.replace(frontmatterRegex, '').trim();
 
-          setArticle(buildArticleState(content || fallbackContent) as any);
+          setArticle(buildArticleState(content || fallbackContent));
         } catch {
-          setArticle(buildArticleState(fallbackContent) as any);
+          setArticle(buildArticleState(fallbackContent));
         }
 
-        // Improved related articles: prefer semantic anchors overlap
+        // Related articles by semantic overlap
         const current = articles[articleIndex];
         const currentAnchors = new Set((current.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean));
         const related = articles
@@ -282,20 +224,23 @@ const BlogArticle: React.FC = () => {
     );
   }
 
+  // Lead-first answer block: use meta_description as the direct answer
+  const leadAnswer = article.meta_description;
+
   return (
     <div className="min-h-screen bg-[#0b1020] py-20 px-4 sm:px-6 lg:px-8">
       <Helmet>
-        <title>{(article as any).seoTitle || article.title} | BoostNow</title>
+        <title>{article.seoTitle || article.title} | BoostNow</title>
         <meta name="robots" content="index, follow" />
         <meta name="description" content={article.meta_description} />
         <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, decision science, neuromarketing, psychologia konwersji`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://boostnow.pl/blog/${id}`} />
-        <meta property="og:title" content={(article as any).seoTitle || article.title} />
+        <meta property="og:title" content={article.seoTitle || article.title} />
         <meta property="og:description" content={article.meta_description} />
         <meta property="og:image" content={`https://boostnow.pl/og-images/${id}.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={(article as any).seoTitle || article.title} />
+        <meta name="twitter:title" content={article.seoTitle || article.title} />
         <meta name="twitter:description" content={article.meta_description} />
         <link rel="canonical" href={`https://boostnow.pl/blog/${id}`} />
       </Helmet>
@@ -320,9 +265,15 @@ const BlogArticle: React.FC = () => {
                 <span className="text-[#c7ff4e] text-xs font-semibold px-2 py-1 bg-[#c7ff4e]/10 rounded">{article.target_industry}</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair leading-tight">{article.title}</h1>
-              <p className="text-[#9aa0b3] text-lg mb-6">{article.meta_description}</p>
+              
+              {/* Lead-first answer block for GEO citability */}
+              <div className="mb-6 p-4 rounded-lg bg-[#c7ff4e]/10 border border-[#c7ff4e]/30">
+                <p className="text-[#c7ff4e] font-semibold text-sm mb-1">Szybka odpowiedź</p>
+                <p className="text-white text-base leading-relaxed">{leadAnswer}</p>
+              </div>
+
               <div className="flex flex-wrap items-center gap-6 text-sm text-[#9aa0b3] border-t border-b border-[#2a2f3e] py-4">
-                <div className="flex items-center gap-2"><span>📅</span><span>30 grudnia 2025</span></div>
+                <div className="flex items-center gap-2"><span>📅</span><span>{article.date || '2026'}</span></div>
                 <div className="flex items-center gap-2"><span>📝</span><span>{article.word_count} słów</span></div>
                 <div className="flex items-center gap-2"><span>⏱️</span><span>~{Math.ceil(article.word_count / 200)} min czytania</span></div>
               </div>
