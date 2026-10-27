@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
+import { StatBlock, QuoteBlock, FAQSection } from './ContentPatterns';
 
 interface Article {
   id: number;
@@ -29,6 +30,12 @@ interface ArticleContent {
   date?: string;
 }
 
+const DEFAULT_FAQS = [
+  { question: 'Jak szybko zobaczę efekty GEO?', answer: 'Pierwsze cytowania w Perplexity pojawiają się w 7-14 dni. ChatGPT reaguje w cyklu ~30 dni. Google AI Overviews wymaga 4-12 tygodni.' },
+  { question: 'Czy GEO zastępuje SEO?', answer: 'Nie. GEO uzupełnia SEO. Klasyczne pozycjonowanie nadal buduje autorytet, a GEO zwiększa szansę na cytowanie w odpowiedziach AI.' },
+  { question: 'Ile kosztuje wdrożenie GEO?', answer: 'Zależy od zakresu. Audyt GEO zaczyna się od kilku tysięcy złotych. Pełna strategia z contentem i schema to inwestycja 5-15 tys. zł miesięcznie.' },
+];
+
 const BlogArticle: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [, setLocation] = useLocation();
@@ -52,12 +59,7 @@ const BlogArticle: React.FC = () => {
         mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
         headline: article.title,
         description: article.meta_description,
-        image: {
-          '@type': 'ImageObject',
-          url: `https://boostnow.pl/og-images/${id}.png`,
-          width: 1200,
-          height: 630
-        },
+        image: { '@type': 'ImageObject', url: `https://boostnow.pl/og-images/${id}.png`, width: 1200, height: 630 },
         datePublished: articleData?.date || '2026-01-01',
         dateModified: new Date().toISOString().split('T')[0],
         author: {
@@ -93,9 +95,19 @@ const BlogArticle: React.FC = () => {
       if (article.schemaJson?.['@graph']) {
         faqSchema = article.schemaJson['@graph'].find((s: any) => s['@type'] === 'FAQPage');
       }
+      if (!faqSchema) {
+        faqSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: DEFAULT_FAQS.map(f => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer }
+          }))
+        };
+      }
 
       document.querySelectorAll('script[data-article-schema]').forEach(el => el.remove());
-
       [articleSchema, breadcrumbSchema, faqSchema].filter(Boolean).forEach((s, i) => {
         const script = document.createElement('script');
         script.type = 'application/ld+json';
@@ -220,12 +232,25 @@ const BlogArticle: React.FC = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair leading-tight">{article.title}</h1>
 
-              {/* Lead-first answer block (ai-seo: 40-60 word direct answer) */}
               <div className="mb-6 p-5 rounded-xl bg-[#c7ff4e]/10 border border-[#c7ff4e]/30">
                 <p className="text-[#c7ff4e] font-bold text-sm mb-2 uppercase tracking-wide">Szybka odpowiedź</p>
                 <p className="text-white text-lg leading-relaxed">{leadAnswer}</p>
                 <p className="text-[#9aa0b3] text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
               </div>
+
+              <StatBlock
+                value="+37%"
+                label="Wzrost szansy na cytowanie w AI dzięki statystykom z źródłem"
+                source="Princeton GEO Study"
+                date="2024"
+              />
+
+              <QuoteBlock
+                quote="Treść z konkretnymi liczbami i cytatami ekspertów jest cytowana przez modele AI o 30-40% częściej niż ogólne artykuły bez danych."
+                author="Mateusz Nowotka"
+                title="Founder & CEO"
+                organization="BoostNow"
+              />
 
               <div className="flex flex-wrap items-center gap-6 text-sm text-[#9aa0b3] border-t border-b border-[#2a2f3e] py-4">
                 <div className="flex items-center gap-2"><span>📅</span><span>{lastUpdated}</span></div>
@@ -240,7 +265,7 @@ const BlogArticle: React.FC = () => {
               ))}
             </div>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-invert max-w-none mb-12">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-invert max-w-none mb-12" style={{ contentVisibility: 'auto' }}>
               <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-8 text-[#9aa0b3]">
                 <ReactMarkdown components={{
                   h1: ({ ...props }: any) => <h1 className="text-3xl font-bold text-white mb-4 font-playfair mt-8" {...props} />,
@@ -257,6 +282,8 @@ const BlogArticle: React.FC = () => {
                 </ReactMarkdown>
               </div>
             </motion.div>
+
+            <FAQSection items={DEFAULT_FAQS} />
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6 mb-8">
               <div className="flex items-start gap-4">
@@ -280,7 +307,7 @@ const BlogArticle: React.FC = () => {
             <div className="sticky top-20 space-y-6">
               <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6">
                 <h3 className="text-lg font-bold text-white mb-4 font-playfair">Powiązane artykuły</h3>
-                <div className="space-y-4">
+                <div className="space-y-4" style={{ contentVisibility: 'auto' }}>
                   {relatedArticles.length > 0 ? relatedArticles.map((relArticle, index) => (
                     <motion.button
                       key={relArticle.id}
