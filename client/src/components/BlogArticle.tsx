@@ -26,6 +26,7 @@ interface ArticleContent {
   content: string;
   seoTitle?: string | null;
   schemaJson?: any;
+  date?: string;
 }
 
 const BlogArticle: React.FC = () => {
@@ -44,15 +45,11 @@ const BlogArticle: React.FC = () => {
         ? articlesMetadata[parseInt(id!) - 1]
         : articlesMetadata.find((a: any) => a.slug === id)) as any;
 
-      // Article schema
       const articleSchema = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         '@id': articleUrl,
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': articleUrl
-        },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
         headline: article.title,
         description: article.meta_description,
         image: {
@@ -61,29 +58,20 @@ const BlogArticle: React.FC = () => {
           width: 1200,
           height: 630
         },
-        datePublished: articleData?.date || new Date().toISOString().split('T')[0],
-        dateModified: articleData?.date || new Date().toISOString().split('T')[0],
+        datePublished: articleData?.date || '2026-01-01',
+        dateModified: new Date().toISOString().split('T')[0],
         author: {
           '@type': 'Person',
           name: 'Mateusz Nowotka',
           url: 'https://boostnow.pl/mateusz-nowotka',
           jobTitle: 'Founder & CEO',
-          worksFor: {
-            '@type': 'Organization',
-            name: 'BoostNow',
-            url: 'https://boostnow.pl'
-          }
+          worksFor: { '@type': 'Organization', name: 'BoostNow', url: 'https://boostnow.pl' }
         },
         publisher: {
           '@type': 'Organization',
           name: 'BoostNow',
           url: 'https://boostnow.pl',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://boostnow.pl/images/boostnow-logo.svg',
-            width: 600,
-            height: 60
-          }
+          logo: { '@type': 'ImageObject', url: 'https://boostnow.pl/images/boostnow-logo.svg', width: 600, height: 60 }
         },
         articleSection: article.target_industry,
         wordCount: article.word_count,
@@ -91,46 +79,24 @@ const BlogArticle: React.FC = () => {
         inLanguage: 'pl-PL'
       };
 
-      // BreadcrumbList schema
       const breadcrumbSchema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Strona główna',
-            item: 'https://boostnow.pl'
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Blog',
-            item: 'https://boostnow.pl/blog'
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: article.title,
-            item: articleUrl
-          }
+          { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://boostnow.pl' },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://boostnow.pl/blog' },
+          { '@type': 'ListItem', position: 3, name: article.title, item: articleUrl }
         ]
       };
 
-      // FAQPage schema (if schemaJson has FAQ or we generate a basic one)
       let faqSchema = null;
-      if (article.schemaJson && article.schemaJson['@graph']) {
-        const faq = article.schemaJson['@graph'].find((s: any) => s['@type'] === 'FAQPage');
-        if (faq) faqSchema = faq;
+      if (article.schemaJson?.['@graph']) {
+        faqSchema = article.schemaJson['@graph'].find((s: any) => s['@type'] === 'FAQPage');
       }
 
-      // Inject schemas
       document.querySelectorAll('script[data-article-schema]').forEach(el => el.remove());
 
-      const schemas = [articleSchema, breadcrumbSchema];
-      if (faqSchema) schemas.push(faqSchema);
-
-      schemas.forEach((s, i) => {
+      [articleSchema, breadcrumbSchema, faqSchema].filter(Boolean).forEach((s, i) => {
         const script = document.createElement('script');
         script.type = 'application/ld+json';
         script.setAttribute('data-article-schema', String(i));
@@ -150,7 +116,6 @@ const BlogArticle: React.FC = () => {
         const articleId = articleIndex + 1;
         const fileMap = articleFilesMap as Record<string, any>;
         const fileInfo = fileMap[articleId.toString()];
-
         const articleMeta = articles[articleIndex];
         const fallbackContent = `# ${articleMeta.title}\n\n${articleMeta.meta_description}`;
 
@@ -163,30 +128,26 @@ const BlogArticle: React.FC = () => {
           content,
           seoTitle: (articleMeta as any).seoTitle || null,
           schemaJson: (articleMeta as any).schemaJson || null,
+          date: articleMeta.date,
         });
 
         const filename = fileInfo?.filename || `${articleMeta.slug}.md`;
         try {
           const response = await fetch(`/blog-articles/${filename}`);
           let content = response.ok ? await response.text() : '';
-
-          const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
-          content = content.replace(frontmatterRegex, '').trim();
-
+          content = content.replace(/^---\n[\s\S]*?\n---\n/, '').trim();
           setArticle(buildArticleState(content || fallbackContent));
         } catch {
           setArticle(buildArticleState(fallbackContent));
         }
 
-        // Related articles by semantic overlap
         const current = articles[articleIndex];
         const currentAnchors = new Set((current.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean));
         const related = articles
           .filter(a => a.id !== current.id)
           .map(a => {
             const anchors = (a.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
-            const overlap = anchors.filter(x => currentAnchors.has(x)).length;
-            return { a, overlap };
+            return { a, overlap: anchors.filter(x => currentAnchors.has(x)).length };
           })
           .sort((x, y) => y.overlap - x.overlap || x.a.id - y.a.id)
           .slice(0, 3)
@@ -213,10 +174,7 @@ const BlogArticle: React.FC = () => {
       <div className="min-h-screen bg-[#0b1020] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Artykuł nie znaleziony</h1>
-          <button
-            onClick={() => setLocation('/')}
-            className="px-6 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-white transition-colors"
-          >
+          <button onClick={() => setLocation('/')} className="px-6 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-white transition-colors">
             Wróć do strony głównej
           </button>
         </div>
@@ -224,8 +182,8 @@ const BlogArticle: React.FC = () => {
     );
   }
 
-  // Lead-first answer block: use meta_description as the direct answer
   const leadAnswer = article.meta_description;
+  const lastUpdated = article.date || new Date().toISOString().split('T')[0];
 
   return (
     <div className="min-h-screen bg-[#0b1020] py-20 px-4 sm:px-6 lg:px-8">
@@ -233,7 +191,7 @@ const BlogArticle: React.FC = () => {
         <title>{article.seoTitle || article.title} | BoostNow</title>
         <meta name="robots" content="index, follow" />
         <meta name="description" content={article.meta_description} />
-        <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, decision science, neuromarketing, psychologia konwersji`} />
+        <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, GEO, SEO, AI Overviews`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://boostnow.pl/blog/${id}`} />
         <meta property="og:title" content={article.seoTitle || article.title} />
@@ -244,14 +202,10 @@ const BlogArticle: React.FC = () => {
         <meta name="twitter:description" content={article.meta_description} />
         <link rel="canonical" href={`https://boostnow.pl/blog/${id}`} />
       </Helmet>
+
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="lg:col-span-2">
             <nav className="flex items-center gap-2 mb-8 text-sm text-[#9aa0b3]">
               <button onClick={() => setLocation('/')} className="hover:text-[#c7ff4e] transition-colors">Strona główna</button>
               <span>/</span>
@@ -265,15 +219,16 @@ const BlogArticle: React.FC = () => {
                 <span className="text-[#c7ff4e] text-xs font-semibold px-2 py-1 bg-[#c7ff4e]/10 rounded">{article.target_industry}</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair leading-tight">{article.title}</h1>
-              
-              {/* Lead-first answer block for GEO citability */}
-              <div className="mb-6 p-4 rounded-lg bg-[#c7ff4e]/10 border border-[#c7ff4e]/30">
-                <p className="text-[#c7ff4e] font-semibold text-sm mb-1">Szybka odpowiedź</p>
-                <p className="text-white text-base leading-relaxed">{leadAnswer}</p>
+
+              {/* Lead-first answer block (ai-seo: 40-60 word direct answer) */}
+              <div className="mb-6 p-5 rounded-xl bg-[#c7ff4e]/10 border border-[#c7ff4e]/30">
+                <p className="text-[#c7ff4e] font-bold text-sm mb-2 uppercase tracking-wide">Szybka odpowiedź</p>
+                <p className="text-white text-lg leading-relaxed">{leadAnswer}</p>
+                <p className="text-[#9aa0b3] text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
               </div>
 
               <div className="flex flex-wrap items-center gap-6 text-sm text-[#9aa0b3] border-t border-b border-[#2a2f3e] py-4">
-                <div className="flex items-center gap-2"><span>📅</span><span>{article.date || '2026'}</span></div>
+                <div className="flex items-center gap-2"><span>📅</span><span>{lastUpdated}</span></div>
                 <div className="flex items-center gap-2"><span>📝</span><span>{article.word_count} słów</span></div>
                 <div className="flex items-center gap-2"><span>⏱️</span><span>~{Math.ceil(article.word_count / 200)} min czytania</span></div>
               </div>
@@ -309,9 +264,7 @@ const BlogArticle: React.FC = () => {
                 <div>
                   <h4 className="text-lg font-bold text-white font-playfair">Mateusz Nowotka</h4>
                   <p className="text-[#9aa0b3] text-sm mb-3">Founder & CEO BoostNow | Decision Science Specialist | 4 lata doświadczenia w marketingu</p>
-                  <div className="flex gap-3">
-                    <a href="https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/" target="_blank" rel="noopener noreferrer" className="text-[#c7ff4e] hover:text-white transition-colors text-sm">LinkedIn →</a>
-                  </div>
+                  <a href="https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/" target="_blank" rel="noopener noreferrer" className="text-[#c7ff4e] hover:text-white transition-colors text-sm">LinkedIn →</a>
                 </div>
               </div>
             </motion.div>
@@ -328,28 +281,24 @@ const BlogArticle: React.FC = () => {
               <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6">
                 <h3 className="text-lg font-bold text-white mb-4 font-playfair">Powiązane artykuły</h3>
                 <div className="space-y-4">
-                  {relatedArticles.length > 0 ? (
-                    relatedArticles.map((relArticle, index) => (
-                      <motion.button
-                        key={relArticle.id}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
-                        onClick={() => setLocation(`/blog/${relArticle.slug || relArticle.id}`)}
-                        className="w-full text-left p-3 rounded-lg bg-[#0b1020] hover:bg-[#1a1f2e] transition-all duration-300 group"
-                      >
-                        <div className="flex items-start gap-2">
-                          <span className="text-[#c7ff4e] text-xs font-bold flex-shrink-0 mt-1">#{relArticle.id.toString().padStart(2, '0')}</span>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-semibold text-white group-hover:text-[#c7ff4e] transition-colors line-clamp-2">{relArticle.title}</p>
-                            <p className="text-xs text-[#9aa0b3] mt-1">{Math.ceil(relArticle.word_count / 200)} min czytania</p>
-                          </div>
+                  {relatedArticles.length > 0 ? relatedArticles.map((relArticle, index) => (
+                    <motion.button
+                      key={relArticle.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      onClick={() => setLocation(`/blog/${relArticle.slug || relArticle.id}`)}
+                      className="w-full text-left p-3 rounded-lg bg-[#0b1020] hover:bg-[#1a1f2e] transition-all duration-300 group"
+                    >
+                      <div className="flex items-start gap-2">
+                        <span className="text-[#c7ff4e] text-xs font-bold flex-shrink-0 mt-1">#{relArticle.id.toString().padStart(2, '0')}</span>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-semibold text-white group-hover:text-[#c7ff4e] transition-colors line-clamp-2">{relArticle.title}</p>
+                          <p className="text-xs text-[#9aa0b3] mt-1">{Math.ceil(relArticle.word_count / 200)} min czytania</p>
                         </div>
-                      </motion.button>
-                    ))
-                  ) : (
-                    <p className="text-[#9aa0b3] text-sm">Brak powiązanych artykułów</p>
-                  )}
+                      </div>
+                    </motion.button>
+                  )) : <p className="text-[#9aa0b3] text-sm">Brak powiązanych artykułów</p>}
                 </div>
               </div>
             </div>
