@@ -1,5 +1,5 @@
 /**
- * Prerender for key blog articles with GEO content patterns.
+ * Prerender for key blog articles with full GEO content patterns.
  * Generates static HTML with visible content so AI crawlers see full text.
  *
  * Usage: node scripts/prerender-articles.cjs
@@ -55,6 +55,10 @@ function buildGeoPatterns(article) {
   <p>${escapeHtml(lead)}</p>
   <small>Ostatnia aktualizacja: ${article.date || '2026'}</small>
 </div>
+<div class="geo-definition" style="margin:1rem 0;padding:1rem;background:#141829;border:1px solid #2a2f3e;border-radius:0.5rem">
+  <strong>GEO (Generative Engine Optimization)</strong>
+  <p>Optymalizacja treści pod kątem cytowania przez modele AI takie jak ChatGPT, Perplexity i Gemini. Celem jest bycie źródłem w odpowiedzi AI, nie pozycją w wynikach.</p>
+</div>
 <div class="geo-stat" style="margin:1rem 0;padding:1rem;background:#c7ff4e0d;border-radius:0.5rem">
   <div style="font-size:1.5rem;font-weight:900;color:#c7ff4e">+37%</div>
   <div>Wzrost widoczności w AI dzięki statystykom z źródłem (Princeton GEO Study, 2024)</div>
@@ -63,6 +67,16 @@ function buildGeoPatterns(article) {
   <p style="font-style:italic">„Treść z konkretnymi liczbami i cytatami ekspertów jest cytowana przez AI o 30-40% częściej niż ogólne artykuły.”</p>
   <footer>— Mateusz Nowotka, Founder & CEO, BoostNow</footer>
 </blockquote>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem">
+  <caption style="text-align:left;font-weight:bold;margin-bottom:0.5rem">SEO vs GEO</caption>
+  <thead><tr><th style="text-align:left;padding:0.5rem;border-bottom:1px solid #2a2f3e">Cecha</th><th style="text-align:left;padding:0.5rem;border-bottom:1px solid #2a2f3e">SEO</th><th style="text-align:left;padding:0.5rem;border-bottom:1px solid #2a2f3e;color:#c7ff4e">GEO</th></tr></thead>
+  <tbody>
+    <tr><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">Cel</td><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">Pozycja w Google</td><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">Cytowanie w AI</td></tr>
+    <tr><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">Metryka</td><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">Rankings, CTR</td><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">Citation rate</td></tr>
+    <tr><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">Platforma</td><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">Google</td><td style="padding:0.5rem;border-bottom:1px solid #2a2f3e">ChatGPT, Perplexity, Gemini</td></tr>
+    <tr><td style="padding:0.5rem">Czas efektu</td><td style="padding:0.5rem">3-6 miesięcy</td><td style="padding:0.5rem">7-90 dni</td></tr>
+  </tbody>
+</table>
 `;
 }
 
@@ -96,7 +110,6 @@ function main() {
     const geoPatterns = buildGeoPatterns(article);
     const lead = article.meta_description || '';
 
-    // Visible content for AI crawlers (not hidden)
     const articleHtml = `
 <main id="prerendered-article">
   <h1>${escapeHtml(article.title)}</h1>
