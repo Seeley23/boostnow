@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
-import { StatBlock, QuoteBlock, FAQSection } from './ContentPatterns';
+import { StatBlock, QuoteBlock, FAQSection, DefinitionBlock, ComparisonTable } from './ContentPatterns';
 
 interface Article {
   id: number;
@@ -34,6 +34,13 @@ const DEFAULT_FAQS = [
   { question: 'Jak szybko zobaczę efekty GEO?', answer: 'Pierwsze cytowania w Perplexity pojawiają się w 7-14 dni. ChatGPT reaguje w cyklu ~30 dni. Google AI Overviews wymaga 4-12 tygodni.' },
   { question: 'Czy GEO zastępuje SEO?', answer: 'Nie. GEO uzupełnia SEO. Klasyczne pozycjonowanie nadal buduje autorytet, a GEO zwiększa szansę na cytowanie w odpowiedziach AI.' },
   { question: 'Ile kosztuje wdrożenie GEO?', answer: 'Zależy od zakresu. Audyt GEO zaczyna się od kilku tysięcy złotych. Pełna strategia z contentem i schema to inwestycja 5-15 tys. zł miesięcznie.' },
+];
+
+const SEO_VS_GEO = [
+  { feature: 'Cel', seo: 'Pozycja w Google', geo: 'Cytowanie w AI' },
+  { feature: 'Metryka', seo: 'Rankings, CTR', geo: 'Citation rate' },
+  { feature: 'Platforma', seo: 'Google', geo: 'ChatGPT, Perplexity, Gemini' },
+  { feature: 'Czas efektu', seo: '3-6 miesięcy', geo: '7-90 dni' },
 ];
 
 const BlogArticle: React.FC = () => {
@@ -213,6 +220,7 @@ const BlogArticle: React.FC = () => {
         <meta name="twitter:title" content={article.seoTitle || article.title} />
         <meta name="twitter:description" content={article.meta_description} />
         <link rel="canonical" href={`https://boostnow.pl/blog/${id}`} />
+        <meta property="article:modified_time" content={lastUpdated} />
       </Helmet>
 
       <div className="max-w-6xl mx-auto">
@@ -238,6 +246,11 @@ const BlogArticle: React.FC = () => {
                 <p className="text-[#9aa0b3] text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
               </div>
 
+              <DefinitionBlock
+                term="GEO (Generative Engine Optimization)"
+                definition="Optymalizacja treści pod kątem cytowania przez modele AI takie jak ChatGPT, Perplexity i Gemini. W przeciwieństwie do SEO, celem nie jest pozycja w wynikach, ale bycie źródłem w odpowiedzi AI."
+              />
+
               <StatBlock
                 value="+37%"
                 label="Wzrost szansy na cytowanie w AI dzięki statystykom z źródłem"
@@ -251,6 +264,8 @@ const BlogArticle: React.FC = () => {
                 title="Founder & CEO"
                 organization="BoostNow"
               />
+
+              <ComparisonTable title="SEO vs GEO" rows={SEO_VS_GEO} />
 
               <div className="flex flex-wrap items-center gap-6 text-sm text-[#9aa0b3] border-t border-b border-[#2a2f3e] py-4">
                 <div className="flex items-center gap-2"><span>📅</span><span>{lastUpdated}</span></div>
