@@ -3,11 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* BoostNow Design System: "Precision Strike" - Military-Grade Minimalism
-   - Carbon Black base with surgical lime-green accents
-   - Command center aesthetic with data visualization elements
-   - Typography: Poppins (headings) + Inter (body)
-*/
+/* BoostNow Design System: "Precision Strike" - Military-Grade Minimalism */
 
 @theme inline {
   --font-heading: 'Poppins', sans-serif;
@@ -50,7 +46,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* BoostNow Brand Colors */
   --color-boost-lime: oklch(0.89 0.23 128);
   --color-boost-mint: oklch(0.82 0.18 168);
   --color-boost-dark: oklch(0.15 0.02 260);
@@ -61,52 +56,30 @@
 
 :root {
   --radius: 0.5rem;
-  
-  /* BoostNow Dark Theme - Primary */
-  --primary: oklch(0.89 0.23 128); /* Lime Green */
-  --primary-foreground: oklch(0.12 0.01 260); /* Carbon Black */
-  
-  /* Background hierarchy */
-  --background: oklch(0.10 0.01 260); /* Deep Carbon */
-  --foreground: oklch(0.95 0.01 260); /* Almost White */
-  
-  /* Card surfaces */
-  --card: oklch(0.14 0.015 260); /* Elevated surface */
+  --primary: oklch(0.89 0.23 128);
+  --primary-foreground: oklch(0.12 0.01 260);
+  --background: oklch(0.10 0.01 260);
+  --foreground: oklch(0.95 0.01 260);
+  --card: oklch(0.14 0.015 260);
   --card-foreground: oklch(0.92 0.01 260);
-  
-  /* Popover */
   --popover: oklch(0.16 0.015 260);
   --popover-foreground: oklch(0.92 0.01 260);
-  
-  /* Secondary - Charcoal */
   --secondary: oklch(0.20 0.015 260);
   --secondary-foreground: oklch(0.85 0.01 260);
-  
-  /* Muted */
   --muted: oklch(0.22 0.01 260);
   --muted-foreground: oklch(0.60 0.01 260);
-  
-  /* Accent - Mint */
   --accent: oklch(0.82 0.18 168);
   --accent-foreground: oklch(0.12 0.01 260);
-  
-  /* Destructive */
   --destructive: oklch(0.65 0.25 25);
   --destructive-foreground: oklch(0.98 0 0);
-  
-  /* Borders and inputs */
   --border: oklch(0.25 0.01 260);
   --input: oklch(0.20 0.01 260);
   --ring: oklch(0.89 0.23 128);
-  
-  /* Charts */
   --chart-1: oklch(0.89 0.23 128);
   --chart-2: oklch(0.82 0.18 168);
   --chart-3: oklch(0.75 0.15 200);
   --chart-4: oklch(0.65 0.12 230);
   --chart-5: oklch(0.55 0.10 260);
-  
-  /* Sidebar */
   --sidebar: oklch(0.12 0.01 260);
   --sidebar-foreground: oklch(0.90 0.01 260);
   --sidebar-primary: oklch(0.89 0.23 128);
@@ -118,7 +91,6 @@
 }
 
 .dark {
-  /* Same as root since we're dark-first */
   --primary: oklch(0.89 0.23 128);
   --primary-foreground: oklch(0.12 0.01 260);
   --background: oklch(0.10 0.01 260);
@@ -200,8 +172,6 @@
     }
   }
   
-  /* BoostNow Custom Components */
-  
   .text-gradient-lime {
     background: linear-gradient(135deg, oklch(0.89 0.23 128) 0%, oklch(0.82 0.18 168) 100%);
     -webkit-background-clip: text;
@@ -231,7 +201,12 @@
     border: 1px solid oklch(0.30 0.01 260 / 0.5);
   }
   
-  /* Scan line animation */
+  /* CWV: content-visibility for below-fold sections */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+  }
+  
   @keyframes scanline {
     0% { transform: translateY(-100%); }
     100% { transform: translateY(100vh); }
@@ -241,7 +216,6 @@
     animation: scanline 8s linear infinite;
   }
   
-  /* Pulse glow animation */
   @keyframes pulse-glow {
     0%, 100% { box-shadow: 0 0 20px oklch(0.89 0.23 128 / 0.3); }
     50% { box-shadow: 0 0 40px oklch(0.89 0.23 128 / 0.6); }
@@ -251,7 +225,6 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
   
-  /* Typing cursor */
   @keyframes blink {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
@@ -261,7 +234,6 @@
     animation: blink 1s step-end infinite;
   }
   
-  /* Float animation */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -271,7 +243,6 @@
     animation: float 3s ease-in-out infinite;
   }
   
-  /* Data stream animation */
   @keyframes data-stream {
     0% { transform: translateX(-100%); opacity: 0; }
     10% { opacity: 1; }
