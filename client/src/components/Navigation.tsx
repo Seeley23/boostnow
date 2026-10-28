@@ -40,11 +40,11 @@ export default function Navigation() {
     <>
       <header
         style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 1000 }}
-        className={{
+        className={
           isScrolled
             ? "bg-background/95 backdrop-blur-xl border-b border-border/50"
             : "bg-background/95 border-b border-border/30"
-        }}
+        }
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 py-3 lg:py-4">
