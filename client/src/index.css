@@ -1,3 +1,4 @@
+@import "./fonts.css";
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -123,11 +124,11 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', system-ui, sans-serif;
   }
   
   button:not(:disabled),
@@ -201,7 +202,6 @@
     border: 1px solid oklch(0.30 0.01 260 / 0.5);
   }
   
-  /* CWV: content-visibility for below-fold sections */
   .cv-auto {
     content-visibility: auto;
     contain-intrinsic-size: auto 500px;
