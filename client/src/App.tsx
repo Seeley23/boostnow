@@ -7,6 +7,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import CookieBanner from "./components/CookieBanner";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
+import OrganizationSchema from "./components/OrganizationSchema";
 import Home from "./pages/Home";
 import CalculatorPage from "./pages/CalculatorPage";
 import BlogArticle from "./components/BlogArticle";
@@ -20,7 +21,6 @@ import BlogArticleKonwersja from "./pages/BlogArticleKonwersja";
 import AIOPage from "./pages/AIOPage";
 import DynamicPage from "./pages/DynamicPage";
 import AuthorPage from "./pages/AuthorPage";
-
 
 function Router() {
   return (
@@ -39,7 +39,6 @@ function Router() {
       <Route path={"/aio"} component={AIOPage} />
       <Route path={"/mateusz-nowotka"} component={AuthorPage} />
 
-      {/* Dynamiczne strony z Airtable */}
       <Route path={"/:slug"} component={DynamicPage} />
       
       <Route path={"/404"} component={NotFound} />
@@ -54,6 +53,7 @@ function App() {
       <HelmetProvider>
         <ThemeProvider defaultTheme="dark">
           <TooltipProvider>
+            <OrganizationSchema />
             <Toaster />
             <Router />
             <CookieBanner />
