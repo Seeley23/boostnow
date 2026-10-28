@@ -11,26 +11,31 @@ import websiteData from '../data/blog/website-cms.json';
 const LIME = "#c7ff4e";
 const NAVY = "#0b1020";
 
-const LOCAL_SEO: Record<string, { title: string; description: string }> = {
+const LOCAL_SEO: Record<string, { title: string; description: string; city: string }> = {
   olsztyn: {
     title: "Agencja Marketingowa Olsztyn — SEO, GEO i Tworzenie Stron | BoostNow",
-    description: "BoostNow w Olsztynie: SEO, GEO (AI Search), AEO i strony internetowe dla firm z Warmii. Widoczność w Google i ChatGPT. Darmowy audyt."
+    description: "BoostNow w Olsztynie: SEO, GEO (AI Search), AEO i strony internetowe dla firm z Warmii. Widoczność w Google i ChatGPT. Darmowy audyt.",
+    city: "Olsztyn"
   },
   barczewo: {
     title: "SEO i Marketing Internetowy Barczewo | BoostNow",
-    description: "Pozycjonowanie i marketing dla firm z Barczewa. Lokalne SEO, strony www i widoczność w AI. BoostNow — agencja z regionu Olsztyna."
+    description: "Pozycjonowanie i marketing dla firm z Barczewa. Lokalne SEO, strony www i widoczność w AI. BoostNow — agencja z regionu Olsztyna.",
+    city: "Barczewo"
   },
   stawiguda: {
     title: "Agencja SEO Stawiguda — Pozycjonowanie Lokalne | BoostNow",
-    description: "SEO i GEO dla firm ze Stawigudy. Budujemy widoczność w Google i AI Search. Strony, audyty i strategia marketingowa od BoostNow."
+    description: "SEO i GEO dla firm ze Stawigudy. Budujemy widoczność w Google i AI Search. Strony, audyty i strategia marketingowa od BoostNow.",
+    city: "Stawiguda"
   },
   dywity: {
     title: "SEO Dywity — Pozycjonowanie dla Firm Satelitarnych Olsztyna | BoostNow",
-    description: "Marketing internetowy i SEO dla firm z Dywit. Lokalna widoczność, strony www i optymalizacja pod AI. BoostNow."
+    description: "Marketing internetowy i SEO dla firm z Dywit. Lokalna widoczność, strony www i optymalizacja pod AI. BoostNow.",
+    city: "Dywity"
   },
   olsztynek: {
     title: "Marketing Internetowy Olsztynek | SEO i GEO | BoostNow",
-    description: "Strategia SEO i marketingu dla firm z Olsztynka. Widoczność w Google, ChatGPT i lokalnych wynikach. BoostNow."
+    description: "Strategia SEO i marketingu dla firm z Olsztynka. Widoczność w Google, ChatGPT i lokalnych wynikach. BoostNow.",
+    city: "Olsztynek"
   }
 };
 
@@ -112,12 +117,30 @@ const DynamicPage: React.FC = () => {
     return <NotFound />;
   }
 
-  const local = LOCAL_SEO[slug] || {};
+  const local = LOCAL_SEO[slug] || { title: '', description: '', city: '' };
   const seoTitle = page?.seo?.title || page?.SEO_Title || local.title || page?.name || page?.PageName || 'BoostNow';
   const seoDesc = page?.seo?.description || page?.SEO_Desc || local.description || '';
   const seoKeywords = page?.seo?.primaryKeyword || page?.Focus_Keyphrase || '';
   const pageName = page?.name || page?.pageName || page?.PageName || slug || '';
   const canonical = `https://boostnow.pl/${slug || ''}`;
+
+  const localBusinessSchema = local.city ? {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: `BoostNow — ${local.city}`,
+    url: canonical,
+    description: local.description,
+    areaServed: {
+      '@type': 'City',
+      name: local.city,
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Warmia i Mazury' }
+    },
+    provider: {
+      '@type': 'Organization',
+      name: 'BoostNow',
+      url: 'https://boostnow.pl'
+    }
+  } : null;
 
   const faqSections = page?.sections?.filter((s: any) => s.type === 'FAQ') || [];
   const legacyFaqs = page?.FAQ_Data ? (() => { try { return JSON.parse(page.FAQ_Data); } catch { return []; } })() : [];
@@ -126,12 +149,12 @@ const DynamicPage: React.FC = () => {
     : legacyFaqs;
 
   const faqSchema = faqs.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((faq: any) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq: any) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer }
     }))
   } : null;
 
@@ -154,6 +177,9 @@ const DynamicPage: React.FC = () => {
         )}
         {!page?.jsonLd && page?.Schema_Markup && (
           <script type="application/ld+json">{page.Schema_Markup}</script>
+        )}
+        {localBusinessSchema && (
+          <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         )}
         {faqSchema && (
           <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
