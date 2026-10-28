@@ -32,31 +32,47 @@ const BlogPage: React.FC = () => {
   const getArticleUrlPart = (article: Article) => article.slug || String(article.id);
 
   useEffect(() => {
-    const breadcrumbScript = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
     const breadcrumbSchema = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Strona główna', 'item': 'https://boostnow.pl' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://boostnow.pl/blog' }
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://boostnow.pl' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://boostnow.pl/blog' }
       ]
     };
 
-    if (breadcrumbScript) {
-      breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
-    } else {
+    const collectionSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Blog o GEO, AEO i SEO | BoostNow',
+      description: 'Artykuły o Generative Engine Optimization, Answer Engine Optimization i SEO.',
+      url: 'https://boostnow.pl/blog',
+      isPartOf: { '@type': 'WebSite', name: 'BoostNow', url: 'https://boostnow.pl' },
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: articles.length,
+        itemListElement: articles.slice(0, 10).map((a, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `https://boostnow.pl/blog/${a.slug || a.id}`,
+          name: a.title
+        }))
+      }
+    };
+
+    document.querySelectorAll('script[data-blog-schema]').forEach(el => el.remove());
+    [breadcrumbSchema, collectionSchema].forEach((s, i) => {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
-      script.setAttribute('data-breadcrumb-schema', 'true');
-      script.textContent = JSON.stringify(breadcrumbSchema);
+      script.setAttribute('data-blog-schema', String(i));
+      script.textContent = JSON.stringify(s);
       document.head.appendChild(script);
-    }
+    });
 
     return () => {
-      const scriptToRemove = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
-      if (scriptToRemove) scriptToRemove.remove();
+      document.querySelectorAll('script[data-blog-schema]').forEach(el => el.remove());
     };
-  }, []);
+  }, [articles]);
 
   const filteredArticles = articles;
   const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
@@ -65,34 +81,35 @@ const BlogPage: React.FC = () => {
 
   const pageTitle = seo.title || 'Blog o GEO, AEO i SEO | BoostNow';
   const pageDescription = seo.description || 'Artykuły o GEO (Generative Engine Optimization), AEO, SEO, psychologii decyzji i optymalizacji konwersji. Praktyczna wiedza od BoostNow.';
-  const pageCanonical = seo.canonicalUrl || 'https://boostnow.pl/blog';
+  const pageCanonical = currentPage > 1 
+    ? `https://boostnow.pl/blog?page=${currentPage}` 
+    : 'https://boostnow.pl/blog';
 
   return (
     <div className="min-h-screen bg-[#0b1020]">
       <Helmet>
-        <title>{pageTitle}</title>
+        <title>{currentPage > 1 ? `${pageTitle} — strona ${currentPage}` : pageTitle}</title>
         <meta name="robots" content="index, follow" />
         <meta name="description" content={pageDescription} />
         {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
         <link rel="canonical" href={pageCanonical} />
+        {currentPage > 1 && <link rel="prev" href={currentPage === 2 ? 'https://boostnow.pl/blog' : `https://boostnow.pl/blog?page=${currentPage - 1}`} />}
+        {currentPage < totalPages && <link rel="next" href={`https://boostnow.pl/blog?page=${currentPage + 1}`} />}
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={pageCanonical} />
         <meta property="og:type" content="website" />
-        {blogPage?.jsonLd && (
-          <script type="application/ld+json">{JSON.stringify(blogPage.jsonLd)}</script>
-        )}
       </Helmet>
 
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-2 text-sm text-gray-400">
+          <nav className="flex items-center gap-2 text-sm text-gray-400" aria-label="Breadcrumb">
             <Link href="/">
               <a className="hover:text-[#c7ff4e] transition">Strona główna</a>
             </Link>
             <span>/</span>
             <span className="text-[#c7ff4e]">Blog</span>
-          </div>
+          </nav>
         </div>
       </div>
 
@@ -105,23 +122,20 @@ const BlogPage: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-              Architekci Decyzji dzielą się wiedzą
+              Blog o GEO, AEO i SEO
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-6">
-              Artykuły o Decision Science, Neuromarketing i Psychologii Konwersji dla agencji marketingowych
+              Praktyczne artykuły o Generative Engine Optimization, Answer Engine Optimization, pozycjonowaniu i psychologii decyzji.
             </p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mt-8">
-              50+ artykułów o marketingu opartym na nauce
-            </h2>
           </motion.div>
         </div>
       </section>
 
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" style={{ contentVisibility: 'auto' }}>
             {paginatedArticles.map((article, index) => (
-              <motion.div
+              <motion.article
                 key={article.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -130,6 +144,7 @@ const BlogPage: React.FC = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-[#c7ff4e] font-bold text-sm">#{article.id}</span>
+                  {article.date && <time dateTime={article.date} className="text-xs text-gray-500">{article.date}</time>}
                 </div>
 
                 <Link href={`/blog/${getArticleUrlPart(article)}`} className="block group">
@@ -146,6 +161,7 @@ const BlogPage: React.FC = () => {
                   {(article.semantic_anchors || '')
                     .split(', ')
                     .filter(Boolean)
+                    .slice(0, 3)
                     .map((anchor) => (
                     <span
                       key={anchor}
@@ -162,14 +178,14 @@ const BlogPage: React.FC = () => {
                 </div>
 
                 <Link href={`/blog/${getArticleUrlPart(article)}`} className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">
-                  Czytaj: {article.title}
+                  Czytaj artykuł →
                 </Link>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
 
           {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2 mt-12">
+            <nav className="flex items-center justify-center gap-2 mt-12" aria-label="Paginacja">
               <button
                 onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                 disabled={currentPage === 1}
@@ -183,6 +199,7 @@ const BlogPage: React.FC = () => {
                   <button
                     key={page}
                     onClick={() => setCurrentPage(page)}
+                    aria-current={currentPage === page ? 'page' : undefined}
                     className={`w-10 h-10 rounded-lg font-medium transition ${
                       currentPage === page
                         ? 'bg-[#c7ff4e] text-[#0b1020]'
@@ -201,7 +218,7 @@ const BlogPage: React.FC = () => {
               >
                 Następna →
               </button>
-            </div>
+            </nav>
           )}
         </div>
       </section>
