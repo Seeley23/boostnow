@@ -19,7 +19,7 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#c7ff4e" />
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.manus.computer https://www.clarity.ms https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://*.manus.computer https://d2xsxph8kpxj0f.cloudfront.net https://www.clarity.ms https://region1.google-analytics.com; frame-src 'self' https://www.googletagmanager.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.manus.computer https://www.clarity.ms https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://*.manus.computer https://d2xsxph8kpxj0f.cloudfront.net https://www.clarity.ms https://region1.google-analytics.com; frame-src 'self' https://www.googletagmanager.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
@@ -28,21 +28,16 @@
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:site_name" content="BoostNow" />
 
-    <!-- DNS prefetch for third parties (CWV) -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!-- DNS prefetch for analytics only (fonts are self-hosted) -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.clarity.ms" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Preload critical logo for LCP -->
     <link rel="preload" as="image" href="/images/logo.svg" fetchpriority="high" />
 
-    <!-- Fonts with display=swap for better LCP -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Preload critical fonts (self-hosted) -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-400.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/poppins-700.woff2" crossorigin />
 
     <link rel="alternate" type="application/rss+xml" title="BoostNow - Architekci Decyzji" href="/rss.xml" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -62,7 +57,7 @@
     }
     </script>
 
-    <!-- GA4 - deferred -->
+    <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-80LEXHXKTK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -71,7 +66,7 @@
       gtag('config', 'G-80LEXHXKTK');
     </script>
 
-    <!-- GTM - deferred -->
+    <!-- GTM -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TZX2NB5F');</script>
   </head>
 
@@ -80,12 +75,10 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Non-critical analytics deferred until after load (CWV) -->
+    <!-- Non-critical analytics deferred until after load -->
     <script>
       window.addEventListener('load', function() {
-        // Clarity
         (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","uwkl8mwoai");
-        // Ahrefs
         var ah = document.createElement('script');
         ah.src = 'https://analytics.ahrefs.com/analytics.js';
         ah.setAttribute('data-key', 'uXF+49/3rSWxfHxVg3+DwQ');
