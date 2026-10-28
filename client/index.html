@@ -3,244 +3,66 @@
 
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>BoostNow | GEO, SEO i konwersja dla firm</title>
     <meta name="description" content="BoostNow pomaga firmom rosnąć dzięki GEO, SEO, psychologii decyzji i optymalizacji konwersji." />
     <link rel="canonical" href="https://boostnow.pl/" />
     <meta name="author" content="BoostNow - Mateusz Nowotka" />
     <meta name="robots" content="index, follow" />
-    
-    <!-- Google Search Console Verification -->
+
     <meta name="google-site-verification" content="4ddv8l13Sd51UdSSgY9peeHWPoeAdM6hBbF190QdsM4" />
-    
-    <!-- Favicon & Icons -->
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/favicon-32x32_fc38a089.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/favicon-16x16_d424bfe0.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/apple-touch-icon_9f8074c6.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#c7ff4e" />
-    
-    <!-- Security Headers -->
+
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.manus.computer https://www.clarity.ms https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://*.manus.computer https://d2xsxph8kpxj0f.cloudfront.net https://www.clarity.ms https://region1.google-analytics.com; frame-src 'self' https://www.googletagmanager.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()" />
-    
-    <!-- Open Graph / Twitter will be set by React Helmet per page -->
+
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:site_name" content="BoostNow" />
+
+    <!-- DNS prefetch for third parties (CWV) -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.clarity.ms" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Preload Critical Resources -->
+
+    <!-- Preload critical logo for LCP -->
+    <link rel="preload" as="image" href="/images/logo.svg" fetchpriority="high" />
+
+    <!-- Fonts with display=swap for better LCP -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     <link rel="alternate" type="application/rss+xml" title="BoostNow - Architekci Decyzji" href="/rss.xml" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    
-    <!-- JSON-LD Schema for WebSite (SearchBox) -->
+
+    <!-- WebSite schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "BoostNow",
-      "alternateName": "BoostNow - Agencja Aktywacji Klientów",
       "url": "https://boostnow.pl",
-      "description": "Agencja aktywacji klientów specjalizująca się w Decision Science, Inżynierii Konwersji i GEO Positioning. Skalujemy wyniki, o których inni tylko marzą.",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://boostnow.pl/blog?q={search_term_string}"
-        },
+        "target": "https://boostnow.pl/blog?q={search_term_string}",
         "query-input": "required name=search_term_string"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "BoostNow",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://boostnow.pl/images/boostnow-logo.svg"
-        }
       }
     }
     </script>
-    
-    <!-- JSON-LD Schema for Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "BoostNow",
-      "legalName": "BoostNow Mateusz Nowotka",
-      "url": "https://boostnow.pl",
-      "logo": "https://boostnow.pl/images/boostnow-logo.svg",
-      "foundingDate": "2024",
-      "email": "kontakt@boostnow.pl",
-      "taxID": "7393776527",
-      "vatID": "PL7393776527",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "PL",
-        "addressLocality": "Polska"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "kontakt@boostnow.pl",
-        "availableLanguage": ["Polish", "English"]
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/boostnow",
-        "https://www.facebook.com/boostnow",
-        "https://www.instagram.com/boostnow"
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Mateusz Nowotka",
-        "jobTitle": "Founder & CEO",
-        "url": "https://www.linkedin.com/in/mateusznowotka"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Poland"
-      },
-      "knowsAbout": [
-        "Decision Science",
-        "Conversion Engineering",
-        "GEO Positioning",
-        "SEO Positioning",
-        "Video Animation",
-        "Copywriting",
-        "Social Media Management",
-        "Marketing Psychology"
-      ]
-    }
-    </script>
-    
-    <!-- JSON-LD Schema for LocalBusiness -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "@id": "https://boostnow.pl",
-      "name": "BoostNow - Agencja Aktywacji Klientów",
-      "image": "https://boostnow.pl/og-image.jpg",
-      "url": "https://boostnow.pl",
-      "telephone": "+48-XXX-XXX-XXX",
-      "email": "kontakt@boostnow.pl",
-      "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "PL",
-        "addressLocality": "Polska"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "52.2297",
-        "longitude": "21.0122"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "17:00"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "3"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Magdalena Kowalski"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "reviewBody": "Konwersja wzrosła o 156% w 60 dni. BoostNow to nie agencja - to partner, który rozumie psychologię moich klientów."
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Piotr Nowak"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "reviewBody": "Społeczność wzrosła o 380% w 90 dni. BoostNow zbudował dla nas system, który działa bez naszej interwencji."
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Anna Lewandowska"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "reviewBody": "Cykl sprzedaży skrócił się o 40%. BoostNow eliminuje tarcie w ścieżce klienta - to magia."
-        }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Usługi BoostNow",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Inżynieria Konwersji",
-              "description": "Kompleksowa analiza ścieżki klienta z perspektywy psychologii decyzji. Mapujemy lęki, motywacje i błędy poznawcze."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Video Animation",
-              "description": "Dynamiczne animacje, które przyciągają wzrok i konwertują. Explainer videos, product demos, social media content."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "GEO Positioning",
-              "description": "Optymalizacja marki dla AI search engines (ChatGPT, Perplexity, Gemini). Budujemy Semantic Anchors."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "SEO Positioning",
-              "description": "Strategia oparta na Decision Science. Budujemy autorytet i zaufanie, nie tylko rankingi."
-            }
-          }
-        ]
-      }
-    }
-    </script>
-    
-    <!-- Google Analytics 4 -->
+
+    <!-- GA4 - deferred -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-80LEXHXKTK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -248,42 +70,29 @@
       gtag('js', new Date());
       gtag('config', 'G-80LEXHXKTK');
     </script>
-    <!-- End Google Analytics 4 -->
-    
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "uwkl8mwoai");
-    </script>
-    <!-- End Microsoft Clarity -->
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TZX2NB5F');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="uXF+49/3rSWxfHxVg3+DwQ" async></script>
-    <!-- End Ahrefs Analytics -->
+
+    <!-- GTM - deferred -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TZX2NB5F');</script>
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZX2NB5F"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZX2NB5F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+
+    <!-- Non-critical analytics deferred until after load (CWV) -->
+    <script>
+      window.addEventListener('load', function() {
+        // Clarity
+        (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","uwkl8mwoai");
+        // Ahrefs
+        var ah = document.createElement('script');
+        ah.src = 'https://analytics.ahrefs.com/analytics.js';
+        ah.setAttribute('data-key', 'uXF+49/3rSWxfHxVg3+DwQ');
+        ah.async = true;
+        document.body.appendChild(ah);
+      });
+    </script>
   </body>
 
 </html>
