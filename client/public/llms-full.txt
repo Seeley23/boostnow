@@ -1,5 +1,5 @@
 # BoostNow — Full Knowledge Base for AI
-> Generated: 2026-10-27
+> Generated: 2026-10-28
 > This file contains the full content of key pages and articles for AI systems.
 
 ## Key Facts
@@ -12,7 +12,7 @@
 
 ### llms.txt — Co to Jest i Jak Dodać do Swojej Strony 2026
 URL: https://boostnow.pl/blog/llms-txt
-Date: 2026-10-27
+Date: 2026-10-28
 
 GPTBot indeksuje Twoją stronę co miesiąc. Bez llms.txt nie wie, co jest na niej ważne dla cytowań AI.
 
@@ -75,7 +75,7 @@ BoostNow wdraża llms.txt jako część kompleksowej strategii GEO dla klientów
 
 ### Jak Pojawić Się w ChatGPT — Praktyczny Test dla Twojej Firmy
 URL: https://boostnow.pl/blog/jak-pojawic-sie-w-chatgpt
-Date: 2026-10-27
+Date: 2026-10-28
 
 Klienci pytają ChatGPT o usługi z Twojej branży. Czy podaje Twoją firmę — czy konkurencji?
 
@@ -140,7 +140,7 @@ Wprowadzenie firmy do ChatGPT obejmuje trzy etapy: audyt widoczności w AI searc
 
 ### Agencja SEO Blisko Centrum Olsztyna — Strategia dla Firm z Serca Miasta [2026]
 URL: https://boostnow.pl/blog/agencja-seo-blisko-centrum-olsztyna-strategia-dla-firm-z-serca-miasta-2026
-Date: 2026-10-27
+Date: 2026-10-28
 
 Centrum Olsztyna to Stare Miasto, Rynek, 11 Listopada — najwyższa gęstość biznesowa. Konkurencja SEO? Chaotyczna.
 
@@ -199,7 +199,7 @@ Nie każda firma w centrum korzysta z SEO tak samo. Cztery kategorie z najwyższ
 
 ### Agencja SEO Olsztyn — Czysty SEO + GEO + AEO dla Firm z Warmii [2026]
 URL: https://boostnow.pl/blog/agencja-seo-olsztyn-czysty-seo-geo-aeo-dla-firm-z-warmii-2026
-Date: 2026-10-27
+Date: 2026-10-28
 
 Prowadzisz reklamy sam lub przez inną agencję, ale SEO ciągle nie działa? Potrzebujesz **czystej agencji SEO**, nie full-service marketingu.
 
@@ -255,7 +255,7 @@ Czysta agencja SEO to optymalny wybór dla pięciu profili firm z Olsztyna. Spra
 
 ### Pozycjonowanie Wrocław — Niedoinwestowany Rynek SEO
 URL: https://boostnow.pl/blog/pozycjonowanie-wroclaw-niedoinwestowany-rynek-seo
-Date: 2026-10-27
+Date: 2026-10-28
 
 Wrocław to trzecia gospodarka w Polsce. 700 000 mieszkańców. I jeden z najsłabiej obsłużonych rynków SEO.
 
@@ -324,7 +324,7 @@ Cztery pytania które oddzielają poważne agencje od reszty.
 
 ### SEO dla Kliniki — Pacjenci Szukają Specjalistów w Google
 URL: https://boostnow.pl/blog/seo-dla-kliniki-pacjenci-szukaja-specjalistow-w-google
-Date: 2026-10-27
+Date: 2026-10-28
 
 Pacjent wpisuje w Google nazwę specjalizacji i miasto. Trzy pierwsze gabinety dostają zapis. Reszta — nie.
 
@@ -384,7 +384,7 @@ BoostNow wdraża pięcioobszarową strategię dla placówek medycznych.
 
 ### Pozycjonowanie Stron Poznań — Jak Firma z Poznania Trafia do TOP Google [2026]
 URL: https://boostnow.pl/blog/pozycjonowanie-stron-poznan-jak-firma-z-poznania-trafia-do-top-google-2026
-Date: 2026-10-27
+Date: 2026-10-28
 
 Poznań ma Allegro, Beyond.pl i 530 000 mieszkańców. Większość lokalnych firm nie ma pozycjonowania. Okazja zamyka się.
 
@@ -434,7 +434,7 @@ SU-2 Kiteboards osiągnęły TOP 1 i TOP 2 globalnie w 120 dni. RudStudio — pa
 
 ### Optymalizacja SEO — Co Naprawdę Optymalizować w 2026
 URL: https://boostnow.pl/blog/optymalizacja-seo
-Date: 2026-10-27
+Date: 2026-10-28
 
 Optymalizacja SEO to nie checklista 50 zadań. To 4 warstwy, które muszą zagrać razem.
 
@@ -490,7 +490,7 @@ Pełna optymalizacja SEO obejmuje cztery warstwy zintegrowane operacyjnie. Brak 
 
 ### Agencja SEO Barczewo — Pięć Kryteriów Wyboru Wykonawcy Pozycjonowania [2026]
 URL: https://boostnow.pl/blog/agencja-seo-barczewo-pozycjonowanie
-Date: 2026-10-27
+Date: 2026-10-28
 
 Klienci pytają ChatGPT „jaką agencję SEO polecasz w Barczewie". W odpowiedziach AI będzie tylko ta, która wdrożyła GEO.
 
@@ -539,7 +539,7 @@ W okolicach Barczewa i Olsztyna działa kilkadziesiąt agencji oferujących SEO.
 
 ### Generative Engine Optimization (GEO) — Definicja, Badania i Wdrożenie [2026]
 URL: https://boostnow.pl/blog/generative-engine-optimization
-Date: 2026-10-27
+Date: 2026-10-28
 
 ChatGPT odpowiada na 800 milionów zapytań tygodniowo. Twoja firma nie pojawia się w żadnej z tych odpowiedzi.
 
@@ -584,7 +584,7 @@ Kluczowy wkład pracy Princeton: zidentyfikowanie **9 wymiarów optymalizacji**,
 
 ### Ile Kosztuje Strona Internetowa w 2026? Pełny Cennik + Ukryty Koszt
 URL: https://boostnow.pl/blog/ile-kosztuje-strona-internetowa
-Date: 2026-10-27
+Date: 2026-10-28
 
 Strona za 2 000 PLN bez pozycjonowania = 0 zł zwrotu. Większość firm płaci dwa razy.
 
@@ -635,7 +635,7 @@ Uczciwa wycena strony internetowej obejmuje siedem komponentów, których każdy
 
 ### Ile Kosztuje Pozycjonowanie — Realne Stawki i ROI w 2026
 URL: https://boostnow.pl/blog/ile-kosztuje-pozycjonowanie
-Date: 2026-10-27
+Date: 2026-10-28
 
 500 PLN czy 15 000 PLN miesięcznie? Cennik zależy od tego, co dostaniesz w zamian.
 
@@ -705,7 +705,7 @@ Cztery czerwone flagi które oznaczają, że agencja sprzedaje pozory, nie wynik
 
 ### Pozycjonowanie GEO — Praktyczna Strategia dla Firm B2B w Polsce [2026]
 URL: https://boostnow.pl/blog/pozycjonowanie-geo
-Date: 2026-10-27
+Date: 2026-10-28
 
 Polski rynek pozycjonowania GEO jest pusty. Pierwsze firmy budują monopol cytowań w ChatGPT — zanim konkurencja w ogóle zrozumie temat.
 
@@ -752,7 +752,7 @@ Trzecia: **frazy GEO w Polsce mają
 
 ### Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]
 URL: https://boostnow.pl/blog/agencja-seo-ai
-Date: 2026-10-27
+Date: 2026-10-28
 
 Tradycyjna agencja SEO walczy o pozycje w Google. Agencja SEO AI walczy o cytowania w ChatGPT, Perplexity i Google AI Mode. Różnica decyduje o tym, czy Twoja firma istnieje dla 40% klientów w 2026.
 
@@ -812,7 +812,7 @@ Caruma — klient BoostNow z sektora Digital Product Passport — to konkretny c
 
 ### Pozycjonowanie Stron WWW Dywity — SEO dla Istniejących Stron Firm Satelitarnych [2026]
 URL: https://boostnow.pl/blog/pozycjonowanie-stron-www-dywity-seo-dla-istniejacych-stron-firm-satelitarnych-2026
-Date: 2026-10-27
+Date: 2026-10-28
 
 Masz już stronę dla firmy z Dywit, ale nie generuje klientów? Pozycjonowanie zmieni to w 2-4 tygodnie.
 
@@ -867,7 +867,7 @@ BoostNow przeprowadził dziesiątki audytów istniejących stron firm z Warmii-M
 
 ### SEO dla Hoteli — Zbieraj Rezerwacje Bezpośrednie, Płać Mniej OTA
 URL: https://boostnow.pl/blog/seo-dla-hoteli-zbieraj-rezerwacje-bezposrednie-plac-mniej-ota
-Date: 2026-10-27
+Date: 2026-10-28
 
 Booking pobiera 15-20% od każdej rezerwacji. Twój hotel z SEO płaci 0%. To różnica liczona w setkach tysięcy złotych rocznie.
 
@@ -931,7 +931,7 @@ Caruma osiągnęła 151 000 wyświetleń w 90 dni — dla hotelu z aktywnym popy
 
 ### Agencja Marketingowa Olsztyn — Pełen Stack SEO + GEO + Ads dla Firm z Miasta [2026]
 URL: https://boostnow.pl/blog/agencja-marketingowa-olsztyn-pelen-stack-seo-geo-ads-dla-firm-z-miasta-2026
-Date: 2026-10-27
+Date: 2026-10-28
 
 Agencja marketingowa w Olsztynie to nie „drogą alternatywa dla Warszawy". To bliższa jakość z niższymi stawkami.
 
@@ -978,7 +978,7 @@ Pełna oferta agencji marketingowej dla firm z Olsztyna w 2026 obejmuje sześć 
 
 ### Prowadzenie Social Media Olsztyn — Strategia dla Firm z Miasta i Regionu [2026]
 URL: https://boostnow.pl/blog/prowadzenie-social-media-olsztyn-strategia-dla-firm-z-miasta-i-regionu-2026
-Date: 2026-10-27
+Date: 2026-10-28
 
 Twoje social media firmy z Olsztyna dostają 200 wyświetleń na post. Konkurencja — 20 000. Różnica: strategia.
 
@@ -1031,7 +1031,7 @@ Nie każda platforma pasuje do każdej firmy. Tabela pokazuje które platformy s
 
 ### SEO dla Sklepu Internetowego — Jak Sklep Trafia do TOP 1 Globalnie
 URL: https://boostnow.pl/blog/seo-dla-sklepu-internetowego
-Date: 2026-10-27
+Date: 2026-10-28
 
 Twój sklep płaci za każdego klienta z reklam. Sklep z SEO ma ruch za darmo. Pokażę jak.
 
@@ -1089,7 +1089,7 @@ BoostNow optymalizuje sklep internetowy w czterech obszarach jednocześnie — k
 
 ### Pozycjonowanie Wizytówki Google — Jak Twoja Firma Trafia do Local Pack [2026]
 URL: https://boostnow.pl/blog/pozycjonowanie-wizytowki-google
-Date: 2026-10-27
+Date: 2026-10-28
 
 Google Local Pack zbiera 46% kliknięć lokalnych. Twojej firmy tam nie ma — klienci idą do konkurencji.
 
@@ -1138,7 +1138,7 @@ Google nie publikuje pełnej dokumentacji algorytmu Local Pack, ale na podstawie
 
 ### Pozycjonowanie Warszawa — Jak Firma z Warszawy Trafia do TOP Google
 URL: https://boostnow.pl/blog/pozycjonowanie-warszawa-jak-firma-z-warszawy-trafia-do-top-google
-Date: 2026-10-27
+Date: 2026-10-28
 
 Warszawa to najbardziej zatłoczony rynek SEO w Polsce. Twoja firma może go zdominować — albo zniknąć.
 
@@ -1198,7 +1198,7 @@ Kompleksowe pozycjonowanie firmy z Warszawy obejmuje pięć obszarów. Każdy ma
 
 ### Tworzenie Stron Internetowych Barczewo — Strony dla Firm Lokalnych [2026]
 URL: https://boostnow.pl/blog/tworzenie-stron-internetowych-barczewo-strony-dla-firm-lokalnych-2026
-Date: 2026-10-27
+Date: 2026-10-28
 
 Strona w Barczewie za 2 000 PLN bez SEO = 2 000 PLN straconych. Strona z SEO + GEO od dnia 1 = inwestycja zwracająca się w 6 miesięcy.
 
@@ -1246,7 +1246,7 @@ Pięć decyzji, które musisz podjąć zanim ktokolwiek zacznie projektować str
 
 ### Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?
 URL: https://boostnow.pl/blog/ai-seo
-Date: 2026-10-27
+Date: 2026-10-28
 
 Sprawdź swoje statystyki Google: ile zapytań, które kiedyś prowadziły do Twojej strony, zostaje teraz w AI Overview bez kliknięcia? Dla większości firm B2B to 30-50%. To nie jest spadek SEO. To migracja zapytań do AI.
 
@@ -1306,7 +1306,7 @@ AI SEO i klasyczne SEO używają częściowo wspólnych technicznych podstaw (Co
 
 ### Marketing Internetowy dla Firm w Dobrym Mieście — Strategia 2026
 URL: https://boostnow.pl/blog/marketing-internetowy-dla-firm-w-dobrym-miescie-strategia-2026
-Date: 2026-10-27
+Date: 2026-10-28
 
 Dobre Miasto to 10 000 mieszkańców i 700 lat historii. Marketing większości firm? Wciąż offline.
 
@@ -1359,7 +1359,7 @@ Firmy z Dobrego Miasta mogą wybrać jedną z dwóch strategii — lub połączy
 
 ### Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026
 URL: https://boostnow.pl/blog/co-to-jest-seo
-Date: 2026-10-27
+Date: 2026-10-28
 
 Twoja konkurencja zbiera klientów z Google. Ty? To może się zmienić.
 
@@ -1423,7 +1423,7 @@ Jeśli Twoja firma jest poza pierwszą dziesiątką — tracisz praktycznie
 
 ### SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO i AEO
 URL: https://boostnow.pl/blog/seo
-Date: 2026-10-27
+Date: 2026-10-28
 
 SEO nie umarło. Ewoluowało. Firmy, które tego nie wiedzą, tracą 40% rynku do AI search.
 
@@ -1473,7 +1473,7 @@ Pełna strategia SEO w 2026 obejmuje cztery warstwy. Brak jednej powoduje **niem
 
 ### SEO dla Prawnika — Widoczność z Poszanowaniem KEA i KRRP
 URL: https://boostnow.pl/blog/seo-dla-prawnika-widocznosc-z-poszanowaniem-kea-i-krrp
-Date: 2026-10-27
+Date: 2026-10-28
 
 Klient z problemem prawnym szuka w Google. Pierwsza kancelaria w wynikach dostaje zapytanie. Reszta — nigdy o nim nie wie.
 
@@ -1537,7 +1537,7 @@ BoostNow wdraża pięcioobszarową strategię dla kancelarii prawnych.
 
 ### Tanie Pozycjonowanie — Co Znaczy Tanie i Co Naprawdę Się Opłaca [2026]
 URL: https://boostnow.pl/blog/tanie-pozycjonowanie
-Date: 2026-10-27
+Date: 2026-10-28
 
 Tanie pozycjonowanie 200 PLN miesięcznie — strata pieniędzy. Dobre 2 500 PLN — wielokrotny zwrot w 6-12 miesięcy.
 
@@ -1591,7 +1591,7 @@ Na polskim rynku funkcjonują trzy podstawowe modele „taniego pozycjonowania".
 
 ### Co To Jest GEO — Generative Engine Optimization po Polsku
 URL: https://boostnow.pl/blog/geo-co-to-jest
-Date: 2026-10-27
+Date: 2026-10-28
 
 Twoja konkurencja może być na 8 pozycji w Google i pierwsza w ChatGPT. To właśnie GEO.
 
@@ -1651,7 +1651,7 @@ GEO, SEO i AEO to trzy uzupełniające się dyscypliny widoczności online — i
 
 ### Tanie Pozycjonowanie Stron — Kiedy Realny Produkt, Kiedy Fałszywa Oszczędność [2026]
 URL: https://boostnow.pl/blog/tanie-pozycjonowanie-stron
-Date: 2026-10-27
+Date: 2026-10-28
 
 Tanie pozycjonowanie za 500 PLN/mies. może Cię kosztować 15 000 PLN utraconych klientów rocznie. Różnica: jakość wykonania.
 
