@@ -2,14 +2,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-/* Navigation Component
-   Design: "Precision Strike" - Military-Grade Minimalism
-   - Fixed sticky header with glass effect on scroll
-   - Status indicator (green dot)
-   - Mobile hamburger menu
-   - Logo with negative margins to prevent height overflow
-*/
-
 const navItems = [
   { label: "O nas", href: "/o-nas" },
   { label: "AIO dla e-commerce", href: "/aio", highlight: true },
@@ -28,7 +20,7 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -46,35 +38,32 @@ export default function Navigation() {
 
   return (
     <>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+      <header
         style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 1000 }}
-        className={`${
+        className={{
           isScrolled
-            ? "bg-background/95 backdrop-blur-xl border-b border-border/50" 
+            ? "bg-background/95 backdrop-blur-xl border-b border-border/50"
             : "bg-background/95 border-b border-border/30"
-        }`}
+        }}
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 py-3 lg:py-4">
-            {/* Logo */}
             <a
               href="/"
               className="flex-shrink-0 flex items-center justify-center gap-0 group bg-transparent p-0 py-0"
             >
-              <img 
-                src="/images/logo.svg" 
+              <img
+                src="/images/logo.svg"
                 alt="BoostNow Logo"
                 width="288"
                 height="72"
+                fetchPriority="high"
+                decoding="async"
                 style={{ display: "block", margin: "0" }}
-                className="h-12 sm:h-14 lg:h-[72px] w-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 
+                className="h-12 sm:h-14 lg:h-[72px] w-auto hover:opacity-80 transition-opacity bg-transparent object-contain"
               />
             </a>
 
-            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-3 lg:gap-4 flex-1 justify-center overflow-x-auto">
               {navItems.map((item) => (
                 <button
@@ -94,7 +83,6 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* CTA Button */}
             <button
               onClick={() => scrollToSection("#contact")}
               className="hidden lg:inline-flex flex-shrink-0 px-6 py-2 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
@@ -102,21 +90,19 @@ export default function Navigation() {
               Zboostuj wyniki
             </button>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden flex-shrink-0 text-foreground"
+              aria-label={isMobileMenuOpen ? "Zamknij menu" : "Otwórz menu"}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
 
-          {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
               className="lg:hidden border-t border-border/30 py-4 space-y-2"
             >
               {navItems.map((item) => (
@@ -144,10 +130,9 @@ export default function Navigation() {
             </motion.div>
           )}
         </nav>
-      </motion.header>
+      </header>
 
-      {/* Spacer to prevent content overlap with fixed header */}
-      <div className="h-16 sm:h-20 lg:h-24" />
+      <div className="h-16 sm:h-20 lg:h-24" aria-hidden="true" />
     </>
   );
 }
