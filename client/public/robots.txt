@@ -1,4 +1,5 @@
 # AI Crawlers - ALLOWED for maximum AI search visibility
+# Explicit allow for generative AI systems (ai-seo skill recommendation)
 User-agent: GPTBot
 Allow: /
 
@@ -9,6 +10,9 @@ User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: PerplexityBot
@@ -29,12 +33,24 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 # Standard Search Engines
 User-agent: *
 Allow: /
 
+# Discovery files for AI agents
 Sitemap: https://boostnow.pl/sitemap.xml
-Sitemap: https://boostnow-8tjh5w8x.manus.space/sitemap.xml
 
 # IndexNow key
 IndexNow-Key: bc336320cd0e4476a1314f872d676c4e
