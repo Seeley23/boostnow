@@ -11,6 +11,24 @@
 - Główne obszary: Generative Engine Optimization, SEO, content, psychologia decyzji i optymalizacja konwersji.
 - Kontakt: kontakt@boostnow.pl
 - Adres: ul. Marii Konopnickiej 11, 11-040 Dobre Miasto
+- NIP: 7393776527
+- Założyciel: Mateusz Nowotka (Founder & CEO, ekspert GEO/SEO)
+- Obszar działania: Olsztyn, Warmia i Mazury, cała Polska
+- Specjalizacja: cytowania w AI, AI Overviews, pozycjonowanie lokalne, e-commerce
+
+## Audience
+
+- Firmy B2B szukające widoczności w ChatGPT i Google
+- Sklepy e-commerce chcące zwiększyć konwersję i ruch organiczny
+- Lokalne firmy z Warmii i Mazur oraz Olsztyna
+- Marki budujące autorytet w odpowiedziach AI
+
+## Key Differentiators
+
+- Łączymy GEO (cytowania AI) z klasycznym SEO
+- Używamy Decision Science i psychologii decyzji w optymalizacji konwersji
+- Tworzymy treści zoptymalizowane pod cytowania (lead-first, statystyki, schema)
+- Wdrażamy llms.txt, schema i prerender dla AI crawlerów
 
 ## Strony główne
 - [Strona główna](https://boostnow.pl/)
