@@ -1,11 +1,12 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
-import ReactMarkdown from 'react-markdown';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
 import { StatBlock, QuoteBlock, FAQSection, DefinitionBlock, ComparisonTable } from './ContentPatterns';
+
+const ReactMarkdown = lazy(() => import('react-markdown'));
 
 interface Article {
   id: number;
@@ -44,6 +45,16 @@ const SEO_VS_GEO = [
 ];
 
 const ARTICLES: Article[] = articlesMetadata as Article[];
+
+function extractSteps(content: string): string[] {
+  const lines = content.split('\n');
+  const steps: string[] = [];
+  for (const line of lines) {
+    const match = line.match(/^\d+\.\s+(.+)/) || line.match(/^[-*]\s+(Krok|Step)\s*\d*[:.]?\s*(.+)/i);
+    if (match) steps.push(match[1] || match[2]);
+  }
+  return steps.slice(0, 8);
+}
 
 const BlogArticle: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -131,8 +142,24 @@ const BlogArticle: React.FC = () => {
         };
       }
 
+      const steps = extractSteps(article.content);
+      let howToSchema = null;
+      if (steps.length >= 3) {
+        howToSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: article.title,
+          description: article.meta_description,
+          step: steps.map((text, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            text
+          }))
+        };
+      }
+
       document.querySelectorAll('script[data-article-schema]').forEach(el => el.remove());
-      [articleSchema, breadcrumbSchema, faqSchema].filter(Boolean).forEach((s, i) => {
+      [articleSchema, breadcrumbSchema, faqSchema, howToSchema].filter(Boolean).forEach((s, i) => {
         const script = document.createElement('script');
         script.type = 'application/ld+json';
         script.setAttribute('data-article-schema', String(i));
@@ -285,19 +312,21 @@ const BlogArticle: React.FC = () => {
 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-invert max-w-none mb-12" style={{ contentVisibility: 'auto' }}>
               <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-8 text-[#9aa0b3]">
-                <ReactMarkdown components={{
-                  h1: ({ ...props }: any) => <h1 className="text-3xl font-bold text-white mb-4 font-playfair mt-8" {...props} />,
-                  h2: ({ ...props }: any) => <h2 className="text-2xl font-bold text-white mb-3 font-playfair mt-6 text-[#c7ff4e]" {...props} />,
-                  h3: ({ ...props }: any) => <h3 className="text-xl font-bold text-white mb-2 font-playfair mt-4" {...props} />,
-                  p: ({ ...props }: any) => <p className="mb-4 leading-relaxed text-[#9aa0b3]" {...props} />,
-                  ul: ({ ...props }: any) => <ul className="list-disc list-inside mb-4 space-y-2" {...props} />,
-                  li: ({ ...props }: any) => <li className="text-[#9aa0b3]" {...props} />,
-                  blockquote: ({ ...props }: any) => <blockquote className="border-l-4 border-[#c7ff4e] pl-4 italic text-[#9aa0b3] my-4" {...props} />,
-                  strong: ({ ...props }: any) => <strong className="text-[#c7ff4e] font-semibold" {...props} />,
-                  code: ({ ...props }: any) => <code className="bg-[#0b1020] text-[#c7ff4e] px-2 py-1 rounded text-sm" {...props} />,
-                }}>
-                  {article.content}
-                </ReactMarkdown>
+                <Suspense fallback={<div className="text-[#9aa0b3]">Ładowanie treści...</div>}>
+                  <ReactMarkdown components={{
+                    h1: ({ ...props }: any) => <h1 className="text-3xl font-bold text-white mb-4 font-playfair mt-8" {...props} />,
+                    h2: ({ ...props }: any) => <h2 className="text-2xl font-bold text-white mb-3 font-playfair mt-6 text-[#c7ff4e]" {...props} />,
+                    h3: ({ ...props }: any) => <h3 className="text-xl font-bold text-white mb-2 font-playfair mt-4" {...props} />,
+                    p: ({ ...props }: any) => <p className="mb-4 leading-relaxed text-[#9aa0b3]" {...props} />,
+                    ul: ({ ...props }: any) => <ul className="list-disc list-inside mb-4 space-y-2" {...props} />,
+                    li: ({ ...props }: any) => <li className="text-[#9aa0b3]" {...props} />,
+                    blockquote: ({ ...props }: any) => <blockquote className="border-l-4 border-[#c7ff4e] pl-4 italic text-[#9aa0b3] my-4" {...props} />,
+                    strong: ({ ...props }: any) => <strong className="text-[#c7ff4e] font-semibold" {...props} />,
+                    code: ({ ...props }: any) => <code className="bg-[#0b1020] text-[#c7ff4e] px-2 py-1 rounded text-sm" {...props} />,
+                  }}>
+                    {article.content}
+                  </ReactMarkdown>
+                </Suspense>
               </div>
             </motion.div>
 
