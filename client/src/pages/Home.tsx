@@ -26,7 +26,7 @@ export default function Home() {
   const getSection = (type: string) => homePage?.sections?.find(s => s.type === type);
 
   return (
-    <div className="min-h-screen bg-background pt-20 lg:pt-24">
+    <div className="min-h-screen bg-background">
       <Helmet>
         <title>{seo.title || 'BoostNow'}</title>
         <meta name="robots" content="index, follow" />

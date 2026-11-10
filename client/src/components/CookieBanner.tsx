@@ -97,70 +97,47 @@ export default function CookieBanner() {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 100, opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6"
+        className="fixed bottom-0 left-0 right-0 z-50 p-3 md:p-4 pointer-events-none"
+        role="dialog"
+        aria-label="Zgoda na pliki cookies"
       >
-        <div className="container mx-auto max-w-6xl">
-          <div className="relative bg-card border border-border rounded-2xl shadow-2xl p-6 md:p-8">
-            {/* Close button */}
-            <button
-              onClick={handleClose}
-              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Zamknij banner cookies"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-              {/* Icon */}
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Cookie className="w-6 h-6 text-primary" />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1">
-                <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
-                  Używamy plików cookies
-                </h3>
-                <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-                  Nasza strona wykorzystuje pliki cookies w celu zapewnienia prawidłowego działania, 
-                  analizy ruchu i personalizacji treści. Możesz zaakceptować wszystkie cookies lub 
-                  odrzucić cookies analityczne i marketingowe.{" "}
+        <div className="mx-auto max-w-4xl pointer-events-auto">
+          <div className="relative bg-card/95 backdrop-blur-md border border-border rounded-xl shadow-2xl p-4 md:px-5 md:py-4">
+            <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-5">
+              <div className="flex items-start gap-3 flex-1 pr-6 md:pr-0">
+                <Cookie className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <p className="text-sm text-muted-foreground leading-snug">
+                  <span className="font-semibold text-foreground">Używamy plików cookies</span>{" "}
+                  do działania strony i analizy ruchu. Niezbędne są zawsze aktywne.{" "}
                   <Link href="/polityka-cookies" className="text-primary hover:underline">
-                    Dowiedz się więcej
+                    Polityka cookies
                   </Link>
                 </p>
               </div>
 
-              {/* Actions */}
-              <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+              <div className="flex gap-2 shrink-0">
                 <button
                   onClick={handleReject}
-                  className="px-6 py-3 bg-secondary text-foreground font-heading font-semibold text-sm rounded-lg transition-all duration-300 hover:bg-secondary/80 whitespace-nowrap"
+                  className="flex-1 md:flex-none px-4 py-2.5 bg-secondary text-foreground font-heading font-semibold text-sm rounded-lg transition-colors hover:bg-secondary/80 whitespace-nowrap"
                 >
                   Odrzuć
                 </button>
                 <button
                   onClick={handleAccept}
-                  className="px-6 py-3 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-lg transition-all duration-300 hover:scale-105 glow-lime whitespace-nowrap"
+                  className="flex-1 md:flex-none px-4 py-2.5 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-lg transition-opacity hover:opacity-90 whitespace-nowrap"
                 >
                   Akceptuj wszystkie
                 </button>
               </div>
             </div>
 
-            {/* Additional info */}
-            <div className="mt-4 pt-4 border-t border-border">
-              <p className="text-xs text-muted-foreground">
-                Cookies niezbędne są zawsze aktywne. Możesz zmienić swoje preferencje w każdej chwili 
-                w ustawieniach przeglądarki lub{" "}
-                <Link href="/polityka-cookies" className="text-primary hover:underline">
-                  polityce cookies
-                </Link>
-                .
-              </p>
-            </div>
+            <button
+              onClick={handleClose}
+              className="absolute top-3 right-3 md:hidden text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Zamknij banner cookies"
+            >
+              <X className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </motion.div>

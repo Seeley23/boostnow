@@ -6,6 +6,9 @@ import ReactMarkdown from 'react-markdown';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
 import { BlogRating } from './BlogRating';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import { Calendar, FileText, Clock } from 'lucide-react';
 
 interface Article {
   id: number;
@@ -297,7 +300,9 @@ const BlogArticle: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#0b1020] py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <div className="py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>{(article as any).seoTitle || article.title} | BoostNow</title>
         <meta name="robots" content="index, follow" />
@@ -358,20 +363,28 @@ const BlogArticle: React.FC = () => {
               </p>
 
               {/* Metadata */}
+              {((article as any).date || article.word_count > 0) && (
               <div className="flex flex-wrap items-center gap-6 text-sm text-[#9aa0b3] border-t border-b border-[#2a2f3e] py-4">
-                <div className="flex items-center gap-2">
-                  <span>📅</span>
-                  <span>30 grudnia 2025</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span>📝</span>
-                  <span>{article.word_count} słów</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span>⏱️</span>
-                  <span>~{Math.ceil(article.word_count / 200)} min czytania</span>
-                </div>
+                {(article as any).date && (
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-[#c7ff4e]" />
+                    <span>{(article as any).date}</span>
+                  </div>
+                )}
+                {article.word_count > 0 && (
+                  <>
+                    <div className="flex items-center gap-2">
+                      <FileText className="w-4 h-4 text-[#c7ff4e]" />
+                      <span>{article.word_count} słów</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-[#c7ff4e]" />
+                      <span>~{Math.ceil(article.word_count / 200)} min czytania</span>
+                    </div>
+                  </>
+                )}
               </div>
+              )}
             </div>
 
             {/* Semantic Anchors */}
@@ -486,9 +499,11 @@ const BlogArticle: React.FC = () => {
                             <p className="text-sm font-semibold text-white group-hover:text-[#c7ff4e] transition-colors line-clamp-2">
                               {relArticle.title}
                             </p>
-                            <p className="text-xs text-[#9aa0b3] mt-1">
-                              {Math.ceil(relArticle.word_count / 200)} min czytania
-                            </p>
+                            {relArticle.word_count > 0 && (
+                              <p className="text-xs text-[#9aa0b3] mt-1">
+                                {Math.ceil(relArticle.word_count / 200)} min czytania
+                              </p>
+                            )}
                           </div>
                         </div>
                       </motion.button>
@@ -571,6 +586,8 @@ const BlogArticle: React.FC = () => {
           </motion.div>
         </div>
       </div>
+      </div>
+      <Footer />
     </div>
   );
 };

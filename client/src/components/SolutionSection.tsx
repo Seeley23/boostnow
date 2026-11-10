@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Scissors, Eye, TrendingUp } from "lucide-react";
 
 interface SolutionProps {
   title?: string;
@@ -42,17 +43,17 @@ export default function SolutionSection({ title, content }: SolutionProps) {
     {
       title: "Usuwamy opór",
       desc: "Projektujemy ścieżki zakupu zgodne z pracą ludzkiego mózgu.",
-      emoji: "✂️",
+      Icon: Scissors,
     },
     {
       title: "Hakujemy uwagę",
       desc: "Tworzymy przekaz, który omija filtry krytyczne i trafia do decyzji.",
-      emoji: "👁️",
+      Icon: Eye,
     },
     {
       title: "Dowożimy ROI",
       desc: "Interesuje nas Twój zysk, nie puste zasięgi.",
-      emoji: "🏗️",
+      Icon: TrendingUp,
     },
   ];
 
@@ -64,11 +65,11 @@ export default function SolutionSection({ title, content }: SolutionProps) {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-5xl mx-auto text-center"
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white text-center"
+            className="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto text-white text-center"
           >
             {displayTitle}
           </motion.h2>
@@ -91,8 +92,8 @@ export default function SolutionSection({ title, content }: SolutionProps) {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="bg-gray-900/50 border border-gray-800 rounded-lg p-8 group cursor-pointer transition-all hover:border-lime-400/50"
               >
-                <div className="text-4xl mb-4 flex-shrink-0 group-hover:scale-110 transition-transform">
-                  {solution.emoji}
+                <div className="w-12 h-12 mx-auto mb-5 rounded-xl bg-lime-400/10 border border-lime-400/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <solution.Icon className="w-6 h-6 text-lime-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-lime-400 mb-3 group-hover:text-lime-300 transition-colors">
                   {solution.title}

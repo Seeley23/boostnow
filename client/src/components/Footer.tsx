@@ -61,7 +61,7 @@ export default function Footer() {
                 alt="BoostNow Logo"
                 width="320"
                 height="40"
-                className="w-80 h-auto bg-transparent object-contain" 
+                className="w-48 h-auto bg-transparent object-contain" 
               />
             </a>
             <p className="text-sm text-muted-foreground mb-6 max-w-xs">
