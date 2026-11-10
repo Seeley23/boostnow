@@ -81,7 +81,15 @@ function injectPageMeta(html: string, reqPath: string): string {
     }
   }
 
-  return html.replace("</head>", `  ${lines.join("\n    ")}\n  </head>`);
+  // Replace (not append to) the shell's own title / description / canonical,
+  // otherwise crawlers see two <title> and two canonicals (the first pointing
+  // at the homepage).
+  const stripped = html
+    .replace(/<title>[\s\S]*?<\/title>\s*/gi, "")
+    .replace(/<meta\s+name="description"[^>]*>\s*/gi, "")
+    .replace(/<link\s+rel="canonical"[^>]*>\s*/gi, "");
+
+  return stripped.replace("</head>", `  ${lines.join("\n    ")}\n  </head>`);
 }
 
 export function serveStatic(app: Express) {
@@ -105,6 +113,16 @@ export function serveStatic(app: Express) {
       // (minus query string) to get the real requested path.
       const reqPath = (req.originalUrl || req.url || "/").split("?")[0];
       const base = getIndexHtml(distPath);
+      // Unknown /blog/<slug> (typo, stale slug, Airtable record id) must not
+      // be a soft-404 that canonicalises to the homepage: answer 404 + noindex.
+      if (reqPath.startsWith("/blog/") && !getMetaForPath(reqPath)) {
+        const notFound = base.replace(
+          "</head>",
+          `  <meta name="robots" content="noindex" />\n  </head>`
+        );
+        res.status(404).type("html").send(notFound);
+        return;
+      }
       const html = injectPageMeta(base, reqPath);
       res.status(200).type("html").send(html);
     } else {
