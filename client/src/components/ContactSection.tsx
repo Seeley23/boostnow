@@ -184,6 +184,7 @@ export default function ContactSection({ title, description }: ContactSectionPro
                 </div>
               ) : (
                 <form ref={formRef} onSubmit={handleSubmit} aria-labelledby="contact-form-heading" className="space-y-4 sm:space-y-6">
+                  <p className="text-xs text-muted-foreground mb-4">Pola oznaczone <span aria-hidden="true">*</span> są wymagane.</p>
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Imię i nazwisko<span aria-hidden="true" className="text-primary"> *</span>
