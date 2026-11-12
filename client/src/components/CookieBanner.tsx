@@ -117,13 +117,13 @@ export default function CookieBanner() {
 
               <div className="flex gap-2 shrink-0">
                 <button
-                  onClick={handleReject}
+                  onClick={handleReject} aria-label="Odrzuć pliki cookies"
                   className="flex-1 md:flex-none px-4 py-2.5 bg-secondary text-foreground font-heading font-semibold text-sm rounded-lg transition-colors hover:bg-secondary/80 whitespace-nowrap"
                 >
                   Odrzuć
                 </button>
                 <button
-                  onClick={handleAccept}
+                  onClick={handleAccept} aria-label="Akceptuj wszystkie pliki cookies"
                   className="flex-1 md:flex-none px-4 py-2.5 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-lg transition-opacity hover:opacity-90 whitespace-nowrap"
                 >
                   Akceptuj wszystkie
