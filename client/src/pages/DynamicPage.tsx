@@ -12,7 +12,34 @@ import websiteData from '../data/blog/website-cms.json';
 const LIME = "#c7ff4e";
 const NAVY = "#0b1020";
 
-// ── Reusable fade-in wrapper ──────────────────
+const LOCAL_SEO: Record<string, { title: string; description: string; city: string }> = {
+  olsztyn: {
+    title: "Agencja Marketingowa Olsztyn — SEO, GEO i Tworzenie Stron | BoostNow",
+    description: "BoostNow w Olsztynie: SEO, GEO (AI Search), AEO i strony internetowe dla firm z Warmii. Widoczność w Google i ChatGPT. Darmowy audyt.",
+    city: "Olsztyn"
+  },
+  barczewo: {
+    title: "SEO i Marketing Internetowy Barczewo | BoostNow",
+    description: "Pozycjonowanie i marketing dla firm z Barczewa. Lokalne SEO, strony www i widoczność w AI. BoostNow — agencja z regionu Olsztyna.",
+    city: "Barczewo"
+  },
+  stawiguda: {
+    title: "Agencja SEO Stawiguda — Pozycjonowanie Lokalne | BoostNow",
+    description: "SEO i GEO dla firm ze Stawigudy. Budujemy widoczność w Google i AI Search. Strony, audyty i strategia marketingowa od BoostNow.",
+    city: "Stawiguda"
+  },
+  dywity: {
+    title: "SEO Dywity — Pozycjonowanie dla Firm Satelitarnych Olsztyna | BoostNow",
+    description: "Marketing internetowy i SEO dla firm z Dywit. Lokalna widoczność, strony www i optymalizacja pod AI. BoostNow.",
+    city: "Dywity"
+  },
+  olsztynek: {
+    title: "Marketing Internetowy Olsztynek | SEO i GEO | BoostNow",
+    description: "Strategia SEO i marketingu dla firm z Olsztynka. Widoczność w Google, ChatGPT i lokalnych wynikach. BoostNow.",
+    city: "Olsztynek"
+  }
+};
+
 function FadeIn({
   children,
   delay = 0,
@@ -37,7 +64,6 @@ function FadeIn({
   );
 }
 
-// ── FAQ item ───────────────────────────────────
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
@@ -65,10 +91,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         transition={{ duration: 0.3 }}
         className="overflow-hidden"
       >
-        <p
-          className="pb-5 text-sm leading-relaxed"
-          style={{ color: "rgba(247,248,250,0.6)" }}
-        >
+        <p className="pb-5 text-sm leading-relaxed" style={{ color: "rgba(247,248,250,0.6)" }}>
           {a}
         </p>
       </motion.div>
@@ -83,61 +106,84 @@ const DynamicPage: React.FC = () => {
 
   useEffect(() => {
     if (slug && websiteData && websiteData.pages) {
-      const foundPage = websiteData.pages.find(p => p.slug === slug);
+      const foundPage = websiteData.pages.find((p: any) => p.slug === slug);
       setPage(foundPage || null);
     } else if (!slug && websiteData && websiteData.pages) {
-      const homePage = websiteData.pages.find(p => p.slug === 'home');
+      const homePage = websiteData.pages.find((p: any) => p.slug === 'home');
       setPage(homePage || null);
     }
   }, [slug]);
 
-  if (!page) {
+  if (!page && !LOCAL_SEO[slug]) {
     return <NotFound />;
   }
 
-  const seoTitle = page.seo?.title || page.SEO_Title || page.name || page.PageName || 'BoostNow';
-  const seoDesc = page.seo?.description || page.SEO_Desc || '';
-  const seoKeywords = page.seo?.primaryKeyword || page.Focus_Keyphrase || '';
-  const pageName = page.name || page.pageName || page.PageName || '';
+  const local = LOCAL_SEO[slug] || { title: '', description: '', city: '' };
+  const seoTitle = page?.seo?.title || page?.SEO_Title || local.title || page?.name || page?.PageName || 'BoostNow';
+  const seoDesc = page?.seo?.description || page?.SEO_Desc || local.description || '';
+  const seoKeywords = page?.seo?.primaryKeyword || page?.Focus_Keyphrase || '';
+  const pageName = page?.name || page?.pageName || page?.PageName || slug || '';
+  const canonical = `https://boostnow.pl/${slug || ''}`;
 
-  const faqSections = page.sections?.filter((s: any) => s.type === 'FAQ') || [];
-  const legacyFaqs = page.FAQ_Data ? (() => { try { return JSON.parse(page.FAQ_Data); } catch { return []; } })() : [];
+  const localBusinessSchema = local.city ? {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: `BoostNow — ${local.city}`,
+    url: canonical,
+    description: local.description,
+    areaServed: {
+      '@type': 'City',
+      name: local.city,
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'Warmia i Mazury' }
+    },
+    provider: {
+      '@type': 'Organization',
+      name: 'BoostNow',
+      url: 'https://boostnow.pl'
+    }
+  } : null;
+
+  const faqSections = page?.sections?.filter((s: any) => s.type === 'FAQ') || [];
+  const legacyFaqs = page?.FAQ_Data ? (() => { try { return JSON.parse(page.FAQ_Data); } catch { return []; } })() : [];
   const faqs = faqSections.length > 0
     ? faqSections.map((s: any) => ({ question: s.title, answer: s.content }))
     : legacyFaqs;
 
   const faqSchema = faqs.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((faq: any) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq: any) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer }
     }))
   } : null;
 
-  const isHome = page.slug === 'home';
+  const isHome = page?.slug === 'home';
 
   return (
     <div style={{ background: NAVY, color: "#f7f8fa" }} className="min-h-screen">
       <Helmet>
         <title>{seoTitle}</title>
+        <meta name="robots" content="index, follow" />
         <meta name="description" content={seoDesc} />
-        <meta name="keywords" content={seoKeywords} />
-        {page.jsonLd && (
-          <script type="application/ld+json">
-            {JSON.stringify(page.jsonLd)}
-          </script>
+        {seoKeywords && <meta name="keywords" content={seoKeywords} />}
+        <link rel="canonical" href={canonical} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDesc} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="website" />
+        {page?.jsonLd && (
+          <script type="application/ld+json">{JSON.stringify(page.jsonLd)}</script>
         )}
-        {!page.jsonLd && page.Schema_Markup && (
-          <script type="application/ld+json">
-            {page.Schema_Markup}
-          </script>
+        {!page?.jsonLd && page?.Schema_Markup && (
+          <script type="application/ld+json">{page.Schema_Markup}</script>
+        )}
+        {localBusinessSchema && (
+          <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         )}
         {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
+          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         )}
       </Helmet>
 
@@ -174,19 +220,19 @@ const DynamicPage: React.FC = () => {
 
               <FadeIn delay={0.1}>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-center leading-[0.95] tracking-tight mb-8">
-                  {page.sections?.find((s: any) => s.type === 'Hero')?.title || pageName}
+                  {page?.sections?.find((s: any) => s.type === 'Hero')?.title || pageName}
                 </h1>
               </FadeIn>
 
               <FadeIn delay={0.2}>
                 <LeadFirst className="text-center max-w-2xl mx-auto">
-                  {page.sections?.find((s: any) => s.type === 'Hero')?.content || 'BoostNow pomaga firmom dominować w Google i silnikach AI dzięki GEO, SEO i psychologii decyzji.'}
+                  {page?.sections?.find((s: any) => s.type === 'Hero')?.content || seoDesc || 'BoostNow pomaga firmom dominować w Google i silnikach AI dzięki GEO, SEO i psychologii decyzji.'}
                 </LeadFirst>
               </FadeIn>
             </div>
           </section>
 
-          {page.sections?.filter((s: any) => s.type !== 'Hero' && s.type !== 'FAQ' && s.type !== 'Contact').map((section: any, idx: number) => (
+          {page?.sections?.filter((s: any) => s.type !== 'Hero' && s.type !== 'FAQ' && s.type !== 'Contact').map((section: any, idx: number) => (
             <section key={idx} className="py-24 border-t" style={{ borderColor: "rgba(247,248,250,0.05)" }}>
               <div className="container max-w-4xl mx-auto px-6">
                 <FadeIn>
@@ -256,17 +302,17 @@ const DynamicPage: React.FC = () => {
               <div className="bg-white/5 p-8 md:p-12 rounded-3xl border border-white/10">
                 <FadeIn>
                   <h2 className="text-3xl md:text-5xl font-black mb-6 text-white">
-                    {page.sections?.find((s: any) => s.type === 'Contact')?.title || 'Zacznijmy współpracę'}
+                    {page?.sections?.find((s: any) => s.type === 'Contact')?.title || 'Zacznijmy współpracę'}
                   </h2>
                   <LeadFirst>
-                    {page.sections?.find((s: any) => s.type === 'Contact')?.content || 'Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony i plan cytowań w AI.'}
+                    {page?.sections?.find((s: any) => s.type === 'Contact')?.content || 'Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony i plan cytowań w AI.'}
                   </LeadFirst>
-                  <button 
+                  <button
                     className="py-4 px-8 rounded-xl font-black text-base tracking-wide transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                     style={{ background: LIME, color: NAVY }}
                     data-mcp-action="request-quote"
                   >
-                    {page.sections?.find((s: any) => s.type === 'Contact')?.ctaLabel || 'Darmowy Audyt →'}
+                    {page?.sections?.find((s: any) => s.type === 'Contact')?.ctaLabel || 'Darmowy Audyt →'}
                   </button>
                 </FadeIn>
               </div>

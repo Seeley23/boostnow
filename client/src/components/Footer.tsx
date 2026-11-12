@@ -1,12 +1,5 @@
-import { motion } from "framer-motion";
 import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
 import { Link } from "wouter";
-
-/* Footer Component
-   Design: "Precision Strike" - Military-Grade Minimalism
-   - Minimal footer with essential links
-   - Social proof and contact
-*/
 
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/company/boostnowmarketing", label: "LinkedIn" },
@@ -15,23 +8,32 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { label: "O nas", href: "#about" },
+  { label: "O nas", href: "/o-nas" },
   { label: "Usługi", href: "#services" },
   { label: "Proces", href: "#process" },
   { label: "Rezultaty", href: "#results" },
-  { label: "Kontakt", href: "#contact" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 const serviceLinks = [
   { label: "AIO dla e-commerce", href: "/aio", highlight: true },
   { label: "AIO dla e-commerce (szczegóły)", href: "/aio-ecommerce" },
   { label: "Blog", href: "/blog" },
-  { label: "Jak zwiększać konwersje", href: "/blog/jak-zwiekszac-konwersje-ecommerce" },
   { label: "Kalkulator strat", href: "/calculator" },
   { label: "Oblicz straty", href: "/oblicz-straty" },
   { label: "Słownik marketingowy", href: "/glossary" },
+  { label: "Słownik", href: "/slownik" },
   { label: "Agencja Olsztyn", href: "/olsztyn" },
   { label: "Mateusz Nowotka – autor", href: "/mateusz-nowotka" },
+  { label: "GEO co to jest", href: "/blog/geo-co-to-jest" },
+  { label: "AEO co to jest", href: "/blog/aeo-co-to-jest" },
+  { label: "Pozycjonowanie lokalne", href: "/blog/pozycjonowanie-lokalne" },
+  { label: "SEO co to", href: "/blog/seo-co-to" },
+  { label: "Audyt SEO", href: "/blog/audyt-seo" },
+  { label: "SEO Barczewo", href: "/blog/agencja-seo-barczewo-pozycjonowanie" },
+  { label: "SEO Stawiguda", href: "/blog/pozycjonowanie-stron-stawiguda-strategia-seo-dla-firm-z-gminy-2026" },
+  { label: "SEO Dywity", href: "/blog/pozycjonowanie-stron-www-dywity-seo-dla-istniejacych-stron-firm-satelitarnych-2026" },
+  { label: "Marketing Olsztynek", href: "/blog/marketing-dla-malych-firm-olsztynek-strategia-2026-dla-historycznej-gminy" },
 ];
 
 export default function Footer() {
@@ -47,29 +49,26 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-border bg-card/30">
+    <footer className="relative border-t border-border bg-card/30" style={{ contentVisibility: 'auto' }}>
       <div className="container py-12 lg:py-16">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
-          {/* Brand column */}
           <div className="lg:col-span-3">
-            <a
-              href="/"
-              className="inline-flex items-center gap-2 mb-4 bg-transparent"
-            >
-              <img 
-                src="/images/logo.svg" 
+            <a href="/" className="inline-flex items-center gap-2 mb-4 bg-transparent">
+              <img
+                src="/images/logo.svg"
                 alt="BoostNow Logo"
                 width="320"
                 height="40"
-                className="w-48 h-auto bg-transparent object-contain" 
+                loading="lazy"
+                decoding="async"
+                className="w-80 h-auto bg-transparent object-contain"
               />
             </a>
             <p className="text-sm text-muted-foreground mb-6 max-w-xs">
-              Agencja Aktywacji Klientów. Przyspieszamy wzrost Twojej marki poprzez 
+              Agencja Aktywacji Klientów. Przyspieszamy wzrost Twojej marki poprzez
               psychologię decyzji i mierzalne strategie.
             </p>
-            
-            {/* Social links */}
+
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -86,30 +85,30 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation links column */}
           <div className="lg:col-span-3">
-            <h4 className="font-heading font-semibold text-foreground mb-4">
-              Nawigacja
-            </h4>
+            <h4 className="font-heading font-semibold text-foreground mb-4">Nawigacja</h4>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </button>
+                  {link.href.startsWith('#') ? (
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services / Products column */}
           <div className="lg:col-span-3">
-            <h4 className="font-heading font-semibold text-foreground mb-4">
-              Usługi
-            </h4>
+            <h4 className="font-heading font-semibold text-foreground mb-4">Usługi & Artykuły</h4>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
@@ -131,20 +130,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact column */}
           <div className="lg:col-span-3">
-            <h4 className="font-heading font-semibold text-foreground mb-4">
-              Kontakt
-            </h4>
+            <h4 className="font-heading font-semibold text-foreground mb-4">Kontakt</h4>
             <div className="space-y-4">
-              <a 
+              <a
                 href="mailto:kontakt@boostnow.pl"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded px-2 py-1"
               >
                 <Mail className="w-4 h-4" />
                 kontakt@boostnow.pl
               </a>
-              
+
               <div className="pt-4">
                 <button
                   onClick={() => scrollToSection("#contact")}
@@ -158,7 +154,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 pb-6 border-b border-border">
             <div className="text-xs text-muted-foreground">
@@ -171,7 +166,7 @@ export default function Footer() {
               <p>NIP: 7393776527</p>
             </div>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} BoostNow. Wszystkie prawa zastrzeżone.
@@ -181,20 +176,13 @@ export default function Footer() {
               <span>System aktywny</span>
             </div>
           </div>
-          
-          {/* Legal links */}
+
           <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
-            <Link href="/regulamin" className="hover:text-primary transition-colors">
-              Regulamin
-            </Link>
+            <Link href="/regulamin" className="hover:text-primary transition-colors">Regulamin</Link>
             <span>•</span>
-            <Link href="/polityka-prywatnosci" className="hover:text-primary transition-colors">
-              Polityka Prywatności
-            </Link>
+            <Link href="/polityka-prywatnosci" className="hover:text-primary transition-colors">Polityka Prywatności</Link>
             <span>•</span>
-            <Link href="/polityka-cookies" className="hover:text-primary transition-colors">
-              Polityka Cookies
-            </Link>
+            <Link href="/polityka-cookies" className="hover:text-primary transition-colors">Polityka Cookies</Link>
           </div>
         </div>
       </div>

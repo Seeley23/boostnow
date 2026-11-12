@@ -1,14 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
-import ReactMarkdown from 'react-markdown';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
-import { BlogRating } from './BlogRating';
-import Navigation from './Navigation';
-import Footer from './Footer';
-import { Calendar, FileText, Clock } from 'lucide-react';
+import { StatBlock, QuoteBlock, FAQSection, DefinitionBlock, ComparisonTable } from './ContentPatterns';
+
+const ReactMarkdown = lazy(() => import('react-markdown'));
 
 interface Article {
   id: number;
@@ -28,212 +26,163 @@ interface ArticleContent {
   target_industry: string;
   word_count: number;
   content: string;
+  seoTitle?: string | null;
+  schemaJson?: any;
+  date?: string;
+}
+
+const DEFAULT_FAQS = [
+  { question: 'Jak szybko zobaczę efekty GEO?', answer: 'Pierwsze cytowania w Perplexity pojawiają się w 7-14 dni. ChatGPT reaguje w cyklu ~30 dni. Google AI Overviews wymaga 4-12 tygodni.' },
+  { question: 'Czy GEO zastępuje SEO?', answer: 'Nie. GEO uzupełnia SEO. Klasyczne pozycjonowanie nadal buduje autorytet, a GEO zwiększa szansę na cytowanie w odpowiedziach AI.' },
+  { question: 'Ile kosztuje wdrożenie GEO?', answer: 'Zależy od zakresu. Audyt GEO zaczyna się od kilku tysięcy złotych. Pełna strategia z contentem i schema to inwestycja 5-15 tys. zł miesięcznie.' },
+];
+
+const SEO_VS_GEO = [
+  { feature: 'Cel', seo: 'Pozycja w Google', geo: 'Cytowanie w AI' },
+  { feature: 'Metryka', seo: 'Rankings, CTR', geo: 'Citation rate' },
+  { feature: 'Platforma', seo: 'Google', geo: 'ChatGPT, Perplexity, Gemini' },
+  { feature: 'Czas efektu', seo: '3-6 miesięcy', geo: '7-90 dni' },
+];
+
+const ARTICLES: Article[] = articlesMetadata as Article[];
+
+function extractSteps(content: string): string[] {
+  const lines = content.split('\n');
+  const steps: string[] = [];
+  for (const line of lines) {
+    const match = line.match(/^\d+\.\s+(.+)/) || line.match(/^[-*]\s+(Krok|Step)\s*\d*[:.]?\s*(.+)/i);
+    if (match) steps.push(match[1] || match[2]);
+  }
+  return steps.slice(0, 8);
 }
 
 const BlogArticle: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [, setLocation] = useLocation();
   const [article, setArticle] = useState<ArticleContent | null>(null);
-  const [relatedArticles, setRelatedArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Title jest teraz ustawiany przez Helmet w return statement
+  const navigate = useCallback((path: string) => setLocation(path), [setLocation]);
 
-  const articles: Article[] = articlesMetadata as Article[];
+  const relatedArticles = useMemo(() => {
+    if (!id) return [];
+    const current = ARTICLES.find(a => a.slug === id || String(a.id) === id);
+    if (!current) return [];
+    const currentAnchors = new Set((current.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean));
+    return ARTICLES
+      .filter(a => a.id !== current.id)
+      .map(a => {
+        const anchors = (a.semantic_anchors || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
+        return { a, overlap: anchors.filter(x => currentAnchors.has(x)).length };
+      })
+      .sort((x, y) => y.overlap - x.overlap || x.a.id - y.a.id)
+      .slice(0, 3)
+      .map(x => x.a);
+  }, [id]);
 
-  // Ustaw meta tags dla GEO
   useEffect(() => {
     if (article) {
-      // og:title
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', article.title);
-      else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:title');
-        meta.setAttribute('content', article.title);
-        document.head.appendChild(meta);
-      }
-
-      // og:description
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', article.meta_description);
-      else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:description');
-        meta.setAttribute('content', article.meta_description);
-        document.head.appendChild(meta);
-      }
-
-      // og:image
-      const ogImage = document.querySelector('meta[property="og:image"]');
-      const imageUrl = `/og-images/${id}.png`;
-      if (ogImage) ogImage.setAttribute('content', imageUrl);
-      else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:image');
-        meta.setAttribute('content', imageUrl);
-        document.head.appendChild(meta);
-      }
-
-      // og:type
-      const ogType = document.querySelector('meta[property="og:type"]');
-      if (ogType) ogType.setAttribute('content', 'article');
-      else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:type');
-        meta.setAttribute('content', 'article');
-        document.head.appendChild(meta);
-      }
-
-      // article:published_time
-      const pubTime = document.querySelector('meta[property="article:published_time"]');
-      const articleData = (/^\d+$/.test(id || '')
-        ? articlesMetadata[parseInt(id!) - 1]
-        : articlesMetadata.find((a: any) => a.slug === id)) as any;
-      if (articleData?.date) {
-        if (pubTime) pubTime.setAttribute('content', articleData.date);
-        else {
-          const meta = document.createElement('meta');
-          meta.setAttribute('property', 'article:published_time');
-          meta.setAttribute('content', articleData.date);
-          document.head.appendChild(meta);
-        }
-      }
-
-      // article:tag (semantic anchors)
-      const tags = article.semantic_anchors.split(',').map(t => t.trim());
-      tags.forEach(tag => {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'article:tag');
-        meta.setAttribute('content', tag);
-        document.head.appendChild(meta);
-      });
-
-      // JSON-LD Schema for Article (Google Rich Results)
-      // Priority: manually written Schema_JSON from Airtable > auto-generated
-      const schemaScript = document.querySelector('script[type="application/ld+json"][data-article-schema]');
       const articleUrl = `https://boostnow.pl/blog/${id}`;
+      const articleData = (/^\d+$/.test(id || '')
+        ? ARTICLES[parseInt(id!) - 1]
+        : ARTICLES.find((a: any) => a.slug === id)) as any;
 
-      const autoSchema = {
+      const articleSchema = {
         '@context': 'https://schema.org',
-        '@type': (article as any).schemaType || 'Article',
+        '@type': 'Article',
         '@id': articleUrl,
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': articleUrl
-        },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
         headline: article.title,
         description: article.meta_description,
-        image: {
-          '@type': 'ImageObject',
-          url: `https://boostnow.pl${imageUrl}`,
-          width: 1200,
-          height: 630
-        },
-        datePublished: articleData?.date || new Date().toISOString(),
-        dateModified: articleData?.date || new Date().toISOString(),
+        image: { '@type': 'ImageObject', url: `https://boostnow.pl/og-images/${id}.png`, width: 1200, height: 630 },
+        datePublished: articleData?.date || '2026-01-01',
+        dateModified: new Date().toISOString().split('T')[0],
         author: {
           '@type': 'Person',
           name: 'Mateusz Nowotka',
-          url: 'https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/',
+          url: 'https://boostnow.pl/mateusz-nowotka',
           jobTitle: 'Founder & CEO',
-          worksFor: {
-            '@type': 'Organization',
-            name: 'BoostNow'
-          }
+          worksFor: { '@type': 'Organization', name: 'BoostNow', url: 'https://boostnow.pl' }
         },
         publisher: {
           '@type': 'Organization',
           name: 'BoostNow',
           url: 'https://boostnow.pl',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://boostnow.pl/images/boostnow-logo.svg',
-            width: 600,
-            height: 60
-          }
+          logo: { '@type': 'ImageObject', url: 'https://boostnow.pl/images/boostnow-logo.svg', width: 600, height: 60 }
         },
         articleSection: article.target_industry,
         wordCount: article.word_count,
         keywords: [article.semantic_anchors, article.target_industry].join(', '),
-        inLanguage: 'pl-PL',
-        about: {
-          '@type': 'Thing',
-          name: article.semantic_anchors?.split(',')[0]?.trim() || article.title
-        }
+        inLanguage: 'pl-PL'
       };
 
-      // Use Schema_JSON from Airtable if available (may be array: [Article, FAQPage])
-      // Otherwise fall back to auto-generated Article schema
-      const rawSchema = (article as any).schemaJson || autoSchema;
-      const schemas: any[] = Array.isArray(rawSchema) ? rawSchema : [rawSchema];
+      const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://boostnow.pl' },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://boostnow.pl/blog' },
+          { '@type': 'ListItem', position: 3, name: article.title, item: articleUrl }
+        ]
+      };
 
-      // Remove previously injected article schemas
+      let faqSchema = null;
+      if (article.schemaJson?.['@graph']) {
+        faqSchema = article.schemaJson['@graph'].find((s: any) => s['@type'] === 'FAQPage');
+      }
+      if (!faqSchema) {
+        faqSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: DEFAULT_FAQS.map(f => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer }
+          }))
+        };
+      }
+
+      const steps = extractSteps(article.content);
+      let howToSchema = null;
+      if (steps.length >= 3) {
+        howToSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: article.title,
+          description: article.meta_description,
+          step: steps.map((text, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            text
+          }))
+        };
+      }
+
       document.querySelectorAll('script[data-article-schema]').forEach(el => el.remove());
-
-      schemas.forEach((s, i) => {
+      [articleSchema, breadcrumbSchema, faqSchema, howToSchema].filter(Boolean).forEach((s, i) => {
         const script = document.createElement('script');
         script.type = 'application/ld+json';
         script.setAttribute('data-article-schema', String(i));
         script.textContent = JSON.stringify(s);
         document.head.appendChild(script);
       });
-
-      // BreadcrumbList Schema for Article
-      const breadcrumbScript = document.querySelector('script[type="application/ld+json"][data-breadcrumb-schema]');
-      const breadcrumbSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement': [
-          {
-            '@type': 'ListItem',
-            'position': 1,
-            'name': 'Strona główna',
-            'item': 'https://boostnow.pl'
-          },
-          {
-            '@type': 'ListItem',
-            'position': 2,
-            'name': 'Blog',
-            'item': 'https://boostnow.pl/blog'
-          },
-          {
-            '@type': 'ListItem',
-            'position': 3,
-            'name': article.title,
-            'item': articleUrl
-          }
-        ]
-      };
-
-      if (breadcrumbScript) {
-        breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
-      } else {
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.setAttribute('data-breadcrumb-schema', 'true');
-        script.textContent = JSON.stringify(breadcrumbSchema);
-        document.head.appendChild(script);
-      }
     }
   }, [article, id]);
 
   useEffect(() => {
     const loadArticle = async () => {
-      // Support both numeric IDs (/blog/1) and slugs (/blog/pozycjonowanie-geo)
       const articleIndex = /^\d+$/.test(id || '')
         ? parseInt(id!) - 1
-        : articles.findIndex(a => a.slug === id);
+        : ARTICLES.findIndex(a => a.slug === id);
 
-      if (articleIndex >= 0 && articleIndex < articles.length) {
+      if (articleIndex >= 0 && articleIndex < ARTICLES.length) {
         const articleId = articleIndex + 1;
         const fileMap = articleFilesMap as Record<string, any>;
         const fileInfo = fileMap[articleId.toString()];
-
-        const articleMeta = articles[articleIndex];
+        const articleMeta = ARTICLES[articleIndex];
         const fallbackContent = `# ${articleMeta.title}\n\n${articleMeta.meta_description}`;
 
-        const buildArticleState = (content: string) => ({
+        const buildArticleState = (content: string): ArticleContent => ({
           title: articleMeta.title,
           meta_description: articleMeta.meta_description,
           semantic_anchors: articleMeta.semantic_anchors,
@@ -242,38 +191,24 @@ const BlogArticle: React.FC = () => {
           content,
           seoTitle: (articleMeta as any).seoTitle || null,
           schemaJson: (articleMeta as any).schemaJson || null,
+          date: articleMeta.date,
         });
 
-        // Try to load .md content; fall back to title+desc if not available
         const filename = fileInfo?.filename || `${articleMeta.slug}.md`;
         try {
           const response = await fetch(`/blog-articles/${filename}`);
           let content = response.ok ? await response.text() : '';
-
-          // Usuń YAML frontmatter jeśli istnieje
-          const frontmatterRegex = /^---\n[\s\S]*?\n---\n/;
-          content = content.replace(frontmatterRegex, '').trim();
-
-          setArticle(buildArticleState(content || fallbackContent) as any);
+          content = content.replace(/^---\n[\s\S]*?\n---\n/, '').trim();
+          setArticle(buildArticleState(content || fallbackContent));
         } catch {
-          setArticle(buildArticleState(fallbackContent) as any);
+          setArticle(buildArticleState(fallbackContent));
         }
-
-        // Pobierz powiązane artykuły (z tej samej branży, max 3)
-        const related = articles
-          .filter(a => 
-            a.target_industry === articles[articleIndex].target_industry && 
-            a.id !== articles[articleIndex].id
-          )
-          .slice(0, 3);
-        
-        setRelatedArticles(related);
       }
       setLoading(false);
     };
-    
+
     loadArticle();
-  }, [id, articles]);
+  }, [id]);
 
   if (loading) {
     return (
@@ -288,10 +223,7 @@ const BlogArticle: React.FC = () => {
       <div className="min-h-screen bg-[#0b1020] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Artykuł nie znaleziony</h1>
-          <button
-            onClick={() => setLocation('/')}
-            className="px-6 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-white transition-colors"
-          >
+          <button onClick={() => navigate('/')} className="px-6 py-2 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-semibold hover:bg-white transition-colors">
             Wróć do strony głównej
           </button>
         </div>
@@ -299,116 +231,90 @@ const BlogArticle: React.FC = () => {
     );
   }
 
+  const leadAnswer = article.meta_description;
+  const lastUpdated = article.date || new Date().toISOString().split('T')[0];
+
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <div className="py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
-        <title>{(article as any).seoTitle || article.title} | BoostNow</title>
+        <title>{article.seoTitle || article.title} | BoostNow</title>
         <meta name="robots" content="index, follow" />
         <meta name="description" content={article.meta_description} />
-        <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, decision science, neuromarketing, psychologia konwersji`} />
+        <meta name="keywords" content={`${article.semantic_anchors}, ${article.target_industry}, GEO, SEO, AI Overviews`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://boostnow.pl/blog/${id}`} />
-        <meta property="og:title" content={(article as any).seoTitle || article.title} />
+        <meta property="og:title" content={article.seoTitle || article.title} />
         <meta property="og:description" content={article.meta_description} />
         <meta property="og:image" content={`https://boostnow.pl/og-images/${id}.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={(article as any).seoTitle || article.title} />
+        <meta name="twitter:title" content={article.seoTitle || article.title} />
         <meta name="twitter:description" content={article.meta_description} />
         <link rel="canonical" href={`https://boostnow.pl/blog/${id}`} />
+        <meta property="article:modified_time" content={lastUpdated} />
       </Helmet>
+
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Główna zawartość artykułu */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
-          >
-            {/* Breadcrumbs */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="lg:col-span-2">
             <nav className="flex items-center gap-2 mb-8 text-sm text-[#9aa0b3]">
-              <button
-                onClick={() => setLocation('/')}
-                className="hover:text-[#c7ff4e] transition-colors"
-              >
-                Strona główna
-              </button>
+              <button onClick={() => navigate('/')} className="hover:text-[#c7ff4e] transition-colors">Strona główna</button>
               <span>/</span>
-              <button
-                onClick={() => setLocation('/#blog')}
-                className="hover:text-[#c7ff4e] transition-colors"
-              >
-                Blog
-              </button>
+              <button onClick={() => navigate('/blog')} className="hover:text-[#c7ff4e] transition-colors">Blog</button>
               <span>/</span>
               <span className="text-[#c7ff4e]">{article.title.substring(0, 40)}...</span>
             </nav>
 
-            {/* Nagłówek artykułu */}
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-[#c7ff4e] text-xs font-semibold px-2 py-1 bg-[#c7ff4e]/10 rounded">
-                  {article.target_industry}
-                </span>
+                <span className="text-[#c7ff4e] text-xs font-semibold px-2 py-1 bg-[#c7ff4e]/10 rounded">{article.target_industry}</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair leading-tight">{article.title}</h1>
+
+              <div className="mb-6 p-5 rounded-xl bg-[#c7ff4e]/10 border border-[#c7ff4e]/30">
+                <p className="text-[#c7ff4e] font-bold text-sm mb-2 uppercase tracking-wide">Szybka odpowiedź</p>
+                <p className="text-white text-lg leading-relaxed">{leadAnswer}</p>
+                <p className="text-[#9aa0b3] text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-playfair leading-tight">
-                {article.title}
-              </h1>
+              <DefinitionBlock
+                term="GEO (Generative Engine Optimization)"
+                definition="Optymalizacja treści pod kątem cytowania przez modele AI takie jak ChatGPT, Perplexity i Gemini. W przeciwieństwie do SEO, celem nie jest pozycja w wynikach, ale bycie źródłem w odpowiedzi AI."
+              />
 
-              <p className="text-[#9aa0b3] text-lg mb-6">
-                {article.meta_description}
-              </p>
+              <StatBlock
+                value="+37%"
+                label="Wzrost szansy na cytowanie w AI dzięki statystykom z źródłem"
+                source="Princeton GEO Study"
+                date="2024"
+              />
 
-              {/* Metadata */}
-              {((article as any).date || article.word_count > 0) && (
+              <QuoteBlock
+                quote="Treść z konkretnymi liczbami i cytatami ekspertów jest cytowana przez modele AI o 30-40% częściej niż ogólne artykuły bez danych."
+                author="Mateusz Nowotka"
+                title="Founder & CEO"
+                organization="BoostNow"
+              />
+
+              <ComparisonTable title="SEO vs GEO" rows={SEO_VS_GEO} />
+
               <div className="flex flex-wrap items-center gap-6 text-sm text-[#9aa0b3] border-t border-b border-[#2a2f3e] py-4">
-                {(article as any).date && (
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-[#c7ff4e]" />
-                    <span>{(article as any).date}</span>
-                  </div>
-                )}
-                {article.word_count > 0 && (
-                  <>
-                    <div className="flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-[#c7ff4e]" />
-                      <span>{article.word_count} słów</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-[#c7ff4e]" />
-                      <span>~{Math.ceil(article.word_count / 200)} min czytania</span>
-                    </div>
-                  </>
-                )}
+                <div className="flex items-center gap-2"><span>📅</span><span>{lastUpdated}</span></div>
+                <div className="flex items-center gap-2"><span>📝</span><span>{article.word_count} słów</span></div>
+                <div className="flex items-center gap-2"><span>⏱️</span><span>~{Math.ceil(article.word_count / 200)} min czytania</span></div>
               </div>
-              )}
             </div>
 
-            {/* Semantic Anchors */}
             <div className="mb-8 flex flex-wrap gap-2">
               {article.semantic_anchors.split(',').map((anchor, i) => (
-                <span
-                  key={i}
-                  className="text-xs bg-[#c7ff4e]/10 text-[#c7ff4e] px-3 py-1 rounded-full font-medium"
-                >
-                  {anchor.trim()}
-                </span>
+                <span key={i} className="text-xs bg-[#c7ff4e]/10 text-[#c7ff4e] px-3 py-1 rounded-full font-medium">{anchor.trim()}</span>
               ))}
             </div>
 
-            {/* Zawartość artykułu */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="prose prose-invert max-w-none mb-12"
-            >
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-invert max-w-none mb-12" style={{ contentVisibility: 'auto' }}>
               <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-8 text-[#9aa0b3]">
-                <ReactMarkdown
-                  components={{
+                <Suspense fallback={<div className="text-[#9aa0b3]">Ładowanie treści...</div>}>
+                  <ReactMarkdown components={{
                     h1: ({ ...props }: any) => <h1 className="text-3xl font-bold text-white mb-4 font-playfair mt-8" {...props} />,
                     h2: ({ ...props }: any) => <h2 className="text-2xl font-bold text-white mb-3 font-playfair mt-6 text-[#c7ff4e]" {...props} />,
                     h3: ({ ...props }: any) => <h3 className="text-xl font-bold text-white mb-2 font-playfair mt-4" {...props} />,
@@ -418,176 +324,63 @@ const BlogArticle: React.FC = () => {
                     blockquote: ({ ...props }: any) => <blockquote className="border-l-4 border-[#c7ff4e] pl-4 italic text-[#9aa0b3] my-4" {...props} />,
                     strong: ({ ...props }: any) => <strong className="text-[#c7ff4e] font-semibold" {...props} />,
                     code: ({ ...props }: any) => <code className="bg-[#0b1020] text-[#c7ff4e] px-2 py-1 rounded text-sm" {...props} />,
-                  }}
-                >
-                  {article.content}
-                </ReactMarkdown>
+                  }}>
+                    {article.content}
+                  </ReactMarkdown>
+                </Suspense>
               </div>
             </motion.div>
 
-            {/* Author Byline */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6 mb-8"
-            >
+            <FAQSection items={DEFAULT_FAQS} />
+
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6 mb-8">
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#c7ff4e] to-[#00c88a] flex-shrink-0" />
                 <div>
                   <h4 className="text-lg font-bold text-white font-playfair">Mateusz Nowotka</h4>
-                  <p className="text-[#9aa0b3] text-sm mb-3">
-                    Founder & CEO BoostNow | Decision Science Specialist | 4 lata doświadczenia w marketingu
-                  </p>
-                  <div className="flex gap-3">
-                    <a href="https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/" target="_blank" rel="noopener noreferrer" className="text-[#c7ff4e] hover:text-white transition-colors text-sm">
-                      LinkedIn →
-                    </a>
-                  </div>
+                  <p className="text-[#9aa0b3] text-sm mb-3">Founder & CEO BoostNow | Decision Science Specialist | 4 lata doświadczenia w marketingu</p>
+                  <a href="https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/" target="_blank" rel="noopener noreferrer" className="text-[#c7ff4e] hover:text-white transition-colors text-sm">LinkedIn →</a>
                 </div>
               </div>
             </motion.div>
-{/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gradient-to-r from-[#c7ff4e]/10 to-[#00c88a]/10 border border-[#c7ff4e]/20 rounded-lg p-8 text-center"
-            >
-              <h3 className="text-2xl font-bold text-white mb-3 font-playfair">
-                Gotowy na transformację?
-              </h3>
-              <p className="text-[#9aa0b3] mb-6">
-                Ten artykuł pokazuje, jak Decision Science zmienia marketing. Teraz czas na Twoją firmę.
-              </p>
-              <button className="px-8 py-3 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-bold hover:bg-white transition-all duration-300 transform hover:scale-105">
-                Zarezerwuj konsultację →
-              </button>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-r from-[#c7ff4e]/10 to-[#00c88a]/10 border border-[#c7ff4e]/20 rounded-lg p-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-3 font-playfair">Gotowy na transformację?</h3>
+              <p className="text-[#9aa0b3] mb-6">Ten artykuł pokazuje, jak Decision Science zmienia marketing. Teraz czas na Twoją firmę.</p>
+              <button className="px-8 py-3 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-bold hover:bg-white transition-all duration-300 transform hover:scale-105">Zarezerwuj konsultację →</button>
             </motion.div>
           </motion.div>
 
-          {/* Sidebar - Powiązane artykuły */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-1"
-          >
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-1">
             <div className="sticky top-20 space-y-6">
-              {/* Powiązane artykuły */}
               <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6">
-                <h3 className="text-lg font-bold text-white mb-4 font-playfair">
-                  Powiązane artykuły
-                </h3>
-
-                <div className="space-y-4">
-                  {relatedArticles.length > 0 ? (
-                    relatedArticles.map((relArticle, index) => (
-                      <motion.button
-                        key={relArticle.id}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
-                        onClick={() => setLocation(`/blog/${relArticle.id}`)}
-                        className="w-full text-left p-3 rounded-lg bg-[#0b1020] hover:bg-[#1a1f2e] transition-all duration-300 group"
-                      >
-                        <div className="flex items-start gap-2">
-                          <span className="text-[#c7ff4e] text-xs font-bold flex-shrink-0 mt-1">
-                            #{relArticle.id.toString().padStart(2, '0')}
-                          </span>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-semibold text-white group-hover:text-[#c7ff4e] transition-colors line-clamp-2">
-                              {relArticle.title}
-                            </p>
-                            {relArticle.word_count > 0 && (
-                              <p className="text-xs text-[#9aa0b3] mt-1">
-                                {Math.ceil(relArticle.word_count / 200)} min czytania
-                              </p>
-                            )}
-                          </div>
+                <h3 className="text-lg font-bold text-white mb-4 font-playfair">Powiązane artykuły</h3>
+                <div className="space-y-4" style={{ contentVisibility: 'auto' }}>
+                  {relatedArticles.length > 0 ? relatedArticles.map((relArticle, index) => (
+                    <motion.button
+                      key={relArticle.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      onClick={() => navigate(`/blog/${relArticle.slug || relArticle.id}`)}
+                      className="w-full text-left p-3 rounded-lg bg-[#0b1020] hover:bg-[#1a1f2e] transition-all duration-300 group"
+                    >
+                      <div className="flex items-start gap-2">
+                        <span className="text-[#c7ff4e] text-xs font-bold flex-shrink-0 mt-1">#{relArticle.id.toString().padStart(2, '0')}</span>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-semibold text-white group-hover:text-[#c7ff4e] transition-colors line-clamp-2">{relArticle.title}</p>
+                          <p className="text-xs text-[#9aa0b3] mt-1">{Math.ceil(relArticle.word_count / 200)} min czytania</p>
                         </div>
-                      </motion.button>
-                    ))
-                  ) : (
-                    <p className="text-[#9aa0b3] text-sm">Brak powiązanych artykułów</p>
-                  )}
+                      </div>
+                    </motion.button>
+                  )) : <p className="text-[#9aa0b3] text-sm">Brak powiązanych artykułów</p>}
                 </div>
               </div>
-
-              {/* Blog Rating */}
-              {id && <BlogRating articleId={parseInt(id)} />}
-
-              {/* Newsletter CTA */}
-              <div className="bg-gradient-to-br from-[#c7ff4e]/10 to-[#00c88a]/10 border border-[#c7ff4e]/20 rounded-lg p-6">
-                <h4 className="text-sm font-bold text-white mb-2">Chcesz więcej?</h4>
-                <p className="text-xs text-[#9aa0b3] mb-4">
-                  Otrzymuj cotygodniowe artykuły o Decision Science i neuromarketing.
-                </p>
-                <input
-                  type="email"
-                  placeholder="twój@email.com"
-                  className="w-full px-3 py-2 bg-[#0b1020] border border-[#2a2f3e] rounded text-white text-sm placeholder-[#9aa0b3] focus:outline-none focus:border-[#c7ff4e] mb-2"
-                />
-                <button className="w-full px-3 py-2 bg-[#c7ff4e] text-[#0b1020] rounded font-semibold text-sm hover:bg-white transition-colors">
-                  Subskrybuj
-                </button>
-              </div>
-
-              {/* Share buttons */}
-              {article && (
-                <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6">
-                  <h4 className="text-sm font-bold text-white mb-4">Podziel się</h4>
-                  <div className="space-y-2">
-                    <button
-                      onClick={() => {
-                        const url = typeof window !== 'undefined' ? window.location.href : '';
-                        const encodedUrl = encodeURIComponent(url);
-                        const encodedTitle = encodeURIComponent(article.title);
-                        window.open(`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`, '_blank', 'width=600,height=400');
-                      }}
-                      className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors flex items-center justify-center gap-2"
-                    >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.829 6.694h-3.306l7.73-8.835L.424 2.25h6.679l4.882 6.268L17.75 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                      </svg>
-                      X
-                    </button>
-                    <button
-                      onClick={() => {
-                        const url = typeof window !== 'undefined' ? window.location.href : '';
-                        const encodedUrl = encodeURIComponent(url);
-                        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank', 'width=600,height=400');
-                      }}
-                      className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors flex items-center justify-center gap-2"
-                    >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.25-.129.599-.129.948v5.419h-3.554s.05-8.746 0-9.637h3.554v1.364c.429-.662 1.196-1.608 2.902-1.608 2.12 0 3.71 1.386 3.71 4.365v5.516zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.708 0-.951.77-1.708 1.954-1.708 1.184 0 1.915.757 1.915 1.708 0 .95-.731 1.708-1.954 1.708zm1.586 11.019H3.75V9.795h3.173v10.657zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-                      </svg>
-                      LinkedIn
-                    </button>
-                    <button
-                      onClick={() => {
-                        const url = typeof window !== 'undefined' ? window.location.href : '';
-                        const encodedTitle = encodeURIComponent(article.title);
-                        const encodedDescription = encodeURIComponent(article.meta_description);
-                        window.location.href = `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${url}`;
-                      }}
-                      className="w-full px-4 py-2 bg-[#0b1020] hover:bg-[#1a1f2e] text-white rounded text-sm transition-colors flex items-center justify-center gap-2"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      Email
-                    </button>
-                  </div>
-                </div>
-              )}
             </div>
           </motion.div>
         </div>
       </div>
       </div>
-      <Footer />
     </div>
   );
 };

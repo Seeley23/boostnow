@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "indexer-boostnow",
+  "private_key_id": "4f8f1ba29e6e2a44d13c483972a24fcae2df5cad",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC8Q6hsfasdgyDi\nORnwuRptLl0G8QZ+hc8//I2qNH/tJjOI4+G/9W+8N+U8yFGWDw4tA9RRvWUDDXmp\nWvU5IRxK7H6XI0Y2NyEJK3lpwi3Zs75Jpxlp4yHnEIj+UvbNRfBK27sRmIGwNGJj\ncwrSA9vPygm5gIup6Wp8y8TV+GO00oNBpRLewBdPtFf5jX59yy66PZIVO03srEZn\nIqLAdF6B18DGk6WsPhy+0eX71uf2YAsXVrOMPYbRdcnnGrqpPuTHQUcgbuwV4Hcb\njERk95NtXi6V7rmw6eQT9A6Ni1FaJLq6RfGrXU+ZeOuXbQ/ibbbbCqzl6E6V+aun\neMJ46y+BAgMBAAECggEAAVmi3ZRRI9cK51RtgTJypBHPDPuxhjrDb7wJ8AyMVlEN\n0Y+A0PWbpYfpFvSA0UiuW1hJr4RiMxFnq/VBCPXZ1Be6GK9iE4V1sTEkn8OKvKLz\nXGfcYMwGNDgEI37I0lQMEx1cTBYB6BeYFQqAK11nuCfExhXL6p4H63kyoi4z2Noe\neshETiabryfQ7kXUQQXhBUZxoBVRzYKklwg5xcpBGbcSdd5cZj+ZPxeI1vOiHNbW\nq4iVH31dlcKeTGeoIeBKQMThidqrRLWiOLmq4eHK4gb723EpYGe3lq47bZBd5ZmR\n6qaVf8XfRrBhx+hMz2h+DygL5szPHlFaAnY3p/WhIQKBgQDrb8ukvZsZxaFDdbuj\n6/dZaFT6TdmJtlkOPEq7f8MfKAvieTtmnU2/JiEp75QT7NC6ze+4l6ptocEvc26/\nIm1tQXaPJeFd4m8SSH7pTo+KzD+s4SWmXCXw5xI7CI3XXajN/oECa7x8EJ81AOVP\n26Bn8da4Sz8VWFuTy6GWgypjXQKBgQDMtR6OlTVrsZBPSsJQ2JBE5UOb2WLq+irb\nv6RD1wJ27MQlsAd80e+NJvircVBpBcYMiyvMEs+Ea4J18g/pQww42iT32cJSn+NF\nCZSmf7T2NVhORjR595Lumep7ZGvLtOBozO0oylHSI7ndpby86tvCkxX3aUCwdOtC\ncgx8efR+dQKBgGfmbF6Fdn9HIkXdHTPYHM6OJoJX/NqzaFXJ8ckRNxD24VfO3JIK\ndZcXwqb5HcY1SmBGJba25/V93v2L2aHsFZKTwzilJPIDzbSp3agkjWBZhvhKXA0w\nuWW48+ite7tBkA9oc5KX7RRrWXdQr+IwMHfu2C14t5w55CAzS1pbBEfZAoGBAMLB\ngmvm2yc1jPVTS+H81+0kLhmFTc3+6m2dO1vroIWips6wVb9UQFOLg0QhD36Lpqvi\ncG28a8AxRLKP9MFZL7SbHlbLz0wqn9/byJhLodAoWnZF5sEvYJQuzV5N4RyyXlp2\ntR98tTF3GesdNp6J10CcDWcQtSHsarMRrH10zb7NAoGBAJKmIE+6qvEhpiR9/awJ\niGJluyBw7WZEm772ImsOd/JMgWvG39t2Rym2mWs7ojtgdUj5BpSLQgGwt+bCCu7/\n43EVU8ayb+0IGeoYMFDol+N/kT1tePpvTPxxjlRUoWWnxFNn/hqYUT0/1WSacH9t\nktw8yARFIRTWa3v0NYBapzf9\n-----END PRIVATE KEY-----\n",
+  "client_email": "indexer-boostnow@indexer-boostnow.iam.gserviceaccount.com",
+  "client_id": "102374963460776514280",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/indexer-boostnow%40indexer-boostnow.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

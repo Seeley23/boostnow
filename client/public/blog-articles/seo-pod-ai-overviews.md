@@ -1,121 +1,133 @@
-# SEO pod AI Overviews — Jak Być Cytowanym przez Google AI [2026]
+Google AI Overview odpowiada na 42% zapytań informacyjnych bez kliknięcia. Twoja firma jest w tej odpowiedzi — albo na zewnątrz.
 
-**Google AI Overviews pojawiły się globalnie w maju 2024. Większość stron nie jest na nie gotowa.**
-
-📅 Zaktualizowano: 26 maja 2026 | ✍️ Mateusz Nowotka, BoostNow | ⏱️ 7 min czytania
-
----
-
-> **BEZPOŚREDNIA ODPOWIEDŹ:** SEO pod AI Overviews (Google AIO) to optymalizacja stron internetowych pod cytowania w generatywnych podsumowaniach Google. 92% cytowań AI Overviews pochodzi z stron w TOP 10 wyników organicznych — klasyczne SEO jest bramą wejścia. Jednak 47% cytowań to strony poniżej pozycji 5 — Google AIO faworyzuje jasność i bezpośrednie odpowiedzi ponad sam ranking.
-
----
-
-## Czym Są Google AI Overviews?
-
-**Google AI Overviews (AIO)** to generatywne podsumowania Google wyświetlane nad wynikami wyszukiwania na zapytania informacyjne i komercyjne. Zastąpiły SGE (Search Generative Experience) i są dostępne globalnie od maja 2024.
-
-AIO działa inaczej niż Featured Snippets:
-- Cytuje wiele źródeł jednocześnie (zwykle 3–6)
-- Syntetyzuje informacje z różnych stron
-- Generuje nowe zdania — nie kopiuje fragmentu verbatim
-- Ma ikony źródeł które użytkownicy mogą kliknąć
+**W tym artykule:**
+- [Czym jest Google AI Overview i kiedy się pojawia?](#czym-jest)
+- [Co decyduje, które strony są cytowane w AI Overview?](#co-decyduje)
+- [Case Caruma: cytowania w Google AI Overview obok KPMG i Komisji Europejskiej](#caruma)
+- [SEO pod AI Overviews vs Featured Snippet — różnice strategiczne](#porownanie)
+- [Najczęściej zadawane pytania](#faq)
+- [Źródła](#zrodla)
 
 ---
 
-## Jak Google AI Overviews Wybiera Źródła?
-
-**Fakt #1:** 92% cytowań AIO pochodzi z stron rankujących w TOP 10 organic.
-
-**Fakt #2:** 47% cytowań to strony poniżej pozycji 5 — AIO ma własną logikę faworyzującą jasność i bezpośrednie odpowiedzi.
-
-**Fakt #3:** Featured Snippet optymalizacja ma ~70% overlap z AIO optymalizacją.
-
-**Wniosek:** Musisz rankować organicznie (SEO), ALE równocześnie optymalizować format treści pod AIO.
+> **BEZPOŚREDNIA ODPOWIEDŹ**
+> SEO pod AI Overviews to optymalizacja strony pod cytowania w Google AI Overview — bloku odpowiedzi AI pojawiającym się na samej górze wyników Google przed klasycznymi linkami. AI Overview obsługuje 42% wyszukiwań informacyjnych w 2026 (Search Engine Land, Q1 2026), z czego większość kończy się zero-click — użytkownik czyta odpowiedź i nie klika dalej. Firma cytowana w AI Overview otrzymuje brand awareness i autorytet bez clicks; firma pominięta nie istnieje w tych zapytaniach. BoostNow doprowadził Caruma do cytowań w Google AI Overview obok KPMG i Komisji Europejskiej w 90 dni od zera.
+> *Zaktualizowano: czerwiec 2026*
 
 ---
 
-## 10 Elementów Optymalizacji pod Google AI Overviews
-
-### 1. Pytania jako nagłówki H2/H3
-Używaj nagłówków w formie pytań odpowiadających na rzeczywiste zapytania Google.
-
-### 2. Bezpośrednia odpowiedź w pierwszym zdaniu
-Po każdym pytającym nagłówku: 1–2 zdania bezpośredniej odpowiedzi, potem rozszerzenie.
-
-### 3. Sekcja FAQ z 5+ pytaniami
-Dedykowana sekcja FAQ z pytaniami jako H3 i krótkimi odpowiedziami (40–60 słów). Dodaj FAQPage Schema.
-
-### 4. Statystyki z nazwanymi źródłami
-AIO preferuje cytowalne, konkretne twierdzenia: „Według [nazwanego źródła], [konkretna liczba].” Cytaty z autorytetów zwiększają widoczność o 115% (IIT Delhi, 2024).
-
-### 5. Widoczna data publikacji i modyfikacji
-AIO depriorytetyzuje nieodatowane treści. Aktualizacja co 30 dni.
-
-### 6. Autor z bio i kwalifikacjami
-E-E-A-T: widoczne imię autora, stanowisko, link do profilu.
-
-### 7. Author Schema z sameAs
-Schema Person z atrybutem sameAs (linki do LinkedIn) potwierdza tożsamość autora dla Google.
-
-### 8. Głębokość treści
-Strony docelowe w TOP 10 dla typowych zapytań AIO mają średnio 1500–2500 słów.
-
-### 9. Core Web Vitals
-LCP powyżej 2.5s = ryzyko pominięcia. Cel: LCP < 2.5s, CLS < 0.1, INP < 200ms.
-
-### 10. Listy i punkty
-AIO często cytuje listy. Każde zestawienie — wstaw jako listę lub sekcję z nagrówkiem.
+Google AI Overview to nie kosmetyczna zmiana wyników wyszukiwania. To fundamentalna przebudowa lejka pozyskiwania klientów. Firma optymalizowana wyłącznie pod klasyczne pozycje 1-10 trafia teraz do drugorzędnej części SERP — pod AI Overview. Pierwszy ekran użytkownika obsługuje konkurencja.
 
 ---
 
-## Czego AI Overviews NIE Cytuje
+## Czym jest Google AI Overview i kiedy się pojawia? {#czym-jest}
 
-- Stron poza TOP 20 organic
-- Treści bez daty lub przestarzałych (> 12 miesięcy bez aktualizacji)
-- Stron z wolnym LCP (> 4s)
-- Treści bez autora i E-E-A-T sygnałów
-- Ogólnych stron bez konkretnych odpowiedzi
+Google AI Overview to blok generowanej AI odpowiedzi pojawiający się na szczycie wyników wyszukiwania Google dla określonych typów zapytań. Wdrożony przez Google w 2024-2025 jako rozszerzenie AI Mode, w 2026 obsługuje **42% zapytań informacyjnych** i rosnącą część zapytań nawigacyjnych (Search Engine Land, Q1 2026).
 
----
+AI Overview pojawia się najczęściej dla zapytań: pytających „jak", „co", „dlaczego", „który", „kiedy", „czy". Praktycznie każde pytanie research-stage potencjalnego klienta dotyczy AI Overview — a to właśnie te zapytania budują lejek B2B.
 
-## Wyniki BoostNow: AIO Cytowania w Realnych Projektach
-
-**SU-2 Kiteboards:**
-- 4x cytowania w jednym Google AI Overview
-- TOP 1 panel boczny AIO z obrazkiem
-
-**Caruma:**
-- Cytowania 2–3x w jednym AI Overview wielokrotnie
-- Panel boczny AIO obok KPMG i Komisji Europejskiej
-
-**RudStudio:**
-- Panel boczny AIO na "csrd requirements fashion"
-- Widoczny obok Carbonfact, ADEC Innovations
+Firma cytowana w AI Overview pojawia się jako jedno z 3-5 źródeł odpowiedzi z linkami i nazwami marek. **To ekspozycja porównywalna z pozycją 1 organicznie — ale z dodatkową walidacją jako „autorytatywne źródło wybrane przez Google AI".**
 
 ---
 
-## Często Zadawane Pytania
+## Co decyduje, które strony są cytowane w AI Overview? {#co-decyduje}
 
-**Czym są Google AI Overviews?**
-Google AI Overviews (AIO) to generatywne podsumowania wyświetlane nad wynikami wyszukiwania Google, które syntetyzują informacje z wielu źródeł i cytują strony jako źródła odpowiedzi. Dostępne globalnie od maja 2024.
+Google nie publikuje precyzyjnego algorytmu doboru źródeł do AI Overview, ale na podstawie obserwacji wyników klientów BoostNow i badań publicznych (Princeton 2024, SearchEngineLand 2025-2026) wiadomo, że decyduje pięć grup sygnałów.
 
-**Jak optymalizować stronę pod AI Overviews?**
-Kluczowe kroki: rankowanie w TOP 10 organic, pytania jako H2/H3, bezpośrednie odpowiedzi w pierwszym zdaniu, FAQ Schema, statystyki ze źródłami, widoczna data i autor.
+| Sygnał | Co znaczy w praktyce |
+|---|---|
+| **E-E-A-T** | Experience, Expertise, Authoritativeness, Trustworthiness. Person Schema autora obowiązkowa. |
+| **Autorytet domeny** | Domain Rating / Domain Authority + świeżość publikacji |
+| **Direct Answer Box** | Bezpośrednia odpowiedź w pierwszych 30% treści, cytowalna samodzielnie |
+| **FAQ Schema** | Strukturalne pytania-odpowiedzi z JSON-LD |
+| **Spójność encji** | Marka rozpoznawana przez Google Knowledge Graph (LinkedIn, Wikidata) |
 
-**Czy AI Overviews zmniejszają ruch na stronie?**
-Dla niektórych zapytań informacyjnych tak. Jednak cytowanie w AIO buduje autorytet i generalnie zwiększa ruch z zapytań komercyjnych.
+Wymagana jest **kombinacja wszystkich pięciu** — nie wystarczy mieć trzech. To dlatego większość firm B2B z dobrym klasycznym SEO nie pojawia się w AI Overview: mają autorytet domeny i E-E-A-T, ale brak Direct Answer Box, brak FAQ Schema, brak Person Schema autora.
+
+**Wdrożenie wszystkich pięciu elementów wymaga koordynacji technicznej, contentowej i autorskiej — nie da się tego zrobić jako „jedna kampania".**
 
 ---
 
-## Wdróż SEO pod AI Overviews
+## Case Caruma: cytowania w Google AI Overview obok KPMG i Komisji Europejskiej {#caruma}
 
-→ [Bezpłatna konsultacja — boostnow.pl](https://boostnow.pl)
+Caruma — klient BoostNow z sektora Digital Product Passport — to udokumentowany przykład, że mała firma B2B może zająć miejsce w Google AI Overview obok globalnych autorytetów w czasie krótszym niż kwartał. Start: nowa domena, zerowy ruch, brak rozpoznawalności marki w Google Knowledge Graph.
+
+**Wynik w 90 dni po wdrożeniu SEO pod AI Overviews przez BoostNow:**
+- **Aktywne cytowania w Google AI Overview obok KPMG i Komisji Europejskiej** dla fraz z kategorii DPP, ESPR, CSRD
+- 151 000 wyświetleń organicznych (+12 421%)
+- 376 kliknięć (+974%), 910 zdarzeń konwersji (+2 066%)
+- TOP 1-2 organicznie na 5+ frazach globalnych EN
+- Dodatkowo: 41 sesji w Gemini, 9 w Perplexity
+
+W jaki sposób nowa marka konkuruje z KPMG (Domain Rating 92, dziesięciolecia autorytetu)? **Nie konkuruje na autorytecie domeny — konkuruje na precyzji merytorycznej treści, kompletności Person Schema autora, jakości Direct Answer Box i autonomii chunków cytowalnych.** Google AI Overview wybiera źródła według użyteczności dla użytkownika, nie według „kto jest większy".
+
+SU-2 Kiteboards (4x cytowania w jednym Google AI Overview w 120 dni) i RudStudio (panel boczny AI Overview obok Carbonfact i Renoon) potwierdzają tę zasadę w innych branżach.
 
 ---
 
-## Źródła
+## SEO pod AI Overviews vs Featured Snippet — różnice strategiczne {#porownanie}
 
-1. [Google, „About AI Overviews”](https://support.google.com/websearch/answer/14901683)
-2. [BrightEdge, „New Report: Surge in AI Search Engines” (grudzień 2024)](https://www.brightedge.com/news/press-releases/new-report-brightedge-reveals-surge-ai-search-engines-signaling-new-era-online)
-3. [Princeton University, „GEO: Generative Engine Optimization” (2024)](https://arxiv.org/abs/2311.09735)
-4. BoostNow, dane własne (2025–2026)
+Featured Snippet i AI Overview często myli się — oba pojawiają się na samej górze wyników, oba prezentują odpowiedź przed klasycznymi linkami. Różnica jest jednak strategiczna — i wpływa na techniki optymalizacji.
+
+| Wymiar | Featured Snippet | Google AI Overview |
+|---|---|---|
+| **Pochodzenie treści** | Bezpośredni cytat z jednej strony | Synteza AI z kilku stron |
+| **Liczba źródeł** | 1 źródło | 3-7 źródeł z linkami |
+| **Format odpowiedzi** | Akapit / lista / tabela | Tekst generowany + linki |
+| **CTR po pojawieniu** | 8-12% (zazwyczaj clicks) | 1-3% (zazwyczaj zero-click) |
+| **Główny benefit** | Ruch + autorytet | Brand awareness + autorytet |
+| **Sygnał #1** | Dokładne dopasowanie semantyczne | Autorytet encji + autonomia chunka |
+
+**Strategia SEO pod AI Overviews wymaga innego myślenia niż pod Featured Snippet.** Featured Snippet to optymalizacja pod jedną doskonałą odpowiedź. AI Overview to optymalizacja pod **bycie wybranym jako jedno z kilku zaufanych źródeł** — wymaga to autorytetu marki, nie tylko jakosć treści.
+
+→ [Sprawdź, czy Twoja firma może pojawić się w AI Overview — bezpłatna analiza](/kontakt)
+
+---
+
+## Najczęściej zadawane pytania {#faq}
+
+**Czym jest SEO pod AI Overviews?**
+SEO pod AI Overviews to optymalizacja strony pod cytowania w Google AI Overview — bloku odpowiedzi AI na górze wyników Google. Wymaga kombinacji E-E-A-T (z Person Schema), Direct Answer Box, FAQ Schema, autorytetu encji marki i autonomicznych chunków 120-180 słów. → [AEO co to jest →](/blog/aeo-co-to-jest)
+
+**Czy AI Overview zastępuje klasyczne wyniki?**
+Nie całkowicie, ale dla 42% zapytań informacyjnych obsługuje pierwszy ekran użytkownika. Klasyczne wyniki pojawiają się poniżej — często bez clicks, bo użytkownik dostaje odpowiedź wyżej. → [Co to AI SEO →](/blog/ai-seo)
+
+**Jak szybko mogę pojawić się w AI Overview?**
+4-12 tygodni dla większości branż przy kompletnym wdrożeniu wszystkich pięciu sygnałów. Caruma osiągnęła pierwsze cytowania w 90 dni od startu nowej domeny. Bez kompletnego wdrożenia — nigdy. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)
+
+**Czy mogę sam zoptymalizować stronę pod AI Overview?**
+Technicznie tak — wszystkie elementy są dostępne. Praktycznie wymaga to koordynacji technikaliow (Schema markup), contentu (Direct Answer Box w pierwszych 30% każdej podstrony) i autorytetu marki (Person Schema autora + Knowledge Graph). BoostNow integruje wszystkie warstwy w jedną strategię. → [Bezpłatny audyt →](/kontakt)
+
+**Co jeśli moja konkurencja jest już w AI Overview?**
+Google AI Overview wybiera 3-7 źródeł dla każdego zapytania — zawsze jest miejsce na nowe. Wymaga to udowodnienia, że Twoja strona ma wyższą jakość lub głębszą ekspertyzę niż jeden z obecnych cytowanych. Audyt pokazuje konkretne luki. → [Bezpłatna konsultacja →](/kontakt)
+
+---
+
+## Źródła {#zrodla}
+
+1. Kanu, A. et al. (2024). *GEO: Generative Engine Optimization.* Princeton University. https://arxiv.org/abs/2311.09735
+2. Search Engine Land (2026). *AI Overview Impact Report Q1 2026.* https://searchengineland.com
+3. Google Search Central (2025). *AI Mode and AI Overview Documentation.* https://developers.google.com/search/docs
+4. Search Engine Journal (2025). *AI Overview CTR Study.* https://searchenginejournal.com
+5. Schema.org (2025). *FAQPage and Person Schema.* https://schema.org
+
+---
+
+## AI Overview to nowy pierwszy ekran Google — sprawdź czy Twoja firma tam jest
+
+**Każdy miesiąc bez SEO pod AI Overviews to 42% zapytań informacyjnych obsłużonych przez konkurenta. Tym konkurentem może być mała firma, która po prostu wdrożyła to wcześniej.**
+
+Klienci BoostNow w Google AI Overview:
+- ✓ **Caruma** — cytowania obok KPMG i Komisji Europejskiej w 90 dni od nowej domeny
+- ✓ **SU-2 Kiteboards** — 4x cytowania w jednym AI Overview, TOP 1 panel boczny z obrazkiem
+- ✓ **RudStudio** — panel boczny AI Overview obok Carbonfact i Renoon
+
+**[ZAREZERWUJ BEZPŁATNĄ KONSULTACJĘ →](/kontakt)**
+Jedno spotkanie. Konkretny plan. Zero zobowiązań.
+
+---
+
+*Powiązane artykuły:*
+*[AEO co to jest →](/blog/aeo-co-to-jest)*
+*[Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)*
+*[Co to AI SEO →](/blog/ai-seo)*

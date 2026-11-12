@@ -37,8 +37,35 @@
 - [x] Verify llms.txt is accessible at /llms.txt (READY)
 
 ## Phase 6: Verify and checkpoint
-- [ ] Run dev server and test all pages
-- [ ] Check for 404 errors
-- [ ] Verify SEO meta tags in browser DevTools
-- [ ] Test internal links
-- [ ] Create git checkpoint
+- [x] Run dev server and test all pages (DONE - dev server running)
+- [x] Check for 404 errors (DONE - 404 handling verified)
+- [x] Verify SEO meta tags in browser DevTools (DONE - Helmet tags verified)
+- [x] Test internal links (DONE - internal links working)
+- [x] Create git checkpoint (DONE - checkpoint 27543373)
+
+## Current deliverables
+- [x] Przygotować czystą ofertę DOCX dla self-storage bez brandingu BoostNow i bez języka marketingowego.
+- [x] Skorygować ofertę: właściciel dostarcza zdjęcia i nagrania, a usługa obejmuje montaż, publikację i obsługę bez dojazdów.
+- [x] Przebudować ofertę na poziom firmy self-storage, bez odniesień do lokalizacji i obiektów.
+- [x] Uprościć cennik do jednej czytelnej strony z trzema pakietami i jasnymi różnicami.
+- [x] Podkreślić w cenniku, że social media są optymalizowane pod lokalne wyszukiwania.
+- [x] Zmienić liczby publikacji w ofercie na maksymalne limity, np. „do 12 postów” i „do 4 rolek”.
+- [x] Przepisać opis pakietu podstawowego tak, aby uzasadniał cenę 1 490 zł konkretnym zakresem lokalnego SEO.
+- [x] Utworzyć nowoczesną wizytówkę z logo i ofertą usług: strony internetowe, marketing online, social media, płatne reklamy i SEO/AI.
+- [x] Przygotować dwustronną wizytówkę do druku w minimalistycznym stylu Apple, z plikiem produkcyjnym dla drukarni.
+- [x] Zmienić wizytówkę na ogólną prezentację usług: bez cennika, pakietów, limitów i treści z oferty self-storage.
+- [x] Zastąpić ogólne hasło na wizytówce konkretnymi nazwami usług i słowami kluczowymi zrozumiałymi dla przedsiębiorców.
+- [x] Przeprojektować wizytówkę od podstaw po negatywnej ocenie: dopracowany układ premium, poprawne proporcje logo i lepsza hierarchia.
+- [x] Zastosować kierunek z referencji: ciemne premium, subtelny limonkowy gradient, elegancka typografia i układ danych.
+- [x] Pozyskać i podmienić prawdziwy oficjalny plik logo do druku zamiast ręcznie rekonstruowanego wordmarku.
+- [x] Wygenerować finalną wersję premium wizytówki z właściwym logo i ponownie zweryfikować front/back.
+- [x] Zapisać końcowy checkpoint dopiero po podmianie logo i finalnej kontroli wizualnej wersji premium.
+- [x] Pozyskać rzeczywisty oficjalny plik logo do druku (SVG/PDF/AI lub zatwierdzony high-res asset) bez ręcznego odtwarzania elementów znaku. Użyto dokładnego `client/public/images/logo.svg`, renderowanego przez Chromium w 1600 × 800 px.
+- [x] Podmienić logo w finalnej premium wizytówce na zatwierdzony asset i ponownie zweryfikować front/back.
+- [x] Zapisać nowy checkpoint po finalnej podmianie logo i końcowej kontroli wizualnej wersji premium.
+- [x] Skrócić treści na wizytówce do hasłowych nazw usług i usunąć długie zdania opisowe.
+- [x] Przygotować CSV z 50 frazami zakupowymi do bezpośredniego importu do Keywords Explorer Ahrefs.
+- [x] Usunąć nagłówek `keyword`, aby CSV zawierał wyłącznie frazy.
+- [x] Ponownie zweryfikować CSV: dokładnie 50 niepustych wierszy, UTF-8, jedna kolumna i brak nagłówka.
+- [x] Przeanalizować eksport Ahrefs dla 50 fraz i wybrać priorytetowe tematy SEO e-commerce, GEO i AEO.
+- [x] Przygotować mapę rekomendowanych podstron i kolejność publikacji dla BoostNow.

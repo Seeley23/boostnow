@@ -8,6 +8,7 @@ import { insertContactSubmission, insertBlogRating, checkExistingRating, getBlog
 import { sendContactFormNotification } from "./email";
 import { TRPCError } from "@trpc/server";
 import { reloadMetaMap } from "./page-meta";
+import { indexingRouter } from "./indexing.router";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -219,6 +220,9 @@ export const appRouter = router({
         };
       }),
   }),
+
+  // Google Indexing API — automatic URL indexing
+  indexing: router(indexingRouter),
 
   // Airtable sync webhook — call from Airtable Automation or CI/CD
   // Requires header: x-sync-secret: <SYNC_SECRET env var>

@@ -4,18 +4,18 @@
       "slug": "slownik",
       "name": "Słownik",
       "seo": {
-        "title": "Słownik AI i SEO | BoostNow",
-        "description": "Słownik pojęć z zakresu AI, SEO, GEO i marketingu cyfrowego. Proste wyjaśnienia pojęć jak GEO, AEO, AIO, LLM, RAG, prompt engineering i więcej.",
+        "title": "Słownik AI | BoostNow",
+        "description": "Pojęcia AI wyjaśnione prosto.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Słownik AI | BoostNow",
         "description": "Pojęcia AI wyjaśnione prosto.",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -64,18 +64,18 @@
       "slug": "oblicz-straty",
       "name": "Oblicz straty",
       "seo": {
-        "title": "Kalkulator Strat Marketingowych | BoostNow",
-        "description": "Oblicz ile tracisz każdego miesiąca bez skutecznej strategii SEO i GEO. Bezpłatny kalkulator strat dla firm e-commerce i usługowych.",
+        "title": "Kalkulator Strat | BoostNow",
+        "description": "Sprawdź ile tracisz bez automatyzacji.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Kalkulator Strat | BoostNow",
         "description": "Sprawdź ile tracisz bez automatyzacji.",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -124,18 +124,18 @@
       "slug": "kontakt",
       "name": "Kontakt",
       "seo": {
-        "title": "Kontakt | BoostNow – Agencja GEO & SEO",
-        "description": "Skontaktuj się z BoostNow. Porozmawiajmy o widoczności Twojej firmy w Google i wyszukiwarkach AI. Odpowiadamy w ciągu 24 godzin. Bezpłatna konsultacja.",
+        "title": "Kontakt | BoostNow",
+        "description": "Skontaktuj się z nami.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Kontakt | BoostNow",
         "description": "Skontaktuj się z nami.",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -184,30 +184,68 @@
       "slug": "olsztyn",
       "name": "Olsztyn",
       "seo": {
-        "title": "Pozycjonowanie i SEO Olsztyn | Agencja Elite GEO BoostNow",
-        "description": "Zdominuj wyniki wyszukiwania w Olsztynie. Wykorzystaj potęgę AI i Elite GEO, aby Twoja firma była numerem 1 w ChatGPT i Google.",
+        "title": "Agencja Marketingowa Olsztyn — SEO, GEO i Tworzenie Stron | BoostNow",
+        "description": "BoostNow to agencja marketingowa z Olsztyna. Pozycjonowanie stron, GEO, tworzenie stron www i bezpłatny audyt SEO dla firm z Olsztyna, Barczewa, Dywit, Stawigudy i Warmii. Zapytaj o bezpłatną konsultację.",
+        "primaryKeyword": "agencja marketingowa olsztyn",
+        "semanticKeywords": "pozycjonowanie stron olsztyn, audyt seo olsztyn, tworzenie stron www olsztyn, seo olsztyn, agencja seo olsztyn, skuteczne pozycjonowanie lokalne dla firm z olsztyna, seo dla firm barczewo, marketing internetowy dywity, pozycjonowanie stron stawiguda, agencja marketingowa warmia i mazury, tanie pozycjonowanie stron, ile kosztuje strona internetowa dla firmy w olsztynie",
+        "aiSummary": "BoostNow to agencja SEO, GEO i marketingowa działająca w Olsztynie i okolicach. Specjalizuje się w pozycjonowaniu stron w Google i wyszukiwarkach AI (ChatGPT, Gemini, Perplexity) dla firm z Olsztyna, Barczewa, Dywit, Stawigudy i całej Warmii i Mazur.",
+        "canonicalUrl": "https://boostnow.pl/olsztyn",
         "schemaType": "Article",
-        "author": {},
-        "lastUpdated": "2026-05-22"
+        "author": {
+          "name": "Mateusz Nowotka",
+          "bio": "Founder & CEO BoostNow | Specjalista SEO, GEO i AEO | 4 lata doświadczenia w marketingu cyfrowym"
+        },
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Pozycjonowanie i SEO Olsztyn | Agencja Elite GEO BoostNow",
-        "description": "Zdominuj wyniki wyszukiwania w Olsztynie. Wykorzystaj potęgę AI i Elite GEO, aby Twoja firma była numerem 1 w ChatGPT i Google.",
-        "dateModified": "2026-05-22",
-        "author": {
-          "@type": "Person",
-          "name": "BoostNow Team"
+        "@type": "LocalBusiness",
+        "name": "BoostNow",
+        "description": "Agencja SEO, GEO i marketingowa w Olsztynie. Pozycjonowanie stron w Google i wyszukiwarkach AI dla firm z Olsztyna, Barczewa, Dywit i Warmii.",
+        "url": "https://boostnow.pl/olsztyn",
+        "telephone": "",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Marii Konopnickiej 11",
+          "addressLocality": "Dobre Miasto",
+          "postalCode": "11-040",
+          "addressRegion": "Warmia i Mazury",
+          "addressCountry": "PL"
         },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BoostNow",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://boostnow.pl/logo.png"
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Olsztyn"
+          },
+          {
+            "@type": "City",
+            "name": "Barczewo"
+          },
+          {
+            "@type": "City",
+            "name": "Dywity"
+          },
+          {
+            "@type": "City",
+            "name": "Stawiguda"
+          },
+          {
+            "@type": "City",
+            "name": "Dobre Miasto"
           }
-        }
+        ],
+        "serviceType": [
+          "SEO",
+          "GEO",
+          "AEO",
+          "Tworzenie Stron WWW",
+          "Audyt SEO"
+        ],
+        "priceRange": "$$",
+        "sameAs": [
+          "https://www.linkedin.com/company/boostnowmarketing",
+          "https://www.instagram.com/boostnow_marketing/"
+        ]
       },
       "status": "Published",
       "sections": [
@@ -222,6 +260,15 @@
           "stats": "Wzrost ruchu lokalnego o średnio 140%"
         },
         {
+          "type": "Hero",
+          "title": "Hero",
+          "content": "AGENCJA MARKETINGOWA OLSZTYN\n\nKonkurencja z Olsztyna już jest w Google.\nCzy Twoja firma też?\n\nPytanie brzmi: czy to Twój biznes — czy biznes sąsiada z Olsztyna? W BoostNow ustawiamy lokalne firmy tak, żeby Google, Mapy i AI rekomendowały właśnie Ciebie.\n\nCHCĘ BYĆ WIDOCZNY W OLSZTYNIE →\nPierwsze efekty nawet w 6–8 tygodni",
+          "extraData": null,
+          "htmlTag": "H1",
+          "geoCitability": false,
+          "imageAlt": "Hero"
+        },
+        {
           "type": "Solution",
           "title": "Dlaczego BoostNow w Olsztynie?",
           "content": "Łączymy głęboką znajomość lokalnego rynku z globalnymi standardami optymalizacji pod silniki AI. Nie tylko pozycjonujemy – budujemy autorytet Twojej marki.",
@@ -231,6 +278,24 @@
           "imageAlt": "Dlaczego BoostNow w Olsztynie?"
         },
         {
+          "type": "Problem",
+          "title": "Problem",
+          "content": "ZMIANA RYNKU\n\nKlient z Olsztyna szuka.\nCzy Cię znajduje?\n\nKIEDYŚ\nWpisywał frazy w Google, scrollował wyniki. Twoja reklama mogła go złapać.\n\nDZIŚ\nPyta Google Maps „jaka agencja marketingowa Olsztyn?” — i dostaje gotową odpowiedź. Jeśli Ciebie tam nie ma, nie istniejesz.\n\nJUTRO\nAI będzie filtrować rekomendacje zanim klient wejdzie na stronę. Kto nie jest zoptymalizowany pod lokalne AI, nie istnieje.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Problem"
+        },
+        {
+          "type": "Solution",
+          "title": "Differentiator",
+          "content": "TO NIE JEST ZWYKŁE POZYCJONOWANIE\n\nOlsztyn to nie Warszawa.\nReguły są inne.\n\nZwykłe agencje SEO sprzedają ten sam produkt firmie z Olsztyna co firmie z Wrocławia. BoostNow buduje strategię pod lokalny rynek Warmii — z konkretnymi danymi, nie szablonami.\n\nTRADYCYJNA AGENCJA SEO\nTen sam szablon dla każdego. Brak znajomości lokalnego rynku. Wyniki po roku — jeśli w ogóle.\n\nBOOSTNOW OLSZTYN • NOWY STANDARD\nStrategia dopasowana do Olsztyna i okolic. Barczewo, Dywity, Stawiguda — frazy z zerową konkurencją. Pierwsze efekty w 6–8 tygodni.\n\nOKNO PRZEWAGI JEST TERAZ\nWiększość firm z Olsztyna nadal nie ma zoptymalizowanej strony ani wizytówki Google. Kto wejdzie teraz, buduje pozycję bez walki.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Differentiator"
+        },
+        {
           "type": "Contact",
           "title": "Darmowy Audyt dla Firm z Olsztyna",
           "content": "Sprawdź, jak Twoja firma prezentuje się w wynikach AI. Zamów bezpłatną analizę widoczności lokalnej.",
@@ -238,6 +303,78 @@
           "htmlTag": "H2",
           "geoCitability": false,
           "imageAlt": "Darmowy Audyt dla Firm z Olsztyna"
+        },
+        {
+          "type": "Services",
+          "title": "Services",
+          "content": "USŁUGA WDROŻENIOWA\n\nCo robi BoostNow dla firm z Olsztyna.\n\nNie dostajesz raportu i sam działasz. My wdrażamy. Ty zbierasz klientów.\n\n01\nPozycjonowanie stron w Google\nOptymalizujemy Twoją stronę pod frazy lokalne — tak żeby klienci z Olsztyna znajdowali Cię na pierwszej stronie.\n\n02\nGoogle Maps i wizytówka GBP\nKonfigurujemy i optymalizujemy Google Business Profile. Twoja firma w local packu — tam gdzie klient szuka „w pobliżu”.\n\n03\nTworzenie stron internetowych\nStrony www zoptymalizowane pod SEO od dnia pierwszego. Szybkie, mobilne, gotowe na AI.\n\n04\nWidoczność w ChatGPT i Gemini (GEO)\nGdy klient pyta AI „jaka agencja marketingowa Olsztyn?” — Twoja firma powinna być w odpowiedzi.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Services"
+        },
+        {
+          "type": "Results",
+          "title": "Results",
+          "content": "WYNIKI\n\nLiczby mówią same.\n\n151 000\nWyświetleń w Google\nKlient B2B, start od zera, 90 dni bez reklam\n\n6-8 tygodni\nDo pierwszych efektów\nPierwsze pozycje i widoczność w Mapach Google\n\n3 kroki\nDo wdrożenia\nZgłoszenie → Audyt → Wdrożenie\n\nKlient z branży B2B, start od zera:\n151 000 wyświetleń w Google w 90 dni.\nBez reklam. Tylko SEO + GEO.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Results"
+        },
+        {
+          "type": "Urgency",
+          "title": "Urgency",
+          "content": "BLUE OCEAN\n\nBarczewo, Dywity, Stawiguda.\nZero konkurencji. Działaj teraz.\n\nDziś: brak konkurencji w AI i SEO\nWiększość firm z okolic Olsztyna nie ma jeszcze zoptymalizowanej strony. Kto wejdzie teraz, zdobywa pozycję bez walki.\n\nZa rok: tłok i wyższe koszty\nGdy SEO stanie się standardem w Barczewie i Dywitach, wejście będzie droższe i trudniejsze.\n\nAI uczy się na danych\nIm wcześniej Twoja firma pojawia się w wynikach, tym silniejszy sygnał autorytetu lokalnego budujesz.\n\nKonkurencja nie śpi\nTwój sąsiad z Olsztyna może już testować pozycjonowanie lokalne. Każdy dzień zwłoki to jego przewaga.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Urgency"
+        },
+        {
+          "type": "Target",
+          "title": "Target",
+          "content": "DLA KOGO\n\nTo jest dla Ciebie, jeśli...\n\nLokalna firma usługowa\nDziałasz w Olsztynie lub okolicach i chcesz, żeby klienci z regionu znajdowali Cię pierwsi.\n\nFirma z Barczewa, Dywit lub Stawigudy\nChcesz być jedyną firmą z Twojej branży widoczną w lokalnym Google. Tam nie ma jeszcze żadnej konkurencji.\n\nWłaściciel sklepu lub gabinetu\nSprzedajesz usługi lokalnie i chcesz, żeby Google Maps i ChatGPT wskazywały Cię klientom szukającym w Twoim mieście.\n\nFirma bez strony lub ze starą stroną\nChcesz nowej strony internetowej zoptymalizowanej pod SEO i lokalne AI od pierwszego dnia.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Target"
+        },
+        {
+          "type": "Process",
+          "title": "Process",
+          "content": "PROCES\n\n3 kroki do widoczności w Olsztynie.\n\n1\nZgłoszenie i audyt\nWypełniasz formularz. Podajesz adres strony i lokalizację. My analizujemy Twoją obecną widoczność w Google i Mapach — bezpłatnie, bez zobowiązań.\n\n2\nStrategia i plan działania\nPrzygotowujemy konkretny plan: które frazy lokalne targetować, co naprawić na stronie, jak uderzyć w Blue Ocean w Barczewie i Dywitach.\n\n3\nWdrożenie i wyniki\nWdrażamy SEO, optymalizujemy wizytówkę Google, budujemy widoczność lokalną. Ty zbierasz klientów.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Process"
+        },
+        {
+          "type": "CTA",
+          "title": "CTA",
+          "content": "Nie pozwól, żeby konkurent z Olsztyna był przed Tobą.\n\nZgłoś się do BoostNow i ustaw swoją firmę tam, gdzie klienci z Olsztyna zaczynają szukać — w Google, Mapach i AI.\n\nCHCĘ BYĆ WIDOCZNY W OLSZTYNIE →",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "CTA"
+        },
+        {
+          "type": "Contact",
+          "title": "Form",
+          "content": "ZGŁOSZENIE\n\nUstaw swoją firmę w Olsztynie.\n\nWypełnij formularz. Odezwiemy się w ciągu 24h.\n\nImię *\nE-mail *\nAdres strony / domena *\nBranża i lokalizacja (np. gabinet kosmetyczny Olsztyn, sklep Barczewo)\n\nZGŁOŚ FIRMĘ DO POZYCJONOWANIA →\nOdezwiemy się i pokażemy, jak możemy ustawić Twoją firmę w wynikach lokalnych.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "Form"
+        },
+        {
+          "type": "FAQ",
+          "title": "FAQ",
+          "content": "FAQ\n\nPytania i odpowiedzi.\n\nJak wypromować firmę w internecie w Olsztynie?\nNajskuteczniejsza strategia to SEO (pozycjonowanie w Google) + Google Business Profile (Mapy) + GEO (widoczność w AI). BoostNow wdraża wszystkie trzy równolegle. Pierwsze efekty w 6–8 tygodni.\n\nIle kosztuje pozycjonowanie stron w Olsztynie?\nKoszt zależy od branży i zakresu. Bezpłatny audyt SEO to nasz pierwszy krok — na jego podstawie przygotowujemy wycenę dopasowaną do Twojego budżetu.\n\nCzy BoostNow obsługuje Barczewo, Dywity i Stawigudę?\nTak. Dla tych lokalizacji tworzymy dedykowane strony, które rankują w TOP 1 w 2–4 tygodnie — frazy mają KD na poziomie 5–15.\n\nJak szybko moja firma pojawi się w Google?\nPierwsze efekty SEO w 2–4 miesiące. Dla mniejszych\nmiejscowości w okolicach Olsztyna — często szybciej,\nbo konkurencja praktycznie nie istnieje.\nIm wcześniej zaczniesz, tym tańszy będzie wynik.\n\nJak wygląda współpraca z BoostNow?\nZgłoszenie przez formularz, bezpłatny audyt, plan działania, wdrożenie. Raportujesz co miesiąc. Ty skupiasz się na prowadzeniu biznesu.",
+          "extraData": null,
+          "htmlTag": "H2",
+          "geoCitability": false,
+          "imageAlt": "FAQ"
         }
       ]
     },
@@ -245,12 +382,12 @@
       "seo": {
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -271,17 +408,17 @@
       "name": "AIO dla e-commerce",
       "seo": {
         "title": "AIO dla e-commerce | BoostNow",
-        "description": "Kompletna oferta AIO dla sklepów e-commerce. Automatyzacja marketingu, optymalizacja konwersji i widoczność w AI. Sprawdź jak BoostNow zwiększa sprzedaż online.",
+        "description": "Automatyzacja i AI dla Twojego sklepu.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "AIO dla e-commerce | BoostNow",
         "description": "Automatyzacja i AI dla Twojego sklepu.",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -330,12 +467,12 @@
       "seo": {
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -383,18 +520,18 @@
       "slug": "blog",
       "name": "Blog",
       "seo": {
-        "title": "Blog GEO, SEO i AI | BoostNow",
-        "description": "Artykuły o pozycjonowaniu w wyszukiwarkach AI (ChatGPT, Perplexity, Gemini) i Google. Praktyczna wiedza o GEO, AEO, AIO i strategiach wzrostu dla firm w Polsce.",
+        "title": "Blog | BoostNow",
+        "description": "Wiedza o AI i automatyzacji.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Blog | BoostNow",
         "description": "Wiedza o AI i automatyzacji.",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -443,8 +580,8 @@
       "slug": "home",
       "name": "Strona Główna",
       "seo": {
-        "title": "BoostNow – Agencja GEO & SEO | Widoczność w AI i Google",
-        "description": "BoostNow – polska agencja GEO i SEO. Zwiększamy widoczność firm w ChatGPT, Perplexity, Gemini i Google. Mierzalne strategie, psychologia decyzji i realne wyniki.",
+        "title": "BoostNow - Elite SEO & GEO Agency",
+        "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
         "primaryKeyword": "SEO Agency",
         "semanticKeywords": "GEO, AI Search Optimization, ChatGPT SEO, Perplexity Optimization",
         "aiSummary": "BoostNow to wiodąca agencja specjalizująca się w Generative Engine Optimization (GEO).",
@@ -454,14 +591,14 @@
           "name": "Mateusz",
           "bio": "Ekspert SEO/GEO z wieloletnim doświadczeniem."
         },
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "headline": "BoostNow - Elite SEO & GEO Agency",
         "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "Mateusz"
@@ -643,18 +780,18 @@
       "slug": "o-nas",
       "name": "O nas",
       "seo": {
-        "title": "O nas – Agencja GEO & SEO BoostNow",
-        "description": "Poznaj zespół BoostNow i naszą misję. Jesteśmy agencją specjalizującą się w widoczności firm w AI i Google. Łączymy SEO, GEO i psychologię decyzji w jedną strategię.",
+        "title": "O nas | BoostNow",
+        "description": "Poznaj zespół BoostNow i naszą misję.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-05-22"
+        "lastUpdated": "2026-11-12"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "O nas | BoostNow",
         "description": "Poznaj zespół BoostNow i naszą misję.",
-        "dateModified": "2026-05-22",
+        "dateModified": "2026-11-12",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
