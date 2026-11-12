@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 /* Navigation Component
    Design: "Precision Strike" - Military-Grade Minimalism
    - Fixed sticky header with glass effect on scroll
    - Status indicator (green dot)
-   - Mobile hamburger menu
+   - Mobile hamburger menu as native dialog for a11y
    - Logo with negative margins to prevent height overflow
 */
 
@@ -21,7 +20,7 @@ const navItems = [
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,17 +40,16 @@ export default function Navigation() {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-    setIsMobileMenuOpen(false);
+    dialogRef.current?.close();
   };
+
+  const openMenu = () => dialogRef.current?.showModal();
+  const closeMenu = () => dialogRef.current?.close();
 
   return (
     <>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 1000 }}
-        className={`${
+      <header
+        className={`fixed top-0 left-0 right-0 w-full z-50 ${
           isScrolled
             ? "bg-background/95 backdrop-blur-xl border-b border-border/50" 
             : "bg-background/95 border-b border-border/30"
@@ -70,7 +68,7 @@ export default function Navigation() {
                 width="288"
                 height="72"
                 style={{ display: "block", margin: "0" }}
-                className="h-12 sm:h-14 lg:h-[72px] w-auto hover:opacity-80 transition-opacity bg-transparent object-contain" 
+                className="h-12 sm:h-14 lg:h-[72px] w-auto hover:opacity-80 transition-opacity bg-transparent object-contain"
               />
             </a>
 
@@ -104,47 +102,60 @@ export default function Navigation() {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden flex-shrink-0 text-foreground"
+              onClick={openMenu}
+              className="lg:hidden flex-shrink-0 text-foreground p-2"
+              aria-label="Otwórz menu nawigacji"
+              aria-expanded={dialogRef.current?.open ?? false}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              <Menu size={24} />
             </button>
           </div>
-
-          {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="lg:hidden border-t border-border/30 py-4 space-y-2"
-            >
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
-                    (item as any).highlight
-                      ? "text-lime-400 hover:text-lime-300 font-semibold hover:bg-lime-400/10"
-                      : "text-foreground/70 hover:text-foreground hover:bg-background/50"
-                  }`}
-                >
-                  {item.label}
-                  {(item as any).highlight && (
-                    <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse align-middle" />
-                  )}
-                </button>
-              ))}
-              <button
-                onClick={() => scrollToSection("#contact")}
-                className="block w-full px-4 py-3 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity"
-              >
-                Zboostuj wyniki
-              </button>
-            </motion.div>
-          )}
         </nav>
-      </motion.header>
+      </header>
+
+      {/* Mobile Menu as native dialog */}
+      <dialog
+        ref={dialogRef}
+        className="lg:hidden fixed inset-0 z-50 m-0 max-w-none max-h-none w-full h-full bg-background/95 backdrop-blur p-0 border-0"
+        aria-labelledby="mobile-menu-title"
+      >
+        <div className="flex flex-col h-full">
+          <div className="flex items-center justify-between p-4 border-b border-border/30">
+            <h2 id="mobile-menu-title" className="font-heading font-bold text-lg">Menu</h2>
+            <button
+              onClick={closeMenu}
+              className="p-2 text-foreground"
+              aria-label="Zamknij menu"
+            >
+              <X size={24} />
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto py-4 space-y-2 px-4">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className={`block w-full text-left px-4 py-3 rounded-lg transition-colors ${
+                  (item as any).highlight
+                    ? "text-lime-400 hover:text-lime-300 font-semibold hover:bg-lime-400/10"
+                    : "text-foreground/70 hover:text-foreground hover:bg-background/50"
+                }`}
+              >
+                {item.label}
+                {(item as any).highlight && (
+                  <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse align-middle" />
+                )}
+              </button>
+            ))}
+            <button
+              onClick={() => scrollToSection("#contact")}
+              className="block w-full px-4 py-3 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity mt-4"
+            >
+              Zboostuj wyniki
+            </button>
+          </div>
+        </div>
+      </dialog>
 
       {/* Spacer to prevent content overlap with fixed header */}
       <div className="h-16 sm:h-20 lg:h-24" />
