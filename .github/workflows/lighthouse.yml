@@ -26,8 +26,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile || pnpm install
 
-      - name: Build static site
-        run: pnpm exec vite build
+      - name: Build static site (includes prerender)
+        run: pnpm build
 
       - name: Run Lighthouse CI
         run: |
