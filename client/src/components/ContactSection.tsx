@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, ArrowRight, CheckCircle, Zap, Clock, Shield } from "lucide-react";
+import { Mail, ArrowRight, CheckCircle, Zap, Clock, Shield, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 import DOMPurify from "dompurify";
 import { trackFormSubmit } from "@/lib/analytics";
 import { RecaptchaV3, getRecaptchaToken } from "./RecaptchaV3";
+import { useFieldErrorSync } from "@/hooks/useFieldErrorSync";
 
 /* ContactSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -40,6 +41,8 @@ export default function ContactSection({ title, description }: ContactSectionPro
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  useFieldErrorSync(formRef);
 
   const contactMutation = trpc.contact.submit.useMutation({
     onSuccess: (data, variables) => {
@@ -108,7 +111,7 @@ export default function ContactSection({ title, description }: ContactSectionPro
             <span className="inline-block text-sm font-medium text-primary tracking-wider uppercase mb-4">
               Kontakt
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
+            <h2 id="contact-form-heading" className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
               Chcesz{" "}
               <span className="text-gradient-lime">BOOST</span>{" "}
               dla swoich wyników?
@@ -163,6 +166,10 @@ export default function ContactSection({ title, description }: ContactSectionPro
             <RecaptchaV3 action="contact_form" onToken={() => {}} />
             
             <div className="rounded-2xl bg-card border border-border p-4 sm:p-6 lg:p-8">
+              {/* Always in the page so the change of text is announced */}
+              <p role="status" className="sr-only">
+                {isSubmitted ? "Wiadomość została wysłana. Skontaktujemy się w ciągu 24 godzin." : ""}
+              </p>
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
@@ -176,39 +183,53 @@ export default function ContactSection({ title, description }: ContactSectionPro
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <form ref={formRef} onSubmit={handleSubmit} aria-labelledby="contact-form-heading" className="space-y-4 sm:space-y-6" data-mcp-action="request-quote" data-mcp-service="geo-audit">
+                  <p className="text-xs text-muted-foreground mb-4">Pola oznaczone <span aria-hidden="true">*</span> są wymagane.</p>
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Imię i nazwisko
+                      Imię i nazwisko<span aria-hidden="true" className="text-primary"> *</span>
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       required
-                      aria-label="Imię i nazwisko"
-                      aria-required="true"
-                      aria-describedby="name-error"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
+                      autoComplete="name"
+                      enterKeyHint="next"
+                      data-error="name-error"
+                      data-mcp-input="name"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 min-h-12 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 user-invalid:border-destructive transition-all text-base peer"
                       placeholder="Jan Kowalski"
                     />
+                    <p id="name-error" className="hidden peer-user-invalid:flex items-center gap-1.5 text-sm text-destructive mt-1.5">
+                      <AlertCircle className="w-4 h-4 shrink-0" aria-hidden="true" />
+                      <span><span className="sr-only">Błąd: </span>Podaj imię i nazwisko.</span>
+                    </p>
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      Email
+                      Email<span aria-hidden="true" className="text-primary"> *</span>
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       required
-                      aria-label="Adres email"
-                      aria-required="true"
-                      aria-describedby="email-error"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
+                      autoComplete="email"
+                      autoCorrect="off"
+                      autoCapitalize="none"
+                      spellCheck={false}
+                      enterKeyHint="next"
+                      data-error="email-error"
+                      data-mcp-input="email"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 min-h-12 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 user-invalid:border-destructive transition-all text-base peer"
                       placeholder="jan@firma.pl"
                     />
+                    <p id="email-error" className="hidden peer-user-invalid:flex items-center gap-1.5 text-sm text-destructive mt-1.5">
+                      <AlertCircle className="w-4 h-4 shrink-0" aria-hidden="true" />
+                      <span><span className="sr-only">Błąd: </span>Podaj poprawny adres email, np. jan@firma.pl.</span>
+                    </p>
                   </div>
 
                   <div>
@@ -219,9 +240,11 @@ export default function ContactSection({ title, description }: ContactSectionPro
                       type="text"
                       id="company"
                       name="company"
-                      aria-label="Nazwa firmy"
+                      autoComplete="organization"
+                      enterKeyHint="next"
                       aria-describedby="company-help"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all text-base"
+                      data-mcp-input="company"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 min-h-12 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 user-invalid:border-destructive transition-all text-base peer"
                       placeholder="Nazwa firmy"
                     />
                     <p id="company-help" className="text-xs text-muted-foreground mt-1">Opcjonalnie</p>
@@ -229,38 +252,45 @@ export default function ContactSection({ title, description }: ContactSectionPro
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Jak możemy Ci pomóc?
+                      Jak możemy Ci pomóc?<span aria-hidden="true" className="text-primary"> *</span>
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={4}
                       required
-                      aria-label="Wiadomość"
-                      aria-required="true"
+                      minLength={10}
                       aria-describedby="message-help"
-                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 transition-all resize-none text-base"
+                      data-error="message-error"
+                      data-mcp-input="message"
+                      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 min-h-12 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 user-invalid:border-destructive transition-all resize-y text-base peer"
                       placeholder="Opisz swoje wyzwanie lub cel..."
                     />
                     <p id="message-help" className="text-xs text-muted-foreground mt-1">Minimum 10 znaków</p>
+                    <p id="message-error" className="hidden peer-user-invalid:flex items-center gap-1.5 text-sm text-destructive mt-1.5">
+                      <AlertCircle className="w-4 h-4 shrink-0" aria-hidden="true" />
+                      <span><span className="sr-only">Błąd: </span>Opisz swoją sprawę w co najmniej 10 znakach.</span>
+                    </p>
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    aria-label="Wyślij formularz kontaktu"
                     aria-busy={isSubmitting}
-                    className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 min-h-[44px]"
+                    data-mcp-action="request-quote"
+                    data-mcp-input="contact-form"
+                    data-mcp-service="geo-audit"
+                    className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 min-h-12"
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
+                        <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" aria-hidden="true" />
                         <span>Wysyłanie...</span>
                       </>
                     ) : (
                       <>
                         <span>Zboostuj wyniki TERAZ</span>
-                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                       </>
                     )}
                   </button>

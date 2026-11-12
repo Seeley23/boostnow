@@ -27,7 +27,11 @@ interface SectionProps {
 
 const SectionRenderer: React.FC<SectionProps> = ({ section }) => {
   const { type, title, content, extraData, htmlTag, geoCitability, imageAlt, schemaMarkup, stats } = section;
-  const Tag = (htmlTag || 'section').toLowerCase() as any;
+  // htmlTag from the CMS describes the heading level (H1/H2). It must not be
+  // used as the wrapper element: wrapping a whole section in <h1> turns every
+  // paragraph and button inside it into heading text.
+  const requested = (htmlTag || 'section').toLowerCase();
+  const Tag = (['section', 'article', 'aside', 'div'].includes(requested) ? requested : 'section') as any;
   
   const renderContent = () => {
     switch (type) {

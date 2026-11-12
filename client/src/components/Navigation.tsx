@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -13,7 +12,7 @@ const navItems = [
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,18 +32,20 @@ export default function Navigation() {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-    setIsMobileMenuOpen(false);
+    dialogRef.current?.close();
   };
+
+  const openMenu = () => dialogRef.current?.showModal();
+  const closeMenu = () => dialogRef.current?.close();
 
   return (
     <>
       <header
-        style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 1000 }}
-        className={
+        className={`fixed top-0 left-0 right-0 w-full z-50 ${
           isScrolled
             ? "bg-background/95 backdrop-blur-xl border-b border-border/50"
             : "bg-background/95 border-b border-border/30"
-        }
+        }`}
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 py-3 lg:py-4">
@@ -91,46 +92,60 @@ export default function Navigation() {
             </button>
 
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden flex-shrink-0 text-foreground"
-              aria-label={isMobileMenuOpen ? "Zamknij menu" : "Otwórz menu"}
+              onClick={openMenu}
+              className="lg:hidden flex-shrink-0 text-foreground p-2"
+              aria-label="Otwórz menu nawigacji"
+              aria-expanded={dialogRef.current?.open ?? false}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              <Menu size={24} />
             </button>
           </div>
-
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="lg:hidden border-t border-border/30 py-4 space-y-2"
-            >
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
-                    (item as any).highlight
-                      ? "text-lime-400 hover:text-lime-300 font-semibold hover:bg-lime-400/10"
-                      : "text-foreground/70 hover:text-foreground hover:bg-background/50"
-                  }`}
-                >
-                  {item.label}
-                  {(item as any).highlight && (
-                    <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse align-middle" />
-                  )}
-                </button>
-              ))}
-              <button
-                onClick={() => scrollToSection("#contact")}
-                className="block w-full px-4 py-3 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity"
-              >
-                Zboostuj wyniki
-              </button>
-            </motion.div>
-          )}
         </nav>
       </header>
+
+      {/* Mobile Menu as native dialog */}
+      <dialog
+        ref={dialogRef}
+        className="lg:hidden fixed inset-0 z-50 m-0 max-w-none max-h-none w-full h-full bg-background/95 backdrop-blur p-0 border-0"
+        aria-labelledby="mobile-menu-title"
+      >
+        <div className="flex flex-col h-full">
+          <div className="flex items-center justify-between p-4 border-b border-border/30">
+            <h2 id="mobile-menu-title" className="font-heading font-bold text-lg">Menu</h2>
+            <button
+              onClick={closeMenu}
+              className="p-2 text-foreground"
+              aria-label="Zamknij menu"
+            >
+              <X size={24} />
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto py-4 space-y-2 px-4">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className={`block w-full text-left px-4 py-3 rounded-lg transition-colors ${
+                  (item as any).highlight
+                    ? "text-lime-400 hover:text-lime-300 font-semibold hover:bg-lime-400/10"
+                    : "text-foreground/70 hover:text-foreground hover:bg-background/50"
+                }`}
+              >
+                {item.label}
+                {(item as any).highlight && (
+                  <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse align-middle" />
+                )}
+              </button>
+            ))}
+            <button
+              onClick={() => scrollToSection("#contact")}
+              className="block w-full px-4 py-3 bg-gradient-to-r from-lime-400 to-lime-300 text-black rounded-lg font-medium hover:opacity-90 transition-opacity mt-4"
+            >
+              Zboostuj wyniki
+            </button>
+          </div>
+        </div>
+      </dialog>
 
       <div className="h-16 sm:h-20 lg:h-24" aria-hidden="true" />
     </>

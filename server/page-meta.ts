@@ -36,6 +36,38 @@ function findArticlesMetadata(): any[] {
   ]) ?? [];
 }
 
+// ── Service schema for offer pages (Agency/B2B requires Organization + Service)
+
+const ORG = { "@type": "Organization", name: "BoostNow", url: BASE };
+const FOUNDER = {
+  "@type": "Person",
+  name: "Mateusz Nowotka",
+  jobTitle: "CEO",
+  url: BASE + "/mateusz-nowotka",
+};
+
+function serviceSchema(name: string, description: string, routePath: string): any {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url: BASE + routePath,
+    areaServed: { "@type": "Country", name: "Polska" },
+    provider: { ...ORG, founder: FOUNDER },
+  };
+}
+
+function withServiceSchema(
+  map: Record<string, PageMeta>,
+  routePath: string,
+  name: string
+): void {
+  const m = map[routePath];
+  if (!m || m.schema?.length) return;
+  m.schema = [serviceSchema(name, m.description || name, routePath)];
+}
+
 // ── Meta map builder ──────────────────────────────────────────────────────────
 
 function buildMetaMap(): Record<string, PageMeta> {
@@ -132,7 +164,11 @@ function buildMetaMap(): Record<string, PageMeta> {
 
   // Priority: static > articles (Airtable) > CMS pages
   // Articles override static only for /blog/* routes — intentional
-  return { ...cmsMeta, ...articlesMeta, ...staticMeta };
+  const merged = { ...cmsMeta, ...articlesMeta, ...staticMeta };
+  withServiceSchema(merged, "/aio", "AIO – AI Optimization dla e-commerce");
+  withServiceSchema(merged, "/aio-ecommerce", "AIO dla e-commerce");
+  withServiceSchema(merged, "/olsztyn", "Agencja SEO i GEO Olsztyn");
+  return merged;
 }
 
 // ── Public API ────────────────────────────────────────────────────────────────

@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import LeadFirst from "./LeadFirst";
 
 /* ServicesSection Component
    Design: "Precision Strike" - Military-Grade Minimalism
@@ -143,11 +144,9 @@ export default function ServicesSection({ title, description }: ServicesSectionP
 
   return (
     <section id="services" className="py-24 lg:py-32 relative">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
       
       <div className="container relative z-10" ref={ref}>
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -157,19 +156,16 @@ export default function ServicesSection({ title, description }: ServicesSectionP
           <span className="inline-block text-sm font-medium text-primary tracking-wider uppercase mb-4">
             Nasze Usługi
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Zorientowane na{" "}
             <span className="text-gradient-lime">wynik</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Nie oferujemy porad. Dostarczamy Architekturę Konwersji opartą na 
-            psychologii decyzji i mierzalnych danych.
-          </p>
+          <LeadFirst className="text-center">
+            Nie oferujemy porad. Dostarczamy Architekturę Konwersji opartą na psychologii decyzji i mierzalnych danych, która zwiększa cytowalność w AI i konwersje w Google.
+          </LeadFirst>
         </motion.div>
 
-        {/* Unified Services Grid with Horizontal Scroll */}
         <div className="relative">
-          {/* Left Arrow */}
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
@@ -180,7 +176,6 @@ export default function ServicesSection({ title, description }: ServicesSectionP
             </button>
           )}
 
-          {/* Services Container */}
           <div
             ref={scrollContainerRef}
             onScroll={checkScroll}
@@ -197,7 +192,6 @@ export default function ServicesSection({ title, description }: ServicesSectionP
                 }`}
               >
                 <div className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary transition-all duration-300 h-full flex flex-col">
-                  {/* Image */}
                   {service.image && (
                     <div className="relative h-48 overflow-hidden bg-muted">
                       <img
@@ -212,7 +206,6 @@ export default function ServicesSection({ title, description }: ServicesSectionP
                     </div>
                   )}
 
-                  {/* Content */}
                   <div className="p-6 relative flex flex-col flex-grow">
                     <div className="flex items-start justify-between mb-3">
                       <div>
@@ -247,7 +240,6 @@ export default function ServicesSection({ title, description }: ServicesSectionP
             ))}
           </div>
 
-          {/* Right Arrow */}
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
@@ -259,7 +251,6 @@ export default function ServicesSection({ title, description }: ServicesSectionP
           )}
         </div>
 
-        {/* Scroll Indicator */}
         <div className="text-center mt-8">
           <p className="text-xs text-muted-foreground">
             ← Przewijaj aby zobaczyć więcej usług →

@@ -1,0 +1,22 @@
+{
+  "name": "BoostNow",
+  "version": "1.0",
+  "description": "Agencja GEO, SEO i optymalizacji konwersji. Pomagamy firmom być cytowanymi przez AI.",
+  "contact": {
+    "email": "kontakt@boostnow.pl",
+    "url": "https://boostnow.pl/kontakt"
+  },
+  "actions": [
+    {
+      "name": "request-quote",
+      "description": "Poproś o bezpłatny audyt GEO lub wycenę",
+      "url": "https://boostnow.pl/#contact",
+      "inputs": ["name", "email", "company", "message"]
+    },
+    {
+      "name": "view-pricing",
+      "description": "Zobacz orientacyjne ceny",
+      "url": "https://boostnow.pl/pricing.md"
+    }
+  ]
+}

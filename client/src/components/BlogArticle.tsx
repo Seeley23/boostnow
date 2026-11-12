@@ -235,7 +235,8 @@ const BlogArticle: React.FC = () => {
   const lastUpdated = article.date || new Date().toISOString().split('T')[0];
 
   return (
-    <div className="min-h-screen bg-[#0b1020] py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background">
+      <div className="py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>{article.seoTitle || article.title} | BoostNow</title>
         <meta name="robots" content="index, follow" />
@@ -378,6 +379,7 @@ const BlogArticle: React.FC = () => {
             </div>
           </motion.div>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, TrendingUp, Target, Zap } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, Zap, Sparkles, Search } from "lucide-react";
 
 interface HeroProps {
   title?: string;
@@ -11,7 +11,7 @@ export default function HeroSection({ title, subtitle }: HeroProps) {
   const displaySubtitle = subtitle || "Zwiększamy ROAS e-commerce o 150% w 90 dni dla marek z całej Polski. Architektura konwersji oparta na psychologii.";
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-background">
+    <section className="relative flex items-center py-14 sm:py-16 lg:py-20 lg:min-h-[calc(100svh-6rem)] overflow-hidden bg-background">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -94,11 +94,12 @@ export default function HeroSection({ title, subtitle }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden lg:block lg:col-span-5"
           >
-            <div className="relative">
+            {/* Mock AI answer: shows the outcome we sell (brand cited by an AI engine) */}
+            <div className="relative max-w-md mx-auto" aria-hidden="true">
               <motion.div
-                animate={{ y: [0, -10, 0] }}
+                animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 right-0 glass-card rounded-lg p-4 z-10"
+                className="absolute -top-6 -right-4 glass-card rounded-lg p-4 z-10"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
@@ -110,17 +111,41 @@ export default function HeroSection({ title, subtitle }: HeroProps) {
                   </div>
                 </div>
               </motion.div>
-              <div className="relative aspect-square max-w-md mx-auto">
-                <div className="absolute inset-0 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent" />
-                <div className="absolute inset-4 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center animate-pulse-glow">
-                        <div className="w-6 h-6 rounded-full bg-primary" />
-                      </div>
+
+              <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 via-card to-card p-1 shadow-2xl shadow-primary/5">
+                <div className="rounded-xl bg-card/90 backdrop-blur-sm p-6">
+                  <div className="flex items-center gap-3 rounded-lg border border-border bg-background/60 px-4 py-3 mb-5">
+                    <Search className="w-4 h-4 text-muted-foreground shrink-0" />
+                    <span className="text-sm text-foreground truncate">Najlepsza agencja GEO w Polsce?</span>
+                  </div>
+
+                  <div className="flex items-center gap-2 mb-3">
+                    <Sparkles className="w-4 h-4 text-primary" />
+                    <span className="text-xs font-heading font-semibold uppercase tracking-wider text-primary">Odpowiedź AI</span>
+                  </div>
+
+                  <div className="space-y-2 mb-5">
+                    <div className="h-2.5 rounded-full bg-muted w-full" />
+                    <div className="h-2.5 rounded-full bg-muted w-11/12" />
+                    <p className="text-sm text-foreground leading-relaxed py-1">
+                      Według{" "}
+                      <span className="rounded bg-primary/15 px-1.5 py-0.5 font-semibold text-primary">Twojej marki</span>{" "}
+                      kluczowe są cytowalne treści i dane strukturalne.
+                    </p>
+                    <div className="h-2.5 rounded-full bg-muted w-10/12" />
+                    <div className="h-2.5 rounded-full bg-muted w-7/12" />
+                  </div>
+
+                  <div className="border-t border-border pt-4">
+                    <p className="text-xs text-muted-foreground mb-2">Źródła</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        twojamarka.pl
+                      </span>
+                      <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">źródło 2</span>
+                      <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">źródło 3</span>
                     </div>
-                    <p className="font-heading font-bold text-xl text-foreground mb-2">Decision Science</p>
-                    <p className="text-sm text-muted-foreground">Architektura konwersji oparta na psychologii</p>
                   </div>
                 </div>
               </div>

@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import websiteCms from '../data/blog/website-cms.json';
 import { Link } from 'wouter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 
 interface Article {
@@ -86,7 +88,9 @@ const BlogPage: React.FC = () => {
     : 'https://boostnow.pl/blog';
 
   return (
-    <div className="min-h-screen bg-[#0b1020]">
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      
       <Helmet>
         <title>{currentPage > 1 ? `${pageTitle} — strona ${currentPage}` : pageTitle}</title>
         <meta name="robots" content="index, follow" />
@@ -140,7 +144,7 @@ const BlogPage: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-[#1a2332] rounded-lg p-6 border border-gray-700 hover:border-[#c7ff4e] transition group"
+                className="bg-card rounded-xl p-6 border border-border hover:border-[#c7ff4e]/60 transition group flex flex-col"
               >
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-[#c7ff4e] font-bold text-sm">#{article.id}</span>
@@ -165,7 +169,7 @@ const BlogPage: React.FC = () => {
                     .map((anchor) => (
                     <span
                       key={anchor}
-                      className="text-xs bg-[#c7ff4e] bg-opacity-20 text-[#c7ff4e] px-2 py-1 rounded"
+                      className="text-xs bg-[#c7ff4e]/10 border border-[#c7ff4e]/20 text-[#c7ff4e] px-2 py-1 rounded"
                     >
                       {anchor}
                     </span>
@@ -173,8 +177,14 @@ const BlogPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-700">
-                  <span>{article.word_count || 0} słów</span>
-                  <span>~{Math.ceil((article.word_count || 0) / 200)} min czytania</span>
+                  {article.word_count ? (
+                    <>
+                      <span>{article.word_count} słów</span>
+                      <span>~{Math.ceil(article.word_count / 200)} min czytania</span>
+                    </>
+                  ) : (
+                    <span>{article.date || ''}</span>
+                  )}
                 </div>
 
                 <Link href={`/blog/${getArticleUrlPart(article)}`} className="block mt-4 text-[#c7ff4e] font-medium text-sm hover:underline">
@@ -222,6 +232,7 @@ const BlogPage: React.FC = () => {
           )}
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

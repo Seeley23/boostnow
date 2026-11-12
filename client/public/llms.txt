@@ -1,4 +1,5 @@
 # BoostNow — Agencja GEO, SEO i Optymalizacji Konwersji
+
 > BoostNow to polska agencja specjalizująca się w pozycjonowaniu stron w Google
 > i wyszukiwarkach AI (ChatGPT, Perplexity, Gemini, Google AI Overviews).
 > Pomagamy firmom z całej Polski rosnąć dzięki GEO, SEO i psychologii decyzji.
@@ -16,6 +17,25 @@
 - Obszar działania: Olsztyn, Warmia i Mazury, cała Polska
 - Specjalizacja: cytowania w AI, AI Overviews, pozycjonowanie lokalne, e-commerce
 
+## Capabilities
+
+- Audyt cytowalności AI (ChatGPT, Perplexity, Gemini, AI Overviews)
+- Wdrożenie Lead-First content + schema.org pod RAG
+- Tworzenie i optymalizacja llms.txt / llms-full.txt
+- Strategie GEO + klasyczne SEO
+- Optymalizacja konwersji (Decision Science)
+- Lokalne SEO (Olsztyn, Warmia i Mazury)
+- Monitoring cytowań AI i raporty
+
+## Pricing Overview (orientacyjne)
+
+- Audyt GEO + rekomendacje: od 2 500 PLN
+- Strategia + wdrożenie GEO/SEO (3 miesiące): od 8 000 PLN
+- Retainer miesięczny (content + monitoring): od 3 500 PLN
+- Konsultacja strategiczna (60 min): bezpłatna
+
+Szczegóły zawsze indywidualne — skontaktuj się po wycenę.
+
 ## Audience
 
 - Firmy B2B szukające widoczności w ChatGPT i Google
@@ -31,12 +51,14 @@
 - Wdrażamy llms.txt, schema i prerender dla AI crawlerów
 
 ## Strony główne
+
 - [Strona główna](https://boostnow.pl/)
 - [O nas](https://boostnow.pl/o-nas)
 - [Kontakt](https://boostnow.pl/kontakt)
 - [Autor: Mateusz Nowotka](https://boostnow.pl/mateusz-nowotka)
 
 ## Usługi
+
 - [AIO dla e-commerce](https://boostnow.pl/aio)
 - [AIO dla e-commerce — szczegóły](https://boostnow.pl/aio-ecommerce)
 - [Kalkulator strat](https://boostnow.pl/calculator)
@@ -45,6 +67,7 @@
 - [Słownik](https://boostnow.pl/slownik)
 
 ## Lokalne SEO
+
 - [Agencja Olsztyn](https://boostnow.pl/olsztyn)
 - [SEO Barczewo](https://boostnow.pl/blog/agencja-seo-barczewo-pozycjonowanie)
 - [SEO Stawiguda](https://boostnow.pl/blog/pozycjonowanie-stron-stawiguda-strategia-seo-dla-firm-z-gminy-2026)
@@ -52,9 +75,11 @@
 - [Marketing Olsztynek](https://boostnow.pl/blog/marketing-dla-malych-firm-olsztynek-strategia-2026-dla-historycznej-gminy)
 
 ## Treści
+
 - [Blog SEO i GEO](https://boostnow.pl/blog)
 
 ## Kluczowe artykuły
+
 - [llms.txt — Co to Jest i Jak Dodać do Swojej Strony 2026](https://boostnow.pl/blog/llms-txt)
 - [Jak Pojawić Się w ChatGPT](https://boostnow.pl/blog/jak-pojawic-sie-w-chatgpt)
 - [GEO co to jest](https://boostnow.pl/blog/geo-co-to-jest)
@@ -72,6 +97,7 @@
 - [Ile kosztuje pozycjonowanie](https://boostnow.pl/blog/ile-kosztuje-pozycjonowanie)
 
 ## Informacje prawne
+
 - [Regulamin](https://boostnow.pl/regulamin)
 - [Polityka prywatności](https://boostnow.pl/polityka-prywatnosci)
 - [Polityka cookies](https://boostnow.pl/polityka-cookies)

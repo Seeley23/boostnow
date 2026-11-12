@@ -6,6 +6,7 @@ import SectionRenderer from '../components/SectionRenderer';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import NotFound from './NotFound';
+import LeadFirst from '../components/LeadFirst';
 import websiteData from '../data/blog/website-cms.json';
 
 const LIME = "#c7ff4e";
@@ -224,9 +225,9 @@ const DynamicPage: React.FC = () => {
               </FadeIn>
 
               <FadeIn delay={0.2}>
-                <p className="text-xl md:text-2xl text-center max-w-2xl mx-auto mb-10 leading-relaxed" style={{ color: "rgba(247,248,250,0.65)" }}>
-                  {page?.sections?.find((s: any) => s.type === 'Hero')?.content || seoDesc}
-                </p>
+                <LeadFirst className="text-center max-w-2xl mx-auto">
+                  {page?.sections?.find((s: any) => s.type === 'Hero')?.content || seoDesc || 'BoostNow pomaga firmom dominować w Google i silnikach AI dzięki GEO, SEO i psychologii decyzji.'}
+                </LeadFirst>
               </FadeIn>
             </div>
           </section>
@@ -235,11 +236,45 @@ const DynamicPage: React.FC = () => {
             <section key={idx} className="py-24 border-t" style={{ borderColor: "rgba(247,248,250,0.05)" }}>
               <div className="container max-w-4xl mx-auto px-6">
                 <FadeIn>
-                  <h2 className="text-3xl md:text-5xl font-black mb-8 text-white leading-tight">{section.title}</h2>
-                  <div className="text-lg md:text-xl leading-relaxed" style={{ color: "rgba(247,248,250,0.7)" }}>{section.content}</div>
+                  <h2 className="text-3xl md:text-5xl font-black mb-6 text-white leading-tight">
+                    {section.title}
+                  </h2>
+                  <LeadFirst>
+                    {section.content || 'To kluczowy element strategii GEO i SEO, który zwiększa cytowalność Twojej marki w ChatGPT, Perplexity i Google AI Overviews.'}
+                  </LeadFirst>
                   {section.stats && (
                     <div className="mt-10 p-8 rounded-2xl border" style={{ background: "rgba(199,255,78,0.04)", borderColor: "rgba(199,255,78,0.18)" }}>
                       <span className="text-4xl font-black block mb-2" style={{ color: LIME }}>{section.stats}</span>
+                    </div>
+                  )}
+                  {(slug === 'olsztyn' || slug?.includes('seo') || slug === 'aio') && idx === 0 && (
+                    <div className="mt-8 overflow-x-auto">
+                      <table className="w-full text-left text-sm border-collapse">
+                        <thead>
+                          <tr className="border-b border-white/20">
+                            <th className="py-3 pr-4 font-semibold text-white">Element</th>
+                            <th className="py-3 pr-4 font-semibold text-white">Co dostajesz</th>
+                            <th className="py-3 font-semibold text-white">Czas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-white/10">
+                            <td className="py-3 pr-4">Audyt cytowalności AI</td>
+                            <td className="py-3 pr-4">Raport z lukami i rekomendacjami</td>
+                            <td className="py-3">7 dni</td>
+                          </tr>
+                          <tr className="border-b border-white/10">
+                            <td className="py-3 pr-4">Lead-First + schema</td>
+                            <td className="py-3 pr-4">Treści zoptymalizowane pod RAG</td>
+                            <td className="py-3">14–21 dni</td>
+                          </tr>
+                          <tr>
+                            <td className="py-3 pr-4">llms.txt + monitoring</td>
+                            <td className="py-3 pr-4">Plik kontekstowy + śledzenie cytowań</td>
+                            <td className="py-3">3 dni</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   )}
                 </FadeIn>
@@ -269,12 +304,13 @@ const DynamicPage: React.FC = () => {
                   <h2 className="text-3xl md:text-5xl font-black mb-6 text-white">
                     {page?.sections?.find((s: any) => s.type === 'Contact')?.title || 'Zacznijmy współpracę'}
                   </h2>
-                  <p className="text-lg mb-10" style={{ color: "rgba(247,248,250,0.6)" }}>
-                    {page?.sections?.find((s: any) => s.type === 'Contact')?.content || 'Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony.'}
-                  </p>
+                  <LeadFirst>
+                    {page?.sections?.find((s: any) => s.type === 'Contact')?.content || 'Skontaktuj się z nami, aby otrzymać darmowy audyt GEO swojej strony i plan cytowań w AI.'}
+                  </LeadFirst>
                   <button
                     className="py-4 px-8 rounded-xl font-black text-base tracking-wide transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                     style={{ background: LIME, color: NAVY }}
+                    data-mcp-action="request-quote"
                   >
                     {page?.sections?.find((s: any) => s.type === 'Contact')?.ctaLabel || 'Darmowy Audyt →'}
                   </button>
