@@ -183,7 +183,7 @@ export default function ContactSection({ title, description }: ContactSectionPro
                   </p>
                 </div>
               ) : (
-                <form ref={formRef} onSubmit={handleSubmit} aria-labelledby="contact-form-heading" className="space-y-4 sm:space-y-6">
+                <form ref={formRef} onSubmit={handleSubmit} aria-labelledby="contact-form-heading" className="space-y-4 sm:space-y-6" data-mcp-action="request-quote" data-mcp-service="geo-audit">
                   <p className="text-xs text-muted-foreground mb-4">Pola oznaczone <span aria-hidden="true">*</span> są wymagane.</p>
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -197,6 +197,7 @@ export default function ContactSection({ title, description }: ContactSectionPro
                       autoComplete="name"
                       enterKeyHint="next"
                       data-error="name-error"
+                      data-mcp-input="name"
                       className="w-full px-3 py-2.5 sm:px-4 sm:py-3 min-h-12 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 user-invalid:border-destructive transition-all text-base peer"
                       placeholder="Jan Kowalski"
                     />
@@ -221,6 +222,7 @@ export default function ContactSection({ title, description }: ContactSectionPro
                       spellCheck={false}
                       enterKeyHint="next"
                       data-error="email-error"
+                      data-mcp-input="email"
                       className="w-full px-3 py-2.5 sm:px-4 sm:py-3 min-h-12 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 user-invalid:border-destructive transition-all text-base peer"
                       placeholder="jan@firma.pl"
                     />
@@ -241,6 +243,7 @@ export default function ContactSection({ title, description }: ContactSectionPro
                       autoComplete="organization"
                       enterKeyHint="next"
                       aria-describedby="company-help"
+                      data-mcp-input="company"
                       className="w-full px-3 py-2.5 sm:px-4 sm:py-3 min-h-12 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 user-invalid:border-destructive transition-all text-base peer"
                       placeholder="Nazwa firmy"
                     />
@@ -259,6 +262,7 @@ export default function ContactSection({ title, description }: ContactSectionPro
                       minLength={10}
                       aria-describedby="message-help"
                       data-error="message-error"
+                      data-mcp-input="message"
                       className="w-full px-3 py-2.5 sm:px-4 sm:py-3 min-h-12 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary focus:ring-offset-2 user-invalid:border-destructive transition-all resize-y text-base peer"
                       placeholder="Opisz swoje wyzwanie lub cel..."
                     />
@@ -273,6 +277,9 @@ export default function ContactSection({ title, description }: ContactSectionPro
                     type="submit"
                     disabled={isSubmitting}
                     aria-busy={isSubmitting}
+                    data-mcp-action="request-quote"
+                    data-mcp-input="contact-form"
+                    data-mcp-service="geo-audit"
                     className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-heading font-semibold text-base sm:text-lg rounded-lg transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 glow-lime hover:glow-lime-strong disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 min-h-12"
                   >
                     {isSubmitting ? (
