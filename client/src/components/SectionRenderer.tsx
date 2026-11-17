@@ -63,7 +63,7 @@ const SectionRenderer: React.FC<SectionProps> = ({ section }) => {
   };
 
   return (
-    <Tag 
+    <Tag
       className={geoCitability ? "geo-citable-block" : ""} 
       data-geo-cite={geoCitability ? "true" : undefined}
       data-stats={stats}
