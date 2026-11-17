@@ -118,9 +118,9 @@ export default function ResultsSection({ title, description }: ResultsSectionPro
 
                     {/* Problem */}
                     <div className="mb-6">
-                      <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
+                      <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
                         Wyzwanie
-                      </h4>
+                      </h3>
                       <p className="text-foreground leading-relaxed">
                         {study.problem}
                       </p>
@@ -128,9 +128,9 @@ export default function ResultsSection({ title, description }: ResultsSectionPro
 
                     {/* Strategy */}
                     <div>
-                      <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
+                      <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
                         Strategia BoostNow
-                      </h4>
+                      </h3>
                       <p className="text-muted-foreground leading-relaxed">
                         {study.strategy}
                       </p>
@@ -139,9 +139,9 @@ export default function ResultsSection({ title, description }: ResultsSectionPro
 
                   {/* Right side - Results */}
                   <div className="lg:col-span-5 bg-secondary/30 p-6 lg:p-8 flex flex-col justify-center">
-                    <h4 className="text-xs font-medium text-primary uppercase tracking-wider mb-6">
+                    <h3 className="text-xs font-medium text-primary uppercase tracking-wider mb-6">
                       Wyniki
-                    </h4>
+                    </h3>
                     <div className="space-y-4">
                       {study.results.map((result, idx) => (
                         <div key={idx} className="flex items-center justify-between">

@@ -1,4 +1,3 @@
-import { useAuth } from "@/_core/hooks/useAuth";
 import websiteCms from '../data/blog/website-cms.json';
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
@@ -15,7 +14,6 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
 
   // Find the home page data from the synced CMS data
   const homePage = websiteCms.pages.find(p => p.slug === 'home');
