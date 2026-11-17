@@ -68,3 +68,50 @@ Odpowiedź na „pozycjonowanie w ai” zawiera twierdzenie, że AI „w ok. 60�
 3. **Lokalizacja:** zdecydować, czy BoostNow celuje w Olsztyn (wtedy potrzebny adres i wizytówka Google w Olsztynie) czy w Dobre Miasto / Warmię.
 4. **YouTube:** jeden film na pytanie „jak sprawić, żeby ChatGPT polecał moją firmę”.
 5. **Powtórzyć pomiar** po wdrożeniu zmian na stronie (po przepięciu DNS na Smarthost), tymi samymi 14 zapytaniami.
+
+---
+
+# Badanie 2: odpowiedź asystenta AI na prompt badawczy (17.11.2026)
+
+Źródło: raport wklejony przez właściciela, wygenerowany przez asystenta AI z wyszukiwaniem (prompt z `PROMPTY-AI-RESEARCH.md`, wersja zbiorcza). Format cytowań wskazuje na ChatGPT, ale narzędzie nie zostało podane. Jedna odpowiedź, jeden dzień.
+
+## Gdzie BoostNow się pojawił
+
+| Scenariusz | BoostNow | Kto wygrał i dlaczego |
+|---|---|---|
+| A. sklep meblowy | nie (ocena w sekcji o marce: „tak, do rozmowy”) | Semtactic, Matsu, neseo, PROPSEO: każdy ma **nazwane case study sklepu meblowego** |
+| B. software house B2B | nie | Agencja SEO AI (Up&More), Whites (case Netguru) |
+| C. firma z Olsztyna | **tak, #2 z 4** | #1 Sebastian Baryś: **osobna podstrona „Pozycjonowanie w AI Olsztyn”** |
+| D. cena | nie | eMedia, Afterweb, Nexivio, Nowatorscy: **publiczne cenniki z kwotami** |
+| E. spadek ruchu | nie | Whites, Semtactic, Matsu: case studies migracji i odbudowy ruchu |
+
+Afterweb pojawił się w 4 z 5 scenariuszy, Agencja SEO AI (Up&More) w 3. To realna konkurencja BoostNow w odpowiedziach AI, inna niż w Google (tam: widoczni.com, Sembility).
+
+## Co AI wyczytało o BoostNow i co mu przeszkadzało
+
+- Cytuje liczby ze strony głównej jako deklaracje: +150% ROAS, 90 dni, 7+ lat, +42,5% konwersji, case „sklep meblowy” (1,2% → 3,1%, +340% ROI). Zaznacza: „nie znalazłem niezależnego potwierdzenia wyników ani informacji umożliwiających identyfikację klienta”.
+- Znalazło w GoWork datę rozpoczęcia działalności: 5 stycznia 2024. Strona mówi „7+ lat doświadczenia”, strona autora „ponad 5 lat”. AI zestawia takie dane; sprzeczność obniża wiarygodność.
+- Liczba „+42,5% Konwersja” pochodzi z dekoracyjnej karty w hero (`HeroSection.tsx`), a AI traktuje ją jako deklarację wyniku.
+- Brakowało mu: publicznego cennika, case study GEO z nazwą klienta i pomiarem przed/po, raportu widoczności w AI, referencji, opisu metodologii.
+- Nie znalazło case studies Caruma, SU-2 ani RudStudio, które są tylko w artykułach blogowych.
+
+## Zapytania, które asystent wysłał do wyszukiwarki
+
+Wzorce: „case study” + branża, „cennik 2026”, nazwa miasta + „GEO” / „widoczność ChatGPT”. Przykłady dosłowne:
+- `Olsztyn agencja SEO GEO widoczność ChatGPT lokalna`
+- `pozycjonowanie AI Olsztyn widoczność w ChatGPT`
+- `ile kosztuje pozycjonowanie AI GEO w Polsce cennik 2026`
+- `agencja SEO e-commerce case study sklep internetowy meble SEO agencja`
+- `agencja SEO B2B software house case study leadów SEO`
+
+Wniosek: strony z „case study” i „cennik 2026” w tytule oraz strony „pozycjonowanie w AI + miasto” są tym, czego AI szuka, kiedy dobiera agencje.
+
+## 30 fraz „języka klienta”: weryfikacja w GSC
+
+Porównane z 439 zapytaniami z GSC (16 miesięcy). Pokrycie znalazły tylko 4:
+- „ile kosztuje pozycjonowanie strony w google miesięcznie” ≈ „ile miesięcznie kosztuje pozycjonowanie” (13 wyśw., poz. 32,1)
+- „czym się różni GEO od SEO” ≈ „czym różni się geo od seo” (4 wyśw., poz. 13,5)
+- „szukam specjalisty od SEO i GEO” ≈ długie zapytanie o agencję GEO/AIO (1 wyśw., poz. 2)
+- „szukam firmy która poprawi widoczność mojej firmy w AI” ≈ „szukam agencji seo ai, która zwiększy widoczność mojej firmy w modelach językowych” (1 wyśw., poz. 6)
+
+Pozostałe 26 to niezweryfikowane pomysły. Frazy problemowe („ruch spadł o połowę”, „konkurencja jest w chatgpt a ja nie”) nadają się na nagłówki i FAQ, ale nie wiadomo, czy ktoś je wpisuje.
