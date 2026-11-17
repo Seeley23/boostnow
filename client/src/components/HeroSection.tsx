@@ -66,21 +66,21 @@ export default function HeroSection({ title, subtitle }: HeroProps) {
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">+150%</span>
+                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">151 tys.</span>
                 </div>
-                <span className="text-xs sm:text-sm text-muted-foreground">Średni wzrost ROAS</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Wyświetleń w Google w 90 dni (Caruma)</span>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <Target className="w-4 h-4 text-primary" />
-                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">90 dni</span>
+                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">4</span>
                 </div>
-                <span className="text-xs sm:text-sm text-muted-foreground">Do pierwszych wyników</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Cytowania w jednym AI Overview (SU-2)</span>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <Zap className="w-4 h-4 text-primary" />
-                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">7+ lat</span>
+                  <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-foreground">3 lata</span>
                 </div>
                 <span className="text-xs sm:text-sm text-muted-foreground">Doświadczenia</span>
               </div>
@@ -106,8 +106,8 @@ export default function HeroSection({ title, subtitle }: HeroProps) {
                     <TrendingUp className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground">Konwersja</p>
-                    <p className="font-heading font-bold text-foreground">+42.5%</p>
+                    <p className="text-xs text-muted-foreground">Sesje z Gemini i ChatGPT</p>
+                    <p className="font-heading font-bold text-foreground">91</p>
                   </div>
                 </div>
               </motion.div>

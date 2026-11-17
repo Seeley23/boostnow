@@ -44,7 +44,7 @@ export default function AuthorPage() {
         <title>Mateusz Nowotka – Ekspert GEO & SEO | BoostNow</title>
         <meta
           name="description"
-          content="Mateusz Nowotka – założyciel BoostNow, ekspert w dziedzinie Generative Engine Optimization (GEO), SEO i AI Marketing. Ponad 5 lat doświadczenia w pozycjonowaniu firm w Polsce."
+          content="Mateusz Nowotka – założyciel BoostNow, ekspert w dziedzinie Generative Engine Optimization (GEO), SEO i AI Marketing. 3 lata doświadczenia w pozycjonowaniu firm w Polsce."
         />
         <link rel="canonical" href="https://boostnow.pl/mateusz-nowotka" />
         <script type="application/ld+json">{JSON.stringify(personSchema)}</script>

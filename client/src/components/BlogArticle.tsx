@@ -338,7 +338,7 @@ const BlogArticle: React.FC = () => {
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#c7ff4e] to-[#00c88a] flex-shrink-0" />
                 <div>
                   <h4 className="text-lg font-bold text-white font-playfair">Mateusz Nowotka</h4>
-                  <p className="text-[#9aa0b3] text-sm mb-3">Founder & CEO BoostNow | Decision Science Specialist | 4 lata doświadczenia w marketingu</p>
+                  <p className="text-[#9aa0b3] text-sm mb-3">Founder & CEO BoostNow | Decision Science Specialist | 3 lata doświadczenia w SEO i GEO</p>
                   <a href="https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/" target="_blank" rel="noopener noreferrer" className="text-[#c7ff4e] hover:text-white transition-colors text-sm">LinkedIn →</a>
                 </div>
               </div>
