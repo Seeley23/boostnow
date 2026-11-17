@@ -45,13 +45,13 @@ export default function RecentArticlesSection() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white text-center">
-            Architekci Decyzji dzielą się <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">wiedzą</span>
+            Blog o SEO, GEO i <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">pozycjonowaniu w AI</span>
           </h2>
           <p className="text-xl text-gray-300 mb-4">
-            Nowe artykuły co tydzień o psychologii decyzji, neuromarketing'u i Decision Science
+            Poradniki: jak pojawić się w ChatGPT, w Google AI Overviews i w wynikach Google
           </p>
           <p className="text-lg text-lime-400 font-semibold">
-            20+ artykułów dla e-commerce, marek premium, B2B i usług
+            Ponad 50 artykułów dla e-commerce, B2B i firm usługowych
           </p>
         </motion.div>
 

@@ -57,13 +57,13 @@ export default function ComparisonSection() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Czym się <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">różnimy?</span>
+            Agencja SEO AI czy <span className="bg-gradient-to-r from-lime-400 to-lime-300 bg-clip-text text-transparent">tradycyjna agencja?</span>
           </h2>
           <p className="text-xl text-gray-300">
             BoostNow vs. Tradycyjne agencje marketingowe
           </p>
           <p className="text-lg text-lime-400 font-semibold mt-4">
-            Nie robimy marketing. Robimy transformację opartą na psychologii.
+            Łączymy SEO, GEO i optymalizację konwersji w jednej strategii.
           </p>
         </motion.div>
 
