@@ -21,6 +21,12 @@ export default function Home() {
   const homePage = websiteCms.pages.find(p => p.slug === 'home');
   
   const seo = (homePage?.seo || {}) as any;
+  const metaKeywords = Array.from(
+    new Set([
+      seo.primaryKeyword,
+      ...String(seo.semanticKeywords || "").split(","),
+    ].map((keyword: string) => keyword.trim()).filter(Boolean)),
+  ).slice(0, 8).join(", ");
 
   // Helper to find a section by type
   const getSection = (type: string) => homePage?.sections?.find(s => s.type === type);
@@ -31,7 +37,7 @@ export default function Home() {
         <title>{seo.title || 'BoostNow'}</title>
         <meta name="robots" content="index, follow" />
         {seo.description && <meta name="description" content={seo.description} />}
-        {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
+        {metaKeywords && <meta name="keywords" content={metaKeywords} />}
         {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
         {(homePage as any)?.jsonLd && (
           <script type="application/ld+json">
