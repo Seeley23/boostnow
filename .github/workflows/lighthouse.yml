@@ -26,6 +26,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile || pnpm install
 
+      # Same self-hosted fonts as the Smarthost deploy; without them every page
+      # logs 404s for /fonts/*.woff2 and fails errors-in-console.
+      - name: Download fonts
+        run: node scripts/download-fonts.cjs
+
       - name: Build static site (includes prerender)
         run: pnpm build
 

@@ -2,7 +2,7 @@
   "ci": {
     "collect": {
       "numberOfRuns": 2,
-      "startServerCommand": "npx serve -s dist/public -l 4173",
+      "startServerCommand": "npx serve dist/public -l 4173 --config ../../serve.lighthouse.json",
       "startServerReadyPattern": "Accepting connections",
       "url": [
         "http://localhost:4173/",

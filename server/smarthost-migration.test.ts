@@ -14,7 +14,10 @@ describe("Smarthost static deployment contract", () => {
     expect(fs.existsSync(htaccessPath)).toBe(true);
 
     const htaccess = readProjectFile("client/public/.htaccess");
-    expect(htaccess).toContain("RewriteRule . /index.html [L]");
+    // Prerendered pages (<route>/index.html) first, then the bare SPA shell.
+    // index.html is the prerendered homepage, so it must not be the fallback.
+    expect(htaccess).toContain("RewriteRule ^(.+?)/?$ /$1/index.html [L]");
+    expect(htaccess).toContain("RewriteRule ^ /spa.html [L]");
     expect(htaccess).not.toContain("manus");
   });
 

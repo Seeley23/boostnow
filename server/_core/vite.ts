@@ -54,11 +54,32 @@ const BOT_RE =
 
 let indexHtmlCache: string | null = null;
 
+// index.html is the prerendered homepage (scripts/prerender-site.ts); spa.html
+// is the bare shell for every other route. Older builds only have index.html.
+function shellFile(distPath: string): string {
+  const spa = path.resolve(distPath, "spa.html");
+  return fs.existsSync(spa) ? spa : path.resolve(distPath, "index.html");
+}
+
 function getIndexHtml(distPath: string): string {
   if (!indexHtmlCache) {
-    indexHtmlCache = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
+    indexHtmlCache = fs.readFileSync(shellFile(distPath), "utf-8");
   }
   return indexHtmlCache;
+}
+
+/** dist/public/<route>/index.html written by the prerender, if any. */
+function prerenderedFile(distPath: string, reqPath: string): string | null {
+  let decoded: string;
+  try {
+    decoded = decodeURIComponent(reqPath);
+  } catch {
+    return null; // malformed %-escape
+  }
+  const clean = path.posix.normalize(decoded).replace(/\/+$/, "");
+  if (!clean || clean.includes("..")) return null;
+  const file = path.resolve(distPath, "." + clean, "index.html");
+  return file.startsWith(distPath) && fs.existsSync(file) ? file : null;
 }
 
 function injectPageMeta(html: string, reqPath: string): string {
@@ -103,10 +124,17 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  // redirect:false — no 301 from /blog/x to /blog/x/ for prerendered folders.
+  app.use(express.static(distPath, { redirect: false }));
 
   // Serve index.html for all routes; inject per-page meta for known bots
   app.use("*", (req, res) => {
+    // Prerendered page for this route: same HTML for bots and browsers.
+    const pre = prerenderedFile(distPath, (req.originalUrl || "/").split("?")[0]);
+    if (pre) {
+      res.sendFile(pre);
+      return;
+    }
     const ua = (req.headers["user-agent"] as string) || "";
     if (BOT_RE.test(ua)) {
       // In an app.use("*") handler req.path is always "/"; use originalUrl
@@ -126,7 +154,7 @@ export function serveStatic(app: Express) {
       const html = injectPageMeta(base, reqPath);
       res.status(200).type("html").send(html);
     } else {
-      res.sendFile(path.resolve(distPath, "index.html"));
+      res.sendFile(shellFile(distPath));
     }
   });
 }

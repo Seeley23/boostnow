@@ -69,8 +69,10 @@ jobs:
       - name: Build static site
         run: pnpm run build:static
 
-      - name: Prerender key articles for AI crawlers
-        run: node scripts/prerender-articles.cjs
+      - name: Prerender every sitemap URL for crawlers
+        run: |
+          node scripts/build-prerender-ssr.mjs
+          npx tsx scripts/prerender-site.ts
 
       - name: Validate build artifact
         run: |
@@ -78,6 +80,8 @@ jobs:
           test -f dist/public/robots.txt
           test -f dist/public/sitemap.xml
           test -f dist/public/.htaccess
+          test -f dist/public/spa.html
+          test -f dist/public/blog/index.html
           test -f dist/public/fonts/inter-400.woff2
           test -s dist/public/index.html
           test -s dist/public/sitemap.xml

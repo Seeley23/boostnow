@@ -437,7 +437,7 @@ export default function Glossary() {
           <meta name="robots" content="index, follow" />
           {seo.description && <meta name="description" content={seo.description} />}
           {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
-          {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
+          <link rel="canonical" href={seo.canonicalUrl || "https://boostnow.pl/glossary"} />
           {cmsPage?.jsonLd && (
             <script type="application/ld+json">{JSON.stringify(cmsPage.jsonLd)}</script>
           )}

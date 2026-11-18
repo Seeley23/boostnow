@@ -340,7 +340,7 @@ export default function AIOPage() {
           : <meta name="description" content="Pozycjonowanie stron w AI — ChatGPT, Perplexity, Gemini. BoostNow wdraża AIO i sprawia, że Twoja firma pojawia się w odpowiedziach AI." />
         }
         {seo.primaryKeyword && <meta name="keywords" content={seo.primaryKeyword} />}
-        {seo.canonicalUrl && <link rel="canonical" href={seo.canonicalUrl} />}
+        <link rel="canonical" href={seo.canonicalUrl || "https://boostnow.pl/aio"} />
         {cmsPage?.jsonLd && (
           <script type="application/ld+json">{JSON.stringify(cmsPage.jsonLd)}</script>
         )}
