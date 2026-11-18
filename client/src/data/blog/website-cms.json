@@ -8,14 +8,14 @@
         "description": "Pojęcia AI wyjaśnione prosto.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Słownik AI | BoostNow",
         "description": "Pojęcia AI wyjaśnione prosto.",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -68,14 +68,14 @@
         "description": "Sprawdź ile tracisz bez automatyzacji.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Kalkulator Strat | BoostNow",
         "description": "Sprawdź ile tracisz bez automatyzacji.",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -128,14 +128,14 @@
         "description": "Skontaktuj się z nami.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Kontakt | BoostNow",
         "description": "Skontaktuj się z nami.",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -195,7 +195,7 @@
           "name": "Mateusz Nowotka",
           "bio": "Founder & CEO BoostNow | Specjalista SEO, GEO i AEO | 4 lata doświadczenia w marketingu cyfrowym"
         },
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
@@ -382,12 +382,12 @@
       "seo": {
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -411,14 +411,14 @@
         "description": "Automatyzacja i AI dla Twojego sklepu.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "AIO dla e-commerce | BoostNow",
         "description": "Automatyzacja i AI dla Twojego sklepu.",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -467,12 +467,12 @@
       "seo": {
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -524,14 +524,14 @@
         "description": "Wiedza o AI i automatyzacji.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Blog | BoostNow",
         "description": "Wiedza o AI i automatyzacji.",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
@@ -580,9 +580,9 @@
       "slug": "home",
       "name": "Strona Główna",
       "seo": {
-        "title": "BoostNow - Elite SEO & GEO Agency",
-        "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
-        "primaryKeyword": "SEO Agency",
+        "title": "Agencja SEO AI: pozycjonowanie w Google i ChatGPT | BoostNow",
+        "description": "Agencja SEO AI BoostNow: pozycjonowanie w Google, ChatGPT i Google AI Overviews. Case studies: Caruma 151 tys. wyświetleń w 90 dni. Bezpłatna analiza.",
+        "primaryKeyword": "agencja SEO AI",
         "semanticKeywords": "GEO, AI Search Optimization, ChatGPT SEO, Perplexity Optimization",
         "aiSummary": "BoostNow to wiodąca agencja specjalizująca się w Generative Engine Optimization (GEO).",
         "canonicalUrl": "https://boostnow.pl",
@@ -591,14 +591,14 @@
           "name": "Mateusz",
           "bio": "Ekspert SEO/GEO z wieloletnim doświadczeniem."
         },
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "headline": "BoostNow - Elite SEO & GEO Agency",
-        "description": "Specjaliści od widoczności w wyszukiwarkach AI i tradycyjnych.",
-        "dateModified": "2026-11-17",
+        "headline": "Agencja SEO AI: pozycjonowanie w Google i ChatGPT | BoostNow",
+        "description": "Agencja SEO AI BoostNow: pozycjonowanie w Google, ChatGPT i Google AI Overviews. Case studies: Caruma 151 tys. wyświetleń w 90 dni. Bezpłatna analiza.",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "Mateusz"
@@ -616,13 +616,13 @@
       "sections": [
         {
           "type": "Hero",
-          "title": "Witamy w Erze AI",
-          "content": "Pomagamy markom zdominować wyniki w ChatGPT, Perplexity i Google AI Overviews.",
+          "title": "Agencja SEO AI: Twoja firma polecana przez ChatGPT",
+          "content": "Pozycjonujemy firmy w Google i w odpowiedziach AI: ChatGPT, Perplexity, Gemini i Google AI Overviews. SEO i GEO w jednej strategii.",
           "extraData": null,
           "htmlTag": "H1",
           "geoCitability": true,
           "imageAlt": "BoostNow Hero Image",
-          "stats": "Wzrost widoczności w AI o średnio 115%."
+          "stats": "151 tys. wyświetleń w Google w 90 dni (Caruma), 4 cytowania w jednym AI Overview (SU-2), 3 lata doświadczenia"
         },
         {
           "type": "Hero",
@@ -632,7 +632,7 @@
           "htmlTag": "H1",
           "geoCitability": true,
           "imageAlt": "Agencja Neuromarketingowa - CRO & Decision Science",
-          "stats": "+150% ROAS, 90 dni do wyników, 7+ lat doświadczenia"
+          "stats": "151 tys. wyświetleń w Google w 90 dni (Caruma), 4 cytowania w jednym AI Overview (SU-2), 3 lata doświadczenia"
         },
         {
           "type": "Solution",
@@ -646,7 +646,7 @@
         },
         {
           "type": "Problem",
-          "title": "Problem: Tradycyjne SEO to za mało",
+          "title": "3 błędy, przez które klienci wybierają konkurencję",
           "content": "W 2026 roku 50% ruchu pochodzi z odpowiedzi AI. Jeśli Cię tam nie ma, nie istniejesz.",
           "extraData": null,
           "htmlTag": "H2",
@@ -784,14 +784,14 @@
         "description": "Poznaj zespół BoostNow i naszą misję.",
         "schemaType": "Article",
         "author": {},
-        "lastUpdated": "2026-11-17"
+        "lastUpdated": "2026-11-18"
       },
       "jsonLd": {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "O nas | BoostNow",
         "description": "Poznaj zespół BoostNow i naszą misję.",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-18",
         "author": {
           "@type": "Person",
           "name": "BoostNow Team"
