@@ -128,7 +128,7 @@ function buildMetaMap(): Record<string, PageMeta> {
     "/mateusz-nowotka": {
       title: "Mateusz Nowotka – Ekspert GEO & SEO | BoostNow",
       description:
-        "Mateusz Nowotka – założyciel BoostNow, ekspert Generative Engine Optimization (GEO), SEO i AI Marketing. Ponad 5 lat doświadczenia w pozycjonowaniu firm w Polsce.",
+        "Mateusz Nowotka – założyciel BoostNow, ekspert Generative Engine Optimization (GEO), SEO i AI Marketing. 3 lata doświadczenia w pozycjonowaniu firm w Polsce.",
       canonical: BASE + "/mateusz-nowotka",
     },
     "/glossary": {

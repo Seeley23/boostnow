@@ -26,14 +26,20 @@ const faqItems: FAQItem[] = [
   {
     id: "services-3",
     category: "services",
-    question: "Co to jest GEO Positioning?",
-    answer: "GEO Positioning to optymalizacja Twojej marki dla AI search engines (ChatGPT, Perplexity, Gemini). Tworzymy treści, które AI rozumie i rekomenduje. Budujemy Semantic Anchors (unikalne terminy marki), strukturyzujemy dane, optymalizujemy meta tags. Cel: pojawienie się Twojej marki w odpowiedziach AI na pytania potencjalnych klientów.",
+    question: "Co to jest pozycjonowanie w AI (GEO)?",
+    answer: "Pozycjonowanie w AI, czyli GEO (Generative Engine Optimization), to praca nad tym, żeby ChatGPT, Perplexity, Gemini i Google AI Overviews cytowały Twoją stronę i polecały Twoją firmę w odpowiedziach. Jako agencja SEO AI sprawdzamy, czy roboty AI mają dostęp do strony, piszemy treści z bezpośrednimi odpowiedziami na pytania klientów, wdrażamy dane strukturalne i budujemy wzmianki o marce w zewnętrznych serwisach.",
   },
   {
     id: "services-4",
     category: "services",
-    question: "Czym się różni SEO Positioning od tradycyjnego SEO?",
-    answer: "SEO Positioning to strategia oparta na Decision Science, a nie tylko na keywords. Nie tylko rankujemy w Google - budujemy autorytet i zaufanie. Tworzymy treści, które odpowiadają na rzeczywiste pytania klientów, nie tylko na słowa kluczowe. Rezultat: lepsze rankingi + wyższa konwersja z organic traffic.",
+    question: "Czym różni się GEO od SEO?",
+    answer: "SEO walczy o pozycję strony w wynikach Google, a GEO o to, żeby asystent AI wymienił Twoją firmę w gotowej odpowiedzi. Jedno nie zastępuje drugiego: odpowiedzi AI często opierają się na stronach, które są wysoko w Google. Dlatego prowadzimy SEO i GEO razem, na przykład dla Caruma: 151 tys. wyświetleń w Google w 90 dni i 50 wizyt z Gemini i Perplexity.",
+  },
+  {
+    id: "services-6",
+    category: "services",
+    question: "Jak sprawić, żeby ChatGPT polecał moją firmę?",
+    answer: "Nie da się tego zagwarantować, ale da się zwiększyć szansę. Potrzebne są: strona dostępna dla robotów AI, treści, które odpowiadają wprost na pytania klientów, case studies z nazwami klientów i liczbami, spójne dane firmy w całym internecie oraz wzmianki w rankingach i serwisach branżowych. Od tego zaczynamy bezpłatną analizę widoczności w AI.",
   },
   {
     id: "services-5",

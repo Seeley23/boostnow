@@ -124,6 +124,10 @@ function main() {
       /<meta name="description" content="[^"]*" \/>/,
       `<meta name="description" content="${escapeHtml(lead)}" />`
     );
+    // Each article gets its own canonical (drop any the template carries).
+    page = page
+      .replace(/<link rel="canonical"[^>]*>\s*/g, '')
+      .replace('</head>', `  <link rel="canonical" href="https://boostnow.pl/blog/${slug}" />\n  </head>`);
 
     const outDir = path.join(OUTPUT_DIR, slug);
     fs.mkdirSync(outDir, { recursive: true });

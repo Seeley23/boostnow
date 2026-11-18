@@ -13,40 +13,47 @@ import { TrendingUp, Users, ShoppingCart, ArrowUpRight } from "lucide-react";
 const caseStudies = [
   {
     id: 1,
-    industry: "E-commerce",
-    icon: ShoppingCart,
-    problem: "Niski współczynnik konwersji mimo wysokiego ruchu na stronie. Klienci porzucali koszyki.",
-    strategy: "Wdrożenie psychologii pilności i awersji do straty. Redesign ścieżki zakupowej z elementami social proof.",
+    client: "Caruma",
+    industry: "B2B · cyfrowe paszporty produktów",
+    icon: Users,
+    problem: "Nowa strona B2B bez żadnego ruchu organicznego.",
+    strategy: "SEO i GEO od zera: treści odpowiadające na pytania o regulacje UE, struktura pod cytowania w odpowiedziach AI.",
     results: [
-      { label: "Wzrost konwersji", value: "+156%" },
-      { label: "Redukcja porzuceń", value: "-42%" },
-      { label: "ROI kampanii", value: "340%" },
+      { label: "Wyświetlenia w Google w 90 dni", value: "151 tys." },
+      { label: "Kluczowe zdarzenia w 90 dni", value: "910" },
+      { label: "Wizyty z Gemini i Perplexity", value: "50" },
     ],
   },
   {
     id: 2,
-    industry: "SaaS B2B",
-    icon: Users,
-    problem: "Długi cykl sprzedaży i niska jakość leadów. Trudność w dotarciu do decydentów.",
-    strategy: "Architektura treści oparta na Decision Science. Targetowanie psychograficzne + lead magnet z kalkulatorem ROI.",
+    client: "SU-2 Kiteboards",
+    industry: "E-commerce · sprzęt kitesurfingowy",
+    icon: ShoppingCart,
+    problem: "Sklep potrzebował widoczności na frazy zakupowe w globalnym Google.",
+    strategy: "SEO pod frazy zakupowe i pod cytowania w Google AI Overviews.",
     results: [
-      { label: "Jakość leadów", value: "+89%" },
-      { label: "Skrócenie cyklu", value: "-35%" },
-      { label: "Demo requests", value: "+210%" },
+      { label: "Frazy zakupowe na 1. miejscu", value: "3" },
+      { label: "Pozycja na „split kiteboard”", value: "#2" },
+      { label: "Cytowania w jednym AI Overview", value: "4" },
     ],
   },
   {
     id: 3,
-    industry: "Usługi Premium",
+    client: "RUD Studio",
+    industry: "Moda · raportowanie CSRD",
     icon: TrendingUp,
-    problem: "Brak rozpoznawalności marki i trudność w komunikowaniu wartości premium.",
-    strategy: "Budowanie autorytetu przez content marketing + strategia społeczności. Pozycjonowanie jako ekspert branżowy.",
+    problem: "Treści strony nie pojawiały się w odpowiedziach AI w Google.",
+    strategy: "Aktualizacja treści pod pytania, na które odpowiada Google AI Overview.",
     results: [
-      { label: "Świadomość marki", value: "+280%" },
-      { label: "Wartość klienta", value: "+65%" },
-      { label: "Polecenia", value: "+120%" },
+      { label: "Frazy z cytowaniem w AI Overview", value: "3" },
     ],
   },
+];
+
+const builtSites = [
+  { name: "annaubiuro.pl", url: "https://www.annaubiuro.pl/" },
+  { name: "kwiaciarniarose.pl", url: "https://kwiaciarniarose.pl/" },
+  { name: "walcz-z-rakiem.pl", url: "https://walcz-z-rakiem.pl/" },
 ];
 
 interface ResultsSectionProps {
@@ -79,8 +86,8 @@ export default function ResultsSection({ title, description }: ResultsSectionPro
             <span className="text-gradient-lime">dowody</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Nie obiecujemy wzrostu bez poparcia danymi. Oto przykłady transformacji, 
-            które przeprowadziliśmy dla naszych partnerów.
+            Wyniki naszych klientów z Google Search Console i Google Analytics,
+            z nazwami firm.
           </p>
         </motion.div>
 
@@ -103,14 +110,17 @@ export default function ResultsSection({ title, description }: ResultsSectionPro
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                         <study.icon className="w-5 h-5 text-primary" />
                       </div>
-                      <span className="text-sm font-medium text-primary">{study.industry}</span>
+                      <div>
+                        <p className="font-heading font-semibold text-foreground">{study.client}</p>
+                        <p className="text-sm text-primary">{study.industry}</p>
+                      </div>
                     </div>
 
                     {/* Problem */}
                     <div className="mb-6">
-                      <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
+                      <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
                         Wyzwanie
-                      </h4>
+                      </h3>
                       <p className="text-foreground leading-relaxed">
                         {study.problem}
                       </p>
@@ -118,9 +128,9 @@ export default function ResultsSection({ title, description }: ResultsSectionPro
 
                     {/* Strategy */}
                     <div>
-                      <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
+                      <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">
                         Strategia BoostNow
-                      </h4>
+                      </h3>
                       <p className="text-muted-foreground leading-relaxed">
                         {study.strategy}
                       </p>
@@ -129,9 +139,9 @@ export default function ResultsSection({ title, description }: ResultsSectionPro
 
                   {/* Right side - Results */}
                   <div className="lg:col-span-5 bg-secondary/30 p-6 lg:p-8 flex flex-col justify-center">
-                    <h4 className="text-xs font-medium text-primary uppercase tracking-wider mb-6">
+                    <h3 className="text-xs font-medium text-primary uppercase tracking-wider mb-6">
                       Wyniki
-                    </h4>
+                    </h3>
                     <div className="space-y-4">
                       {study.results.map((result, idx) => (
                         <div key={idx} className="flex items-center justify-between">
@@ -149,7 +159,23 @@ export default function ResultsSection({ title, description }: ResultsSectionPro
           ))}
         </div>
 
-        {/* Social proof bar */}
+        {/* Built sites */}
+        <div className="mt-10 text-center">
+          <p className="text-sm text-muted-foreground mb-3">Strony, które zbudowaliśmy:</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {builtSites.map((site) => (
+              <a
+                key={site.url}
+                href={site.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-border px-4 py-2 text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
+              >
+                {site.name}
+              </a>
+            ))}
+          </div>
+        </div>
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

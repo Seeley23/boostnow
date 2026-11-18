@@ -117,8 +117,8 @@ export default function ContactSection({ title, description }: ContactSectionPro
               dla swoich wyników?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-              Nie trać czasu na powolny wzrost. Skontaktuj się z nami i zmień potencjał 
-              w <strong className="text-foreground">natychmiastowe konwersje</strong>.
+              Bezpłatnie sprawdzimy, czy Twoja firma pojawia się w Google i w odpowiedziach
+              ChatGPT, i pokażemy, co poprawić w <strong className="text-foreground">SEO i GEO</strong>.
             </p>
 
             {/* Benefits */}

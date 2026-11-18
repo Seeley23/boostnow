@@ -1,0 +1,12 @@
+{
+  "name": "BoostNow",
+  "short_name": "BoostNow",
+  "description": "Agencja SEO AI: pozycjonowanie w Google i ChatGPT.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0b1020",
+  "theme_color": "#c7ff4e",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

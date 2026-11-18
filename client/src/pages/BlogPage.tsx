@@ -108,8 +108,8 @@ const BlogPage: React.FC = () => {
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-6xl mx-auto">
           <nav className="flex items-center gap-2 text-sm text-gray-400" aria-label="Breadcrumb">
-            <Link href="/">
-              <a className="hover:text-[#c7ff4e] transition">Strona główna</a>
+            <Link href="/" className="hover:text-[#c7ff4e] transition">
+              Strona główna
             </Link>
             <span>/</span>
             <span className="text-[#c7ff4e]">Blog</span>
@@ -148,7 +148,7 @@ const BlogPage: React.FC = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-[#c7ff4e] font-bold text-sm">#{article.id}</span>
-                  {article.date && <time dateTime={article.date} className="text-xs text-gray-500">{article.date}</time>}
+                  {article.date && <time dateTime={article.date} className="text-xs text-gray-400">{article.date}</time>}
                 </div>
 
                 <Link href={`/blog/${getArticleUrlPart(article)}`} className="block group">
@@ -176,7 +176,7 @@ const BlogPage: React.FC = () => {
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-700">
+                <div className="flex items-center justify-between text-xs text-gray-400 pt-4 border-t border-gray-700">
                   {article.word_count ? (
                     <>
                       <span>{article.word_count} słów</span>
@@ -195,7 +195,7 @@ const BlogPage: React.FC = () => {
           </div>
 
           {totalPages > 1 && (
-            <nav className="flex items-center justify-center gap-2 mt-12" aria-label="Paginacja">
+            <nav className="flex flex-wrap items-center justify-center gap-2 mt-12" aria-label="Paginacja">
               <button
                 onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                 disabled={currentPage === 1}
@@ -204,13 +204,13 @@ const BlogPage: React.FC = () => {
                 ← Poprzednia
               </button>
 
-              <div className="flex gap-2">
+              <div className="flex flex-wrap justify-center gap-2">
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                   <button
                     key={page}
                     onClick={() => setCurrentPage(page)}
                     aria-current={currentPage === page ? 'page' : undefined}
-                    className={`w-10 h-10 rounded-lg font-medium transition ${
+                    className={`shrink-0 min-w-10 h-10 rounded-lg font-medium transition ${
                       currentPage === page
                         ? 'bg-[#c7ff4e] text-[#0b1020]'
                         : 'bg-gray-800 text-gray-300 hover:bg-gray-700'

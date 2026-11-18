@@ -18,7 +18,7 @@ const services = [
     subtitle: "Landing Pages & Copywriting",
     description: "Tworzymy strony i treści, które nie proszą - egzekwują pożądanie. Każde słowo jest zaprojektowane do wywołania natychmiastowej akcji. Architektura decyzji oparta na psychologii.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-conversion_b1feb665.png",
-    stats: "+40% konwersji",
+    stats: "Landing pages i copy",
     featured: true,
   },
   {
@@ -27,7 +27,7 @@ const services = [
     subtitle: "Animacje produktowe & Photo AI",
     description: "Wizualizacje produktowe napędzane przez AI. Tworzymy wideo, które sprzedaje Twój produkt w 15 sekund.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-ai-visual_1e67f9db.png",
-    stats: "3x szybciej",
+    stats: "Wideo i grafika AI",
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const services = [
     subtitle: "Strategie Lojalności",
     description: "Silne marki nie mają klientów - mają społeczność. Budujemy ekstremalną lojalność i transparentność relacji.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-community_c789918c.png",
-    stats: "7+ lat doświadczenia",
+    stats: "Lojalność klientów",
     featured: true,
   },
   {
@@ -45,7 +45,7 @@ const services = [
     subtitle: "Opisy produktowe & Naracja",
     description: "Tworzymy opisy produktów, które sprzedają. Budujemy narrację marki, która resonuje z Twoimi klientami i eliminuje błędy poznawcze.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-ecommerce_d5c862a8.png",
-    stats: "+62% konwersji",
+    stats: "Opisy produktów",
     featured: false,
   },
   {
@@ -54,7 +54,7 @@ const services = [
     subtitle: "AI Search Optimization",
     description: "Pozycjonowanie w ChatGPT, Perplexity i Gemini. Zwiększamy Share of Model Voice (SoMV) dla Twojej marki w AI search engines.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-geo_2f28de9a.png",
-    stats: "SoMV +380%",
+    stats: "4 cytowania w AI Overview (SU-2)",
     featured: false,
   },
   {
@@ -63,7 +63,7 @@ const services = [
     subtitle: "Organic Search Strategy & Decision Science",
     description: "Strategie SEO oparte na Decision Science. Budujemy autorytetu marki i dominujemy wyniki wyszukiwania dla kluczowych fraz.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-seo_7446f461.png",
-    stats: "+150% organic traffic",
+    stats: "151 tys. wyświetleń w 90 dni (Caruma)",
     featured: false,
   },
   {
@@ -81,7 +81,7 @@ const services = [
     subtitle: "Content Creation & Copywriting",
     description: "Tworzymy treści, które mówią głosem Twojej marki. Każdy artykuł, post czy email jest zaprojektowany do konwersji.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-ghostwriting_517a88d3.png",
-    stats: "+85% engagement",
+    stats: "Głos Twojej marki",
     featured: false,
   },
   {
@@ -90,7 +90,7 @@ const services = [
     subtitle: "Executive Positioning",
     description: "Budujemy osobistą markę liderów. Pozycjonujemy Cię jako eksperta i autorytet w Twojej branży.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-personal-branding_fa76fcfe.png",
-    stats: "Authority +300%",
+    stats: "Marka eksperta",
     featured: false,
   },
   {
@@ -99,7 +99,7 @@ const services = [
     subtitle: "Leadership Visibility",
     description: "Zarządzamy widocznością liderów. Budujemy thought leadership, media coverage i speaking opportunities.",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663163207746/8tjh5w8XqHsUFKvAv4Byd7/service-ceo-profiles_01b8c431.png",
-    stats: "Visibility +250%",
+    stats: "Widoczność marki",
     featured: false,
   },
 ];

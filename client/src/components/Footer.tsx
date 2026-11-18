@@ -86,7 +86,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="font-heading font-semibold text-foreground mb-4">Nawigacja</h4>
+            <h2 className="font-heading text-base font-semibold text-foreground mb-4">Nawigacja</h2>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="font-heading font-semibold text-foreground mb-4">Usługi & Artykuły</h4>
+            <h2 className="font-heading text-base font-semibold text-foreground mb-4">Usługi & Artykuły</h2>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
@@ -131,7 +131,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="font-heading font-semibold text-foreground mb-4">Kontakt</h4>
+            <h2 className="font-heading text-base font-semibold text-foreground mb-4">Kontakt</h2>
             <div className="space-y-4">
               <a
                 href="mailto:kontakt@boostnow.pl"
