@@ -19,7 +19,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { marked } from "marked";
+import { renderMarkdown } from "../shared/markdown";
 import { getMetaForPath } from "../server/page-meta";
 
 const ROOT = process.cwd();
@@ -66,8 +66,8 @@ const FOOTER = [
 ];
 const links = (items: string[][]) =>
   items.map(([href, label]) => `<li><a href="${href}">${esc(label)}</a></li>`).join("");
-const header = `<header><nav aria-label="Główna nawigacja"><ul>${links(NAV)}</ul></nav></header>`;
-const footer = `<footer><nav aria-label="Stopka"><ul>${links(FOOTER)}</ul></nav><p>BoostNow, agencja SEO AI.</p></footer>`;
+const header = `<header class="pr-nav"><a class="pr-logo" href="/"><img src="/images/logo.svg" alt="BoostNow" width="160" height="40"></a><nav aria-label="Główna nawigacja"><ul>${links(NAV)}</ul></nav></header>`;
+const footer = `<footer class="pr-foot"><nav aria-label="Stopka"><ul>${links(FOOTER)}</ul></nav><p>BoostNow, agencja SEO AI.</p></footer>`;
 
 // ── Content builders ─────────────────────────────────────────────────────────
 
@@ -81,25 +81,6 @@ function textToHtml(text: string): string {
     .join("\n");
 }
 
-function markdownToHtml(md: string): string {
-  // "## Heading {#id}" -> heading with id (marked doesn't support the attribute syntax)
-  const renderer = new marked.Renderer();
-  renderer.heading = ({ tokens, depth }) => {
-    let text = renderer.parser.parseInline(tokens);
-    let id = "";
-    const m = text.match(/\s*\{#([\w-]+)\}\s*$/);
-    if (m) {
-      id = ` id="${m[1]}"`;
-      text = text.slice(0, m.index);
-    }
-    // the page already has an H1 (article title)
-    const level = Math.max(2, depth);
-    return `<h${level}${id}>${text}</h${level}>\n`;
-  };
-  // Never pass raw HTML from the CMS through.
-  renderer.html = ({ text }) => esc(text);
-  return marked.parse(md || "", { renderer, async: false, gfm: true }) as string;
-}
 
 const articleBySlug = new Map(articles.filter((a) => a.slug).map((a) => [a.slug, a]));
 
@@ -112,12 +93,12 @@ function articlePage(slug: string, meta: { title: string; description: string })
     .map((i) => articles[(idx + i) % articles.length])
     .filter((x) => x && x.slug !== slug);
   return `
-    <main>
+    <main class="pr-main">
       <nav aria-label="Breadcrumb"><a href="/">Strona główna</a> / <a href="/blog">Blog</a></nav>
       <article>
         <h1>${esc(title)}</h1>
         <p>${a?.date ? `<time datetime="${esc(a.date)}">${esc(a.date)}</time> · ` : ""}Autor: <a href="/mateusz-nowotka">Mateusz Nowotka</a></p>
-        ${a?.content ? markdownToHtml(a.content) : `<p>${esc(meta.description)}</p>`}
+        <div class="article-body">${a?.content ? renderMarkdown(a.content) : `<p>${esc(meta.description)}</p>`}</div>
       </article>
       <aside>
         <h2>Powiązane artykuły</h2>
@@ -128,7 +109,7 @@ function articlePage(slug: string, meta: { title: string; description: string })
 
 function blogIndex(meta: { title: string; description: string }): string {
   return `
-    <main>
+    <main class="pr-main">
       <h1>${esc(stripBrand(meta.title))}</h1>
       <p>${esc(meta.description)}</p>
       <ul>${articles
@@ -156,11 +137,11 @@ function cmsPage(slug: string, meta: { title: string; description: string }): st
     return `<section>${heading}${textToHtml(s.content)}</section>`;
   });
   const h1 = h1Done ? "" : `<h1>${esc(stripBrand(meta.title))}</h1>`;
-  return `<main>${h1}${parts.join("\n")}</main>`;
+  return `<main class="pr-main">${h1}${parts.join("\n")}</main>`;
 }
 
 function genericPage(meta: { title: string; description: string }): string {
-  return `<main><h1>${esc(stripBrand(meta.title))}</h1><p>${esc(meta.description)}</p></main>`;
+  return `<main class="pr-main"><h1>${esc(stripBrand(meta.title))}</h1><p>${esc(meta.description)}</p></main>`;
 }
 
 // React-only pages rendered by the SSR bundle (optional: falls back to genericPage).
@@ -231,7 +212,9 @@ function render(route: string): string | null {
     .replace(/<meta\s+name="description"[^>]*>\s*/gi, "")
     .replace(/<meta\s+property="og:(title|description|url)"[^>]*>\s*/gi, "")
     .replace("</head>", `  ${head}\n  </head>`)
-    .replace('<div id="root"></div>', `<div id="root">${header}${body}${footer}</div>`);
+    // data-prerender: styled by index.css and kept on screen by main.tsx until
+    // React has rendered the page, so visitors never see unstyled text.
+    .replace('<div id="root"></div>', `<div id="root"><div data-prerender class="pr">${header}${body}${footer}</div></div>`);
 }
 
 let ok = 0;

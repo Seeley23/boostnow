@@ -52,7 +52,30 @@ const trpcClient = trpc.createClient({
   ],
 });
 
-createRoot(document.getElementById("root")!).render(
+const rootEl = document.getElementById("root")!;
+
+// Static prerender (scripts/prerender-site.ts): keep it on screen until React
+// has rendered the real page, instead of replacing it with an empty loader.
+// "Ready" = the app has put an <h1> into #root (loaders have none); give up
+// after 4 s so a page without an <h1> still appears.
+const prerendered = rootEl.querySelector<HTMLElement>(":scope > [data-prerender]");
+if (prerendered) {
+  rootEl.before(prerendered);
+  rootEl.hidden = true;
+  const reveal = () => {
+    observer.disconnect();
+    clearTimeout(timer);
+    rootEl.hidden = false;
+    prerendered.remove();
+  };
+  const observer = new MutationObserver(() => {
+    if (rootEl.querySelector("h1")) reveal();
+  });
+  observer.observe(rootEl, { childList: true, subtree: true });
+  const timer = window.setTimeout(reveal, 4000);
+}
+
+createRoot(rootEl).render(
   <trpc.Provider client={trpcClient} queryClient={queryClient}>
     <QueryClientProvider client={queryClient}>
       <App />
