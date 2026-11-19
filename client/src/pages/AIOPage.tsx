@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
-import { trpc } from "@/lib/trpc";
+import { submitForm } from "@/lib/submitForm";
 import websiteCms from '../data/blog/website-cms.json';
 
 /* ─────────────────────────────────────────────
@@ -148,7 +148,9 @@ function ContactForm() {
   const [regulamin, setRegulamin] = useState(false);
   const [regulaminError, setRegulaminError] = useState(false);
 
-  const submitMutation = trpc.aio.submit.useMutation();
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot
 
   const inputStyle = {
     background: "rgba(247,248,250,0.06)",
@@ -163,15 +165,23 @@ function ContactForm() {
     e.preventDefault();
     if (!regulamin) { setRegulaminError(true); return; }
     setRegulaminError(false);
-    submitMutation.mutate({
-      name: form.name,
-      email: form.email,
-      domain: form.domain,
-      industry: form.industry || undefined,
-    });
+    setStatus("sending");
+    submitForm({
+      form: "aio",
+      name: form.name.trim(),
+      email: form.email.trim(),
+      domain: form.domain.trim(),
+      industry: form.industry.trim() || undefined,
+      website,
+    })
+      .then(() => setStatus("sent"))
+      .catch((err: Error) => {
+        setErrorMessage(err.message);
+        setStatus("error");
+      });
   };
 
-  if (submitMutation.isSuccess) {
+  if (status === "sent") {
     return (
       <div className="text-center py-16">
         <div
@@ -297,19 +307,22 @@ function ContactForm() {
         </p>
       )}
 
-      {submitMutation.isError && (
-        <p className="text-sm text-center" style={{ color: "#ff6b6b" }}>
-          Wystąpił błąd. Spróbuj ponownie lub napisz na kontakt@boostnow.pl
-        </p>
-      )}
+      <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+        <label htmlFor="aio-website">Strona www</label>
+        <input id="aio-website" type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
+      </div>
+
+      <p role="status" className="text-sm text-center" style={{ color: "#ff6b6b" }}>
+        {status === "error" ? `${errorMessage} Spróbuj ponownie lub napisz na kontakt@boostnow.pl` : ""}
+      </p>
 
       <button
         type="submit"
-        disabled={submitMutation.isPending}
+        disabled={status === "sending"}
         className="mt-2 py-4 px-8 rounded-xl font-black text-base tracking-wide transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
         style={{ background: LIME, color: NAVY }}
       >
-        {submitMutation.isPending ? "Wysyłanie..." : "Zgłoś firmę do AIO →"}
+        {status === "sending" ? "Wysyłanie..." : "Zgłoś firmę do AIO →"}
       </button>
       <p className="text-xs text-center" style={{ color: "rgba(247,248,250,0.4)" }}>
         Odezwiemy się i pokażemy, jak możemy ustawić Twoją firmę w wynikach AI.
