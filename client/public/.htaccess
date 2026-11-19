@@ -8,6 +8,9 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
+# Strona główna: prerenderowany index.html (reguła niżej wymaga niepustej ścieżki).
+RewriteRule ^$ /index.html [L]
+
 # Strony wyrenderowane statycznie: <trasa>/index.html (scripts/prerender-site.ts).
 RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.+?)/?$ /$1/index.html [L]

@@ -18,6 +18,7 @@ describe("Smarthost static deployment contract", () => {
     // index.html is the prerendered homepage, so it must not be the fallback.
     expect(htaccess).toContain("RewriteRule ^(.+?)/?$ /$1/index.html [L]");
     expect(htaccess).toContain("RewriteRule ^ /spa.html [L]");
+    expect(htaccess).toContain("RewriteRule ^$ /index.html [L]");
     expect(htaccess).not.toContain("manus");
   });
 
