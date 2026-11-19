@@ -1,12 +1,12 @@
-import { useState, useEffect, useMemo, useCallback, lazy, Suspense } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
-import { StatBlock, QuoteBlock, FAQSection, DefinitionBlock, ComparisonTable } from './ContentPatterns';
-
-const ReactMarkdown = lazy(() => import('react-markdown'));
+import { renderMarkdown } from '@shared/markdown';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 interface Article {
   id: number;
@@ -30,19 +30,6 @@ interface ArticleContent {
   schemaJson?: any;
   date?: string;
 }
-
-const DEFAULT_FAQS = [
-  { question: 'Jak szybko zobaczę efekty GEO?', answer: 'Pierwsze cytowania w Perplexity pojawiają się w 7-14 dni. ChatGPT reaguje w cyklu ~30 dni. Google AI Overviews wymaga 4-12 tygodni.' },
-  { question: 'Czy GEO zastępuje SEO?', answer: 'Nie. GEO uzupełnia SEO. Klasyczne pozycjonowanie nadal buduje autorytet, a GEO zwiększa szansę na cytowanie w odpowiedziach AI.' },
-  { question: 'Ile kosztuje wdrożenie GEO?', answer: 'Zależy od zakresu. Audyt GEO zaczyna się od kilku tysięcy złotych. Pełna strategia z contentem i schema to inwestycja 5-15 tys. zł miesięcznie.' },
-];
-
-const SEO_VS_GEO = [
-  { feature: 'Cel', seo: 'Pozycja w Google', geo: 'Cytowanie w AI' },
-  { feature: 'Metryka', seo: 'Rankings, CTR', geo: 'Citation rate' },
-  { feature: 'Platforma', seo: 'Google', geo: 'ChatGPT, Perplexity, Gemini' },
-  { feature: 'Czas efektu', seo: '3-6 miesięcy', geo: '7-90 dni' },
-];
 
 const ARTICLES: Article[] = articlesMetadata as Article[];
 
@@ -126,20 +113,11 @@ const BlogArticle: React.FC = () => {
         ]
       };
 
+      // Only the article's own FAQ (from Airtable). No generic fallback: a
+      // FAQPage must match questions that are visible on the page.
       let faqSchema = null;
       if (article.schemaJson?.['@graph']) {
         faqSchema = article.schemaJson['@graph'].find((s: any) => s['@type'] === 'FAQPage');
-      }
-      if (!faqSchema) {
-        faqSchema = {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: DEFAULT_FAQS.map(f => ({
-            '@type': 'Question',
-            name: f.question,
-            acceptedAnswer: { '@type': 'Answer', text: f.answer }
-          }))
-        };
       }
 
       const steps = extractSteps(article.content);
@@ -232,10 +210,13 @@ const BlogArticle: React.FC = () => {
   }
 
   const leadAnswer = article.meta_description;
+  // Same renderer as the static prerender; CMS HTML is escaped (shared/markdown.ts).
+  const articleHtml = renderMarkdown(article.content);
   const lastUpdated = article.date || new Date().toISOString().split('T')[0];
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       <div className="py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>{article.seoTitle || article.title} | BoostNow</title>
@@ -277,27 +258,6 @@ const BlogArticle: React.FC = () => {
                 <p className="text-[#9aa0b3] text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
               </div>
 
-              <DefinitionBlock
-                term="GEO (Generative Engine Optimization)"
-                definition="Optymalizacja treści pod kątem cytowania przez modele AI takie jak ChatGPT, Perplexity i Gemini. W przeciwieństwie do SEO, celem nie jest pozycja w wynikach, ale bycie źródłem w odpowiedzi AI."
-              />
-
-              <StatBlock
-                value="+37%"
-                label="Wzrost szansy na cytowanie w AI dzięki statystykom z źródłem"
-                source="Princeton GEO Study"
-                date="2024"
-              />
-
-              <QuoteBlock
-                quote="Treść z konkretnymi liczbami i cytatami ekspertów jest cytowana przez modele AI o 30-40% częściej niż ogólne artykuły bez danych."
-                author="Mateusz Nowotka"
-                title="Founder & CEO"
-                organization="BoostNow"
-              />
-
-              <ComparisonTable title="SEO vs GEO" rows={SEO_VS_GEO} />
-
               <div className="flex flex-wrap items-center gap-6 text-sm text-[#9aa0b3] border-t border-b border-[#2a2f3e] py-4">
                 <div className="flex items-center gap-2"><span>📅</span><span>{lastUpdated}</span></div>
                 <div className="flex items-center gap-2"><span>📝</span><span>{article.word_count} słów</span></div>
@@ -311,27 +271,12 @@ const BlogArticle: React.FC = () => {
               ))}
             </div>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="prose prose-invert max-w-none mb-12" style={{ contentVisibility: 'auto' }}>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="max-w-none mb-12" style={{ contentVisibility: 'auto' }}>
               <div className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-8 text-[#9aa0b3]">
-                <Suspense fallback={<div className="text-[#9aa0b3]">Ładowanie treści...</div>}>
-                  <ReactMarkdown components={{
-                    h1: ({ ...props }: any) => <h1 className="text-3xl font-bold text-white mb-4 font-playfair mt-8" {...props} />,
-                    h2: ({ ...props }: any) => <h2 className="text-2xl font-bold text-white mb-3 font-playfair mt-6 text-[#c7ff4e]" {...props} />,
-                    h3: ({ ...props }: any) => <h3 className="text-xl font-bold text-white mb-2 font-playfair mt-4" {...props} />,
-                    p: ({ ...props }: any) => <p className="mb-4 leading-relaxed text-[#9aa0b3]" {...props} />,
-                    ul: ({ ...props }: any) => <ul className="list-disc list-inside mb-4 space-y-2" {...props} />,
-                    li: ({ ...props }: any) => <li className="text-[#9aa0b3]" {...props} />,
-                    blockquote: ({ ...props }: any) => <blockquote className="border-l-4 border-[#c7ff4e] pl-4 italic text-[#9aa0b3] my-4" {...props} />,
-                    strong: ({ ...props }: any) => <strong className="text-[#c7ff4e] font-semibold" {...props} />,
-                    code: ({ ...props }: any) => <code className="bg-[#0b1020] text-[#c7ff4e] px-2 py-1 rounded text-sm" {...props} />,
-                  }}>
-                    {article.content}
-                  </ReactMarkdown>
-                </Suspense>
+                <div className="article-body" dangerouslySetInnerHTML={{ __html: articleHtml }} />
               </div>
             </motion.div>
 
-            <FAQSection items={DEFAULT_FAQS} />
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="bg-[#141829] border border-[#2a2f3e] rounded-lg p-6 mb-8">
               <div className="flex items-start gap-4">
@@ -381,6 +326,7 @@ const BlogArticle: React.FC = () => {
         </div>
       </div>
       </div>
+      <Footer />
     </div>
   );
 };
