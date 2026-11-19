@@ -29,6 +29,38 @@ Jednocześnie Search Console pokazuje spadek wyświetleń z około 290 dziennie 
 
 ---
 
+## 0a. Dane trzech serwisów: Search Console kontra GA4 (maj–15.11.2026)
+
+Porównanie kliknięć z Google (Search Console) z sesjami „Organic Search” w GA4. Gdy pomiar działa, obie liczby idą razem. GA4 zwykle pokazuje trochę mniej, bo część osób nie zgadza się na cookies.
+
+| Miesiąc | Caruma: kliknięcia GSC | Caruma: sesje organic GA4 | RUD Studio: kliknięcia GSC | RUD Studio: sesje organic GA4 | Kwiaciarnia Rose: kliknięcia GSC | Kwiaciarnia Rose: sesje GA4 (wszystkie) |
+|---|---|---|---|---|---|---|
+| maj | 185 | 106 | 83 | 37 | brak danych | 0 |
+| czerwiec | 371 | 259 | 28 | 10 | brak danych | 0 |
+| lipiec | 303 | 191 | 7 | 1 | brak danych | 0 |
+| sierpień | 154 | 73 | 24 | 1 | brak danych | 0 |
+| wrzesień | 138 | 77 | 31 | 0 | 3 | 0 |
+| październik | 40 | 24 | 48 | 0 | 15 | 0 |
+| 1–15 listopada | 13 | 9 | 40 | 0 | 5 | 0 |
+
+**Trzy diagnozy:**
+1. **Caruma: pomiar działa, ruch spadł naprawdę.** GA4 rejestruje 60–70% kliknięć z GSC przez cały okres. Spadek od sierpnia widać w obu źródłach. Wyświetlenia w GSC spadły z 91 322 (czerwiec) do 13 811 (październik).
+2. **RUD Studio: ruch rośnie, pomiar nie działa.** Google przysłał 48 kliknięć w październiku i 40 w pierwszej połowie listopada. GA4 pokazuje 0 sesji z wyszukiwarki od września i 6–11 sesji miesięcznie ogółem. Pomiar przestał działać w czerwcu–lipcu.
+3. **Kwiaciarnia Rose: brak pomiaru.** GSC ma 23 kliknięcia od września, a GA4 nie ma ani jednej sesji. Tag GA4 nie wysyła danych, albo nie jest zainstalowany.
+
+**Ruch z AI w GA4 (maj–15.11.2026):**
+- Caruma: 93 sesje (Gemini 47, ChatGPT 27, Perplexity 10, Claude 5, Copilot 4);
+- RUD Studio: 2 sesje (ChatGPT), ale przy zepsutym pomiarze to liczba niewiarygodna;
+- Kwiaciarnia Rose: brak pomiaru.
+
+Wcześniejsza liczba „9 sesji z AI” dotyczyła tylko okresu 1.09–18.11 i nie obejmowała maja–sierpnia. Do artykułu używać danych za maj–listopad.
+
+**Przed publikacją:** zgoda klientów (Caruma, RUD Studio) na pokazanie liczb z nazwą. Kwiaciarnia Rose to strona zbudowana przez BoostNow, więc zgoda jest prostsza, ale też trzeba ją mieć.
+
+**Do naprawy u klientów (niezależnie od artykułu):** pomiar GA4 w RUD Studio i Kwiaciarni Rose, oraz w SU-2 (3 sesje w 2,5 miesiąca).
+
+---
+
 ## 1. Artykuł o ruchu z ChatGPT w GA4: zmiana kąta
 
 **Pierwotny plan:** „Ruch z ChatGPT zniknął w GA4? Co się zmieniło w październiku”, na danych GA4 BoostNow. **Nie do zrobienia uczciwie:** BoostNow nie ma ani jednej sesji z AI w 2026 roku.
@@ -36,15 +68,19 @@ Jednocześnie Search Console pokazuje spadek wyświetleń z około 290 dziennie 
 **Propozycja:** „Ruch z ChatGPT w GA4: dlaczego go nie widzisz i jak go zmierzyć w 15 minut”.
 
 - **Frazy:** „ruch z chatgpt zniknął ga4” (słaby top 10: 3 wyniki social/wideo, 0 silnych domen), „ruch z chatgpt w ga4”, „jak śledzić ruch z ChatGPT w Google Analytics 4”.
-- **Własne dane (wyróżnik):**
-  - w 5 usługach GA4 prowadzonych przez BoostNow było 9 sesji z AI w 2,5 miesiąca, z czego 1 z ChatGPT. Pokazuje to, jak mały i rozproszony jest ten kanał w Polsce, oraz że bez grupy kanałów AI te sesje są niewidoczne;
-  - konfiguracja BoostNow krok po kroku: grupa kanałów AI, filtr localhost.
+- **Własne dane (wyróżnik):** trzy serwisy z sekcji 0a jako trzy przypadki:
+  - Caruma: pomiar działa, spadek jest prawdziwy;
+  - RUD Studio: ruch rośnie, a GA4 pokazuje zero;
+  - Kwiaciarnia Rose: GA4 nie mierzy nic.
+
+  Do tego ruch z AI w Caruma: 93 sesje z 5 asystentów w 6,5 miesiąca, z czego 27 z ChatGPT. Nikt w top 10 nie ma takiego porównania na prawdziwych danych.
+  - Konfiguracja krok po kroku: grupa kanałów AI, filtr localhost.
 - **Fakt zewnętrzny:** przerwa w danych 9–15.10.2026. Część wizyt z ChatGPT trafiała wtedy do „Direct” (Delante, 2026). Sprawdzić u źródła przed publikacją.
 - **Struktura:**
   1. dlaczego ruchu z ChatGPT nie widać w GA4 (brak referrera, „Direct”, przerwa październikowa, blokada tagu przez CSP lub cookies);
   2. test w 5 minut: raport Pozyskanie, filtr źródła;
   3. grupa kanałów AI krok po kroku, z regex do skopiowania;
-  4. jak odróżnić spadek pomiaru od spadku ruchu: porównanie z Search Console, tak jak przy danych BoostNow;
+  4. jak odróżnić spadek pomiaru od spadku ruchu: tabela GSC kontra GA4 dla 3 serwisów i prosta reguła (GA4 organic to zwykle 50–80% kliknięć z GSC; poniżej 20% oznacza problem z pomiarem);
   5. FAQ.
 - **Przed pisaniem:** zrzuty ekranu z GA4 BoostNow po dodaniu grupy kanałów AI i filtra localhost (punkty 0.2 i 0.3).
 
