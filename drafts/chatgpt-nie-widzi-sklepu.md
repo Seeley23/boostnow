@@ -19,12 +19,12 @@ Twój klient pyta ChatGPT o produkt. ChatGPT poleca sklep konkurencji.
 ---
 
 > **BEZPOŚREDNIA ODPOWIEDŹ**
-> ChatGPT nie widzi sklepu, gdy jego robot nie może wejść na stronę albo nie znajduje na niej danych produktu. Robot wyszukiwarki ChatGPT nazywa się OAI-SearchBot. Blokada w pliku robots.txt lub w zaporze zatrzymuje go przed sklepem. Druga częsta przyczyna to treść, która ładuje się tylko przez JavaScript. Wtedy robot widzi pustą stronę bez nazwy, ceny i opisu.
+> ChatGPT nie widzi sklepu, gdy jego robot nie wchodzi na stronę. Druga możliwość: robot wchodzi, ale nie znajduje danych produktu. Robot wyszukiwarki ChatGPT nazywa się OAI-SearchBot. Blokada w pliku robots.txt lub w zaporze zatrzymuje go przed sklepem. Częsta przyczyna to treść, która ładuje się tylko przez JavaScript. Wtedy robot widzi pustą stronę bez nazwy, ceny i opisu.
 > *Zaktualizowano: listopad 2026*
 
 ---
 
-ChatGPT wybiera produkty na podstawie danych: ceny, opisu, opinii i dostępności (OpenAI Help Center, 2026). Te dane musi najpierw odczytać robot OAI-SearchBot. Robot czyta stronę bez uruchamiania aplikacji w przeglądarce. **Dlatego sklep, który wygląda dobrze dla klienta, może być pusty dla ChatGPT.** BoostNow miał ten problem na własnej stronie. Do 18 listopada 2026 roku roboty bez JavaScriptu widziały ten sam pusty szablon na wszystkich 71 adresach z mapy strony. Ahrefs pokazał wtedy 70 stron bez żadnego linku. Po zmianie każdy adres ma własną treść w kodzie HTML.
+ChatGPT wybiera produkty na podstawie danych: ceny, opisu, opinii i dostępności (OpenAI Help Center, 2026). Te dane musi najpierw odczytać robot OAI-SearchBot. Robot czyta stronę bez uruchamiania aplikacji w przeglądarce. **Dlatego sklep, który wygląda dobrze dla klienta, może być pusty dla ChatGPT.** BoostNow miał ten problem na własnej stronie. Do 18 listopada 2026 roku roboty bez JavaScriptu widziały jeden pusty szablon. Ten szablon był na wszystkich 71 adresach z mapy strony. Ahrefs pokazał wtedy 70 stron bez żadnego linku. Po zmianie każdy adres ma własną treść w kodzie HTML.
 
 ## Dlaczego ChatGPT nie widzi mojego sklepu? {#dlaczego}
 
@@ -46,7 +46,7 @@ ChatGPT ocenia produkt w trzech krokach:
 
 1. **Dopasowanie.** ChatGPT sprawdza, czy produkt odpowiada na pytanie klienta.
 2. **Dane produktu.** ChatGPT czyta cenę, opis, opinie i parametry. Te dane pochodzą od sklepów i z innych serwisów.
-3. **Wybór sprzedawcy.** Gdy klient otworzy produkt, ChatGPT układa sklepy według dostępności, ceny, jakości i tego, czy sklep jest producentem lub głównym sprzedawcą.
+3. **Wybór sprzedawcy.** Gdy klient otworzy produkt, ChatGPT układa sklepy według dostępności, ceny i jakości. Wyżej stoi też producent lub główny sprzedawca.
 
 W efekcie wygrywa sklep z pełnymi danymi, a nie sklep z najładniejszą stroną. Konkurent z ceną i dostępnością w kodzie strony ma przewagę nad sklepem z samymi zdjęciami. Prosty przykład: ChatGPT działa jak sprzedawca w hurtowni z listą towarów. Produktu bez ceny i stanu magazynowego na tej liście nie poleci, nawet jeśli leży na półce.
 
@@ -92,7 +92,7 @@ BoostNow robi ten audyt dla sklepów internetowych. Sprawdzamy dostęp robotów,
 ## Najczęściej zadawane pytania {#faq}
 
 **Dlaczego ChatGPT nie widzi mojej strony?**
-ChatGPT nie widzi strony, gdy robot OAI-SearchBot jest zablokowany albo strona nie ma treści w kodzie HTML. Sprawdź robots.txt i kod źródłowy strony (Ctrl+U). → [Jak pojawić się w ChatGPT](https://boostnow.pl/blog/jak-pojawic-sie-w-chatgpt)
+ChatGPT nie widzi strony, gdy blokujesz robota OAI-SearchBot albo strona nie ma treści w kodzie HTML. Sprawdź robots.txt i kod źródłowy strony (Ctrl+U). → [Jak pojawić się w ChatGPT](https://boostnow.pl/blog/jak-pojawic-sie-w-chatgpt)
 
 **Dlaczego ChatGPT nie poleca moich produktów?**
 ChatGPT nie poleca produktów, gdy nie zna ich ceny, dostępności i opinii. Dodaj schemat Product i zgłoś sklep w programie OpenAI dla sprzedawców. → [SEO dla sklepu internetowego](https://boostnow.pl/blog/seo-dla-sklepu-internetowego)
@@ -199,7 +199,7 @@ Jedna rozmowa. Lista konkretnych poprawek. Bez zobowiązań.
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Dlaczego ChatGPT nie widzi mojej strony?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT nie widzi strony, gdy robot OAI-SearchBot jest zablokowany albo strona nie ma treści w kodzie HTML. Sprawdź robots.txt i kod źródłowy strony (Ctrl+U)." } },
+        { "@type": "Question", "name": "Dlaczego ChatGPT nie widzi mojej strony?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT nie widzi strony, gdy blokujesz robota OAI-SearchBot albo strona nie ma treści w kodzie HTML. Sprawdź robots.txt i kod źródłowy strony (Ctrl+U)." } },
         { "@type": "Question", "name": "Dlaczego ChatGPT nie poleca moich produktów?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT nie poleca produktów, gdy nie zna ich ceny, dostępności i opinii. Dodaj schemat Product i zgłoś sklep w programie OpenAI dla sprzedawców." } },
         { "@type": "Question", "name": "Jak sprawdzić, czy ChatGPT poleca mój sklep?", "acceptedAnswer": { "@type": "Answer", "text": "Zadaj w tymczasowym czacie pytanie klienta: Polecasz sklep z [kategoria] w Polsce? Powtórz pytanie kilka razy, bo odpowiedzi ChatGPT się zmieniają." } },
         { "@type": "Question", "name": "Czy blokada GPTBota usuwa sklep z ChatGPT?", "acceptedAnswer": { "@type": "Answer", "text": "Nie. GPTBot zbiera dane do uczenia modeli, a wyszukiwanie w ChatGPT obsługuje OAI-SearchBot. Możesz zablokować GPTBota i nadal być widoczny w ChatGPT." } },
