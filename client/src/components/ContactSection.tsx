@@ -3,10 +3,8 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Mail, ArrowRight, CheckCircle, Zap, Clock, Shield, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
-import { trpc } from "@/lib/trpc";
-import DOMPurify from "dompurify";
+import { submitForm } from "@/lib/submitForm";
 import { trackFormSubmit } from "@/lib/analytics";
-import { RecaptchaV3, getRecaptchaToken } from "./RecaptchaV3";
 import { useFieldErrorSync } from "@/hooks/useFieldErrorSync";
 
 /* ContactSection Component
@@ -44,49 +42,35 @@ export default function ContactSection({ title, description }: ContactSectionPro
   const formRef = useRef<HTMLFormElement>(null);
   useFieldErrorSync(formRef);
 
-  const contactMutation = trpc.contact.submit.useMutation({
-    onSuccess: (data, variables) => {
-      setIsSubmitted(true);
-      toast.success("Wiadomość wysłana! Skontaktujemy się wkrótce.");
-      
-      // Track form submission in GTM with detailed data
-      trackFormSubmit('contact_form', {
-        form_location: 'contact_section',
-        has_company: !!variables.company,
-        message_length: variables.message?.length || 0,
-      });
-    },
-    onError: (error) => {
-      toast.error(`Błąd: ${error.message}`);
-      setIsSubmitting(false);
-    },
-  });
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+    const formData = new FormData(e.currentTarget);
+    const field = (name: string) => String(formData.get(name) ?? "").trim();
+    const company = field("company");
+    const message = field("message");
     try {
-      // Get reCAPTCHA token
-      const recaptchaToken = await getRecaptchaToken('contact_form');
-
-      const formData = new FormData(e.currentTarget);
-      
-      // Sanitize input data to prevent XSS attacks
-      const data = {
-        name: DOMPurify.sanitize(formData.get("name") as string, { ALLOWED_TAGS: [] }),
-        email: DOMPurify.sanitize(formData.get("email") as string, { ALLOWED_TAGS: [] }),
-        company: formData.get("company") ? DOMPurify.sanitize(formData.get("company") as string, { ALLOWED_TAGS: [] }) : undefined,
-        message: DOMPurify.sanitize(formData.get("message") as string, { ALLOWED_TAGS: [] }),
-        recaptchaToken, // Add reCAPTCHA token
-      };
-
-      console.log("[ContactSection] Sanitized data:", data);
-
-      contactMutation.mutate(data);
+      // Sent as plain text e-mail; PHP validates and never renders it as HTML.
+      await submitForm({
+        form: "contact",
+        name: field("name"),
+        email: field("email"),
+        company: company || undefined,
+        message,
+        website: field("website"),
+      });
+      setIsSubmitted(true);
+      toast.success("Wiadomość wysłana! Skontaktujemy się wkrótce.");
+      trackFormSubmit("contact_form", {
+        form_location: "contact_section",
+        has_company: !!company,
+        message_length: message.length,
+      });
     } catch (error) {
-      console.error('[ContactSection] reCAPTCHA error:', error);
-      toast.error('Błąd weryfikacji bezpieczeństwa. Spróbuj ponownie.');
+      toast.error(
+        `${(error as Error).message} Możesz też napisać na kontakt@boostnow.pl.`
+      );
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -162,9 +146,6 @@ export default function ContactSection({ title, description }: ContactSectionPro
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {/* reCAPTCHA v3 - invisible */}
-            <RecaptchaV3 action="contact_form" onToken={() => {}} />
-            
             <div className="rounded-2xl bg-card border border-border p-4 sm:p-6 lg:p-8">
               {/* Always in the page so the change of text is announced */}
               <p role="status" className="sr-only">
@@ -248,6 +229,12 @@ export default function ContactSection({ title, description }: ContactSectionPro
                       placeholder="Nazwa firmy"
                     />
                     <p id="company-help" className="text-xs text-muted-foreground mt-1">Opcjonalnie</p>
+                  </div>
+
+                  {/* Honeypot: hidden from people, bots fill it and get dropped. */}
+                  <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+                    <label htmlFor="website">Strona www</label>
+                    <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
                   </div>
 
                   <div>
