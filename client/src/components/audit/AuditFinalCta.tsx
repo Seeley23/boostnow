@@ -7,7 +7,7 @@ export default function AuditFinalCta({ onCtaClick }: { onCtaClick: () => void }
       <div className={`${ui.container} text-center`}>
         <h2
           id="audit-final"
-          className="font-heading text-[1.75rem] leading-[1.15] sm:text-4xl font-semibold tracking-tight text-[#f7f5f0]"
+          className="font-heading text-[1.75rem] leading-[1.15] sm:text-4xl font-bold tracking-tight text-[#f7f5f0]"
         >
           {FINAL_CTA.h2}
         </h2>

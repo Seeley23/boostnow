@@ -20,17 +20,16 @@ export default function AuditPreview() {
             <p className="inline-block rounded bg-[#14161c] px-2 py-1 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-[#f7f5f0]">
               {PREVIEW.label}
             </p>
-            <p className="mt-4 font-heading text-xl font-semibold text-[#14161c]">{PREVIEW.title}</p>
+            <p className="mt-4 font-heading text-xl font-bold text-[#14161c]">{PREVIEW.title}</p>
             <dl className="mt-6 space-y-4">
               {PREVIEW.scores.map((s) => (
-                <div key={s.name}>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <dt className="text-[#3a3e48]">{s.name}</dt>
-                    <dd className="m-0 font-semibold tabular-nums text-[#14161c]">{s.value}/100</dd>
-                  </div>
-                  <div className="mt-2 h-2 rounded-full bg-[#ece9e2]" aria-hidden="true">
+                // One <div> per group holding only <dt>/<dd>, as HTML requires.
+                <div key={s.name} className="grid grid-cols-[1fr_auto] items-baseline gap-x-4">
+                  <dt className="text-[#3a3e48]">{s.name}</dt>
+                  <dd className="m-0 font-semibold tabular-nums text-[#14161c]">{s.value}/100</dd>
+                  <dd className="col-span-2 m-0 mt-2 h-2 rounded-full bg-[#ece9e2]" aria-hidden="true">
                     <div className="h-2 rounded-full bg-[#14161c]" style={{ width: `${s.value}%` }} />
-                  </div>
+                  </dd>
                 </div>
               ))}
             </dl>

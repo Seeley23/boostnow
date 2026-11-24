@@ -14,6 +14,7 @@ import AuditScope from "@/components/audit/AuditScope";
 import AuditWhyNow from "@/components/audit/AuditWhyNow";
 import AuditLeadForm from "@/components/audit/AuditLeadForm";
 import AuditFinalCta from "@/components/audit/AuditFinalCta";
+import AuditAnswers from "@/components/audit/AuditAnswers";
 import { BOOKING_URL, CREDIBILITY, FAQ, SEO, SUCCESS } from "@/components/audit/auditCopy";
 import { getAttribution, getLandingVariant, sourceKey, trackAudit } from "@/components/audit/auditTracking";
 import { PAPER, ui } from "@/components/audit/auditUi";
@@ -24,7 +25,7 @@ function Header() {
       <div className={`${ui.wide} flex items-center justify-between`}>
         <Link href="/" className={`inline-flex rounded ${ui.focus}`} aria-label="BoostNow, strona główna">
           {/* Dark wordmark on paper; the site logo is light-on-dark. */}
-          <span className="font-heading text-xl font-semibold tracking-tight text-[#14161c]">
+          <span className="font-heading text-xl font-bold tracking-tight text-[#14161c]">
             Boost<span className="bg-[#c7ff4e] px-0.5">Now</span>
           </span>
         </Link>
@@ -94,14 +95,14 @@ function SuccessView({ onBooking }: { onBooking: () => void }) {
           id="audit-success"
           ref={ref}
           tabIndex={-1}
-          className="mt-4 font-heading text-[2.25rem] leading-[1.08] sm:text-5xl font-semibold tracking-tight text-[#14161c] outline-none"
+          className="mt-4 font-heading text-[2.25rem] leading-[1.08] sm:text-5xl font-bold tracking-tight text-[#14161c] outline-none"
         >
           {SUCCESS.h1}
         </h1>
         <p className={`mt-5 ${ui.body}`}>{SUCCESS.body}</p>
 
         <div className="mt-10 rounded-xl border border-[#dcd8cf] bg-white p-6 sm:p-8">
-          <h2 className="font-heading text-2xl font-semibold text-[#14161c]">{SUCCESS.nextHeading}</h2>
+          <h2 className="font-heading text-2xl font-bold text-[#14161c]">{SUCCESS.nextHeading}</h2>
           <p className={`mt-3 ${ui.body}`}>{SUCCESS.nextBody}</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <a href={BOOKING_URL} onClick={onBooking} className={`${ui.cta} ${ui.focus}`}>
@@ -178,6 +179,7 @@ export default function AiCommerceAuditPage() {
                 setDone(true);
               }}
             />
+            <AuditAnswers />
             <Credibility />
             <Faq />
             <AuditFinalCta onCtaClick={onFinalCta} />

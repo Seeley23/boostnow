@@ -136,6 +136,18 @@ export const FAQ = [
     a: "Nie. Audyt pokazuje, co może ograniczać przygotowanie sklepu i jakie działania mogą zwiększyć szansę na zdobywanie klientów z kanałów AI.",
   },
   {
+    q: "Skąd wiem, czy ChatGPT poleca konkurencję zamiast mojego sklepu?",
+    a: "Zadaj ChatGPT pytanie, które zadaje Twój klient: o produkt, cenę i dostawę. Sprawdź, które sklepy są w odpowiedzi. Powtórz to dla kilku kategorii i w kilku narzędziach AI, bo wyniki się różnią.",
+  },
+  {
+    q: "Czy audyt działa dla sklepu na Shoperze, WooCommerce lub PrestaShop?",
+    a: "Tak. Audyt obejmuje sklepy na każdej platformie, także na Shopify i IdoSell. Sprawdzamy publiczną stronę sklepu, więc platforma nie ogranicza analizy. W wynikach wskazujemy, gdzie na Twojej platformie wprowadzić poprawki.",
+  },
+  {
+    q: "Czy muszę dać dostęp do panelu sklepu?",
+    a: "Nie. Audyt robimy na podstawie publicznej strony sklepu i odpowiedzi narzędzi AI. Wystarczy adres sklepu.",
+  },
+  {
     q: "Co mogę zrobić po otrzymaniu audytu?",
     a: "Możesz wdrożyć zalecenia samodzielnie albo umówić rozmowę z BoostNow, aby omówić możliwy zakres prac.",
   },
@@ -166,9 +178,65 @@ export const BOOKING_URL =
   "mailto:kontakt@boostnow.pl?subject=" +
   encodeURIComponent("Rozmowa o wdrożeniu: audyt AI sklepu");
 
+/**
+ * Main phrase: "audyt sklepu pod ChatGPT" (SERP 24.11.2026: shop-specific
+ * pages are rare; most competitors audit brands, not shops). Supporting
+ * phrases go into the answer blocks and FAQ below the form.
+ */
 export const SEO = {
-  title: "Bezpłatny audyt sklepu internetowego w ChatGPT | BoostNow",
+  title: "Bezpłatny audyt sklepu pod ChatGPT i AI | BoostNow",
   description:
-    "Sprawdź, czy Twój sklep jest przygotowany na zdobywanie klientów z ChatGPT i agentów zakupowych AI. Odbierz bezpłatny audyt i poznaj najważniejsze priorytety.",
+    "Sprawdź, czy ChatGPT, Gemini i Perplexity mogą polecać Twój sklep internetowy. Bezpłatny audyt pokaże, co poprawić najpierw, by zdobywać klientów z AI.",
   canonical: "https://boostnow.pl/audyt-ai-dla-sklepu",
+  datePublished: "2026-11-24",
+  dateModified: "2026-11-24",
+};
+
+/** Default line above the H1 when the traffic source has no own message. */
+export const HERO_EYEBROW = "Bezpłatny audyt sklepu pod ChatGPT i AI";
+
+/**
+ * Answer blocks below the form. Each one is self-contained (topic named in
+ * the first sentence, 130–170 words) so AI tools can quote it on its own.
+ */
+export const ANSWERS = {
+  updatedLabel: "Aktualizacja: 24 listopada 2026",
+  author: "Mateusz Nowotka, BoostNow",
+  check: {
+    h2: "Jak sprawdzić, czy ChatGPT poleca Twój sklep?",
+    intro:
+      "Żeby sprawdzić, czy ChatGPT poleca Twój sklep internetowy, zadaj mu pytanie tak, jak zadaje je klient. Nie pytaj o nazwę sklepu. Opisz potrzebę kupującego.",
+    steps: [
+      "Wypisz 5 produktów albo kategorii, które dają Ci największą sprzedaż albo najwyższą marżę.",
+      "Dla każdej zadaj w ChatGPT pytanie klienta, np. „Gdzie kupić wodoodporną kurtkę trekkingową do 600 zł z szybką dostawą?”.",
+      "Zadaj te same pytania w Gemini, Perplexity i w Google, gdzie nad wynikami pojawia się podsumowanie AI (AI Overviews).",
+      "Zapisz, które sklepy są polecane i czy jest wśród nich Twój. Zrób zrzuty ekranu z datą.",
+      "Powtórz test za 2–4 tygodnie. Odpowiedzi AI zmieniają się, więc jeden wynik to za mało.",
+    ],
+    outro:
+      "Taki test pokazuje, czy AI poleca Twój sklep. Nie pokazuje, dlaczego go pomija. Audyt BoostNow szuka przyczyn i wskazuje, co poprawić najpierw, żeby zwiększyć szansę na polecenie.",
+  },
+  why: {
+    h2: "Dlaczego AI może pomijać sklep internetowy?",
+    paragraphs: [
+      "AI może pominąć sklep internetowy z czterech powodów.",
+      "Pierwszy: robot AI nie ma dostępu do strony. Blokadę może ustawić plik robots.txt, ale też serwer albo hosting, bez wiedzy właściciela sklepu.",
+      "Drugi: karty produktów mają niepełne dane. Brakuje ceny, wariantów, dostępności albo informacji, dla kogo jest produkt.",
+      "Trzeci: AI nie znajduje warunków zakupu, czyli kosztu i czasu dostawy, zasad zwrotu i form płatności. Bez nich nie porówna Twojej oferty z konkurencją.",
+      "Czwarty: brakuje sygnałów zaufania. Chodzi o dane firmy, opinie klientów i wzmianki o sklepie w innych serwisach, np. w porównywarkach i na forach.",
+      "Każdy z tych problemów da się sprawdzić i naprawić. Zwykle nie trzeba przebudowywać sklepu. Najczęściej wystarczy uporządkować dane, które sklep już ma.",
+    ],
+    linkLead: "Więcej przykładów opisujemy w artykule ",
+    linkText: "ChatGPT nie widzi mojego sklepu? 6 przyczyn i test w 10 minut",
+    linkHref: "/blog/chatgpt-nie-widzi-sklepu",
+  },
+  method: {
+    h2: "Jak wygląda audyt sklepu pod ChatGPT i AI?",
+    paragraphs: [
+      "Audyt sklepu pod ChatGPT i AI to sprawdzenie, czy ChatGPT, Gemini, Perplexity i Google AI Overviews mogą znaleźć, zrozumieć i porównać ofertę Twojego sklepu.",
+      "Robimy go na podstawie publicznej strony sklepu. Nie potrzebujemy dostępu do panelu. Sprawdzamy cztery obszary: dostęp robotów AI, dane produktów, informacje zakupowe i sygnały zaufania. Zadajemy też narzędziom AI pytania, które zadają Twoi klienci, i zapisujemy, kogo polecają. Sprawdzamy też dane strukturalne produktów, czyli zapis ceny i dostępności w kodzie strony.",
+      "Wynik to krótka analiza z najważniejszym problemem i trzema priorytetami. Audyt nie gwarantuje, że AI zacznie polecać sklep. Pokazuje, co dziś może to blokować.",
+      "Przykład z naszej strony: 24 listopada 2026 serwer boostnow.pl odrzucał roboty GPTBot, PerplexityBot i ClaudeBot (kod 403), choć plik robots.txt je dopuszczał. Takiej blokady nie widać w panelu sklepu. Dlatego sprawdzamy ją w każdym audycie.",
+    ],
+  },
 };

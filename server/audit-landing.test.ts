@@ -10,6 +10,8 @@ import { Router } from "wouter";
 import AiCommerceAuditPage from "../client/src/pages/AiCommerceAuditPage";
 import { normalizeEmail, normalizeStoreUrl, validateAudit } from "../client/src/components/audit/auditForm";
 import { sourceKey } from "../client/src/components/audit/auditTracking";
+import { ANSWERS, FAQ, SEO } from "../client/src/components/audit/auditCopy";
+import { AUDIT_ARTICLE_LINKS } from "../shared/auditLinks";
 import { getMetaForPath } from "./page-meta";
 
 const root = path.resolve(import.meta.dirname, "..");
@@ -97,9 +99,53 @@ describe("audit landing page", () => {
     expect(read("scripts/generate-sitemap.cjs")).toContain("https://boostnow.pl/audyt-ai-dla-sklepu");
     expect(read("client/src/prerender-entry.tsx")).toContain('"/audyt-ai-dla-sklepu"');
     const meta = getMetaForPath("/audyt-ai-dla-sklepu");
-    expect(meta?.title).toBe("Bezpłatny audyt sklepu internetowego w ChatGPT | BoostNow");
+    expect(meta?.title).toBe(SEO.title);
     expect(JSON.stringify(meta?.schema)).toContain("FAQPage");
     expect(read("client/src/components/Navigation.tsx")).not.toContain("audyt-ai-dla-sklepu");
+  });
+
+  it("keeps title and description within SERP limits", () => {
+    expect(SEO.title.length).toBeLessThanOrEqual(60);
+    expect(SEO.title.toLowerCase()).toMatch(/^bezpłatny audyt sklepu pod chatgpt/);
+    expect(SEO.description.length).toBeGreaterThanOrEqual(140);
+    expect(SEO.description.length).toBeLessThanOrEqual(155);
+  });
+
+  it("has self-contained answer blocks of 130-170 words below the form", () => {
+    const words = (t: string) => t.split(/\s+/).filter(Boolean).length;
+    const check = [ANSWERS.check.intro, ...ANSWERS.check.steps, ANSWERS.check.outro].join(" ");
+    const why = [...ANSWERS.why.paragraphs, ANSWERS.why.linkLead, ANSWERS.why.linkText].join(" ");
+    const method = ANSWERS.method.paragraphs.join(" ");
+    for (const [name, text] of Object.entries({ check, why, method })) {
+      const n = words(text);
+      expect(n, name).toBeGreaterThanOrEqual(130);
+      expect(n, name).toBeLessThanOrEqual(170);
+    }
+    expect(html.indexOf(ANSWERS.check.h2)).toBeGreaterThan(html.indexOf('id="audyt-formularz"'));
+  });
+
+  it("shows the same FAQ in HTML and in JSON-LD", () => {
+    const graph = (getMetaForPath("/audyt-ai-dla-sklepu")?.schema?.[0] as any)["@graph"];
+    const faq = graph.find((n: any) => n["@type"] === "FAQPage");
+    expect(faq.mainEntity.map((q: any) => q.name)).toEqual(FAQ.map((f) => f.q));
+    for (const f of FAQ) {
+      expect(html).toContain(f.q);
+      expect(html).toContain(f.a);
+    }
+    const types = graph.map((n: any) => n["@type"]).sort();
+    expect(types).toEqual(["BreadcrumbList", "FAQPage", "Service", "WebPage"]);
+    const service = graph.find((n: any) => n["@type"] === "Service");
+    expect(service.offers).toMatchObject({ price: "0", priceCurrency: "PLN" });
+    expect(JSON.stringify(graph)).not.toMatch(/AggregateRating|Review/);
+  });
+
+  it("is linked from llms.txt, the AIO page and selected articles", () => {
+    expect(read("client/public/llms.txt")).toContain("https://boostnow.pl/audyt-ai-dla-sklepu");
+    expect(read("scripts/generate-llms-full.cjs")).toContain("https://boostnow.pl/audyt-ai-dla-sklepu");
+    expect(read("client/src/pages/AIOPage.tsx")).toContain('href="/audyt-ai-dla-sklepu"');
+    const anchors = Object.values(AUDIT_ARTICLE_LINKS);
+    expect(new Set(anchors).size).toBe(anchors.length);
+    expect(read("scripts/prerender-site.ts")).toContain("AUDIT_ARTICLE_LINKS[slug]");
   });
 
   it("blocks web access to the fallback lead log", () => {

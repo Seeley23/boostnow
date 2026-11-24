@@ -11,10 +11,10 @@ export default function AuditScope() {
         <ol className="mt-8 grid gap-4 sm:grid-cols-2">
           {SCOPE.cards.map((c, i) => (
             <li key={c.title} className="rounded-xl border border-[#dcd8cf] p-6">
-              <span className="font-heading text-sm font-semibold tabular-nums text-[#555a66]">
+              <span className="font-heading text-sm font-bold tabular-nums text-[#555a66]">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-2 font-heading text-lg font-semibold text-[#14161c]">{c.title}</h3>
+              <h3 className="mt-2 font-heading text-lg font-bold text-[#14161c]">{c.title}</h3>
               <p className="mt-2 text-[#3a3e48]">{c.body}</p>
             </li>
           ))}
