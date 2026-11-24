@@ -21,6 +21,7 @@ import BlogArticleKonwersja from "./pages/BlogArticleKonwersja";
 import AIOPage from "./pages/AIOPage";
 import DynamicPage from "./pages/DynamicPage";
 import AuthorPage from "./pages/AuthorPage";
+import AiCommerceAuditPage from "./pages/AiCommerceAuditPage";
 
 function Router() {
   return (
@@ -38,6 +39,8 @@ function Router() {
       <Route path={"/blog/jak-zwiekszac-konwersje-ecommerce"} component={BlogArticleKonwersja} />
       <Route path={"/aio"} component={AIOPage} />
       <Route path={"/mateusz-nowotka"} component={AuthorPage} />
+      {/* Must stay above /:slug, which would otherwise catch it. */}
+      <Route path={"/audyt-ai-dla-sklepu"} component={AiCommerceAuditPage} />
 
       <Route path={"/:slug"} component={DynamicPage} />
       

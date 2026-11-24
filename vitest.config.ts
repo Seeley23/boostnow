@@ -12,6 +12,8 @@ export default defineConfig({
       "@assets": path.resolve(templateRoot, "attached_assets"),
     },
   },
+  // React 17+ JSX transform, so tests can render client components.
+  esbuild: { jsx: "automatic" },
   test: {
     environment: "node",
     include: ["server/**/*.test.ts", "server/**/*.spec.ts"],

@@ -17,6 +17,7 @@ const STATIC_PAGES = [
   { loc: 'https://boostnow.pl/', priority: '1.0', changefreq: 'weekly' },
   { loc: 'https://boostnow.pl/aio', priority: '0.9', changefreq: 'weekly' },
   { loc: 'https://boostnow.pl/aio-ecommerce', priority: '0.8', changefreq: 'weekly' },
+  { loc: 'https://boostnow.pl/audyt-ai-dla-sklepu', priority: '0.8', changefreq: 'monthly' },
   { loc: 'https://boostnow.pl/blog', priority: '0.9', changefreq: 'daily' },
   { loc: 'https://boostnow.pl/glossary', priority: '0.7', changefreq: 'monthly' },
   { loc: 'https://boostnow.pl/calculator', priority: '0.7', changefreq: 'monthly' },
