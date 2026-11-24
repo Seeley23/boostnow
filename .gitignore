@@ -107,3 +107,6 @@ temp/
 *.sqlite3
 .project-config.json
 .lighthouseci/
+
+# Downloaded at build time by scripts/download-fonts.cjs
+client/public/fonts/
