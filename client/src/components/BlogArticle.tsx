@@ -1,10 +1,11 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useParams, useLocation } from 'wouter';
+import { useParams, useLocation, Link } from 'wouter';
 import { motion } from 'framer-motion';
 import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
 import { renderMarkdown } from '@shared/markdown';
+import { AUDIT_ARTICLE_LINKS, AUDIT_CTA_HEADING, AUDIT_CTA_TEXT, AUDIT_URL_PATH } from '@shared/auditLinks';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
@@ -288,6 +289,16 @@ const BlogArticle: React.FC = () => {
                 </div>
               </div>
             </motion.div>
+
+            {id && AUDIT_ARTICLE_LINKS[id] && (
+              <div className="bg-[#141829] border border-[#c7ff4e]/40 rounded-lg p-8 mb-8">
+                <h3 className="text-2xl font-bold text-white mb-3 font-playfair">{AUDIT_CTA_HEADING}</h3>
+                <p className="text-[#c9cdd6] mb-6">{AUDIT_CTA_TEXT}</p>
+                <Link href={AUDIT_URL_PATH} className="inline-block px-8 py-3 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-bold hover:bg-white transition-colors">
+                  {AUDIT_ARTICLE_LINKS[id]} →
+                </Link>
+              </div>
+            )}
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-r from-[#c7ff4e]/10 to-[#00c88a]/10 border border-[#c7ff4e]/20 rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-3 font-playfair">Gotowy na transformację?</h3>

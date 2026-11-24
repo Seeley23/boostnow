@@ -1034,6 +1034,13 @@ export default function AIOPage() {
               Wypełnij formularz. Odezwiemy się w ciągu 24h.
             </p>
             <ContactForm />
+            <p className="mt-10 text-center text-sm" style={{ color: "rgba(247,248,250,0.7)" }}>
+              Prowadzisz sklep internetowy? Zacznij od{" "}
+              <Link href="/audyt-ai-dla-sklepu" className="font-semibold underline underline-offset-2" style={{ color: LIME }}>
+                bezpłatnego audytu sklepu pod ChatGPT i AI
+              </Link>
+              .
+            </p>
           </FadeIn>
         </div>
       </section>

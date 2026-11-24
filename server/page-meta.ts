@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { FAQ as AUDIT_FAQ } from "../client/src/components/audit/auditCopy";
+import { FAQ as AUDIT_FAQ, SEO as AUDIT_SEO } from "../client/src/components/audit/auditCopy";
 
 const BASE = "https://boostnow.pl";
 
@@ -41,21 +41,72 @@ function findArticlesMetadata(): any[] {
 
 const ORG = { "@type": "Organization", name: "BoostNow", url: BASE };
 
-// FAQ on /audyt-ai-dla-sklepu: same questions as the visible page.
-const AUDIT_FAQ_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: AUDIT_FAQ.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
 const FOUNDER = {
   "@type": "Person",
   name: "Mateusz Nowotka",
   jobTitle: "CEO",
   url: BASE + "/mateusz-nowotka",
+};
+
+// /audyt-ai-dla-sklepu: one @graph built from the page copy, so the FAQ and
+// texts in JSON-LD always match what the page shows.
+const AUDIT_URL = AUDIT_SEO.canonical;
+const AUDIT_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": AUDIT_URL + "#webpage",
+      url: AUDIT_URL,
+      name: AUDIT_SEO.title,
+      description: AUDIT_SEO.description,
+      inLanguage: "pl-PL",
+      datePublished: AUDIT_SEO.datePublished,
+      dateModified: AUDIT_SEO.dateModified,
+      isPartOf: { "@type": "WebSite", "@id": BASE + "/#website", url: BASE + "/", name: "BoostNow" },
+      author: { "@type": "Person", "@id": BASE + "/mateusz-nowotka#person", name: "Mateusz Nowotka", url: BASE + "/mateusz-nowotka" },
+      publisher: { "@id": BASE + "/#organization" },
+      about: { "@id": AUDIT_URL + "#service" },
+      breadcrumb: { "@id": AUDIT_URL + "#breadcrumb" },
+    },
+    {
+      "@type": "Service",
+      "@id": AUDIT_URL + "#service",
+      name: "Bezpłatny audyt sklepu pod ChatGPT i AI",
+      serviceType: "Audyt gotowości sklepu internetowego na wyszukiwarki AI",
+      description:
+        "Sprawdzenie, czy ChatGPT, Gemini, Perplexity i Google AI Overviews mogą znaleźć, zrozumieć i porównać ofertę sklepu internetowego. Wynik: najważniejszy problem i trzy priorytety.",
+      url: AUDIT_URL,
+      provider: { "@type": "Organization", "@id": BASE + "/#organization", name: "BoostNow", url: BASE },
+      areaServed: { "@type": "Country", name: "Polska" },
+      audience: { "@type": "BusinessAudience", audienceType: "Właściciele sklepów internetowych" },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "PLN",
+        url: AUDIT_URL + "#audyt-formularz",
+        availability: "https://schema.org/InStock",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": AUDIT_URL + "#faq",
+      mainEntity: AUDIT_FAQ.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": AUDIT_URL + "#breadcrumb",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "BoostNow", item: BASE + "/" },
+        { "@type": "ListItem", position: 2, name: "AIO dla e-commerce", item: BASE + "/aio" },
+        { "@type": "ListItem", position: 3, name: "Audyt sklepu pod ChatGPT i AI", item: AUDIT_URL },
+      ],
+    },
+  ],
 };
 
 function serviceSchema(name: string, description: string, routePath: string): any {
@@ -132,11 +183,10 @@ function buildMetaMap(): Record<string, PageMeta> {
       canonical: BASE + "/aio",
     },
     "/audyt-ai-dla-sklepu": {
-      title: "Bezpłatny audyt sklepu internetowego w ChatGPT | BoostNow",
-      description:
-        "Sprawdź, czy Twój sklep jest przygotowany na zdobywanie klientów z ChatGPT i agentów zakupowych AI. Odbierz bezpłatny audyt i poznaj najważniejsze priorytety.",
-      canonical: BASE + "/audyt-ai-dla-sklepu",
-      schema: [AUDIT_FAQ_SCHEMA],
+      title: AUDIT_SEO.title,
+      description: AUDIT_SEO.description,
+      canonical: AUDIT_SEO.canonical,
+      schema: [AUDIT_SCHEMA],
     },
     "/calculator": {
       title: "Kalkulator ROI Marketingowego | BoostNow",

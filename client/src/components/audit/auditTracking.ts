@@ -7,7 +7,7 @@
 import { trackEvent } from "@/lib/analytics";
 import type { LandingVariant } from "./auditCopy";
 
-const VARIANT_KEY = "boostnow_audit_variant";
+export const VARIANT_KEY = "boostnow_audit_variant";
 const ATTRIBUTION_KEY = "boostnow_audit_attribution";
 
 export type Attribution = {

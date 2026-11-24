@@ -20,6 +20,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { renderMarkdown } from "../shared/markdown";
+import { HERO_VARIANTS } from "../client/src/components/audit/auditCopy";
+import { VARIANT_KEY } from "../client/src/components/audit/auditTracking";
+import { AUDIT_ARTICLE_LINKS, AUDIT_CTA_HEADING, AUDIT_CTA_TEXT, AUDIT_URL_PATH } from "../shared/auditLinks";
 import { getMetaForPath } from "../server/page-meta";
 
 const ROOT = process.cwd();
@@ -99,6 +102,7 @@ function articlePage(slug: string, meta: { title: string; description: string })
         <h1>${esc(title)}</h1>
         <p>${a?.date ? `<time datetime="${esc(a.date)}">${esc(a.date)}</time> · ` : ""}Autor: <a href="/mateusz-nowotka">Mateusz Nowotka</a></p>
         <div class="article-body">${a?.content ? renderMarkdown(a.content) : `<p>${esc(meta.description)}</p>`}</div>
+        ${AUDIT_ARTICLE_LINKS[slug] ? `<aside><h2>${esc(AUDIT_CTA_HEADING)}</h2><p>${esc(AUDIT_CTA_TEXT)} <a href="${AUDIT_URL_PATH}">${esc(AUDIT_ARTICLE_LINKS[slug])}</a></p></aside>` : ""}
       </article>
       <aside>
         <h2>Powiązane artykuły</h2>
@@ -217,10 +221,33 @@ function render(route: string): string | null {
     .replace('<div id="root"></div>', `<div id="root"><div data-prerender class="pr">${header}${body}${footer}</div></div>`);
 }
 
+/**
+ * /audyt-ai-dla-sklepu runs an A/B test on the hero. The static HTML holds
+ * variant A; this inline script (runs during parsing, before first paint)
+ * applies the visitor's variant with the same storage key and ?wariant=
+ * override as auditTracking.ts. React then renders identical text, so the
+ * swap causes no flash and no late LCP.
+ */
+function auditHeroScript(): string {
+  const b = HERO_VARIANTS.B;
+  const data = JSON.stringify({ h1: b.h1, lead: b.lead, supporting: b.supporting, cta: b.cta, microcopy: b.microcopy })
+    .replace(/</g, "\\u003c");
+  return `<script>(function(){try{var k=${JSON.stringify(VARIANT_KEY)},q=(new URLSearchParams(location.search).get("wariant")||"").toUpperCase(),v=q==="A"||q==="B"?q:null;if(!v){v=localStorage.getItem(k);if(v!=="A"&&v!=="B"){v=Math.random()<0.5?"A":"B";localStorage.setItem(k,v)}}if(v!=="B")return;var t=${data};document.querySelectorAll("[data-hero]").forEach(function(e){var n=t[e.getAttribute("data-hero")];if(n)e.textContent=n})}catch(e){}})();</script>`;
+}
+
+function withAuditHeroScript(route: string, html: string): string {
+  if (route !== "/audyt-ai-dla-sklepu") return html;
+  const heroEnd = html.indexOf("</section>", html.indexOf('id="audit-h1"'));
+  if (heroEnd < 0) return html;
+  const at = heroEnd + "</section>".length;
+  return html.slice(0, at) + auditHeroScript() + html.slice(at);
+}
+
 let ok = 0;
 const skipped: string[] = [];
 for (const route of routes) {
-  const html = render(route);
+  const rendered = render(route);
+  const html = rendered && withAuditHeroScript(route, rendered);
   if (!html) {
     skipped.push(route);
     continue;
