@@ -18,6 +18,7 @@ import CalculatorPage from "./pages/CalculatorPage";
 import Regulamin from "./pages/Regulamin";
 import PolitykaPrywatnosci from "./pages/PolitykaPrywatnosci";
 import PolitykaCookies from "./pages/PolitykaCookies";
+import AiCommerceAuditPage from "./pages/AiCommerceAuditPage";
 
 const PAGES: Record<string, ComponentType> = {
   "/aio": AIOPage,
@@ -27,6 +28,7 @@ const PAGES: Record<string, ComponentType> = {
   "/regulamin": Regulamin,
   "/polityka-prywatnosci": PolitykaPrywatnosci,
   "/polityka-cookies": PolitykaCookies,
+  "/audyt-ai-dla-sklepu": AiCommerceAuditPage,
 };
 
 export function render(route: string): string | null {

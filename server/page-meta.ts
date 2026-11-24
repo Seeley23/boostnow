@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { FAQ as AUDIT_FAQ } from "../client/src/components/audit/auditCopy";
 
 const BASE = "https://boostnow.pl";
 
@@ -39,6 +40,17 @@ function findArticlesMetadata(): any[] {
 // ── Service schema for offer pages (Agency/B2B requires Organization + Service)
 
 const ORG = { "@type": "Organization", name: "BoostNow", url: BASE };
+
+// FAQ on /audyt-ai-dla-sklepu: same questions as the visible page.
+const AUDIT_FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: AUDIT_FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 const FOUNDER = {
   "@type": "Person",
   name: "Mateusz Nowotka",
@@ -118,6 +130,13 @@ function buildMetaMap(): Record<string, PageMeta> {
       description:
         "Zwiększ sprzedaż w sklepie internetowym dzięki AI Optimization. BoostNow pomaga e-commerce zdominować wyszukiwarki AI: ChatGPT, Perplexity, Gemini. Darmowy audyt.",
       canonical: BASE + "/aio",
+    },
+    "/audyt-ai-dla-sklepu": {
+      title: "Bezpłatny audyt sklepu internetowego w ChatGPT | BoostNow",
+      description:
+        "Sprawdź, czy Twój sklep jest przygotowany na zdobywanie klientów z ChatGPT i agentów zakupowych AI. Odbierz bezpłatny audyt i poznaj najważniejsze priorytety.",
+      canonical: BASE + "/audyt-ai-dla-sklepu",
+      schema: [AUDIT_FAQ_SCHEMA],
     },
     "/calculator": {
       title: "Kalkulator ROI Marketingowego | BoostNow",

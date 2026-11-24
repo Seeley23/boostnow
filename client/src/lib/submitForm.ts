@@ -5,7 +5,23 @@
  */
 export type FormPayload =
   | { form: "contact"; name: string; email: string; company?: string; message: string; website?: string }
-  | { form: "aio"; name: string; email: string; domain: string; industry?: string; website?: string };
+  | { form: "aio"; name: string; email: string; domain: string; industry?: string; website?: string }
+  | {
+      form: "audit";
+      storeUrl: string;
+      firstName: string;
+      email: string;
+      platform?: string;
+      operationalConsent: boolean;
+      marketingConsent: boolean;
+      landingVariant: "A" | "B";
+      utmSource?: string;
+      utmMedium?: string;
+      utmCampaign?: string;
+      utmContent?: string;
+      referrer?: string;
+      website?: string;
+    };
 
 export async function submitForm(payload: FormPayload): Promise<void> {
   let res: Response;
