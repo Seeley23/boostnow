@@ -19,7 +19,7 @@ describe("/pozycjonowanie-geo service page", () => {
 
   it("renders the offer, the price and the form anchor", () => {
     expect(html).toContain("<h1");
-    expect(html).toContain("od 800 zł miesięcznie");
+    expect(html).toContain("od 800 zł netto miesięcznie");
     expect(html).toContain("Bezpłatny audyt na start");
     expect(html).toContain(`id="${GEO_FORM_ID}"`);
     expect(html).toContain('name="siteUrl"');
