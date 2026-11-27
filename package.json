@@ -12,7 +12,7 @@
     "check": "tsc --noEmit",
     "format": "prettier --write .",
     "test": "vitest run",
-    "lint:articles": "node scripts/article-lint.mjs drafts/jak-pojawic-sie-w-chatgpt.md drafts/jak-pojawic-sie-w-google-ai-mode.md drafts/chatgpt-nie-widzi-mojej-strony.md",
+    "lint:articles": "node scripts/article-lint.mjs drafts/jak-pojawic-sie-w-chatgpt.md drafts/jak-pojawic-sie-w-google-ai-mode.md drafts/chatgpt-nie-widzi-mojej-strony.md drafts/ile-kosztuje-pozycjonowanie.md drafts/seo-dla-sklepu-internetowego.md drafts/geo-co-to-jest.md",
     "db:push": "drizzle-kit generate && drizzle-kit migrate",
     "prerender": "tsx scripts/prerender-site.ts"
   },
