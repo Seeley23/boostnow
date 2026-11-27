@@ -1,6 +1,6 @@
 Tryb AI Google odpowiada na pytanie, zanim klient zobaczy listę stron.
 
-**W tym artykule:**
+**Spis treści:**
 - [Czym jest Tryb AI Google (AI Mode)?](#czym-jest)
 - [Czy do Trybu AI trzeba coś zgłosić?](#zgloszenie)
 - [5 kroków, żeby pojawić się w Trybie AI](#kroki)
@@ -12,34 +12,38 @@ Tryb AI Google odpowiada na pytanie, zanim klient zobaczy listę stron.
 ---
 
 > **Krótka odpowiedź**
-> Żeby pojawić się w Trybie AI Google (AI Mode), strona musi być w indeksie Google i może pokazywać fragmenty w wynikach. Google nie wymaga specjalnego zgłoszenia ani znaczników. Liczą się te same zasady co w SEO: treść, która jasno odpowiada na pytania klientów, także na pytania dodatkowe. Ruch z Trybu AI widać w Search Console razem z ruchem z wyszukiwarki.
+> Żeby pojawić się w Trybie AI Google (AI Mode), strona musi być w indeksie Google i pokazywać fragmenty w wynikach. Google nie wymaga zgłoszenia ani specjalnych znaczników. Liczą się zasady SEO: treść, która jasno odpowiada na pytania klientów, także na pytania dodatkowe. Ruch z Trybu AI widać w Search Console razem z ruchem z wyszukiwarki.
 > *Aktualizacja: listopad 2026*
 
 ---
 
-Większość poradników o Trybie AI tłumaczy, jak go włączyć. Ten artykuł jest dla właściciela firmy, który chce, żeby Tryb AI polecał jego stronę. Znajdziesz tu 5 kroków, prosty test i sposób pomiaru.
+Łatwo uwierzyć, że Tryb AI wymaga specjalnej optymalizacji: nowego pliku, znaczników albo zgłoszenia.
+
+Google mówi co innego. Do Trybu AI nie ma zgłoszenia ani osobnych znaczników.
+
+Wygrywa strona, która odpowiada na pytanie klienta. I na pytania, których klient jeszcze nie zadał.
 
 ---
 
 ## Czym jest Tryb AI Google (AI Mode)? {#czym-jest}
 
-Tryb AI to sposób wyszukiwania w Google, w którym odpowiedź pisze sztuczna inteligencja. Użytkownik zadaje pytanie, a Google układa odpowiedź z linkami do stron. Można dopytywać jak w czacie.
+Tryb AI to wyszukiwanie w Google, w którym odpowiedź pisze sztuczna inteligencja. Użytkownik zadaje pytanie, a Google układa odpowiedź z linkami do stron. Można dopytywać jak w czacie.
 
-Tryb AI różni się od Przeglądu od AI (AI Overviews). Przegląd od AI pojawia się nad zwykłymi wynikami. Tryb AI to osobny widok, w którym zwykłej listy wyników nie ma na pierwszym planie.
+Tryb AI to co innego niż Przegląd od AI (AI Overviews). Przegląd od AI pojawia się nad zwykłymi wynikami. Tryb AI to osobny widok, w którym lista wyników schodzi na dalszy plan.
 
-Dla firmy oznacza to jedno: klient może wybrać dostawcę bez wejścia na listę 10 linków. Liczy się, czy Twoja strona jest wśród źródeł odpowiedzi.
+**Dlaczego to ważne?** Klient może wybrać firmę bez oglądania listy 10 linków. Liczy się tylko to, czy Twoja strona jest wśród źródeł odpowiedzi.
 
 ---
 
 ## Czy do Trybu AI trzeba coś zgłosić? {#zgloszenie}
 
-Nie. Google nie ma formularza ani płatnego wpisu do Trybu AI. Strona musi spełniać dwa warunki:
+Nie. Google nie ma formularza ani płatnego wpisu do Trybu AI. Strona musi spełnić dwa warunki:
 - być w indeksie Google;
-- móc pokazywać fragment tekstu w wynikach wyszukiwania.
+- pokazywać fragment tekstu w wynikach wyszukiwania.
 
-Google w poradniku dla właścicieli stron pisze, że zasady SEO nadal obowiązują przy funkcjach AI. Nie trzeba dodawać specjalnych znaczników ani pliku dla AI.
+Google w poradniku dla właścicieli stron pisze, że zasady SEO obowiązują też przy funkcjach AI. Nie trzeba dodawać osobnych znaczników ani pliku dla AI.
 
-Fragmenty możesz wyłączyć znacznikiem `nosnippet`. Wtedy strona nie pokaże się jako źródło w funkcjach AI. Sprawdź, czy nie masz go na ważnych podstronach.
+Jest jeden wyjątek. Znacznik `nosnippet` wyłącza fragmenty, więc strona nie trafi do odpowiedzi AI. Sprawdź, czy nie ma go na ważnych podstronach.
 
 ---
 
@@ -47,29 +51,37 @@ Fragmenty możesz wyłączyć znacznikiem `nosnippet`. Wtedy strona nie pokaże 
 
 ### 1. Sprawdź, czy strona jest w indeksie
 
-W Search Console wpisz adres podstrony w pole „Sprawdź adres URL”. Status musi brzmieć „Strona jest zindeksowana”. Jeśli nie jest, poproś o zindeksowanie.
+Tryb AI korzysta tylko ze stron z indeksu Google. W Search Console wpisz adres podstrony w pole „Sprawdź adres URL”.
+
+Status musi brzmieć „Strona jest zindeksowana”. Jeśli brzmi inaczej, kliknij „Poproś o zindeksowanie”.
 
 ### 2. Odpowiadaj na pytanie w pierwszych zdaniach
 
-Każda podstrona usługi powinna zaczynać się od jasnej odpowiedzi. Kto, co, gdzie, za ile. Tryb AI wybiera fragmenty, które same odpowiadają na pytanie.
+Tryb AI wybiera fragmenty, które same odpowiadają na pytanie. Każda podstrona usługi zaczyna się więc od odpowiedzi: kto, co, gdzie, za ile.
 
 ### 3. Odpowiadaj też na pytania dodatkowe
 
-Tryb AI rozbija pytanie na kilka mniejszych. Google nazywa to „query fan-out”. Klient pyta o usługę, a Google szuka też cen, opinii i porównań. Dodaj na stronie krótkie sekcje: cena, czas realizacji, obszar działania, najczęstsze pytania.
+Tryb AI rozbija pytanie klienta na kilka mniejszych. Google nazywa to „query fan-out”. Klient pyta o usługę, a Google szuka też cen, opinii i porównań.
 
-W naszej Search Console widzimy dziesiątki długich pytań w stylu „jaka agencja w Polsce zajmuje się GEO?”, każde z 1 wyświetleniem. To najpewniej właśnie takie zapytania pomocnicze albo zapytania narzędzi do śledzenia AI.
+Dodaj na stronie krótkie sekcje: cena, czas realizacji, obszar działania, najczęstsze pytania.
+
+Widzimy to w naszej Search Console. Pojawiają się tam dziesiątki długich pytań w stylu „jaka agencja w Polsce zajmuje się GEO?”, każde z 1 wyświetleniem. To najpewniej takie zapytania pomocnicze albo zapytania narzędzi do śledzenia AI.
 
 ### 4. Opisz firmę danymi strukturalnymi
 
-Dane strukturalne (schema.org) to opis firmy w kodzie strony. Dodaj typ `LocalBusiness` lub `Organization` z nazwą, adresem i telefonem. Dane muszą zgadzać się z treścią widoczną na stronie.
+Dane strukturalne (schema.org) to opis firmy w kodzie strony. Dodaj typ `LocalBusiness` lub `Organization` z nazwą, adresem i telefonem. Dane muszą zgadzać się z tekstem na stronie.
 
 ### 5. Zadbaj o wizytówkę Google i opinie
 
-Przy pytaniach lokalnych Google korzysta z wizytówek firm. Uzupełnij usługi, godziny i zdjęcia. Odpowiadaj na opinie. Nazwa i adres muszą być takie same jak na stronie.
+Przy pytaniach lokalnych Google korzysta z wizytówek firm. Uzupełnij usługi, godziny i zdjęcia.
+
+Odpowiadaj na opinie. Nazwa i adres w wizytówce muszą być takie same jak na stronie.
 
 ---
 
 ## Jak sprawdzić, czy jesteś w Trybie AI? {#test}
+
+Wystarczy 5 minut i jedno pytanie, które zadaje Twój klient.
 
 1. Otwórz google.com i wybierz „Tryb AI”.
 2. Zadaj pytanie klienta bez nazwy swojej firmy, np. „Jaka firma od [usługa] w [miasto] jest dobra?”.
@@ -81,8 +93,8 @@ Przy pytaniach lokalnych Google korzysta z wizytówek firm. Uzupełnij usługi, 
 
 ## Jak mierzyć ruch z Trybu AI? {#pomiar}
 
-Google podaje, że ruch z Trybu AI wlicza się do ruchu z wyszukiwarki w Search Console. Nie ma osobnego filtra „Tryb AI”. Dlatego mierz trzy rzeczy:
-- **Search Console:** długie pytania w raporcie „Zapytania”. Rosnąca liczba pytań w formie zdań to sygnał, że Google używa Twojej strony w odpowiedziach.
+Google wlicza ruch z Trybu AI do ruchu z wyszukiwarki w Search Console. Osobnego filtra „Tryb AI” nie ma. Dlatego mierz trzy rzeczy:
+- **Search Console:** długie pytania w raporcie „Zapytania”. Gdy przybywa pytań w formie zdań, Google częściej używa Twojej strony w odpowiedziach.
 - **Test ręczny:** te same pytania co miesiąc, ze zrzutami.
 - **Formularz:** pole „Skąd o nas wiesz?” z opcją „Google / AI”.
 
@@ -118,7 +130,7 @@ Tak. Znacznik `nosnippet` blokuje pokazywanie fragmentów, także w funkcjach AI
 
 ## Sprawdź, czy Google AI poleca Twoją firmę
 
-Test z tego artykułu pokazuje, czy Tryb AI Cię poleca. Sprawdzimy, dlaczego może Cię pomijać, i wskażemy 3 rzeczy do poprawy.
+Test pokazuje, czy Tryb AI Cię poleca. Sprawdzimy, dlaczego może Cię pomijać, i wskażemy 3 rzeczy do poprawy.
 
 **[Napisz do nas →](/kontakt)** · Prowadzisz sklep? **[Bezpłatny audyt sklepu pod ChatGPT i AI →](/audyt-ai-dla-sklepu)**
 
