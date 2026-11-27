@@ -84,7 +84,7 @@ Tak. Caruma, klient BoostNow z niszowej kategorii DPP, osiągnęła cytowania w 
 Featured Snippet i Google AI Overview reagują w 4-12 tygodni od wdrożenia. Caruma osiągnęła pierwsze cytowania w Google AI Overview w 90 dni. RudStudio — panel boczny AI Overview w podobnym czasie. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)
 
 **Ile kosztuje wdrożenie AEO?**
-BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie. AEO jest integralną częścią każdego pakietu — nie sprzedajemy osobno, bo wszystkie trzy warstwy razem decydują o widoczności. → [Cennik BoostNow →](/blog/ile-kosztuje-pozycjonowanie)
+BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. AEO jest integralną częścią każdego pakietu — nie sprzedajemy osobno, bo wszystkie trzy warstwy razem decydują o widoczności. → [Cennik BoostNow →](/blog/ile-kosztuje-pozycjonowanie)
 
 ---
 

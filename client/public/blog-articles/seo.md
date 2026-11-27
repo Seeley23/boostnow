@@ -126,7 +126,7 @@ Tak, ale **w nowej formie**. Klasyczne SEO (tylko pod Google) obsługuje ~60% za
 Warstwa techniczna: 4-12 tygodni. Warstwa AI (GEO + AEO): 4-12 tygodni. Warstwa content: 3-9 miesięcy. Warstwa autorytet: 6-18 miesięcy. **Pełne efekty SEO 6-12 miesięcy.** Caruma osiągnęła globalną widoczność w 90 dni — to możliwe dzięki priorytetowi warstw 1, 2 i 4 nad warstwą 3 (autorytet domeny). → [Pozycjonowanie GEO →](/blog/pozycjonowanie-geo)
 
 **Ile kosztuje SEO miesięcznie?**
-W Polsce 1 500-15 000 PLN miesięcznie zależnie od branży, miasta i zakresu (ile warstw). BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN. Najwyższe stawki dla Warszawy i e-commerce; niższe dla małych firm lokalnych. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+W Polsce 1 500-15 000 PLN miesięcznie zależnie od branży, miasta i zakresu (ile warstw). BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. Najwyższe stawki dla Warszawy i e-commerce; niższe dla małych firm lokalnych. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy mogę robić SEO sam?**
 Technicznie tak. Praktycznie wymaga ścisłej koordynacji czterech warstw, monitoringu narzędziami (Ahrefs/Semrush/Google Search Console), znajomości E-E-A-T, Schema, GEO. **Błędnie wdrożone SEO może aktywnie szkodzić** — cofnięcie efektów trwa miesiące. BoostNow projektuje SEO jako zintegrowaną strategię z monitoringiem, nie checklistę do samodzielnego wdrożenia. → [Bezpłatna konsultacja →](/kontakt)

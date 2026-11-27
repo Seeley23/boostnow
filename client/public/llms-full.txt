@@ -596,7 +596,7 @@ Cztery rzeczy, które **nie są** optymalizacją SEO, ale w Polsce są często s
 - **„Optymalizacja contentu" = wstawianie fraz co 3 zdania** — keyword stuffing dziś szkodzi, nie pomaga
 - **„Audyt" obejmujący tylko warstwy techniczną i content** — to 50% pełnej optymalizacji, sprzedawane jako 100%
 
-Współczesna optymalizacja SEO to **prawdziwa inwestycja w architekturę marki**, nie usługa „ustawienia frazy". Różnica między tymi dwoma podejściami mierzona jest w 12-24 miesięcach — nie w 4 tygodniach.
+Współczesna optymalizacja SEO to **prawdziwa inwestycja w architekturę marki**, nie usługa „ustawienia frazy". Różnica między tymi dwoma podejściami mierzona jest w 12-24 miesiącach — nie w 4 tygodniach.
 
 ---
 
@@ -1597,11 +1597,11 @@ SEO przekłada się na klientów wtedy, gdy strategia obejmuje trzy obszary jedn
 
 ## Ile klientów tracisz miesięcznie bez SEO? {#tracisz}
 
-Liczba klientów których tracisz bez SEO zależy od Twojej branży i lokalizacji — ale każda firma traci konkretną, mierzalną liczbę. **Strona na pozycji 1 Google dla frazy o 1 000 wyszukiwań miesięcznie zbiera średnio 276 odwiedzin.** Przy konwersji 3% to 8 zapytań ofertowych miesięcznie z jednej frazy. Twoja branża ma zazwyczaj 20-50 wartościowych fraz głównych.
+Liczba klientów których tracisz bez SEO zależy od Twojej branży i lokalizacji — ale każda firma traci konkretną, mierzalną liczbę. **Strona na pozycji 1 Google dla frazy o 1 000 wyszukań miesięcznie zbiera średnio 276 odwiedzin.** Przy konwersji 3% to 8 zapytań ofertowych miesięcznie z jednej frazy. Twoja branża ma zazwyczaj 20-50 wartościowych fraz głównych.
 
 Tabela poniżej pokazuje rozkład kliknięć w Google według pozycji — dane Backlinko (2024):
 
-| Pozycja w Google | % kliknięć | Liczba klientów z 1000 wyszukiwań/mies. |
+| Pozycja w Google | % kliknięć | Liczba klientów z 1000 wyszukań/mies. |
 |---|---|---|
 | 1 | 27.6% | ~276 |
 | 2 | 15.8% | ~158 |
@@ -1609,7 +1609,7 @@ Tabela poniżej pokazuje rozkład kliknięć w Google według pozycji — dane B
 | 4-10 | 5-2% | 50-20 każda |
 | 11+ | <1% | <10 |
 
-Jeśli Twoja firma jest poza pierwszą dziesiątką — tracisz praktycznie
+Jeśli Twoja firma jest poza pierwszą dziesiątką — tracisz praktycznie wsz
 
 ---
 
@@ -1745,7 +1745,7 @@ Tanie pozycjonowanie 200 PLN miesięcznie — strata pieniędzy. Dobre 2 500 PLN
 ---
 
 > **BEZPOŚREDNIA ODPOWIEDŹ**
-> Tanie pozycjonowanie w polskim kontekście oznacza SEO za budżet poniżej 1 500 PLN miesięcznie. Problem: **większość ofert za 200-500 PLN miesięcznie operuje w modelu, który może aktywnie szkodzić** — toksyczne backlinki, auto-generowane treści, shared resources między 50 klientami z identycznymi działaniami. Realnie 200 PLN miesięcznie to około 3 godziny pracy konsultanta SEO (średnia stawka godzinowa konsultanta SEO w Polsce 2025: ~70 PLN netto) — niewystarczające na audyt techniczny, nie mówiąc o pełnej strategii. **Najtańsze pozycjonowanie kosztuje firmę najwięcej w 12-miesięcznej perspektywie** — zmarnowany czas, utracone pozycje, ryzyko Manual Action od Google. BoostNow oferuje pakiety od 2 500 PLN miesięcznie z udokumentowanym ROI: Caruma uzyskała 151 000 wyświetleń w 90 dni z budżetu 7 500 PLN, czyli koszt 5 groszy za wyświetlenie.
+> Tanie pozycjonowanie w polskim kontekście oznacza SEO za budżet poniżej 1 500 PLN miesięcznie. Problem: **większość ofert za 200-500 PLN miesięcznie operuje w modelu, który może aktywnie szkodzić** — toksyczne backlinki, auto-generowane treści, shared resources między 50 klientami z identycznymi działaniami. Realnie 200 PLN miesięcznie to około 3 godziny pracy konsultanta SEO (średnia stawka godzinowa konsultanta SEO w Polsce 2025: ~70 PLN netto) — niewystarczające na audyt techniczny, nie mówiąc o pełnej strategii. **Najtańsze pozycjonowanie kosztuje firmę najwięcej w 12-miesięcznej perspektywie** — zmarnowany czas, utracone pozycje, ryzyko Manual Action od Google. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie z udokumentowanym ROI: Caruma uzyskała 151 000 wyświetleń w 90 dni z budżetu 7 500 PLN, czyli koszt 5 groszy za wyświetlenie.
 > *Zaktualizowano: czerwiec 2026*
 
 ---
@@ -1777,7 +1777,7 @@ Na polskim rynku funkcjonują trzy podstawowe modele „taniego pozycjonowania".
 
 **Model 1: Auto-gen + farmy linków (200-400 PLN/mies).** Agencja generuje masowo treści AI bez weryfikacji jakości, kupuje pakiety linków z farm linkowych. Pozornie efekt jest szybki — pozycje rosną w 4-8 tygodni. Realnie: Google identyfikuje wzorzec w 6-12 miesięcy i nakłada Manual Action (sankcja ręczna). Domena traci całą historyczną widoczność. **Odbudowa po Manual Action zajmuje 12-24 miesiące i wymaga 5-10x wyższego budżetu niż profesjonalne SEO od początku.**
 
-**Model 2: Shared resources (500-1 000 PLN/mies).** Ag
+**Mode
 
 ---
 

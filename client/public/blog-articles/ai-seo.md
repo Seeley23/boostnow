@@ -92,7 +92,7 @@ Nie zastępuje — uzupełnia. Klasyczne SEO obsługuje pozycje w Google (60% wy
 Google AI Overview obsługuje 42% zapytań informacyjnych w trybie zero-click — użytkownik dostaje pełną odpowiedź w wynikach Google bez klikania w żadną stronę (Search Engine Land, Q1 2026). Firma cytowana w AI Overview otrzymuje brand awareness bez clicks. Firma pominięta — nie istnieje dla tej części użytkowników. → [AEO co to jest →](/blog/aeo-co-to-jest)
 
 **Ile kosztuje wdrożenie AI SEO?**
-BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie. To podobne stawki do samego klasycznego SEO w Polsce — ale dostajesz pełną widoczność zamiast 60% rynku. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. To mniej niż typowa cena samego SEO w Polsce — ale dostajesz pełną widoczność zamiast 60% rynku. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy moja mała firma B2B może wyprzedzić dużych konkurentów przez AI SEO?**
 Tak. Caruma (start od zera) jest cytowana w Google AI Overview obok KPMG i Komisji Europejskiej w 90 dni. AI SEO premiuje autorytet encji autora i jakość treści — nie ilość backlinków. To wyrównuje pole gry między małymi i dużymi firmami. → [Bezpłatna konsultacja →](/kontakt)

@@ -42,11 +42,11 @@ SEO przekłada się na klientów wtedy, gdy strategia obejmuje trzy obszary jedn
 
 ## Ile klientów tracisz miesięcznie bez SEO? {#tracisz}
 
-Liczba klientów których tracisz bez SEO zależy od Twojej branży i lokalizacji — ale każda firma traci konkretną, mierzalną liczbę. **Strona na pozycji 1 Google dla frazy o 1 000 wyszukiwań miesięcznie zbiera średnio 276 odwiedzin.** Przy konwersji 3% to 8 zapytań ofertowych miesięcznie z jednej frazy. Twoja branża ma zazwyczaj 20-50 wartościowych fraz głównych.
+Liczba klientów których tracisz bez SEO zależy od Twojej branży i lokalizacji — ale każda firma traci konkretną, mierzalną liczbę. **Strona na pozycji 1 Google dla frazy o 1 000 wyszukań miesięcznie zbiera średnio 276 odwiedzin.** Przy konwersji 3% to 8 zapytań ofertowych miesięcznie z jednej frazy. Twoja branża ma zazwyczaj 20-50 wartościowych fraz głównych.
 
 Tabela poniżej pokazuje rozkład kliknięć w Google według pozycji — dane Backlinko (2024):
 
-| Pozycja w Google | % kliknięć | Liczba klientów z 1000 wyszukiwań/mies. |
+| Pozycja w Google | % kliknięć | Liczba klientów z 1000 wyszukań/mies. |
 |---|---|---|
 | 1 | 27.6% | ~276 |
 | 2 | 15.8% | ~158 |
@@ -80,7 +80,7 @@ Co to jest SEO — to skrót od Search Engine Optimization, optymalizacja strony
 Pierwsze efekty SEO pojawiają się po 3-6 miesiącach. Pełne rezultaty dla większości firm — po 9-18 miesiącach. BoostNow doprowadził Caruma do 151 000 wyświetleń w 90 dni — to szybciej niż branżowa średnia, dzięki dodaniu GEO do strategii. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)
 
 **Ile kosztuje SEO w Polsce?**
-SEO w Polsce kosztuje 800-15 000 PLN miesięcznie w zależności od skali. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+SEO w Polsce kosztuje 800-15 000 PLN miesięcznie w zależności od skali. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy SEO ma sens w 2026 z AI search?**
 Tak — Google nadal obsługuje 60% wyszukiwań. SEO uzupełnione o GEO i AEO (widoczność w ChatGPT, Perplexity, Google AI Mode) to pełna strategia widoczności na 2026. Bez SEO tracisz ten ruch. → [Co to jest GEO →](/blog/geo-co-to-jest)

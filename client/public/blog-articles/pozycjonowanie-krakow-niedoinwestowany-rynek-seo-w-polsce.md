@@ -76,7 +76,7 @@ Cztery pytania które warto zadać każdej agencji SEO w Krakowie przed podpisan
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje pozycjonowanie w Krakowie?**
-Pozycjonowanie Kraków kosztuje 800-4 500 PLN miesięcznie. Niższe koszty niż w Warszawie ze względu na niższą lokalną konkurencję. BoostNow oferuje pełne pakiety SEO + GEO + AEO od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Pozycjonowanie Kraków kosztuje 800-4 500 PLN miesięcznie. Niższe koszty niż w Warszawie ze względu na niższą lokalną konkurencję. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Jak szybko zobaczę efekty SEO w Krakowie?**
 Dzięki niższej lokalnej konkurencji niż w Warszawie pierwsze efekty pojawiają się szybciej — zazwyczaj 3-5 miesięcy dla większości branż. Caruma osiągnęła globalną widoczność w 90 dni. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

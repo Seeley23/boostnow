@@ -83,7 +83,7 @@ W 2026 większość agencji SEO doda do oferty hasło „SEO AI” — ale tylko
 Agencja SEO AI to agencja łącząca klasyczne SEO z GEO (Generative Engine Optimization) i AEO (Answer Engine Optimization) w jednej zintegrowanej strategii. Obsługuje pełny rynek wyszukiwań — Google (60%) + AI search (40%). → [Co to jest GEO →](/blog/geo-co-to-jest)
 
 **Czy agencja SEO AI jest droższa niż tradycyjna?**
-Nie znacząco. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie — podobnie do średniej rynkowej dla samego SEO. Różnica polega na zakresie: dostajesz pełną widoczność zamiast 60% rynku. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Nie. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie, czyli mniej niż średnia rynkowa za samo SEO. Różnica polega na zakresie: dostajesz pełną widoczność zamiast 60% rynku. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy moja firma potrzebuje agencji SEO AI, czy wystarczy tradycyjna?**
 W 2026 — większość firm B2B i e-commerce potrzebuje pełnej strategii SEO + GEO + AEO. Wyjątek: hyperlokalne usługi bez komponentu informacyjnego (np. mechanik samochodowy w małym mieście). Dla 80% firm tradycyjne SEO to już niepełna oferta. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

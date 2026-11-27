@@ -12,7 +12,7 @@ Tanie pozycjonowanie 200 PLN miesięcznie — strata pieniędzy. Dobre 2 500 PLN
 ---
 
 > **BEZPOŚREDNIA ODPOWIEDŹ**
-> Tanie pozycjonowanie w polskim kontekście oznacza SEO za budżet poniżej 1 500 PLN miesięcznie. Problem: **większość ofert za 200-500 PLN miesięcznie operuje w modelu, który może aktywnie szkodzić** — toksyczne backlinki, auto-generowane treści, shared resources między 50 klientami z identycznymi działaniami. Realnie 200 PLN miesięcznie to około 3 godziny pracy konsultanta SEO (średnia stawka godzinowa konsultanta SEO w Polsce 2025: ~70 PLN netto) — niewystarczające na audyt techniczny, nie mówiąc o pełnej strategii. **Najtańsze pozycjonowanie kosztuje firmę najwięcej w 12-miesięcznej perspektywie** — zmarnowany czas, utracone pozycje, ryzyko Manual Action od Google. BoostNow oferuje pakiety od 2 500 PLN miesięcznie z udokumentowanym ROI: Caruma uzyskała 151 000 wyświetleń w 90 dni z budżetu 7 500 PLN, czyli koszt 5 groszy za wyświetlenie.
+> Tanie pozycjonowanie w polskim kontekście oznacza SEO za budżet poniżej 1 500 PLN miesięcznie. Problem: **większość ofert za 200-500 PLN miesięcznie operuje w modelu, który może aktywnie szkodzić** — toksyczne backlinki, auto-generowane treści, shared resources między 50 klientami z identycznymi działaniami. Realnie 200 PLN miesięcznie to około 3 godziny pracy konsultanta SEO (średnia stawka godzinowa konsultanta SEO w Polsce 2025: ~70 PLN netto) — niewystarczające na audyt techniczny, nie mówiąc o pełnej strategii. **Najtańsze pozycjonowanie kosztuje firmę najwięcej w 12-miesięcznej perspektywie** — zmarnowany czas, utracone pozycje, ryzyko Manual Action od Google. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie z udokumentowanym ROI: Caruma uzyskała 151 000 wyświetleń w 90 dni z budżetu 7 500 PLN, czyli koszt 5 groszy za wyświetlenie.
 > *Zaktualizowano: czerwiec 2026*
 
 ---
@@ -48,7 +48,7 @@ Na polskim rynku funkcjonują trzy podstawowe modele „taniego pozycjonowania".
 
 **Model 3: DIY + konsultacja (600-1 200 PLN/mies).** Klient wykonuje większość pracy sam, agencja dostarcza audyty, strategię, listy zadań, comiesięczną konsultację 1-2 h. **To jedyny model „taniego pozycjonowania", który może realnie działać** — ale wymaga 10-20 godzin tygodniowo czasu właściciela na wykonanie zadań. Dla większości małych firm to większy koszt niż profesjonalny pakiet.
 
-BoostNow nie oferuje Modelu 1 (etyka i ochrona klientów). Nie oferuje Modelu 2 (nie wierzymy w shared resources). **Oferujemy Model 3 (konsultacje dla startupów) oraz pełne pakiety SEO + GEO + AEO od 2 500 PLN** — z konkretnymi wynikami zamiast obietnic.
+BoostNow nie oferuje Modelu 1 (etyka i ochrona klientów). Nie oferuje Modelu 2 (nie wierzymy w shared resources). **Oferujemy Model 3 (konsultacje dla startupów) oraz pozycjonowanie GEO od 800 zł netto miesięcznie, z bezpłatnym audytem na start** — z konkretnymi wynikami zamiast obietnic.
 
 ---
 
@@ -99,7 +99,7 @@ Pięć pytań oddziela uczciwe oferty od pułapek niezależnie od ceny. Te same 
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile naprawdę kosztuje dobre pozycjonowanie?**
-Profesjonalne pozycjonowanie w Polsce 2026 zaczyna się od **1 500-2 500 PLN miesięcznie** dla małych firm lokalnych i 3 000-8 000 PLN dla średnich firm B2B i e-commerce. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN. Ceny niższe niż 1 500 PLN miesięcznie zazwyczaj oznaczają jeden z trzech ryzykownych modeli opisanych wyżej. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Profesjonalne pozycjonowanie w Polsce 2026 zaczyna się od **1 500-2 500 PLN miesięcznie** dla małych firm lokalnych i 3 000-8 000 PLN dla średnich firm B2B i e-commerce. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. Ceny niższe niż 1 500 PLN miesięcznie zazwyczaj oznaczają jeden z trzech ryzykownych modeli opisanych wyżej. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy tanie pozycjonowanie 300 PLN miesięcznie ma sens?**
 W 95% przypadków — nie. 300 PLN miesięcznie pokrywa około 3-4 godzin pracy konsultanta SEO. To wystarczy na minimalne aktualizacje GBP, ale **nie wystarczy na profesjonalną strategię**. Jedyny przypadek z sensem: bardzo mała firma lokalna w mieście z zerową konkurencją, gdzie kilka godzin pracy wystarczy na podstawową widoczność. → [Bezpłatna konsultacja →](/kontakt)
@@ -108,10 +108,10 @@ W 95% przypadków — nie. 300 PLN miesięcznie pokrywa około 3-4 godzin pracy 
 Pięć czerwonych flag: (1) gwarancja TOP 3 w 30 dni, (2) brak dostępu do Google Search Console, (3) odmówienie pokazania przykładów linków, (4) wymuszona umowa 12+ miesięcy, (5) raporty zawierają tylko „ilość linków" bez metryk ruchu i konwersji. Wystąpienie którejkolwiek = uciekaj. → [Audyt SEO →](/blog/audyt-seo)
 
 **Czy mała firma musi wydawać 2 500+ PLN miesięcznie?**
-Nie zawsze. Dla małych firm lokalnych w mniejszych miastach (Olsztyn, Tarnów, Konin) z fokusem na 5-10 fraz lokalnych BoostNow ma pakiet starter od 1 500 PLN. Decyduje skala konkurencji i ambicji — nie sam fakt bycia małą firmą. Dla firm aspirujących do widoczności globalnej (Caruma model) pełny pakiet od 2 500 PLN to konieczność. → [Pozycjonowanie lokalne →](/blog/pozycjonowanie-lokalne)
+Nie zawsze. Dla małych firm lokalnych w mniejszych miastach (Olsztyn, Tarnów, Konin) z fokusem na 5-10 fraz lokalnych BoostNow ma pozycjonowanie GEO od 800 zł netto miesięcznie. Decyduje skala konkurencji i ambicji — nie sam fakt bycia małą firmą. Dla firm aspirujących do widoczności globalnej (Caruma model) pełny pakiet od 2 500 PLN to konieczność. → [Pozycjonowanie lokalne →](/blog/pozycjonowanie-lokalne)
 
 **Czy BoostNow oferuje tanie pozycjonowanie?**
-BoostNow oferuje **najlepszy ROI w polskim rynku SEO + GEO + AEO**, nie najniższą cenę. Pakiety od 2 500 PLN miesięcznie z udokumentowanymi wynikami (Caruma 151k wyświetleń w 90 dni). Dla najmniejszych firm lokalnych — pakiet starter 1 500 PLN z fokusem na GBP + Local Pack. Bez Manual Action, bez shared resources, bez gwarancji niemożliwych do dotrzymania. → [Skontaktuj się →](/kontakt)
+BoostNow oferuje **najlepszy ROI w polskim rynku SEO + GEO + AEO**, nie najniższą cenę. Bezpłatny audyt na start, potem pozycjonowanie GEO od 800 zł netto miesięcznie, z udokumentowanymi wynikami (Caruma 151k wyświetleń w 90 dni). Dla najmniejszych firm lokalnych — ta sama cena, z fokusem na GBP + Local Pack. Bez Manual Action, bez shared resources, bez gwarancji niemożliwych do dotrzymania. → [Skontaktuj się →](/kontakt)
 
 ---
 

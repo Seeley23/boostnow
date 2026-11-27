@@ -70,7 +70,7 @@ Cztery pytania które oddzielają poważne agencje od reszty.
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje pozycjonowanie w Katowicach?**
-Pozycjonowanie Katowice kosztuje 800-4 000 PLN miesięcznie. Najniższe stawki w porównaniu do Warszawy i Krakowa, dzięki niskiej lokalnej konkurencji. BoostNow oferuje SEO + GEO + AEO od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Pozycjonowanie Katowice kosztuje 800-4 000 PLN miesięcznie. Najniższe stawki w porównaniu do Warszawy i Krakowa, dzięki niskiej lokalnej konkurencji. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy SEO Katowice obejmuje aglomerację?**
 Tak — BoostNow buduje strategie obejmujące całą aglomerację górnośląską: Katowice, Chorzów, Sosnowiec, Tychy, Gliwice, Zabrze. → [Bezpłatna analiza →](/kontakt)

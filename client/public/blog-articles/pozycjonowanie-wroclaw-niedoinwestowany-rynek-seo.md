@@ -70,7 +70,7 @@ Cztery pytania które oddzielają poważne agencje od reszty.
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje pozycjonowanie we Wrocławiu?**
-Pozycjonowanie Wrocław kosztuje 800-5 000 PLN miesięcznie. Niższe stawki niż w Warszawie dzięki niższej lokalnej konkurencji. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Pozycjonowanie Wrocław kosztuje 800-5 000 PLN miesięcznie. Niższe stawki niż w Warszawie dzięki niższej lokalnej konkurencji. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Jak szybko zobaczę efekty?**
 Pierwsze efekty po 4-6 miesiącach dla większości branż wrocławskich. Caruma osiągnęła globalną widoczność w 90 dni. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

@@ -74,7 +74,7 @@ Cztery pytania które oddzielają agencje rozumiejące specyfikę medyczną od o
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje SEO dla kliniki?**
-SEO dla kliniki kosztuje 2 500-10 000 PLN miesięcznie w zależności od liczby specjalizacji i miast. Wyższe stawki niż standard SEO ze względu na wymogi E-E-A-T i treści merytoryczne. BoostNow oferuje pakiety od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+SEO dla kliniki kosztuje 2 500-10 000 PLN miesięcznie w zależności od liczby specjalizacji i miast. Wyższe stawki niż standard SEO ze względu na wymogi E-E-A-T i treści merytoryczne. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Jak długo trwa SEO kliniki?**
 Pierwsze efekty po 4-6 miesiącach. Pełne rezultaty 12-18 miesięcy — wynika to z wymogów YMYL i czasu budowania autorytetu autora. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

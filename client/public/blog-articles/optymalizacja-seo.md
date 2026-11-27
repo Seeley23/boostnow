@@ -31,7 +31,7 @@ Cztery rzeczy, które **nie są** optymalizacją SEO, ale w Polsce są często s
 - **„Optymalizacja contentu" = wstawianie fraz co 3 zdania** — keyword stuffing dziś szkodzi, nie pomaga
 - **„Audyt" obejmujący tylko warstwy techniczną i content** — to 50% pełnej optymalizacji, sprzedawane jako 100%
 
-Współczesna optymalizacja SEO to **prawdziwa inwestycja w architekturę marki**, nie usługa „ustawienia frazy". Różnica między tymi dwoma podejściami mierzona jest w 12-24 miesięcach — nie w 4 tygodniach.
+Współczesna optymalizacja SEO to **prawdziwa inwestycja w architekturę marki**, nie usługa „ustawienia frazy". Różnica między tymi dwoma podejściami mierzona jest w 12-24 miesiącach — nie w 4 tygodniach.
 
 ---
 
@@ -109,7 +109,7 @@ Optymalizacja SEO to zintegrowana praca nad czterema warstwami widoczności mark
 Warstwa techniczna i warstwa AI dostarczają efekty 4-12 tygodni. Warstwa content 3-9 miesięcy. Warstwa autorytetu 6-18 miesięcy. **Pełne efekty optymalizacji SEO 6-12 miesięcy**, ale pierwsze widoczne wzrosty zwykle po 4-8 tygodniach. Caruma osiągnęła +12 421% w 90 dni. → [Audyt SEO →](/blog/audyt-seo)
 
 **Ile kosztuje optymalizacja SEO?**
-W Polsce 1 500-15 000 PLN miesięcznie zależnie od zakresu (ile warstw) i branży. **Pełna czterowarstwowa optymalizacja (z GEO + AEO) zaczyna się od 2 500 PLN/mies. w BoostNow** — to porównywalne stawki z klasycznym SEO, ale obejmuje również warstwę AI. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+W Polsce 1 500-15 000 PLN miesięcznie zależnie od zakresu (ile warstw) i branży. **W BoostNow audyt na start jest bezpłatny, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie** — mniej niż typowe klasyczne SEO, a obejmuje też widoczność w AI. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy mogę zoptymalizować stronę sam?**
 Technicznie tak — wszystkie narzędzia są dostępne (Google Search Console, Ahrefs/Semrush, Schema.org). Praktycznie wymaga **ścisłej koordynacji czterech warstw**, znajomości E-E-A-T, Person Schema, llms.txt, GEO. Błędnie wdrożona optymalizacja może aktywnie szkodzić — cofnięcie efektów trwa miesiące. → [Bezpłatna konsultacja →](/kontakt)

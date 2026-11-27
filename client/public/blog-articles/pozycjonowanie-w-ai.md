@@ -93,7 +93,7 @@ Perplexity odświeża wyniki w czasie rzeczywistym — pierwsze cytowania możli
 Jeśli klienci szukają usług online — tak. W 2026 roku 40% wyszukiwań trafia do AI search. Każda firma bez tej optymalizacji oddaje ten rynek konkurencji która o niego zadbała. → [Bezpłatna konsultacja →](/kontakt)
 
 **Ile kosztuje pozycjonowanie w AI?**
-BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie. Pakiet obejmuje audyt widoczności w AI, strategię, wdrożenie i miesięczne raportowanie cytowań. → [Cennik usług BoostNow →](/blog/ile-kosztuje-pozycjonowanie)
+BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. Pakiet obejmuje audyt widoczności w AI, strategię, wdrożenie i miesięczne raportowanie cytowań. → [Cennik usług BoostNow →](/blog/ile-kosztuje-pozycjonowanie)
 
 ---
 

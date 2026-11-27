@@ -75,7 +75,7 @@ BoostNow obsługuje hotele samodzielne, sieci butikowe i pensjonaty.
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje SEO dla hotelu?**
-SEO dla hotelu kosztuje 2 500-10 000 PLN miesięcznie. Inwestycja zwraca się zazwyczaj wielokrotnie przez obniżenie udziału OTA. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+SEO dla hotelu kosztuje 2 500-10 000 PLN miesięcznie. Inwestycja zwraca się zazwyczaj wielokrotnie przez obniżenie udziału OTA. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy SEO może zastąpić Booking?**
 Nie zastąpić całkowicie, ale obniżyć udział. Hotel z dobrym SEO może zwiększyć udział rezerwacji bezpośrednich z 20% do 50-65% w 12-18 miesięcy. To setki tysięcy PLN oszczędności. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

@@ -72,7 +72,7 @@ W Warszawie działa kilkaset agencji SEO. Cztery pytania które oddzielają powa
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje pozycjonowanie w Warszawie?**
-Pozycjonowanie Warszawa kosztuje 1 500-8 000 PLN miesięcznie w zależności od branży i zakresu. Wyższe stawki niż średnio w Polsce wynikają z większej konkurencji warszawskiej i trudności fraz lokalnych. BoostNow oferuje pełne pakiety SEO + GEO + AEO od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Pozycjonowanie Warszawa kosztuje 1 500-8 000 PLN miesięcznie w zależności od branży i zakresu. Wyższe stawki niż średnio w Polsce wynikają z większej konkurencji warszawskiej i trudności fraz lokalnych. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Jak długo trwa pozycjonowanie w Warszawie?**
 Pierwsze efekty po 3-6 miesiącach. Pełne rezultaty dla bardzo konkurencyjnych branż warszawskich: 12-18 miesięcy. Frazy specjalistyczne i lokalne (Mokotów, Wilanów) — można osiągnąć szybciej. Caruma osiągnęła globalną widoczność w 90 dni. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

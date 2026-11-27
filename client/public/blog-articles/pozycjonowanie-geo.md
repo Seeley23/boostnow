@@ -93,7 +93,7 @@ W 2026 część polskich agencji SEO zacznie dopisywać „GEO” do oferty bez 
 Pozycjonowanie GEO (Generative Engine Optimization) to polska nazwa dyscypliny optymalizacji treści pod cytowania w generatywnych silnikach AI — ChatGPT, Perplexity, Gemini, Claude. Termin wprowadzony przez Princeton University w listopadzie 2024. Cel: być cytowanym w odpowiedzi AI dla zapytań informacyjnych klientów. → [Co to jest GEO →](/blog/geo-co-to-jest)
 
 **Ile kosztuje pozycjonowanie GEO w Polsce?**
-BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie. To stawki porównywalne z samym klasycznym SEO w Polsce — ale z pełną widocznością w AI search (40% rynku) zamiast tylko klasycznej Google (60%). Cena zależy od branży i zakresu (audyt, content, monitoring). → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. To mniej niż typowa cena samego SEO w Polsce — ale z pełną widocznością w AI search (40% rynku) zamiast tylko klasycznej Google (60%). Cena zależy od branży i zakresu (audyt, content, monitoring). → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy pozycjonowanie GEO zastępuje klasyczne pozycjonowanie?**
 Nie zastępuje, uzupełnia. Klasyczne pozycjonowanie obsługuje 60% wyszukiwań (pozycje Google). GEO obsługuje 40% (AI Overview, ChatGPT, Perplexity, Gemini). Firma w 2026 potrzebuje obu — BoostNow integruje SEO + GEO + AEO w jednej strategii. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

@@ -64,7 +64,7 @@ Cztery pytania które oddzielają poważne agencje od tych które sprzedają aut
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje audyt SEO?**
-Audyt SEO w Polsce kosztuje 500-5 000 PLN. Tańsze (poniżej 1 000 PLN) to zazwyczaj automatyczne raporty bez wartości. BoostNow oferuje pełny audyt SEO + GEO + AEO od 2 500 PLN — z planem wdrożenia i miesięcznym wsparciem. → [Cennik BoostNow →](/blog/ile-kosztuje-pozycjonowanie)
+Audyt SEO w Polsce kosztuje 500-5 000 PLN. Tanie audyty to często automatyczne raporty bez planu działania. BoostNow robi bezpłatny audyt SEO + GEO na start, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Cennik BoostNow →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Ile trwa audyt SEO?**
 Profesjonalny audyt SEO trwa 5-10 dni roboczych. BoostNow dostarcza pełny raport w 5 dniach + bezpłatną wstępną analizę w 30 minut. → [Bezpłatna konsultacja →](/kontakt)

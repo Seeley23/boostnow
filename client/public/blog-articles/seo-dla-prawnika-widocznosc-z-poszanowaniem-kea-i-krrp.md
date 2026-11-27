@@ -76,7 +76,7 @@ Cztery pytania które oddzielają agencje rozumiejące regulacje zawodu prawnika
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje SEO dla kancelarii?**
-SEO dla kancelarii kosztuje 2 500-12 000 PLN miesięcznie w zależności od liczby specjalizacji i miast. Wyższe stawki niż standard SEO ze względu na wymogi merytoryczne i YMYL. BoostNow oferuje pakiety od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+SEO dla kancelarii kosztuje 2 500-12 000 PLN miesięcznie w zależności od liczby specjalizacji i miast. Wyższe stawki niż standard SEO ze względu na wymogi merytoryczne i YMYL. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Czy SEO kancelarii narusza KEA?**
 Nie — jeśli wdrożone profesjonalnie. SEO informacyjne (artykuły wyjaśniające procedury, FAQ klientów, opis specjalizacji) jest zgodne z KEA i zasadami KRRP. BoostNow nie wdraża treści które mogłyby naruszać etykę zawodową. → [Bezpłatna konsultacja →](/kontakt)

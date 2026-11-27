@@ -74,7 +74,7 @@ W Poznaniu działa kilkadziesiąt agencji SEO. Cztery pytania które oddzielają
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje pozycjonowanie stron w Poznaniu?**
-Pozycjonowanie stron Poznań kosztuje 1 200-5 500 PLN miesięcznie w zależności od branży i zakresu. Niższe stawki niż w Warszawie ze względu na niższą lokalną konkurencję, wyższe niż w mniejszych miastach z powodu wyższych standardów poznańskiego rynku. BoostNow oferuje pełne pakiety SEO + GEO + AEO od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Pozycjonowanie stron Poznań kosztuje 1 200-5 500 PLN miesięcznie w zależności od branży i zakresu. Niższe stawki niż w Warszawie ze względu na niższą lokalną konkurencję, wyższe niż w mniejszych miastach z powodu wyższych standardów poznańskiego rynku. BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Jak długo trwa pozycjonowanie firmy z Poznania?**
 Dzięki niższej lokalnej konkurencji niż w Warszawie pierwsze efekty pojawiają się zazwyczaj 3-5 miesięcy. Pełne rezultaty dla średnio konkurencyjnych branż — 6-12 miesięcy. Caruma osiągnęła globalną widoczność w 90 dni — dla rynku poznańskiego efekty mogą być proporcjonalnie szybsze. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

@@ -105,7 +105,7 @@ Dla każdego z tych miast BoostNow ma osobny artykuł ze szczególową strategi�
 Pozycjonowanie lokalne to dyscyplina SEO ukierunkowana na widoczność firmy dla zapytań z intencją geograficzną („dentysta Warszawa", „kancelaria Kraków"). Obejmuje trzy filary: Google Business Profile, klasyczne SEO lokalne i GEO/AEO. **Pełna strategia wymaga wszystkich trzech** — brak jednego oznacza utratę 30-50% klientów lokalnych. → [Pozycjonowanie wizytówki Google →](/blog/pozycjonowanie-wizytowki-google)
 
 **Ile kosztuje pozycjonowanie lokalne?**
-Pozycjonowanie lokalne kosztuje 1 500-8 000 PLN miesięcznie w zależności od miasta, branży i zakresu (ile filarów). BoostNow oferuje pełne pakiety SEO + GEO + AEO od 2 500 PLN. Najwyższe stawki dla Warszawy, niższe dla Krakowa, Wrocławia, Poznania, najniższe dla aglomeracji śląskiej. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Pozycjonowanie lokalne kosztuje 1 500-8 000 PLN miesięcznie w zależności od miasta, branży i zakresu (ile filarów). BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. Najwyższe stawki dla Warszawy, niższe dla Krakowa, Wrocławia, Poznania, najniższe dla aglomeracji śląskiej. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Jak długo trwa pozycjonowanie lokalne?**
 Google Business Profile: pierwsze efekty 4-8 tygodni. Klasyczne SEO lokalne: 3-12 miesięcy zależnie od miasta. GEO/AEO: Perplexity 7-30 dni, ChatGPT 30 dni, AI Overview 4-12 tygodni. **GEO daje efekty 4-6 miesięcy szybciej niż klasyczne SEO** — to poważna przewaga dla startupów i nowych lokalizacji. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)

@@ -108,7 +108,7 @@ Cztery pytania oddzielają agencje z aktualną metodyką od tych operujących na
 Pozycjonowanie Google to dyscyplina SEO ukierunkowana na widoczność strony w wynikach wyszukiwarki Google — obejmująca pozycje organiczne, Local Pack, AI Overview, Knowledge Graph i Featured Snippets. **Google ma 96% udziału rynku w Polsce**, co czyni pozycjonowanie Google praktycznym synonimem SEO. → [Co to jest SEO →](/blog/co-to-jest-seo)
 
 **Ile kosztuje pozycjonowanie Google?**
-Pozycjonowanie Google kosztuje 1 500-8 000 PLN miesięcznie w zależności od branży, miasta i zakresu (ile kanałów). BoostNow oferuje pełne pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie z udokumentowanym ROI (Caruma 151k wyświetleń w 90 dni). Pakiety poniżej 1 500 PLN często operują w modelach ryzykownych. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Pozycjonowanie Google kosztuje 1 500-8 000 PLN miesięcznie w zależności od branży, miasta i zakresu (ile kanałów). BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie z udokumentowanym ROI (Caruma 151k wyświetleń w 90 dni). Pakiety poniżej 1 500 PLN często operują w modelach ryzykownych. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
 
 **Jak długo trwa pozycjonowanie Google?**
 Pierwsze pozycje pojawiają się zazwyczaj 3-6 miesięcy od startu. Pełna widoczność — 6-12 miesięcy dla średnio konkurencyjnych branż. Caruma (klient BoostNow) osiągnęła TOP 1-2 globalnie w 90 dni — ale to klient z pełną strategią SEO + GEO + AEO i unikalnym pozycjonowaniem niszowym. **GEO daje pierwsze cytowania 4-6 miesięcy szybciej** niż klasyczne SEO. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)
