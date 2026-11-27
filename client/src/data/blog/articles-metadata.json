@@ -1161,7 +1161,7 @@
               "name": "Ile kosztuje pozycjonowanie strony?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Pozycjonowanie kosztuje zwykle 800–15 000 zł netto miesięcznie. Mała firma lokalna płaci 800–2 500 zł, średnia firma 2 500–6 000 zł, a sklep internetowy 4 000–15 000 zł. BoostNow oferuje pakiety SEO, GEO i AEO od 2 500 zł miesięcznie."
+                "text": "Pozycjonowanie kosztuje zwykle 800–15 000 zł netto miesięcznie. Mała firma lokalna płaci 800–2 500 zł, średnia firma 2 500–6 000 zł, a sklep internetowy 4 000–15 000 zł. W BoostNow pozycjonowanie GEO kosztuje od 800 zł miesięcznie, a audyt na start jest bezpłatny."
               }
             },
             {
@@ -1185,7 +1185,7 @@
               "name": "Ile kosztuje pozycjonowanie w ChatGPT i AI?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Agencje zwykle doliczają je do pakietu SEO, np. od 1 000 zł miesięcznie. W BoostNow SEO, GEO i AEO są w jednym pakiecie od 2 500 zł netto miesięcznie."
+                "text": "Agencje zwykle doliczają je do pakietu SEO, np. od 1 000 zł miesięcznie. W BoostNow pozycjonowanie GEO kosztuje od 800 zł miesięcznie. Zaczynasz od bezpłatnego audytu."
               }
             },
             {
@@ -1729,7 +1729,7 @@
     "meta_description": "SEO sklepu: kategorie, karty produktów, filtry i Product Schema. Case SU-2 Kiteboards: TOP 1 w Google w 120 dni. Sprawdź, co poprawić.",
     "semantic_anchors": "seo dla sklepu internetowego",
     "target_industry": "General",
-    "word_count": 980,
+    "word_count": 983,
     "slug": "seo-dla-sklepu-internetowego",
     "date": "2026-11-27",
     "schemaJson": {
@@ -1796,7 +1796,7 @@
               "name": "Ile kosztuje SEO dla sklepu internetowego?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Mały sklep (do 500 produktów) płaci zwykle 2 500–4 000 zł netto miesięcznie, a duży 6 000–15 000 zł. Cena zależy od liczby produktów i konkurencji. BoostNow oferuje pakiety SEO, GEO i AEO od 2 500 zł miesięcznie."
+                "text": "Mały sklep (do 500 produktów) płaci zwykle 2 500–4 000 zł netto miesięcznie, a duży 6 000–15 000 zł. Cena zależy od liczby produktów i konkurencji. W BoostNow pozycjonowanie GEO kosztuje od 800 zł miesięcznie, a audyt na start jest bezpłatny."
               }
             },
             {
@@ -2744,7 +2744,7 @@
     "meta_description": "GEO to skrót od Generative Engine Optimization: optymalizacja pod odpowiedzi ChatGPT, Gemini i Trybu AI. Definicja, różnice z SEO i case Caruma.",
     "semantic_anchors": "geo co to jest",
     "target_industry": "General",
-    "word_count": 946,
+    "word_count": 941,
     "slug": "geo-co-to-jest",
     "date": "2026-11-27",
     "schemaJson": {
@@ -2843,7 +2843,7 @@
               "name": "Ile kosztuje GEO?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "W BoostNow GEO jest w pakiecie z SEO i AEO od 2 500 zł netto miesięcznie. Pakiet obejmuje audyt widoczności w AI, treści, wdrożenie i miesięczny raport cytowań."
+                "text": "W BoostNow pozycjonowanie GEO kosztuje od 800 zł miesięcznie. Zaczynasz od bezpłatnego audytu widoczności w AI. Potem dostajesz treści, wdrożenie i miesięczny raport cytowań."
               }
             }
           ]
