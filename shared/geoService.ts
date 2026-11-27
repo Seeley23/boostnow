@@ -8,7 +8,7 @@ export const GEO_FORM_ID = "formularz";
 
 export const GEO_ARTICLE_CTA = {
   heading: "Szukasz agencji, która wypozycjonuje Twoją firmę w ChatGPT?",
-  text: "Pozycjonowanie GEO od BoostNow: zaczynamy od bezpłatnego audytu, potem od 800 zł miesięcznie.",
+  text: "Pozycjonowanie GEO od BoostNow: zaczynamy od bezpłatnego audytu, potem od 800 zł netto miesięcznie.",
   cta: "Wypełnij formularz kontaktowy",
   href: `${GEO_PATH}#${GEO_FORM_ID}`,
 };
@@ -16,7 +16,7 @@ export const GEO_ARTICLE_CTA = {
 export const GEO_SEO = {
   title: "Pozycjonowanie GEO: Twoja firma w ChatGPT od 800 zł | BoostNow",
   description:
-    "Pozycjonowanie GEO od BoostNow: Twoja firma w odpowiedziach ChatGPT, Gemini, Perplexity i Google AI. Start od bezpłatnego audytu, potem od 800 zł/mies.",
+    "Pozycjonowanie GEO od BoostNow: Twoja firma w odpowiedziach ChatGPT, Gemini, Perplexity i Google AI. Start od bezpłatnego audytu, potem od 800 zł netto/mies.",
   canonical: `https://boostnow.pl${GEO_PATH}`,
   datePublished: "2026-11-27",
   dateModified: "2026-11-27",
@@ -26,13 +26,13 @@ export const GEO_HERO = {
   eyebrow: "Pozycjonowanie GEO",
   h1: "Twoja firma w odpowiedziach ChatGPT i Google AI",
   lead: "Klient pyta AI, kogo wybrać. Sprawimy, że asystenci AI znają Twoją firmę i ją polecają.",
-  price: "Start: bezpłatny audyt. Potem od 800 zł miesięcznie.",
+  price: "Start: bezpłatny audyt. Potem od 800 zł netto miesięcznie.",
   cta: "Zamów bezpłatny audyt",
   microcopy: "Odpowiadamy w ciągu 24 godzin. Bez zobowiązań.",
 };
 
 export const GEO_ANSWER =
-  "Pozycjonowanie GEO to praca nad tym, żeby ChatGPT, Gemini, Perplexity i Tryb AI Google polecały Twoją firmę. BoostNow zaczyna od bezpłatnego audytu: sprawdzamy, kogo AI poleca zamiast Ciebie. Potem poprawiamy stronę, treści i wzmianki o firmie. Pozycjonowanie GEO kosztuje od 800 zł miesięcznie.";
+  "Pozycjonowanie GEO to praca nad tym, żeby ChatGPT, Gemini, Perplexity i Tryb AI Google polecały Twoją firmę. BoostNow zaczyna od bezpłatnego audytu: sprawdzamy, kogo AI poleca zamiast Ciebie. Potem poprawiamy stronę, treści i wzmianki o firmie. Pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie.";
 
 export const GEO_INCLUDED = {
   h2: "Co robimy w ramach pozycjonowania GEO?",
@@ -87,7 +87,7 @@ export const GEO_PROOF = {
 export const GEO_PRICE = {
   h2: "Ile kosztuje pozycjonowanie GEO?",
   start: "Bezpłatny audyt na start",
-  monthly: "od 800 zł miesięcznie",
+  monthly: "od 800 zł netto miesięcznie",
   body: "Dokładną cenę podajemy po audycie. Zależy od branży, liczby usług i konkurencji w AI. Nie wiążemy klientów długimi umowami.",
 };
 
@@ -118,7 +118,7 @@ export const GEO_FAQ = [
   },
   {
     q: "Ile kosztuje pozycjonowanie GEO w BoostNow?",
-    a: "Audyt na start jest bezpłatny. Pozycjonowanie GEO kosztuje od 800 zł miesięcznie. Dokładną cenę podajemy po audycie.",
+    a: "Audyt na start jest bezpłatny. Pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie. Dokładną cenę podajemy po audycie.",
   },
   {
     q: "Czy gwarantujecie, że ChatGPT poleci moją firmę?",

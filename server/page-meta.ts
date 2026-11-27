@@ -158,6 +158,7 @@ const GEO_SCHEMA = {
             minPrice: 800,
             priceCurrency: "PLN",
             unitText: "miesiąc",
+            valueAddedTaxIncluded: false,
           },
           url: GEO_URL + "#" + GEO_FORM_ID,
           availability: "https://schema.org/InStock",
