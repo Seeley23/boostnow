@@ -1,6 +1,6 @@
 ChatGPT nie widzi Twojej strony? Zwykle winna jest jedna z pięciu przyczyn.
 
-**W tym artykule:**
+**Spis treści:**
 - [Dlaczego ChatGPT nie widzi mojej strony?](#dlaczego)
 - [5 przyczyn i jak je sprawdzić](#przyczyny)
 - [Test w 10 minut](#test)
@@ -11,22 +11,30 @@ ChatGPT nie widzi Twojej strony? Zwykle winna jest jedna z pięciu przyczyn.
 ---
 
 > **Krótka odpowiedź**
-> ChatGPT nie widzi strony, gdy robot OAI-SearchBot nie ma do niej dostępu albo nie znajduje na niej treści. Najczęstsze przyczyny to blokada w robots.txt i blokada na serwerze. Często winna jest też treść dostępna tylko w JavaScript, brak strony w wyszukiwarkach albo niejasny opis firmy. Każdą z nich sprawdzisz sam w kilka minut.
+> ChatGPT nie widzi strony, gdy robot OAI-SearchBot nie ma do niej dostępu albo nie znajduje na niej treści. Najczęstsze przyczyny to blokada w robots.txt i blokada na serwerze. Często winna jest też treść tylko w JavaScript, brak strony w wyszukiwarkach albo niejasny opis firmy. Każdą z nich sprawdzisz sam w kilka minut.
 > *Aktualizacja: listopad 2026*
 
 ---
 
-Pytasz ChatGPT o swoją stronę, a on odpowiada, że nie może jej otworzyć. Albo poleca konkurencję, choć Twoja firma robi to samo. Poniżej znajdziesz 5 przyczyn, sposób sprawdzenia każdej z nich i test w 10 minut. Prowadzisz sklep internetowy? Przeczytaj też [wersję dla sklepów](/blog/chatgpt-nie-widzi-sklepu).
+Strona działa. Klienci ją otwierają i dzwonią.
+
+A ChatGPT pisze, że nie może jej otworzyć. Albo poleca konkurencję, choć robisz to samo.
+
+Gdzie leży błąd? Zwykle w jednym z pięciu miejsc. Najtrudniejsze do znalezienia leży poza Twoją stroną: na serwerze.
+
+Prowadzisz sklep? Przeczytaj też [wersję dla sklepów](/blog/chatgpt-nie-widzi-sklepu).
 
 ---
 
 ## Dlaczego ChatGPT nie widzi mojej strony? {#dlaczego}
 
-ChatGPT widzi stronę dopiero wtedy, gdy może ją pobrać i przeczytać. Strony pobierają roboty OpenAI. Za wyszukiwanie w ChatGPT odpowiada robot OAI-SearchBot. Gdy użytkownik poda link w rozmowie, stronę otwiera robot ChatGPT-User.
+ChatGPT widzi stronę dopiero wtedy, gdy może ją pobrać i przeczytać. Strony pobierają roboty OpenAI.
+
+Za wyszukiwanie w ChatGPT odpowiada robot OAI-SearchBot. Link wklejony w rozmowie otwiera robot ChatGPT-User.
 
 ChatGPT korzysta też z zewnętrznych wyszukiwarek. OpenAI pisze, że każda publiczna strona może pojawić się w wyszukiwaniu ChatGPT. Warunek: robot musi do niej dotrzeć i zrozumieć treść.
 
-Problem leży więc w jednym z trzech miejsc:
+Błąd leży więc w jednym z trzech miejsc:
 - dostęp: robot nie może wejść na stronę;
 - treść: robot wchodzi, ale nie widzi tekstu;
 - znaczenie: robot czyta tekst, ale nie wie, czym zajmuje się firma.
@@ -37,29 +45,43 @@ Problem leży więc w jednym z trzech miejsc:
 
 ### 1. Plik robots.txt blokuje OAI-SearchBot
 
-Otwórz `twojadomena.pl/robots.txt`. Szukaj wpisu `User-agent: OAI-SearchBot` z `Disallow: /`. Szukaj też wpisu `User-agent: *` z `Disallow: /`, bo on blokuje wszystkie roboty. Usuń blokadę dla OAI-SearchBot.
+Plik robots.txt mówi robotom, gdzie mogą wejść. Otwórz `twojadomena.pl/robots.txt`.
+
+Szukaj wpisu `User-agent: OAI-SearchBot` z `Disallow: /`. Szukaj też wpisu `User-agent: *` z `Disallow: /`, bo ten blokuje wszystkie roboty. Usuń blokadę dla OAI-SearchBot.
 
 ### 2. Serwer lub hosting blokuje roboty AI
 
-To przyczyna, której nie widać w żadnym panelu. Plik robots.txt może wszystko dopuszczać, a serwer i tak odrzuca roboty. Tak było u nas. 24 listopada 2026 serwer boostnow.pl zwracał kod 403 robotom GPTBot, PerplexityBot i ClaudeBot. Robots.txt je dopuszczał. Blokadę ustawił hosting.
+Tej przyczyny nie widać w żadnym panelu. Plik robots.txt może wszystko dopuszczać, a serwer i tak odrzuca roboty.
 
-Jak to sprawdzić: poproś informatyka o pobranie strony z nagłówkiem robota (narzędzie `curl` z opcją `-A`). Kod 403 oznacza blokadę. Zapytaj też hosting i dostawcę CDN (np. Cloudflare), czy blokują boty AI.
+**Sprawdziliśmy to na sobie.** 24 listopada 2026 serwer boostnow.pl zwracał kod 403 robotom GPTBot, PerplexityBot i ClaudeBot. Plik robots.txt je dopuszczał, a blokadę ustawił hosting.
+
+Poproś informatyka, żeby pobrał stronę z nagłówkiem robota (narzędzie `curl` z opcją `-A`). Kod 403 oznacza blokadę.
+
+Zapytaj też hosting i dostawcę CDN (np. Cloudflare), czy blokują boty AI.
 
 ### 3. Treść jest tylko w JavaScript
 
-Niektóre strony pokazują tekst dopiero po uruchomieniu skryptów. Roboty AI często tych skryptów nie uruchamiają. Sprawdź to w przeglądarce: naciśnij Ctrl+U i poszukaj w kodzie zdania ze strony. Jeśli go nie ma, robot też go nie widzi.
+Niektóre strony pokazują tekst dopiero po uruchomieniu skryptów. Roboty AI często tych skryptów nie uruchamiają.
+
+Naciśnij w przeglądarce Ctrl+U i poszukaj w kodzie zdania ze strony. Jeśli go nie ma, robot też go nie widzi.
 
 ### 4. Strony nie ma w wyszukiwarkach
 
-ChatGPT korzysta z wyników zewnętrznych wyszukiwarek. Wpisz w Google i w Bing `site:twojadomena.pl`. Jeśli nie widzisz swoich podstron, dodaj stronę do Google Search Console i Bing Webmaster Tools. Sprawdź też, czy ważne podstrony nie mają znacznika `noindex`.
+ChatGPT korzysta z wyników zewnętrznych wyszukiwarek. Wpisz w Google i w Bing `site:twojadomena.pl`.
+
+Nie widzisz swoich podstron? Dodaj stronę do Google Search Console i Bing Webmaster Tools. Sprawdź też, czy ważne podstrony nie mają znacznika `noindex`.
 
 ### 5. ChatGPT nie wie, czym zajmuje się firma
 
-Strona może być dostępna, a mimo to niejasna. Brakuje jednego akapitu: kto, co, dla kogo, gdzie. Brakuje cen i obszaru działania. Brakuje wzmianek w innych serwisach. Dopisz ten akapit na stronie głównej i w zakładce „O nas”.
+Strona może być dostępna, a mimo to niejasna. Brakuje jednego akapitu: kto, co, dla kogo, gdzie.
+
+Brakuje też cen, obszaru działania i wzmianek w innych serwisach. Dopisz ten akapit na stronie głównej i w zakładce „O nas”.
 
 ---
 
 ## Test w 10 minut {#test}
+
+Sześć kroków pokaże, w którym z trzech miejsc leży błąd.
 
 1. Wklej w ChatGPT link do swojej strony i poproś: „Streść tę stronę w 3 zdaniach”. Brak streszczenia lub błąd to sygnał problemu z dostępem.
 2. Otwórz `twojadomena.pl/robots.txt` i sprawdź wpisy z punktu 1.
@@ -77,7 +99,7 @@ Po zdjęciu blokady roboty muszą wrócić na stronę. Nie przyspieszysz tego je
 - dodaj nową treść lub zaktualizuj ważne podstrony;
 - powtórz test z pytaniami klientów po 2–4 tygodniach.
 
-Jeśli ChatGPT czyta już stronę, ale dalej poleca konkurencję, problem leży w treści i wzmiankach. Przeczytaj [jak pojawić się w ChatGPT w 6 krokach](/blog/jak-pojawic-sie-w-chatgpt).
+ChatGPT czyta już stronę, ale dalej poleca konkurencję? Wtedy problem leży w treści i wzmiankach. Przeczytaj [jak pojawić się w ChatGPT w 6 krokach](/blog/jak-pojawic-sie-w-chatgpt).
 
 ---
 
