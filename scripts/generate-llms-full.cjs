@@ -63,6 +63,7 @@ ${body}
 
 ## Services
 - https://boostnow.pl/aio
+- https://boostnow.pl/pozycjonowanie-geo (pozycjonowanie GEO: bezpłatny audyt, potem od 800 PLN/mies.)
 - https://boostnow.pl/audyt-ai-dla-sklepu (bezpłatny audyt sklepu pod ChatGPT i AI)
 - https://boostnow.pl/calculator
 - https://boostnow.pl/glossary

@@ -6,6 +6,7 @@
 export type FormPayload =
   | { form: "contact"; name: string; email: string; company?: string; message: string; website?: string }
   | { form: "aio"; name: string; email: string; domain: string; industry?: string; website?: string }
+  | { form: "geo"; name: string; email: string; siteUrl: string; message?: string; consent: true; website?: string }
   | {
       form: "audit";
       storeUrl: string;

@@ -19,6 +19,7 @@ import Regulamin from "./pages/Regulamin";
 import PolitykaPrywatnosci from "./pages/PolitykaPrywatnosci";
 import PolitykaCookies from "./pages/PolitykaCookies";
 import AiCommerceAuditPage from "./pages/AiCommerceAuditPage";
+import GeoServicePage from "./pages/GeoServicePage";
 
 const PAGES: Record<string, ComponentType> = {
   "/aio": AIOPage,
@@ -29,6 +30,7 @@ const PAGES: Record<string, ComponentType> = {
   "/polityka-prywatnosci": PolitykaPrywatnosci,
   "/polityka-cookies": PolitykaCookies,
   "/audyt-ai-dla-sklepu": AiCommerceAuditPage,
+  "/pozycjonowanie-geo": GeoServicePage,
 };
 
 export function render(route: string): string | null {

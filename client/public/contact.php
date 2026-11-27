@@ -113,7 +113,7 @@ if (count($hits) >= RATE_LIMIT) {
     respond(429, ['success' => false, 'message' => 'Za dużo zgłoszeń. Spróbuj za kilka minut.']);
 }
 
-$form = in_array($p['form'] ?? '', ['aio', 'audit'], true) ? $p['form'] : 'contact';
+$form = in_array($p['form'] ?? '', ['aio', 'audit', 'geo'], true) ? $p['form'] : 'contact';
 $email = line($p, 'email', 254);
 $errors = [];
 $lead = null;
@@ -205,6 +205,20 @@ if ($form === 'contact') {
         . "E-mail: {$email}\n"
         . 'Firma: ' . ($company !== '' ? $company : 'nie podano') . "\n\n"
         . "Wiadomość:\n{$message}\n";
+} elseif ($form === 'geo') {
+    $siteUrl = line($p, 'siteUrl', 2048);
+    $message = trim(str_replace("\r\n", "\n", (string)($p['message'] ?? '')));
+    $message = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+/u', '', $message) ?? '';
+    if ($siteUrl === '' || !preg_match('/\.[a-z]{2,}/i', $siteUrl)) $errors[] = 'adres strony';
+    if (mb_strlen($message) > 2000) $errors[] = 'wiadomość';
+    if (($p['consent'] ?? false) !== true) $errors[] = 'zgoda na kontakt';
+    $subject = 'Nowe zgłoszenie: pozycjonowanie GEO (' . $siteUrl . ')';
+    $body = "Formularz: pozycjonowanie GEO (boostnow.pl/pozycjonowanie-geo)\n\n"
+        . "Imię: {$name}\n"
+        . "E-mail: {$email}\n"
+        . "Strona: {$siteUrl}\n"
+        . 'Cel: ' . ($message !== '' ? $message : 'nie podano') . "\n"
+        . 'Zgoda na kontakt: tak (' . gmdate('Y-m-d H:i:s') . " UTC)\n";
 } elseif ($form === 'aio') {
     $domain = line($p, 'domain', 253);
     $industry = line($p, 'industry', 120);

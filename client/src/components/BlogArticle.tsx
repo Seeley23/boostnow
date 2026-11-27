@@ -6,6 +6,7 @@ import articlesMetadata from '../data/blog/articles-metadata.json';
 import articleFilesMap from '../data/blog/article-files.json';
 import { renderMarkdown } from '@shared/markdown';
 import { AUDIT_ARTICLE_LINKS, AUDIT_CTA_HEADING, AUDIT_CTA_TEXT, AUDIT_URL_PATH } from '@shared/auditLinks';
+import { GEO_ARTICLE_CTA } from '@shared/geoService';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
@@ -301,9 +302,9 @@ const BlogArticle: React.FC = () => {
             )}
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-r from-[#c7ff4e]/10 to-[#00c88a]/10 border border-[#c7ff4e]/20 rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-3 font-playfair">Gotowy na transformację?</h3>
-              <p className="text-[#9aa0b3] mb-6">Ten artykuł pokazuje, jak Decision Science zmienia marketing. Teraz czas na Twoją firmę.</p>
-              <button className="px-8 py-3 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-bold hover:bg-white transition-all duration-300 transform hover:scale-105">Zarezerwuj konsultację →</button>
+              <h3 className="text-2xl font-bold text-white mb-3 font-playfair">{GEO_ARTICLE_CTA.heading}</h3>
+              <p className="text-[#c9cdd6] mb-6">{GEO_ARTICLE_CTA.text}</p>
+              <Link href={GEO_ARTICLE_CTA.href} className="inline-block px-8 py-3 bg-[#c7ff4e] text-[#0b1020] rounded-lg font-bold hover:bg-white transition-colors">{GEO_ARTICLE_CTA.cta} →</Link>
             </motion.div>
           </motion.div>
 

@@ -23,6 +23,7 @@ import { renderMarkdown } from "../shared/markdown";
 import { HERO_VARIANTS } from "../client/src/components/audit/auditCopy";
 import { VARIANT_KEY } from "../client/src/components/audit/auditTracking";
 import { AUDIT_ARTICLE_LINKS, AUDIT_CTA_HEADING, AUDIT_CTA_TEXT, AUDIT_URL_PATH } from "../shared/auditLinks";
+import { GEO_ARTICLE_CTA } from "../shared/geoService";
 import { getMetaForPath } from "../server/page-meta";
 
 const ROOT = process.cwd();
@@ -53,6 +54,7 @@ const stripBrand = (t: string) => t.replace(/\s*[|–-]\s*BoostNow\s*$/i, "").tr
 const NAV = [
   ["/", "Strona główna"],
   ["/o-nas", "O nas"],
+  ["/pozycjonowanie-geo", "Pozycjonowanie GEO"],
   ["/aio", "AIO dla e-commerce"],
   ["/olsztyn", "SEO Olsztyn"],
   ["/calculator", "Oblicz straty"],
@@ -103,6 +105,7 @@ function articlePage(slug: string, meta: { title: string; description: string })
         <p>${a?.date ? `<time datetime="${esc(a.date)}">${esc(a.date)}</time> · ` : ""}Autor: <a href="/mateusz-nowotka">Mateusz Nowotka</a></p>
         <div class="article-body">${a?.content ? renderMarkdown(a.content) : `<p>${esc(meta.description)}</p>`}</div>
         ${AUDIT_ARTICLE_LINKS[slug] ? `<aside><h2>${esc(AUDIT_CTA_HEADING)}</h2><p>${esc(AUDIT_CTA_TEXT)} <a href="${AUDIT_URL_PATH}">${esc(AUDIT_ARTICLE_LINKS[slug])}</a></p></aside>` : ""}
+        <aside><h2>${esc(GEO_ARTICLE_CTA.heading)}</h2><p>${esc(GEO_ARTICLE_CTA.text)} <a href="${GEO_ARTICLE_CTA.href}">${esc(GEO_ARTICLE_CTA.cta)}</a></p></aside>
       </article>
       <aside>
         <h2>Powiązane artykuły</h2>
