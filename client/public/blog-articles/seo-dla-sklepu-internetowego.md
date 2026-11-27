@@ -107,7 +107,7 @@ Agencja bez wyników z e-commerce uczy się na Twoim sklepie. Za tę naukę pła
 Zacznij od stron kategorii: własny tytuł, opis i pytania z odpowiedziami. Potem napisz własne opisy produktów i dodaj Product Schema. Ustaw canonical dla filtrów i sprawdź szybkość sklepu na telefonie.
 
 **Ile kosztuje SEO dla sklepu internetowego?**
-Mały sklep (do 500 produktów) płaci zwykle 2 500–4 000 zł netto miesięcznie, a duży 6 000–15 000 zł. Cena zależy od liczby produktów i konkurencji. W BoostNow pozycjonowanie GEO kosztuje od 800 zł miesięcznie, a audyt na start jest bezpłatny.
+Mały sklep (do 500 produktów) płaci zwykle 2 500–4 000 zł netto miesięcznie, a duży 6 000–15 000 zł. Cena zależy od liczby produktów i konkurencji. W BoostNow pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie, a audyt na start jest bezpłatny.
 
 **Jak długo trwa SEO sklepu internetowego?**
 Pierwsze efekty na długie, dokładne frazy widać po 3–6 miesiącach. Stabilny ruch z głównych kategorii przychodzi po 9–18 miesiącach. SU-2 Kiteboards doszło do TOP 1 w 120 dni dzięki połączeniu SEO i GEO.
