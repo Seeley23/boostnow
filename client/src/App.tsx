@@ -22,6 +22,7 @@ import AIOPage from "./pages/AIOPage";
 import DynamicPage from "./pages/DynamicPage";
 import AuthorPage from "./pages/AuthorPage";
 import AiCommerceAuditPage from "./pages/AiCommerceAuditPage";
+import GeoServicePage from "./pages/GeoServicePage";
 
 function Router() {
   return (
@@ -41,6 +42,7 @@ function Router() {
       <Route path={"/mateusz-nowotka"} component={AuthorPage} />
       {/* Must stay above /:slug, which would otherwise catch it. */}
       <Route path={"/audyt-ai-dla-sklepu"} component={AiCommerceAuditPage} />
+      <Route path={"/pozycjonowanie-geo"} component={GeoServicePage} />
 
       <Route path={"/:slug"} component={DynamicPage} />
       

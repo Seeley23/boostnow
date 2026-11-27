@@ -36,7 +36,7 @@ Pozycjonowanie kosztuje 800–15 000 zł netto miesięcznie, zależnie od wielko
 | Mała firma lokalna | 10–30 fraz, 1 miasto, wizytówka Google | 800–2 500 zł |
 | Średnia firma usługowa lub B2B | 50–150 fraz, kilka regionów | 2 500–6 000 zł |
 | Sklep internetowy, duża skala | 200+ fraz, kategorie, blog | 4 000–15 000 zł |
-| BoostNow: pozycjonowanie GEO | Google i asystenci AI, audyt na start gratis | od 800 zł |
+| **BoostNow: [pozycjonowanie GEO](/pozycjonowanie-geo)** | **Google i asystenci AI, audyt na start gratis** | **od 800 zł** |
 
 Agencje z Warszawy biorą średnio o 20–30% więcej niż agencje z mniejszych miast (analiza BoostNow). Wyższa cena nie oznacza jednak wyższej jakości.
 
@@ -45,6 +45,7 @@ Agencje z Warszawy biorą średnio o 20–30% więcej niż agencje z mniejszych 
 ## Ile biorą agencje? Przykłady z cenników {#cenniki}
 
 Agencje podają w cennikach ceny „od”, czyli cenę najtańszego pakietu. Sprawdziliśmy je 27 listopada 2026:
+- **BoostNow: bezpłatny audyt na start, potem [pozycjonowanie GEO od 800 zł miesięcznie](/pozycjonowanie-geo);**
 - Verseo: pakiet dla firm lokalnych od 800 zł miesięcznie;
 - Cluegroup: firma lokalna od 1 500 zł, ogólnopolska od 2 000 zł, sklep od 3 000 zł netto;
 - Widoczni: zwykle 1 900–6 000 zł miesięcznie za stronę lub sklep;

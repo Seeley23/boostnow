@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { FAQ as AUDIT_FAQ, SEO as AUDIT_SEO } from "../client/src/components/audit/auditCopy";
+import { GEO_FAQ, GEO_FORM_ID, GEO_SEO } from "../shared/geoService";
 
 const BASE = "https://boostnow.pl";
 
@@ -109,6 +110,80 @@ const AUDIT_SCHEMA = {
   ],
 };
 
+// /pozycjonowanie-geo: service with the real price (free audit, then from 800 PLN/month).
+const GEO_URL = GEO_SEO.canonical;
+const GEO_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": GEO_URL + "#webpage",
+      url: GEO_URL,
+      name: GEO_SEO.title,
+      description: GEO_SEO.description,
+      inLanguage: "pl-PL",
+      datePublished: GEO_SEO.datePublished,
+      dateModified: GEO_SEO.dateModified,
+      isPartOf: { "@type": "WebSite", "@id": BASE + "/#website", url: BASE + "/", name: "BoostNow" },
+      publisher: { "@id": BASE + "/#organization" },
+      about: { "@id": GEO_URL + "#service" },
+      breadcrumb: { "@id": GEO_URL + "#breadcrumb" },
+    },
+    {
+      "@type": "Service",
+      "@id": GEO_URL + "#service",
+      name: "Pozycjonowanie GEO",
+      alternateName: ["Generative Engine Optimization", "Pozycjonowanie w ChatGPT i AI"],
+      serviceType: "Generative Engine Optimization (GEO)",
+      description:
+        "Widoczność firmy w odpowiedziach ChatGPT, Gemini, Perplexity i Trybu AI Google. Start od bezpłatnego audytu, potem miesięczna obsługa.",
+      url: GEO_URL,
+      provider: { "@type": "Organization", "@id": BASE + "/#organization", name: "BoostNow", url: BASE },
+      areaServed: { "@type": "Country", name: "Polska" },
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Bezpłatny audyt GEO",
+          price: "0",
+          priceCurrency: "PLN",
+          url: GEO_URL + "#" + GEO_FORM_ID,
+          availability: "https://schema.org/InStock",
+        },
+        {
+          "@type": "Offer",
+          name: "Pozycjonowanie GEO",
+          priceCurrency: "PLN",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            minPrice: 800,
+            priceCurrency: "PLN",
+            unitText: "miesiąc",
+          },
+          url: GEO_URL + "#" + GEO_FORM_ID,
+          availability: "https://schema.org/InStock",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": GEO_URL + "#faq",
+      mainEntity: GEO_FAQ.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": GEO_URL + "#breadcrumb",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "BoostNow", item: BASE + "/" },
+        { "@type": "ListItem", position: 2, name: "Pozycjonowanie GEO", item: GEO_URL },
+      ],
+    },
+  ],
+};
+
 function serviceSchema(name: string, description: string, routePath: string): any {
   return {
     "@context": "https://schema.org",
@@ -187,6 +262,12 @@ function buildMetaMap(): Record<string, PageMeta> {
       description: AUDIT_SEO.description,
       canonical: AUDIT_SEO.canonical,
       schema: [AUDIT_SCHEMA],
+    },
+    "/pozycjonowanie-geo": {
+      title: GEO_SEO.title,
+      description: GEO_SEO.description,
+      canonical: GEO_SEO.canonical,
+      schema: [GEO_SCHEMA],
     },
     "/calculator": {
       title: "Kalkulator ROI Marketingowego | BoostNow",
