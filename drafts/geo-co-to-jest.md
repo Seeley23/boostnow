@@ -102,7 +102,7 @@ Tak. ChatGPT, Gemini i Tryb AI Google odpowiadają po polsku i cytują polskie s
 Z naszych wdrożeń: pierwsze cytowania w Perplexity pojawiają się po około 30 dniach. W Przeglądzie od AI Google zwykle po 60–90 dniach. Caruma trafiła tam obok KPMG i Komisji Europejskiej w 90 dni.
 
 **Ile kosztuje GEO?**
-W BoostNow GEO jest w pakiecie z SEO i AEO od 2 500 zł netto miesięcznie. Pakiet obejmuje audyt widoczności w AI, treści, wdrożenie i miesięczny raport cytowań.
+W BoostNow pozycjonowanie GEO kosztuje od 800 zł miesięcznie. Zaczynasz od bezpłatnego audytu widoczności w AI. Potem dostajesz treści, wdrożenie i miesięczny raport cytowań.
 
 ---
 
@@ -116,11 +116,11 @@ W BoostNow GEO jest w pakiecie z SEO i AEO od 2 500 zł netto miesięcznie. Paki
 
 ---
 
-## Sprawdź, czy AI poleca Twoją firmę
+## Zacznij od bezpłatnego audytu GEO
 
 Zadamy asystentom AI pytania Twoich klientów. Pokażemy, kogo polecają zamiast Ciebie, i wskażemy 3 rzeczy do poprawy.
 
-**[Napisz do nas →](/kontakt)** · Prowadzisz sklep? **[Bezpłatny audyt sklepu pod ChatGPT i AI →](/audyt-ai-dla-sklepu)**
+**[Zamów bezpłatny audyt →](/kontakt)** · Prowadzisz sklep? **[Bezpłatny audyt sklepu pod ChatGPT i AI →](/audyt-ai-dla-sklepu)**
 
 ---
 

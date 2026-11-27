@@ -36,7 +36,7 @@ Pozycjonowanie kosztuje 800–15 000 zł netto miesięcznie, zależnie od wielko
 | Mała firma lokalna | 10–30 fraz, 1 miasto, wizytówka Google | 800–2 500 zł |
 | Średnia firma usługowa lub B2B | 50–150 fraz, kilka regionów | 2 500–6 000 zł |
 | Sklep internetowy, duża skala | 200+ fraz, kategorie, blog | 4 000–15 000 zł |
-| BoostNow: SEO + GEO + AEO | Google i asystenci AI | od 2 500 zł |
+| BoostNow: pozycjonowanie GEO | Google i asystenci AI, audyt na start gratis | od 800 zł |
 
 Agencje z Warszawy biorą średnio o 20–30% więcej niż agencje z mniejszych miast (analiza BoostNow). Wyższa cena nie oznacza jednak wyższej jakości.
 
@@ -69,7 +69,7 @@ Abonament ma sens, bo Google i konkurencja zmieniają się co miesiąc. Jednoraz
 
 Agencje zwykle wyceniają pozycjonowanie w AI jako dodatek do SEO. Cluegroup podaje w cenniku „AI od +1 000 zł do SEO” (listopad 2026).
 
-W BoostNow SEO, GEO i AEO są w jednym pakiecie od 2 500 zł netto miesięcznie. GEO to praca nad tym, żeby ChatGPT, Gemini i Tryb AI Google cytowały Twoją stronę.
+W BoostNow zaczynasz od bezpłatnego audytu. Pozycjonowanie GEO kosztuje od 800 zł miesięcznie. GEO to praca nad tym, żeby ChatGPT, Gemini i Tryb AI Google cytowały Twoją stronę.
 
 Dlaczego razem? ChatGPT szuka w sieci przez zewnętrzne wyszukiwarki, a Tryb AI korzysta z indeksu Google. Bez SEO widoczność w AI nie ma podstawy.
 
@@ -86,7 +86,7 @@ O cenie decyduje pięć rzeczy:
 4. **Liczba fraz i miast.** Każde miasto i każda grupa usług to osobne podstrony i treści.
 5. **Znajomość branży.** Agencja, która zna branżę, szybciej trafia w pytania klientów.
 
-Profesjonalne pozycjonowanie to 15–40 godzin pracy specjalisty miesięcznie (szacunek BoostNow). BoostNow podaje cenę po bezpłatnej analizie strony.
+Profesjonalne pozycjonowanie to 15–40 godzin pracy specjalisty miesięcznie (szacunek BoostNow). BoostNow podaje cenę po bezpłatnym audycie strony.
 
 ---
 
@@ -123,7 +123,7 @@ Słabe linki z katalogów mogą zaszkodzić stronie. Ich usunięcie kosztuje pó
 ## Najczęściej zadawane pytania {#faq}
 
 **Ile kosztuje pozycjonowanie strony?**
-Pozycjonowanie kosztuje zwykle 800–15 000 zł netto miesięcznie. Mała firma lokalna płaci 800–2 500 zł, średnia firma 2 500–6 000 zł, a sklep internetowy 4 000–15 000 zł. BoostNow oferuje pakiety SEO, GEO i AEO od 2 500 zł miesięcznie.
+Pozycjonowanie kosztuje zwykle 800–15 000 zł netto miesięcznie. Mała firma lokalna płaci 800–2 500 zł, średnia firma 2 500–6 000 zł, a sklep internetowy 4 000–15 000 zł. W BoostNow pozycjonowanie GEO kosztuje od 800 zł miesięcznie, a audyt na start jest bezpłatny.
 
 **Czy pozycjonowanie za 200–500 zł ma sens?**
 Zwykle nie. Za takie kwoty agencje dodają stronę do katalogów i kupują tanie linki. Słabe linki mogą zaszkodzić stronie w Google.
@@ -132,7 +132,7 @@ Zwykle nie. Za takie kwoty agencje dodają stronę do katalogów i kupują tanie
 Najczęściej abonament miesięczny. Jednorazowo płacisz za audyt i poprawki techniczne. Bez dalszej pracy pozycje spadają, bo konkurencja działa dalej.
 
 **Ile kosztuje pozycjonowanie w ChatGPT i AI?**
-Agencje zwykle doliczają je do pakietu SEO, np. od 1 000 zł miesięcznie. W BoostNow SEO, GEO i AEO są w jednym pakiecie od 2 500 zł netto miesięcznie.
+Agencje zwykle doliczają je do pakietu SEO, np. od 1 000 zł miesięcznie. W BoostNow pozycjonowanie GEO kosztuje od 800 zł miesięcznie. Zaczynasz od bezpłatnego audytu.
 
 **Jak długo trzeba płacić za pozycjonowanie?**
 Większość firm współpracuje z agencją 12–24 miesiące, zanim pozycje się ustabilizują. Potem możesz zmniejszyć budżet do utrzymania pozycji. BoostNow nie wiąże klientów długimi umowami.
@@ -148,11 +148,11 @@ Większość firm współpracuje z agencją 12–24 miesiące, zanim pozycje si�
 
 ---
 
-## Sprawdź, ile kosztowałoby pozycjonowanie Twojej strony
+## Zacznij od bezpłatnego audytu
 
-Przeanalizujemy stronę i konkurencję. Dostaniesz wycenę z zakresem prac, a nie samą kwotę.
+Sprawdzimy Twoją stronę i konkurencję w Google i ChatGPT. Dostaniesz wycenę z zakresem prac, a nie samą kwotę.
 
-**[Napisz do nas →](/kontakt)** · Prowadzisz sklep? **[Bezpłatny audyt sklepu pod ChatGPT i AI →](/audyt-ai-dla-sklepu)**
+**[Zamów bezpłatny audyt →](/kontakt)** · Prowadzisz sklep? **[Bezpłatny audyt sklepu pod ChatGPT i AI →](/audyt-ai-dla-sklepu)**
 
 ---
 
