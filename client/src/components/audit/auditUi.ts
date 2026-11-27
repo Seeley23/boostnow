@@ -13,7 +13,7 @@ export const ui = {
   container: "mx-auto w-full max-w-3xl",
   wide: "mx-auto w-full max-w-5xl",
   eyebrow: "text-xs font-semibold uppercase tracking-[0.18em] text-[#555a66]",
-  h2: "font-heading text-[1.75rem] leading-[1.15] sm:text-4xl font-semibold tracking-tight text-[#14161c]",
+  h2: "font-heading text-[1.75rem] leading-[1.15] sm:text-4xl font-bold tracking-tight text-[#14161c]",
   body: "text-[1.0625rem] leading-relaxed text-[#3a3e48]",
   muted: "text-sm leading-relaxed text-[#555a66]",
   rule: "border-t border-[#dcd8cf]",
