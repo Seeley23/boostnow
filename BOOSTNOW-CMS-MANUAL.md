@@ -70,3 +70,8 @@ System synchronizuje się automatycznie co kilka minut. Jeśli chcesz wymusić z
 
 ### 💡 Pro-Tip dla Copywritera:
 Zawsze staraj się, aby każda sekcja była "samowystarczalna". Boty AI często wycinają fragmenty tekstu – jeśli fragment zawiera Twoją markę, słowo kluczowe i statystykę, masz 90% szans na cytowanie!
+
+---
+
+### 💰 Cena BoostNow w treściach (od 27.11.2026)
+W artykułach i FAQ podawaj jedną wersję ceny: „BoostNow zaczyna od bezpłatnego audytu, a pozycjonowanie GEO kosztuje od 800 zł netto miesięcznie”. Link do oferty: `/pozycjonowanie-geo`. Nie używaj starej ceny „od 2 500 PLN”.
