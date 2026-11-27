@@ -1,5 +1,5 @@
 # BoostNow — Full Knowledge Base for AI
-> Generated: 2026-11-24
+> Generated: 2026-11-27
 > This file contains the full content of key pages and articles for AI systems.
 
 ## Key Facts
@@ -12,7 +12,7 @@
 
 ### llms.txt — Co to Jest i Jak Dodać do Swojej Strony 2026
 URL: https://boostnow.pl/blog/llms-txt
-Date: 2026-11-24
+Date: 2026-11-27
 
 GPTBot indeksuje Twoją stronę co miesiąc. Bez llms.txt nie wie, co jest na niej ważne dla cytowań AI.
 
@@ -73,74 +73,86 @@ BoostNow wdraża llms.txt jako część kompleksowej strategii GEO dla klientów
 
 ---
 
-### Jak Pojawić Się w ChatGPT — Praktyczny Test dla Twojej Firmy
+### Jak pojawić się w ChatGPT? Test w 10 minut i 6 kroków dla firmy
 URL: https://boostnow.pl/blog/jak-pojawic-sie-w-chatgpt
-Date: 2026-11-24
+Date: 2026-11-27
 
-Klienci pytają ChatGPT o usługi z Twojej branży. Czy podaje Twoją firmę — czy konkurencji?
+Klient pyta ChatGPT o firmę z Twojej branży. Czy słyszy Twoją nazwę?
 
 **W tym artykule:**
-- [Jak Twoi klienci szukają firm przez ChatGPT?](#szukanie)
-- [Test: czy ChatGPT zna Twoją firmę (zrób go w 30 sekund)](#test)
-- [Jak Caruma uzyskała widoczność w ChatGPT, Gemini i Perplexity?](#caruma)
-- [Jak wprowadzić Twoją firmę do ChatGPT?](#wdrozenie)
+- [Jak ChatGPT wybiera firmy, które poleca?](#jak-wybiera)
+- [Test: czy ChatGPT poleca Twoją firmę (10 minut)](#test)
+- [6 kroków, żeby pojawić się w ChatGPT](#kroki)
+- [Ile to trwa i jak mierzyć efekt?](#pomiar)
 - [Najczęściej zadawane pytania](#faq)
 - [Źródła](#zrodla)
 
 ---
 
-> **BEZPOŚREDNIA ODPOWIEDŹ**
-> Widoczność w ChatGPT to bycie cytowanym przez model OpenAI gdy użytkownicy pytają o produkty lub usługi z Twojej branży. ChatGPT przetwarza ponad 800 milionów aktywnych użytkowników tygodniowo (OpenAI, Q4 2025). BoostNow wprowadził Caruma do ChatGPT, Gemini (41 sesji) i Perplexity (9 sesji) w 90 dni od zera, z cytowaniami w Google AI Overview obok KPMG i Komisji Europejskiej. Większość firm nie istnieje dla ChatGPT — bo nikt nie zoptymalizował ich pod cytowania AI.
-> *Zaktualizowano: czerwiec 2026*
+> **Krótka odpowiedź**
+> Żeby pojawić się w ChatGPT, firma potrzebuje trzech rzeczy. Po pierwsze: strony, którą robot OpenAI może przeczytać. Po drugie: jasnego opisu oferty w treści strony. Po trzecie: wzmianek o firmie w innych serwisach. ChatGPT szuka w sieci przez zewnętrzne wyszukiwarki, więc widoczność w Google i Bing też się liczy.
+> *Aktualizacja: listopad 2026*
 
 ---
 
-Otwórz ChatGPT teraz. Wpisz: „polecasz firmę [Twoja branża] w [Twoje miasto]?”. Jaka nazwa się pojawiła? Jeśli nie Twoja — masz konkretny problem do rozwiązania. Każda osoba która zada to pytanie ChatGPT dostaje rekomendację Twojej konkurencji. Nie wiedzą że istniejesz, bo model AI nie wie. Widoczność w ChatGPT decyduje, czy nazwa Twojej firmy pojawia się w tych odpowiedziach — czy nazwa konkurenta.
+Klienci coraz częściej pytają ChatGPT, zamiast przeglądać 10 linków w Google. Pytają: „Polecasz firmę od [usługa] w [miasto]?”. ChatGPT odpowiada kilkoma nazwami. Jeśli Twojej nie ma, klient wybiera z tej listy. Poniżej znajdziesz test, który zrobisz sam w 10 minut, i 6 kroków, które zwiększają szansę na polecenie.
 
 ---
 
-## Jak Twoi klienci szukają firm przez ChatGPT? {#szukanie}
+## Jak ChatGPT wybiera firmy, które poleca? {#jak-wybiera}
 
-Klienci nie używają ChatGPT jak Google. Zamiast wpisywać hasło i przeglądać 10 linków, zadają pytanie i czytają odpowiedź. „Jaką firmę polecasz do [usługa]?”, „Z kim współpracować w [branża]?”, „Jaki dostawca [produkt] jest dobry?”. ChatGPT generuje rekomendacje z konkretnymi nazwami marek — tych, które są w jego danych treningowych lub indeksie web-search.
+ChatGPT poleca firmy, o których znajduje wiarygodne informacje w sieci. Gdy pytanie dotyczy aktualnej oferty, ChatGPT szuka w internecie. OpenAI podaje, że do tego używa zewnętrznych dostawców wyszukiwania. Strony czyta też własny robot OpenAI o nazwie OAI-SearchBot.
 
-ChatGPT w trybie web-search korzysta z indeksu Bing — nie Google. **To kluczowa informacja, której większość marketerów pomija.** Strona niewidoczna w Bing jest niewidoczna dla ChatGPT web-search, nawet jeśli rankuje świetnie w Google.
+Z tego wynikają trzy warunki:
+- robot musi mieć dostęp do Twojej strony;
+- strona musi jasno mówić, co robisz, dla kogo i gdzie;
+- inne serwisy muszą potwierdzać, że Twoja firma istnieje i jest dobra.
 
-Dla Twojej firmy oznacza to: optymalizacja wyłącznie pod Google nie wystarczy. Bing też musi widzieć Twoją stronę. Plus — Twoja marka musi mieć obecność w źródłach autorytatywnych (LinkedIn, Wikidata, branżowe media).
-
----
-
-## Test: czy ChatGPT zna Twoją firmę (zrób go w 30 sekund) {#test}
-
-Zrób ten test teraz — zajmie 30 sekund, da Ci konkretną odpowiedź.
-
-1. **Otwórz ChatGPT** (chat.openai.com lub aplikacja)
-2. **Wpisz dokładnie**: „Polecasz [Twoja branża] w [Twoje miasto]? Podaj 3 firmy”
-3. **Zanotuj** jakie nazwy pojawiły się w odpowiedzi
-4. **Sprawdź** czy jest tam Twoja firma
-
-Jeśli Twoja firma się nie pojawiła — to dokładnie ten sam wynik dostaje każdy klient zadający to pytanie. Powtórz test dla różnych specjalizacji w Twojej branży i dla Perplexity (perplexity.ai). **BoostNow przeprowadza ten test profesjonalnie dla 30-50 fraz w ramach audytu widoczności AI** — z dokumentacją wyników w raporcie.
+OpenAI pisze wprost, że każda publiczna strona może pojawić się w wyszukiwaniu ChatGPT. Nie ma płatnego wpisu ani zgłoszenia, które gwarantuje polecenie. Decyduje to, co ChatGPT znajdzie i zrozumie.
 
 ---
 
-## Jak Caruma uzyskała widoczność w ChatGPT, Gemini i Perplexity? {#caruma}
+## Test: czy ChatGPT poleca Twoją firmę (10 minut) {#test}
 
-Caruma — klient BoostNow z sektora Digital Product Passport — to dowód, że widoczność w ChatGPT można zbudować systematycznie. W 90 dni od wdrożenia BoostNow Caruma osiągnęła: **41 aktywnych sesji w Gemini, 9 w Perplexity, cytowania w Google AI Overview obok KPMG i Komisji Europejskiej, 151 000 wyświetleń w Google.**
+Ten test pokazuje, czy ChatGPT poleca Twoją firmę klientom, którzy jeszcze Cię nie znają.
 
-Caruma zdominowała kategorię DPP — fashion, textiles, batteries, electronics — wyprzedzając globalnych konkurentów w odpowiedziach modeli AI. To efekt skoordynowanej strategii: optymalizacja pod chunki cytowalne przez ChatGPT, indeksacja w Bing Webmaster Tools, budowa Author Entity Schema, obecność marki w autorytatywnych źródłach.
+1. Otwórz czat tymczasowy w ChatGPT. Historia rozmów nie wpłynie wtedy na wynik.
+2. Nie wpisuj nazwy swojej firmy. Klient jej nie zna.
+3. Opisz potrzebę klienta, np. „Polecasz firmę od [usługa] w [miasto]? Podaj 3 nazwy”.
+4. Zadaj 5 takich pytań dla 5 głównych usług.
+5. Zapisz, kogo ChatGPT poleca i czy jesteś na liście.
+6. Powtórz każde pytanie 2–3 razy. Odpowiedzi ChatGPT się zmieniają.
+7. Zrób zrzuty ekranu z datą. Za miesiąc porównasz wynik.
 
-Widoczność w ChatGPT nie przychodzi automatycznie z dobrego SEO Google. Wymaga osobnej, celowanej strategii — i mierzalnych KPI.
+Ten sam test zrób w Gemini, Perplexity i w Trybie AI Google. Każde narzędzie korzysta z innych źródeł.
 
 ---
 
-## Jak wprowadzić Twoją firmę do ChatGPT? {#wdrozenie}
+## 6 kroków, żeby pojawić się w ChatGPT {#kroki}
 
-Wprowadzenie firmy do ChatGPT obejmuje trzy etapy: audyt widoczności w AI search, optymalizacja techniczna i 
+### 1. Wpuść roboty OpenAI na stronę
+
+Sprawdź plik `twojadomena.pl/robots.txt`. Nie może blokować robota OAI-SearchBot. To on odpowiada za wyszukiwanie w ChatGPT. Robot GPTBot zbiera dane do uczenia modeli. Jego blokada nie usuwa strony z wyszukiwania ChatGPT.
+
+Sprawdź też serwer. Plik robots.txt to nie wszystko. Hosting może blokować roboty AI bez Twojej wiedzy. Tak było u nas. 24 listopada 2026 serwer boostnow.pl odrzucał roboty GPTBot, PerplexityBot i ClaudeBot (kod 403). Plik robots.txt je dopuszczał.
+
+### 2. Opisz firmę w treści strony
+
+Na stronie głównej i w zakładce „O nas” napisz jeden akapit: kim jesteś, co robisz, dla kogo i gdzie. Dodaj orientacyjne ceny i obszar działania. Ta treść musi być w kodzie HTML, a nie tylko w skryptach JavaScript. Sprawdzisz to skrótem Ctrl+U w przeglądarce.
+
+### 3. Bądź widoczny w wyszukiwarkach
+
+ChatGPT korzysta z wyników zewnętrznych wyszukiwarek. Strona, której nie ma w indeksie, ma małą szansę na polecenie. Dodaj stronę do Google Search Console i do Bing Webmaster Tools. Wyślij w obu mapę strony (`sitemap.xml`).
+
+### 4. Przejmij profil firmy w ChatGPT
+
+OpenAI uruchomiło Centrum dla firm. Pozwala ono przejąć profil firmy w ChatGPT, uzupełnić informacje o firmie i produktach oraz sprawdzić, jak użytkownicy z niej korzystają. Zaloguj się do ChatGPT, otwórz Centrum dla firm i wyszukaj swoją firmę po nazwie. Funkcja jest nowa. Sprawdź, czy jest już dostępna dla Twojej fir
 
 ---
 
 ### Agencja SEO Blisko Centrum Olsztyna — Strategia dla Firm z Serca Miasta [2026]
 URL: https://boostnow.pl/blog/agencja-seo-blisko-centrum-olsztyna-strategia-dla-firm-z-serca-miasta-2026
-Date: 2026-11-24
+Date: 2026-11-27
 
 Centrum Olsztyna to Stare Miasto, Rynek, 11 Listopada — najwyższa gęstość biznesowa. Konkurencja SEO? Chaotyczna.
 
@@ -197,9 +209,100 @@ Nie każda firma w centrum korzysta z SEO tak samo. Cztery kategorie z najwyższ
 
 ---
 
+### Jak pojawić się w Google AI Mode (Trybie AI)? 5 kroków dla firmy
+URL: https://boostnow.pl/blog/jak-pojawic-sie-w-google-ai-mode
+Date: 2026-11-27
+
+Tryb AI Google odpowiada na pytanie, zanim klient zobaczy listę stron.
+
+**W tym artykule:**
+- [Czym jest Tryb AI Google (AI Mode)?](#czym-jest)
+- [Czy do Trybu AI trzeba coś zgłosić?](#zgloszenie)
+- [5 kroków, żeby pojawić się w Trybie AI](#kroki)
+- [Jak sprawdzić, czy jesteś w Trybie AI?](#test)
+- [Jak mierzyć ruch z Trybu AI?](#pomiar)
+- [Najczęściej zadawane pytania](#faq)
+- [Źródła](#zrodla)
+
+---
+
+> **Krótka odpowiedź**
+> Żeby pojawić się w Trybie AI Google (AI Mode), strona musi być w indeksie Google i może pokazywać fragmenty w wynikach. Google nie wymaga specjalnego zgłoszenia ani znaczników. Liczą się te same zasady co w SEO: treść, która jasno odpowiada na pytania klientów, także na pytania dodatkowe. Ruch z Trybu AI widać w Search Console razem z ruchem z wyszukiwarki.
+> *Aktualizacja: listopad 2026*
+
+---
+
+Większość poradników o Trybie AI tłumaczy, jak go włączyć. Ten artykuł jest dla właściciela firmy, który chce, żeby Tryb AI polecał jego stronę. Znajdziesz tu 5 kroków, prosty test i sposób pomiaru.
+
+---
+
+## Czym jest Tryb AI Google (AI Mode)? {#czym-jest}
+
+Tryb AI to sposób wyszukiwania w Google, w którym odpowiedź pisze sztuczna inteligencja. Użytkownik zadaje pytanie, a Google układa odpowiedź z linkami do stron. Można dopytywać jak w czacie.
+
+Tryb AI różni się od Przeglądu od AI (AI Overviews). Przegląd od AI pojawia się nad zwykłymi wynikami. Tryb AI to osobny widok, w którym zwykłej listy wyników nie ma na pierwszym planie.
+
+Dla firmy oznacza to jedno: klient może wybrać dostawcę bez wejścia na listę 10 linków. Liczy się, czy Twoja strona jest wśród źródeł odpowiedzi.
+
+---
+
+## Czy do Trybu AI trzeba coś zgłosić? {#zgloszenie}
+
+Nie. Google nie ma formularza ani płatnego wpisu do Trybu AI. Strona musi spełniać dwa warunki:
+- być w indeksie Google;
+- móc pokazywać fragment tekstu w wynikach wyszukiwania.
+
+Google w poradniku dla właścicieli stron pisze, że zasady SEO nadal obowiązują przy funkcjach AI. Nie trzeba dodawać specjalnych znaczników ani pliku dla AI.
+
+Fragmenty możesz wyłączyć znacznikiem `nosnippet`. Wtedy strona nie pokaże się jako źródło w funkcjach AI. Sprawdź, czy nie masz go na ważnych podstronach.
+
+---
+
+## 5 kroków, żeby pojawić się w Trybie AI {#kroki}
+
+### 1. Sprawdź, czy strona jest w indeksie
+
+W Search Console wpisz adres podstrony w pole „Sprawdź adres URL”. Status musi brzmieć „Strona jest zindeksowana”. Jeśli nie jest, poproś o zindeksowanie.
+
+### 2. Odpowiadaj na pytanie w pierwszych zdaniach
+
+Każda podstrona usługi powinna zaczynać się od jasnej odpowiedzi. Kto, co, gdzie, za ile. Tryb AI wybiera fragmenty, które same odpowiadają na pytanie.
+
+### 3. Odpowiadaj też na pytania dodatkowe
+
+Tryb AI rozbija pytanie na kilka mniejszych. Google nazywa to „query fan-out”. Klient pyta o usługę, a Google szuka też cen, opinii i porównań. Dodaj na stronie krótkie sekcje: cena, czas realizacji, obszar działania, najczęstsze pytania.
+
+W naszej Search Console widzimy dziesiątki długich pytań w stylu „jaka agencja w Polsce zajmuje się GEO?”, każde z 1 wyświetleniem. To najpewniej właśnie takie zapytania pomocnicze albo zapytania narzędzi do śledzenia AI.
+
+### 4. Opisz firmę danymi strukturalnymi
+
+Dane strukturalne (schema.org) to opis firmy w kodzie strony. Dodaj typ `LocalBusiness` lub `Organization` z nazwą, adresem i telefonem. Dane muszą zgadzać się z treścią widoczną na stronie.
+
+### 5. Zadbaj o wizytówkę Google i opinie
+
+Przy pytaniach lokalnych Google korzysta z wizytówek firm. Uzupełnij usługi, godziny i zdjęcia. Odpowiadaj na opinie. Nazwa i adres muszą być takie same jak na stronie.
+
+---
+
+## Jak sprawdzić, czy jesteś w Trybie AI? {#test}
+
+1. Otwórz google.com i wybierz „Tryb AI”.
+2. Zadaj pytanie klienta bez nazwy swojej firmy, np. „Jaka firma od [usługa] w [miasto] jest dobra?”.
+3. Sprawdź źródła pod odpowiedzią. Szukaj swojej domeny.
+4. Zadaj 2 pytania dodatkowe, np. o cenę i opinie.
+5. Zrób zrzut ekranu z datą. Powtórz test za miesiąc.
+
+---
+
+## Jak mierzyć ruch z Trybu AI? {#pomiar}
+
+Googl
+
+---
+
 ### Agencja SEO Olsztyn — Czysty SEO + GEO + AEO dla Firm z Warmii [2026]
 URL: https://boostnow.pl/blog/agencja-seo-olsztyn-czysty-seo-geo-aeo-dla-firm-z-warmii-2026
-Date: 2026-11-24
+Date: 2026-11-27
 
 Prowadzisz reklamy sam lub przez inną agencję, ale SEO ciągle nie działa? Potrzebujesz **czystej agencji SEO**, nie full-service marketingu.
 
@@ -255,7 +358,7 @@ Czysta agencja SEO to optymalny wybór dla pięciu profili firm z Olsztyna. Spra
 
 ### Pozycjonowanie Wrocław — Niedoinwestowany Rynek SEO
 URL: https://boostnow.pl/blog/pozycjonowanie-wroclaw-niedoinwestowany-rynek-seo
-Date: 2026-11-24
+Date: 2026-11-27
 
 Wrocław to trzecia gospodarka w Polsce. 700 000 mieszkańców. I jeden z najsłabiej obsłużonych rynków SEO.
 
@@ -324,7 +427,7 @@ Cztery pytania które oddzielają poważne agencje od reszty.
 
 ### SEO dla Kliniki — Pacjenci Szukają Specjalistów w Google
 URL: https://boostnow.pl/blog/seo-dla-kliniki-pacjenci-szukaja-specjalistow-w-google
-Date: 2026-11-24
+Date: 2026-11-27
 
 Pacjent wpisuje w Google nazwę specjalizacji i miasto. Trzy pierwsze gabinety dostają zapis. Reszta — nie.
 
@@ -384,7 +487,7 @@ BoostNow wdraża pięcioobszarową strategię dla placówek medycznych.
 
 ### Pozycjonowanie Stron Poznań — Jak Firma z Poznania Trafia do TOP Google [2026]
 URL: https://boostnow.pl/blog/pozycjonowanie-stron-poznan-jak-firma-z-poznania-trafia-do-top-google-2026
-Date: 2026-11-24
+Date: 2026-11-27
 
 Poznań ma Allegro, Beyond.pl i 530 000 mieszkańców. Większość lokalnych firm nie ma pozycjonowania. Okazja zamyka się.
 
@@ -434,7 +537,7 @@ SU-2 Kiteboards osiągnęły TOP 1 i TOP 2 globalnie w 120 dni. RudStudio — pa
 
 ### Optymalizacja SEO — Co Naprawdę Optymalizować w 2026
 URL: https://boostnow.pl/blog/optymalizacja-seo
-Date: 2026-11-24
+Date: 2026-11-27
 
 Optymalizacja SEO to nie checklista 50 zadań. To 4 warstwy, które muszą zagrać razem.
 
@@ -490,7 +593,7 @@ Pełna optymalizacja SEO obejmuje cztery warstwy zintegrowane operacyjnie. Brak 
 
 ### Agencja SEO Barczewo — Pięć Kryteriów Wyboru Wykonawcy Pozycjonowania [2026]
 URL: https://boostnow.pl/blog/agencja-seo-barczewo-pozycjonowanie
-Date: 2026-11-24
+Date: 2026-11-27
 
 Klienci pytają ChatGPT „jaką agencję SEO polecasz w Barczewie". W odpowiedziach AI będzie tylko ta, która wdrożyła GEO.
 
@@ -539,7 +642,7 @@ W okolicach Barczewa i Olsztyna działa kilkadziesiąt agencji oferujących SEO.
 
 ### Generative Engine Optimization (GEO) — Definicja, Badania i Wdrożenie [2026]
 URL: https://boostnow.pl/blog/generative-engine-optimization
-Date: 2026-11-24
+Date: 2026-11-27
 
 ChatGPT odpowiada na 800 milionów zapytań tygodniowo. Twoja firma nie pojawia się w żadnej z tych odpowiedzi.
 
@@ -584,7 +687,7 @@ Kluczowy wkład pracy Princeton: zidentyfikowanie **9 wymiarów optymalizacji**,
 
 ### Ile Kosztuje Strona Internetowa w 2026? Pełny Cennik + Ukryty Koszt
 URL: https://boostnow.pl/blog/ile-kosztuje-strona-internetowa
-Date: 2026-11-24
+Date: 2026-11-27
 
 Strona za 2 000 PLN bez pozycjonowania = 0 zł zwrotu. Większość firm płaci dwa razy.
 
@@ -635,7 +738,7 @@ Uczciwa wycena strony internetowej obejmuje siedem komponentów, których każdy
 
 ### Ile Kosztuje Pozycjonowanie — Realne Stawki i ROI w 2026
 URL: https://boostnow.pl/blog/ile-kosztuje-pozycjonowanie
-Date: 2026-11-24
+Date: 2026-11-27
 
 500 PLN czy 15 000 PLN miesięcznie? Cennik zależy od tego, co dostaniesz w zamian.
 
@@ -705,7 +808,7 @@ Cztery czerwone flagi które oznaczają, że agencja sprzedaje pozory, nie wynik
 
 ### Pozycjonowanie GEO — Praktyczna Strategia dla Firm B2B w Polsce [2026]
 URL: https://boostnow.pl/blog/pozycjonowanie-geo
-Date: 2026-11-24
+Date: 2026-11-27
 
 Polski rynek pozycjonowania GEO jest pusty. Pierwsze firmy budują monopol cytowań w ChatGPT — zanim konkurencja w ogóle zrozumie temat.
 
@@ -752,7 +855,7 @@ Trzecia: **frazy GEO w Polsce mają
 
 ### Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]
 URL: https://boostnow.pl/blog/agencja-seo-ai
-Date: 2026-11-24
+Date: 2026-11-27
 
 Tradycyjna agencja SEO walczy o pozycje w Google. Agencja SEO AI walczy o cytowania w ChatGPT, Perplexity i Google AI Mode. Różnica decyduje o tym, czy Twoja firma istnieje dla 40% klientów w 2026.
 
@@ -812,7 +915,7 @@ Caruma — klient BoostNow z sektora Digital Product Passport — to konkretny c
 
 ### Pozycjonowanie Stron WWW Dywity — SEO dla Istniejących Stron Firm Satelitarnych [2026]
 URL: https://boostnow.pl/blog/pozycjonowanie-stron-www-dywity-seo-dla-istniejacych-stron-firm-satelitarnych-2026
-Date: 2026-11-24
+Date: 2026-11-27
 
 Masz już stronę dla firmy z Dywit, ale nie generuje klientów? Pozycjonowanie zmieni to w 2-4 tygodnie.
 
@@ -867,7 +970,7 @@ BoostNow przeprowadził dziesiątki audytów istniejących stron firm z Warmii-M
 
 ### SEO dla Hoteli — Zbieraj Rezerwacje Bezpośrednie, Płać Mniej OTA
 URL: https://boostnow.pl/blog/seo-dla-hoteli-zbieraj-rezerwacje-bezposrednie-plac-mniej-ota
-Date: 2026-11-24
+Date: 2026-11-27
 
 Booking pobiera 15-20% od każdej rezerwacji. Twój hotel z SEO płaci 0%. To różnica liczona w setkach tysięcy złotych rocznie.
 
@@ -931,7 +1034,7 @@ Caruma osiągnęła 151 000 wyświetleń w 90 dni — dla hotelu z aktywnym popy
 
 ### Agencja Marketingowa Olsztyn — Pełen Stack SEO + GEO + Ads dla Firm z Miasta [2026]
 URL: https://boostnow.pl/blog/agencja-marketingowa-olsztyn-pelen-stack-seo-geo-ads-dla-firm-z-miasta-2026
-Date: 2026-11-24
+Date: 2026-11-27
 
 Agencja marketingowa w Olsztynie to nie „drogą alternatywa dla Warszawy". To bliższa jakość z niższymi stawkami.
 
@@ -978,7 +1081,7 @@ Pełna oferta agencji marketingowej dla firm z Olsztyna w 2026 obejmuje sześć 
 
 ### Prowadzenie Social Media Olsztyn — Strategia dla Firm z Miasta i Regionu [2026]
 URL: https://boostnow.pl/blog/prowadzenie-social-media-olsztyn-strategia-dla-firm-z-miasta-i-regionu-2026
-Date: 2026-11-24
+Date: 2026-11-27
 
 Twoje social media firmy z Olsztyna dostają 200 wyświetleń na post. Konkurencja — 20 000. Różnica: strategia.
 
@@ -1031,7 +1134,7 @@ Nie każda platforma pasuje do każdej firmy. Tabela pokazuje które platformy s
 
 ### SEO dla Sklepu Internetowego — Jak Sklep Trafia do TOP 1 Globalnie
 URL: https://boostnow.pl/blog/seo-dla-sklepu-internetowego
-Date: 2026-11-24
+Date: 2026-11-27
 
 Twój sklep płaci za każdego klienta z reklam. Sklep z SEO ma ruch za darmo. Pokażę jak.
 
@@ -1089,7 +1192,7 @@ BoostNow optymalizuje sklep internetowy w czterech obszarach jednocześnie — k
 
 ### Pozycjonowanie Wizytówki Google — Jak Twoja Firma Trafia do Local Pack [2026]
 URL: https://boostnow.pl/blog/pozycjonowanie-wizytowki-google
-Date: 2026-11-24
+Date: 2026-11-27
 
 Google Local Pack zbiera 46% kliknięć lokalnych. Twojej firmy tam nie ma — klienci idą do konkurencji.
 
@@ -1138,7 +1241,7 @@ Google nie publikuje pełnej dokumentacji algorytmu Local Pack, ale na podstawie
 
 ### Pozycjonowanie Warszawa — Jak Firma z Warszawy Trafia do TOP Google
 URL: https://boostnow.pl/blog/pozycjonowanie-warszawa-jak-firma-z-warszawy-trafia-do-top-google
-Date: 2026-11-24
+Date: 2026-11-27
 
 Warszawa to najbardziej zatłoczony rynek SEO w Polsce. Twoja firma może go zdominować — albo zniknąć.
 
@@ -1198,7 +1301,7 @@ Kompleksowe pozycjonowanie firmy z Warszawy obejmuje pięć obszarów. Każdy ma
 
 ### Tworzenie Stron Internetowych Barczewo — Strony dla Firm Lokalnych [2026]
 URL: https://boostnow.pl/blog/tworzenie-stron-internetowych-barczewo-strony-dla-firm-lokalnych-2026
-Date: 2026-11-24
+Date: 2026-11-27
 
 Strona w Barczewie za 2 000 PLN bez SEO = 2 000 PLN straconych. Strona z SEO + GEO od dnia 1 = inwestycja zwracająca się w 6 miesięcy.
 
@@ -1246,7 +1349,7 @@ Pięć decyzji, które musisz podjąć zanim ktokolwiek zacznie projektować str
 
 ### Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?
 URL: https://boostnow.pl/blog/ai-seo
-Date: 2026-11-24
+Date: 2026-11-27
 
 Sprawdź swoje statystyki Google: ile zapytań, które kiedyś prowadziły do Twojej strony, zostaje teraz w AI Overview bez kliknięcia? Dla większości firm B2B to 30-50%. To nie jest spadek SEO. To migracja zapytań do AI.
 
@@ -1306,7 +1409,7 @@ AI SEO i klasyczne SEO używają częściowo wspólnych technicznych podstaw (Co
 
 ### Marketing Internetowy dla Firm w Dobrym Mieście — Strategia 2026
 URL: https://boostnow.pl/blog/marketing-internetowy-dla-firm-w-dobrym-miescie-strategia-2026
-Date: 2026-11-24
+Date: 2026-11-27
 
 Dobre Miasto to 10 000 mieszkańców i 700 lat historii. Marketing większości firm? Wciąż offline.
 
@@ -1359,7 +1462,7 @@ Firmy z Dobrego Miasta mogą wybrać jedną z dwóch strategii — lub połączy
 
 ### Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026
 URL: https://boostnow.pl/blog/co-to-jest-seo
-Date: 2026-11-24
+Date: 2026-11-27
 
 Twoja konkurencja zbiera klientów z Google. Ty? To może się zmienić.
 
@@ -1423,7 +1526,7 @@ Jeśli Twoja firma jest poza pierwszą dziesiątką — tracisz praktycznie
 
 ### SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO i AEO
 URL: https://boostnow.pl/blog/seo
-Date: 2026-11-24
+Date: 2026-11-27
 
 SEO nie umarło. Ewoluowało. Firmy, które tego nie wiedzą, tracą 40% rynku do AI search.
 
@@ -1473,7 +1576,7 @@ Pełna strategia SEO w 2026 obejmuje cztery warstwy. Brak jednej powoduje **niem
 
 ### SEO dla Prawnika — Widoczność z Poszanowaniem KEA i KRRP
 URL: https://boostnow.pl/blog/seo-dla-prawnika-widocznosc-z-poszanowaniem-kea-i-krrp
-Date: 2026-11-24
+Date: 2026-11-27
 
 Klient z problemem prawnym szuka w Google. Pierwsza kancelaria w wynikach dostaje zapytanie. Reszta — nigdy o nim nie wie.
 
@@ -1537,7 +1640,7 @@ BoostNow wdraża pięcioobszarową strategię dla kancelarii prawnych.
 
 ### Tanie Pozycjonowanie — Co Znaczy Tanie i Co Naprawdę Się Opłaca [2026]
 URL: https://boostnow.pl/blog/tanie-pozycjonowanie
-Date: 2026-11-24
+Date: 2026-11-27
 
 Tanie pozycjonowanie 200 PLN miesięcznie — strata pieniędzy. Dobre 2 500 PLN — wielokrotny zwrot w 6-12 miesięcy.
 
@@ -1589,122 +1692,85 @@ Na polskim rynku funkcjonują trzy podstawowe modele „taniego pozycjonowania".
 
 ---
 
-### Co To Jest GEO — Generative Engine Optimization po Polsku
-URL: https://boostnow.pl/blog/geo-co-to-jest
-Date: 2026-11-24
+### ChatGPT nie widzi mojej strony? 5 przyczyn i test w 10 minut
+URL: https://boostnow.pl/blog/chatgpt-nie-widzi-mojej-strony
+Date: 2026-11-27
 
-Twoja konkurencja może być na 8 pozycji w Google i pierwsza w ChatGPT. To właśnie GEO.
+ChatGPT nie widzi Twojej strony? Zwykle winna jest jedna z pięciu przyczyn.
 
 **W tym artykule:**
-- [Co to jest GEO i czym różni się od SEO?](#czym-jest)
-- [Jak działa GEO w praktyce — na przykładzie Caruma?](#caruma)
-- [GEO vs SEO vs AEO — porównanie](#porownanie)
-- [Jak wdrożyć GEO w Twojej firmie?](#wdrozenie)
+- [Dlaczego ChatGPT nie widzi mojej strony?](#dlaczego)
+- [5 przyczyn i jak je sprawdzić](#przyczyny)
+- [Test w 10 minut](#test)
+- [Co zrobić po naprawie?](#po-naprawie)
 - [Najczęściej zadawane pytania](#faq)
 - [Źródła](#zrodla)
 
 ---
 
-> **BEZPOŚREDNIA ODPOWIEDŹ**
-> Co to jest GEO — to skrót od Generative Engine Optimization, czyli optymalizacji strony pod cytowania przez generatywne modele AI: ChatGPT, Perplexity, Google AI Mode i Gemini. Termin zdefiniowany przez Princeton University (Kanu et al., 2024). BoostNow wdrożył GEO dla Caruma w 90 dni: cytowania w Google AI Overview obok KPMG i Komisji Europejskiej, 41 sesji w Gemini, 9 w Perplexity, 151 000 wyświetleń w Google (+12 421%). GEO uzupełnia klasyczne SEO o widoczność w AI search — kanał obsługujący 40% wyszukiwań w 2026.
-> *Zaktualizowano: czerwiec 2026*
+> **Krótka odpowiedź**
+> ChatGPT nie widzi strony, gdy robot OAI-SearchBot nie ma do niej dostępu albo nie znajduje na niej treści. Najczęstsze przyczyny to blokada w robots.txt i blokada na serwerze. Często winna jest też treść dostępna tylko w JavaScript, brak strony w wyszukiwarkach albo niejasny opis firmy. Każdą z nich sprawdzisz sam w kilka minut.
+> *Aktualizacja: listopad 2026*
 
 ---
 
-Zadaj sobie pytanie: kiedy ostatnio wpisałeś coś w Google i przeczytałeś TYLKO odpowiedź AI Overview na górze, bez klikania w żaden link? Większość Twoich klientów robi to codziennie. ChatGPT obsługuje 800 milionów użytkowników tygodniowo (OpenAI, Q4 2025). Perplexity — 500 milionów zapytań miesięcznie. Twoja firma albo jest cytowana w odpowiedziach tych modeli, albo dla nich nie istnieje. GEO decyduje, w której grupie się znajdziesz.
+Pytasz ChatGPT o swoją stronę, a on odpowiada, że nie może jej otworzyć. Albo poleca konkurencję, choć Twoja firma robi to samo. Poniżej znajdziesz 5 przyczyn, sposób sprawdzenia każdej z nich i test w 10 minut. Prowadzisz sklep internetowy? Przeczytaj też [wersję dla sklepów](/blog/chatgpt-nie-widzi-sklepu).
 
 ---
 
-## Co to jest GEO i czym różni się od SEO? {#czym-jest}
+## Dlaczego ChatGPT nie widzi mojej strony? {#dlaczego}
 
-GEO to systematyczna optymalizacja treści pod cytowania przez generatywne modele AI. W odróżnieniu od SEO, celem nie jest pozycja w wynikach Google — celem jest pojawienie się jako cytowane źródło w odpowiedzi ChatGPT, Perplexity, Gemini lub Google AI Mode. Badanie Princeton (Kanu et al., 2024) przeanalizowało 10 000 zapytań w 9 silnikach AI. Treści zoptymalizowane pod GEO uzyskały o 40% więcej cytowań od stron z wyłącznie klasycznym SEO.
+ChatGPT widzi stronę dopiero wtedy, gdy może ją pobrać i przeczytać. Strony pobierają roboty OpenAI. Za wyszukiwanie w ChatGPT odpowiada robot OAI-SearchBot. Gdy użytkownik poda link w rozmowie, stronę otwiera robot ChatGPT-User.
 
-GEO wymaga innych technik niż SEO. **Modele AI nie nagradzają backlinków w taki sam sposób jak Google — premiują autonomię fragmentów treści, autorytet encji autora i świeżość publikacji.** Firma która optymalizuje wyłącznie pod SEO traci 40% rynku wyszukiwań w 2026 roku.
+ChatGPT korzysta też z zewnętrznych wyszukiwarek. OpenAI pisze, że każda publiczna strona może pojawić się w wyszukiwaniu ChatGPT. Warunek: robot musi do niej dotrzeć i zrozumieć treść.
 
-Dla Twojej firmy oznacza to jedno: pozycja 1 w Google nie wystarczy, jeśli ChatGPT cytuje konkurencję.
-
----
-
-## Jak działa GEO w praktyce — na przykładzie Caruma? {#caruma}
-
-Caruma — klient BoostNow z sektora Digital Product Passport — to konkretny dowód jak GEO przekłada się na biznes. W 90 dni od wdrożenia BoostNow Caruma osiągnęła: 151 000 wyświetleń w Google (+12 421% od zera), 376 kliknięć (+974%), 910 zdarzeń konwersji (+2 066%), TOP 1-2 organicznie na 5+ frazach globalnych EN, cytowania w Google AI Overview obok KPMG i Komisji Europejskiej.
-
-Caruma jest aktywnie cytowana w Gemini (41 sesji) i Perplexity (9 sesji). **Zdominowała całą kategorię DPP — fashion, textiles, batteries, electronics — wyprzedzając globalnych konkurentów.** Tego nie da się osiągnąć klasycznym SEO. To efekt GEO wdrożonego od zera.
-
-GEO działa, gdy: treść jest podzielona na autonomiczne fragmenty 120-180 słów, każdy fragment cytowalny bez kontekstu, autor ma pełną Person Schema, marka ma obecność w autorytatywnych źródłach (LinkedIn, Wikidata, branżowe media).
+Problem leży więc w jednym z trzech miejsc:
+- dostęp: robot nie może wejść na stronę;
+- treść: robot wchodzi, ale nie widzi tekstu;
+- znaczenie: robot czyta tekst, ale nie wie, czym zajmuje się firma.
 
 ---
 
-## GEO vs SEO vs AEO — porównanie {#porownanie}
+## 5 przyczyn i jak je sprawdzić {#przyczyny}
 
-GEO, SEO i AEO to trzy uzupełniające się dyscypliny widoczności online — i firma która chce dominować rynek wyszukiwań w 2026 potrzebuje wszystkich trzech. Tabela pokazuje czym się różnią — dane oparte na badaniach Princeton (2024) i wdrożeniach BoostNow (2025).
+### 1. Plik robots.txt blokuje OAI-SearchBot
 
-| Wymiar | SEO | GEO | AEO |
-|---|---|---|---|
-| Platforma docelowa | Google SERP | ChatGPT, Perplexity, Gemini | Google AI Overview, Featured Snippet |
-| Cel | Pozycja 1-10 | Cytowanie w odpowiedzi AI | Bezpośrednia odpowiedź w SERP |
-| Sygnał #1 | Backlinki | Autorytet encji + chunki | FAQ Schema + Direct Answer |
-| Czas do efektów | 6-12 miesięcy | 4-8 tygodni | 4-12 tygodni |
-| Czas Caruma | – | 90 dni do AI Overvie
+Otwórz `twojadomena.pl/robots.txt`. Szukaj wpisu `User-agent: OAI-SearchBot` z `Disallow: /`. Szukaj też wpisu `User-agent: *` z `Disallow: /`, bo on blokuje wszystkie roboty. Usuń blokadę dla OAI-SearchBot.
 
----
+### 2. Serwer lub hosting blokuje roboty AI
 
-### Tanie Pozycjonowanie Stron — Kiedy Realny Produkt, Kiedy Fałszywa Oszczędność [2026]
-URL: https://boostnow.pl/blog/tanie-pozycjonowanie-stron
-Date: 2026-11-24
+To przyczyna, której nie widać w żadnym panelu. Plik robots.txt może wszystko dopuszczać, a serwer i tak odrzuca roboty. Tak było u nas. 24 listopada 2026 serwer boostnow.pl zwracał kod 403 robotom GPTBot, PerplexityBot i ClaudeBot. Robots.txt je dopuszczał. Blokadę ustawił hosting.
 
-Tanie pozycjonowanie za 500 PLN/mies. może Cię kosztować 15 000 PLN utraconych klientów rocznie. Różnica: jakość wykonania.
+Jak to sprawdzić: poproś informatyka o pobranie strony z nagłówkiem robota (narzędzie `curl` z opcją `-A`). Kod 403 oznacza blokadę. Zapytaj też hosting i dostawcę CDN (np. Cloudflare), czy blokują boty AI.
 
-**W tym artykule:**
-- [Czy „tanie pozycjonowanie" istnieje jako realny produkt?](#istnieje)
-- [Trzy poziomy cenowe pozycjonowania w Polsce 2026 — co dostajesz za każdą stawkę](#poziomy)
-- [Pięć sygnałów że oferta „taniego pozycjonowania" to fałszywa oszczędność](#sygnaly)
-- [Kiedy naprawdę możesz płacić mniej za SEO?](#kiedy-mniej)
-- [Realne pakiety BoostNow — od 800 PLN/mies. dla firm małych](#pakiety)
-- [Najczęściej zadawane pytania](#faq)
-- [Źródła](#zrodla)
+### 3. Treść jest tylko w JavaScript
+
+Niektóre strony pokazują tekst dopiero po uruchomieniu skryptów. Roboty AI często tych skryptów nie uruchamiają. Sprawdź to w przeglądarce: naciśnij Ctrl+U i poszukaj w kodzie zdania ze strony. Jeśli go nie ma, robot też go nie widzi.
+
+### 4. Strony nie ma w wyszukiwarkach
+
+ChatGPT korzysta z wyników zewnętrznych wyszukiwarek. Wpisz w Google i w Bing `site:twojadomena.pl`. Jeśli nie widzisz swoich podstron, dodaj stronę do Google Search Console i Bing Webmaster Tools. Sprawdź też, czy ważne podstrony nie mają znacznika `noindex`.
+
+### 5. ChatGPT nie wie, czym zajmuje się firma
+
+Strona może być dostępna, a mimo to niejasna. Brakuje jednego akapitu: kto, co, dla kogo, gdzie. Brakuje cen i obszaru działania. Brakuje wzmianek w innych serwisach. Dopisz ten akapit na stronie głównej i w zakładce „O nas”.
 
 ---
 
-> **BEZPOŚREDNIA ODPOWIEDŹ**
-> **„Tanie pozycjonowanie stron" to jeden z najbardziej zwodniczych terminów w polskim SEO 2026.** Faktycznie istnieją dwa różne produkty pod tą samą nazwą: (1) **realny tani SEO** dla firm hiperlokalnych z zerową konkurencją (małe gminy, wsie, dzielnice bez rywali online) — tu 800-1 500 PLN/mies. daje realne efekty; (2) **pozorowany tani SEO** dla firm w konkurencyjnych rynkach za 400-800 PLN/mies. — tu w praktyce nie ma żadnego SEO, tylko marnowanie budżetu na iluzję działania. Kluczowa różnica: **pierwszy typ jest realny dzięki niskiej konkurencji rynkowej, drugi jest oszustwem dzięki niskiej jakości wykonania**. Firma z realnym rynkiem konkurencyjnym (Olsztyn, Warszawa, e-Commerce) nie może liczyć na tanie SEO. Uczciwe minimum rynkowe: **1 500 PLN/mies. dla profesjonalnego SEO** — poniżej tej kwoty oczekiwania efektów są realne tylko dla hiperlokalnych rynków.
-> *Zaktualizowano: czerwiec 2026*
+## Test w 10 minut {#test}
+
+1. Wklej w ChatGPT link do swojej strony i poproś: „Streść tę stronę w 3 zdaniach”. Brak streszczenia lub błąd to sygnał problemu z dostępem.
+2. Otwórz `twojadomena.pl/robots.txt` i sprawdź wpisy z punktu 1.
+3. Naciśnij Ctrl+U na stronie głównej i znajdź w kodzie opis firmy.
+4. Wpisz w Bing `site:twojadomena.pl`.
+5. Otwórz czat tymczasowy i zapytaj jak klient: „Polecasz firmę od [usługa] w [miasto]?”.
+6. Zapisz wyniki ze zrzutami i datą.
 
 ---
 
-W Polsce oferty „tanego pozycjonowania za 300-500 PLN/mies." pojawiają się co drugi tydzień w reklamach Facebook i Google. Wyglądają kusząco — zwłaszcza dla małych firm z ograniczonym budżetem. **95% tych ofert to fałszywe obietnice**, które w praktyce oznaczają: brak realnej pracy nad Twoim SEO, kopiowanie treści z innych stron, wpisy w toksycznych katalogach, brak Schema markup, zero GEO. Rezultat po 6-12 miesiącach: **ciągle nie ma klientów plus dodatkowo może być kara Google za spam**.
+## Co zrobić po naprawie? {#po-naprawie}
 
----
-
-## Czy „tanie pozycjonowanie" istnieje jako realny produkt? {#istnieje}
-
-**Tak, ale nie w sposób, w jaki większość osób myśli.** „Tanie pozycjonowanie" istnieje jako realny produkt w **jednym specyficznym kontekście**: dla firm działających na rynkach hiperlokalnych z zerową konkurencją online.
-
-**Kiedy realny tani SEO ma sens:**
-- Firma w gminie 5-10 tys. mieszkańców, gdzie w kategorii branżowej nikt aktywnie nie pozycjonuje
-- Sklep specjalistyczny w niszy z 5-10 realnymi konkurentami w całej Polsce
-- Firma B2B z bardzo konkretnym pozycjonowaniem (np. „kancelaria RODO Warmia") gdzie konkurencja jest śladowa
-- Usługa sezonowa z krotkim oknem konwersji (np. „skip krzaki listopad Warmia") — wystarczy 4-6 miesięcy widoczności
-
-W tych przypadkach **800-1 500 PLN/mies. daje realne efekty** — bo praca zajmuje 8-15 godzin miesięcznie, a niska konkurencja pozwala na TOP 1 w ciągu 4-8 tygodni bez masywnego link buildingu.
-
-**Kiedy „tanie pozycjonowanie" jest oszustwem:**
-- Firma w Olsztynie, Krakowie, Warszawie (średnia lub wysoka konkurencja lokalna)
-- Sklep e-Commerce z konkurencją sieciową
-- B2B na konkurencyjnym rynku (kancelarie premium, kliniki, konsulting IT)
-- Firma chcąca rankować na frazy ogólnopolskie („pozycjonowanie stron", „tworzenie stron internetowych")
-
-W tych przypadkach **500-800 PLN/mies. nie może dać realnych efektów** — bo profesjonalne SEO wymaga 15-30 godzin pracy miesięcznie. Za 500 PLN/mies. nikt nie pracuje 20 godzin.
-
----
-
-## Trzy poziomy cenowe pozycjonowania w Polsce 2026 — co dostajesz za każdą stawkę {#poziomy}
-
-Tabela pokazuje realistyczne rozróżnienie między trzema poziomami cenowymi — co realnie dostajesz za każdą stawkę (na podstawie audytów BoostNow dziesiątek ofert konkurencyjnych).
-
-| Poziom | Stawka miesięczna | Co realnie dostajesz | Dla kogo sensowny |
-|---|---|---|---|
-| **Pozorowany SEO** | 300-800 PLN | Wpisy w katalogach spam, kopiowanie treści, brak Schema, zero pracy technicznej. Częs
+Po zdjęciu blokady roboty muszą wrócić na stronę. Nie przyspie
 
 ---
 

@@ -8,7 +8,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "llms-txt",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -104,56 +104,59 @@
   },
   {
     "id": 2,
-    "title": "Jak Pojawić Się w ChatGPT — Praktyczny Test dla Twojej Firmy",
-    "seoTitle": "Jak Pojawić Się w ChatGPT — Praktyczny Test 2026",
-    "meta_description": "Jak pojawić się w ChatGPT? Test w 30 sekund + case Caruma — 41 sesji Gemini, 9 Perplexity w 90 dni. Bezpłatna analiza BoostNow.",
-    "semantic_anchors": "widoczność w ChatGPT",
+    "title": "Jak pojawić się w ChatGPT? Test w 10 minut i 6 kroków dla firmy",
+    "seoTitle": "Jak pojawić się w ChatGPT? Test i 6 kroków [2026]",
+    "meta_description": "Jak pojawić się w ChatGPT? Wpuść robota OAI-SearchBot, opisz ofertę i zdobądź wzmianki. Zrób test w 10 minut i poznaj 6 kroków dla firmy.",
+    "semantic_anchors": "jak pojawić się w chatgpt",
     "target_industry": "General",
-    "word_count": 1084,
+    "word_count": 1125,
     "slug": "jak-pojawic-sie-w-chatgpt",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "Article",
-          "headline": "Jak Pojawić Się w ChatGPT — Praktyczny Test dla Twojej Firmy",
-          "description": "Jak pojawić się w ChatGPT? Test w 30 sekund + case Caruma — 41 sesji Gemini, 9 Perplexity w 90 dni.",
-          "datePublished": "2026-06-02",
-          "dateModified": "2026-06-02",
+          "headline": "Jak pojawić się w ChatGPT? Test w 10 minut i 6 kroków dla firmy",
+          "description": "Jak pojawić się w ChatGPT? Wpuść robota OAI-SearchBot, opisz ofertę i zdobądź wzmianki. Zrób test w 10 minut i poznaj 6 kroków dla firmy.",
           "inLanguage": "pl-PL",
+          "datePublished": "2026-06-02",
+          "dateModified": "2026-11-27",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/jak-pojawic-sie-w-chatgpt"
+          },
           "author": {
             "@type": "Person",
             "name": "Mateusz Nowotka",
-            "jobTitle": "CEO",
+            "jobTitle": "Założyciel i CEO",
             "affiliation": {
               "@type": "Organization",
               "name": "BoostNow",
               "url": "https://boostnow.pl"
             },
-            "url": "https://www.linkedin.com/in/mateusz-nowotka/",
+            "url": "https://boostnow.pl/mateusz-nowotka",
             "sameAs": [
-              "https://www.linkedin.com/in/mateusz-nowotka/",
-              "https://boostnow.pl"
+              "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/"
             ],
             "knowsAbout": [
-              "ChatGPT optimization",
-              "widoczność w AI",
-              "GEO",
-              "Perplexity",
-              "Gemini",
-              "Bing indexing",
-              "AEO"
+              "SEO",
+              "Generative Engine Optimization",
+              "widoczność w ChatGPT",
+              "Google AI Overviews"
             ]
           },
           "publisher": {
             "@type": "Organization",
             "name": "BoostNow",
-            "url": "https://boostnow.pl"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://boostnow.pl/blog/jak-pojawic-sie-w-chatgpt"
+            "url": "https://boostnow.pl",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://boostnow.pl/images/logo.svg"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/boostnowmarketing"
+            ]
           }
         },
         {
@@ -161,42 +164,42 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Jak pojawic sie w ChatGPT?",
+              "name": "Jak pojawić się w ChatGPT?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Aby pojawic sie w ChatGPT firma potrzebuje: zaindeksowania w Bing Webmaster Tools, optymalizacji tresci pod cytowania, pelnej Author Entity Schema oraz obecnosci marki w autorytatywnych zrodlach."
+                "text": "Wpuść robota OAI-SearchBot na stronę, opisz ofertę w treści strony i zadbaj o wzmianki w innych serwisach. Dodaj stronę do Google Search Console i Bing Webmaster Tools. Sprawdź też, czy możesz przejąć profil firmy w Centrum dla firm ChatGPT."
               }
             },
             {
               "@type": "Question",
-              "name": "Czy ChatGPT uzywa Google?",
+              "name": "Czy można zapłacić, żeby ChatGPT polecał moją firmę?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nie — ChatGPT w trybie web-search korzysta z indeksu Bing, nie Google. Strona niewidoczna w Bing jest niewidoczna dla ChatGPT web-search."
+                "text": "Nie ma płatnego wpisu, który gwarantuje polecenie. Reklamy w ChatGPT są osobne i oznaczone. O poleceniu decydują informacje, które ChatGPT znajdzie w sieci."
               }
             },
             {
               "@type": "Question",
-              "name": "Ile czasu zajmuje uzyskanie widocznosci w ChatGPT?",
+              "name": "Czy blokada GPTBota usuwa firmę z ChatGPT?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "ChatGPT odswierza indeks co 30 dni. Pierwsze cytowania mozliwe po 4-8 tygodniach. Caruma uzyskala 41 sesji w Gemini i 9 w Perplexity w 90 dni."
+                "text": "Nie. GPTBot zbiera dane do uczenia modeli. Wyszukiwanie w ChatGPT obsługuje robot OAI-SearchBot. Możesz zablokować GPTBota i nadal być widoczny w wyszukiwaniu ChatGPT."
               }
             },
             {
               "@type": "Question",
-              "name": "Czy moge sam sprawdzic widocznosc w ChatGPT?",
+              "name": "Ile czasu trwa pojawienie się w ChatGPT?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Tak — wpisz w ChatGPT 'polecasz [branza] w [miasto]' i sprawdz czy Twoja firma sie pojawia. BoostNow wykonuje profesjonalny audyt dla 30-50 fraz."
+                "text": "Nie ma stałego terminu. Zależy to od dostępu robotów, treści strony i wzmianek o firmie. Mierz efekt co miesiąc tym samym testem z pytaniami klientów."
               }
             },
             {
               "@type": "Question",
-              "name": "Ile kosztuje wprowadzenie firmy do ChatGPT?",
+              "name": "Jak sprawdzić, czy ChatGPT poleca moją firmę?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesiecznie. Widocznosc w ChatGPT, Perplexity i Gemini jest czescia kazdego pakietu."
+                "text": "Otwórz czat tymczasowy i zadaj pytanie klienta, bez nazwy swojej firmy, np. „Polecasz firmę od [usługa] w [miasto]?”. Powtórz pytanie kilka razy i zapisz wynik."
               }
             }
           ]
@@ -213,7 +216,7 @@
     "target_industry": "General",
     "word_count": 1689,
     "slug": "agencja-seo-blisko-centrum-olsztyna-strategia-dla-firm-z-serca-miasta-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -288,6 +291,111 @@
   },
   {
     "id": 4,
+    "title": "Jak pojawić się w Google AI Mode (Trybie AI)? 5 kroków dla firmy",
+    "seoTitle": "Jak pojawić się w Google AI Mode? 5 kroków dla firm",
+    "meta_description": "Jak pojawić się w Google AI Mode (Trybie AI)? Google nie wymaga zgłoszenia. Zobacz 5 kroków, prosty test i sposób pomiaru ruchu w Search Console.",
+    "semantic_anchors": "jak pojawić się w google ai mode",
+    "target_industry": "General",
+    "word_count": 995,
+    "slug": "jak-pojawic-sie-w-google-ai-mode",
+    "date": "2026-11-27",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Jak pojawić się w Google AI Mode (Trybie AI)? 5 kroków dla firmy",
+          "description": "Jak pojawić się w Google AI Mode (Trybie AI)? Google nie wymaga zgłoszenia. Zobacz 5 kroków, prosty test i sposób pomiaru ruchu w Search Console.",
+          "inLanguage": "pl-PL",
+          "datePublished": "2026-11-27",
+          "dateModified": "2026-11-27",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/jak-pojawic-sie-w-google-ai-mode"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "Założyciel i CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://boostnow.pl/mateusz-nowotka",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/"
+            ],
+            "knowsAbout": [
+              "SEO",
+              "Generative Engine Optimization",
+              "widoczność w ChatGPT",
+              "Google AI Overviews"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://boostnow.pl/images/logo.svg"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/boostnowmarketing"
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jak pojawić się w Google AI Mode?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Strona musi być w indeksie Google i móc pokazywać fragmenty w wynikach. Odpowiadaj na pytania klientów w pierwszych zdaniach i dodaj sekcje z cenami, opiniami i obszarem działania. Google nie wymaga specjalnego zgłoszenia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Tryb AI to to samo co Przegląd od AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie. Przegląd od AI (AI Overviews) pojawia się nad zwykłymi wynikami. Tryb AI to osobny widok z odpowiedzią w formie rozmowy. Obie funkcje korzystają ze stron z indeksu Google."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy potrzebuję pliku llms.txt, żeby być w Trybie AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie. Google nie wymaga pliku llms.txt ani specjalnych znaczników dla funkcji AI. Liczą się indeksowanie, dostęp do fragmentów i jakość treści."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Gdzie zobaczę ruch z Trybu AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W Search Console, razem z ruchem z wyszukiwarki. Google nie pokazuje osobnego raportu dla Trybu AI. Pomaga test ręczny i pytanie w formularzu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mogę wykluczyć stronę z Trybu AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Znacznik nosnippet blokuje pokazywanie fragmentów, także w funkcjach AI. Strona zostaje w indeksie, ale traci szansę na bycie źródłem odpowiedzi."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
     "title": "Agencja SEO Olsztyn — Czysty SEO + GEO + AEO dla Firm z Warmii [2026]",
     "seoTitle": "Agencja SEO Olsztyn — Czysty SEO + GEO + AEO 2026",
     "meta_description": "Agencja SEO Olsztyn 2026 — czysty SEO + GEO + AEO dla firm z Warmii. Case Caruma: 90 dni, cytowania w AI Overview obok KPMG. BoostNow.",
@@ -295,7 +403,7 @@
     "target_industry": "General",
     "word_count": 1726,
     "slug": "agencja-seo-olsztyn-czysty-seo-geo-aeo-dla-firm-z-warmii-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -369,7 +477,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Pozycjonowanie Wrocław — Niedoinwestowany Rynek SEO",
     "seoTitle": "Pozycjonowanie Wrocław — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie Wrocław — SEO + GEO + AEO dla firm z Wrocławia. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -377,7 +485,7 @@
     "target_industry": "General",
     "word_count": 907,
     "slug": "pozycjonowanie-wroclaw-niedoinwestowany-rynek-seo",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -429,7 +537,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "SEO dla Kliniki — Pacjenci Szukają Specjalistów w Google",
     "seoTitle": "SEO dla Kliniki — E-E-A-T + Local SEO + GEO 2026",
     "meta_description": "SEO dla kliniki medycznej — pacjenci szukają specjalistów w Google. Strategia E-E-A-T + Local SEO + GEO. Bezpłatna analiza BoostNow.",
@@ -437,7 +545,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "seo-dla-kliniki-pacjenci-szukaja-specjalistow-w-google",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -501,7 +609,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Pozycjonowanie Stron Poznań — Jak Firma z Poznania Trafia do TOP Google [2026]",
     "seoTitle": "Pozycjonowanie Stron Poznań — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie stron Poznań — SEO + GEO dla firm poznańskich i Wielkopolski. Case Caruma: 151k wyświetleń w 90 dni. Analiza BoostNow.",
@@ -509,7 +617,7 @@
     "target_industry": "General",
     "word_count": 1286,
     "slug": "pozycjonowanie-stron-poznan-jak-firma-z-poznania-trafia-do-top-google-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -583,7 +691,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Optymalizacja SEO — Co Naprawdę Optymalizować w 2026",
     "seoTitle": "Optymalizacja SEO 2026 — Cztery Warstwy Razem",
     "meta_description": "Optymalizacja SEO 2026 — cztery warstwy, które muszą zagrać razem. Case Caruma: +12 421% wyświetleń w 90 dni. BoostNow.",
@@ -591,7 +699,7 @@
     "target_industry": "General",
     "word_count": 1729,
     "slug": "optymalizacja-seo",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -685,7 +793,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Agencja SEO Barczewo — Pięć Kryteriów Wyboru Wykonawcy Pozycjonowania [2026]",
     "seoTitle": "Agencja SEO Barczewo — 5 Kryteriów Wyboru 2026",
     "meta_description": "Agencja SEO Barczewo — pięć kryteriów wyboru wykonawcy 2026. Case studies BoostNow z konkretnymi liczbami. AI Search ready.",
@@ -693,7 +801,7 @@
     "target_industry": "General",
     "word_count": 1831,
     "slug": "agencja-seo-barczewo-pozycjonowanie",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -785,7 +893,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Generative Engine Optimization (GEO) — Definicja, Badania i Wdrożenie [2026]",
     "seoTitle": "Generative Engine Optimization — GEO Przewodnik 2026",
     "meta_description": "Generative Engine Optimization (GEO) — nowa dyscyplina po SEO. Princeton 2024. Case Caruma: cytowania w AI Overview obok KPMG w 90 dni.",
@@ -793,7 +901,7 @@
     "target_industry": "General",
     "word_count": 1699,
     "slug": "generative-engine-optimization",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -887,7 +995,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Ile Kosztuje Strona Internetowa w 2026? Pełny Cennik + Ukryty Koszt",
     "seoTitle": "Ile Kosztuje Strona Internetowa 2026? Pełny Cennik",
     "meta_description": "Ile kosztuje strona internetowa 2026 — pełny cennik landing, WordPress, e-commerce. Ukryty koszt strony bez pozycjonowania. BoostNow.",
@@ -895,7 +1003,7 @@
     "target_industry": "General",
     "word_count": 1800,
     "slug": "ile-kosztuje-strona-internetowa",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -988,7 +1096,7 @@
     }
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "Ile Kosztuje Pozycjonowanie — Realne Stawki i ROI w 2026",
     "seoTitle": "Ile Kosztuje Pozycjonowanie — Realne Stawki 2026",
     "meta_description": "Ile kosztuje pozycjonowanie? Cennik SEO 2026 + case Caruma — 151k wyświetleń i 910 konwersji w 90 dni. Bezpłatna wycena BoostNow.",
@@ -996,7 +1104,7 @@
     "target_industry": "General",
     "word_count": 1062,
     "slug": "ile-kosztuje-pozycjonowanie",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1088,7 +1196,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "Pozycjonowanie GEO — Praktyczna Strategia dla Firm B2B w Polsce [2026]",
     "seoTitle": "Pozycjonowanie GEO — Strategia dla Firm B2B w Polsce 2026",
     "meta_description": "Pozycjonowanie GEO w Polsce — strategia dla firm B2B z case studies. Caruma: 90 dni, cytowania w AI Overview obok KPMG. BoostNow.",
@@ -1096,7 +1204,7 @@
     "target_industry": "General",
     "word_count": 1741,
     "slug": "pozycjonowanie-geo",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1189,7 +1297,7 @@
     }
   },
   {
-    "id": 14,
+    "id": 15,
     "title": "Agencja SEO AI — Czym Się Różni od Tradycyjnej Agencji SEO [2026]",
     "seoTitle": "Agencja SEO AI — SEO + GEO + AEO dla Polskich Firm",
     "meta_description": "Agencja SEO AI — SEO + GEO + AEO w jednym pakiecie. Case Caruma: cytowania AI obok KPMG w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1197,7 +1305,7 @@
     "target_industry": "General",
     "word_count": 1317,
     "slug": "agencja-seo-ai",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1291,7 +1399,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 16,
     "title": "Pozycjonowanie Stron WWW Dywity — SEO dla Istniejących Stron Firm Satelitarnych [2026]",
     "seoTitle": "Pozycjonowanie Stron WWW Dywity — SEO 2026",
     "meta_description": "Pozycjonowanie stron www Dywity 2026 — SEO dla istniejących stron firm satelitarnych. Pakiety od 1 000 PLN. BoostNow.",
@@ -1299,7 +1407,7 @@
     "target_industry": "General",
     "word_count": 1561,
     "slug": "pozycjonowanie-stron-www-dywity-seo-dla-istniejacych-stron-firm-satelitarnych-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1373,7 +1481,7 @@
     }
   },
   {
-    "id": 16,
+    "id": 17,
     "title": "SEO dla Hoteli — Zbieraj Rezerwacje Bezpośrednie, Płać Mniej OTA",
     "seoTitle": "SEO dla Hotelu — Mniej Booking, Więcej Rezerwacji 2026",
     "meta_description": "SEO dla hotelu — zbieraj rezerwacje bezpośrednie, płać mniej Booking. Case SU-2: TOP 1 globalnie w 120 dni. Analiza BoostNow.",
@@ -1381,7 +1489,7 @@
     "target_industry": "General",
     "word_count": 1078,
     "slug": "seo-dla-hoteli-zbieraj-rezerwacje-bezposrednie-plac-mniej-ota",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1445,7 +1553,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 18,
     "title": "Agencja Marketingowa Olsztyn — Pełen Stack SEO + GEO + Ads dla Firm z Miasta [2026]",
     "seoTitle": "Agencja Marketingowa Olsztyn — SEO + GEO + Ads 2026",
     "meta_description": "Agencja marketingowa Olsztyn 2026 — SEO, GEO, Meta Ads, Google Ads dla firm z całego miasta. Klienci z efektami globalnymi. BoostNow.",
@@ -1453,7 +1561,7 @@
     "target_industry": "General",
     "word_count": 1983,
     "slug": "agencja-marketingowa-olsztyn-pelen-stack-seo-geo-ads-dla-firm-z-miasta-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1527,7 +1635,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 19,
     "title": "Prowadzenie Social Media Olsztyn — Strategia dla Firm z Miasta i Regionu [2026]",
     "seoTitle": "Prowadzenie Social Media Olsztyn 2026",
     "meta_description": "Prowadzenie social media Olsztyn 2026 — content, community, algorytmy dla Facebook, Instagram, LinkedIn, TikTok. Pakiety od 1 500 PLN. BoostNow.",
@@ -1535,7 +1643,7 @@
     "target_industry": "General",
     "word_count": 1792,
     "slug": "prowadzenie-social-media-olsztyn-strategia-dla-firm-z-miasta-i-regionu-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1609,7 +1717,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 20,
     "title": "SEO dla Sklepu Internetowego — Jak Sklep Trafia do TOP 1 Globalnie",
     "seoTitle": "SEO dla Sklepu Internetowego — TOP 1 w 120 Dni",
     "meta_description": "SEO dla sklepu internetowego. Case SU-2 Kiteboards — TOP 1 globalnie w 120 dni, 4x cytowania w Google AI Overview. Bezpłatna analiza BoostNow.",
@@ -1617,7 +1725,7 @@
     "target_industry": "General",
     "word_count": 1114,
     "slug": "seo-dla-sklepu-internetowego",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1710,7 +1818,7 @@
     }
   },
   {
-    "id": 20,
+    "id": 21,
     "title": "Pozycjonowanie Wizytówki Google — Jak Twoja Firma Trafia do Local Pack [2026]",
     "seoTitle": "Pozycjonowanie Wizytówki Google — Local Pack 2026",
     "meta_description": "Pozycjonowanie wizytówki Google — jak firma trafia do Local Pack. 46% kliknięć lokalnych zbiera top 3. Strategia BoostNow z case studies.",
@@ -1718,7 +1826,7 @@
     "target_industry": "General",
     "word_count": 1705,
     "slug": "pozycjonowanie-wizytowki-google",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1811,7 +1919,7 @@
     }
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "Pozycjonowanie Warszawa — Jak Firma z Warszawy Trafia do TOP Google",
     "seoTitle": "Pozycjonowanie Warszawa — Agencja SEO i GEO 2026",
     "meta_description": "Pozycjonowanie Warszawa — SEO + GEO + AEO dla firm warszawskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -1819,7 +1927,7 @@
     "target_industry": "General",
     "word_count": 1075,
     "slug": "pozycjonowanie-warszawa-jak-firma-z-warszawy-trafia-do-top-google",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1871,7 +1979,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "Tworzenie Stron Internetowych Barczewo — Strony dla Firm Lokalnych [2026]",
     "seoTitle": "Tworzenie Stron Internetowych Barczewo — Pakiety 2026",
     "meta_description": "Tworzenie stron internetowych Barczewo 2026 — budowa strony dla firmy z gminy z SEO + GEO od dnia 1. Pakiety od 4 500 PLN. BoostNow.",
@@ -1879,7 +1987,7 @@
     "target_industry": "General",
     "word_count": 1694,
     "slug": "tworzenie-stron-internetowych-barczewo-strony-dla-firm-lokalnych-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -1953,7 +2061,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "seoTitle": "Co to AI SEO i Dlaczego 42% Zapytań Omija Twój Wynik?",
     "meta_description": "AI SEO — czy zastępuje klasyczne SEO? 42% zapytań omija Twoją stronę. Case Caruma: cytowania AI obok KPMG w 90 dni.",
@@ -1961,7 +2069,7 @@
     "target_industry": "General",
     "word_count": 1378,
     "slug": "ai-seo",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2055,7 +2163,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "Marketing Internetowy dla Firm w Dobrym Mieście — Strategia 2026",
     "seoTitle": "Marketing Internetowy Dobre Miasto — Strategia 2026",
     "meta_description": "Marketing internetowy Dobre Miasto 2026 — strategia dla firm z zabytkowej gminy warmińskiej. Pakiety od 900 PLN. BoostNow.",
@@ -2063,7 +2171,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "marketing-internetowy-dla-firm-w-dobrym-miescie-strategia-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2137,7 +2245,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "seoTitle": "Co To Jest SEO — Przewodnik dla Właścicieli Firm 2026",
     "meta_description": "Co to jest SEO i ile klientów tracisz bez niego? Case Caruma — 151k wyświetleń w Google w 90 dni. Bezpłatna analiza SEO BoostNow.",
@@ -2145,7 +2253,7 @@
     "target_industry": "General",
     "word_count": 1166,
     "slug": "co-to-jest-seo",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2239,7 +2347,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 27,
     "title": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO i AEO",
     "seoTitle": "SEO 2026 — Pełna Mapa Dyscypliny: Od Podstaw do GEO",
     "meta_description": "SEO 2026 — pełna mapa dyscypliny: techniczna, content, autorytet, GEO i AEO. Case Caruma: 90 dni, cytowania w AI Overview obok KPMG.",
@@ -2247,7 +2355,7 @@
     "target_industry": "General",
     "word_count": 1899,
     "slug": "seo",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2342,7 +2450,7 @@
     }
   },
   {
-    "id": 27,
+    "id": 28,
     "title": "SEO dla Prawnika — Widoczność z Poszanowaniem KEA i KRRP",
     "seoTitle": "SEO dla Prawnika — Kancelaria z Widocznością w Google 2026",
     "meta_description": "SEO dla prawnika i kancelarii — widoczność dla klientów szukających pomocy prawnej. Z poszanowaniem KEA i KRRP. Analiza BoostNow.",
@@ -2350,7 +2458,7 @@
     "target_industry": "General",
     "word_count": 1013,
     "slug": "seo-dla-prawnika-widocznosc-z-poszanowaniem-kea-i-krrp",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2414,7 +2522,7 @@
     }
   },
   {
-    "id": 28,
+    "id": 29,
     "title": "Tanie Pozycjonowanie — Co Znaczy Tanie i Co Naprawdę Się Opłaca [2026]",
     "seoTitle": "Tanie Pozycjonowanie — Kiedy Opłaca, Kiedy Pułapka 2026",
     "meta_description": "Tanie pozycjonowanie — co oznacza „tanie\" i co naprawdę się opłaca. Case Caruma: ROI w 90 dni. Analiza BoostNow.",
@@ -2422,7 +2530,7 @@
     "target_industry": "General",
     "word_count": 1819,
     "slug": "tanie-pozycjonowanie",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2514,7 +2622,112 @@
     }
   },
   {
-    "id": 29,
+    "id": 30,
+    "title": "ChatGPT nie widzi mojej strony? 5 przyczyn i test w 10 minut",
+    "seoTitle": "ChatGPT nie widzi mojej strony? 5 przyczyn i test",
+    "meta_description": "ChatGPT nie widzi strony, gdy robot OAI-SearchBot nie ma dostępu lub nie widzi treści. Sprawdź 5 przyczyn, w tym blokadę serwera, i zrób test.",
+    "semantic_anchors": "chatgpt nie widzi mojej strony",
+    "target_industry": "General",
+    "word_count": 926,
+    "slug": "chatgpt-nie-widzi-mojej-strony",
+    "date": "2026-11-27",
+    "schemaJson": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "ChatGPT nie widzi mojej strony? 5 przyczyn i test w 10 minut",
+          "description": "ChatGPT nie widzi strony, gdy robot OAI-SearchBot nie ma dostępu lub nie widzi treści. Sprawdź 5 przyczyn, w tym blokadę serwera, i zrób test.",
+          "inLanguage": "pl-PL",
+          "datePublished": "2026-11-27",
+          "dateModified": "2026-11-27",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://boostnow.pl/blog/chatgpt-nie-widzi-mojej-strony"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Mateusz Nowotka",
+            "jobTitle": "Założyciel i CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "BoostNow",
+              "url": "https://boostnow.pl"
+            },
+            "url": "https://boostnow.pl/mateusz-nowotka",
+            "sameAs": [
+              "https://www.linkedin.com/in/mateusz-nowotka-34aa1018a/"
+            ],
+            "knowsAbout": [
+              "SEO",
+              "Generative Engine Optimization",
+              "widoczność w ChatGPT",
+              "Google AI Overviews"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "BoostNow",
+            "url": "https://boostnow.pl",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://boostnow.pl/images/logo.svg"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/boostnowmarketing"
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Dlaczego ChatGPT nie widzi mojej strony?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Najczęściej robot OAI-SearchBot nie ma dostępu do strony albo nie widzi na niej treści. Sprawdź robots.txt, blokady serwera, kod strony (Ctrl+U) i obecność strony w wyszukiwarkach."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy ChatGPT może otworzyć każdą stronę?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie. Strona musi być publiczna, a roboty OpenAI muszą mieć do niej dostęp. Blokada w robots.txt, na serwerze lub w CDN zatrzymuje robota."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy blokada GPTBota sprawia, że ChatGPT nie widzi strony?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie. GPTBot zbiera dane do uczenia modeli. Wyszukiwanie w ChatGPT obsługuje OAI-SearchBot, a linki z rozmowy otwiera ChatGPT-User. Sprawdź blokady tych dwóch robotów."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile czasu mija, zanim ChatGPT zobaczy stronę po naprawie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie ma stałego terminu. Wyślij mapę strony w Search Console i Bing Webmaster Tools. Powtórz test po 2–4 tygodniach."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy hosting może blokować roboty AI bez mojej wiedzy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Niektóre serwery i usługi CDN blokują roboty AI domyślnie. Sprawdzisz to, pobierając stronę z nagłówkiem robota. Kod 403 oznacza blokadę."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 31,
     "title": "Co To Jest GEO — Generative Engine Optimization po Polsku",
     "seoTitle": "Co To Jest GEO — Generative Engine Optimization 2026",
     "meta_description": "Co to jest GEO? Case Caruma — cytowania w Google AI Overview obok KPMG w 90 dni. Pełna definicja, różnice vs SEO i wdrożenie z BoostNow.",
@@ -2522,7 +2735,7 @@
     "target_industry": "General",
     "word_count": 1199,
     "slug": "geo-co-to-jest",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2617,7 +2830,7 @@
     }
   },
   {
-    "id": 30,
+    "id": 32,
     "title": "Tanie Pozycjonowanie Stron — Kiedy Realny Produkt, Kiedy Fałszywa Oszczędność [2026]",
     "seoTitle": "Tanie Pozycjonowanie Stron — Kiedy Realne, Kiedy Iluzja 2026",
     "meta_description": "Tanie pozycjonowanie stron 2026 — kiedy jest realną opcją, kiedy fałszywą oszczędnością. BoostNow. Pakiety od 800 PLN.",
@@ -2625,7 +2838,7 @@
     "target_industry": "General",
     "word_count": 1860,
     "slug": "tanie-pozycjonowanie-stron",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2717,7 +2930,7 @@
     }
   },
   {
-    "id": 31,
+    "id": 33,
     "title": "Kto Robi Dobre Strony Internetowe w Dywitach? Przewodnik Wyboru Wykonawcy [2026]",
     "seoTitle": "Kto Robi Dobre Strony Internetowe w Dywitach? 2026",
     "meta_description": "Kto robi dobre strony internetowe w Dywitach? Przewodnik wyboru wykonawcy 2026. Pięć kryteriów + case studies BoostNow.",
@@ -2725,7 +2938,7 @@
     "target_industry": "General",
     "word_count": 1814,
     "slug": "kto-robi-dobre-strony-internetowe-w-dywitach",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2817,7 +3030,7 @@
     }
   },
   {
-    "id": 32,
+    "id": 34,
     "title": "ChatGPT nie widzi mojego sklepu? 6 przyczyn i test w 10 minut",
     "seoTitle": "ChatGPT nie widzi mojego sklepu? 6 przyczyn i test 10 min",
     "meta_description": "ChatGPT nie widzi sklepu, gdy robot OAI-SearchBot jest zablokowany lub nie czyta produktów. Sprawdź 6 przyczyn i zrób test w 10 minut.",
@@ -2825,7 +3038,7 @@
     "target_industry": "General",
     "word_count": 1318,
     "slug": "chatgpt-nie-widzi-sklepu",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -2922,7 +3135,7 @@
     }
   },
   {
-    "id": 33,
+    "id": 35,
     "title": "Pozycjonowanie Stron Stawiguda — Strategia SEO dla Firm z Gminy [2026]",
     "seoTitle": "Pozycjonowanie Stron Stawiguda — SEO Lokalne 2026",
     "meta_description": "Pozycjonowanie stron Stawiguda 2026 — SEO dla firm z rosnącej gminy pod Olsztynem. Zerowa konkurencja, TOP 1 w 2-4 tygodnie. BoostNow.",
@@ -2930,7 +3143,7 @@
     "target_industry": "General",
     "word_count": 1425,
     "slug": "pozycjonowanie-stron-stawiguda-strategia-seo-dla-firm-z-gminy-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3004,7 +3217,7 @@
     }
   },
   {
-    "id": 34,
+    "id": 36,
     "title": "Pozycjonowanie Lokalne — Strategia dla Firm B2B i Lokalnych w Polsce [2026]",
     "seoTitle": "Pozycjonowanie Lokalne — GBP + Local Pack + AI Search 2026",
     "meta_description": "Pozycjonowanie lokalne 2026 — GBP + Local Pack + AI search dla firm B2B i usługowych. Case Caruma: 151k wyświetleń w 90 dni. BoostNow.",
@@ -3012,7 +3225,7 @@
     "target_industry": "General",
     "word_count": 1770,
     "slug": "pozycjonowanie-lokalne",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3105,7 +3318,7 @@
     }
   },
   {
-    "id": 35,
+    "id": 37,
     "title": "Audyt SEO — Co Musi Zawierać, Żeby Faktycznie Pomóc Twojej Firmie",
     "seoTitle": "Audyt SEO — Co Musi Zawierać Żeby Faktycznie Pomóc",
     "meta_description": "Audyt SEO — czego wymagać od agencji? Case Caruma: audyt → 151k wyświetleń w 90 dni, cytowania w AI Overview obok KPMG.",
@@ -3113,7 +3326,7 @@
     "target_industry": "General",
     "word_count": 1038,
     "slug": "audyt-seo",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3206,7 +3419,7 @@
     }
   },
   {
-    "id": 36,
+    "id": 38,
     "title": "Jak Założyć Sklep Internetowy w 2026 — Pełny Przewodnik dla Początkujących",
     "seoTitle": "Jak Założyć Sklep Internetowy w 2026 — Przewodnik",
     "meta_description": "Jak założyć sklep internetowy 2026 — 5 decyzji, platformy, koszty. Case SU-2 Kiteboards: TOP 1 globalnie w 120 dni. BoostNow.",
@@ -3214,7 +3427,7 @@
     "target_industry": "General",
     "word_count": 1814,
     "slug": "jak-zalozyc-sklep-internetowy",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3308,7 +3521,7 @@
     }
   },
   {
-    "id": 37,
+    "id": 39,
     "title": "Pozycjonowanie Stron Olsztyn — SEO dla Istniejących Stron Firm [2026]",
     "seoTitle": "Pozycjonowanie Stron Olsztyn — SEO Istniejących Stron 2026",
     "meta_description": "Pozycjonowanie stron Olsztyn 2026 — SEO istniejących stron firm z miasta. Pakiety od 2 000 PLN. Case Caruma: 90 dni, cytowania w AI Overview.",
@@ -3316,7 +3529,7 @@
     "target_industry": "General",
     "word_count": 1721,
     "slug": "pozycjonowanie-stron-olsztyn-seo-dla-istniejacych-stron-firm-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3390,7 +3603,7 @@
     }
   },
   {
-    "id": 38,
+    "id": 40,
     "title": "Pozycjonowanie Kraków — Niedoinwestowany Rynek SEO w Polsce",
     "seoTitle": "Pozycjonowanie Kraków — Agencja SEO + GEO 2026",
     "meta_description": "Pozycjonowanie Kraków — SEO + GEO + AEO dla firm krakowskich. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -3398,7 +3611,7 @@
     "target_industry": "General",
     "word_count": 1074,
     "slug": "pozycjonowanie-krakow-niedoinwestowany-rynek-seo-w-polsce",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3450,7 +3663,7 @@
     }
   },
   {
-    "id": 39,
+    "id": 41,
     "title": "SEO dla Firm Barczewo — Strategia Pozycjonowania Małych Firm [2026]",
     "seoTitle": "SEO dla Firm Barczewo — Pozycjonowanie 2026",
     "meta_description": "SEO dla firm Barczewo 2026 — strategia dla małych firm z gminy warmińsko-mazurskiej. Zerowa konkurencja, TOP 1 w 2-4 tygodnie. BoostNow.",
@@ -3458,7 +3671,7 @@
     "target_industry": "General",
     "word_count": 1504,
     "slug": "seo-dla-firm-barczewo-strategia-pozycjonowania-malych-firm-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3532,7 +3745,7 @@
     }
   },
   {
-    "id": 40,
+    "id": 42,
     "title": "SEO Co To Jest — Szybka Odpowiedź + Praktyczna Mapa Dyscypliny [2026]",
     "seoTitle": "SEO Co To Jest — Szybka Odpowiedź + Mapa 2026",
     "meta_description": "SEO co to jest 2026 — szybka odpowiedź + praktyczna mapa. Case Caruma: cytowania w AI Overview obok KPMG w 90 dni. BoostNow.",
@@ -3540,7 +3753,7 @@
     "target_industry": "General",
     "word_count": 1883,
     "slug": "seo-co-to",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3633,7 +3846,7 @@
     }
   },
   {
-    "id": 41,
+    "id": 43,
     "title": "SEO Agency for International Markets — Poland-Based, Global Clients [2026]",
     "seoTitle": "SEO Agency — International SEO for Polish B2B 2026",
     "meta_description": "SEO agency for international markets 2026 — Poland-based, global clients (Caruma, SU-2 Kiteboards). Documented AI Overview citations. BoostNow.",
@@ -3641,7 +3854,7 @@
     "target_industry": "General",
     "word_count": 1888,
     "slug": "seo-agency-for-international-markets-poland-based-global-clients-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3719,7 +3932,7 @@
     }
   },
   {
-    "id": 42,
+    "id": 44,
     "title": "Marketing Internetowy Dywity — Strategia dla Firm Satelitarnych Olsztyna [2026]",
     "seoTitle": "Marketing Internetowy Dywity — Strategia 2026",
     "meta_description": "Marketing internetowy Dywity 2026 — strategia dla firm satelitarnych Olsztyna. Zerowa konkurencja lokalna, szybki TOP 1. BoostNow.",
@@ -3727,7 +3940,7 @@
     "target_industry": "General",
     "word_count": 1449,
     "slug": "marketing-internetowy-dywity-strategia-dla-firm-satelitarnych-olsztyna-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3805,7 +4018,7 @@
     }
   },
   {
-    "id": 43,
+    "id": 45,
     "title": "Pozycjonowanie Lokalne dla Sklepów w Stawigudzie — Stacjonarne i e-Commerce [2026]",
     "seoTitle": "Pozycjonowanie Lokalne Sklepów Stawiguda 2026",
     "meta_description": "Pozycjonowanie lokalne sklepów Stawiguda 2026 — sklepy stacjonarne i e-Commerce z gminy. Pakiety od 1 200 PLN. BoostNow.",
@@ -3813,7 +4026,7 @@
     "target_industry": "General",
     "word_count": 1805,
     "slug": "pozycjonowanie-lokalne-dla-sklepow-w-stawigudzie-stacjonarne-i-e-commerce-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3887,7 +4100,7 @@
     }
   },
   {
-    "id": 44,
+    "id": 46,
     "title": "Pozycjonowanie Google — Jak Działa Algorytm i Co Decyduje o Pozycji [2026]",
     "seoTitle": "Pozycjonowanie Google — Sygnały Rankingowe 2026",
     "meta_description": "Pozycjonowanie Google — jak działa algorytm i co decyduje o pozycji w 2026. 200+ sygnałów rankingowych. Case Caruma: TOP 1-2 w 90 dni. BoostNow.",
@@ -3895,7 +4108,7 @@
     "target_industry": "General",
     "word_count": 1751,
     "slug": "pozycjonowanie-google",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -3989,7 +4202,7 @@
     }
   },
   {
-    "id": 45,
+    "id": 47,
     "title": "Agencja Reklamowa Stawiguda — Meta Ads, Google Ads, Social Media, Branding [2026]",
     "seoTitle": "Agencja Reklamowa Stawiguda — Meta + Google Ads 2026",
     "meta_description": "Agencja reklamowa Stawiguda 2026 — Meta Ads, Google Ads, social media, branding dla firm z gminy. Pakiety od 1 500 PLN. BoostNow.",
@@ -3997,7 +4210,7 @@
     "target_industry": "General",
     "word_count": 1694,
     "slug": "agencja-reklamowa-stawiguda-meta-ads-google-ads-social-media-branding-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -4071,7 +4284,7 @@
     }
   },
   {
-    "id": 46,
+    "id": 48,
     "title": "Projektowanie Stron WWW Stawiguda — Strony dla Firm Lokalnych [2026]",
     "seoTitle": "Projektowanie Stron WWW Stawiguda — Pakiety 2026",
     "meta_description": "Projektowanie stron www Stawiguda 2026 — strona dla firmy z gminy z SEO od dnia 1. Pakiety od 4 500 PLN. BoostNow.",
@@ -4079,7 +4292,7 @@
     "target_industry": "General",
     "word_count": 1615,
     "slug": "projektowanie-stron-www-stawiguda-strony-dla-firm-lokalnych-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -4153,7 +4366,7 @@
     }
   },
   {
-    "id": 47,
+    "id": 49,
     "title": "Tworzenie Stron Internetowych Olsztyn — Strony z SEO + GEO od Dnia 1 [2026]",
     "seoTitle": "Tworzenie Stron Internetowych Olsztyn 2026",
     "meta_description": "Tworzenie stron internetowych Olsztyn 2026 — strony z SEO + GEO od dnia 1 dla firm miejskich. Pakiety od 6 500 PLN. BoostNow.",
@@ -4161,7 +4374,7 @@
     "target_industry": "General",
     "word_count": 2086,
     "slug": "tworzenie-stron-internetowych-olsztyn-strony-z-seo-geo-od-dnia-1-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -4235,7 +4448,7 @@
     }
   },
   {
-    "id": 48,
+    "id": 50,
     "title": "Pozycjonowanie w AI: Co Musi Wiedzieć Twoja Firma w 2026",
     "seoTitle": "Pozycjonowanie w AI — Czy ChatGPT Zna Twoją Firmę?",
     "meta_description": "Pozycjonowanie w AI — case Caruma: 151k wyświetleń w 90 dni, cytowania w Google AI Overview obok KPMG. Sprawdź widoczność Twojej firmy z BoostNow.",
@@ -4243,7 +4456,7 @@
     "target_industry": "General",
     "word_count": 1391,
     "slug": "pozycjonowanie-w-ai",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -4339,7 +4552,7 @@
     }
   },
   {
-    "id": 49,
+    "id": 51,
     "title": "Pozycjonowanie Katowice — 2 Miliony Klientów, Niska Konkurencja",
     "seoTitle": "Pozycjonowanie Katowice — SEO + GEO Aglomeracja Śląska",
     "meta_description": "Pozycjonowanie Katowice — SEO + GEO dla aglomeracji śląskiej. Case Caruma: 151k wyświetleń w 90 dni. Bezpłatna analiza BoostNow.",
@@ -4347,7 +4560,7 @@
     "target_industry": "General",
     "word_count": 884,
     "slug": "pozycjonowanie-katowice-2-miliony-klientow-niska-konkurencja",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -4421,7 +4634,7 @@
     }
   },
   {
-    "id": 50,
+    "id": 52,
     "title": "Marketing dla Małych Firm Olsztynek — Strategia 2026 dla Historycznej Gminy",
     "seoTitle": "Marketing dla Małych Firm Olsztynek — Strategia 2026",
     "meta_description": "Marketing dla małych firm Olsztynek 2026 — strategia dla gminy historycznej i bramy autostrady A7. Pakiety od 900 PLN. BoostNow.",
@@ -4429,7 +4642,7 @@
     "target_industry": "General",
     "word_count": 1495,
     "slug": "marketing-dla-malych-firm-olsztynek-strategia-2026-dla-historycznej-gminy",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -4503,7 +4716,7 @@
     }
   },
   {
-    "id": 51,
+    "id": 53,
     "title": "Agencja Marketingowa Blisko Jaroty Olsztyn — Hiperlokalna Strategia [2026]",
     "seoTitle": "Agencja Marketingowa Blisko Jaroty Olsztyn 2026",
     "meta_description": "Agencja marketingowa blisko Jaroty Olsztyn 2026 — hiperlokalna strategia dla firm z największej dzielnicy Olsztyna. Pakiety od 1 200 PLN. BoostNow.",
@@ -4511,7 +4724,7 @@
     "target_industry": "General",
     "word_count": 1653,
     "slug": "agencja-marketingowa-blisko-jaroty-olsztyn-hiperlokalna-strategia-2026",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -4585,7 +4798,7 @@
     }
   },
   {
-    "id": 52,
+    "id": 54,
     "title": "SEO pod AI Overviews — Jak Być Cytowanym przez Google AI [2026]",
     "seoTitle": "SEO pod Google AI Overviews — Przewodnik [2026]",
     "meta_description": "SEO pod AI Overviews — jak być cytowanym przez Google AI. Case Caruma: panel AI Overview obok KPMG w 90 dni. BoostNow.",
@@ -4593,7 +4806,7 @@
     "target_industry": "General",
     "word_count": 1321,
     "slug": "seo-pod-ai-overviews",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
@@ -4686,7 +4899,7 @@
     }
   },
   {
-    "id": 53,
+    "id": 55,
     "title": "AEO Co To Jest — Answer Engine Optimization Wyjaśnione",
     "seoTitle": "AEO Co To Jest — Answer Engine Optimization 2026",
     "meta_description": "AEO co to jest? Optymalizacja pod Google AI Overview i Featured Snippet. Case Caruma — cytowania obok KPMG i Komisji Europejskiej w 90 dni.",
@@ -4694,7 +4907,7 @@
     "target_industry": "General",
     "word_count": 1129,
     "slug": "aeo-co-to-jest",
-    "date": "2026-11-24",
+    "date": "2026-11-27",
     "schemaJson": {
       "@context": "https://schema.org",
       "@graph": [
