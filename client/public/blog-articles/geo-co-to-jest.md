@@ -1,119 +1,130 @@
-Twoja konkurencja może być na 8 pozycji w Google i pierwsza w ChatGPT. To właśnie GEO.
+Firma z 8. miejsca w Google może być pierwsza w odpowiedzi ChatGPT.
 
-**W tym artykule:**
-- [Co to jest GEO i czym różni się od SEO?](#czym-jest)
-- [Jak działa GEO w praktyce — na przykładzie Caruma?](#caruma)
-- [GEO vs SEO vs AEO — porównanie](#porownanie)
-- [Jak wdrożyć GEO w Twojej firmie?](#wdrozenie)
+**Spis treści:**
+- [Co to jest GEO?](#czym-jest)
+- [Czym GEO różni się od SEO?](#seo-vs-geo)
+- [Jak GEO działa w praktyce? Przykład Carumy](#caruma)
+- [Jak wdrożyć GEO w firmie?](#wdrozenie)
 - [Najczęściej zadawane pytania](#faq)
 - [Źródła](#zrodla)
 
 ---
 
-> **BEZPOŚREDNIA ODPOWIEDŹ**
-> Co to jest GEO — to skrót od Generative Engine Optimization, czyli optymalizacji strony pod cytowania przez generatywne modele AI: ChatGPT, Perplexity, Google AI Mode i Gemini. Termin zdefiniowany przez Princeton University (Kanu et al., 2024). BoostNow wdrożył GEO dla Caruma w 90 dni: cytowania w Google AI Overview obok KPMG i Komisji Europejskiej, 41 sesji w Gemini, 9 w Perplexity, 151 000 wyświetleń w Google (+12 421%). GEO uzupełnia klasyczne SEO o widoczność w AI search — kanał obsługujący 40% wyszukiwań w 2026.
-> *Zaktualizowano: czerwiec 2026*
+> **Krótka odpowiedź**
+> GEO to skrót od Generative Engine Optimization, czyli optymalizacja pod generatywne wyszukiwarki AI. Celem GEO jest to, żeby ChatGPT, Gemini, Perplexity i Tryb AI Google cytowały Twoją stronę w odpowiedziach. Pojęcie opisali badacze z Princeton University w 2023 roku. GEO nie zastępuje SEO, tylko je uzupełnia.
+> *Aktualizacja: listopad 2026*
 
 ---
 
-Zadaj sobie pytanie: kiedy ostatnio wpisałeś coś w Google i przeczytałeś TYLKO odpowiedź AI Overview na górze, bez klikania w żaden link? Większość Twoich klientów robi to codziennie. ChatGPT obsługuje 800 milionów użytkowników tygodniowo (OpenAI, Q4 2025). Perplexity — 500 milionów zapytań miesięcznie. Twoja firma albo jest cytowana w odpowiedziach tych modeli, albo dla nich nie istnieje. GEO decyduje, w której grupie się znajdziesz.
+Klient pyta ChatGPT: „Jaka firma od [usługa] jest dobra?”. Dostaje 2–3 nazwy i nie otwiera wyników Google.
+
+ChatGPT ma 800 milionów użytkowników tygodniowo (OpenAI, październik 2025). Jeśli asystent nie zna Twojej firmy, klient też jej nie pozna.
+
+Jak trafić do takiej odpowiedzi? Tym zajmuje się GEO. Najważniejsza zmiana nie dotyczy linków, tylko tego, jak piszesz każdy akapit.
 
 ---
 
-## Co to jest GEO i czym różni się od SEO? {#czym-jest}
+## Co to jest GEO? {#czym-jest}
 
-GEO to systematyczna optymalizacja treści pod cytowania przez generatywne modele AI. W odróżnieniu od SEO, celem nie jest pozycja w wynikach Google — celem jest pojawienie się jako cytowane źródło w odpowiedzi ChatGPT, Perplexity, Gemini lub Google AI Mode. Badanie Princeton (Kanu et al., 2024) przeanalizowało 10 000 zapytań w 9 silnikach AI. Treści zoptymalizowane pod GEO uzyskały o 40% więcej cytowań od stron z wyłącznie klasycznym SEO.
+GEO (Generative Engine Optimization) to praca nad stroną, dzięki której asystenci AI cytują ją jako źródło. Po polsku: optymalizacja pod generatywne wyszukiwarki.
 
-GEO wymaga innych technik niż SEO. **Modele AI nie nagradzają backlinków w taki sam sposób jak Google — premiują autonomię fragmentów treści, autorytet encji autora i świeżość publikacji.** Firma która optymalizuje wyłącznie pod SEO traci 40% rynku wyszukiwań w 2026 roku.
+W marketingu internetowym skrót GEO nie oznacza geolokalizacji. Chodzi o wyszukiwarki, które same piszą odpowiedź.
 
-Dla Twojej firmy oznacza to jedno: pozycja 1 w Google nie wystarczy, jeśli ChatGPT cytuje konkurencję.
+Pojęcie opisali badacze z Princeton University i współpracujących uczelni (Aggarwal i in., 2023). Przetestowali metody GEO na 10 000 zapytań. Najlepsze metody zwiększyły widoczność stron w odpowiedziach AI nawet o 40%.
 
----
-
-## Jak działa GEO w praktyce — na przykładzie Caruma? {#caruma}
-
-Caruma — klient BoostNow z sektora Digital Product Passport — to konkretny dowód jak GEO przekłada się na biznes. W 90 dni od wdrożenia BoostNow Caruma osiągnęła: 151 000 wyświetleń w Google (+12 421% od zera), 376 kliknięć (+974%), 910 zdarzeń konwersji (+2 066%), TOP 1-2 organicznie na 5+ frazach globalnych EN, cytowania w Google AI Overview obok KPMG i Komisji Europejskiej.
-
-Caruma jest aktywnie cytowana w Gemini (41 sesji) i Perplexity (9 sesji). **Zdominowała całą kategorię DPP — fashion, textiles, batteries, electronics — wyprzedzając globalnych konkurentów.** Tego nie da się osiągnąć klasycznym SEO. To efekt GEO wdrożonego od zera.
-
-GEO działa, gdy: treść jest podzielona na autonomiczne fragmenty 120-180 słów, każdy fragment cytowalny bez kontekstu, autor ma pełną Person Schema, marka ma obecność w autorytatywnych źródłach (LinkedIn, Wikidata, branżowe media).
+**Które metody działały najlepiej?** Cytaty, statystyki i odnośniki do wiarygodnych źródeł. Upychanie słów kluczowych nie pomagało.
 
 ---
 
-## GEO vs SEO vs AEO — porównanie {#porownanie}
+## Czym GEO różni się od SEO? {#seo-vs-geo}
 
-GEO, SEO i AEO to trzy uzupełniające się dyscypliny widoczności online — i firma która chce dominować rynek wyszukiwań w 2026 potrzebuje wszystkich trzech. Tabela pokazuje czym się różnią — dane oparte na badaniach Princeton (2024) i wdrożeniach BoostNow (2025).
+SEO walczy o miejsce na liście wyników Google. GEO walczy o miejsce w odpowiedzi, którą pisze AI.
 
-| Wymiar | SEO | GEO | AEO |
+Obie dziedziny pracują na tej samej stronie. Tryb AI korzysta z indeksu Google, a ChatGPT szuka przez zewnętrzne wyszukiwarki. Dlatego GEO bez SEO zwykle nie działa.
+
+| | SEO | GEO | AEO |
 |---|---|---|---|
-| Platforma docelowa | Google SERP | ChatGPT, Perplexity, Gemini | Google AI Overview, Featured Snippet |
-| Cel | Pozycja 1-10 | Cytowanie w odpowiedzi AI | Bezpośrednia odpowiedź w SERP |
-| Sygnał #1 | Backlinki | Autorytet encji + chunki | FAQ Schema + Direct Answer |
-| Czas do efektów | 6-12 miesięcy | 4-8 tygodni | 4-12 tygodni |
-| Czas Caruma | – | 90 dni do AI Overview | Aktywne cytowania |
+| Gdzie | Wyniki Google | ChatGPT, Perplexity, Gemini | Przegląd od AI, fragment z odpowiedzią |
+| Cel | Pozycja 1–10 | Cytowanie w odpowiedzi AI | Gotowa odpowiedź w wynikach |
+| Najważniejsze | Linki i treść | Samodzielne fragmenty, źródła, wzmianki | Pytania i odpowiedzi, FAQ |
+| Czas do efektów* | 6–12 miesięcy | 4–8 tygodni | 4–12 tygodni |
 
-Strategia bez którejkolwiek z trzech warstw ma luki. **Firma która ma SEO ale brak GEO traci 40% rynku wyszukiwań — i 100% klientów pytających przez ChatGPT.**
+*Czas z wdrożeń BoostNow (2025–2026).
+
+AEO (Answer Engine Optimization) to bliski krewny GEO. Dotyczy gotowych odpowiedzi w wynikach Google.
 
 ---
 
-## Jak wdrożyć GEO w Twojej firmie? {#wdrozenie}
+## Jak GEO działa w praktyce? Przykład Carumy {#caruma}
 
-Wdrożenie GEO obejmuje trzy etapy: audyt widoczności w AI, strategia treści i autorytetu, monitoring cytowań. Każdy etap ma mierzalne efekty.
+Caruma, nasz klient z branży cyfrowych paszportów produktów (DPP), w 90 dni od wdrożenia GEO i SEO osiągnęła:
+- cytowania w Przeglądzie od AI Google obok KPMG i Komisji Europejskiej;
+- 41 sesji z Gemini i 9 z Perplexity (Google Analytics 4);
+- 151 000 wyświetleń w Google (+12 421%) i 376 kliknięć (+974%);
+- 910 zdarzeń konwersji (+2 066%);
+- TOP 1–2 w Google na ponad 5 angielskich frazach.
 
-1. **Audyt widoczności w AI search.** Sprawdzamy gdzie Twoja firma pojawia się (lub nie) dla zapytań klientów w ChatGPT, Perplexity, Google AI Mode i Gemini. Identyfikujemy konkurentów cytowanych jako odpowiedź.
-2. **Strategia GEO dla Twojej firmy.** Optymalizujemy treści pod cytowania (autonomia chunków, Direct Answer Box, statystyki inline), wdrażamy Author Entity Schema, budujemy obecność marki w autorytatywnych źródłach.
-3. **Wdrożenie z miesięcznym monitoringiem.** Mierzymy częstotliwość cytowań Twojej firmy w odpowiedziach AI. Raportujemy postępy konkretnymi liczbami.
+Co zadziałało? Krótkie, samodzielne fragmenty tekstu po 120–180 słów. Każdy odpowiadał na jedno pytanie i dało się go zacytować bez reszty strony.
 
-**Caruma przeszła ten proces w 90 dni do pierwszych cytowań w Google AI Overview obok KPMG i Komisji Europejskiej.** SU-2 Kiteboards osiągnęły 4x cytowania w jednym AI Overview w 120 dni. RudStudio — panel boczny AI Overview obok Carbonfact i Renoon.
+Autor tekstów miał opis w danych strukturalnych strony (Person Schema). Marka miała wzmianki na LinkedIn, w Wikidata i w mediach branżowych.
 
-→ [Zarezerwuj bezpłatną konsultację GEO — BoostNow sprawdzi Twoją widoczność w AI](/kontakt)
+Sklep SU-2 Kiteboards w 120 dni pojawił się 4 razy w jednej odpowiedzi Przeglądu od AI Google.
+
+---
+
+## Jak wdrożyć GEO w firmie? {#wdrozenie}
+
+Wdrożenie GEO ma cztery etapy:
+1. **Audyt widoczności w AI.** Zadajemy ChatGPT, Gemini i Perplexity pytania Twoich klientów.
+2. **Analiza konkurencji.** Sprawdzamy, kogo asystenci polecają zamiast Ciebie i dlaczego.
+3. **Treść i wzmianki.** Przepisujemy ważne strony na samodzielne odpowiedzi ze źródłami i liczbami.
+4. **Pomiar co miesiąc.** Powtarzamy te same pytania i liczymy cytowania oraz ruch z AI w GA4.
+
+Chcesz najpierw sprawdzić sam? Test w 10 minut opisaliśmy w poradniku [jak pojawić się w ChatGPT](/blog/jak-pojawic-sie-w-chatgpt).
 
 ---
 
 ## Najczęściej zadawane pytania {#faq}
 
 **Co to jest GEO?**
-Co to jest GEO — to optymalizacja strony pod cytowania przez generatywne modele AI (ChatGPT, Perplexity, Gemini, Google AI Mode). Termin zdefiniowany przez Princeton University w 2024 roku. GEO uzupełnia klasyczne SEO o widoczność w AI search. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)
+GEO to skrót od Generative Engine Optimization, czyli optymalizacja pod generatywne wyszukiwarki AI. Celem jest cytowanie Twojej strony przez ChatGPT, Gemini, Perplexity i Tryb AI Google. Pojęcie opisali badacze z Princeton University w 2023 roku.
+
+**Co oznacza skrót GEO w marketingu?**
+W marketingu internetowym GEO to Generative Engine Optimization. Nie chodzi o geolokalizację ani geomarketing. Chodzi o widoczność w odpowiedziach asystentów AI.
 
 **Czym GEO różni się od SEO?**
-SEO pozycjonuje stronę w wynikach Google. GEO sprawia, że modele AI cytują Twoją firmę jako źródło odpowiedzi. Używają różnych technik — SEO bazuje na backlinkach i pozycji, GEO na autorytecie encji i autonomii fragmentów treści. → [SEO vs GEO →](/blog/co-to-jest-seo)
+SEO walczy o pozycję na liście wyników Google. GEO walczy o cytowanie w odpowiedzi AI. GEO opiera się na SEO, bo asystenci AI korzystają z wyników wyszukiwarek.
 
 **Czy GEO działa w Polsce?**
-Tak. BoostNow wdrożyło GEO dla Caruma (151k wyświetleń w 90 dni, cytowania w Google AI Overview), SU-2 Kiteboards (TOP 1 globalnie, 4x w jednym AI Overview) i RudStudio (panel boczny AI Overview). GEO działa zarówno dla polskiego jak i globalnego rynku. → [Bezpłatna konsultacja →](/kontakt)
+Tak. ChatGPT, Gemini i Tryb AI Google odpowiadają po polsku i cytują polskie strony. BoostNow wdrożyło GEO dla Carumy, SU-2 Kiteboards i RudStudio.
 
 **Jak szybko widać efekty GEO?**
-Pierwsze cytowania w Perplexity możliwe w 30 dni. Google AI Overview — 60-90 dni dla większości branż. Caruma osiągnęła cytowania obok KPMG i Komisji Europejskiej w 90 dni od zera. → [Jak pojawić się w ChatGPT →](/blog/jak-pojawic-sie-w-chatgpt)
+Z naszych wdrożeń: pierwsze cytowania w Perplexity pojawiają się po około 30 dniach. W Przeglądzie od AI Google zwykle po 60–90 dniach. Caruma trafiła tam obok KPMG i Komisji Europejskiej w 90 dni.
 
 **Ile kosztuje GEO?**
-BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN miesięcznie. Pakiet obejmuje audyt widoczności AI, strategię, wdrożenie i miesięczne raportowanie cytowań. → [Cennik BoostNow →](/blog/ile-kosztuje-pozycjonowanie)
+W BoostNow GEO jest w pakiecie z SEO i AEO od 2 500 zł netto miesięcznie. Pakiet obejmuje audyt widoczności w AI, treści, wdrożenie i miesięczny raport cytowań.
 
 ---
 
 ## Źródła {#zrodla}
 
-1. Kanu, A. et al. (2024). *GEO: Generative Engine Optimization.* Princeton University. https://arxiv.org/abs/2311.09735
-2. Search Engine Land (2026). *State of AI Search Q1 2026.* https://searchengineland.com
-3. OpenAI (2025). *ChatGPT Usage Q4 2025.* https://openai.com/index/chatgpt
-4. Perplexity AI (2025). *About Perplexity.* https://www.perplexity.ai/about
-5. Google (2025). *AI Mode Guidelines.* https://developers.google.com/search/docs
+1. Aggarwal, P. i in. (2023). *GEO: Generative Engine Optimization.* Princeton University i in., KDD 2024. https://arxiv.org/abs/2311.09735
+2. OpenAI DevDay, 6 października 2025: 800 milionów użytkowników ChatGPT tygodniowo.
+3. OpenAI Help Center. *Searching the web with ChatGPT.* https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt
+4. Google Search Central. *AI features and your website.* https://developers.google.com/search/docs/appearance/ai-features
+5. Dane własne BoostNow: Google Search Console i GA4 klientów Caruma i SU-2 Kiteboards (2025–2026).
 
 ---
 
-## GEO buduje pozycję, której konkurencja nie nadrobi za rok
+## Sprawdź, czy AI poleca Twoją firmę
 
-**Modele AI uczą się cytować te same zaufane źródła wielokrotnie. Jeśli pierwsza wejdziesz — masz monopol cytowań.**
+Zadamy asystentom AI pytania Twoich klientów. Pokażemy, kogo polecają zamiast Ciebie, i wskażemy 3 rzeczy do poprawy.
 
-Klienci BoostNow z pełnym GEO:
-- ✓ **Caruma** — Google AI Overview obok KPMG i Komisji Europejskiej w 90 dni
-- ✓ **SU-2 Kiteboards** — 4x cytowania w jednym AI Overview, TOP 1 globalnie
-- ✓ **RudStudio** — panel boczny AI Overview obok Carbonfact i Renoon
-
-**[ZAREZERWUJ BEZPŁATNĄ KONSULTACJĘ →](/kontakt)**
-Jedno spotkanie. Konkretny plan. Zero zobowiązań.
+**[Napisz do nas →](/kontakt)** · Prowadzisz sklep? **[Bezpłatny audyt sklepu pod ChatGPT i AI →](/audyt-ai-dla-sklepu)**
 
 ---
 
-*Powiązane artykuły:*
-*[Pozycjonowanie w AI — przewodnik 2026 →](/blog/pozycjonowanie-w-ai)*
-*[AEO — Answer Engine Optimization →](/blog/aeo-co-to-jest)*
+*Powiązane:*
 *[Jak pojawić się w ChatGPT →](/blog/jak-pojawic-sie-w-chatgpt)*
+*[AEO — co to jest →](/blog/aeo-co-to-jest)*
+*[Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)*

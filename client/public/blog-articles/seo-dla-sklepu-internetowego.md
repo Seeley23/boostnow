@@ -1,116 +1,144 @@
-Twój sklep płaci za każdego klienta z reklam. Sklep z SEO ma ruch za darmo. Pokażę jak.
+Twój sklep płaci za każde kliknięcie z reklam. Kliknięcie z wyników Google jest bezpłatne.
 
-**W tym artykule:**
-- [Dlaczego pozycjonowanie sklepu internetowego różni się od zwykłego SEO?](#czym-jest)
-- [Jak SU-2 Kiteboards osiągnęły TOP 1 globalnie w 120 dni?](#su2)
-- [Co konkretnie BoostNow optymalizuje w sklepie?](#co-optymalizujemy)
-- [Jak wybrać agencję SEO dla e-commerce?](#wybor)
+**Spis treści:**
+- [Czym SEO sklepu różni się od SEO strony firmowej?](#czym-jest)
+- [Jak SU-2 Kiteboards doszło do TOP 1 w 120 dni?](#su2)
+- [Co optymalizujemy w sklepie?](#co-optymalizujemy)
+- [Jak wybrać agencję SEO dla sklepu?](#wybor)
 - [Najczęściej zadawane pytania](#faq)
 - [Źródła](#zrodla)
 
 ---
 
-> **BEZPOŚREDNIA ODPOWIEDŹ**
-> Pozycjonowanie sklepu internetowego to SEO dostosowane do specyfiki e-commerce: optymalizacja stron kategorii, kart produktów, filtrów i wyszukiwania wewnętrznego. Sklepy generują średnio 43% ruchu z organicznego Google (Statista, 2025). BoostNow doprowadził SU-2 Kiteboards do TOP 1 i TOP 2 organicznie globalnie w 120 dni — z 4x cytowaniami w jednym Google AI Overview i widocznością w ChatGPT i Perplexity. Sklep z dobrym SEO przestaje płacić za każdego klienta z Google Ads, OTA czy porównywarek cen.
-> *Zaktualizowano: czerwiec 2026*
+> **Krótka odpowiedź**
+> SEO dla sklepu internetowego to optymalizacja kategorii, kart produktów, filtrów i kodu sklepu pod Google i asystentów AI. Najwięcej ruchu dają zwykle strony kategorii. Najczęstsze problemy to powielone adresy z filtrów i opisy skopiowane od producenta. Sklep SU-2 Kiteboards z BoostNow w 120 dni doszedł do TOP 1 i TOP 2 w Google na świecie.
+> *Aktualizacja: listopad 2026*
 
 ---
 
-Polski rynek e-commerce osiągnął 115 mld PLN w 2025 roku (Gemius, 2025). Sklepy które inwestują w SEO zdobywają ruch organiczny — konkurenci płacą za każde kliknięcie. To nie jest teoria. BoostNow wprowadził SU-2 Kiteboards na TOP 1 globalnie w 120 dni dla fraz zakupowych EN. Klienci, których wcześniej zdobywali poprzez Google Ads, teraz trafiają do sklepu bezpośrednio z organicznego Google.
+Sklep ma setki produktów i dobre ceny. Klienci przychodzą jednak głównie z reklam Google Ads.
+
+Gdy budżet się kończy, kończą się też zamówienia.
+
+Czy da się mieć klientów z Google bez płacenia za każde kliknięcie? Tak, ale sklep wymaga innego SEO niż strona firmy. Największy problem kryje się w filtrach, których nikt nie sprawdza.
 
 ---
 
-## Dlaczego pozycjonowanie sklepu internetowego różni się od zwykłego SEO? {#czym-jest}
+## Czym SEO sklepu różni się od SEO strony firmowej? {#czym-jest}
 
-Pozycjonowanie sklepu internetowego różni się od SEO stron usługowych pięcioma cechami: skala (tysiące podstron produktów), techniczne wyzwania (filtry, parametry URL, paginacja), typ fraz (zakupowe, nie informacyjne), rotacja contentu (produkty pojawiają się i znikają), oraz Product Schema obowiązkowa dla rich results.
+SEO sklepu obejmuje tysiące podstron, a nie kilkanaście. Każdy produkt, kategoria i filtr to osobny adres w Google.
 
-Największy problem e-commerce SEO to **duplicate content**. Sklepy generują automatycznie setki wersji URL dla tych samych produktów (filtry, sortowanie, kolory). Bez konfiguracji canonical tags Google indeksuje tysiące zduplikowanych stron i nie wie którą rankować.
+Sklep różni się od strony firmowej w pięciu punktach:
+- skala: setki lub tysiące kart produktów;
+- filtry i sortowanie tworzą nowe adresy tych samych produktów;
+- frazy zakupowe, np. „deska kitesurfingowa 138 cm”;
+- produkty znikają i wracają, więc adresy się zmieniają;
+- dane produktu, np. cena i dostępność, muszą być w kodzie strony.
 
-Drugi problem: opisy produktów kopiowane od producentów. Twój sklep konkuruje wtedy z setkami innych o ten sam content — przegrywasz zawsze.
+**Tu zaczyna się problem.** Filtry tworzą setki kopii tej samej kategorii. Google nie wie wtedy, którą wersję pokazać.
 
----
+Rozwiązaniem jest znacznik canonical. Wskazuje Google główną wersję strony.
 
-## Jak SU-2 Kiteboards osiągnęły TOP 1 globalnie w 120 dni? {#su2}
-
-SU-2 Kiteboards — klient BoostNow z sektora e-commerce sportowego — to konkretny dowód, że sklep internetowy może osiągnąć dominację globalną w krótkim czasie. **W 120 dni od wdrożenia BoostNow: TOP 1 i TOP 2 organicznie globalnie dla fraz zakupowych EN, cytowania 4x w jednym Google AI Overview, TOP 1 panel boczny AI Overview z obrazkiem na 4 różnych frazach zakupowych, widoczność w ChatGPT i Perplexity.**
-
-Strategia obejmowała: optymalizację kategorii produktowych jako głównych źródeł ruchu, unikalne opisy produktów (nie kopiowane od producentów), Product Schema JSON-LD dla rich results w Google Shopping, GEO dla cytowań w AI search, oraz indeksację w Bing dla widoczności w ChatGPT web-search.
-
-**Ten model działa również dla sklepów polskich** — Caruma, klient BoostNow z innego sektora, osiągnęła 151 000 wyświetleń w 90 dni z TOP 1-2 organicznie na 5+ frazach globalnych.
-
----
-
-## Co konkretnie BoostNow optymalizuje w sklepie? {#co-optymalizujemy}
-
-BoostNow optymalizuje sklep internetowy w czterech obszarach jednocześnie — każdy z bezpośrednim wpływem na ruch i konwersje.
-
-**Obszar 1: Strony kategorii — główny motor ruchu.** Frazy kategoryzacyjne („buty sportowe męskie”, „lampy łazienka”) mają wyższy wolumen niż frazy produktowe. Każda kategoria otrzymuje: unikalny tytuł, 200-300 słów tekstu opisowego, FAQ Schema, wewnętrzne linki do TOP produktów.
-
-**Obszar 2: Karty produktów — unikalność obowiązkowa.** Każda karta produktu z unikalnym opisem (nie kopiowanym od producenta), pełną Product Schema (cena, dostępność, oceny), zdjęciami z poprawnymi alt tagami.
-
-**Obszar 3: Technikalia e-commerce.** Canonical tags dla filtrów i sortowania, blokowanie parametrów URL w robots.txt, paginacja, Core Web Vitals poniżej 2.5s dla płatności mobilnych.
-
-**Obszar 4: Blog i GEO.** Treści informacyjne („jak dobrać rozmiar buta”) przyciągają klientów na etapie rozważania, budują autorytet domeny i są cytowane przez ChatGPT.
+Drugi problem to opisy skopiowane od producenta. Ten sam tekst ma wtedy setki innych sklepów.
 
 ---
 
-## Jak wybrać agencję SEO dla e-commerce? {#wybor}
+## Jak SU-2 Kiteboards doszło do TOP 1 w 120 dni? {#su2}
 
-Cztery pytania które oddzielają agencje e-commerce SEO od ogólnych agencji bez specjalizacji.
+SU-2 Kiteboards, sklep ze sprzętem do kitesurfingu, w 120 dni z BoostNow doszedł do TOP 1 i TOP 2 w Google na świecie. Chodzi o angielskie frazy zakupowe.
 
-1. **„Pokażcie konkretne case studies z e-commerce.”** BoostNow: SU-2 Kiteboards — TOP 1 globalnie w 120 dni, 4x cytowania w jednym AI Overview. Bez konkretnych liczb z e-commerce — agencja nie ma tego doświadczenia.
-2. **„Jak rozwiązujecie duplicate content z filtrów?”** Profesjonalna agencja odpowie konkretnie: canonical tags, robots.txt rules dla parametrów, faceted navigation. Brak konkretnej odpowiedzi = brak doświadczenia.
-3. **„Czy wdrażacie Product Schema i GEO dla e-commerce?”** W 2026 brak tych dwóch elementów = niekompletna strategia. BoostNow standardowo wdraża oba.
-4. **„Jak mierzycie ROI dla e-commerce?”** Sklep mierzy się przychodem, nie pozycjami. BoostNow raportuje przychód z kanału organicznego, nie tylko ruch.
+W tym samym czasie sklep:
+- pojawił się 4 razy w jednej odpowiedzi Przeglądu od AI Google;
+- zajął TOP 1 w panelu bocznym Przeglądu od AI z obrazkiem na 4 frazach zakupowych;
+- zaczął pojawiać się w odpowiedziach ChatGPT i Perplexity.
 
-→ [Sprawdź jak BoostNow podejdzie do SEO Twojego sklepu — bezpłatna analiza](/kontakt)
+Co zrobiliśmy:
+1. Opisaliśmy kategorie, bo to one zbierają najwięcej wyszukiwań.
+2. Napisaliśmy własne opisy produktów zamiast tekstów producenta.
+3. Dodaliśmy dane produktów w kodzie strony (Product Schema).
+4. Przygotowaliśmy treści pod pytania, które klienci zadają asystentom AI.
+5. Dodaliśmy sklep do Bing Webmaster Tools, bo ChatGPT korzysta z zewnętrznych wyszukiwarek.
+
+Ten sam model działa poza e-commerce. Caruma, nasz klient z branży B2B, w 90 dni osiągnęła 151 000 wyświetleń w Google.
+
+---
+
+## Co optymalizujemy w sklepie? {#co-optymalizujemy}
+
+Pracujemy w czterech obszarach naraz. Każdy z nich wpływa na ruch i sprzedaż.
+
+### 1. Strony kategorii
+
+Kategorie zbierają frazy z największą liczbą wyszukiwań, np. „buty sportowe męskie”. Każda kategoria dostaje własny tytuł, 200–300 słów opisu i pytania z odpowiedziami.
+
+Dodajemy też linki do najlepszych produktów w kategorii.
+
+### 2. Karty produktów
+
+Każdy produkt dostaje własny opis i dane w kodzie: cenę, dostępność i oceny. Zdjęcia dostają opisy alternatywne (alt).
+
+### 3. Technika sklepu
+
+Ustawiamy canonical dla filtrów i sortowania. W pliku robots.txt blokujemy adresy, których Google nie potrzebuje.
+
+Pilnujemy też szybkości na telefonie. Google zaleca, żeby główna treść ładowała się w mniej niż 2,5 sekundy.
+
+### 4. Blog i odpowiedzi dla AI
+
+Poradniki, np. „jak dobrać rozmiar deski”, przyciągają klientów, którzy dopiero wybierają. ChatGPT i Gemini cytują takie poradniki w odpowiedziach.
+
+---
+
+## Jak wybrać agencję SEO dla sklepu? {#wybor}
+
+Zadaj agencji cztery pytania:
+1. **„Pokażcie wyniki ze sklepów.”** Poproś o liczby, okres i nazwę sklepu.
+2. **„Jak rozwiązujecie duplikaty z filtrów?”** Dobra odpowiedź to canonical i reguły dla parametrów w adresach.
+3. **„Czy wdrażacie Product Schema i GEO?”** Bez nich sklep traci rozszerzone wyniki i odpowiedzi AI.
+4. **„Jak mierzycie efekt?”** Sklep mierzy się przychodem z Google, a nie samymi pozycjami.
+
+Agencja bez wyników z e-commerce uczy się na Twoim sklepie. Za tę naukę płacisz Ty.
 
 ---
 
 ## Najczęściej zadawane pytania {#faq}
 
 **Jak pozycjonować sklep internetowy?**
-Pozycjonowanie sklepu internetowego wymaga: optymalizacji stron kategorii (unikalne opisy, FAQ Schema), kart produktów (unikalne opisy, Product Schema), technikaliów (canonical, robots.txt, Core Web Vitals) i contentu blogowego. Priorytet: strony kategorii generują więcej ruchu niż produkty. → [Co to jest SEO →](/blog/co-to-jest-seo)
+Zacznij od stron kategorii: własny tytuł, opis i pytania z odpowiedziami. Potem napisz własne opisy produktów i dodaj Product Schema. Ustaw canonical dla filtrów i sprawdź szybkość sklepu na telefonie.
 
 **Ile kosztuje SEO dla sklepu internetowego?**
-SEO dla e-commerce kosztuje 2 500-15 000 PLN miesięcznie w zależności od wielkości sklepu. Mały sklep (do 500 produktów): 2 500-4 000 PLN. Duży e-commerce: 6 000-15 000 PLN. BoostNow oferuje pakiety SEO + GEO + AEO od 2 500 PLN. → [Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)
+Mały sklep (do 500 produktów) płaci zwykle 2 500–4 000 zł netto miesięcznie, a duży 6 000–15 000 zł. Cena zależy od liczby produktów i konkurencji. BoostNow oferuje pakiety SEO, GEO i AEO od 2 500 zł miesięcznie.
 
 **Jak długo trwa SEO sklepu internetowego?**
-Pierwsze efekty dla fraz długiego ogona: 3-6 miesięcy. Stabilny ruch z głównych kategorii: 9-18 miesięcy. SU-2 Kiteboards osiągnęły TOP 1 globalnie w 120 dni z BoostNow — szybciej dzięki strategii łączącej SEO + GEO. → [Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)
+Pierwsze efekty na długie, dokładne frazy widać po 3–6 miesiącach. Stabilny ruch z głównych kategorii przychodzi po 9–18 miesiącach. SU-2 Kiteboards doszło do TOP 1 w 120 dni dzięki połączeniu SEO i GEO.
 
-**Czy WooCommerce lub Shopify są dobre pod SEO?**
-Obie platformy obsługują SEO, ale wymagają konfiguracji. WooCommerce jest bardziej elastyczny dla zaawansowanego SEO. Shopify ma dobre podstawy, ale ogranicza możliwości konfiguracji URL i robots.txt. Kluczowe jest prawidłowe ustawienie canonical i Schema. → [Audyt SEO →](/blog/audyt-seo)
+**Czy WooCommerce, Shopify i Magento są dobre pod SEO?**
+Tak, każda z tych platform pozwala na dobre SEO, ale wymaga ustawień. WooCommerce i Magento dają pełną kontrolę nad adresami stron. Shopify ma dobre podstawy, ale narzuca część struktury adresów.
 
-**Czy SEO zastąpi Google Ads dla sklepu?**
-Nie od razu — przez pierwsze 6-12 miesięcy prowadzisz oba równolegle. Później SEO zazwyczaj staje się głównym kanałem, a budżet Google Ads może być proporcjonalnie zmniejszony. Sklepy klientów BoostNow obniżają udział Ads o 30-50% po roku. → [Co to jest GEO →](/blog/geo-co-to-jest)
+**Czy SEO zastąpi Google Ads w sklepie?**
+Nie od razu. Przez pierwsze 6–12 miesięcy prowadzisz oba kanały równolegle. Sklepy klientów BoostNow po roku zmniejszają udział reklam o 30–50%.
 
 ---
 
 ## Źródła {#zrodla}
 
-1. Statista (2025). *E-commerce SEO Traffic Share Report 2025.* https://statista.com
-2. Gemius (2025). *E-commerce w Polsce 2025.* https://gemius.com
-3. Google Search Central (2025). *E-commerce SEO Guidelines.* https://developers.google.com/search/docs/products
-4. Schema.org (2025). *Product Schema Documentation.* https://schema.org/Product
-5. Ahrefs (2024). *E-commerce SEO Study.* https://ahrefs.com/blog/ecommerce-seo
+1. Google Search Central. *Product structured data.* https://developers.google.com/search/docs/appearance/structured-data/product
+2. Google Search Central. *Consolidate duplicate URLs.* https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
+3. Google Search Central. *Core Web Vitals.* https://developers.google.com/search/docs/appearance/core-web-vitals
+4. OpenAI Help Center. *Searching the web with ChatGPT.* https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt
+5. Dane własne BoostNow: Google Search Console i GA4 klientów SU-2 Kiteboards i Caruma (2026).
 
 ---
 
-## Sklep z SEO przestaje płacić za klientów. Sklep bez SEO — nie
+## Sprawdź, czy Google i ChatGPT widzą Twój sklep
 
-**Każda rezerwacja, zakup, klient z Google Ads kosztuje Cię pieniądze. Klient z SEO — zero.**
+Sprawdzimy kategorie, filtry i to, kogo ChatGPT poleca zamiast Ciebie. Dostaniesz 3 rzeczy do poprawy.
 
-Sklepy obsługiwane przez BoostNow:
-- ✓ **SU-2 Kiteboards** — TOP 1 i TOP 2 globalnie w 120 dni, 4x AI Overview
-- ✓ **Caruma** — 151k wyświetleń, 910 konwersji (+2 066%) w 90 dni
-- ✓ Widoczność w ChatGPT, Perplexity i Google AI Overview
-
-**[ZAREZERWUJ BEZPŁATNĄ KONSULTACJĘ →](/kontakt)**
-Jedno spotkanie. Konkretny plan. Zero zobowiązań.
+**[Bezpłatny audyt sklepu pod ChatGPT i AI →](/audyt-ai-dla-sklepu)** · **[Napisz do nas →](/kontakt)**
 
 ---
 
 *Powiązane:*
-*[Audyt SEO →](/blog/audyt-seo)*
 *[Ile kosztuje pozycjonowanie →](/blog/ile-kosztuje-pozycjonowanie)*
-*[Pozycjonowanie w AI →](/blog/pozycjonowanie-w-ai)*
+*[ChatGPT nie widzi mojego sklepu? →](/blog/chatgpt-nie-widzi-sklepu)*
+*[Co to jest GEO →](/blog/geo-co-to-jest)*
